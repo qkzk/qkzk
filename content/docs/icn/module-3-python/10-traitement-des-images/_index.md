@@ -4,7 +4,7 @@ date: 2017-04-13 17:01:32+00:00
 draft: false
 title: 10 - Traitement des images
 
-url: /
+
 ---
 
 
@@ -421,10 +421,10 @@ Ecrire un script qui permet d'extraire de l'en-tête d'un fichier PGM :
 
 
 
- 	  * la largeur de l'image (en pixels)
- 	  * la hauteur de l'image (en pixels)
- 	  * le nombre de niveaux de gris
- 	  * les commentaires
+ la largeur de l'image (en pixels)
+ la hauteur de l'image (en pixels)
+ le nombre de niveaux de gris
+ les commentaires
 
 
 
@@ -449,14 +449,14 @@ Indice n°2 :
 
 
 
- 	  * [Le format PGM](http://fr.wikipedia.org/wiki/Portable_pixmap)
- 	  * [Site officiel du logiciel libre et gratuit GIMP](http://www.gimp.org/)
- 	  * [Editeur hexadécimal](http://fr.wikipedia.org/wiki/%C3%89diteur_hexad%C3%A9cimal)
- 	  * [Eduscol : notion d'image numérique](http://eduscol.education.fr/pid26461-cid60671/ressources-isn.html)
- 	  * [Documentation sur la librairie PIL (Python Imaging Library)](http://effbot.org/imagingbook/)
- 	  * [Documentation sur le module Image de la librairie PIL](http://effbot.org/imagingbook/image.htm)
- 	  * [Documentation sur le module ImageDraw de la librairie PIL](http://effbot.org/imagingbook/imagedraw.htm)
- 	  * [Des exemples de traitement d'image avec le module Image de la librairie PIL](http://calque.pagesperso-orange.fr/langages/python/presentationpy.html)
+ [Le format PGM](http://fr.wikipedia.org/wiki/Portable_pixmap)
+ [Site officiel du logiciel libre et gratuit GIMP](http://www.gimp.org/)
+ [Editeur hexadécimal](http://fr.wikipedia.org/wiki/%C3%89diteur_hexad%C3%A9cimal)
+ [Eduscol : notion d'image numérique](http://eduscol.education.fr/pid26461-cid60671/ressources-isn.html)
+ [Documentation sur la librairie PIL (Python Imaging Library)](http://effbot.org/imagingbook/)
+ [Documentation sur le module Image de la librairie PIL](http://effbot.org/imagingbook/image.htm)
+ [Documentation sur le module ImageDraw de la librairie PIL](http://effbot.org/imagingbook/imagedraw.htm)
+ [Des exemples de traitement d'image avec le module Image de la librairie PIL](http://calque.pagesperso-orange.fr/langages/python/presentationpy.html)
 
 ![](http://fsincere.free.fr/isn/python/picto/photopix.png)
 

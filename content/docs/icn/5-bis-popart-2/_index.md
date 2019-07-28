@@ -3,8 +3,8 @@ author: qu3nt1n
 date: 2018-03-01 12:39:17+00:00
 draft: false
 title: 05. bis - popart
+weight: 5
 
-url: /
 ---
 
 Vous connaissez sans doute le popart et Andy Wahrol.
@@ -30,12 +30,12 @@ Voici un descriptif assez sommaire des consignes.
 
 On dispose de plusieurs images de départ dans un dossier source et d'un dictionnaire de palette au format suivant. Il peut contenir autant de palettes que l'on veut. Chaque palette contient trois couleurs (ou plus - l'important est qu'elles aient toutes le même nombre de couleurs).
 
-    
-    palettes = [ 
-    {"title":"romuald", "colors": ["#9944FF", "#3300AA", "#00AAFF"]},
-    {"title":"roland", "colors": ["#000000", "#00AAA6", "#00E3A2"]}
-    ]
-
+~~~python
+palettes = [
+{"title":"romuald", "colors": ["#9944FF", "#3300AA", "#00AAFF"]},
+{"title":"roland", "colors": ["#000000", "#00AAA6", "#00E3A2"]}
+]
+~~~
 
 Pour chaque palette, on ouvre l'image qu'on converti avec PIL en niveaux de gris (grayscale).
 
@@ -52,87 +52,86 @@ Voilà ! Vous devriez obtenir autant d'images que de palettes x images de dépar
 
 Si vous n'arrivez à rien, voici un tutoriel à compléter. Je n'ai enlevé qu'une dizaine de lignes.
 
-    
-    #!/usr/bin/env python
-    # coding=utf-8
-    
-    '''
-    Voici le fichier de départ de votre projet.
-    Les étapes sont entièrement détaillées, il n'y a plus qu'à écrire le code
-    Inutile d'essayer de le faire tourner, il ne fonctionne pas encore
-    
-    Tout ce qui doit être complété est présenté par trois points : ...
-    '''
-    
-    # Librairies dont on aura besoin
-    # manipuler des fichiers dans PIL
-    from PIL.Image import open, new
-    # manipuler récuperer une couleur au format rgb
-    from PIL.ImageColor import getrgb
-    # convertir en niveaux de gris
-    from PIL.ImageOps import grayscale
-    # manipuler des fichiers
-    import os
-    
-    
-    # VARIABLES
-    # le dossier de départ
-    inputdir = '...'
-    
-    # le dossier d'arrivée
-    outputdir= '...'
-    
-    # les palettes de couleurs
-    # vous pouvez les modifier pour des résultats plus ou moins réussis
-    # Préférez des images très contrastées
-    # Il est possible d'ajouter autant de palettes que l'on veut
-    palettes = [
-    {"title":"romuald", "colors": ["#9944FF", "#3300AA", "#00AAFF"]},
-    {"title":"raymond", "colors": ["#690042", "#BD9700","#BDB491" ]},
-    {"title":"roland", "colors": ["#000000", "#00AAA6", "#00E3A2"]},
-    {"title":"reynald", "colors": ["#000000", "#57C0B9", "#57C0B9" ]} # il n'y a que 2 couleurs
-    ]
-    
-    # FONCTIONS
-    def colorfun(pixels, colors):
-        # realise la conversion depuis une image grayscale vers le popart
-        new_pixels = [] # tableau des nouveaux pixels
-        for pixel in pixels: # on itere dans les pixels du tableau
-            # pixel est un nombre entre 0 = noir et 255 = blanc
-            if pixel < 85: # premier seuil, sombre
-                color = getrgb(colors[0])
-            elif ...: # second seuil, intermédiaire
-                color = ...
-            else: # troisième seuil, clair
-                ...
-    
-    
-            new_pixels.append(...) # on cole le pixel dans le tableau
-        return ... # on renvoie le nouveau tableau des pixels
-    
-    
-    # si le dossier de sortie n'existe pas, on le crée
-    if not os.path.exists(outputdir):
-        os.mkdir(outputdir)
-    
-    
-    # LA BOUCLE
-    for palette in palettes: # on itère dans les palettes
-    
-        for file in os.listdir(inputdir): # pour chaque fichier de la source
-            (file_basename, file_extension)=os.path.splitext(file) # on separe le nom du fichier de son extension
-    
-            print 'processing %s' % file_basename # affichage console
-            output_name = file_basename + '_' + palette['title']  + file_extension # on crée le nom du futur fichier contenant le titre de la palette
-    
-            colors = ... # on récupère la palette des couleurs
-            img = open(os.path.join(inputdir, file)) # on ouvre le fichier source
-            pixels = grayscale(img).getdata() # qu'on converti en grayscale avec PIL pour en récupérer les données
-            img2 = new(img.mode, img.size,) # on crée une nouvelle image vide
-            img2.putdata( ... ) # où on colle les nouveaux pixels renvoyés par colorfun
-            img2.save(os.path.join(outputdir, output_name)) # on sauvegarde
-    
-            # # idem en couleurs inversées
-            # colors.reverse()
+~~~python
+#!/usr/bin/env python
+# coding=utf-8
+
+'''
+Voici le fichier de départ de votre projet.
+Les étapes sont entièrement détaillées, il n'y a plus qu'à écrire le code
+Inutile d'essayer de le faire tourner, il ne fonctionne pas encore
+
+Tout ce qui doit être complété est présenté par trois points : ...
+'''
+
+# Librairies dont on aura besoin
+# manipuler des fichiers dans PIL
+from PIL.Image import open, new
+# manipuler récuperer une couleur au format rgb
+from PIL.ImageColor import getrgb
+# convertir en niveaux de gris
+from PIL.ImageOps import grayscale
+# manipuler des fichiers
+import os
+
+
+# VARIABLES
+# le dossier de départ
+inputdir = '...'
+
+# le dossier d'arrivée
+outputdir= '...'
+
+# les palettes de couleurs
+# vous pouvez les modifier pour des résultats plus ou moins réussis
+# Préférez des images très contrastées
+# Il est possible d'ajouter autant de palettes que l'on veut
+palettes = [
+{"title":"romuald", "colors": ["#9944FF", "#3300AA", "#00AAFF"]},
+{"title":"raymond", "colors": ["#690042", "#BD9700","#BDB491" ]},
+{"title":"roland", "colors": ["#000000", "#00AAA6", "#00E3A2"]},
+{"title":"reynald", "colors": ["#000000", "#57C0B9", "#57C0B9" ]} # il n'y a que 2 couleurs
+]
+
+# FONCTIONS
+def colorfun(pixels, colors):
+    # realise la conversion depuis une image grayscale vers le popart
+    new_pixels = [] # tableau des nouveaux pixels
+    for pixel in pixels: # on itere dans les pixels du tableau
+        # pixel est un nombre entre 0 = noir et 255 = blanc
+        if pixel < 85: # premier seuil, sombre
+            color = getrgb(colors[0])
+        elif ...: # second seuil, intermédiaire
+            color = ...
+        else: # troisième seuil, clair
             ...
-    
+
+
+        new_pixels.append(...) # on cole le pixel dans le tableau
+    return ... # on renvoie le nouveau tableau des pixels
+
+
+# si le dossier de sortie n'existe pas, on le crée
+if not os.path.exists(outputdir):
+    os.mkdir(outputdir)
+
+
+# LA BOUCLE
+for palette in palettes: # on itère dans les palettes
+
+    for file in os.listdir(inputdir): # pour chaque fichier de la source
+        (file_basename, file_extension)=os.path.splitext(file) # on separe le nom du fichier de son extension
+
+        print 'processing %s' % file_basename # affichage console
+        output_name = file_basename + '_' + palette['title']  + file_extension # on crée le nom du futur fichier contenant le titre de la palette
+
+        colors = ... # on récupère la palette des couleurs
+        img = open(os.path.join(inputdir, file)) # on ouvre le fichier source
+        pixels = grayscale(img).getdata() # qu'on converti en grayscale avec PIL pour en récupérer les données
+        img2 = new(img.mode, img.size,) # on crée une nouvelle image vide
+        img2.putdata( ... ) # où on colle les nouveaux pixels renvoyés par colorfun
+        img2.save(os.path.join(outputdir, output_name)) # on sauvegarde
+
+        # # idem en couleurs inversées
+        # colors.reverse()
+~~~

@@ -3,8 +3,8 @@ author: qu3nt1n
 date: 2016-07-07 09:09:18+00:00
 draft: false
 title: 06. Création d'images vectorielles
+weight: 6
 
-url: /
 ---
 
 # 1. Introduction, rappels
@@ -28,10 +28,10 @@ il existe en informatique 2 types d'images :
 
 
 
- 	  * les images matricielles qui sont des suites de points (pixels)
+ les images matricielles qui sont des suites de points (pixels)
 
 
- 	  * les images vectorielles qui sont composées d'objets géométriques (segments de droite, cercle, polygones)
+ les images vectorielles qui sont composées d'objets géométriques (segments de droite, cercle, polygones)
 
 Les images vectorielles ont un immense avantage par rapport aux images matricielles : il est possible de zoomer (ou dézoomer) comme bon vous semble avec une image vectorielle sans que cela ne dégrade la qualité de cette image.
 
@@ -47,7 +47,7 @@ Créer un dossier "svg" dans votre espace de travail. Ceci étant fait, créer u
 
 
 
-* * *
+---
 
 
 
@@ -58,7 +58,7 @@ Créer un dossier "svg" dans votre espace de travail. Ceci étant fait, créer u
 
 Compléter le fichier "index.html" comme suit :
 
-    
+
     <!doctype html>
     <html lang="fr">
     <head>
@@ -74,7 +74,7 @@ Compléter le fichier "index.html" comme suit :
 
 Compléter le fichier "style.css" comme suit :
 
-    
+
     #dessin {
         width:800px;
         height:600px;
@@ -86,7 +86,7 @@ Ouvrir le fichier index.html dans un navigateur
 
 
 
-* * *
+---
 
 
 
@@ -104,10 +104,10 @@ Pour dessiner dans la zone créée dans l'activité précédente, nous allons ut
 
 
 
- 	  * <circle/>
- 	  * <rect/>
- 	  * <line/>
- 	  * <path/>
+ <circle/>
+ <rect/>
+ <line/>
+ <path/>
 
 Commençons par nous intéresser à la balise <circle/> qui, comme vous l'avez sans doute deviné, permet de dessiner un cercle !
 
@@ -127,7 +127,7 @@ ATTENTION : ci-dessus, 400 et 300 correspondent aux coordonnées du centre du ce
 
 Compléter le fichier "index.html" comme suit :
 
-    
+
     <!doctype html>
     <html lang="fr">
     <head>
@@ -137,7 +137,7 @@ Compléter le fichier "index.html" comme suit :
     </head>
     <body>
         <svg id="dessin">
-            <circle r="40" cx="400" cy="300"/>  
+            <circle r="40" cx="400" cy="300"/>
         </svg>
     </body>
     </html>
@@ -149,7 +149,7 @@ Tester cet exemple en lançant le fichier "index.html".
 
 
 
-* * *
+---
 
 
 
@@ -164,7 +164,7 @@ Tester vos modifications.
 
 
 
-* * *
+---
 
 
 
@@ -172,8 +172,8 @@ Il est possible de modifier la couleur du cercle à l'aide des attributs "stroke
 
 
 
- 	  * "stroke" correspond à la couleur de contour
- 	  * "fill" correspond à la couleur de remplissage
+ "stroke" correspond à la couleur de contour
+ "fill" correspond à la couleur de remplissage
 
 
 
@@ -182,7 +182,7 @@ Il est possible de modifier la couleur du cercle à l'aide des attributs "stroke
 
 Compléter le fichier "index.html" comme suit :
 
-    
+
     <!doctype html>
     <html lang="fr">
     <head>
@@ -192,7 +192,7 @@ Compléter le fichier "index.html" comme suit :
     </head>
     <body>
         <svg id="dessin">
-            <circle r="40" cx="400" cy="300" fill="green" stroke="red"/>  
+            <circle r="40" cx="400" cy="300" fill="green" stroke="red"/>
         </svg>
     </body>
     </html>
@@ -204,7 +204,7 @@ Tester cet exemple.
 
 
 
-* * *
+---
 
 
 
@@ -222,7 +222,7 @@ En repartant de l'exemple précédent, modifier les couleurs de remplissage et d
 
 
 
-* * *
+---
 
 
 
@@ -236,7 +236,7 @@ Modifiez l'exemple précédent en ajoutant les attributs "fill-opacity" et "stro
 
 
 
-* * *
+---
 
 
 
@@ -250,7 +250,7 @@ Reprenez l'exemple précédent en modifiant l'épaisseur du trait de contour en 
 
 
 
-* * *
+---
 
 
 
@@ -274,10 +274,10 @@ Nous devons utiliser la balise <rect/>. Cette balise peut prendre pour attributs
 
 
 
- 	  * x : coordonnée x du coin haut-gauche du rectangle, exemple <rect x="400"/>
- 	  * y : coordonnée y du coin haut-gauche du rectangle, exemple <rect x="400" y="300"/>
- 	  * width : la largeur du rectangle, exemple <rect x="400" y="300" width="100"/>
- 	  * height : la longueur du rectangle, exemple <rect x="400" y="300" width="100" height="50"/>
+ x : coordonnée x du coin haut-gauche du rectangle, exemple <rect x="400"/>
+ y : coordonnée y du coin haut-gauche du rectangle, exemple <rect x="400" y="300"/>
+ width : la largeur du rectangle, exemple <rect x="400" y="300" width="100"/>
+ height : la longueur du rectangle, exemple <rect x="400" y="300" width="100" height="50"/>
 
 Il est possible d'utiliser les attributs vus dans l'activité précédente ("fill", "stroke", "fill-opacity", "stroke-opacity" et "stroke-width")
 
@@ -287,7 +287,7 @@ Il est possible d'utiliser les attributs vus dans l'activité précédente ("fil
 
 Compléter le fichier "index.html" comme suit :
 
-    
+
     <!doctype html>
     <html lang="fr">
     <head>
@@ -297,7 +297,7 @@ Compléter le fichier "index.html" comme suit :
     </head>
     <body>
         <svg id="dessin">
-            <rect x="400" y="300" width="100" height="50" fill="rgb(255,125,0)" stroke="green" fill-opacity="0.4" stroke-width="5" />  
+            <rect x="400" y="300" width="100" height="50" fill="rgb(255,125,0)" stroke="green" fill-opacity="0.4" stroke-width="5" />
         </svg>
     </body>
     </html>
@@ -309,7 +309,7 @@ Tester cet exemple en effectuant un "double-clic" sur le fichier "index.html".
 
 
 
-* * *
+---
 
 
 
@@ -323,7 +323,7 @@ Les autres attributs restent valables.
 
 Compléter le fichier "index.html" comme suit :
 
-    
+
     <!doctype html>
     <html lang="fr">
     <head>
@@ -333,7 +333,7 @@ Compléter le fichier "index.html" comme suit :
     </head>
     <body>
         <svg id="dessin">
-            <line x1="100" y1="100" x2="300" y2="500" stroke="red" stroke-width="4"/>  
+            <line x1="100" y1="100" x2="300" y2="500" stroke="red" stroke-width="4"/>
         </svg>
     </body>
     </html>
@@ -345,7 +345,7 @@ Tester cet exemple en effectuant un "double-clic" sur le fichier "index.html".
 
 
 
-* * *
+---
 
 
 
@@ -363,7 +363,7 @@ La balise a un attribut obligatoire : "d" (comme data). C'est grâce à cet attr
 
 Compléter le fichier "index.html" comme suit :
 
-    
+
     <!doctype html>
     <html lang="fr">
     <head>
@@ -373,7 +373,7 @@ Compléter le fichier "index.html" comme suit :
     </head>
     <body>
         <svg id="dessin">
-            <path d="M 100,200 L 200,230 L 250,50 L 150,75" fill="none" stroke="black"/>  
+            <path d="M 100,200 L 200,230 L 250,50 L 150,75" fill="none" stroke="black"/>
         </svg>
     </body>
     </html>
@@ -385,7 +385,7 @@ Tester cet exemple en effectuant un "double-clic" sur le fichier "index.html".
 
 
 
-* * *
+---
 
 
 
@@ -407,7 +407,7 @@ Vérifiez le résultat.
 
 
 
-* * *
+---
 
 
 
@@ -423,7 +423,7 @@ Essayez de reproduire (à peu près) ce dessin :
 
 
 
-* * *
+---
 
 
 
@@ -435,7 +435,7 @@ svg permet aussi d'afficher du texte à l'aide de la balise <text>
 
 Compléter le fichier "index.html" comme suit :
 
-    
+
     <!doctype html>
     <html lang="fr">
     <head>
@@ -445,7 +445,7 @@ Compléter le fichier "index.html" comme suit :
     </head>
     <body>
         <svg id="dessin">
-             <text x="200" y="300" font-family="Verdana" font-size="55">Hello World!</text> 
+             <text x="200" y="300" font-family="Verdana" font-size="55">Hello World!</text>
         </svg>
     </body>
     </html>
@@ -455,7 +455,7 @@ Testez ce code
 
 
 
-* * *
+---
 
 
 
@@ -475,9 +475,9 @@ L'attribut _transform_ permet d'effectuer :
 
 
 
- 	  * des translations
- 	  * des rotations
- 	  * des mises à l'échelle (en gros, des zooms)
+ des translations
+ des rotations
+ des mises à l'échelle (en gros, des zooms)
 
 Il faut bien que vous compreniez que ces transformations agissent sur le système de coordonnées.
 
@@ -511,7 +511,7 @@ avec le _transform="rotate(α)"_
 
 Saisissez et testez ce code
 
-    
+
     <!doctype html>
     <html lang="fr">
     <head>
@@ -521,7 +521,7 @@ Saisissez et testez ce code
     </head>
     <body>
         <svg id="dessin">
-            <rect x="50" y="60" width="20" height="20" transform="rotate(30)"/>  
+            <rect x="50" y="60" width="20" height="20" transform="rotate(30)"/>
         </svg>
     </body>
     </html>
@@ -530,7 +530,7 @@ Saisissez et testez ce code
 
 
 
-* * *
+---
 
 
 
@@ -541,7 +541,7 @@ Saisissez et testez ce code
 
 Saisissez et testez ce code
 
-    
+
     <!doctype html>
     <html lang="fr">
     <head>
@@ -551,8 +551,8 @@ Saisissez et testez ce code
     </head>
     <body>
         <svg id="dessin">
-            <rect x="100" y="100" width="20" height="20"/>  
-            <rect x="100" y="100" width="20" height="20" transform="rotate(30)"/>  
+            <rect x="100" y="100" width="20" height="20"/>
+            <rect x="100" y="100" width="20" height="20" transform="rotate(30)"/>
         </svg>
     </body>
     </html>
@@ -561,7 +561,7 @@ Saisissez et testez ce code
 
 
 
-* * *
+---
 
 
 
@@ -585,7 +585,7 @@ on obtient ceci
 
 Saisissez et testez ce code
 
-    
+
     <!doctype html>
     <html lang="fr">
     <head>
@@ -595,8 +595,8 @@ Saisissez et testez ce code
     </head>
     <body>
         <svg id="dessin">
-            <rect x="100" y="100" width="20" height="20"/>  
-            <rect x="100" y="100" width="20" height="20" transform="translate(250,150)"/>  
+            <rect x="100" y="100" width="20" height="20"/>
+            <rect x="100" y="100" width="20" height="20" transform="translate(250,150)"/>
         </svg>
     </body>
     </html>
@@ -605,7 +605,7 @@ Saisissez et testez ce code
 
 
 
-* * *
+---
 
 
 
@@ -627,7 +627,7 @@ avec le _transform="translate(dx,dy)"_
 
 Saisissez et testez ce code
 
-    
+
     <!doctype html>
     <html lang="fr">
     <head>
@@ -637,8 +637,8 @@ Saisissez et testez ce code
     </head>
     <body>
         <svg id="dessin">
-            <rect x="100" y="100" width="20" height="20"/>  
-            <rect x="300" y="100" width="20" height="20" transform="scale(3,3)"/>  
+            <rect x="100" y="100" width="20" height="20"/>
+            <rect x="300" y="100" width="20" height="20" transform="scale(3,3)"/>
         </svg>
     </body>
     </html>
@@ -647,7 +647,7 @@ Saisissez et testez ce code
 
 
 
-* * *
+---
 
 
 
@@ -664,7 +664,7 @@ Il est possible de combiner "rotate", "translate" et "scale" (attention l'ordre 
 
 Complétez le code suivant avec les couleurs (fill) correctes.
 
-    
+~~~html
     <!doctype html>
     <html lang="fr">
     <head>
@@ -674,22 +674,22 @@ Complétez le code suivant avec les couleurs (fill) correctes.
     </head>
     <body>
         <svg id="dessin">
-            <rect x="100" y="0" width="20" height="20" fill="????" stroke="none"/>  
+            <rect x="100" y="0" width="20" height="20" fill="????" stroke="none"/>
             <rect x="100" y="0" width="20" height="20" fill="????" stroke="none" transform="rotate(45)"/>
-            <rect x="100" y="0" width="20" height="20" fill="????" stroke="none" transform="translate (0,50) rotate(45)"/>  
+            <rect x="100" y="0" width="20" height="20" fill="????" stroke="none" transform="translate (0,50) rotate(45)"/>
             <rect x="100" y="0" width="20" height="20" fill="????" stroke="none" transform="translate (50,0) rotate(45)"/>
             <rect x="100" y="0" width="20" height="20" fill="????" stroke="none" transform="rotate(45) translate (50,0)/>
         </svg>
     </body>
     </html>
-
+~~~
 
 ![repere](http://www.ac-grenoble.fr/disciplines/informatiquelycee/img/svg_a4_5.png)
 
 
 
 
-* * *
+---
 
 
 
@@ -701,7 +701,7 @@ Il est possible, à l'aide de la balise <g> de regrouper vos dessins afin de leu
 
 Saisissez et testez ce code
 
-    
+
     <!doctype html>
     <html lang="fr">
     <head>
@@ -712,7 +712,7 @@ Saisissez et testez ce code
     <body>
         <svg id="dessin">
             <g transform="rotate(45)">
-                <rect x="100" y="0" width="20" height="20"/>  
+                <rect x="100" y="0" width="20" height="20"/>
                 <circle cx="140" cy="10" r="20" fill="red"/>
             </g>
         </svg>
@@ -723,7 +723,7 @@ Saisissez et testez ce code
 
 
 
-* * *
+---
 
 
 
@@ -775,7 +775,7 @@ Modifiez le code comme bon vous semble et vérifiez que votre image a, elle auss
 
 
 
-* * *
+---
 
 
 

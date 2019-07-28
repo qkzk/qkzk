@@ -3,8 +3,7 @@ author: qu3nt1n
 date: 2016-07-04 14:18:48+00:00
 draft: false
 title: 05. Traitement des images matricielles
-
-url: /
+weight: 5
 ---
 
 Cette introduction est accompagnée d'un [tutoriel en Python](http://icnflandres.free.fr/docs_atspace/image_bitmap.zip). Téléchargez et décompressez le, toutes les instructions sont dans le code.
@@ -301,7 +300,7 @@ Quelques fontes du premier système MacD'autres polices sont en vectoriel (Open 
 
 _Un exemple d'utilisation de MetaFont :_
 
-    
+
     %file name: beta.mf
     %mode_setup;
     % Define a beanlike shape for the character B
@@ -312,14 +311,14 @@ _Un exemple d'utilisation de MetaFont :_
       x1=x4=0;
       x2=x5=w;
       x3=x6=2*w;
-    
+
       % Define pen
       pickup pencircle xscaled 0.2w yscaled 0.04w rotated 45;
-    
+
       % Draw the character curve
       draw z1..z3..z6{z2-z6}..z5..{z4-z2}z4..cycle;
     endchar;
-    
+
     end
 
 

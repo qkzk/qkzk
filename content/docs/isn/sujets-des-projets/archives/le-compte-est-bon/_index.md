@@ -57,18 +57,18 @@ L'ensemble sera intégré dans une page web indiquant le fonctionnement du jeu.
 
 
 
- 	  * Ajouter un chronomètre : le joueur doit trouver le bon compte en moins de 45 secondes, sinon il a perdu.
- 	  * Ajouter des bruitages, une musique de fond.
- 	  * Réaliser une version réseau du jeu :
+* Ajouter un chronomètre : le joueur doit trouver le bon compte en moins de 45 secondes, sinon il a perdu.
+* Ajouter des bruitages, une musique de fond.
+* Réaliser une version réseau du jeu :
 
- 	    * le joueur se connecte en indiquant son prénom,
- 	    * le joueur invite un autre joueur connecté à jouer avec lui (tous les joueurs connectés qui ne jouent pas encore sont affichés dans une liste),
- 	    * le jeu se déroule avec arbitrage de l'ordinateur en 5 manches. A chaque manche l'ordinateur propose un compte à trouver, les joueurs ont 45 secondes pour proposer leurs calculs. Au terme des 45 secondes le joueur qui est le plus proche du
+ 	* le joueur se connecte en indiquant son prénom,
+ 	* le joueur invite un autre joueur connecté à jouer avec lui (tous les joueurs connectés qui ne jouent pas encore sont affichés dans une liste),
+ 	* le jeu se déroule avec arbitrage de l'ordinateur en 5 manches. A chaque manche l'ordinateur propose un compte à trouver, les joueurs ont 45 secondes pour proposer leurs calculs. Au terme des 45 secondes le joueur qui est le plus proche du
 résultat marque 5 points (10 points s'il a le bon compte). Si les deux joueurs sont à la même distance du bon compte ils marquent tous les deux
 le nombre de points correspondant. A la fin de la partie l'ordinateur proclame le vainqueur. A tout moment un joueur
 peut abandonner la partie et ainsi donner la victoire à l'autre joueur.
 
 
- 	  * Ajouter au programme un algorithme de résolution de compte : si aucun joueur ne trouve le bon compte, l'ordinateur affiche une solution (ou
+* Ajouter au programme un algorithme de résolution de compte : si aucun joueur ne trouve le bon compte, l'ordinateur affiche une solution (ou
 indique qu'il n'y a pas de solution le cas échéant).
 

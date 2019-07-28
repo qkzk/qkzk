@@ -35,16 +35,16 @@ L'état de la partie est enregistrée dans un tableau à deux dimensions. Celui-
 
 
 
- 	  * Création des éléments statiques (éventuellement dans un simple canvas).
- 	  * Affichages : grille vide, jetons, jetons positionnés. Cette partie ne me semble pas assez vaste pour faire l'objet du travail complet d'un élève. En effet les éléments à afficher sont trop peu nombreux.
- 	  * Boutons permettant de joueur. Ils seront alors liés à des fonctions de test.
- 	  * Algorithme papier : faire tomber un jeton.
- 	  * Ajouter un élément dans le tableau. Lier cette action à votre bouton. Programmer la chute du jeton.
+* Création des éléments statiques (éventuellement dans un simple canvas).
+* Affichages : grille vide, jetons, jetons positionnés. Cette partie ne me semble pas assez vaste pour faire l'objet du travail complet d'un élève. En effet les éléments à afficher sont trop peu nombreux.
+* Boutons permettant de joueur. Ils seront alors liés à des fonctions de test.
+* Algorithme papier : faire tomber un jeton.
+* Ajouter un élément dans le tableau. Lier cette action à votre bouton. Programmer la chute du jeton.
 Le jeu est alors jouable à condition que les joueurs détectent eux même la victoire.
- 	  * Algorithme papier de recherche de victoire dans le tableau (horizontalement puis verticalement).
- 	  * Programmation des recherches de victoire horizontales et verticales.
- 	  * Algorithme de recherche de victoire : en diagonale.
- 	  * Programmation des recherches de victoire en diagonale.
+* Algorithme papier de recherche de victoire dans le tableau (horizontalement puis verticalement).
+* Programmation des recherches de victoire horizontales et verticales.
+* Algorithme de recherche de victoire : en diagonale.
+* Programmation des recherches de victoire en diagonale.
 
 
 
@@ -55,7 +55,7 @@ On pourra ajouter des fonctionnalités, voici quelques suggestions (liste non li
 
 
 
- 	  * Mode solo : l'ordinateur est l'adversaire et il joue au hasard (facile).
- 	  * Mode solo : l'ordinateur est l'adversaire et il joue au hasard (difficile). Les algorithmes ne sont pas simples
- 	  * Options : dimensions, longueur des chaines, couleurs multiples... (facile)
- 	  * affichages, graphismes, animations etc. (possibilités infinies)
+* Mode solo : l'ordinateur est l'adversaire et il joue au hasard (facile).
+* Mode solo : l'ordinateur est l'adversaire et il joue au hasard (difficile). Les algorithmes ne sont pas simples
+* Options : dimensions, longueur des chaines, couleurs multiples... (facile)
+* affichages, graphismes, animations etc. (possibilités infinies)

@@ -75,9 +75,9 @@ On pourra ajouter des fonctionnalités, voici quelques suggestions (liste non li
 
 
 
-  * recherche des solutions réelles approchées pour un polynôme de degré supérieur ou égal à 3,
-  * dérivation des fonctions polynômes de n'importe quel degré,
-  * tableau de variation avec valeurs exactes pour une fonction polynôme de degré inférieur ou égal à 3,
-  * tableau de variation avec valeurs approchées pour une fonction polynôme de degré supérieur ou égal à 4.
+* recherche des solutions réelles approchées pour un polynôme de degré supérieur ou égal à 3,
+* dérivation des fonctions polynômes de n'importe quel degré,
+* tableau de variation avec valeurs exactes pour une fonction polynôme de degré inférieur ou égal à 3,
+* tableau de variation avec valeurs approchées pour une fonction polynôme de degré supérieur ou égal à 4.
 
 

@@ -49,7 +49,7 @@ On pourra ajouter des fonctionnalités, voici quelques suggestions (liste non li
 
 
 
-  * modes de jeu (bloc aléatoires, vitesse)
-  * échange de blocs et de lignes entre joueurs
-  * animations, sons etc.
+* modes de jeu (bloc aléatoires, vitesse)
+* échange de blocs et de lignes entre joueurs
+* animations, sons etc.
 

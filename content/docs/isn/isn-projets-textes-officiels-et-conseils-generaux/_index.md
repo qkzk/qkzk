@@ -39,11 +39,12 @@ Durant l'année scolaire un mini projet sera proposé. Voyez le comme une répé
 
 
 
- 	  * **Janvier :** choix d'un projet, début du travail... Toutes les séances sont alors consacrées au projet.
- 	  * **Fin mai :** soutenance orale.
-**~ 10 jours avant l'épreuve** : remise des dossiers projets (papier et fichier sur le drive).
-**Quelques jours avant l'épreuve ** : remise du diaporama et des sources.
-**Jour J** : Oral. On se lave les dents, on sourit au jury, on n'oublie pas de respirer.
+* **Janvier :** choix d'un projet, début du travail... Toutes les séances sont alors consacrées au projet.
+* **Fin mai :** soutenance orale.
+
+* **~ 10 jours avant l'épreuve** : remise des dossiers projets (papier et fichier sur le drive).
+* **Quelques jours avant l'épreuve** : remise du diaporama et des sources.
+* **Jour J** : Oral. On se lave les dents, on sourit au jury, on n'oublie pas de respirer.
 
 
 
@@ -63,9 +64,9 @@ Les questions posées portent en général sur
 
 
 
- 	  * l'organisation du travail collectif (_quel est votre rôle dans ce projet ? Admettons que telle partie du programme propose cette nouvelle fonctionnalité, comment l'auriez-vous intégré ?)_
- 	  * l'intégration des différents éléments (_comment partagez-vous tel état de variable à cette partie du programme qui semble en avoir besoin ?_)
- 	  * la technique (_que fait cette fonction ? Quel est le type de cette variable ? Que désigne la notation #FF0000 de la ligne 123 ?_)
+* l'organisation du travail collectif (_quel est votre rôle dans ce projet ? Admettons que telle partie du programme propose cette nouvelle fonctionnalité, comment l'auriez-vous intégré ?)_
+* l'intégration des différents éléments (_comment partagez-vous tel état de variable à cette partie du programme qui semble en avoir besoin ?_)
+* la technique (_que fait cette fonction ? Quel est le type de cette variable ? Que désigne la notation #FF0000 de la ligne 123 ?_)
 
 
 
@@ -74,7 +75,7 @@ Les questions posées portent en général sur
 
 
 
-##### **Partie 1 : présentation**
+#### **Partie 1 : présentation**
 
 
 Durant la soutenance le candidat s'appuie sur un diaporama qui illustre les principaux éléments.
@@ -85,20 +86,20 @@ Un plan possible pour la soutenance :
 
 
 
- 	  * **Introduction** (brève) : qui suis-je ? Quelles étaient mes connaissances en informatique avant de commencer ?
- 	  * **Présentation** du projet et de son **cahier des charges** (simplifié si nécessaire). Les rôles de chacun. Pourquoi ce projet vous a t-il semblé intéressant ?
+* **Introduction** (brève) : qui suis-je ? Quelles étaient mes connaissances en informatique avant de commencer ?
+* **Présentation** du projet et de son **cahier des charges** (simplifié si nécessaire). Les rôles de chacun. Pourquoi ce projet vous a t-il semblé intéressant ?
 **Enjeu du projet** : quelles furent les principales difficultés ?
- 	  * **Présentation générale du programme **: ses parties, le rôle de chacune d'elles, comment sont-elles reliées ? Diagramme.
- 	  * **Première difficulté rencontrée** : présentation de la solution proposée d'un point de vue abstrait appuyé de quelques illustrations.
-On peut évoquer une solution infructueuse et son échec : en quoi était-ce selon-vous une bonne idée ? Pourquoi cela ne fonctionne-t-il pas ?
-Solution retenue, illustrée si cela est pertinent.
- 	  * **Deuxième difficulté. etc.**
- 	  * **Extentions possibles** et propositions diverses.
- 	  * **Conclusion** (revenir au général). Le projet dans son ensemble, le travail collaboratif, éléments marquants, apports, poursuites d'études liées etc.
+* **Présentation générale du programme **: ses parties, le rôle de chacune d'elles, comment sont-elles reliées ? Diagramme.
+* **Première difficulté rencontrée** : présentation de la solution proposée d'un point de vue abstrait appuyé de quelques illustrations.
+    On peut évoquer une solution infructueuse et son échec : en quoi était-ce selon-vous une bonne idée ? Pourquoi cela ne fonctionne-t-il pas ?
+    Solution retenue, illustrée si cela est pertinent.
+* **Deuxième difficulté. etc.**
+* **Extentions possibles** et propositions diverses.
+* **Conclusion** (revenir au général). Le projet dans son ensemble, le travail collaboratif, éléments marquants, apports, poursuites d'études liées etc.
 
 
 
-##### **Partie 2 : les questions du jury **
+#### **Partie 2 : les questions du jury**
 
 
 Celles-ci sont assez variées mais souvent prévisibles.
@@ -116,22 +117,22 @@ Le jury peut élargir le cadre du projet et demander au candidat ce qu'il aurait
 Bien sûr, d'autres questions sont possibles, selon les circonstances.
 
 
-##### **Remarques générales sur la soutenance et le projet**
+#### **Remarques générales sur la soutenance et le projet**
 
 
 
 
 
- 	  * Votre professeur faisant partie du jury ne mentez pas sur le déroulement de l'année. Il est normal de rencontrer des difficultés, c'est votre manière de les surmonter qui prime. Vous accaparer une réussite éventuelle n'est pas un point positif. Si, par exemple, vous avez rencontré des difficultés de communication, il est pertinent de les évoquer. Travailler en équipe n'est simple pour personne et le jury le sait.
- 	  * Avant la présentation le candidat aura le temps de préparer son programme. Il pourra le faire tourner et présenter les sources si le jury le demande.
- 	  * Au fur et à mesure que l'année va avancer votre projet va se développer et le risque est grand que le code soit anarchique : variables incompréhensibles, essais infructueux en commentaires etc. Il convient de l'éditer régulièrement et surtout d'en garder des versions intermédiaires. Celles-ci peuvent être présentées à titre de comparaison !
- 	  * Votre manque d'expérience à l'oral est souvent manifeste. Cela se traduit parfois par une présentation trop longue (quelques rares fois, trop courtes). Voilà pourquoi il est important de garder une partie moins importante avant la conclusion. Elle pourra être laissée en suspend et le jury aura l'occasion d'interroger le candidat à ce propos. N'hésitez pas en faire part : "_je pense être trop long et j'aimerais laisser cette partie de côté_". Le jury vous répondra.
- 	  * Dans quel ordre traiter les éléments ?
+* Votre professeur faisant partie du jury ne mentez pas sur le déroulement de l'année. Il est normal de rencontrer des difficultés, c'est votre manière de les surmonter qui prime. Vous accaparer une réussite éventuelle n'est pas un point positif. Si, par exemple, vous avez rencontré des difficultés de communication, il est pertinent de les évoquer. Travailler en équipe n'est simple pour personne et le jury le sait.
+* Avant la présentation le candidat aura le temps de préparer son programme. Il pourra le faire tourner et présenter les sources si le jury le demande.
+* Au fur et à mesure que l'année va avancer votre projet va se développer et le risque est grand que le code soit anarchique : variables incompréhensibles, essais infructueux en commentaires etc. Il convient de l'éditer régulièrement et surtout d'en garder des versions intermédiaires. Celles-ci peuvent être présentées à titre de comparaison !
+* Votre manque d'expérience à l'oral est souvent manifeste. Cela se traduit parfois par une présentation trop longue (quelques rares fois, trop courtes). Voilà pourquoi il est important de garder une partie moins importante avant la conclusion. Elle pourra être laissée en suspend et le jury aura l'occasion d'interroger le candidat à ce propos. N'hésitez pas en faire part : "_je pense être trop long et j'aimerais laisser cette partie de côté_". Le jury vous répondra.
+* Dans quel ordre traiter les éléments ?
 L'approche : _1. projet jusqu'au bout, 2. dossier, 3. préparation de l'oral_, conduit aux pires catastrophes.
 Il faut donc aborder tôt le dossier projet et et l'oral. Aucune raison de tarder, c'est en fait là dessus que vous serez évalué.
- 	  * Votre projet n'est pas terminé ? Est-ce qu'il tourne suffisamment pour être présenté ? : _"Oui... mais je voulais faire ça..."_ Vous pouvez archiver cette version du code, l'illustrer dans un point résolu pour l'oral et le dossier projet et continuer votre travail.
- 	  * L'avancée du projet est généralement irrégulière. 3 semaines d'incompréhension, 30 minutes de réalisation et 10 minutes d'euphorie devant une solution. C'est la norme en informatique. Il est donc crucial de communiquer régulièrement avec votre équipe : qu'avez-vous fait ? Pourquoi cela ne fonctionne-t-il pas ? Avez vous trouvé une source intéressante ?
- 	  * Un code un peu "léger" parfois être sauvé à l'oral, un très joli code n’empêche pas un désastre à l'oral.
+* Votre projet n'est pas terminé ? Est-ce qu'il tourne suffisamment pour être présenté ? : _"Oui... mais je voulais faire ça..."_ Vous pouvez archiver cette version du code, l'illustrer dans un point résolu pour l'oral et le dossier projet et continuer votre travail.
+* L'avancée du projet est généralement irrégulière. 3 semaines d'incompréhension, 30 minutes de réalisation et 10 minutes d'euphorie devant une solution. C'est la norme en informatique. Il est donc crucial de communiquer régulièrement avec votre équipe : qu'avez-vous fait ? Pourquoi cela ne fonctionne-t-il pas ? Avez vous trouvé une source intéressante ?
+* Un code un peu "léger" parfois être sauvé à l'oral, un très joli code n’empêche pas un désastre à l'oral.
 
 
 
@@ -141,14 +142,14 @@ Il faut donc aborder tôt le dossier projet et et l'oral. Aucune raison de tarde
 
 
 
- 	  * Le langage de programmation sera le javascript. Python si votre projet repose sur le raspberry Pi.
- 	  * Les sujets proposés cette année se trouvent dans le menu. D'autres projets peuvent-être apportés par un groupe mais le professeur peut les refuser.
- 	  * C'est un travail en équipe (3 ou 2).
- 	  * La soutenance est individuelle.
- 	  * Le partage des documents se fera sur un dossier drive dédié au projet crée par le professeur. Les documents y seront donc régulièrement déposés et classés proprement. Cela fera partie de votre évaluation finale.
- 	  * le code doit être modulaire et bien structuré
- 	  * le code doit être généreusement commenté
- 	  * les contraintes officielles et l'ensemble des règles sont disponibles en bas de cette page.
+* Le langage de programmation sera le javascript. Python si votre projet repose sur le raspberry Pi.
+* Les sujets proposés cette année se trouvent dans le menu. D'autres projets peuvent-être apportés par un groupe mais le professeur peut les refuser.
+* C'est un travail en équipe (3 ou 2).
+* La soutenance est individuelle.
+* Le partage des documents se fera sur un dossier drive dédié au projet crée par le professeur. Les documents y seront donc régulièrement déposés et classés proprement. Cela fera partie de votre évaluation finale.
+* le code doit être modulaire et bien structuré
+* le code doit être généreusement commenté
+* les contraintes officielles et l'ensemble des règles sont disponibles en bas de cette page.
 
 
 
@@ -164,10 +165,10 @@ Il faut donc aborder tôt le dossier projet et et l'oral. Aucune raison de tarde
 
 
 
- 	  * Le [ programme officiel](http://www.education.gouv.fr/pid25535/bulletin_officiel.html?cid_bo=57572)
- 	  * Le [BO : Bulletin officiel de l’éducation nationale ](http://isn.ac-amiens.fr/sites/isn.ac-amiens.fr/IMG/pdf/BO_MEN_03-05-12_213932.pdf)n°18 du 03/05 2012 définit une grille de compétences et d’évaluation pour l’ISN.
- 	  * [Résumé](http://qkzk.xyz/docs/grilles-competences.html)
- 	  * Extraits de la note de service du recteur :
+* Le [ programme officiel](http://www.education.gouv.fr/pid25535/bulletin_officiel.html?cid_bo=57572)
+* Le [BO : Bulletin officiel de l’éducation nationale ](http://isn.ac-amiens.fr/sites/isn.ac-amiens.fr/IMG/pdf/BO_MEN_03-05-12_213932.pdf)n°18 du 03/05 2012 définit une grille de compétences et d’évaluation pour l’ISN.
+* [Résumé](http://qkzk.xyz/docs/grilles-competences.html)
+* Extraits de la note de service du recteur :
 _Cette épreuve d’une durée de 20 minutes se déroule pendant le temps scolaire. Elle est notée sur 20 points (8 points pour l’évaluation d’un projet et sa soutenance orale ; 12 points pour le dialogue argumenté avec la commission d’évaluation)._
 
 

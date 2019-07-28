@@ -39,11 +39,11 @@ Le projet de programme est consultable [ici](http://cache.media.education.gouv.f
 
 
 
- 	  * [Module 1 - Communiquer](http://qkzk.xyz/?page_id=27)
- 	  * [Module 2 - html, css](http://qkzk.xyz/?page_id=34)
- 	  * [Module 3 - python](http://qkzk.xyz/?page_id=39)
- 	  * Module 4 - enjeux sociétaux : pas encore fait :(
- 	  * [Module 5 - raspberry pi](http://qkzk.xyz/?page_id=641)
+ [Module 1 - Communiquer](http://qkzk.xyz/?page_id=27)
+ [Module 2 - html, css](http://qkzk.xyz/?page_id=34)
+ [Module 3 - python](http://qkzk.xyz/?page_id=39)
+ Module 4 - enjeux sociétaux : pas encore fait :(
+ [Module 5 - raspberry pi](http://qkzk.xyz/?page_id=641)
 
 Si ces modules sont épuisés avant la fin de l'année - ça arrive - alors abordez la suite, préparée pour les premières et les terminales.
 
@@ -53,7 +53,7 @@ Si ces modules sont épuisés avant la fin de l'année - ça arrive - alors abor
 
 
 
-* * *
+---
 
 
 
@@ -68,9 +68,9 @@ Votre point de départ m'est inconnu et les bases sont indispensables. Voilà po
 
 
 
- 	  * [disposer des bons outils de communication,](http://qkzk.xyz/?page_id=27)
- 	  * [créer et publier une page web](http://qkzk.xyz/?page_id=34),
- 	  * [programmer en python](http://qkzk.xyz/?page_id=39) - _Les parties de 0 à 4 suffiront largement. Les suivantes sont un approfondissement utile aux curieux._
+ [disposer des bons outils de communication,](http://qkzk.xyz/?page_id=27)
+ [créer et publier une page web](http://qkzk.xyz/?page_id=34),
+ [programmer en python](http://qkzk.xyz/?page_id=39) - _Les parties de 0 à 4 suffiront largement. Les suivantes sont un approfondissement utile aux curieux._
 
 L'ordre dans lequel aborder les notions ultérieures est important. Les pré requis sont indiqués en haut de chaque document.
 

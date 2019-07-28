@@ -3,8 +3,7 @@ author: qu3nt1n
 date: 2017-06-26 07:07:22+00:00
 draft: false
 title: 03. Casser un code secret
-
-url: /
+weight: 3
 ---
 
 
@@ -13,14 +12,14 @@ Pré-requis
 
 
 
- 	  * [Cryptographie : codage simple](http://qkzk.xyz/?page_id=83)
+[Cryptographie : codage simple](http://qkzk.xyz/?page_id=83)
 
 Notions abordées
 
 
 
- 	  * lexicométrie
- 	  * cryptographie simple : casser le code
+* lexicométrie
+* cryptographie simple : casser le code
 
 
 
@@ -45,11 +44,11 @@ On peut remarquer que c'est loin d'être parfait... C'est tout à fait logique, 
 
 Voici quelques un script (moche) qui fait tout ça (il est tard).
 
-    
-    <code>
+
+
     #!/usr/bin/env python
     # -*- coding: utf-8 -*-
-    
+
     from string import ascii_lowercase     # ascii_lowercase =='abcdefghijklmnopqrstuvwxyz'
     #print ascii_lowercase
     print "mot code"
@@ -59,30 +58,30 @@ Voici quelques un script (moche) qui fait tout ça (il est tard).
         for x in ascii_lowercase:
             dic3[x] = text3.count(x)
     print dic3
-    
+
     print "somme des values"
     total = 0
     for k, v in dic3.items():
         total += v
-    
+
     print "frequences en pourcent"
     frequence = {}
     for k, v in dic3.items():
         frequence[k] = round(100*v/float(total),2)
     print frequence
-    
+
     data = frequence
     cle = sorted(data, key=data.get, reverse=True)
-    
+
     print cle
-    
+
     cle = ''.join(cle)
     print cle
     print len(cle)
     code = text3
-    
+
     ordre = 'eaistnrulodmpcvqgbfjhzxykw'
-    
+
     dechiffre = ''
     for c in text3:
         if c in ascii_lowercase:
@@ -94,7 +93,7 @@ Voici quelques un script (moche) qui fait tout ça (il est tard).
     print dechiffre
     with open('texte-decrypt.txt', 'w') as decrypt:
         decrypt.write(dechiffre)
-    </code>
+
 
 
 Pour aller plus loin on s'intéressera à un chiffrement qui a longtemps résisté, celui de Vigénere. Il a tenu 300 ans avant d'être brisé, c'est encore un record absolu.
@@ -142,11 +141,10 @@ Je me sens obligé de vous rappeler quelques règles d'usages. Vos informations 
 
 
 
- 	  * Changez régulièrement de mot de passe, ne les communiquez pas, ne les réemployez pas. Utilisez des mots de passe longs : _jevaismangerlavoituredemonbeaufrere_ est plus sûr que_ t4t459!. _N'utilisez pas celui là, il finira dans un dictionnaire maintenant que je l'ai publié.
- 	  * Il existe des applications / extension de navigateur permettant de conserver vos mots de passe de vous identifier de manière sécurisée. Elles ne sont pas toutes de même qualité. [Comparatif en anglais](http://www.pcmag.com/article2/0,2817,2475964,00.asp) des solutions gratuites.
- 	  * Méfiez-vous du phishing. Ne vous connectez jamais sur un site dont vous n'avez pas tapé l'adresse vous même. Votre banque vous envoie un mail pour vous signaler quelque chose, n'employez pas ce lien. Tapez l'adresse ou trouvez la dans google.
- 	  * Adoptez une double authentification (password + confirmation par un code envoyé par SMS par exemple). C'est imparfait mais déjà mieux. Toutes les entreprises sérieuses proposent maintenant de la double authentification : Google, Apple, Microsoft, Facebook, Sony, Amazon, Twitter, Twitch, Steam, Blizzard, Paypal, Ebay...
+ Changez régulièrement de mot de passe, ne les communiquez pas, ne les réemployez pas. Utilisez des mots de passe longs : _jevaismangerlavoituredemonbeaufrere_ est plus sûr que_ t4t459!. _N'utilisez pas celui là, il finira dans un dictionnaire maintenant que je l'ai publié.
+ Il existe des applications / extension de navigateur permettant de conserver vos mots de passe de vous identifier de manière sécurisée. Elles ne sont pas toutes de même qualité. [Comparatif en anglais](http://www.pcmag.com/article2/0,2817,2475964,00.asp) des solutions gratuites.
+ Méfiez-vous du phishing. Ne vous connectez jamais sur un site dont vous n'avez pas tapé l'adresse vous même. Votre banque vous envoie un mail pour vous signaler quelque chose, n'employez pas ce lien. Tapez l'adresse ou trouvez la dans google.
+ Adoptez une double authentification (password + confirmation par un code envoyé par SMS par exemple). C'est imparfait mais déjà mieux. Toutes les entreprises sérieuses proposent maintenant de la double authentification : Google, Apple, Microsoft, Facebook, Sony, Amazon, Twitter, Twitch, Steam, Blizzard, Paypal, Ebay...
 Faîtes le au moins pour le compte de votre téléphone et votre messagerie principale.
 
- 	  * Déconnectez-vous des machines et méfiez vous des réseaux publics (tel que celui du lycée ou le wifi du Macdo).
-
+ Déconnectez-vous des machines et méfiez vous des réseaux publics (tel que celui du lycée ou le wifi du Macdo).

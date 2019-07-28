@@ -4,7 +4,7 @@ date: 2017-06-20 11:53:32+00:00
 draft: false
 title: partie 4 - d'autres composants classiques
 
-url: /
+
 ---
 
 Cette page concentre quelques présentation d'emploi de composants électroniques. Chaque fois que cela est possible on emploiera la librairie **gpioZero. **
@@ -135,12 +135,12 @@ _(Extrait de[ Wikipédia](https://fr.wikipedia.org/wiki/Photor%C3%A9sistance#Av
 
 
 
- 	  * Les détecteurs de flammes qui sont des photorésistances à détection d’infrarouges ou d’UV. À savoir que seule une forte fumée cause une inhibition du capteur UV et que la foudre ou une soudure peut le déclencher accidentellement. Pour la photorésistance à infrarouges, la présence de vapeur d’eau atténue fortement sa sensibilité.
- 	  * Les détecteurs de présence se déclinent sous deux principes différents. Un premier détectant l’augmentation du flux induit par la présence d’un corps dans le champ (principalement des capteurs à infrarouges), le second détectant la diminution du flux induit par l’ombre du corps présent dans le champ du capteur qui est plus limité que celui à infrarouges (détection dans le visible et capteur LDR plus directif).
- 	  * Les récepteurs infrarouges permettent de faire communiquer deux appareils sans contact. L’un des appareils possède un émetteur infrarouge et le second la photorésistance.
- 	  * Les détecteurs à UV qui permettent de mettre en évidence toute source d’UV et ainsi asservir la source ou détecter une fuite par exemple.
- 	  * L’allumage des lumières lorsque la luminosité diminue (éclairage public ou domestique).
- 	  * La mesure de la luminosité extérieure dans les appareils photographiques ou les ordinateurs.
+ Les détecteurs de flammes qui sont des photorésistances à détection d’infrarouges ou d’UV. À savoir que seule une forte fumée cause une inhibition du capteur UV et que la foudre ou une soudure peut le déclencher accidentellement. Pour la photorésistance à infrarouges, la présence de vapeur d’eau atténue fortement sa sensibilité.
+ Les détecteurs de présence se déclinent sous deux principes différents. Un premier détectant l’augmentation du flux induit par la présence d’un corps dans le champ (principalement des capteurs à infrarouges), le second détectant la diminution du flux induit par l’ombre du corps présent dans le champ du capteur qui est plus limité que celui à infrarouges (détection dans le visible et capteur LDR plus directif).
+ Les récepteurs infrarouges permettent de faire communiquer deux appareils sans contact. L’un des appareils possède un émetteur infrarouge et le second la photorésistance.
+ Les détecteurs à UV qui permettent de mettre en évidence toute source d’UV et ainsi asservir la source ou détecter une fuite par exemple.
+ L’allumage des lumières lorsque la luminosité diminue (éclairage public ou domestique).
+ La mesure de la luminosité extérieure dans les appareils photographiques ou les ordinateurs.
 
 Ils ont de nombreux avantages (coût faible, sensibilité élevée etc.) mais tout autant d'inconvénients (dont le principal à mes yeux est la non linéarité de la résistivité en fonction de l'entrée).
 
@@ -255,12 +255,12 @@ Les branchements sont les suivants :
 
 
 
- 	  * Le Pin 1 de la sonde va vers l’alim 3,3V du Raspberry
- 	  * Le Pin 2 va vers un pin du Raspberry Pi (le pin 4 dans mon exemple).
- 	  * Le Pin 3 … ne sert à rien ![:)](http://www.manuel-esteban.com/wp-includes/images/smilies/icon_smile.gif)
+ Le Pin 1 de la sonde va vers l’alim 3,3V du Raspberry
+ Le Pin 2 va vers un pin du Raspberry Pi (le pin 4 dans mon exemple).
+ Le Pin 3 … ne sert à rien ![:)](http://www.manuel-esteban.com/wp-includes/images/smilies/icon_smile.gif)
 
- 	  * Le Pin 4 va vers le Ground du Raspberry Pi
- 	  * Une resistance (de 4700 ohm à 10K Ohm) se branche entre le pin 2 et l’alim (à connecter en premier, avant la sortie vers le pin 4 du raspberry pi).
+ Le Pin 4 va vers le Ground du Raspberry Pi
+ Une resistance (de 4700 ohm à 10K Ohm) se branche entre le pin 2 et l’alim (à connecter en premier, avant la sortie vers le pin 4 du raspberry pi).
 
 
 

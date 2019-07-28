@@ -101,16 +101,21 @@ Il est très important de bien faire la différence entre identificateurs des va
 
 On considère la séquence de code suivante :
 
-     var exemple = 42;
+~~~javascript
+var exemple = 42;
 
-     document.writeln("valeur de la variable exemple : ");
-     document.writeln(exemple);
-     document.writeln("<br></br>");
+document.writeln("valeur de la variable exemple : ");
+document.writeln(exemple);
+document.writeln("<br></br>");
 
-     document.writeln('valeur de la chaine "exemple" : ');
-     document.writeln("exemple");
-     document.writeln("<br></br>");
-       1. Qu'affiche cette portion de code (si on la place dans la balise `script` au sein d'une page HTML).  2. Testez votre réponse en écrivant et visualisant une telle page.  3. Modifiez l'initialisation de la variable ainsi :
+document.writeln('valeur de la chaine "exemple" : ');
+document.writeln("exemple");
+document.writeln("<br></br>");
+~~~
+
+1. Qu'affiche cette portion de code (si on la place dans la balise `script` au sein d'une page HTML).
+2. Testez votre réponse en écrivant et visualisant une telle page.
+3. Modifiez l'initialisation de la variable ainsi :
 
      var exemple = "un texte";
 
@@ -130,11 +135,13 @@ En javascript ce type s'appelle `Boolean` et les deux valeurs de ce type sont no
 
 Ainsi si _a_ et _b_ sont deux variables booléennes, les deux seules valeurs qu'elles peuvent prendre sont `true` ou `false` et les expressions suivantes sont valides :
 
-    !a                  //  NON a, la négation de a
-    a && b              //  a ET b
-    a || b              //  a OU b
-    (a && b) || (!b)    //  (a ET b) OU (NON b)
 
+~~~javascript
+!a                  //  NON a, la négation de a
+a && b              //  a ET b
+a || b              //  a OU b
+(a && b) || (!b)    //  (a ET b) OU (NON b)
+~~~
 
 Soient _a_ et _b_ sont deux variables booléennes, donnez une expression javascript permettant de calculer _a_ XOR _b_.
 
@@ -145,12 +152,18 @@ Ainsi en javascript l'expression `1=="1"` a pour valeur `true` alors que `1==="1
 On appelle prédicat les fonctions dont le résultat est un booléen. On trouve par exemple les prédicats d'égalité `==` et de comparaison `<` ou `>`. Ces opérateurs s'appliquent sur les nombres et les chaînes de caractères. Ainsi par exemple la spécification de `<` pour les chaînes de caractères est
 
 **nom** : <
+
 **Opérandes** : 2
-**  c1** : String
-**  c2** : String
+
+**c1** : String
+
+**c2** : String
+
 **Résultat**
-**  type** : booléen
-**  description** : true si la chaîne c1 est avant la chaîne c2 dans l'ordre lexicographique (comme "alphabétique" mais élargi à tous les caractères) et false sinon
+
+**type** : booléen
+
+**description** : true si la chaîne c1 est avant la chaîne c2 dans l'ordre lexicographique (comme "alphabétique" mais élargi à tous les caractères) et false sinon
 
 Soient _n_ un nombre, donnez une expression javascript qui vaille `true` si et seulement si  1. _n ≥ 42_ (proposez deux expressions équivalentes)  2. _n ≤ 0_
 (_les prédicats `>=` et `<=` (≤) sont définis en javascript, vous pouvez les utiliser pour la suite de l'exercice._)  3. _n_ appartient à l'intervalle [5,12]  4. _n_ n'appartient pas à l'intervalle [5,12] (proposez deux expressions équivalentes)  5. _n_ appartient à l'intervalle [5,12]∪[24,44]
@@ -175,7 +188,9 @@ Ce problème se posera-t-il pour Javascript et votre navigateur ?
 Si l'on souhaite obtenir une date spécifique, il "suffit" de préciser le nombre de millisecondes écoulées depuis le 1er janvier 1970 à 12h00mn00sec :
 
     var uneDate = new Date(1339000000000);
-      1. Après l'avoir définie, affichez la valeur de la variable `uneDate`.  2. Définissez par cette méthode la date correspondant au début de la séance d'aujourd'hui puis affichez-la pour vérification.
+
+1. Après l'avoir définie, affichez la valeur de la variable `uneDate`.
+2. Définissez par cette méthode la date correspondant au début de la séance d'aujourd'hui puis affichez-la pour vérification.
 
 En informatique, il est habituel de commencer les numérotations à 0.
 
@@ -183,7 +198,9 @@ Une autre façon de procéder, sans doute plus pratique, consiste à communiquer
 
     var bonneAnnee = new Date(2012,11,31,23,59,59,999);
     var dateReveillon = new Date(2012,11,31);
-      1. Définissez par cette méthode la date correspondant au début de la séance d'aujourd'hui puis affichez-la pour vérification.  2. Définissez et affichez votre date anniversaire.
+
+  1. Définissez par cette méthode la date correspondant au début de la séance d'aujourd'hui puis affichez-la pour vérification.
+  2. Définissez et affichez votre date anniversaire.
 
 ## Autres manipulations : les fonctions
 

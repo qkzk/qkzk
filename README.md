@@ -1,7 +1,7 @@
 # qkzk
 
 
-Mon site contenant tous mes cours d'informatique.
+Mon site contenant tous mes cours d'informatique donnés au Lycée des Flandres
 
 
 ## Hébergement

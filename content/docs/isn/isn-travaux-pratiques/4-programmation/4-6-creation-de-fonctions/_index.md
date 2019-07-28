@@ -10,10 +10,10 @@ Notions abordées dans cette page
 
 
 
- 	  * utilisation de définitions javascript faites en dehors de la page
- 	  * écriture de fonctions
- 	  * (première) utilisation d'un debugger
- 	  * tests
+* utilisation de définitions javascript faites en dehors de la page
+* écriture de fonctions
+* (première) utilisation d'un debugger
+* tests
 
 
 
@@ -42,11 +42,11 @@ Dans la suite du document tous les liens mènent vers ces fichiers.
 
 
 
- 	  1. Consultez les 2 pages suivantes : [version 1](http://qkzk.xyz/docs/doc04/doc/monuments-version1.html), [version 2](http://qkzk.xyz/docs/doc04/doc/monuments-version2.html). Rafraîchir la page si les images ne se chargent pas.
- 	  2. Voyez-vous des différences entre ces 2 versions ?
- 	  3. Consultez les codes HTML de ces 2 pages.
- 	  4. Quelles différences constatez-vous ? Qu'en pensez-vous ? L'un des deux fichiers HTML est-il plus facile à comprendre ? Si oui, lequel ?
- 	  5. Le château de Chambord se trouve aux coordonnées (47.616141,1.517105). Ajoutez pour chacun des 2 documents HTML l'affichage de ce monument. Cela vous semble-t-il plus facile, ou plus naturel, dans un cas que dans l'autre ?
+1. Consultez les 2 pages suivantes : [version 1](http://qkzk.xyz/docs/doc04/doc/monuments-version1.html), [version 2](http://qkzk.xyz/docs/doc04/doc/monuments-version2.html). Rafraîchir la page si les images ne se chargent pas.
+2. Voyez-vous des différences entre ces 2 versions ?
+3. Consultez les codes HTML de ces 2 pages.
+4. Quelles différences constatez-vous ? Qu'en pensez-vous ? L'un des deux fichiers HTML est-il plus facile à comprendre ? Si oui, lequel ?
+5. Le château de Chambord se trouve aux coordonnées (47.616141,1.517105). Ajoutez pour chacun des 2 documents HTML l'affichage de ce monument. Cela vous semble-t-il plus facile, ou plus naturel, dans un cas que dans l'autre ?
 
 
 
@@ -60,10 +60,10 @@ D'après le comportement observé dans le document version 2, donnez une spécif
 Vous vous en doutez sûrement, la
 fonction `afficheMonument` n'est pas une fonction prédéfinie en Javascript. Elle a été créée spécifiquement pour notre exemple. Mais alors où est-elle définie ? La réponse se situe dans la zone `head` du document version 2. Les plus attentifs ont peut-être constaté la ligne :
 
-
-    <script src="monuments-fonction.js" type="text/javascript">// <![CDATA[
-
+~~~javascript
+<script src="monuments-fonction.js" type="text/javascript">// <![CDATA[
     // ]]></script>
+~~~
 
 
 Cette instruction indique que du code Javascript se trouve dans
@@ -79,12 +79,12 @@ fichier `monuments-fonction.js`.
 On peut également définir des fonctions sans utiliser du
 mot-clé `var` à l'aide de la syntaxe suivante :
 
-
-    function afficheMonument (nomMonument, longitude, latitude) {
-      var texte = texteMonument(nomMonument, longitude, latitude);
-      document.writeln(texte);
-    }
-
+~~~javascript
+function afficheMonument (nomMonument, longitude, latitude) {
+  var texte = texteMonument(nomMonument, longitude, latitude);
+  document.writeln(texte);
+}
+~~~
 
 
 
@@ -94,25 +94,19 @@ fichier, en particulier  :
 
 
 
- 	  1. Quelles sont les 3 fonctions définies dans ce fichier ?
- 	  2. Etudiez chacun des commentaires qui précédent les définitions. La
-spécification que vous avez proposée
-pour `afficheMonument` correspond-elle ? Ces
-commentaires vous permettent-ils d'utiliser les fonctions sans
-étudier de manière plus poussée le code de leur définition ?
-Cela serait-il aussi facile sans ces commentaires ?
- 	  3. Quel mot-clé introduit la définition de ces fonctions ?
- 	  4. Quelles sont les 2 fonctions qui produisent un résultat ?
- 	  5. Dans ces fonctions, quel mot-clé, absent dans la troisème fonction,
-vous semble leur permettre de produire ce résultat ?
- 	  6. Dans cette définition :
+1. Quelles sont les 3 fonctions définies dans ce fichier ?
+2. Etudiez chacun des commentaires qui précédent les définitions. La spécification que vous avez proposée pour `afficheMonument` correspond-elle ? Ces commentaires vous permettent-ils d'utiliser les fonctions sans étudier de manière plus poussée le code de leur définition ? Cela serait-il aussi facile sans ces commentaires ?
+3. Quel mot-clé introduit la définition de ces fonctions ?
+4. Quelles sont les 2 fonctions qui produisent un résultat ?
+5. Dans ces fonctions, quel mot-clé, absent dans la troisème fonction, vous semble leur permettre de produire ce résultat ?
+6. Dans cette définition :
 
-
-    var afficheMonument = function (nomMonument, longitude, latitude) {
-        var texte = texteMonument(nomMonument, longitude, latitude);
-        document.writeln(texte);
-    }
-
+~~~javascript
+var afficheMonument = function (nomMonument, longitude, latitude) {
+    var texte = texteMonument(nomMonument, longitude, latitude);
+    document.writeln(texte);
+}
+~~~
 
 
 désignez les paramètres formels, les paramètres effectifs et les variables.
@@ -152,10 +146,10 @@ Dans la définition on peut distinguer 2 parties :
 
 
 
- 	  * l'entête de la fonction qui
+* l'entête de la fonction qui
 reprend le nom et la liste des paramètres entre parenthèses (on doit
 noter `()` si aucun paramètre n'est requis),
- 	  * le corps de la fonction qui
+* le corps de la fonction qui
 contient le code exécuté lors de l'appel de la fonction.
 Dans le corps de la fonction le mot-clé return permet
 d'introduire une expression dont la valeur est résultat de l'appel
@@ -189,11 +183,11 @@ habituelles d'un debugger sont de permettre :
 
 
 
- 	  * la mise en place de **points d'arrêt** dans le code
+* la mise en place de **points d'arrêt** dans le code
 afin d'en interrompre l'exécution au moment précis ou cet endroit du
 code est traité,
- 	  * l'**exécution pas-à-pas** du programme,
- 	  * d'**inspecter l'état des données** manipulées par le code,
+* l'**exécution pas-à-pas** du programme,
+* d'**inspecter l'état des données** manipulées par le code,
 notamment afin de vérifier s'il correspond à ce que l'on attendait.
 
 Dans notre cas, notre programme ne comporte pas d'erreur dans son
@@ -205,35 +199,35 @@ en examiner le fonctionnement en détail :
 
 
 
- 	  1. Activez Firebug et ouvrez le document dans
+1. Activez Firebug et ouvrez le document dans
 sa [version 2](http://qkzk.xyz/docs/doc04/doc/monuments-version2.html).
- 	  2. Ouvrez l'onglet script et choisissez le
+2. Ouvrez l'onglet script et choisissez le
 fichier`monuments-fonction.js` contenant le code des
 fonctions que nous voulons analyser.
 ![Firebug - code](http://qkzk.xyz/docs/doc04/doc/firebugDebugger1.png)
 
- 	  3. Placez un point d'arrêt sur la première ligne de code du corps de la
+3. Placez un point d'arrêt sur la première ligne de code du corps de la
 fonction `afficheMonument` en cliquant dans la marge du
 code :
 ![Firebug - point arret](http://qkzk.xyz/docs/doc04/doc/firebugDebugger2.png)
 
- 	  4. Rechargez la page. Celle-ci commence à être évaluée, comme
+4. Rechargez la page. Celle-ci commence à être évaluée, comme
 l'indique l'affichage du contenu de la balise `h1` puis
 le traitement s'arrête et dans la zone Firebug la ligne sur laquelle
 nous avions mis un point d'arrêt est surlignée. Dans la marge un
 curseur en forme de triangle nous indique que le traitement du code
 est en attente avant l'évaluation de cette ligne.
- 	  5. Dans la zone de droite de Firebug, activez
+5. Dans la zone de droite de Firebug, activez
 l'onglet **Pile**. Celui-ci indique par quel chemin (qui se lit
 de bas en haut) on est arrivé à ce point d'arrêt. Vous pouvez
 cliquer sur les noms pour accéder directement aux codes impliqués.
 ![Firebug - pile exécution](http://qkzk.xyz/docs/doc04/doc/firebugDebugger3.png)
 
- 	  6. Dans l'image ci-dessus on peut apercevoir un groupe de
+6. Dans l'image ci-dessus on peut apercevoir un groupe de
 boutons, située au-dessus de la zone contenant le code
 Javascript. Passez en laissant un peu votre souris au-dessus de
 chacun d'entre eux pour voir apparaitre leur rôle.
- 	  7. Nous
+7. Nous
 allons commencer par utiliser le troisième appelé **Pas à pas
 détaillé**.
 
@@ -244,10 +238,10 @@ attentif à la séquence d'opérations exécutées et notamment à ce qui
 se passe lorsqu'une fonction en appelle une autre et lors du "_retour_"
 de cette fonction. Surveillez notamment le contenu de la
 zone **Pile** sur la droite.
- 	  8. Recommencez jusqu'à affichage du Mont Saint-Michel.
- 	  9. Appuyez cette fois sur le second bouton
+8. Recommencez jusqu'à affichage du Mont Saint-Michel.
+9. Appuyez cette fois sur le second bouton
 (appelé **Continuer**).
- 	  10. Placez un point d'arrêt sur la première ligne de chacune des 2
+10. Placez un point d'arrêt sur la première ligne de chacune des 2
 autres fonctions puis, en observant ce qui se passe, utilisez le
 bouton **Continuer** jusqu'à afficher le chateau de Chambord.
 Donnez une description de l'action de ce bouton.
@@ -271,16 +265,16 @@ ces définitions dans un fichier "à part").
 
 
 
- 	  1. Chargez le
+1. Chargez le
 fichier [monuments-fonction-meilleurePratique.js](http://qkzk.xyz/docs/doc04/doc/monuments-fonction-meilleurePratique.js)
 et
 étudiez-en le code.
- 	  2. Quelles sont les données qui ont été nommées ? Où sont-elles utilisées ?
- 	  3. Faites une copie du fichier `monuments-version2.html`
+2. Quelles sont les données qui ont été nommées ? Où sont-elles utilisées ?
+3. Faites une copie du fichier `monuments-version2.html`
 et modifiez la partie `head` de la copie pour utiliser
 ce fichier Javascript. Vérifiez que le comportement n'a pas été
 perturbé.
- 	  4. Reprenez l'exercice avec les modifications sur le document
+4. Reprenez l'exercice avec les modifications sur le document
 d'affichage des monuments avec cette version et comparez avec ce que
 vous aviez dû faire pour les 2 autres versions. Peut-être cela vous
 donne-t-il l'idée de créer d'autres données globales pour ce
@@ -301,15 +295,15 @@ comparez le travail à faire dans chacun des cas :
 
 
 
- 	  1. passez le facteur de zoom de 17 à 16
- 	  2. modifiez la taille d'affichage des images de 400 à 500
- 	  3. modifiez le titre qui précède chaque monument :
+1. passez le facteur de zoom de 17 à 16
+2. modifiez la taille d'affichage des images de 400 à 500
+3. modifiez le titre qui précède chaque monument :
 
- 	    1. remplacez le texte _Monument _ par _Voici :_
- 	    2. créez une feuille de style qui définit une classe CSS pour un
+  1. remplacez le texte _Monument _ par _Voici :_
+  2. créez une feuille de style qui définit une classe CSS pour un
 texte blanc sur fond bleu et affectée cette classe aux
 éléments `h2` de titre des monuments
- 	    3. ajoutez après le nom du monument ses
+  3. ajoutez après le nom du monument ses
 coordonnées GPS, par exemple pour avoir _La tour Eiffel se trouve aux
 coordonnées (48.85826,2.294591)_
 
@@ -341,18 +335,18 @@ ou `fahrcels` par exemple.
 
 
 
- 	  1. Dans un fichier `temperature.js` écrivez le code une
+1. Dans un fichier `temperature.js` écrivez le code une
 fonction `fahrenheitEnCelsius` qui prend un paramètre
 numérique représentant une température exprimée en degré Fahrenheit et
 a pour résultat la même température exprimée en degré Celsius.
- 	  2. Avez-vous rédigé la partie documentation ? Si non, c'est un
+2. Avez-vous rédigé la partie documentation ? Si non, c'est un
 tort elle fait partie de la fonction et est tout aussi
 indispensable que le code lui-même. Pourquoi selon vous ?
- 	  3. Ecrivez une page HTML qui utilise la définition de cette fonction
+3. Ecrivez une page HTML qui utilise la définition de cette fonction
 dans ce fichier pour, après avoir demandé une température en
 Fahrenheit affiche la valeur en Celsius correspondante.
- 	  4. Testez.
- 	  5. Définissez la fonction qui réalise la conversion inverse et
+4. Testez.
+5. Définissez la fonction qui réalise la conversion inverse et
 testez-la également.
 
 
@@ -378,18 +372,18 @@ Dans la suite, RESTE représente le reste dans la division entière et QUO le qu
 
 
 
- 	  * G = _annee_ RESTE 19
- 	  * C = _annee_ QUO 100
- 	  * D = C - C QUO 4
- 	  * E = (8 x C + 13) QUO 25
- 	  * I = (19x G + 15) RESTE 30
- 	  * H=(D - E + 19xG + 15) RESTE 30
- 	  * K = H QUO 28
- 	  * P = 29 QUO (H + 1)
- 	  * Q = (21 - G) QUO 11
- 	  * I = H - K x (1 - K x P x Q)
- 	  * J=(_annee_+_annee_ QUO 4 + I + 2 -D) RESTE 7
- 	  * R = 28+I-
+* G = _annee_ RESTE 19
+* C = _annee_ QUO 100
+* D = C - C QUO 4
+* E = (8 x C + 13) QUO 25
+* I = (19x G + 15) RESTE 30
+* H = (D - E + 19xG + 15) RESTE 30
+* K = H QUO 28
+* P = 29 QUO (H + 1)
+* Q = (21 - G) QUO 11
+* I = H - K x (1 - K x P x Q)
+* J=(_annee_+_annee_ QUO 4 + I + 2 -D) RESTE 7
+* R = 28+I-
 
 Le résultat R représente le nombre de jours après le 1er mars
 correspondant au dimanche de Pâques.
@@ -401,33 +395,33 @@ défaut. En exploitant les conversions de type implicites de
 Javascript (ici de `Float` vers `String`) on
 peut aussi utiliser de manière détournée la fonction `parseInt` :
 
-
-      var n = 12;
-      n % 3            //  0        // reste de la division de n par 3
-      n % 5            //  2
-      n / 5            //  2.4      // division flottante
-      Math.floor(n/5)  //  2        // valeur arrondie par défaut de la division flottante
-      parseInt(n/5)    //  2        // permet d'obtenir le quotient
-      Math.floor(n/3)  //  4
-
-
-
+~~~javascript
+var n = 12;
+n % 3            //  0        // reste de la division de n par 3
+n % 5            //  2
+n / 5            //  2.4      // division flottante
+Math.floor(n/5)  //  2        // valeur arrondie par défaut de la division flottante
+parseInt(n/5)    //  2        // permet d'obtenir le quotient
+Math.floor(n/3)  //  4
+~~~
 
 
 
- 	  1. Dans un fichier écrivez le code d'une fonction qui prend pour paramètre une année
+
+
+1. Dans un fichier écrivez le code d'une fonction qui prend pour paramètre une année
 et a pour résultat le nombre de jours après le 1er mars de cette
 année correspondant au dimanche de Pâques.
- 	  2. Ecrivez un document HTML qui utilise cette fonction pour
+2. Ecrivez un document HTML qui utilise cette fonction pour
 
- 	    1. afficher le nombre de jours qui sépare le dimanche de Pâques du
+  1. afficher le nombre de jours qui sépare le dimanche de Pâques du
 1er mars pour l'année en cours (reprenez ce qui a été vue sur le
 type `Date` !)
- 	    2. demander à l'utilisateur de fournir une année et affiche la même
+  2. demander à l'utilisateur de fournir une année et affiche la même
 information pour l'année fournie
 
 
- 	  3. Faites plusieurs tests et utilisez Firebug pour suivre pas à pas
+3. Faites plusieurs tests et utilisez Firebug pour suivre pas à pas
 l'exécution de votre fonction.
 
 

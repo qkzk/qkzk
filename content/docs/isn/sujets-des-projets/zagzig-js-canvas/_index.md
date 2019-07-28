@@ -43,15 +43,15 @@ On créera dans cet ordre les éléments :
 
 
 
- 	  * une cellule
- 	  * le déplacement de cette cellule
- 	  * un "ruban" continu de cellule - c'est clairement la première étape cruciale
- 	  * la balle et son déplacement
- 	  * la défaite (tomber) - voici la deuxième étape importante
- 	  * le score
- 	  * le rebord vertical des cellules
- 	  * les bonus (les diamants mauves)
- 	  * le changement aléatoire de couleur
+* une cellule
+* le déplacement de cette cellule
+* un "ruban" continu de cellule - c'est clairement la première étape cruciale
+* la balle et son déplacement
+* la défaite (tomber) - voici la deuxième étape importante
+* le score
+* le rebord vertical des cellules
+* les bonus (les diamants mauves)
+* le changement aléatoire de couleur
 
 
 
@@ -71,15 +71,15 @@ On pourra ajouter des fonctionnalités, voici quelques suggestions (liste non li
 
 
 
- 	  * meilleur score dans un cookie
- 	  * la chute des cellules parvenues en bas de l'écran
- 	  * la chute de la balle qui tombe
- 	  * les menus : pause, restart etc.
- 	  * les autres statistiques du joueur : nombre de parties, de bonus etc.
- 	  * l'effet de lumière autour de la bille (regardez bien)
- 	  * des sons
- 	  * différentes résolutions
- 	  * rendre le jeu jouable sur un écran tactile
+* meilleur score dans un cookie
+* la chute des cellules parvenues en bas de l'écran
+* la chute de la balle qui tombe
+* les menus : pause, restart etc.
+* les autres statistiques du joueur : nombre de parties, de bonus etc.
+* l'effet de lumière autour de la bille (regardez bien)
+* des sons
+* différentes résolutions
+* rendre le jeu jouable sur un écran tactile
 
 
 

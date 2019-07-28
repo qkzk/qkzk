@@ -4,7 +4,7 @@ date: 2017-04-13 17:11:54+00:00
 draft: false
 title: 14 - Applications et jeux en réseau
 
-url: /
+
 ---
 
 
@@ -58,9 +58,9 @@ Dans cet exemple :
 
 
 
- 	  * le serveur et un client tournent sur le même ordinateur sous Linux/Ubuntu (192.168.1.10)
- 	  * un deuxième client sur un ordinateur sous Windows (192.168.1.11)
- 	  * un troisième client sur un troisième ordinateur sous Linux/Ubuntu (192.168.1.13)
+ le serveur et un client tournent sur le même ordinateur sous Linux/Ubuntu (192.168.1.10)
+ un deuxième client sur un ordinateur sous Windows (192.168.1.11)
+ un troisième client sur un troisième ordinateur sous Linux/Ubuntu (192.168.1.13)
 
 ![Python](http://fsincere.free.fr/isn/python/picto/reseau/client_Ubuntu1.png)
 
@@ -87,9 +87,9 @@ Si vous avez testé cette application, cela m'intéresse d'avoir un retour de vo
 
 
 
- 	  * [serveur](http://fsincere.free.fr/isn/python/download/reseau/python27)
- 	  * [client (mode graphique avec Tkinter)](http://fsincere.free.fr/isn/python/download/reseau/python27)
- 	  * [client (mode console)](http://fsincere.free.fr/isn/python/download/reseau/python27)
+ [serveur](http://fsincere.free.fr/isn/python/download/reseau/python27)
+ [client (mode graphique avec Tkinter)](http://fsincere.free.fr/isn/python/download/reseau/python27)
+ [client (mode console)](http://fsincere.free.fr/isn/python/download/reseau/python27)
 
 
 
@@ -117,17 +117,17 @@ Le cours de Gérard Swinnen, avec deux exemples concrets à essayer (un chat et 
 
 
 
- 	  * [inforef.be/swi/python.htm](http://inforef.be/swi/python.htm)
- 	  * [python.developpez.com/cours/TutoSwinnen/?page=page_20#L18](http://python.developpez.com/cours/TutoSwinnen/?page=page_20#L18)
+ [inforef.be/swi/python.htm](http://inforef.be/swi/python.htm)
+ [python.developpez.com/cours/TutoSwinnen/?page=page_20#L18](http://python.developpez.com/cours/TutoSwinnen/?page=page_20#L18)
 
 Le livre de Brandon Rhodes et John Goerzen :
 
- 	  * Foundations of Python Network Programming ([Apress](http://www.apress.com/))
+ Foundations of Python Network Programming ([Apress](http://www.apress.com/))
 
 La documentation officielle de Python :
 
- 	  * [socket : low-level networking interface](http://docs.python.org/2/library/socket.html)
- 	  * [threading : higher-level threading interface](http://docs.python.org/2/library/threading.html)
+ [socket : low-level networking interface](http://docs.python.org/2/library/socket.html)
+ [threading : higher-level threading interface](http://docs.python.org/2/library/threading.html)
 
 
 

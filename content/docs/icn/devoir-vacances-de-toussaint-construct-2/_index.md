@@ -3,8 +3,8 @@ author: qu3nt1n
 date: 2016-09-25 20:07:36+00:00
 draft: false
 title: 'devoir : vacances de Toussaint - Construct 2'
+weight: 100
 
-url: /
 ---
 
 # Créez votre propre jeu avec Construct 2
@@ -22,13 +22,13 @@ Chaque groupe (seconde, première) doit donc tester les jeux de l'autre groupe (
 
 
 
- 	  * La dimension artistique
- 	  * L'interactivité et la jouabilité
- 	  * L'originalité
+ La dimension artistique
+ L'interactivité et la jouabilité
+ L'originalité
 
 
 
-### 
+###
 
 
 
@@ -85,12 +85,12 @@ Vous allez réaliser un jeu vidéo à l'aide du logiciel Construct 2. Une fois t
 
 
 
- 	  * **Vous pouvez tout à fait reproduire un tutoriel déjà existant.** Dans ce cas, dîtes le moi par mail. Si vous ne le faites pas et me faites croire que c'est un travail personnel, c'est 0 si je découvre la même chose ou presque sur le net.
- 	  * **Vous devez l'uploader sur le ftp de l'enseignement** (logiciel : filezilla client, adresse : ftpperso.free.fr / login : icnflandres / mdp : flandresicn ).
+ **Vous pouvez tout à fait reproduire un tutoriel déjà existant.** Dans ce cas, dîtes le moi par mail. Si vous ne le faites pas et me faites croire que c'est un travail personnel, c'est 0 si je découvre la même chose ou presque sur le net.
+ **Vous devez l'uploader sur le ftp de l'enseignement** (logiciel : filezilla client, adresse : ftpperso.free.fr / login : icnflandres / mdp : flandresicn ).
 Choisissez le dossier correspondant à votre enseignement (icn-2018-1ere ou icn-2018-2nde) et le sous dossier **construct2. **Créez alors un dossier selon votre nom de famille, par exemple "Obama" et déposez vos fichiers dans ce dossier.
 Si vous avez exporté votre jeu en html5, il sera jouable à cette adresse : **http://icnflandres.free.fr/_icn-2017-2nde_/construct2/_obama. _**Il faut adapter le dossier selon votre classe et votre nom, bien sûr...
 Si votre jeu prend beaucoup d'espace, indiquez le moi, je trouverai une solution pour l'héberger ailleurs
- 	  * **Il est possible de réaliser un travail en groupe.** 3 personnes maximum, indiquez le moi dès le début et, si possible, indiquez dans le mail qui s'est chargé de quoi, comment vous avez procédé etc.
+ **Il est possible de réaliser un travail en groupe.** 3 personnes maximum, indiquez le moi dès le début et, si possible, indiquez dans le mail qui s'est chargé de quoi, comment vous avez procédé etc.
 
 
 
@@ -114,7 +114,7 @@ Ensuite concevoir un jeu immense et disposant d'un univers artistique cohérent,
 
 
 
-* * *
+---
 
 
 
@@ -137,11 +137,11 @@ _Si votre jeu n'apparaît pas dans la liste assurez-vous d'avoir bien exporté e
 
 
 
- 	  * [Poissonnet](http://icnflandres.free.fr/icn-2017-2nde/construct2/Poissonnet/) : Mario
- 	  * [Flandrinck, Poissonnet](http://icnflandres.free.fr/icn-2017-2nde/construct2/Flandrinck/) : Tower Defense
- 	  * [Adorni](http://icnflandres.free.fr/icn-2017-2nde/construct2/Adorni/index.html) : Reprise du tuto (_pour tester les différents niveaux sans avoir a les finir : __1,2,3,4,5,6 du pavé numérique __et la touche " * " pour obtenir une arme plus puissante pour passer les niveaux difficiles._)
- 	  * [Duchateau](http://icnflandres.free.fr/icn-2017-2nde/construct2/Duchateau/) : Shoot'Em Up
- 	  * [Vanhaecke](http://icnflandres.free.fr/icn-2017-2nde/construct2/Vanhaecke/) : Alien Warrior
+ [Poissonnet](http://icnflandres.free.fr/icn-2017-2nde/construct2/Poissonnet/) : Mario
+ [Flandrinck, Poissonnet](http://icnflandres.free.fr/icn-2017-2nde/construct2/Flandrinck/) : Tower Defense
+ [Adorni](http://icnflandres.free.fr/icn-2017-2nde/construct2/Adorni/index.html) : Reprise du tuto (_pour tester les différents niveaux sans avoir a les finir : __1,2,3,4,5,6 du pavé numérique __et la touche " * " pour obtenir une arme plus puissante pour passer les niveaux difficiles._)
+ [Duchateau](http://icnflandres.free.fr/icn-2017-2nde/construct2/Duchateau/) : Shoot'Em Up
+ [Vanhaecke](http://icnflandres.free.fr/icn-2017-2nde/construct2/Vanhaecke/) : Alien Warrior
 
 
 
@@ -151,9 +151,9 @@ _Si votre jeu n'apparaît pas dans la liste assurez-vous d'avoir bien exporté e
 
 
 
- 	  * [Carpentier](http://icnflandres.free.fr/icn-2017-1ere/construct2/Carpentier/1S1_Carpentier_Elie/index.html) : space invaders
- 	  * [Baranek](http://icnflandres.free.fr/icn-2017-1ere/construct2/baranek-domino-jaune/) : domino jaune
- 	  * [Seynave & Gregoire](http://icnflandres.free.fr/icn-2017-1ere/construct2/SEYNAVE_GREGOIRE/) : jeu mystère
- 	  * [Lefevre](http://icnflandres.free.fr/icn-2017-1ere/construct2/lefevre/) : flappy blue
+ [Carpentier](http://icnflandres.free.fr/icn-2017-1ere/construct2/Carpentier/1S1_Carpentier_Elie/index.html) : space invaders
+ [Baranek](http://icnflandres.free.fr/icn-2017-1ere/construct2/baranek-domino-jaune/) : domino jaune
+ [Seynave & Gregoire](http://icnflandres.free.fr/icn-2017-1ere/construct2/SEYNAVE_GREGOIRE/) : jeu mystère
+ [Lefevre](http://icnflandres.free.fr/icn-2017-1ere/construct2/lefevre/) : flappy blue
 
 _Merci à mon collègue M. Le Gallou de m'avoir fait découvrir Construct2 !_

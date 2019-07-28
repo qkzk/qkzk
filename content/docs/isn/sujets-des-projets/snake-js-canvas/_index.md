@@ -41,15 +41,15 @@ On envisagera les animations bloc par bloc.
 
 
 
- 	  * Création de la page, de ses éléments statiques ou immobiles et du canvas.
- 	  * Appel du canvas, premier affichage, boucle de rafraîchissement.
- 	  * Description des fonctions nécessaires et des variables qu'elles utilisent.
- 	  * Affichage d'un score.
- 	  * Affichage du snake, de la viande.
- 	  * Animation du snake selon une direction prédéfinie (l'étape la plus difficile selon moi).
- 	  * Le snake mange la viande.
- 	  * La tête du snake tourne (peut-être fait beaucoup plus tôt).
- 	  * Le snake meurt (peut-être envisagé dès qu'il se déplace).
+* Création de la page, de ses éléments statiques ou immobiles et du canvas.
+* Appel du canvas, premier affichage, boucle de rafraîchissement.
+* Description des fonctions nécessaires et des variables qu'elles utilisent.
+* Affichage d'un score.
+* Affichage du snake, de la viande.
+* Animation du snake selon une direction prédéfinie (l'étape la plus difficile selon moi).
+* Le snake mange la viande.
+* La tête du snake tourne (peut-être fait beaucoup plus tôt).
+* Le snake meurt (peut-être envisagé dès qu'il se déplace).
 
 
 
@@ -60,9 +60,9 @@ On pourra ajouter des fonctionnalités, voici quelques suggestions (liste non li
 
 
 
- 	  * Dimensions variables de la page proportionnelle à la fenêtre ou réglable par le joueur (assez facile).
- 	  * Difficulté variable : le joueur choisit sa difficulté ou le snake accélère avec son score ou avec le temps (facile).
- 	  * Graphismes : les améliorer (possibilités infinies).
- 	  * Animations : rendre fluide le déplacement du snake, il se déplace alors continuellement mais les positions de la viande et les "tournants" sont toujours bloc par bloc (difficile)
- 	  * Bonus / malus : la viande change de couleur et apporte plusieurs écailles (difficulté moyenne) ou change la direction du snake (facile) etc.
- 	  * Mode automatique : l'ordinateur joue tout seul et meurt parfois (difficile) ; l'ordinateur joue tout seul et remplit l'écran (solides connaissances en algorithmique nécessaire).
+* Dimensions variables de la page proportionnelle à la fenêtre ou réglable par le joueur (assez facile).
+* Difficulté variable : le joueur choisit sa difficulté ou le snake accélère avec son score ou avec le temps (facile).
+* Graphismes : les améliorer (possibilités infinies).
+* Animations : rendre fluide le déplacement du snake, il se déplace alors continuellement mais les positions de la viande et les "tournants" sont toujours bloc par bloc (difficile)
+* Bonus / malus : la viande change de couleur et apporte plusieurs écailles (difficulté moyenne) ou change la direction du snake (facile) etc.
+* Mode automatique : l'ordinateur joue tout seul et meurt parfois (difficile) ; l'ordinateur joue tout seul et remplit l'écran (solides connaissances en algorithmique nécessaire).

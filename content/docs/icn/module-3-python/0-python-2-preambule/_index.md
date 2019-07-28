@@ -4,7 +4,7 @@ date: 2017-04-12 19:37:24+00:00
 draft: false
 title: 00. Python 2 - préambule
 
-url: /
+
 ---
 
 ## Préambule
@@ -35,19 +35,19 @@ Beaucoup de choses !
 
 
 
- 	  * du calcul scientifique (librairie [`NumPy`](http://www.numpy.org/))
- 	  * des graphiques (librairie [`matplotlib`](http://matplotlib.org/))
- 	  * du traitement du son, de la synthèse vocale (librairie `eSpeak`)
- 	  * du traitement d'image (librairie [`PIL`](http://www.pythonware.com/products/pil)), de la vision artificielle par caméra (framework [`SimpleCV`](http://simplecv.org/))
- 	  * de la bio-informatique (librairie [`Biopython`](http://biopython.org/wiki/Main_Page))
- 	  * des applications avec interface graphique GUI (librairies [`Tkinter`](http://fsincere.free.fr/isn/python/cours_python_tkinter.php), [`PyQt`](http://www.riverbankcomputing.co.uk/software/pyqt/intro), [`wxPython`](http://www.wxpython.org/), [`PyGTK`](http://www.pygtk.org/)...)
- 	  * des jeux vidéo en 2D (librairie [`Pygame`](http://fsincere.free.fr/isn/python/cours_python_pygame.php))
- 	  * des applications multi-touch (framework [`kivy`](http://kivy.org/) pour tablette et smartphone à écran tactile)
- 	  * des applications Web (serveur Web [`Zope`](http://www.zope.org/) ; frameworks Web [`Flask`](http://flask.pocoo.org/), [`Django`](http://www.django-fr.org/))
- 	  * interfacer des systèmes de gestion de base de données (librairie [`MySQLdb`](http://mysql-python.sourceforge.net/MySQLdb.html)...)
- 	  * des applications réseau (framework [`Twisted`](http://twistedmatrix.com/trac))
- 	  * communiquer avec des ports série RS232 (librairie [`PySerial`](http://pyserial.sourceforge.net/)), en Bluetooth (librairie [`pybluez`](https://code.google.com/p/pybluez))...
- 	  * ...
+ du calcul scientifique (librairie [`NumPy`](http://www.numpy.org/))
+ des graphiques (librairie [`matplotlib`](http://matplotlib.org/))
+ du traitement du son, de la synthèse vocale (librairie `eSpeak`)
+ du traitement d'image (librairie [`PIL`](http://www.pythonware.com/products/pil)), de la vision artificielle par caméra (framework [`SimpleCV`](http://simplecv.org/))
+ de la bio-informatique (librairie [`Biopython`](http://biopython.org/wiki/Main_Page))
+ des applications avec interface graphique GUI (librairies [`Tkinter`](http://fsincere.free.fr/isn/python/cours_python_tkinter.php), [`PyQt`](http://www.riverbankcomputing.co.uk/software/pyqt/intro), [`wxPython`](http://www.wxpython.org/), [`PyGTK`](http://www.pygtk.org/)...)
+ des jeux vidéo en 2D (librairie [`Pygame`](http://fsincere.free.fr/isn/python/cours_python_pygame.php))
+ des applications multi-touch (framework [`kivy`](http://kivy.org/) pour tablette et smartphone à écran tactile)
+ des applications Web (serveur Web [`Zope`](http://www.zope.org/) ; frameworks Web [`Flask`](http://flask.pocoo.org/), [`Django`](http://www.django-fr.org/))
+ interfacer des systèmes de gestion de base de données (librairie [`MySQLdb`](http://mysql-python.sourceforge.net/MySQLdb.html)...)
+ des applications réseau (framework [`Twisted`](http://twistedmatrix.com/trac))
+ communiquer avec des ports série RS232 (librairie [`PySerial`](http://pyserial.sourceforge.net/)), en Bluetooth (librairie [`pybluez`](https://code.google.com/p/pybluez))...
+ ...
 
 Des **dizaines de milliers** de librairies sont disponibles sur le dépôt officiel [`PyPI`](https://pypi.python.org/pypi).
 
@@ -93,9 +93,9 @@ IDLE propose un certain nombre d'outils :
 
 
 
- 	  * un éditeur de texte (pour écrire le programme)
- 	  * un interpréteur (pour exécuter le programme)
- 	  * un débogueur (pour tester le programme)
+ un éditeur de texte (pour écrire le programme)
+ un interpréteur (pour exécuter le programme)
+ un débogueur (pour tester le programme)
 
 Il existe d'autres IDE pour Python : [Eclipse/Pydev](http://www.pydev.org/), [Eric Python IDE](http://eric-ide.python-projects.org/), [Spyder](https://pypi.python.org/pypi/spyder) ...
 

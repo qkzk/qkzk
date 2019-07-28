@@ -4,7 +4,7 @@ date: 2017-04-13 17:03:53+00:00
 draft: false
 title: 11 - Débogage
 
-url: /
+
 ---
 
 
@@ -38,11 +38,11 @@ Le débogueur possède 5 boutons de commande :
 
 
 
- 	  * Go : Exécution normale du programme jusqu'au prochain point d'arrêt.
- 	  * Step : Exécution pas-à-pas (instruction par instruction)
- 	  * Over : Exécution pas-à-pas du programme principal (le débogueur ne rentre pas dans les fonctions)
- 	  * Out : Pour sortir de la fonction en cours
- 	  * Quit : Termine le programme
+ Go : Exécution normale du programme jusqu'au prochain point d'arrêt.
+ Step : Exécution pas-à-pas (instruction par instruction)
+ Over : Exécution pas-à-pas du programme principal (le débogueur ne rentre pas dans les fonctions)
+ Out : Pour sortir de la fonction en cours
+ Quit : Termine le programme
 
 Dans l'interpréteur intéractif (Python Shell), ouvrir le script `test_debugger2.py` :
 File → Open → test_debugger2.py
@@ -127,9 +127,9 @@ N.B. Une fonction récursive est une fonction qui s'appelle elle-même !
 
 
 
- 	  * [http://inventwithpython.com/chapter7.html](http://inventwithpython.com/chapter7.html)
- 	  * [http://www.dreamincode.net/forums/topic/210537-python-debugging-part-1](http://www.dreamincode.net/forums/topic/210537-python-debugging-part-1)
- 	  * [Python documentation : Debugging and Profiling](http://docs.python.org/2/library/debug.html)
+ [http://inventwithpython.com/chapter7.html](http://inventwithpython.com/chapter7.html)
+ [http://www.dreamincode.net/forums/topic/210537-python-debugging-part-1](http://www.dreamincode.net/forums/topic/210537-python-debugging-part-1)
+ [Python documentation : Debugging and Profiling](http://docs.python.org/2/library/debug.html)
 
 
 

@@ -3,8 +3,8 @@ author: qu3nt1n
 date: 2016-07-01 14:00:11+00:00
 draft: false
 title: 02. Cryptographie
+weight: 2
 
-url: /
 ---
 
 
@@ -13,8 +13,8 @@ Notions abordées
 
 
 
- 	  * lexicométrie
- 	  * cryptographie simple : le code césar
+lexicométrie
+cryptographie simple : le code césar
 
 
 
@@ -326,12 +326,12 @@ On suppose maintenant que vous disposez d'un message en clair en minuscule, sans
 
 On pourrait croire qu'il suffit maintenant d'ajouter à chaque numéro de caractère la valeur de la clé. a valant 97, si ma clé est 3 je le code par 97 + 3 et j'affiche la réponse :
 
-    
-    <code>
+
+
     message_majuscule = 'a'
     cle = 3
     print chr(ord(message)+cle)
-    </code>
+
 
 
 
@@ -409,24 +409,24 @@ Concernant cette partie, je vais vous expliquer la démarche en détail et nous 
 
 
 
- 	  * Comprendre le principe de l'échange simple. Cette fois la clé est l'ordre dans lequel chacune des lettres de l'alphabet apparaît. Pour notre exemple, on travaillera avec `cle = 'zyxwvutsrqponmlkjihgfedcba'` : l'ordre inverse.
+ Comprendre le principe de l'échange simple. Cette fois la clé est l'ordre dans lequel chacune des lettres de l'alphabet apparaît. Pour notre exemple, on travaillera avec `cle = 'zyxwvutsrqponmlkjihgfedcba'` : l'ordre inverse.
 Cela n'a aucune importance, n'importe quel ordre fera l'affaire.
- 	  * Pour coder le message on va parcourir la chaîne de caractère et relever le code ascii du message en clair.
+ Pour coder le message on va parcourir la chaîne de caractère et relever le code ascii du message en clair.
 Les lettres étant des minuscules, c'est un nombre entre 97 (a) et 122 (z). On soustrait à nouveau 97 à ce nombre et on aura le numéro de la lettre en clair dans le message. Disons qu'on l'appelle n, comme numéro.
- 	  * A ce nombre on fait correspondre l'élément de position n de la liste notée clé.
- 	  * On obtient alors le message codé en regroupant lettre par lettre sans oublier les espaces.
+ A ce nombre on fait correspondre l'élément de position n de la liste notée clé.
+ On obtient alors le message codé en regroupant lettre par lettre sans oublier les espaces.
 
 **Décodage**
 Inutile de réinventer la roue, direz-vous ! On a la clé, on l'inverse et on refait pareil. C'est ce qu'un humain ferait, je vous le concède. Pour une machine, c'est plus délicat. Notre clé n'a pas le bon format pour se prêter à ce genre d'exercice. On va plutôt employer une nouvelle fonction de Python qui renvoie l'indice d'un élément dans une chaîne de caractère.
 
-    
-    <code>#!/usr/bin/python
-    
+
+    #!/usr/bin/python
+
     str1 = "c'est mon exemple";
     str2 = "mon";
-    
+
     print str1.index(str2)
-    </code>
+
 
 
 Et Python renvoie 6. La chaîne de caractères "mon" apparaît dans str1 à partir de la position d'indice 6, c'est à dire en 7eme place. Souvenez-vous qu'on compte à partir de 0.
@@ -443,5 +443,5 @@ A vous de le faire, étape par étape en affichant les informations nécessaires
 
 
 La solution est dans le code source de la page héhé.
-  *[xvie]: 16ᵉ siècle
-  *[av. J.-C.]: avant Jésus-Christ
+* [xvie]: 16ᵉ siècle
+* [av. J.-C.]: avant Jésus-Christ

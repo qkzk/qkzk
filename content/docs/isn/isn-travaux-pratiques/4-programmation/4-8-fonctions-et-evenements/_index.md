@@ -12,18 +12,18 @@ Prérequis
 
 
 
- 	  * l'attribut `ID` a-t-il déjà été évoqué, a priori oui
+* l'attribut `ID` a-t-il déjà été évoqué, a priori oui
 pour le CSS
- 	  * a-t-on parlé d'arbre DOM ? Dans ce cas on peut modifierun peu
+* a-t-on parlé d'arbre DOM ? Dans ce cas on peut modifier un peu
 le discours.
 
 Notions abordées dans cette page
 
 
 
- 	  * le type de donnée des "éléments de page"
- 	  * la mise en place d'événement
- 	  * manipulations dynamique de la page
+* le type de donnée des "éléments de page"
+* la mise en place d'événement
+* manipulations dynamique de la page
 
 
 
@@ -96,16 +96,16 @@ paramètre de l'appel de fonction.
 Ainsi considérons la portion de code HTML suivante :
 
 
+~~~javascript
+<h1>Un exemple avec des id</h1>
+<div>Un premier bloc div</div>
 
-    <h1>Un exemple avec des id</h1>
-    <div>Un premier bloc div</div>
 
 
+<div id="important">Ceci est un texte important.</div>
 
-    <div id="important">Ceci est un texte important.</div>
-
-    <img src="exemple.png" id="monImage" class="encadree"></img>
-
+<img src="exemple.png" id="monImage" class="encadree"></img>
+~~~
 
 
 Il est possible d'associer une variable Javascript pour chacun des
@@ -113,10 +113,10 @@ Il est possible d'associer une variable Javascript pour chacun des
  suivante :
 
 
-
-    var divImportant = document.getElementById("important");
-    var lImage = document.getElementById("monImage");
-
+~~~javascript
+var divImportant = document.getElementById("important");
+var lImage = document.getElementById("monImage");
+~~~
 
 
 Les éléments qui ne possèdent pas d'attribut `id` ne sont
@@ -156,10 +156,10 @@ On appelle événement :
 
 
 
- 	  * une action de
+* une action de
 l'utilisateur sur un élément de la page via la souris ou le
 clavier
- 	  * ou le chargement d'une donnée, page ou image par exemple.
+* ou le chargement d'une donnée, page ou image par exemple.
 
 Le principe est de permettre le déclenchement d'un traitement
 lorsqu'un événement particulier se produit sur un élément de la page.
@@ -169,16 +169,16 @@ réalisée et dépendent de l'élément sur lequel porte l'action, tous les
 types d'événements ne sont pas disponibles pour toutes les sortes
 d'éléments. Chaque type d'événement à un nom :
 
- 	  * un événement `click` est déclenché lors d'un clic souris
- 	  * un événement `load` est déclenché à la fin du chargement
+* un événement `click` est déclenché lors d'un clic souris
+* un événement `load` est déclenché à la fin du chargement
 d'un élément
- 	  * un événement `mouseover` est déclenché lorsque la
+* un événement `mouseover` est déclenché lorsque la
 souris passe au-dessus d'un élément
- 	  * un événement `keypress` est déclenché lors de l'appui
+* un événement `keypress` est déclenché lors de l'appui
 d'une touche
- 	  * un événement `change` est déclenché lorsque le
+* un événement `change` est déclenché lorsque le
 contenu d'un élément change,
- 	  * etc.
+* etc.
 
 
 
@@ -194,15 +194,22 @@ réalise grâce à la fonction `addEventListener` du
 type `Element` :
 
 
+
 **type concerné :** Element
+
 **nom** : addEventListener
+
 **Paramètres** : 2
-**  typeEvenement** : (chaîne), le nom du type d'événement considéré
-**  fonctionDeclenchee** : (fonction),
+
+**typeEvenement** : (chaîne), le nom du type d'événement considéré
+
+**fonctionDeclenchee** : (fonction),
 la fonction déclenchée lorsque l'événement considéré se produit sur
 l'élément concerné
+
 **Résultat** : aucun
-**Effet de bord ** : appel la
+
+**Effet de bord** : appel la
 fonction fonctionDeclenchee lorsque l'événement de
 type typeEvenement se produit sur l'élément concerné.
 
@@ -210,18 +217,19 @@ type typeEvenement se produit sur l'élément concerné.
 La syntaxe d'un appel sur un élément ressemble donc à :
 
 
+~~~javascript
     element.addEventListener(typeEvenement,fonctionDeclenchee)
-
+~~~
 
 
 On rencontrera (et utilisera) donc souvent le schéma typique de code
 suivant, où `action` est une fonction supposée définie par
 ailleurs :
 
-
+~~~javascript
     var unElement = document.getElementById("lElementQueJeVeux");
     unElement.addEventListener("click",action);
-
+~~~
 
 
 qui aura pour conséquence que la méthode `action` sera
@@ -274,63 +282,59 @@ démarche suivante :
 
 
 
- 	  1. créer un fichier dans lequel va être placé le code Javascript
+1. créer un fichier dans lequel va être placé le code Javascript
 correspondant à la gestion des événements, appelons-le pour
 l'exemple `mesEvenements.js`,
- 	  2. ajouter dans la partie `head` du document HTML concerné
+2. ajouter dans la partie `head` du document HTML concerné
 le lien vers ce fichier de script
- 	  3. définir dans ce fichier les fonctions _listeners_ dont on a
+3. définir dans ce fichier les fonctions _listeners_ dont on a
 besoin, comme c'était la cas de la fonction `action`
 précédemment,
- 	  4. en début de fichier, placer une fonction que nous
+4. en début de fichier, placer une fonction que nous
 appellerons `setupEvents` qui aura pour responsabilité de
 mettre en place les abonnements souhaités en respectant le schéma
 type vu ci-dessus,
- 	  5. provoquer l'appel de cette fonction quand la page a fini son
+5. provoquer l'appel de cette fonction quand la page a fini son
 chargement, ce qui est réaliser en abonnant cette fonction sur l'élément `window`
 pour l'événement `load`
 
 Le fichier `mesEvenements.js` ressemblera donc à ceci
 :
 
+~~~javascript
+/* fonction de mise en place des abonnements
+ */
+var setupEvents = function ()  {
 
-    /* fonction de mise en place des abonnements
-     */
-    var setupEvents = function ()  {
+  // abonnement de la fonction action pour l'élément d'id lElementQueJeVeux en réaction à un click<
+  var unElement = document.getElementById("lElementQueJeVeux");
+  unElement.addEventListener("click",action);
 
-      // abonnement de la fonction action pour l'élément d'id lElementQueJeVeux en réaction à un click<
-      var unElement = document.getElementById("lElementQueJeVeux");
-      unElement.addEventListener("click",action);
+  // ... on répète le même schéma ici si on veut mettre en place d'autres abonnements
+}
 
-      // ... on répète le même schéma ici si on veut mettre en place d'autres abonnements
-    }
+// pour appeler la fonction ci-dessus quans la page est chargée
+window.addEventListener("load",setupEvents);
 
-    // pour appeler la fonction ci-dessus quans la page est chargée
-    window.addEventListener("load",setupEvents);
+// ----------------------------------------
+/* Documentation de la fonction action
+ */
+var action = function () {
+   ... // ce que action doit faire
+}
 
-    // ----------------------------------------
-    /* Documentation de la fonction action
-     */
-    var action = function () {
-       ... // ce que action doit faire
-    }
-
-    // ... et d'autres définitions éventuellement
-
+// ... et d'autres définitions éventuellement
+~~~
 
 
 alors que le fichier HTML ressemble à :
 
-
-    <script src="mesEvenements.js" type="text/javascript"></script>......
-
-
-
-
-...
+~~~javascript
+<script src="mesEvenements.js" type="text/javascript"></script>......
+~~~
 
 
-...
+---
 
 
 La méthode `alert` qui s'applique à la
@@ -345,12 +349,12 @@ fenêtre _pop-up_ affichant le message passé en paramètre (de type
 
 
 
- 	  1. Etudiez et testez [cet exemple](http://qkzk.xyz/docs/doc04/exemples/exemple_event1.html).
- 	  2. Complétez le code Javascript pour qu'une une fenêtre d'alerte
+1. Etudiez et testez [cet exemple](http://qkzk.xyz/docs/doc04/exemples/exemple_event1.html).
+2. Complétez le code Javascript pour qu'une une fenêtre d'alerte
 (utilisez `window.alert`) s'affiche dès que l'on passe la
 souris sur l'image, le type de l'événement
 est `mouseover`.
- 	  3. Testez !
+3. Testez !
 
 
 
@@ -361,17 +365,17 @@ A la suite de la manipulation précédente
 
 
 
- 	  1. Placez des points
+1. Placez des points
 d'arrêt :
 
- 	    1. sur la première ligne de `setupEvents`
- 	    2. sur la ligne `window.addEventListener("load",
+  1. sur la première ligne de `setupEvents`
+  2. sur la ligne `window.addEventListener("load",
 setupEvents);`
- 	    3. sur la première ligne de chacune des fonctions _listeners_
+  3. sur la première ligne de chacune des fonctions _listeners_
 (`action1` et celle que vous avez créée).
 
 
- 	  2. Rechargez la page, "utilisez la" et observez à quel moment est
+2. Rechargez la page, "utilisez la" et observez à quel moment est
 déclenché chacun des événements.
 
 
@@ -381,8 +385,8 @@ Sur un élément donné on peut avoir
 
 
 
- 	  * plusieurs abonnements pour différents types d'événements
- 	  * plusieurs abonnements pour un même type d'événement
+* plusieurs abonnements pour différents types d'événements
+* plusieurs abonnements pour un même type d'événement
 
 
 
@@ -391,22 +395,22 @@ l'[exemple précédent](http://qkzk.xyz/docs/doc04/exemples/exemple_event1.html)
 
 
 
- 	  1. L'événement `mousedown` est déclenché lorsque l'on
+1. L'événement `mousedown` est déclenché lorsque l'on
 presse le bouton de la souris et l'événement `mouseup`
 lorsqu'on le relâche. Complétez le code Javascript de l'exemple pour
 afficher une alerte différente lorsque chacun de ces événements se
 produit sur l'image.
- 	  2. Ajoutez un second abonnement pour l'événement `click`
+2. Ajoutez un second abonnement pour l'événement `click`
 sur l'élément d'`id` "`piedDePage`" qui
 déclenchera la fonction suivante :
 
-
-    var piedEnBleu = function() {
-      var piedDePage = document.getElementById("piedDePage");
-      piedDePage.style.backgroundColor = "blue";
-      piedDePage.style.color = "white";
-    }
-
+~~~javascript
+var piedEnBleu = function() {
+  var piedDePage = document.getElementById("piedDePage");
+  piedDePage.style.backgroundColor = "blue";
+  piedDePage.style.color = "white";
+}
+~~~
 
 
 
@@ -446,9 +450,10 @@ valeur _laValeur_ à sa propriété _laPropriete_ il faut
 utiliser la syntaxe suivante :
 
 
-    var monElement = document.getElementById(monElement);
-    monElement.style.laPropriete = "laValeur";
-
+~~~javascript
+var monElement = document.getElementById(monElement);
+monElement.style.laPropriete = "laValeur";
+~~~
 
 
 On note que les valeurs des propriétés sont des chaînes de caractères.
@@ -459,29 +464,29 @@ On note que les valeurs des propriétés sont des chaînes de caractères.
 
 
 
- 	    1. Définissez une page HTML contenant un élément de
+1. Définissez une page HTML contenant un élément de
 balise `div` d'identifiant `zoneTravail` et
 une feuille CSS qui définit pour cette balise un texte de
 couleur `red` et une couleur de
 fond `#EEEEEE`.
- 	    2. Ecrivez un code Javascript qui permet lorsque l'on clique
+2. Ecrivez un code Javascript qui permet lorsque l'on clique
 dessus de modifier cet élément en lui attribuant la couleur de
 texte `blue` et la couleur de
 fond `yellow`.
- 	    3. Complétez le code HTML pour y ajouter un autre
+3. Complétez le code HTML pour y ajouter un autre
 élément `div` et ajoutez dans le code Javascript pour
 qu'un clic sur ce nouvel élément permette de modifier
 l'élément `zoneTravail` en lui attribuant la couleur de
 texte `black`, la couleur de fond `#77FF77`
 et une bordure d'épaisseur 2px, en trait plein et de
 couleur `#00FF00`.
- 	    4. A nouveau complétez l'HTML avec une balise `div` et
+4. A nouveau complétez l'HTML avec une balise `div` et
 le Javascript pour que cette fois, un clic sur l'élément ajouté
 provoque l'inversion des couleurs de texte et de fond
 de `zoneTravail`, quelles que soient ces couleurs.
- 	    5. Vous n'avez pas oublié de tester au fur et à
+5. Vous n'avez pas oublié de tester au fur et à
 mesure, n'est-ce-pas ?
- 	    6. N'hésitez pas à utiliser Firebug pour exécuter pas-à-pas le
+6. N'hésitez pas à utiliser Firebug pour exécuter pas-à-pas le
 traitement de vos fonctions.
 
 
@@ -495,7 +500,7 @@ bouton. Vous trouverez peut-être que cela accroit le "look bouton".
 
 
 
- 	  1. Modifiez la feuille de style pour donner une apparence plus "type bouton" aux 2 derniers
+1. Modifiez la feuille de style pour donner une apparence plus "type bouton" aux 2 derniers
 éléments ajoutés (largeur limitée, bordure, changement de couleur
 lorsque la souris passe
 au-dessus, etc.)
@@ -509,18 +514,18 @@ au-dessus, etc.)
 
 
 
- 	  1. Cherchez des informations sur la fonction `Math.random`,
+1. Cherchez des informations sur la fonction `Math.random`,
 écrivez sa spécification.
- 	  2. Même question pour la fonction `Math.floor`.
- 	  3. En déduire une fonction qui prend en paramètre un entier
+2. Même question pour la fonction `Math.floor`.
+3. En déduire une fonction qui prend en paramètre un entier
 positif _n_ et a pour résultat un entier aléatoire compris en
 0 inclus et _n_ exclu.
- 	  4. Utilisez cette fonction et un codagergb des couleurs pour
+4. Utilisez cette fonction et un codagergb des couleurs pour
 programmer le changement aléatoire de la couleur de fond d'un
 élément que vous choisirez (reprenez une page existante ou créez-en
 une nouvelle) lorsque la souris le survole. Un
 événement `mouseover` est déclenché dans un tel cas.
- 	  5. Testez.
+5. Testez.
 
 
 
@@ -542,10 +547,10 @@ Ainsi si dans une page une balise `img` a pour
 identifiant `monImage`, le code Javascript
 suivant :
 
-
-    var elementImg = document.getElementById("monImage");
-    elementImg.src = "isn.png";
-
+~~~javascript
+var elementImg = document.getElementById("monImage");
+elementImg.src = "isn.png";
+~~~
 
 
 aura pour conséquence que dans la page HTML, l'image correspondant au
@@ -588,10 +593,10 @@ un peu plus tard...
 
 
 
- 	  1. Récupérez et étudiez ce [document
+1. Récupérez et étudiez ce [document
 HTML](http://qkzk.xyz/docs/doc04/exemples/temperature.html) et sa [feuille de
 style](http://qkzk.xyz/docs/doc04/exemples/styleTemperature.css).
- 	  2. Un événement `change` est déclenché à chaque fois que
+2. Un événement `change` est déclenché à chaque fois que
 la valeur d'un élément `input` est modifiée par
 l'utilisateur (l'événement est activé lorsque l'on "quitte"
 l'élément `input` - on dit qu'il perd le focus). En
@@ -601,7 +606,7 @@ lors d'une saisie (numérique, on ne s'occupera pas pour
 l'instant de ce qui se passe dans un autre cas) dans un champ, à la
 valeur correspondante pour l'autre unité de mesure de s'afficher dans
 l'autre champ.
- 	  3. Testez évidemment...
+3. Testez évidemment...
 
 
 
@@ -619,26 +624,24 @@ placer des balises, elles seront interprétées.
 
 
 
- 	  1. Créez une page HTML avec un élément identifié et un autre élément
+1. Créez une page HTML avec un élément identifié et un autre élément
 type "bouton".
- 	  2. ![Alan Turing](http://qkzk.xyz/docs/doc04/exemples/alan-turing.jpeg)
+2. ![Alan Turing](http://qkzk.xyz/docs/doc04/exemples/alan-turing.jpeg)
 
 Ajoutez un abonnement sur le "bouton" pour qu'un clic modifie le
 contenu de l'élément identifié en attribuant à sa
 propriété `innerHTML` la valeur :
 
 
-    le contenu a été changé. On peut placer dans innerHTML de l'HTML
-    qui est interprété. Du gras ou une image par  exemple :
+le contenu a été changé. On peut placer dans innerHTML de l'HTML
+qui est interprété. Du gras ou une image par  exemple :
 
-     <img src="http://qkzk.xyz/docs/doc04/alan-turing.jpeg" alt="Alan Turing"></img>
-
-
-
- 	  3. Testez.
+~~~javascript
+<img src="http://qkzk.xyz/docs/doc04/alan-turing.jpeg" alt="Alan Turing"></img>
+~~~
 
 
-
+3. Testez.
 
 
 
@@ -646,11 +649,14 @@ propriété `innerHTML` la valeur :
 
 
 
- 	  1. Reprenez et complétez la Manip' sur les conversions d'unités de
+
+
+
+1. Reprenez et complétez la Manip' sur les conversions d'unités de
 mesure de température pour que lors d'un calcul de conversion, la
 page affiche un texte de la forme `la température _ccc_ en
 Celsius vaut _fff_ en Fahrenheit`.
- 	  2. Mettez en forme (CSS) ce message affiché.
+2. Mettez en forme (CSS) ce message affiché.
 
 
 
@@ -674,32 +680,32 @@ images.
 
 
 
- 	  1. Créez un document HTML avec deux éléments `div`
+1. Créez un document HTML avec deux éléments `div`
 identifiés.
- 	  2. Créez une feuille CSS utilisée par cette page qui "donne du
+2. Créez une feuille CSS utilisée par cette page qui "donne du
 style" à chacun de ces éléments.
- 	  3. Complétez la feuille de style en ajoutant pour le premier élément
+3. Complétez la feuille de style en ajoutant pour le premier élément
 le couple propriété/valeur :
 
-
-    display: none;
-
+~~~javascript
+display: none;
+~~~
 
 et pour le second le couple
 
-
-    display: block;
-
+~~~javascript
+display: block;
+~~~
 
 (cette seconde valeur est la valeur par défaut pour les
 blocs `div`)
- 	  4. Rechargez la page. Que constatez-vous ?
- 	  5. Ajoutez 2 autres éléments `div` identifiés et cette
+4. Rechargez la page. Que constatez-vous ?
+5. Ajoutez 2 autres éléments `div` identifiés et cette
 fois attribuez au premier la propriété :
 
-
-    visibility: hidden;
-
+~~~javascript
+visibility: hidden;
+~~~
 
 et au second
 
@@ -708,19 +714,19 @@ et au second
 
 
 (cette seconde valeur est la valeur par défaut pour les éléments).
- 	  6. Rechargez la page. Que constatez-vous ?
- 	  7. Déduisez-en le sens de ces couples propriétés/valeurs, quelles
+6. Rechargez la page. Que constatez-vous ?
+7. Déduisez-en le sens de ces couples propriétés/valeurs, quelles
 différences faites-vous entre les proprités `display`
 et `visibility` ?
- 	  8. Etudiez ce [document HTML](http://qkzk.xyz/docs/doc04/exemples/mystere.html) et
+8. Etudiez ce [document HTML](http://qkzk.xyz/docs/doc04/exemples/mystere.html) et
 sa [feuille de style](http://qkzk.xyz/docs/doc04/exemples/styleMystere.css)
- 	  9. Ajoutez le code Javascript qui permet d'afficher le contenu de
+9. Ajoutez le code Javascript qui permet d'afficher le contenu de
 l'élément identifié `txtcache` lorsque l'on clique sur
 le "bouton" _Montrer_ et de le masquer avec le
 bouton _Cacher_. Faites une première version en jouant sur
 l'attribut `display` et une seconde pour
 l'attribut `visibility`.
- 	  10. Faites des modifications afin que seul le bouton utile (ou
+10. Faites des modifications afin que seul le bouton utile (ou
 pertinent) soit affiché.
 
 
@@ -734,9 +740,9 @@ fonctions pour un même abonnement il est nécessaire de préciser à la
 fois le type de l'événement et la fonction désabonnée. La
 syntaxe d'un désabonnement est donc :
 
-
-    element.removeEventListener(typeEvenement,fonctionDeclenchee)
-
+~~~javascript
+element.removeEventListener(typeEvenement,fonctionDeclenchee)
+~~~
 
 
 
@@ -746,12 +752,12 @@ un bloc `div` identifié, telle que
 
 
 
- 	  1. un clic sur cet élément lui attribue une couleur de fond
+1. un clic sur cet élément lui attribue une couleur de fond
 aléatoire et la couleur de texte "complémentaire",
- 	  2. le second clic ne modifie plus les couleurs mais produit une
+2. le second clic ne modifie plus les couleurs mais produit une
 alerte annonçant "Cela ne marche qu'une
 fois !",
- 	  3. les autres clics restent sans effet.
+3. les autres clics restent sans effet.
 
 
 

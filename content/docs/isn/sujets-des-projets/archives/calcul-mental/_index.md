@@ -10,8 +10,8 @@ title: Calcul mental
 ### Projet de base
 
 
-	Dans ce projet vous créerez un générateur d'exercices de calcul mental.
-	
+Dans ce projet vous créerez un générateur d'exercices de calcul mental.
+
 
 
 
@@ -32,7 +32,7 @@ Une évaluation de la réponse s'affiche à côté et un score résume l'avancé
 
 
 
-L'ensemble sera intégré dans une page web indiquant le fonctionnement du générateur. 
+L'ensemble sera intégré dans une page web indiquant le fonctionnement du générateur.
 
 
 
@@ -47,7 +47,6 @@ L'ensemble sera intégré dans une page web indiquant le fonctionnement du gén�
 
 
 
-  * Difficultés, réglages, type d'opération.
-  * Parties antérieures.
-  * Génération de fiches questions réponse.
-
+* Difficultés, réglages, type d'opération.
+* Parties antérieures.
+* Génération de fiches questions réponse.

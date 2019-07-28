@@ -6,15 +6,18 @@ title: 4.01 Introduction
 weight: 1
 ---
 
+**Attention !** Cette partie n'est pas à traiter. Elle est laissée pour d'éventuels novices
+qui auraient quelques connaissances sur le tableur.
 
+---
 
 Pré-requis On suppose qu'ont été vues les notions de :
 
 
 
- 	  * **logiciel/programme** : navigateur,
+* **logiciel/programme** : navigateur,
 traitement de textes, tableur, etc.
- 	  * **langage**  : HTML, CSS. Donc
+* **langage**  : HTML, CSS. Donc
 les notions de _vocabulaire_ : _syntaxe_, _sémantique_ (interprétation par
 navigateur) ont été abordées.
 
@@ -22,8 +25,8 @@ Notions abordées
 
 
 
- 	  * la notion de variable
- 	  * traitement de données
+* la notion de variable
+* traitement de données
 
 
 
@@ -77,11 +80,11 @@ Lorsque l'on souhaite réaliser un traitement, il faut respecter plusieurs phas
 
 
 
- 	  1. identifier, décrire précisément le traitement à réaliser, on parle de spécification
- 	  2. définir les algorithmes (voir cette [définition](http://fr.wikipedia.org/wiki/Algorithme))
+1. identifier, décrire précisément le traitement à réaliser, on parle de spécification
+2. définir les algorithmes (voir cette [définition](http://fr.wikipedia.org/wiki/Algorithme))
 permettant d'accomplir ce traitement puis en réaliser
 le codage et documenter ce codage (ou documenter puis coder)
- 	  3. tester la réalisation, il s'agit d'une phase indispensable
+3. tester la réalisation, il s'agit d'une phase indispensable
 et primordiale
 
 
@@ -101,9 +104,9 @@ donnée :
 
 
 
- 	  * on peut additionner 2 données de type numérique. exemple
- 	  * on peut calculer la longueur d'un texte. [exemple](http://qkzk.xyz/docs/doc04/exemples/exemple_longueurChaine.html)
- 	  * on peut modifier la taille d'affichage d'une image. [exemple](http://qkzk.xyz/docs/doc04/exemples/exemple_changeTailleImage.html)
+* on peut additionner 2 données de type numérique. exemple
+* on peut calculer la longueur d'un texte. [exemple](http://qkzk.xyz/docs/doc04/exemples/exemple_longueurChaine.html)
+* on peut modifier la taille d'affichage d'une image. [exemple](http://qkzk.xyz/docs/doc04/exemples/exemple_changeTailleImage.html)
 
 
 
@@ -165,7 +168,7 @@ dans A3.
 
 L'utilisation de ces références est cependant **fragile**. En
 effet si la structure de la feuille de calcul est modifiée, cela
-peut entrainer une modification des références/adresses des valeurs
+peut entraîner une modification des références/adresses des valeurs
 et donc une corruption de la formule du traitement.
 
 
@@ -173,11 +176,11 @@ et donc une corruption de la formule du traitement.
 
 
 
- 	  1. Insérez une nouvelle colonne avant la colonne A (il faut cliquer sur
-le _A_ en entête de colone, cliquez droit puis
+1. Insérez une nouvelle colonne avant la colonne A (il faut cliquer sur
+le _A_ en entête de colonne, cliquez droit puis
 choisir _Insérer une colonne_).
- 	  2. Quelles sont les nouvelles références de nos valeurs ?
- 	  3. Qu'est devenu la formule de traitement ?
+2. Quelles sont les nouvelles références de nos valeurs ?
+3. Qu'est devenu la formule de traitement ?
 
 
 
@@ -207,19 +210,19 @@ dépend plus des références mais uniquement des noms. Testons cette version :
 
 
 
- 	  1. Ouvrez une feuille de calcul et placez la valeur `10`
+1. Ouvrez une feuille de calcul et placez la valeur `10`
 dans la case `A1` et `12` dans la
 case `A2`.
- 	  2. Pour nommer une valeur, il faut sélectionner la case,
+2. Pour nommer une valeur, il faut sélectionner la case,
 `A1` par exemple, puis allez dans la _zone des noms_
 en haut à gauche et y saisir le nom que l'on souhaite attribuer à la
 donnée, `points` par exemple.
- 	  3. Recommencez avec la donnée en `A2` en
+3. Recommencez avec la donnée en `A2` en
 l'appelant `bonus`, puis indiquez la formule de traitement
 voulu `=points+bonus` en `A3`.
- 	  4. Insérez une nouvelle colonne avant la colonne _A_.
- 	  5. Que devient la formule dans la cellule `B3` ?
- 	  6. Insérez cette formule dans une autre case, `F10` par
+4. Insérez une nouvelle colonne avant la colonne _A_.
+5. Que devient la formule dans la cellule `B3` ?
+6. Insérez cette formule dans une autre case, `F10` par
 exemple, elle est encore valide.
 
 
@@ -255,9 +258,9 @@ billets apparaissent les informations suivantes :
 
 
 
- 	  * le numéro du billet
- 	  * la description du gros lot
- 	  * la date du tirage
+* le numéro du billet
+* la description du gros lot
+* la date du tirage
 
 
 
@@ -288,9 +291,9 @@ le rôle de cette donnée. Nous les appelerons donc respectivement :
 
 
 
- 	  * `numero`
- 	  * `grosLot`
- 	  * `dateTirage`
+* `numero`
+* `grosLot`
+* `dateTirage`
 
 Nous allons maintenant définir dans le traitement de texte de
 libreoffice des données avec ces noms en commençant par les 2
@@ -301,24 +304,17 @@ données textuelles.
 
 
 
- 	  1. Placez-vous dans le document avec le billet, tout au début par
+1. Placez-vous dans le document avec le billet, tout au début par
 exemple, avant le billet (passez quelques lignes pour faire de la
 place). Par la suite, nous appellerons cette zone, la "zone de définition".
- 	  2. Faites les actions suivantes :
+2. Faites les actions suivantes :
 
- 	    1. choisissez dans le menu _Insertion_ puis _Champs_ puis _Autres_ puis
-onglet _Variables_.
- 	    2. choisissez maintenant _Définir une variable_
- 	    3. dans la zone de texte _Nom_ (en bas à gauche) indiquez le
-nom de la **variable** à définir, `grosLot` par
-exemple.
- 	    4. indiquez dans la zone _Valeur_ la valeur de cette
-donnée `une console PS3` par exemple.
- 	    5. enfin dans la
-zone _Format_ sélectionnez _Texte_ pour préciser le type
-des données
- 	    6. terminez la définition de cette variable en cliquant
-surle bouton _Insérer_.
+  1. choisissez dans le menu _Insertion_ puis _Champs_ puis _Autres_ puis onglet _Variables_.
+  2. choisissez maintenant _Définir une variable_
+  3. dans la zone de texte _Nom_ (en bas à gauche) indiquez le nom de la **variable** à définir, `grosLot` par exemple.
+  4. indiquez dans la zone _Valeur_ la valeur de cette donnée `une console PS3` par exemple.
+  5. enfin dans la zone _Format_ sélectionnez _Texte_ pour préciser le type des données
+ 	6. terminez la définition de cette variable en cliquant surle bouton _Insérer_.
 
 
 

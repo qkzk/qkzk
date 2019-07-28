@@ -3,8 +3,8 @@ author: qu3nt1n
 date: 2016-07-09 07:04:36+00:00
 draft: false
 title: 08. Les données CSV, JSON et GeoJSON
+weight: 8
 
-url: /
 ---
 
 
@@ -48,7 +48,7 @@ _Un fichier CSV est un fichier texte, par opposition aux formats dits « binaire
 
 Voici un exemple du contenu d'un fichier CSV:
 
-    
+
     nom,prenom,date_naissance
     Durand,Jean-Pierre,23/05/1985
     Dupont,Christophe,15/12/1967
@@ -59,9 +59,9 @@ Je pense qu'il est évident pour vous que nous avons ici 3 personnes :
 
 
 
- 	  * Jean-Pierre Durand qui est né le 23/05/1985
- 	  * Christophe Dupont qui est né le 15/12/1967
- 	  * Henry Terta qui est né le 12/06/1978
+ Jean-Pierre Durand qui est né le 23/05/1985
+ Christophe Dupont qui est né le 15/12/1967
+ Henry Terta qui est né le 12/06/1978
 
 ATTENTION :
 
@@ -81,7 +81,7 @@ Dans la suite, gardez toujours cet éventuel problème à l'esprit (surtout avec
 
 
 
-* * *
+---
 
 
 
@@ -102,7 +102,7 @@ Ouvrez le fichier [ville_point_virgule.csv](http://www.ac-grenoble.fr/discipline
 
 
 
-* * *
+---
 
 
 
@@ -110,18 +110,18 @@ Comme vous pouvez le constater, nous avons 12 colonnes (et 36700 lignes si on ne
 
 
 
- 	  * dep : numéro de département
- 	  * nom : nom de la commune
- 	  * cp : code postal
- 	  * nb_hab_2010 : nombre d'habitants en 2010
- 	  * nb_hab_1999 : nombre d'habitants en 1999
- 	  * nb_hab_2012 : nombre d'habitants en 2012 (approximatif)
- 	  * dens : densité de la population (habitants par kilomètre carré)
- 	  * surf : superficie de la commune en kilomètre carré
- 	  * long : longitude
- 	  * lat : latitude
- 	  * alt_min : altitude minimale de la commune (il manque des données pour certains territoires d'outre-mer)
- 	  * alt_max : altitude maximale de la commune (il manque des données pour certains territoires d'outre-mer)
+ dep : numéro de département
+ nom : nom de la commune
+ cp : code postal
+ nb_hab_2010 : nombre d'habitants en 2010
+ nb_hab_1999 : nombre d'habitants en 1999
+ nb_hab_2012 : nombre d'habitants en 2012 (approximatif)
+ dens : densité de la population (habitants par kilomètre carré)
+ surf : superficie de la commune en kilomètre carré
+ long : longitude
+ lat : latitude
+ alt_min : altitude minimale de la commune (il manque des données pour certains territoires d'outre-mer)
+ alt_max : altitude maximale de la commune (il manque des données pour certains territoires d'outre-mer)
 
 Vous trouverez un grand nombre de données, diverses et variées, au format CSV sur le site gouvernemental [data.gouv.fr](https://www.data.gouv.fr/fr/datasets/?format=csv).
 
@@ -133,7 +133,7 @@ Il existe aussi un format très voisin du CSV, le TSV (Tab-separated values) où
 
 
 
-* * *
+---
 
 
 
@@ -150,37 +150,37 @@ Autre format de données très courant sur le "web", le JSON (JavaScript Object 
 
 Un objet JavaScript est encadré par des accolades :
 
-    
+
     {cle_1 : val_1, cle_2 : val_2, cle_3 : val_3}
 
 
 souvent, pour une question de lisibilité, on écriera :
 
-    
+
     {
-        cle_1 : val_1, 
-        cle_2 : val_2, 
+        cle_1 : val_1,
+        cle_2 : val_2,
         cle_3 : val_3
     }
-    
+
 
 
 Un fichier au format JSON peut regrouper un grand nombre d'objets :
 
-    
+
     [{
-        "nom" : "Durand", 
-        "prenom" : "Jean-Pierre", 
+        "nom" : "Durand",
+        "prenom" : "Jean-Pierre",
         "date_naissance" : "23/05/1985"
     },
     {
-        "nom" : "Dupont", 
-        "prenom" : "Christophe", 
+        "nom" : "Dupont",
+        "prenom" : "Christophe",
         "date_naissance" : "15/12/1967"
     },
     {
-        "nom" : "Terta", 
-        "prenom" : "Henry", 
+        "nom" : "Terta",
+        "prenom" : "Henry",
         "date_naissance" : "12/06/1978"
     }]
 
@@ -189,22 +189,22 @@ Ci-dessus, nous avons un tableau contenant des objets.
 
 La "valeur" d'une paire "clé/valeur" peut être un tableau :
 
-    
+
     {
-        "nom" : "Durand", 
-        "prenom" : "Jean-Pierre", 
+        "nom" : "Durand",
+        "prenom" : "Jean-Pierre",
         "date_naissance" : "23/05/1985"
         "sport" : ["tennis", "football", "pétanque"]
     }
-    
+
 
 
 ou même un autre objet :
 
-    
+
     {
-        "nom" : "Durand", 
-        "prenom" : "Jean-Pierre", 
+        "nom" : "Durand",
+        "prenom" : "Jean-Pierre",
         "date_naissance" : "23/05/1985"
         "adresse" : {"num":6, "rue":"impasse du rossignol", "ville":"Nogent-le-Rotrou", "cp":"28400"}
     }
@@ -216,10 +216,10 @@ Comment utiliser les données présentes dans le fichier JSON ?
 
 Si le fichier JSON contient un seul objet (pour simplifier l'explication, nous "rangerons" cet objet dans une variable) :
 
-    
+
     var data = {
-        "nom" : "Durand", 
-        "prenom" : "Jean-Pierre", 
+        "nom" : "Durand",
+        "prenom" : "Jean-Pierre",
         "date_naissance" : "23/05/1985"
         "adresse" : {"num":6, "rue":"impasse du rossignol",
         "ville":"Nogent-le-Rotrou", "cp":"28400"}
@@ -230,20 +230,20 @@ Il suffit d'utiliser la "notation pointée" : "data.nom" permet de récupérer l
 
 Si le fichier JSON contient un tableau d'objet :
 
-    
+
     var tabData=[{
-        "nom" : "Durand", 
-        "prenom" : "Jean-Pierre", 
+        "nom" : "Durand",
+        "prenom" : "Jean-Pierre",
         "date_naissance" : "23/05/1985"
     },
     {
-        "nom" : "Dupont", 
-        "prenom" : "Christophe", 
+        "nom" : "Dupont",
+        "prenom" : "Christophe",
         "date_naissance" : "15/12/1967"
     },
     {
-        "nom" : "Terta", 
-        "prenom" : "Henry", 
+        "nom" : "Terta",
+        "prenom" : "Henry",
         "date_naissance" : "12/06/1978"
     }]
 
@@ -262,7 +262,7 @@ Téléchargez le fichier [ident.json](http://informatiquelycee.fr/asset/ident.js
 
 
 
-* * *
+---
 
 
 
@@ -278,7 +278,7 @@ Pour profiter de ce service, il est nécessaire de s'inscrire ([http://home.open
 
 Ouvrez votre navigateur préféré et copier-coller l'url suivante dans la barre d'url du navigateur :
 
-    
+
     http://api.openweathermap.org/data/2.5/weather?q=hazebrouck,fr&lang=fr&units=metric&APPID=XXXXXXXXXXXXX
 
 
@@ -286,13 +286,13 @@ ATTENTION : il faut remplacer les "X" par la clé (API key) que vous aurez obten
 
 
 
-* * *
+---
 
 
 
 Au lieu d'obtenir, comme d'habitude, une page web, vous devriez obtenir uniquement quelque chose qui ressemblera à ceci :
 
-    
+
     {"coord":{"lon":2.54,"lat":50.72},
     "weather":[{"id":501,"main":"Rain","description":"pluies modérées","icon":"10d"}],
     "base":"stations",
@@ -314,13 +314,13 @@ Avec une simple url, le site open weather renvoie des informations météo sous 
 
 Détaillons l'url :
 
-    
+
     http://api.openweathermap.org/data/2.5/weather
 
 
 Cette partie de l'url ne changera pas (sauf si vous désirez autre chose que les conditions météo actuelles, à ce moment-là, il faudra remplacer "weather" par autre chose (consulter le site open weather pour plus d'informations)).
 
-    
+
     ?q=hazebrouck,fr&lang=fr&units=metric&APPID=XXXXXXXXXXXXX
 
 
@@ -328,20 +328,20 @@ Cette partie de l'url ne changera pas (sauf si vous désirez autre chose que les
 
 
 
- 	  * "q=hazebrouck,fr" le paramètre "q" correspond au nom de la ville suivi du pays (fr dans notre cas)
- 	  * "lang=fr" la langue utilisée sera le français
- 	  * "units=metric" on désire avoir les longueurs en mètres (et les vitesses en mètre par seconde).
- 	  * "APPID" correspond à l'API key
+ "q=hazebrouck,fr" le paramètre "q" correspond au nom de la ville suivi du pays (fr dans notre cas)
+ "lang=fr" la langue utilisée sera le français
+ "units=metric" on désire avoir les longueurs en mètres (et les vitesses en mètre par seconde).
+ "APPID" correspond à l'API key
 
 Il est possible de construire des requêtes beaucoup plus complexes, encore une fois, veuillez consulter le site open weather pour plus d'informations.
 
 Intéressons-nous maintenant aux données JSON renvoyées (nous n'allons pas tout détailler) :
 
- 	  * "coord":{"lon":2.54,"lat":50.72} latitude et longitude du lieu
- 	  * "weather":[{"id":501,"main":"Rain","description":"pluies modérées","icon":"10d"}] "weather" correspond à un tableau qui contient un seul objet.
- 	  * "main":{"temp":17.46,"pressure":1020,"humidity":82,"temp_min":16,"temp_max":20.1} "main" correspond à un objet qui contient différents types d'informations
- 	  * "dt":1468048824 "dt" nous donne l'heure et la date de diffusion du bulletin au format "timestamp" (voir [ici](http://www.timestamp.fr/) pour plus d'informations sur la notion de timestamp). Nous utiliserons "dt" dans le prochain "À faire vous-même".
- 	  * "sunrise":1468036100,"sunset":1468094487 : respectivement heure de lever et de coucher du soleil au format timestamp
+ "coord":{"lon":2.54,"lat":50.72} latitude et longitude du lieu
+ "weather":[{"id":501,"main":"Rain","description":"pluies modérées","icon":"10d"}] "weather" correspond à un tableau qui contient un seul objet.
+ "main":{"temp":17.46,"pressure":1020,"humidity":82,"temp_min":16,"temp_max":20.1} "main" correspond à un objet qui contient différents types d'informations
+ "dt":1468048824 "dt" nous donne l'heure et la date de diffusion du bulletin au format "timestamp" (voir [ici](http://www.timestamp.fr/) pour plus d'informations sur la notion de timestamp). Nous utiliserons "dt" dans le prochain "À faire vous-même".
+ "sunrise":1468036100,"sunset":1468094487 : respectivement heure de lever et de coucher du soleil au format timestamp
 
 
 
@@ -349,7 +349,7 @@ Intéressons-nous maintenant aux données JSON renvoyées (nous n'allons pas tou
 
 
 
-* * *
+---
 
 
 
@@ -376,7 +376,7 @@ Comme indiqué dans Wikipédia, le geoJSON est avant tout du JSON et nous le tra
 
 Dans la barre d'adresse de votre navigateur, tapez l'adresse suivante :
 
-    
+
     http://earthquake.usgs.gov/fdsnws/event/1/query?format=geojson
 
 
@@ -386,7 +386,7 @@ Vous devriez obtenir quelque chose ressemblant à ceci :
 
 
 
-* * *
+---
 
 
 
@@ -402,7 +402,7 @@ Testez votre requête en la copiant dans la barre d'adresse de votre navigateur.
 
 
 
-* * *
+---
 
 
 

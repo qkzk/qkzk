@@ -3,8 +3,7 @@ author: qu3nt1n
 date: 2016-07-01 14:45:31+00:00
 draft: false
 title: 07. Cartographie
-
-url: /
+weight: 7
 ---
 
 
@@ -13,10 +12,10 @@ Notions abordées
 
 
 
- 	  * google map
- 	  * editer une carte en ligne
- 	  * créer sa propre carte
- 	  * anamorphose
+ google map
+ editer une carte en ligne
+ créer sa propre carte
+ anamorphose
 
 
 
@@ -46,7 +45,7 @@ Afin de pouvoir zoomer comme on l'entend dans la carte celles-ci sont vectoriell
 
 
 
-* * *
+---
 
 
 
@@ -111,7 +110,7 @@ Il est possible d'afficher le trafic en temps réel et à certains horaires. Adm
 
 
 
-* * *
+---
 
 
 
@@ -128,7 +127,7 @@ Examinons le code cette page :
 
 
 
-    
+
     <!DOCTYPE html>
     <html>
       <head>
@@ -154,11 +153,11 @@ Examinons le code cette page :
         zoom: 13,
         center: {lat: 50.65, lng: 3.05}
       });
-    
+
       var trafficLayer = new google.maps.TrafficLayer();
       trafficLayer.setMap(map);
     }
-    
+
         </script>
         <script src="https://maps.googleapis.com/maps/api/js?callback=initMap" async defer>
         </script>
@@ -199,10 +198,10 @@ Pour des questions de sécurité, google map n'autorise que deux approches :
 
 
 
- 	  * Ajouter les éléments depuis le fichier html directement.
+ Ajouter les éléments depuis le fichier html directement.
 Dans ce premier exemple : [test_googlemap_png](http://qkzk.xyz/?attachment_id=112), on ajoute une image, transparente à des coordonnées précises. Cet objet ne s'affiche que si le zoom est compris entre certaines valeurs (dézoomer et rezoomer).
 C'est commode pour dessiner une figure simple, ça l'est moins pour les objets complexes
- 	  * Ajouter des éléments depuis un fichier .kml. C'est un format de fichier assez simple, c'est en fait du XML (comme SVG). L'inconvénient est qu'il faut absolument que ce fichier soit hébergé quelque part sur internet. Il est impossible de charger un fichier kml depuis votre ordinateur en local. Il faut qu'il soit accessible via une url. [Par exemple](https://developers.google.com/maps/documentation/javascript/examples/layer-kml)
+ Ajouter des éléments depuis un fichier .kml. C'est un format de fichier assez simple, c'est en fait du XML (comme SVG). L'inconvénient est qu'il faut absolument que ce fichier soit hébergé quelque part sur internet. Il est impossible de charger un fichier kml depuis votre ordinateur en local. Il faut qu'il soit accessible via une url. [Par exemple](https://developers.google.com/maps/documentation/javascript/examples/layer-kml)
 
 Voici un autre exemples simples tiré des exemples de l'api de google : [test_googlemap_dropmarkers](http://qkzk.xyz/?attachment_id=113). On fait apparaître des marqueurs qui tombent de façon animée.
 
@@ -213,12 +212,12 @@ Télécharger le code source de ce lien et changer les différentes coordonnées
 
 
 
- 	  * Centre la carte sur Hazebrouck
- 	  * Faire tomber les marqueurs sur le Lycée
- 	  * Sur la Grand Place d'Hazebrouck
- 	  * Sur la gare d'Hazebrouck
- 	  * Sur l'Espace Flandres
- 	  * Adapter le niveau de zoom
+ Centre la carte sur Hazebrouck
+ Faire tomber les marqueurs sur le Lycée
+ Sur la Grand Place d'Hazebrouck
+ Sur la gare d'Hazebrouck
+ Sur l'Espace Flandres
+ Adapter le niveau de zoom
 
 Si vous n'aimez aucun de ces lieux (la gare, bon sang, elle est magnifique...) vous pouvez tout à fait repérer vos lieux favoris si ça vous chante. Le tout est de faire tenir les marqueurs dans une seule carte.
 
@@ -259,13 +258,13 @@ Voici le logiciel (gratuit et libre) : [QGIS](https://www.qgis.org/fr/site/forus
 
 
 
- 	  * récupérer le fond de la carte de france au format SHP, découpée en département
- 	  * récupérer les taux de chomage par département au format xls, en faire un fichier dbf dans calc (le tableur de libre office)
+ récupérer le fond de la carte de france au format SHP, découpée en département
+ récupérer les taux de chomage par département au format xls, en faire un fichier dbf dans calc (le tableur de libre office)
 Ne garder que : numero de département, nom du département, taux dans un seul fichier, d'une seule page
- 	  * joindre les taux de chomage par departement en suivant la démarche indiquée [ici](https://www.mapbox.com/tilemill/docs/guides/joining-data/#using-quantum-gis-to-join-your-data)
- 	  * trier : couleur selon taux de chomage en choisissant un dégradé
- 	  * exporter en png
- 	  * Exporter au format shp
+ joindre les taux de chomage par departement en suivant la démarche indiquée [ici](https://www.mapbox.com/tilemill/docs/guides/joining-data/#using-quantum-gis-to-join-your-data)
+ trier : couleur selon taux de chomage en choisissant un dégradé
+ exporter en png
+ Exporter au format shp
 
 Le résultat que vous obtiendrez est celui déjà affiché en début de partie :
 

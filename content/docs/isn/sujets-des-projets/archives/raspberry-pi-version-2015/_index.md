@@ -7,13 +7,13 @@ title: Raspberry Pi (version 2015)
 
 ---
 
-	
+
 
 # Projet de base
 
 
-	Dans ce projet vous utliserez le raspberry pi à des fins qui peuvent être variées.
-	
+Dans ce projet vous utliserez le raspberry pi à des fins qui peuvent être variées.
+
 
 
 
@@ -30,12 +30,12 @@ Ce projet a pour but d'explorer le champ des possibles offert par le raspberry p
 
 
 
-  * Ecran de présentation de données personnelles.
-  * Panic Button pour personnes agées.
-  * Timelapse, gestion d'images et caméra de surveillance
-  * création d'un jeu d'arcade en python et intégration dans une console portable
-  * projet amené par les élèves
-  * plus ambitieux : chatbot
+* Ecran de présentation de données personnelles.
+* Panic Button pour personnes agées.
+* Timelapse, gestion d'images et caméra de surveillance
+* création d'un jeu d'arcade en python et intégration dans une console portable
+* projet amené par les élèves
+* plus ambitieux : chatbot
 
 Le projet sera choisi conjointement par le groupe le professeur
 
@@ -59,16 +59,11 @@ Le projet sera choisi conjointement par le groupe le professeur
 
 
 
-  * Le cadre exact sera défini avant le retour des vacances de Noël.
-  * Le projet aura forcement une composante logicielle (python, javascript) et une composante matérielle
-  * Il est possible de choisir un projet peu ambitieux avec des nombreuses extentions même eparses.
+* Le cadre exact sera défini avant le retour des vacances de Noël.
+* Le projet aura forcement une composante logicielle (python, javascript) et une composante matérielle
+* Il est possible de choisir un projet peu ambitieux avec des nombreuses extentions même eparses.
 
 
 
 
 ### Un exemple de projet : Console de jeu Donkey Kong
-
-
-
-
-

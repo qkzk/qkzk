@@ -4,7 +4,7 @@ date: 2017-06-20 13:41:39+00:00
 draft: false
 title: partie 1 - Prise en main du raspberry pi
 
-url: /
+
 ---
 
 # 1. Présentation du Raspberry Pi
@@ -34,21 +34,21 @@ Listons les avantages de ce nano ordinateur:
 
 
 
- 	  * prix faible (30 euros)
- 	  * très faible consommation
- 	  * totalement silencieux
- 	  * environnement linux, donc Geek friendly - mais aussi windows 10 IoT (Internet of Things) ou Android.
- 	  * 4 ports USB
- 	  * 1 sortie HDMI
- 	  * 1 port réseau RJ45
- 	  * des OS lui sont dédiés
- 	  * beaucoup d'outils pour démarrer rapidement
- 	  * grande communauté
- 	  * des ports GPIO !
+ prix faible (30 euros)
+ très faible consommation
+ totalement silencieux
+ environnement linux, donc Geek friendly - mais aussi windows 10 IoT (Internet of Things) ou Android.
+ 4 ports USB
+ 1 sortie HDMI
+ 1 port réseau RJ45
+ des OS lui sont dédiés
+ beaucoup d'outils pour démarrer rapidement
+ grande communauté
+ des ports GPIO !
 
 Les inconvénients
 
- 	  * Trop lent pour un usage exclusif, même pour faire de la bureautique.
+ Trop lent pour un usage exclusif, même pour faire de la bureautique.
 
 Remarquons qu'il fait tourner sans problème des scripts domotiques ou d'anciens jeux vidéos - disons jusqu'au 16 bits inclus (SuperNES, Megadrive).
 
@@ -59,12 +59,12 @@ Remarquons qu'il fait tourner sans problème des scripts domotiques ou d'anciens
 
 
 
- 	  * CPU 700Mhz ARM
- 	  * mémoire 512Mo
- 	  * 4 ports USB
- 	  * sortie vidéo HDMI
- 	  * carte réseau
- 	  * 17x GPIO
+ CPU 700Mhz ARM
+ mémoire 512Mo
+ 4 ports USB
+ sortie vidéo HDMI
+ carte réseau
+ 17x GPIO
 
 
 
@@ -74,9 +74,9 @@ Remarquons qu'il fait tourner sans problème des scripts domotiques ou d'anciens
 
 
 
- 	  * CPU 900 MHz quadricœur ARM Cortex-A7
- 	  * mémoire 1Go
- 	  * OS Ubuntu Core et Windows 10
+ CPU 900 MHz quadricœur ARM Cortex-A7
+ mémoire 1Go
+ OS Ubuntu Core et Windows 10
 
 _Remarque : Depuis l'achat par le lycée de quelques raspberry d'autres modèles sont sortis : le raspberry pi 3 (plus puissant, mêmes dimensions) et le raspberry pi zero (5$ !!! format très compact mais, nécessite de la soudure pour utiliser certains ports.)_
 
@@ -88,21 +88,21 @@ On trouve aussi :
 
 
 
- 	  * une alimentation micro USB,
- 	  * une carte micro SD préformatée avec raspbian (à ce jour l'installation devrait être complète pour toutes les cartes)
- 	  * un adaptateur micro SD vers SD (la grande carte SD)
- 	  * un petit cable RJ45 pour le connecter au réseau du lycée (à ce jour tous les raspberry dont je dispose sont autorisés sur le réseau du lycée)
- 	  * un cable vidéo (hdmi + adaptateur dvi ou dvi + adaptateur hdmi)
- 	  * un cable USB/micro USB pour l'alimenter depuis un port USB
- 	  * Un boitier de protection pour le raspberry
+ une alimentation micro USB,
+ une carte micro SD préformatée avec raspbian (à ce jour l'installation devrait être complète pour toutes les cartes)
+ un adaptateur micro SD vers SD (la grande carte SD)
+ un petit cable RJ45 pour le connecter au réseau du lycée (à ce jour tous les raspberry dont je dispose sont autorisés sur le réseau du lycée)
+ un cable vidéo (hdmi + adaptateur dvi ou dvi + adaptateur hdmi)
+ un cable USB/micro USB pour l'alimenter depuis un port USB
+ Un boitier de protection pour le raspberry
 
 Au lycée nous proposons généralement deux boîtes : les transparentes se contentes de ce qui est cité plus haut. Les noires s'accompagnent d'un kit d'électronique dont nous ferons la découverte plus tard.
 
 Il nous manque donc :
 
- 	  * un clavier USB
- 	  * une souris USB
- 	  * un écran DVI
+ un clavier USB
+ une souris USB
+ un écran DVI
 
 Il faudra donc employer le clavier USB la souris USB et l'écran DVI de la salle.
 
@@ -126,7 +126,7 @@ L'objectif de cette introduction n'est pas de vous faire travailler avec les por
 
 
 
-* * *
+---
 
 
 
@@ -263,7 +263,7 @@ Retenez aussi que Putty risque de planter si vous éteignez le raspberry. Putty 
 
 
 
-* * *
+---
 
 
 
@@ -278,8 +278,8 @@ Si vous êtes tentés par le GPIO c'est une autre histoire !
 
 
 
- 	  * [tutoriel](https://espaceraspberryfrancais.shost.ca/Debuter-sur-Raspberry-Francais/Cr%C3%A9er-un-programme-Python-Raspberry-Francais/) de présentation du GPIO et des connecteurs de base : leds, boutons, Python.
- 	  * [tutoriel](https://www.youtube.com/watch?v=iGrH3jHWijw) vidéo en français (accent québécois en bonus) : trois leds, un bouton, un peu de Python. Si vous trouvez qu'il a une voix marrante : [ici](https://www.youtube.com/watch?v=6uhs-gw-NRA) pour découvrir ses idées de projet et voir sa tête. Presque tous sont réalistes, d'ailleurs.
+ [tutoriel](https://espaceraspberryfrancais.shost.ca/Debuter-sur-Raspberry-Francais/Cr%C3%A9er-un-programme-Python-Raspberry-Francais/) de présentation du GPIO et des connecteurs de base : leds, boutons, Python.
+ [tutoriel](https://www.youtube.com/watch?v=iGrH3jHWijw) vidéo en français (accent québécois en bonus) : trois leds, un bouton, un peu de Python. Si vous trouvez qu'il a une voix marrante : [ici](https://www.youtube.com/watch?v=6uhs-gw-NRA) pour découvrir ses idées de projet et voir sa tête. Presque tous sont réalistes, d'ailleurs.
 
 Le b-a-ba du GPIO ne demande pas beaucoup de connaissance, mais plus vous avancez, plus il faut maîtriser la programmation... Ensuite vient le matériel et donc deux facteurs : la connaissance de l’électronique et l'achat du matériel.
 
@@ -300,7 +300,7 @@ Bon ne rêvez pas vous n'avez pas l'appareil photo qu'il faut pour réaliser une
 
 
 
-* * *
+---
 
 
 

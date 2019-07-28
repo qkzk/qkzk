@@ -40,16 +40,16 @@ Il existe de nombreuses variantes suivant le nombre de couleurs, de rangées ou 
 
 
 
- 	  * Création de la page et des éléments statiques
- 	  * Les boutons permettant de choisir une combinaison (on créera si nécessaire une version où le joueur TAPE la combinaison : "RRVB")
- 	  * Génération aléatoire du code secret
- 	  * Affichage des éléments : coups réstants, propositions ratées, jetons indiquant le nombre de "bons", de "mauvais" etc. A cette étape, le programme ne tournera pas encore, seuls les éléments sont affichables et vous entrerez dans le script vos propositions
+* Création de la page et des éléments statiques
+* Les boutons permettant de choisir une combinaison (on créera si nécessaire une version où le joueur TAPE la combinaison : "RRVB")
+* Génération aléatoire du code secret
+* Affichage des éléments : coups réstants, propositions ratées, jetons indiquant le nombre de "bons", de "mauvais" etc. A cette étape, le programme ne tournera pas encore, seuls les éléments sont affichables et vous entrerez dans le script vos propositions
 Bien étoffé ce point peut faire l'objet d'une partie en soi presque indépendante du reste (pour un membre d'une équipe de trois). Cela nécessite alors un aménagement du cahier des charges et une très bonne communication dans l'équipe.
- 	  * Algorithme papier : Test de victoire.
- 	  * Programmation du dit algorithme.
- 	  * Algorithme papier : compter les bons "mal placés".
- 	  * Programmation du dit algorithme.
- 	  * Mise en commun de tous les éléments.
+* Algorithme papier : Test de victoire.
+* Programmation du dit algorithme.
+* Algorithme papier : compter les bons "mal placés".
+* Programmation du dit algorithme.
+* Mise en commun de tous les éléments.
 
 L'ensemble sera intégré dans une page html fournissant les explications nécessaires à l'utilisation du logiciel.
 
@@ -61,6 +61,6 @@ On pourra ajouter des fonctionnalités, voici quelques suggestions (liste non li
 
 
 
- 	  * modification de la grille, des jetons disponibles
- 	  * gestion du temps
- 	  * affichages, graphismes, animations
+* modification de la grille, des jetons disponibles
+* gestion du temps
+* affichages, graphismes, animations

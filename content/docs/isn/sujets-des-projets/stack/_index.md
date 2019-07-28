@@ -30,15 +30,15 @@ C'est l'un des deux plus difficiles. Le cahier des charges est peu détaillé.
 
 
 
- 	  * Réaliser une tuile à l'écran du canvas, au centre, immobile.
- 	  * Animer cette tuile dans un sens puis l'autre. Elle quitte l'écran.
- 	  * Faire rebondir la tuile au bord de l'écran et changer de sens.
- 	  * Gérer le seul événement : le joueur presse une touche et la tuile s'arrête
- 	  * A chaque arrêt une nouvelle tuile apparaît depuis l'autre côté. La précédente est d'abord effacée. Elle reste ensuite sur place (ça sera très moche).
- 	  * Gérer la pile (le stack) sur laquelle la tuile se dépose. A chaque pression du joueur, la pile descend d'un étage.
- 	  * Gérer l'alignement des tuiles, les bords qui dépassent sont supprimés.
- 	  * Gérer la pile qui conserve ses états précédents et s'anime régulièrement. Le score apparaît à l'écran.
- 	  * Introduire des couleurs aléatoires qui doivent respecter une certaine palette.
+* Réaliser une tuile à l'écran du canvas, au centre, immobile.
+* Animer cette tuile dans un sens puis l'autre. Elle quitte l'écran.
+* Faire rebondir la tuile au bord de l'écran et changer de sens.
+* Gérer le seul événement : le joueur presse une touche et la tuile s'arrête
+* A chaque arrêt une nouvelle tuile apparaît depuis l'autre côté. La précédente est d'abord effacée. Elle reste ensuite sur place (ça sera très moche).
+* Gérer la pile (le stack) sur laquelle la tuile se dépose. A chaque pression du joueur, la pile descend d'un étage.
+* Gérer l'alignement des tuiles, les bords qui dépassent sont supprimés.
+* Gérer la pile qui conserve ses états précédents et s'anime régulièrement. Le score apparaît à l'écran.
+* Introduire des couleurs aléatoires qui doivent respecter une certaine palette.
 
 
 
@@ -48,6 +48,6 @@ C'est l'un des deux plus difficiles. Le cahier des charges est peu détaillé.
 
 
 
- 	  * Les graphismes.
- 	  * Les animations
- 	  * Les bonus (quand des tuiles sont parfaitement alignés). Quelques bonus de suite augmentent les dimensions du sommet de la pile
+* Les graphismes.
+* Les animations
+* Les bonus (quand des tuiles sont parfaitement alignés). Quelques bonus de suite augmentent les dimensions du sommet de la pile

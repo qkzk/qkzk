@@ -33,10 +33,10 @@ L'univers du Jeu de la Vie est une grille orthogonale à deux dimensions infinie
 
 
 
- 	  * Une cellule vivante ayant deux voisins vivants ou moins meurt, comme si cela était causé par sous-population.
- 	  * Une cellule vivante avec deux ou trois voisins vivants le reste.
- 	  * Une cellule vivante avec plus de trois voisins vivants meurt, comme si cela était causé par surpopulation.
- 	  * Toute cellule morte avec exactement trois voisins vivants devient vivante, comme si cela était causé par la reproduction.
+* Une cellule vivante ayant deux voisins vivants ou moins meurt, comme si cela était causé par sous-population.
+* Une cellule vivante avec deux ou trois voisins vivants le reste.
+* Une cellule vivante avec plus de trois voisins vivants meurt, comme si cela était causé par surpopulation.
+* Toute cellule morte avec exactement trois voisins vivants devient vivante, comme si cela était causé par la reproduction.
 
 L'état initial est la racine du système. La première génération est créée en appliquant les règles citées ci-dessus simultanément à toutes les cellules de la racine. Les naissances et les morts ont lieu simultanément à intervalle régulier. En d'autres termes chaque génération n'est fonction que de l'état précédent. Les règles continuent d'être appliquées de manière répétées pour créer les générations futures.
 
@@ -96,15 +96,15 @@ Voici une liste d'étapes à franchir dans la réalisation du projet. Celles-ci 
 
 
 
- 	  1. comprendre les règles.
- 	  2. faire des exemples à la main, sur qq grilles simples.
- 	  3. rédiger les règles - > obtenir l'algorithme le plus simple qui soit.
- 	  4. code : html créer la page -> choix des variables, dimensions.
- 	  5. code : css, mettre en page
- 	  6. code : créer une grille random, canvas : afficher une grille
- 	  7. code : js, rédiger les transitions. Le jeu doit alors tourner tout seul et l'objectif initial est atteint. Cette dernière étape est à la fois la plus importante et la plus difficile. Elle dépend énormément de votre bonne compréhension du mécanisme du jeu.
- 	  8. papier : grilles préatablies pour tester des situations
- 	  9. code : charger les grilles
+1. comprendre les règles.
+2. faire des exemples à la main, sur qq grilles simples.
+3. rédiger les règles - > obtenir l'algorithme le plus simple qui soit.
+4. code : html créer la page -> choix des variables, dimensions.
+5. code : css, mettre en page
+6. code : créer une grille random, canvas : afficher une grille
+7. code : js, rédiger les transitions. Le jeu doit alors tourner tout seul et l'objectif initial est atteint. Cette dernière étape est à la fois la plus importante et la plus difficile. Elle dépend énormément de votre bonne compréhension du mécanisme du jeu.
+8. papier : grilles préatablies pour tester des situations
+9. code : charger les grilles
 
 
 
@@ -127,7 +127,7 @@ On pourra ajouter des fonctionnalités, voici quelques suggestions (liste non li
 
 
 
- 	  * Coloration des cellules en fonction du nombre de cellules voisines vivantes.
- 	  * Illustration de figures prédéfinies (oscillateurs, vaisseaux, mathusalems, canons, pushers etc.).
- 	  * Création d'une interface permettant de générer sa propre grille à la main (en cliquant sur certaines cases) et d'en regarder l'évolution.
- 	  * Illustration d'autres automates cellulaires suivant des règles similaires.
+* Coloration des cellules en fonction du nombre de cellules voisines vivantes.
+* Illustration de figures prédéfinies (oscillateurs, vaisseaux, mathusalems, canons, pushers etc.).
+* Création d'une interface permettant de générer sa propre grille à la main (en cliquant sur certaines cases) et d'en regarder l'évolution.
+* Illustration d'autres automates cellulaires suivant des règles similaires.

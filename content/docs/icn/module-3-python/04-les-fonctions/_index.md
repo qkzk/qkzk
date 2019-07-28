@@ -4,7 +4,7 @@ date: 2017-04-13 16:03:31+00:00
 draft: false
 title: 04. Les fonctions
 
-url: /
+
 ---
 
 Nous avons déjà vu beaucoup de fonctions : `print(), type(), len(), input(), range()`...
@@ -336,7 +336,7 @@ La sagesse recommande donc de suivre la règle suivante :
 
 
 
- 	  * ne jamais affecter dans un bloc de code local une variable de même nom qu'une variable globale
+ ne jamais affecter dans un bloc de code local une variable de même nom qu'une variable globale
 
 
 

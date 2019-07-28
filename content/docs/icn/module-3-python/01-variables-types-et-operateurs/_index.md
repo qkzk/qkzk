@@ -4,7 +4,7 @@ date: 2017-04-12 19:51:32+00:00
 draft: false
 title: 01. Variables, types et opérateurs
 
-url: /
+
 ---
 
 ## Chapitre 1 - Variables, types et opérateurs
@@ -573,12 +573,12 @@ Il en existe bien d'autres :
 
 
 
- 	  * long (nombres entiers de longueur quelconque, par exemple 4284961775562012536954159102L)
- 	  * complex (nombres complexes, par exemple 1+2.5j)
- 	  * tuple (structure de données)
- 	  * set (structure de données)
- 	  * file (fichiers)
- 	  * ...
+ long (nombres entiers de longueur quelconque, par exemple 4284961775562012536954159102L)
+ complex (nombres complexes, par exemple 1+2.5j)
+ tuple (structure de données)
+ set (structure de données)
+ file (fichiers)
+ ...
 
 
 

@@ -34,22 +34,22 @@ Ce projet n'est pas simple car il nécessite de créer plusieurs fois le même o
  	  3. Animer automatiquement le vaisseau de façon ce qu'il tourne tout seul et change de sens après chaque tour (ce sera plus facile ainsi)
  	  4. Les bonus.
 
- 	    * Représenter les bonus (des disques) et les positionner régulièrement. Créer un tableau contenant l'état des bonus (vrai : ramassé, faux : pas encore ramassé).
- 	    * Mettre à jour l'affichage des bonus en fonction de leur état (ils s'affichent s'ils ne sont pas ramassés).
- 	    * Gérer la collision du vaisseau est des bonus. Le score (nombre de bonus) apparaît à l'écran.
- 	    * Les bonus réapparaissent une fois tous ramassés.
+ 	* Représenter les bonus (des disques) et les positionner régulièrement. Créer un tableau contenant l'état des bonus (vrai : ramassé, faux : pas encore ramassé).
+ 	* Mettre à jour l'affichage des bonus en fonction de leur état (ils s'affichent s'ils ne sont pas ramassés).
+ 	* Gérer la collision du vaisseau est des bonus. Le score (nombre de bonus) apparaît à l'écran.
+ 	* Les bonus réapparaissent une fois tous ramassés.
 
 
  	  5. Les missiles.
 
- 	    * Tirer un missile (un disque) tout droit qui sort de l'écran vers la droite.
- 	    * Tirer un missile tout droit qui heurte le vaisseau (mais ne provoque rien).
- 	    * Tirer un missile tout droit vers le vaisseau OU légèrement derrière lui.
- 	    * Créer un tableau des missiles qui sera mis à jour au fur et à mesure des tirs.
- 	    * Retirer régulièrement du tableau les missiles sortis de l'écran.
- 	    * Détecter la collision du vaisseau et des missiles et donc la fin de partie.
- 	    * Gérer la nouvelle partie sans devoir recharger la page. Gestion d'un high score. Éventuellement dans un cookie
- 	    * La difficulté augmente quand on a ramassé tous les bonus : les missiles vont plus vite.
+ 	* Tirer un missile (un disque) tout droit qui sort de l'écran vers la droite.
+ 	* Tirer un missile tout droit qui heurte le vaisseau (mais ne provoque rien).
+ 	* Tirer un missile tout droit vers le vaisseau OU légèrement derrière lui.
+ 	* Créer un tableau des missiles qui sera mis à jour au fur et à mesure des tirs.
+ 	* Retirer régulièrement du tableau les missiles sortis de l'écran.
+ 	* Détecter la collision du vaisseau et des missiles et donc la fin de partie.
+ 	* Gérer la nouvelle partie sans devoir recharger la page. Gestion d'un high score. Éventuellement dans un cookie
+ 	* La difficulté augmente quand on a ramassé tous les bonus : les missiles vont plus vite.
 
 
  	  6. Evénements clavier et "touch" : on presse une touche (ou l'écran) pour changer de direction, on presse entrée pour recommencer la partie.
@@ -62,7 +62,7 @@ Ce projet n'est pas simple car il nécessite de créer plusieurs fois le même o
 
 
 
- 	  * Améliorer les graphismes et les animations
- 	  * Intégrer le jeu dans un serveur web et le rendre accessible sur internet
- 	  * Deux vaisseaux à l'écran en même temps ! L'objectif est de ramasser plus de bonus que l'autre avant de mourir. Les missiles sont plus nombreux et visent régulièrement l'un ou l'autre des joueurs.
+* Améliorer les graphismes et les animations
+* Intégrer le jeu dans un serveur web et le rendre accessible sur internet
+* Deux vaisseaux à l'écran en même temps ! L'objectif est de ramasser plus de bonus que l'autre avant de mourir. Les missiles sont plus nombreux et visent régulièrement l'un ou l'autre des joueurs.
 Deux modes possibles

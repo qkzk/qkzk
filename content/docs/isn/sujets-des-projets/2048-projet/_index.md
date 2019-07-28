@@ -26,8 +26,8 @@ Deux grandes étapes sont à distinguer :
 
 
 
- 	  1. la réalisation du jeu en mode texte. Vous jouez dans la console ou dans une page.
- 	  2. La réalisation de la partie graphique. Cette partie est moins importante.
+1. la réalisation du jeu en mode texte. Vous jouez dans la console ou dans une page.
+2. La réalisation de la partie graphique. Cette partie est moins importante.
 
 Le principe du jeu est simple, une grille de 4x4 contient des nombres qui sont tous des puissances de 2 : des tuiles.
 Vous déplacez le contenu de cette grille dans une direction et les tuiles se dirigent au maximum dans cette direction.
@@ -46,29 +46,23 @@ Le langage employé peut-être Python (on jouera dans la console puis dans pygam
 
 
 
- 	  1. Votre grille est figurée par un tableau de 4x4. Présentation textuelle de ce tableau. Ici se découpe le projet.
- 	  2. **Le fonctionnement du jeu.**
+1. Votre grille est figurée par un tableau de 4x4. Présentation textuelle de ce tableau. Ici se découpe le projet.
+2. **Le fonctionnement du jeu.**
 
- 	    * Déplacement vers la gauche.
-Vous allez d'abord réaliser la simplification des zéros. Les éléments non vide doivent se déplacer.
-Ensuite l'addition de deux éléments identiques et la simplification.
-Enfin l'apparition de nouvelles tuiles et la détection de la fin de partie.
- 	    * Les autres déplacements peuvent être obtenus par des symétries. Cela évite d'avoir à tout réécrire trois fois.
-La symétrie selon un axe vertical central ("retourner") échange gauche et droite. Pour se déplacer à droite on peut donc :
-1. "retourner", 2. déplacer à gauche, 3. "retourner".
- 	    * L'échange abscisse/ordonnée ("transposer") permet de déplacer selon un axe vertical.
-Pour se déplacer verticalement (dans quel sens ?) on peut donc :
-1. "transposer", 2. déplacer à gauche, 3. "transposer".
- 	    * Le dernier déplacement vertical, nécessite une combinaison des deux précédents. Je vous laisse le soin de le décrire.
-A cette étape votre jeu est jouable en mode texte
+  * Déplacement vers la gauche. Vous allez d'abord réaliser la simplification des zéros. Les éléments non vide doivent se déplacer. Ensuite l'addition de deux éléments identiques et la simplification. Enfin l'apparition de nouvelles tuiles et la détection de la fin de partie.
+  * Les autres déplacements peuvent être obtenus par des symétries. Cela évite d'avoir à tout réécrire trois fois. La symétrie selon un axe vertical central ("retourner") échange gauche et droite. Pour se déplacer à droite on peut donc : 1. "retourner", 2. déplacer à gauche, 3. "retourner".
+  * L'échange abscisse/ordonnée ("transposer") permet de déplacer selon un axe vertical. Pour se déplacer verticalement (dans quel sens ?) on peut donc : 1. "transposer", 2. déplacer à gauche, 3. "transposer".
+  * Le dernier déplacement vertical, nécessite une combinaison des deux précédents. Je vous laisse le soin de le décrire.
+
+  A cette étape votre jeu est jouable en mode texte
 
 
- 	  3. **La représentation graphique** se découpe ainsi :
+3. **La représentation graphique** se découpe ainsi :
 
- 	    1. Représenter une grille vide.
- 	    2. Représenter une tuile et lui attribuer automatiquement une couleur.
- 	    3. Représenter à chaque étape votre grille et adapter les commandes.
+  1. Représenter une grille vide.
+  2. Représenter une tuile et lui attribuer automatiquement une couleur.
+  3. Représenter à chaque étape votre grille et adapter les commandes.
 
 
- 	  4. La dernière étape est **l'intégration des deux parties**.
+4. La dernière étape est **l'intégration des deux parties**.
 Selon le langage employé on pourra rendre le jeu jouable sur mobile en gérant aussi les événements "touch / swipe etc."

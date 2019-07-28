@@ -10,8 +10,8 @@ Notions abordées dans cette page
 
 
 
- 	  * variables environnements locals
- 	  * portées
+* variables, environnements et _locals_
+* portées
 
 
 
@@ -41,18 +41,18 @@ dégager collectivement les règles de portée.
 
 
 
- 	  1. Activez, si besoin, Firebug et rechargez le document [version 2](http://qkzk.xyz/docs/doc04/doc/monuments-version2.html).
- 	  2. S'il n'y est plus replacez un point d'arrêt sur la première ligne de code du corps de la
+1. Activez, si besoin, Firebug et rechargez le document [version 2](http://qkzk.xyz/docs/doc04/doc/monuments-version2.html).
+2. S'il n'y est plus replacez un point d'arrêt sur la première ligne de code du corps de la
 fonction `afficheMonument`, et supprimez les éventuels autres.
- 	  3. Sélectionnez ensuite l'onglet **Espions** dans la zone
+3. Sélectionnez ensuite l'onglet **Espions** dans la zone
 droite (à côté de l'onglet **Pile** déjà utilisé).
- 	  4. Rechargez la page et étudiez le contenu de cet onglet. Qu'y trouve-t-on (on laissera de côté les
+4. Rechargez la page et étudiez le contenu de cet onglet. Qu'y trouve-t-on (on laissera de côté les
 éléments `this` et `Fenêtre`) ?
- 	  5. Tout en observant l'évolution du contenu de cet onglet, faites du
+5. Tout en observant l'évolution du contenu de cet onglet, faites du
 pas-à-pas de traitement jusqu'à affichage de la tour
 Eiffel. Qu'avez-vous observé ?
- 	  6. Que représente la quantité **arguments** que vous avez pu observer ?
- 	  7. Quel lien existe entre les paramètres formels et les
+6. Que représente la quantité **arguments** que vous avez pu observer ?
+7. Quel lien existe entre les paramètres formels et les
 paramètres effectifs ?
 
 
@@ -77,36 +77,36 @@ exercice vous travaillez avec ces copies.
 
 
 
- 	  1. Modifiez la copie de `monuments-version2.html` pour
+1. Modifiez la copie de `monuments-version2.html` pour
 qu'elle utilise la copie du fichier de script.
- 	  2. En consultant le code des 3 fonctions définies dans le
+2. En consultant le code des 3 fonctions définies dans le
 fichier `monuments-fonction.js`, on peut remarquer que
 dans le code de chacune d'entre elle on trouve la définition d'une
 variable appelée `texte`. Recommencez le pas-à-pas
 jusqu'à la Tour Eiffel en vous concentrant sur les valeurs prises
 par ces différentes variables nommées `texte`
- 	  3. Si besoin
+3. Si besoin
 répétez votre observation avec l'affichage des images
 suivantes.
- 	  4. Selon vous, si dans l'une de ces
+4. Selon vous, si dans l'une de ces
 fonctions, `texteMonument` par exemple, on renomme la
 variable `texte` en `texteResultat`, cela
 change-t-il quelque chose ?
 Si oui, quoi ? Si non, pourquoi ?
 Faites-le pour vérifier votre réponse (attention à bien renommer
 toutes les occurrences de la variable).
- 	  5. Ajoutez à la fin de la portion `script` du
+5. Ajoutez à la fin de la portion `script` du
 fichier `monuments-version2.html` la ligne
 
+~~~javascript
+document.writeln("valeur de texte = "+texte);
+~~~
 
-     document.writeln("valeur de texte = "+texte);
 
 
-
-
- 	  6. Chargez votre document et consultez la **Console** de Firebug.
+6. Chargez votre document et consultez la **Console** de Firebug.
 Quelle conclusion en tirez-vous ?
- 	  7. Déduisez de ces dernières observations une règle sur la portée des
+7. Déduisez de ces dernières observations une règle sur la portée des
 variables définies dans une fonction.
 
 
@@ -129,7 +129,7 @@ On poursuite la manipulation précédente :
 
 
 
- 	  1. Ajoutez au début de la portion `script` du
+1. Ajoutez au début de la portion `script` du
 fichier `monuments-version2.html` la ligne
 
 
@@ -143,7 +143,7 @@ Quelle est sa valeur ?
 
 (Vous pouvez éventuellement demandez l'affichage de la valeur de
 cette variable dans cette fonction, que se passe-t-il ?)
- 	  2. Déduisez-en une règle sur la portée des variables définies en
+2. Déduisez-en une règle sur la portée des variables définies en
 dehors des fonctions.
 
 
@@ -168,7 +168,7 @@ Reprenez le document [version 2](http://qkzk.xyz/docs/doc04/doc/monuments-versio
 
 
 
- 	  1. Ajoutez au début de la portion `script` du
+1. Ajoutez au début de la portion `script` du
 fichier `monuments-version2.html` la ligne
 
 
@@ -184,7 +184,7 @@ et à la fin la ligne
 
 
 
- 	  2. Chargez le document, supprimez tous les points d'arrêt existant et
+2. Chargez le document, supprimez tous les points d'arrêt existant et
 placez-en un nouveau sur la ligne ajoutée :
 
 
@@ -193,10 +193,10 @@ placez-en un nouveau sur la ligne ajoutée :
 
 
 
- 	  3. En procédant pas-à-pas observez
+3. En procédant pas-à-pas observez
 l'évolution du contenu de `texte` au cours du
 traitement.
- 	  4. Dans la fonction `texteMonument` renommez la variable
+4. Dans la fonction `texteMonument` renommez la variable
 locale `texte` en `resultat` (par
 exemple).
 Recommencez le pas-à-pas jusqu'à arriver au début du traitement
@@ -206,10 +206,10 @@ locales, mais il est possible de corriger cela :
 dans cette zone cliquez sur "_Nouvelle expression
 espion..._" et saisissez `texte` pour connaître la
 valeur de cette variable.
- 	  5. Que constatez-vous ?
- 	  6. Pour vérification créez un "espion" pour une variale qui n'existe
+5. Que constatez-vous ?
+6. Pour vérification créez un "espion" pour une variale qui n'existe
 pas, `truc` par exemple, quelle est sa valeur ?
- 	  7. Des observations précédentes établissez la règle qui résoud le
+7. Des observations précédentes établissez la règle qui résoud le
 conflit de nom entre vairables globales et locales.
 
 

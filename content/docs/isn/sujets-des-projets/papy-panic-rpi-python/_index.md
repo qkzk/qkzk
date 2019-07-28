@@ -37,8 +37,8 @@ Le matériel du projet est donc composé :
 
 
 
- 	  * Du raspberry
- 	  * D'une [ commande radio](https://www.adafruit.com/products/1392) style bip de garage
+* Du raspberry
+* D'une [ commande radio](https://www.adafruit.com/products/1392) style bip de garage
 
 
 
@@ -50,10 +50,10 @@ Your browser does not support the video tag.
 
 
 
- 	  * D'un [récepteur radio](https://www.adafruit.com/products/1096) :
+* D'un [récepteur radio](https://www.adafruit.com/products/1096) :
 ![1096-05](http://qkzk.xyz/wp-content/uploads/2016/07/1096-05-300x225.jpg)
 
- 	  * De la connectique nécessaire pour connecter tout ce beau monde et afficher des infomations (breadboard, jumpers, boutons, leds).
+* De la connectique nécessaire pour connecter tout ce beau monde et afficher des infomations (breadboard, jumpers, boutons, leds).
 
 
 
@@ -63,19 +63,19 @@ Your browser does not support the video tag.
 
 
 
- 	  * Utiliser le rapsberry convenablement, installation, raccordements
- 	  * Utiliser le gpio pour afficher une information via une led
- 	  * Presser un bouton, allumer une led (sans transition par le raspberry)
- 	  * Presser un bouton, déclencer un événement dans un script sur le raspberry, allumer une led
- 	  * Lancer un script automatiquement, le programmer sous windows, le transmettre au rapsberry
- 	  * Dessiner puis réaliser le circuit électronique reliant le raspberry et le récepteur radio
+* Utiliser le rapsberry convenablement, installation, raccordements
+* Utiliser le gpio pour afficher une information via une led
+* Presser un bouton, allumer une led (sans transition par le raspberry)
+* Presser un bouton, déclencer un événement dans un script sur le raspberry, allumer une led
+* Lancer un script automatiquement, le programmer sous windows, le transmettre au rapsberry
+* Dessiner puis réaliser le circuit électronique reliant le raspberry et le récepteur radio
 A cette étape le raspberry doit être accessible sans écran, uniquement via le réseau en SSH. Vous devez être capable d'y transférer vos fichiers au fur et à mesure.
- 	  * Connecter le recepteur radio au raspberry, lui transmettre un signal
- 	  * Ecrire le script qui écoute l'événément et transmet les informations
- 	  * Envoi automatique de mails (ou autre) via Python, déclenchés par le clavier
- 	  * Idem, déclenchés par un bouton
- 	  * Idem, par la radio
- 	  * Mettre de l'ordre dans tout ça...
+* Connecter le recepteur radio au raspberry, lui transmettre un signal
+* Ecrire le script qui écoute l'événément et transmet les informations
+* Envoi automatique de mails (ou autre) via Python, déclenchés par le clavier
+* Idem, déclenchés par un bouton
+* Idem, par la radio
+* Mettre de l'ordre dans tout ça...
 
 
 
@@ -91,5 +91,5 @@ A cette étape le raspberry doit être accessible sans écran, uniquement via le
 
 
 
- 	  * Créer une boitier de protection de tous les éléments en impression 3D (Hors de mon champ d'action...).
- 	  * Utiliser le raspberry à d'autres fins : récupérer la météo et l'afficher, afficher le contenu d'un calendrier, rappeler qu'il faut prendre des médicaments sur un écran etc.
+* Créer une boitier de protection de tous les éléments en impression 3D (Hors de mon champ d'action...).
+* Utiliser le raspberry à d'autres fins : récupérer la météo et l'afficher, afficher le contenu d'un calendrier, rappeler qu'il faut prendre des médicaments sur un écran etc.

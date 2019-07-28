@@ -55,13 +55,13 @@ Nous allons réaliser ensemble ce jeu afin de vous familiariser à canvas. L'id�
 
 
 
- 	  * Créer une page html contenant un canvas
- 	  * Créer la boucle de rafraîchissement
- 	  * Dessiner un rectangle donné par 4 sommets
- 	  * Evénements clavier : déplacer la raquette en question
- 	  * Les raquettes : dessin et animation
- 	  * La balle : une animation simple mais des contraintes multiples
- 	  * Rebonds, but : c'est gagné !
+* Créer une page html contenant un canvas
+* Créer la boucle de rafraîchissement
+* Dessiner un rectangle donné par 4 sommets
+* Evénements clavier : déplacer la raquette en question
+* Les raquettes : dessin et animation
+* La balle : une animation simple mais des contraintes multiples
+* Rebonds, but : c'est gagné !
 
 
 
@@ -76,6 +76,7 @@ Nous allons réaliser ensemble ce jeu afin de vous familiariser à canvas. L'id�
 On commence par créer un fichier html avec les balises usuelles.
 
 
+~~~html
     <html>
     <head>
     	<title>Pong</title>
@@ -85,7 +86,7 @@ On commence par créer un fichier html avec les balises usuelles.
 
     </body>
     </html>
-
+~~~
 
 
 
@@ -94,13 +95,13 @@ Ajouter les balises manquantes au début du fichier (doctype, meta etc.).
 
 Dans le body on insère le canvas qui va dessiner le jeu ainsi qu'un message d'erreur permettant de comprendre ce qui se passe si rien n'arrive à l'écran.
 
-
-    <div id='conteneur'>
-    	<canvas id="canvasElem" width="600" height="600">
-    		Canvas failed
-    	</canvas>
-    </div>
-
+~~~javascript
+<div id='conteneur'>
+	<canvas id="canvasElem" width="600" height="600">
+		Canvas failed
+	</canvas>
+</div>
+~~~
 
 `<Canvas>` (Cannevas, en anglais...) est une balise html5 permettant de représenter une figure 2d ou 3d et de l'animer en javascript.
 
@@ -136,36 +137,36 @@ Il servira ensuite à détecter les pressions du clavier servant à animer les r
 On insère dans le "head" le script suivant
 **Une fois compris** il peut être repris pour n'importe quel jeu (ou animation) simple en 2D, la structure sera vraisemblablement la même.
 
+~~~html
+<script type="text/javascript">
+		//à chaque reload
+		window.addEventListener('load', function () {
+		  // On récupère l'objet canvas
+		  var elem = document.getElementById('canvasElem');
+		  if (!elem || !elem.getContext) {
+			return;
+		  }
+		  // On récupère le contexte 2D
+		  context = elem.getContext('2d');
+		  if (!context) {
+			return;
+		  }
+		  // Boucle de rafraichissement du contexte 2D
+		  boucleJeu = setInterval(refreshGame, intervalTemps); //refresh tous les x ms
+		}, false);
 
-    <script type="text/javascript">
-    		//à chaque reload
-    		window.addEventListener('load', function () {
-    		  // On récupère l'objet canvas
-    		  var elem = document.getElementById('canvasElem');
-    		  if (!elem || !elem.getContext) {
-    			return;
-    		  }
-    		  // On récupère le contexte 2D
-    		  context = elem.getContext('2d');
-    		  if (!context) {
-    			return;
-    		  }
-    		  // Boucle de rafraichissement du contexte 2D
-    		  boucleJeu = setInterval(refreshGame, intervalTemps); //refresh tous les x ms
-    		}, false);
+		//variables
+		intervalTemps = 2;//tous les 2 ms
 
-    		//variables
-    		intervalTemps = 2;//tous les 2 ms
+		//boucle de rafraichissement
+		//la boucle du jeu
+				function refreshGame() {
+				//ici on inscrira les appels succéssifs.
+				}
 
-    		//boucle de rafraichissement
-    		//la boucle du jeu
-    				function refreshGame() {
-    				//ici on inscrira les appels succéssifs.
-    				}
-
-    		//fonctions : elles seront définies ici, appelées plus haut
-    </script>
-
+		//fonctions : elles seront définies ici, appelées plus haut
+</script>
+~~~
 
 ** Traduction :**
 
@@ -198,9 +199,9 @@ OUF ! Vous êtes arrivés jusqu'ici... Rassurez-vous, ainsi que je l'ai dit plus
 
 
 
- 	  * Une fonction lance le canvas s'il est correctement défini
- 	  * Celui-ci est appelé à l'aide de la variable qu'on a appelé context
- 	  * Cette même fonction lance une autre fonction (vide...) qui servira à dessiner, animer, interpréter les événements (pression du clavier, clic souris etc.).
+* Une fonction lance le canvas s'il est correctement défini
+* Celui-ci est appelé à l'aide de la variable qu'on a appelé context
+* Cette même fonction lance une autre fonction (vide...) qui servira à dessiner, animer, interpréter les événements (pression du clavier, clic souris etc.).
 
 Aussi surprenant que cela puisse paraître, c'est le squelette de n'importe quel jeux vidéo 2d qui se déroule dans une seule fenêtre. Tout ce dont on a besoin y figure déjà !
 
@@ -214,22 +215,22 @@ On se contentera à chaque rafraichissement de :
 
 
 
- 	  * Vider la fenêtre (sinon elle se remplit au fur et à mesure).
- 	  * Dessiner deux barres rectangulaires pour les raquettes.
- 	  * Dessiner la balle carré.
- 	  * Dessiner un filet constitué de rectangles.
- 	  * Détecter les collisions de la balle avec les objets (plafonds, buts, raquettes)
- 	  * Repérer si un des joueurs a pressé une touche.
- 	  * Calculer les positions futures des objets mobiles.
- 	  * Ecrire les deux scores
+* Vider la fenêtre (sinon elle se remplit au fur et à mesure).
+* Dessiner deux barres rectangulaires pour les raquettes.
+* Dessiner la balle carré.
+* Dessiner un filet constitué de rectangles.
+* Détecter les collisions de la balle avec les objets (plafonds, buts, raquettes)
+* Repérer si un des joueurs a pressé une touche.
+* Calculer les positions futures des objets mobiles.
+* Ecrire les deux scores
 
 Quelles sont les variables dont on a besoin ?
 
- 	  * les dimensions du canvas, toujours utile pour se repérer
- 	  * les dimensions des raquettes, de la balle
- 	  * la position de chacun de ces objets
- 	  * les scores
- 	  * les "vitesses" de la balle, des raquettes
+* les dimensions du canvas, toujours utile pour se repérer
+* les dimensions des raquettes, de la balle
+* la position de chacun de ces objets
+* les scores
+* les "vitesses" de la balle, des raquettes
 
 **Remarque importante concernant la vitesse**. Chaque déplacement se fait via un rafraichissement de l'écran. Toutes les positions sont donc calculées étape par étape. La vitesse de la balle est donc le nombre de pixels dont elle se déplace en abscisses, en ordonnées, entre deux rafraichissement.
 
@@ -268,47 +269,45 @@ Prendre une photo, l'insérer dans le drive au bon endroit et la renommer pour l
 
 Elles iront en haut du script, avant la récupération du canvas. Elles sont toutes locales, certaines étant juste nommées sans valeur particulière à ce moment.
 
+~~~javascript
+//variables internes
+var boucleJeu; //appelée pour refresh
+var intervalTemps = 2; //temps entre 2 refresh en ms
+var context; //le contexte 2d
 
-    <code>
-    //variables internes
-    var boucleJeu; //appelée pour refresh
-    var intervalTemps = 2; //temps entre 2 refresh en ms
-    var context; //le contexte 2d
+// Constantes du jeu
+var largeur_fenetre = 600; //taille du canvas
+var hauteur_fenetre = 600; //hauteur du canvas
+var avancer = 1; //on commence a gauche, en allant vers la droite
 
-    // Constantes du jeu
-    var largeur_fenetre = 600; //taille du canvas
-    var hauteur_fenetre = 600; //hauteur du canvas
-    var avancer = 1; //on commence a gauche, en allant vers la droite
-
-    //positions des objets
-    //centre de la raquette de gauche
-    var abs_raquette1=60;
-    var ord_raquette1=300;
-    //centre de la raquette de droite
-    var abs_raquette2=540;
-    var ord_raquette2=300;
-    var barreStart=ord_raquette1; //l'ordonnee des barres apres les buts
-    //centre de la balle carre
-    var abs_balle=300;
-    var ord_balle=300;
-    var abs_depart=abs_balle;//on gare en mémoire la position initiale pour les remises en jeu
-    var ord_depart=ord_balle;
-    //largeur et hauteur des barres - ce sont en fait des demi-largeurs et hauteurs, comme on va le voir
-    var l=3;
-    var h=60;
-    //largeur et hauteur de la balle
-    var ll=6;
-    var hh=6;
-    //vitesse de deplacement des raquettes
-    var deplace = 18;
-    //vitesse horizontale et verticale de la balle
-    var horiz = 2;
-    var vertic = 0;
-    //les scores
-    var score1=0;
-    var score2=0;
-    </code>
-
+//positions des objets
+//centre de la raquette de gauche
+var abs_raquette1=60;
+var ord_raquette1=300;
+//centre de la raquette de droite
+var abs_raquette2=540;
+var ord_raquette2=300;
+var barreStart=ord_raquette1; //l'ordonnee des barres apres les buts
+//centre de la balle carre
+var abs_balle=300;
+var ord_balle=300;
+var abs_depart=abs_balle;//on gare en mémoire la position initiale pour les remises en jeu
+var ord_depart=ord_balle;
+//largeur et hauteur des barres - ce sont en fait des demi-largeurs et hauteurs, comme on va le voir
+var l=3;
+var h=60;
+//largeur et hauteur de la balle
+var ll=6;
+var hh=6;
+//vitesse de deplacement des raquettes
+var deplace = 18;
+//vitesse horizontale et verticale de la balle
+var horiz = 2;
+var vertic = 0;
+//les scores
+var score1=0;
+var score2=0;
+~~~
 
 
 
@@ -331,8 +330,7 @@ Les variables étant choisies, on peut s'attaquer à la boucle de rafraichisseme
 Les raquettes, la balle, les scores sont dessinés par des appels fonctions.
 Par choix on dessine d'abord tous les éléments puis on calcule les états suivants.
 
-
-    <code>
+~~~javascript
     function refreshGame() {
     	//nettoyage de l'ecran
     	context.clearRect(0,0,largeur_fenetre,hauteur_fenetre);
@@ -352,8 +350,7 @@ Par choix on dessine d'abord tous les éléments puis on calcule les états suiv
         //ecoute des events claviers
         window.document.onkeydown = caBouge;
     }
-    </code>
-
+~~~
 
 Chacune des nouvelles fonctions doit être définie, on les laissera vide `function dessinerBarre(){}`, en dessous de ` refreshGame(){..}`. On ajoutera ensuite leurs actions entre les `{}` et leurs paramètres entre les `()`.
 
@@ -387,40 +384,40 @@ Ainsi qu'il a été dit plus haut il existe une méthode plus simple. Elle ne pe
 Une seule fonction, appelée avec des variables différentes permet de dessiner les deux raquettes.
 
 
-    <code>
-    //dessin de la balle, centree
-    function dessinerBalle(x,y){
-    	context.fillStyle = 'black';
-    	context.beginPath();
-    	context.moveTo(x-ll,y+hh); //bas gauche
-    	context.lineTo(x+ll, y+hh); //bas droite
-    	context.lineTo(x+ll, y-hh); //haut droit
-    	context.lineTo(x-ll, y-hh); //haut gauche
-    	context.closePath();
-    	context.fill();
+~~~javascript
+//dessin de la balle, centree
+function dessinerBalle(x,y){
+	context.fillStyle = 'black';
+	context.beginPath();
+	context.moveTo(x-ll,y+hh); //bas gauche
+	context.lineTo(x+ll, y+hh); //bas droite
+	context.lineTo(x+ll, y-hh); //haut droit
+	context.lineTo(x-ll, y-hh); //haut gauche
+	context.closePath();
+	context.fill();
 
-    }
-     </code>
+}
+~~~
 
 
 Il faut d'abord choisir une couleur de remplissage: `context.fillStyle = 'black';`, sinon la précédente couleur sera utilisée. Sans problème ici, cela peut vite le devenir si vous avez plus de deux couleurs à l'écran...
 On indique ensuite où placer le premier point `context.moveTo(x-ll,y+hh);`. On partira ici du coin inférieur gauche de la raquette. Puis :
 
 
-    <code>
-    context.lineTo(x+ll, y+hh); //bas droite
-    context.lineTo(x+ll, y-hh); //haut droit
-    context.lineTo(x-ll, y-hh); //haut gauche
-    </code>
+~~~javascript
+context.lineTo(x+ll, y+hh); //bas droite
+context.lineTo(x+ll, y-hh); //haut droit
+context.lineTo(x-ll, y-hh); //haut gauche
+~~~
 
 
 permet de tracer les côtés. Enfin
 
 
-    <code>
-    	context.closePath();
-    	context.fill(); </code>
-
+~~~javascript
+context.closePath();
+context.fill();
+~~~
 
 pour terminer la construction et la remplir. L'oubli de ` closePath()` est une source d'erreur majeure dont j'ai régulièrement fait les frais...
 
@@ -431,8 +428,8 @@ Double cliquez sur votre fichier html dans les sources (son code apparait à dro
 
 
 
- 	  * L'édition en direct. Aucune modification n'est sauvegardée dans votre fichier réel, seulement dans le navigateur. On s'en servira peu, vos programmes restant assez courts.
- 	  * L'ajout d'un **breakpoint** : cliquez sur le **numero** de la ligne de l'appel à la fonction `dessinerBarre()` dans le panneau de développeur. Votre script s'arrête de s'executer au moment de l'appel de cette fonction.
+* L'édition en direct. Aucune modification n'est sauvegardée dans votre fichier réel, seulement dans le navigateur. On s'en servira peu, vos programmes restant assez courts.
+* L'ajout d'un **breakpoint** : cliquez sur le **numero** de la ligne de l'appel à la fonction `dessinerBarre()` dans le panneau de développeur. Votre script s'arrête de s'executer au moment de l'appel de cette fonction.
 Vous pouvez reprendre son execution en appuyant sur le bouton **pause** (triangle bleu, plus bas, à gauche) jusqu'au prochain appel de cette fonction.
 En recliquant sur ce numero de ligne, vous enlevez ce breakpoint.
 
@@ -454,24 +451,24 @@ Créer la fonction qui dessine la balle : dessinerBalle(x,y){...} en adaptant la
 
 La dernière ligne de ` refreshGame() ` écoute les événements du clavier. Selon la touche pressée (z,s, haut et bas) la première ou la seconde raquette va bouger vers le haut ou vers le bas.
 
+~~~javascript
+function caBouge(e){
+	//raquette de droite
+	// Flêche du bas pressee
+	if (e.keyCode == 38) {
+		console.log("haut");
+		if ( ord_raquette2 >= h){ ord_raquette2=ord_raquette2-deplace};
+	}
+	// Flêche du haut préssée
 
-    function caBouge(e){
-    	//raquette de droite
-    	// Flêche du bas pressee
-    	if (e.keyCode == 38) {
-    		console.log("haut");
-    		if ( ord_raquette2 >= h){ ord_raquette2=ord_raquette2-deplace};
-    	}
-    	// Flêche du haut préssée
+	//raquette de gauche
+	//touche z pressee
 
-    	//raquette de gauche
-    	//touche z pressee
-
-    	// touche s pressee
+	// touche s pressee
 
 
-    }
-
+}
+~~~
 
 
 
@@ -525,15 +522,15 @@ Ce sont les vitesses horizontales et verticales de la balle au début du jeu.
 `horiz` prendra les valeurs 1 et -1 tandis que `vertic` pourra changer énormément, augmentant la difficulté.
 
 
-    <code>
-    function deplaceBalle(){
+~~~javascript
+function deplaceBalle(){
 
-    //on ajoutera ici, AVANT de déplacer la balle, tous les tests à effectuer
-    //pour changer sa trajectoire selon sa position = rebonds, buts, effet de la raquette etc.
-    x2=x2+horiz
-    y2=y2+vertic
-    }
-    </code>
+//on ajoutera ici, AVANT de déplacer la balle, tous les tests à effectuer
+//pour changer sa trajectoire selon sa position = rebonds, buts, effet de la raquette etc.
+x2=x2+horiz
+y2=y2+vertic
+}
+~~~
 
 
 A ce moment la balle doit quitter l'écran à droite et disparaitre.
@@ -551,20 +548,20 @@ Compléter votre diagramme papier avec ces éléments (photo, drive, classée au
 
 On ajoute alors les tests de collision avec le haut et le bas.
 
+~~~javascript
+function deplaceBalle(){
+	//tests de collision : plafond
+	if(ord_balle-hh<=0){//on est arrivé en haut
+		vertic=-vertic //la balle repart vers le bas
+	}
+	//autres tests à effectuer
+	//...
 
-    function deplaceBalle(){
-    	//tests de collision : plafond
-    	if(ord_balle-hh<=0){//on est arrivé en haut
-    		vertic=-vertic //la balle repart vers le bas
-    	}
-    	//autres tests à effectuer
-    	//...
-
-    	//deplacement de la balle
-    	x2=x2+horiz
-    	y2=y2+vertic
-    }
-
+	//deplacement de la balle
+	x2=x2+horiz
+	y2=y2+vertic
+}
+~~~
 
 
 
@@ -586,17 +583,17 @@ Décrire ligne par ligne ces ajouts et les compléter avec les rebonds sur le so
 Les raquettes et la balle sont recentrées à chaque point. Le score du joueur qui a marqué augmente de 1.
 C'est là qu'intervient `ord_depart;` où on avait gardé en mémoire la position initiale de la raquette.
 
-
-    if(abs_balle+ll>=largeur_fenetre){//a droite. but et on repart du centre
-    		horiz=-horiz;
-    		vertic=0;
-    		abs_balle=abs_depart;
-    		ord_balle=ord_depart;
-    		score1++;
-    		ord_raquette1=barreStart;
-    		ord_raquette2=barreStart;
-    	}
-
+~~~javascript
+if(abs_balle+ll>=largeur_fenetre){//a droite. but et on repart du centre
+		horiz=-horiz;
+		vertic=0;
+		abs_balle=abs_depart;
+		ord_balle=ord_depart;
+		score1++;
+		ord_raquette1=barreStart;
+		ord_raquette2=barreStart;
+	}
+~~~
 
 Insérer dans votre code (au bon endroit...) l'extrait précédent. Le décrire (pourquoi devoir modifier horiz et vertic ?) et écrire la partie correspondant au but de gauche.
 
@@ -622,16 +619,16 @@ Il est MULTIPLICATIF. On peut enchainer plusieurs propositions et si elles sont 
 
 Un autre opérateur || (Ou booleen) permet de tester si (A ou B) est vrai (c'est le cas si A est vrai ou B est vrai ou si les deux le sont en même temps). Il est ADDITIF. Il faut donc respecter les priorités opératoires quand on emploie les deux en même temps.
 
-
-    if(
-    abs_balle-ll <= abs_raquette1-l && abs_balle+ll >= abs_raquette1+l
-    && ord_balle+hh <= ord_raquette1+h && ord_balle-hh >= ord_raquette1-h
-    )
-    {//elle a touche la raquette de gauche
-    	horiz=-horiz;//rebond
-    	vertic = vertic + 0.05*(ord_balle - ord_raquette1);//effet
-    }
-
+~~~javascript
+if(
+abs_balle-ll <= abs_raquette1-l && abs_balle+ll >= abs_raquette1+l
+&& ord_balle+hh <= ord_raquette1+h && ord_balle-hh >= ord_raquette1-h
+)
+{//elle a touche la raquette de gauche
+	horiz=-horiz;//rebond
+	vertic = vertic + 0.05*(ord_balle - ord_raquette1);//effet
+}
+~~~
 
 
 
@@ -666,14 +663,14 @@ On peut faire plus simple mais j'ai cherché à ne créer qu'une seule fonction 
 
 
 
-     <code>
-    	//ecrit les scores
-    	function writescore(s,j){
-    		context.fillStyle = 'black'
-    		context.font = "30px Arial";
-    		context.fillText(s,ZW/2 +200*j-300,50);
-    	}
-    </code>
+~~~JavaScript
+//ecrit les scores
+function writescore(s,j){
+	context.fillStyle = 'black'
+	context.font = "30px Arial";
+	context.fillText(s,ZW/2 +200*j-300,50);
+	}
+~~~
 
 
 Il faut, à nouveau, choisir une couleur de remplissage (plus prudent), une taille et une police de caractère et indiquer où écrire le message.
@@ -693,5 +690,5 @@ D'autres idées :
 
 
 
- 	  * arrêter le jeu quand un joueur arrive à 10 pts. On utilisera : `clearInterval(boucleJeu);`.
- 	  * Changer alors le titre de la fenêtre pour l'indiquer au joueur. `document.getElementById("titre").innerHTML = "Game Over"`. RQ : on peut adapter ce message : "Joueur 1 a gagné".
+* arrêter le jeu quand un joueur arrive à 10 pts. On utilisera : `clearInterval(boucleJeu);`.
+* Changer alors le titre de la fenêtre pour l'indiquer au joueur. `document.getElementById("titre").innerHTML = "Game Over"`. RQ : on peut adapter ce message : "Joueur 1 a gagné".

@@ -36,18 +36,14 @@ Chaque binôme s'empare d'un sujet parmi les propositions suivantes :
 
 
 
- 	  1. Qui est **Alan Turing** ?
- 	  2. Qui est **John von Neumann** ?
- 	  3. Quelle est la **place du numérique** dans les
-objets de la vie quotidienne ?
- 	  4. Qu'est-ce qu'un **système d'exploitation** ?
- 	  5. Qu'est ce qu'un **logiciel** ?
- 	  6. Qu'est-ce qu'un **algorithme** ? Un **langage
-de programmation** ? Pourquoi y a-t-il tant de
-langages ?
- 	  7. Comment fonctionne **Wikipédia** ?
- 	  8. Qu'est-ce qu'un fichier, un **fichier texte** ?
-Éditeur de texte et traitement de texte, quelle différence ?
+1. Qui est **Alan Turing** ?
+2. Qui est **John von Neumann** ?
+3. Quelle est la **place du numérique** dans les objets de la vie quotidienne ?
+4. Qu'est-ce qu'un **système d'exploitation** ?
+5. Qu'est ce qu'un **logiciel** ?
+6. Qu'est-ce qu'un **algorithme** ? Un **langage de programmation** ? Pourquoi y a-t-il tant de langages ?
+7. Comment fonctionne **Wikipédia** ?
+8. Qu'est-ce qu'un fichier, un **fichier texte** ? Éditeur de texte et traitement de texte, quelle différence ?
 
 
 
@@ -58,11 +54,10 @@ langages ?
 
 
 
- 	  * On s'aidera bien entendu de recherches sur le web.
-Il n'est cependant pas interdit de fréquenter une bibliothèque !
- 	  * On pourra consulter directement [Wikipédia](http://fr.wikipedia.org/).
- 	  * On profitera des articles [d')i(nterstices](http://interstices.info/)
- 	  * On ne manquera pas de  citer ses sources en fournissant par exemple leur [URL](http://fr.wikipedia.org/wiki/Uniform_Resource_Locator).
+* On s'aidera bien entendu de recherches sur le web. Il n'est cependant pas interdit de fréquenter une bibliothèque !
+* On pourra consulter directement [Wikipédia](http://fr.wikipedia.org/).
+* On profitera des articles [d')i(nterstices](http://interstices.info/)
+* On ne manquera pas de  citer ses sources en fournissant par exemple leur [URL](http://fr.wikipedia.org/wiki/Uniform_Resource_Locator).
 
 
 
@@ -119,33 +114,33 @@ Dans le menu du bouton droit de la souris, sélectionner "_Code source de la pa
 
 Soit le code HTML suivant :
 
+~~~html
+<!-- Ceci est mon premier fichier HTML -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mon premier fichier HTML</title>
+</head>
 
-    <!-- Ceci est mon premier fichier HTML -->
-    <!DOCTYPE html>
-    <html>
-    <head>
-        <title>Mon premier fichier HTML</title>
-    </head>
+<body>
+<h1>Section une</h1>  <!-- titre de la 1re section -->
 
-    <body>
-    <h1>Section une</h1>  <!-- titre de la 1re section -->
+<p>Mon premier paragraphe. Ces <b>deux mots</b> sont en gras.</p>
 
-    <p>Mon premier paragraphe. Ces <b>deux mots</b> sont en gras.</p>
+<p>Ce second paragraphe termine la section une.</p>
 
-    <p>Ce second paragraphe termine la section une.</p>
+<h1>Section          deux</h1>
 
-    <h1>Section          deux</h1>
+<p>Que pensez-vous du paragraphe suivant.</p>
+<p>Martinus agens illas provincias pro praefectis aerumnas innocentium
+malivolus tandem desineret
 
-    <p>Que pensez-vous du paragraphe suivant.</p>
-    <p>Martinus agens illas provincias pro praefectis aerumnas innocentium
-    malivolus tandem desineret
+quieti coalitos homines in aperta pericula
+proiectare.</p>
 
-    quieti coalitos homines in aperta pericula
-    proiectare.</p>
-
-    </body>
-    </html>
-
+</body>
+</html>
+~~~
 
 Ce contenu a été sauvegardé dans un fichier nommé `premier-html.html`. Vous pouvez en visualiser le rendu en cliquant sur le lien suivant : [premier-html](http://qkzk.xyz/wp-content/uploads/2016/07/premier-html.html) .
 
@@ -155,31 +150,16 @@ Ce contenu a été sauvegardé dans un fichier nommé `premier-html.html`. Vous
 
 
 **Rendu de mon premier fichier HTML.**
-Observez attentivement le rendu dans votre navigateur du fichier
-
-
-    premier-html.html
+Observez attentivement le rendu dans votre navigateur du fichier **premier-html.html**
 
 
 en parallèle du code HTML de ce fichier.
 
 
 
- 	  * Comment le titre de la page est-il rendu ?
- 	  * Comment les caractères entre
-
-
-    <!--
-
-
-et
-
-
-    -->
-
-
-sont-ils rendus ?
- 	  * Les caractères espaces sont-ils significatifs ?
+* Comment le titre de la page est-il rendu ?
+* Comment les caractères entre `<!--` et `-->` sont-ils rendus ?
+* Les caractères espaces sont-ils significatifs ?
 
 
 
@@ -198,20 +178,19 @@ En premier lieu, remarquons que le code HTML est structuré à l'aide de balises
 
 
 
- 	  * Les balises sont encadrées par les caractères `<` et `>` ou `<` et `/>`.
- 	  * Les balises s'utilisent comme des parenthèses : à la balise ouvrante `<h1>` correspond la balise fermante
-`</h1>`.
- 	  * Les balises peuvent être imbriquées, par exemple les balises `<b>`–`</b>` des deux mots rendus
+* Les balises sont encadrées par les caractères `<` et `>` ou `<` et `/>`.
+* Les balises s'utilisent comme des parenthèses : à la balise ouvrante `<h1>` correspond la balise fermante `</h1>`.
+* Les balises peuvent être imbriquées, par exemple les balises `<b>`–`</b>` des deux mots rendus
 en gras au sein des balises `<p>`–`</p>` du premier paragraphe.
 
 Notre exemple débute par une ligne `<!DOCTYPE html>
 `
 qui indique que le fichier respecte la norme HTML basique, norme de 1991. Nous préférerons utiliser une norme plus récente telle XHTML 1.0 et préciser dans notre document :
 
-
-    <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-
+~~~html
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+~~~
 
 
 
@@ -221,10 +200,8 @@ Les balises utilisées dans l'exemple précédent sont :
 
 
 
- 	    * Les balises `<html>`-`</html>` délimitent le code HTML qui comporte deux grandes parties, l'entête
-et le corps.
- 	    * Les balises `<head>`-`</head>` délimitent l'entête du document. Cet entête permet de préciser des
-informations générales sur le document tel que le titre comme nous le faisons ici. L'entête contient éventuellement d'autres informations tels qu'une brève description du document, des mots-clés, le nom du ou des auteurs du document, etc.
+* Les balises `<html>`-`</html>` délimitent le code HTML qui comporte deux grandes parties, l'entête et le corps.
+* Les balises `<head>`-`</head>` délimitent l'entête du document. Cet entête permet de préciser des informations générales sur le document tel que le titre comme nous le faisons ici. L'entête contient éventuellement d'autres informations tels qu'une brève description du document, des mots-clés, le nom du ou des auteurs du document, etc.
 
 
 Quelle est l'utilité des informations fournies dans l'entête d'un document HTML ? À quoi peuvent servir les mots-clés ou la description fournis ? Nous avons déjà vu comment le titre du document
@@ -233,18 +210,12 @@ pouvait être rendu. Toutes les informations contenues dans l'entête sont elle
 
 
 
- 	  * Les balises `<body>`-`</body>` définissent le corps du document. C'est dans ce corps que nous
-allons trouver le contenu du document : texte, images, etc.
- 	  * Les balises `<h1>`-`</h1>` indiquent le titre d'une section de premier niveau. Des titres de
-niveaux inférieurs peuvent être définis, par exemple `<h2>`-`</h2>`, puis
-`<h3>`-`</h3>`, etc.Les titres de sections sont des éléments importants d'un document
-HTML. Deux aspects sont à considérer :
+* Les balises `<body>`-`</body>` définissent le corps du document. C'est dans ce corps que nous allons trouver le contenu du document : texte, images, etc.
+* Les balises `<h1>`-`</h1>` indiquent le titre d'une section de premier niveau. Des titres de niveaux inférieurs peuvent être définis, par exemple `<h2>`-`</h2>`, puis `<h3>`-`</h3>`, etc.Les titres de sections sont des éléments importants d'un document HTML. Deux aspects sont à considérer :
 
- 	    * le rendu par le navigateur web, par exemple en gras, avec une taille de caractères plus importante, permet au lecteur humain d'identifier le titre ;
- 	    * les titres de section mettent en évidence la **structure** du document. Cette structure est
-indispensable. Elle permet par exemple d'indexer automatiquement les pages web, de créer automatiquement des sommaires, etc.
- 	    * Les balises `<p>`-`</p>` délimitent les paragraphes du texte. Les balises `<b>`-`</b>`
-demandent au navigateur web de produire un **rendu en gras **d'une partie du texte. Il est également possible d'utiliser les balises `<i>`-`</i>` pour demander un _rendu en italique_.Ces deux rendus permettent de mettre en évidence des parties du texte.
+* le rendu par le navigateur web, par exemple en gras, avec une taille de caractères plus importante, permet au lecteur humain d'identifier le titre ;
+* les titres de section mettent en évidence la **structure** du document. Cette structure est indispensable. Elle permet par exemple d'indexer automatiquement les pages web, de créer automatiquement des sommaires, etc.
+* Les balises `<p>`-`</p>` délimitent les paragraphes du texte. Les balises `<b>`-`</b>` demandent au navigateur web de produire un **rendu en gras **d'une partie du texte. Il est également possible d'utiliser les balises `<i>`-`</i>` pour demander un _rendu en italique_.Ces deux rendus permettent de mettre en évidence des parties du texte.
 
 
 
@@ -257,19 +228,11 @@ Un **lien hypertexte** est une référence sur un document, une référence sur
 
 Un **site web** est généralement composé de plusieurs **pages web**. L'adresse d'un site web est l'adresse
 de sa page d'accueil. La page web est identifiée par son adresse, on parle
-d'**adresse web**, ou d'URL (Uniform Resource Locator). C'est l'adresse qui apparaît dans la barre d'adresses de votre navigateur. Par exemple, l'adresse du site web Wikipédia est
+d'**adresse web**, ou d'URL (Uniform Resource Locator). C'est l'adresse qui apparaît dans la barre d'adresses de votre navigateur. Par exemple, l'adresse du site web Wikipédia est   **http://wikipedia.fr/**
 
 
 
-
-    http://wikipedia.fr/
-
-
-
-l'adresse de la page de Wikipédia de l'article à propos de URL est :
-
-
-    http://fr.wikipedia.org/wiki/URL
+l'adresse de la page de Wikipédia de l'article à propos de URL est :    **http://fr.wikipedia.org/wiki/URL**
 
 
 
@@ -278,16 +241,16 @@ Dans une page HTML, ces liens vont pouvoir être associés à un texte qui sera
 En HTML, on utilise la balise `<a>`-`</a>` avec l'attribut `href="_adresse_web_"` ajouté à
 l'intérieur de la balise. Par exemple
 
-
-    <a href="http://wikipedia.fr" >Wikipedia</a>
-
+~~~html
+<a href="http://wikipedia.fr" >Wikipedia</a>
+~~~
 
 
 va produire le texte "Wikipedia" à partir duquel on pourra atteindre le site `http://wikipedia.fr`. À partir de
 
-
-    <a href="http://fr.wikipedia.org/wiki/URL" >Qu'est-ce qu'une URL ?</a>
-
+~~~html
+<a href="http://fr.wikipedia.org/wiki/URL" >Qu'est-ce qu'une URL ?</a>
+~~~
 
 
 on atteindra la page web de Wikipédia consacrée au terme URL.
@@ -316,15 +279,15 @@ est le suivant :
 Wikimedia Commons est un dépôt de millions d'images que vous pouvez utiliser. Le logo de Wikimedia Commons est disponible à l'adresse
 
 
-    http://upload.wikimedia.org/wikipedia/commons/4/4a/Commons-logo.svg
+    [http://upload.wikimedia.org/wikipedia/commons/4/4a/Commons-logo.svg](http://upload.wikimedia.org/wikipedia/commons/4/4a/Commons-logo.svg)
 
 
 
 On utilise la balise `<img>` pour insérer cette image dans un document HTML. L'adresse web de l'image est précisée à l'aide de l'attribut `src="_adresse_de_l_image_" ` ajouté à l'intérieur de la balise :
 
-
-    <img src="http://upload.wikimedia.org/wikipedia/commons/4/4a/Commons-logo.svg" />
-
+~~~html
+<img src="http://upload.wikimedia.org/wikipedia/commons/4/4a/Commons-logo.svg" />
+~~~
 
 
 Nous remarquons que la balise `img` s'utilise seule, sans balise fermante correspondante. Dans ce cas particulier on remarque que la fin de balise se note `/>`
@@ -341,9 +304,8 @@ D'autres utilisations de cette balise `img` sont illustrées sur la [page dédi
 
 
 
- 	  1. `<img src="http://maps.googleapis.com/maps/api/staticmap?center=50.609731,3.137511&zoom=17&size=400x400&sensor=false">`
-et `<img src="http://maps.googleapis.com/maps/api/staticmap?center=50.609731,3.137511&zoom=18&maptype=satellite&size=400x400&sensor=false">`
- 	  2. Recherchez les coordonnées GPS de votre lycée et modifiez le code html précédent pour afficher une page contenant la carte de votre lycée.
+1. `<img src="http://maps.googleapis.com/maps/api/staticmap?center=50.609731,3.137511&zoom=17&size=400x400&sensor=false">` et `<img src="http://maps.googleapis.com/maps/api/staticmap?center=50.609731,3.137511&zoom=18&maptype=satellite&size=400x400&sensor=false">`
+2. Recherchez les coordonnées GPS de votre lycée et modifiez le code html précédent pour afficher une page contenant la carte de votre lycée.
 
 
 
@@ -364,10 +326,11 @@ Créer une page reprenant la structure vue en exemple et y intégrer chacune des
 
 Rappel de la structure proposée :
 
+~~~html
+<h1>Section une</h1> <!-- titre de la 1re section -->
+< p > Mon premier paragraphe. Ces <b>deux mots</b> sont en gras. < /p >
 
-    <h1>Section une</h1> <!-- titre de la 1re section -->
-    < p > Mon premier paragraphe. Ces <b>deux mots</b> sont en gras. < /p >
-
-    < p > Ce second paragraphe termine la section une.< /p >
-    <h1>Section deux</h1>
-    < p > Un autre paragraphe< /p >
+< p > Ce second paragraphe termine la section une.< /p >
+<h1>Section deux</h1>
+< p > Un autre paragraphe< /p >
+~~~

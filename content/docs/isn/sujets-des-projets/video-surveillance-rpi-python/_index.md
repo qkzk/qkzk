@@ -37,16 +37,16 @@ On pourra aussi commander au raspberry la prise de timelapse.
 
 
 
- 	  * Utiliser le rapsberry convenablement, installation, raccordements...
- 	  * Raccorder sa caméra, prendre une photo, filmer, exporter les données automatiquement
- 	  * Controle du raspberry à distance via ssh
+* Utiliser le rapsberry convenablement, installation, raccordements...
+* Raccorder sa caméra, prendre une photo, filmer, exporter les données automatiquement
+* Controle du raspberry à distance via ssh
 A cette étape le raspberry doit être accessible sans écran, uniquement via le réseau en SSH. Vous devez être capable d'y transférer vos fichiers au fur et à mesure.
- 	  * Envoyer un ordre au raspberry et le faire exécuter un script Python
- 	  * Envoyer un ordre : prendre une photo, l'exporter
- 	  * Envoyer un ordre : filmer, arrêter, encoder, exporter.
- 	  * Utiliser le capteur de mouvement
- 	  * Créer un timelapse
- 	  * Mettre de l'ordre dans tout ça...
+* Envoyer un ordre au raspberry et le faire exécuter un script Python
+* Envoyer un ordre : prendre une photo, l'exporter
+* Envoyer un ordre : filmer, arrêter, encoder, exporter.
+* Utiliser le capteur de mouvement
+* Créer un timelapse
+* Mettre de l'ordre dans tout ça...
 
 
 
@@ -56,9 +56,9 @@ A cette étape le raspberry doit être accessible sans écran, uniquement via le
 
 
 
- 	  * Créer un boitier imprimé en 3D pour le raspberry et sa caméra. Hors de mon champ d'action.
- 	  * Visiophone (difficile).
- 	  * Piège caméra d'observation d'oiseaux (alimentation externe, déclencheur automatique, transfert via wifi etc.).
+* Créer un boitier imprimé en 3D pour le raspberry et sa caméra. Hors de mon champ d'action.
+* Visiophone (difficile).
+* Piège caméra d'observation d'oiseaux (alimentation externe, déclencheur automatique, transfert via wifi etc.).
 
 
 

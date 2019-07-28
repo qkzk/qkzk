@@ -11,14 +11,14 @@ Pré-requis
 
 
 
-  * les bases d'html
+* les bases d'html
 
 
 Notions abordées dans cette page
 
 
 
-  * style css
+* style css
 
 
 
@@ -39,26 +39,13 @@ Notions abordées dans cette page
 
 
 
-  1. Rendez-vous sur la page
-  du [CSS Zen garden](http://www.csszengarden.com/) (ou sur
-  la [page de la
-  version française](http://www.csszengarden.com/tr/francais/), mais dont la traduction automatique est
-  parfois étrange...).
-  2. A partir de cette page visitez quelques pages référencées dans la
-  rubrique _select a design_ (ou _choisissez une
-  conception_) dans le bandeau de droite. Après en avoir consulté
-  quelques-unes vous devriez avoir rencontré des styles **très** differents.
+1. Rendez-vous sur la page du [CSS Zen garden](http://www.csszengarden.com/) (ou sur la [page de la version française](http://www.csszengarden.com/tr/francais/), mais dont la traduction automatique est parfois étrange...).
+2. A partir de cette page visitez quelques pages référencées dans la rubrique _select a design_ (ou _choisissez une conception_) dans le bandeau de droite. Après en avoir consulté quelques-unes vous devriez avoir rencontré des styles **très** différents.
 
-  3. Sélectionnez et ouvrez deux de ces pages dans des onglets séparés
-  et pour chacune d'entre elles consultez-en  le code
-  source. Rappelons qu'il suffit d'un clic droit sur la page puis de
-  choisir _Code source de la page_.
+3. Sélectionnez et ouvrez deux de ces pages dans des onglets séparés et pour chacune d'entre elles consultez-en  le code source. Rappelons qu'il suffit d'un clic droit sur la page puis de choisir _Code source de la page_.
 
-  4. Comparez les codes source de ces deux pages.
-  5. Que
-  constatez-vous ? Quelle(s) différence(s) entre les deux ?
-  Si vous n'en trouvez aucun, cherchez le contenu des
-  balises `<style>` dans les parties `head`.
+4. Comparez les codes source de ces deux pages.
+5. Que constatez-vous ? Quelle(s) différence(s) entre les deux ? Si vous n'en trouvez aucun, cherchez le contenu des balises `<style>` dans les parties `head`.
 
 
 
@@ -67,13 +54,8 @@ Notions abordées dans cette page
 
 
 
-Vous venez de le constater l'application de feuilles de style à un
-document html permet d'en modifier sensiblement l'apparence. La
-séparation du fond et de la forme est à nouveau respectée. Le
-fond se trouve dans le document au format html et la forme est définie
-dans un fichier écrit dans un format
-appelé css, pour _Cascading Style
-    Sheets_ : _feuilles de style en cascade_.
+Vous venez de le constater l'application de feuilles de style à un document html permet d'en modifier sensiblement l'apparence. La séparation du fond et de la forme est à nouveau respectée. Le fond se trouve dans le document au format html et la forme est définie
+dans un fichier écrit dans un format appelé css, pour _Cascading Style Sheets_ : _feuilles de style en cascade_.
 
 
 
@@ -81,12 +63,7 @@ appelé css, pour _Cascading Style
 
 
 
-Le principe de fonctionnement est exactement le même que celui
-que nous avons rencontré avec le traitement de textes. Un style est
-défini par un ensemble de propriétés qui caractérisent l'apparence que
-prendront les éléments auxquels il s'applique. Tout comme avec les
-styles LibreOffice, il va être possible d'agir sur les styles des
-caractères, les tailles d'affichage, les marges, etc.
+Le principe de fonctionnement est exactement le même que celui que nous avons rencontré avec le traitement de textes. Un style est défini par un ensemble de propriétés qui caractérisent l'apparence que prendront les éléments auxquels il s'applique. Tout comme avec les styles LibreOffice, il va être possible d'agir sur les styles des caractères, les tailles d'affichage, les marges, etc.
 
 
 
@@ -103,73 +80,61 @@ caractères, les tailles d'affichage, les marges, etc.
 
 
 La structure et les éléments d'une page html sont définis par les balises. C'est donc
-sur ces éléments balises que porte un style défini par
-un ensemble de couples _(propriété,valeur)_. Le langage CSS
-définit la syntaxe d'écriture de ces styles. Celle-ci est
-simple : on précise le type d'élément concerné, puis on énumère
-entre accolade et séparés par des `;` les couples sous le
-forme `_propriété : valeur_`. Il "suffit" donc de
-    connaître les propriétés qui s'appliquent à l'élément concerné et
-    les valeurs possibles.
+sur ces éléments balises que porte un style défini par un ensemble de couples _(propriété,valeur)_. Le langage CSS définit la syntaxe d'écriture de ces styles. Celle-ci est simple : on précise le type d'élément concerné, puis on énumère entre accolade et séparés par des `;` les couples sous le forme `_propriété : valeur_`. Il "suffit" donc de    connaître les propriétés qui s'appliquent à l'élément concerné et les valeurs possibles.
 
 
 
 
 
 
-Voici un premier exemple de style qui s'applique aux éléments
-  marqués par les balises `h2`
+Voici un premier exemple de style qui s'applique aux éléments marqués par les balises `h2`
+
+
+
+
+
+~~~css
+h2 {
+   font-size: 16pt;
+   color: yellow;
+   background-color: #6A0888;
+}
+~~~
 
 
 
 
 
 
-    h2 {
-       font-size: 16pt;
-       color: yellow;
-       background-color: #6A0888;
-    }
+On comprend sans difficulté les propriétés utilisées et leur~~~s valeurs : la taille de la police fixée à 16pt, la couleur d'écriture fixée à la constante prédéfinie `yellow` et la couleur d'arrière-plan fixée à `#6A0888`.
 
 
 
 
 
 
-On comprend sans difficulté les propriétés utilisées et leurs
-  valeurs : la taille de la police fixée à 16pt, la couleur
-  d'écriture fixée à la constante prédéfinie `yellow` et la
-  couleur d'arrière-plan fixée à `#6A0888`.
+Pour appliquer ce style à un document html, il faut d'abord créer un fichier contenant ce code.
 
 
 
 
 
 
-Pour appliquer ce style à un document html, il faut d'abord créer
-  un fichier contenant ce code.
+Sauvegardez ce texte dans un fichier que vous   appellerez `styleCSS1.css` .
 
 
 
 
 
 
-  Sauvegardez ce texte dans un fichier que vous
-  appellerez `styleCSS1.css` .
+On peut également utiliser la syntaxe
 
 
-
-
-
-
-
-  On peut également utiliser la syntaxe
-
-
-
-    <style type="text/css">
-      @import url('styleCSS1.css');
-    </style>
+```css
+<style type="text/css">
+  @import url('styleCSS1.css');
+</style>
+```
 
 
 
@@ -178,31 +143,26 @@ Pour appliquer ce style à un document html, il faut d'abord créer
 
 
 
-Il faut ensuite préciser dans le document que l'on souhaite
-  utiliser cette feuille de style. Une manière de procéder qui permet
-  l'application du principe de séparation du contenu et de la forme
-  est d'ajouter dans la partie `head` de la page html la
-  ligne :
+Il faut ensuite préciser dans le document que l'on souhaite utiliser cette feuille de style. Une manière de procéder qui permet l'application du principe de séparation du contenu et de la forme est d'ajouter dans la partie `head` de la page html la ligne :
+
+
+
+
+
+~~~css
+<link href="styleCSS1.css" type="text/css" rel="stylesheet"></link>
+~~~
 
 
 
 
 
 
-
-       <link href="styleCSS1.css" type="text/css" rel="stylesheet"></link>
-
-
-
-
-
-
-
-  Reprenez le
-  document [ex_html2.html](http://qkzk.xyz/docs/doc03b/ex_html2.html)
-  que vous avez corrigé, appliquez-lui la feuille de style du
-  fichier `styleCSS1.css` (que vous aurez placé dans le même
-  dossier) et visualisez le résultat.
+Reprenez le
+document [ex_html2.html](http://qkzk.xyz/docs/doc03b/ex_html2.html)
+que vous avez corrigé, appliquez-lui la feuille de style du
+fichier `styleCSS1.css` (que vous aurez placé dans le même
+dossier) et visualisez le résultat.
 
 
 

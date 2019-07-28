@@ -53,9 +53,9 @@ Cette interface est divisée en 3 zones :
 
 
 
-  * La bandeau supérieur : 3 liens vers la boutique, le blog, la rubrique d'aide et la zone d'identification.
-  * La colonne de gauche : des filtres afin de choisir les objets.
-  * La zone centrale : présentant les objets filtrés avec des liens vers leur page.
+* La bandeau supérieur : 3 liens vers la boutique, le blog, la rubrique d'aide et la zone d'identification.
+* La colonne de gauche : des filtres afin de choisir les objets.
+* La zone centrale : présentant les objets filtrés avec des liens vers leur page.
 
 
 
@@ -79,7 +79,7 @@ L'utilisateur aura la possibilité de s'identifier afin de retrouver ses command
 
 
 
-  * Ajouter la gestion de l'achat : adresse et facturation, mode d'expédition, suivi.
-  * Ajouter un zoom sur l'objet.
-  * Ajouter un système de commentaires d'utilisateurs sur chaque objet.
+* Ajouter la gestion de l'achat : adresse et facturation, mode d'expédition, suivi.
+* Ajouter un zoom sur l'objet.
+* Ajouter un système de commentaires d'utilisateurs sur chaque objet.
 

@@ -41,9 +41,9 @@ De manière générale les voisins de la cellule (x,y) sont donc (x-1, y), (x+1,
 
 
 
- 	  * Quand une cellule s'effondre, cela peut provoquer l'effondrement des cellules avoisinantes.
- 	  * Les avalanches s'arrêtent forcement car il n'y a qu'un nombre fini de grains à répartir sur une grille infinie.
- 	  * L'ordre des opérations n'a pas d'importance, le résultat sera toujours le même.
+* Quand une cellule s'effondre, cela peut provoquer l'effondrement des cellules avoisinantes.
+* Les avalanches s'arrêtent forcement car il n'y a qu'un nombre fini de grains à répartir sur une grille infinie.
+* L'ordre des opérations n'a pas d'importance, le résultat sera toujours le même.
 
 **Exemple**
 
@@ -93,15 +93,15 @@ Votre algorithme doit être capable de renvoyer rapidement l'image obtenue quand
 
 
 
- 	  1. Grille carré de taille 5 x 5 avec 4 puis 16 grains au centre. Produire une sortie en mode texte du résultat après stabilisation.
- 	  2. Amélioration de l'algorithme : davantage de grains, grille plus grande de taille prédéfinie.
- 	  3. Générer une image de qualité quelconque (cette partie est très délicate).
- 	  4. Proposer différents modes : génération de l'image, sauvegarde de l'image, enregistrement d'une étape sous forme de tableau de nombre etc.
- 	  5. Agrandir la taille de la grille quand cela est nécessaire uniquement.
- 	  6. Optimisation de l'algorithme pour réduire le temps de calcul.
- 	  7. Optimisation de l'image : précision, dimensions, couleurs, espace disque etc.
- 	  8. Génération d'une animation : une image à chaque étape, une image toutes les x étapes.
- 	  9. Les extensions sont infinies : dépôt aléatoire, dépôt en suivant un parcours spécifique, rencontre de deux sandpiles éloignées et étude des motifs etc.
+1. Grille carré de taille 5 x 5 avec 4 puis 16 grains au centre. Produire une sortie en mode texte du résultat après stabilisation.
+2. Amélioration de l'algorithme : davantage de grains, grille plus grande de taille prédéfinie.
+3. Générer une image de qualité quelconque (cette partie est très délicate).
+4. Proposer différents modes : génération de l'image, sauvegarde de l'image, enregistrement d'une étape sous forme de tableau de nombre etc.
+5. Agrandir la taille de la grille quand cela est nécessaire uniquement.
+6. Optimisation de l'algorithme pour réduire le temps de calcul.
+7. Optimisation de l'image : précision, dimensions, couleurs, espace disque etc.
+8. Génération d'une animation : une image à chaque étape, une image toutes les x étapes.
+9. Les extensions sont infinies : dépôt aléatoire, dépôt en suivant un parcours spécifique, rencontre de deux sandpiles éloignées et étude des motifs etc.
 
 _Pour des questions de temps je n'ai réalisé ce projet qu'en Python à l'aide des librairies **numpy** (calculs numériques optimisés pour d'énormes matrices) et **matplotlib** (qui permet de visualiser ce qui numpy produit). Python n'est pas optimal pour atteindre d'importantes dimensions et on obtient de meilleurs résultats en C ou dans un langage de programmation fonctionnelle. Ce projet est parfaitement faisable en javascript mais, à nouveau, il sera peut-être délicat d'atteindre de grandes dimensions._
 
@@ -127,10 +127,10 @@ Les sandpiles ont été découvertes (ou inventées) par _Per Bak_, _Chao Tang_ 
 
 
 
- 	  * En **physique** : elles sont une approche de modélisation des systèmes "granulaires" dont la complexité dépasse vite l'entendement et qui ne respectent pas les principes usuels de la physique macroscopique. Les grains pris séparément se comportent comme des solides mais dès qu'on en manipule une faible quantité alors les prédictions s'effondrent : ce ne sont plus vraiment des solides usuels et ce ne sont pas non plus des liquides. C'est encore un sujet brûlant en Physique et les applications concrètes nombreuses. Les sandpiles présentent une "complexité" (notion délicate à définir, voir plus bas) similaire à celle de vrais tas de sables... mais qu'on rencontre aussi dans de nombreux domaines !
- 	  * En **informatique théorique** : les sandpiles sont des **automates cellulaires** (ensemble de cellules qui se comportent de manière prédéfinie et automatique). On peut démontrer que ce sont des machines de Turing : en programmant correctement un sandpile, on peut lui faire faire n'importe quel algorithme ! (En théorie...)
- 	  * En **algèbre** : les sandpiles ont des structures très intéressantes. Correctement définis on y voit apparaître des groupes (*). En effet on peut réaliser des opérations sur les sandpiles et faire apparaître une addition, une soustraction, un élément neutre etc. C'est l'autre raison du terme "abélien". Il est à noter qu'une extension possible de ce projet est justement de s'intéresser à ces propriétés. Il existe une quantité incroyable de domaines dans lesquels on peut les appliquer.
- 	  * En **mathématiques et en informatique** : les sandpiles présentent des **structures fractales**. Le dépôt d'un grand nombre de grains au centre conduit à une image faisant apparaître des répétitions de formes exactement comme les autres fractales.![](http://static.nautil.us/5779_7d3d5bcad324d3edc08e40738e663554.png)
+* En **physique** : elles sont une approche de modélisation des systèmes "granulaires" dont la complexité dépasse vite l'entendement et qui ne respectent pas les principes usuels de la physique macroscopique. Les grains pris séparément se comportent comme des solides mais dès qu'on en manipule une faible quantité alors les prédictions s'effondrent : ce ne sont plus vraiment des solides usuels et ce ne sont pas non plus des liquides. C'est encore un sujet brûlant en Physique et les applications concrètes nombreuses. Les sandpiles présentent une "complexité" (notion délicate à définir, voir plus bas) similaire à celle de vrais tas de sables... mais qu'on rencontre aussi dans de nombreux domaines !
+* En **informatique théorique** : les sandpiles sont des **automates cellulaires** (ensemble de cellules qui se comportent de manière prédéfinie et automatique). On peut démontrer que ce sont des machines de Turing : en programmant correctement un sandpile, on peut lui faire faire n'importe quel algorithme ! (En théorie...)
+* En **algèbre** : les sandpiles ont des structures très intéressantes. Correctement définis on y voit apparaître des groupes (*). En effet on peut réaliser des opérations sur les sandpiles et faire apparaître une addition, une soustraction, un élément neutre etc. C'est l'autre raison du terme "abélien". Il est à noter qu'une extension possible de ce projet est justement de s'intéresser à ces propriétés. Il existe une quantité incroyable de domaines dans lesquels on peut les appliquer.
+* En **mathématiques et en informatique** : les sandpiles présentent des **structures fractales**. Le dépôt d'un grand nombre de grains au centre conduit à une image faisant apparaître des répétitions de formes exactement comme les autres fractales.![](http://static.nautil.us/5779_7d3d5bcad324d3edc08e40738e663554.png)
 
 
 Ces propriétés ont conduit à une étude intense de ce sujet et à une généralisation à de nombreuses structures (graphes). On ne se contente plus de grilles carrées mais on dépose les grains sur les sommets d'un graphe et l'effondrement se déroule vers les sommets voisins. Et voici la troisième extension possible de votre projet : générer des grilles obtenues en changeant la forme de la grille ou le motif d'effondrement. Deux exemples pour des grilles hexagonales (chaque cellule a 6 voisins et s'effondre quand on atteint 6 grains) :
@@ -173,7 +173,7 @@ Voici ce qu'on obtient en déposant non plus tous les grains au centre mais en s
 
 
 
-* * *
+---
 
 
 
@@ -195,7 +195,7 @@ Et, pour conclure, deux vidéos hypnotisantes (à regarder chez vous en haute r�
 
 
 
-* * *
+---
 
 
 

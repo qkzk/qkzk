@@ -8,8 +8,6 @@ weight: 8
 ---
 
 
-[Retour sommaire](../sommaire.html)
-
 
 
 
@@ -30,31 +28,31 @@ Notions abordées
 
 
 
-    * introduction au langage assembleur
+* introduction au langage assembleur
 
 
-    [AMIL](http://www-lipn.univ-paris13.fr/~boudes/spip.php?rubrique27) (Assembleur Miniature pour l'Informatique de Licence) est un programme développé par Pierre Boudes
-    simulant l'exécution de programmes écrits en assembleur.
+[AMIL](http://www-lipn.univ-paris13.fr/~boudes/spip.php?rubrique27) (Assembleur Miniature pour l'Informatique de Licence) est un programme développé par Pierre Boudes
+simulant l'exécution de programmes écrits en assembleur.
 
 
 
-      * La version Web est disponible [ici](http://www-lipn.univ-paris13.fr/~boudes/amilweb/)
-      * Didier Mailliet a enrichi le jeu d'instructions. Sa version est disponible [ici](http://www2.lifl.fr/~mailliet/isn/archi/amil)
-      * Il existe aussi une version [téléchargeable](http://www2.lifl.fr/~mailliet/isn/archi/amil/amilweb.zip) de cette version améliorée.
+* La version Web est disponible [ici](http://www-lipn.univ-paris13.fr/~boudes/amilweb/)
+* Didier Mailliet a enrichi le jeu d'instructions. Sa version est disponible [ici](http://www2.lifl.fr/~mailliet/isn/archi/amil)
+* Il existe aussi une version [téléchargeable](http://www2.lifl.fr/~mailliet/isn/archi/amil/amilweb.zip) de cette version améliorée.
 
 
-   Jean-François Przydatek a rédigé un cours d'initiation à l'assembleur dont on a un aperçu ci-dessous
+Jean-François Przydatek a rédigé un cours d'initiation à l'assembleur dont on a un aperçu ci-dessous
 
-    et que l'on peut télécharger :
+et que l'on peut télécharger :
 
 
-	  * [au format powerpoint(pptx)](http://qkzk.xyz/docs/doc06/transparents/ARCHI.pptx)
-	  * [au format libreOffice ou openOffice(odp)](http://qkzk.xyz/docs/doc06/transparents/ARCHI.odp)
-	  * [au format pdf](http://qkzk.xyz/docs/doc06/transparents/ARCHI.pdf)
+* [au format powerpoint(pptx)](http://qkzk.xyz/docs/doc06/transparents/ARCHI.pptx)
+* [au format libreOffice ou openOffice(odp)](http://qkzk.xyz/docs/doc06/transparents/ARCHI.odp)
+* [au format pdf](http://qkzk.xyz/docs/doc06/transparents/ARCHI.pdf)
 
-	ainsi qu'une [série d'exercices](http://qkzk.xyz/docs/doc06/transparents/ARCHI_exos.pptx).
-    Ce document est conçu comme un accompagnement de cette série
-    d'exercices.
+ainsi qu'une [série d'exercices](http://qkzk.xyz/docs/doc06/transparents/ARCHI_exos.pptx).
+Ce document est conçu comme un accompagnement de cette série
+d'exercices.
 
 
 
@@ -70,7 +68,7 @@ Notions abordées
 
 
 
-    Ecrire un programme qui lit un nombre en entrée et le restitue en sortie.
+Ecrire un programme qui lit un nombre en entrée et le restitue en sortie.
 
 
 
@@ -95,7 +93,7 @@ Notions abordées
 
 
 
-    Les cases mémoires sont numérotées à partir de 1.
+Les cases mémoires sont numérotées à partir de 1.
 
 
 
@@ -103,8 +101,8 @@ Notions abordées
 
 
 
-      * On lit le contenu de la case mémoire 4 (contenant la valeur 12), pour la ranger dans le registre r0.
-      * On écrit le contenu du registre r0 dans la case mémoire 5
+* On lit le contenu de la case mémoire 4 (contenant la valeur 12), pour la ranger dans le registre r0.
+* On écrit le contenu du registre r0 dans la case mémoire 5
 
 
 
@@ -117,7 +115,7 @@ Notions abordées
 
 
 
-    Lire dans l'ordre les valeurs de a,b et x, calculer et ranger en mémoire y=ax+b
+Lire dans l'ordre les valeurs de a,b et x, calculer et ranger en mémoire y=ax+b
 
 
 
@@ -151,9 +149,9 @@ Notions abordées
 
 
 
-      * Soit x une valeur écrite dans la case mémoire 12 (dans l'exemple : x=3).
-      * Lire le nombre rangé dans la case mémoire 10.
-      * Si ce nombre est plus grand ou égal à x, remplacer le contenu de la case 12 par ce nombre.
+* Soit x une valeur écrite dans la case mémoire 12 (dans l'exemple : x=3).
+* Lire le nombre rangé dans la case mémoire 10.
+* Si ce nombre est plus grand ou égal à x, remplacer le contenu de la case 12 par ce nombre.
 
 
 
@@ -181,16 +179,16 @@ Notions abordées
 
 
 
-      * On lit le contenu des cases mémoires 10 et 12, et on les range respectivement dans les registres r0 et r1.
+* On lit le contenu des cases mémoires 10 et 12, et on les range respectivement dans les registres r0 et r1.
 
 
 la plupart des instructions vont chercher leurs opérandes dans les registres, et pas dans la mémoire : gain de temps (les accès mémoire
-    sont coûteux, et les instructions sont plus faciles à décoder par le système)
-      * On soustrait le contenu de r0 au contenu de r1, puis on range le résultat dans r1.
-      * Si le contenu de r1 est positif (i.e. x est plus grand que le nombre rangé à la case mémoire 10), on saute directement à la ligne 6,
-    et le programme s'arrête.
-      * Sinon (x est plus petit que le contenu de la case mémoire 10), on effectue l'instruction de la ligne 5, et dont le contenu de r0,
-    qui est le nombre rpésent à la ligne 10, est rangé à la ligne 12.
+sont coûteux, et les instructions sont plus faciles à décoder par le système)
+* On soustrait le contenu de r0 au contenu de r1, puis on range le résultat dans r1.
+* Si le contenu de r1 est positif (i.e. x est plus grand que le nombre rangé à la case mémoire 10), on saute directement à la ligne 6,
+et le programme s'arrête.
+* Sinon (x est plus petit que le contenu de la case mémoire 10), on effectue l'instruction de la ligne 5, et dont le contenu de r0,
+qui est le nombre rpésent à la ligne 10, est rangé à la ligne 12.
 
 
 
@@ -202,12 +200,12 @@ la plupart des instructions vont chercher leurs opérandes dans les registres, e
 
 
 
-    Même exercice que le précédent, mais maintenant, on écrit dans la case mémoire 12 :
+Même exercice que le précédent, mais maintenant, on écrit dans la case mémoire 12 :
 
 
 
-      * 0 si le contenu de la case 10 est inférieur à celui de la case mémoire 12
-      * 1 sinon.
+* 0 si le contenu de la case 10 est inférieur à celui de la case mémoire 12
+* 1 sinon.
 
 
 
@@ -234,19 +232,18 @@ la plupart des instructions vont chercher leurs opérandes dans les registres, e
 
 
 Le programme ressemble très fort au programme précédent, mais celui n'est pas utilisable directement : le fait d'avoir introduit
-    une ligne supplémentaire au début nous oblige à changer, dans l'instruction sautpos, le 6 en 7. On rencontre souvent
-    ce problème en assembleur. On le résout en introduisant des étiquettes (ou labels), qui seront transformées en vrais
-    numéros de ligne par le programme qui interprétera l'assembleur,
-    lors d'une première lecture du code
+une ligne supplémentaire au début nous oblige à changer, dans l'instruction sautpos, le 6 en 7. On rencontre souvent
+ce problème en assembleur. On le résout en introduisant des étiquettes (ou labels), qui seront transformées en vrais
+numéros de ligne par le programme qui interprétera l'assembleur,
+lors d'une première lecture du code
 
 
 
 
 
 
-    Le registre r2 contient la valeur qui sera écrite dans la case 12. Cette écriture est faite à l'instruction de la ligne
-    7. Avant d'arriver à cette instruction, on effectue le même travail (soustraction et test) que dans l'exercice précédent.
-    On teste le signe de la soustraction, ce qui peut amener à changer le 0 en 1 dans r2 avant d'écrire le contenu de r2 en mémoire.
+Le registre r2 contient la valeur qui sera écrite dans la case 12. Cette écriture est faite à l'instruction de la ligne 7. Avant d'arriver à cette instruction, on effectue le même travail (soustraction et test) que dans l'exercice précédent.
+On teste le signe de la soustraction, ce qui peut amener à changer le 0 en 1 dans r2 avant d'écrire le contenu de r2 en mémoire.
 
 
 
@@ -298,9 +295,9 @@ pas compris
 
 
 
-      * On fixe i, l'adresse mémoire du début d'un tableau. Ce tableau, de longueur inconnue,
-    contient une suite de nombres positifs terminée par un nombre négatif.
-       * Ecrire un programme qui recopie chaque valeur du tableau (sauf le nombre négatif) à un autre endroit de la mémoire.
+* On fixe i, l'adresse mémoire du début d'un tableau. Ce tableau, de longueur inconnue,
+contient une suite de nombres positifs terminée par un nombre négatif.
+* Ecrire un programme qui recopie chaque valeur du tableau (sauf le nombre négatif) à un autre endroit de la mémoire.
 
 
 
@@ -341,40 +338,40 @@ pas compris
 
 
 Cet exercice illustre le fonctionnement de la boucle `tant que`: exécuter une instruction
-    tant que la condition d'arrêt n'est pas vérifiée (ici : lecture d'un nombre négatif), et sa traduction en assembleur. On montre ainsi
-    qu'une structure de contrôle basique de tout langage de programmation évolué se traduit en assembleur par une combinaison de
-    tests élémentaires (`sautpos` qui teste le signe du contenu d'un registre) et de sauts.
+tant que la condition d'arrêt n'est pas vérifiée (ici : lecture d'un nombre négatif), et sa traduction en assembleur. On montre ainsi
+qu'une structure de contrôle basique de tout langage de programmation évolué se traduit en assembleur par une combinaison de
+tests élémentaires (`sautpos` qui teste le signe du contenu d'un registre) et de sauts.
 
 
 
 
 Point 2 : on voit ici une limite de ce programme : on ne sait pas à l'avance si notre tableau, commençant
-    à la ligne 20, contient plus ou moins de 10 éléments !
+à la ligne 20, contient plus ou moins de 10 éléments !
 
 
 
 
 Point 5  : est-ce qu'on aurait pu raccourcir
-  un tout petit peu ce programme ?
+un tout petit peu ce programme ?
 
 
 
 
 
 
-      1. Dans cet exemple, le tableau commence à la ligne (ou adresse mémoire) 20, et contient les valeurs
-    12,5,15,6,85.
-    2. Il sera recopié à partir de l'adresse 30.
+1. Dans cet exemple, le tableau commence à la ligne (ou adresse mémoire) 20, et contient les valeurs
+12,5,15,6,85.
+2. Il sera recopié à partir de l'adresse 30.
 
-      3. Les deux premières instructions initialisent l'adresse de départ du tableau, et l'adresse de début de sa copie.
-      4. La ligne 3 est une instruction contenant un adressage indirect : ce n'est pas le contenu de r0 (20) qui est copié dans r2,
-    mais le contenu de l'adresse mémoire contenue dans r0, donc la valeur qui se trouve à la ligne 20 (12).
-      5. Si la valeur rangée dans r2 est positive, on passe à la ligne 6, où la valeur (12 au premier passage) est chargée
-    dans r3, puis, par l'intermédiaire d'un deuxième adressage indirect, est recopiée à la ligne 30 (on considère le contenu
-    de r1 comme une adresse mémoire)
-      6. On ajoute 1 à r0 et r1, qui représentent maintenant les adresses mémoire 21 et 31
-      7. On revient au début du programme pour traiter la case suivante du tableau.
-      8. La ligne 5 est exécutée quand la valeur lue est négative, et mène à la fin du programme, ligne 11.
+3. Les deux premières instructions initialisent l'adresse de départ du tableau, et l'adresse de début de sa copie.
+4. La ligne 3 est une instruction contenant un adressage indirect : ce n'est pas le contenu de r0 (20) qui est copié dans r2,
+mais le contenu de l'adresse mémoire contenue dans r0, donc la valeur qui se trouve à la ligne 20 (12).
+5. Si la valeur rangée dans r2 est positive, on passe à la ligne 6, où la valeur (12 au premier passage) est chargée
+dans r3, puis, par l'intermédiaire d'un deuxième adressage indirect, est recopiée à la ligne 30 (on considère le contenu
+de r1 comme une adresse mémoire)
+6. On ajoute 1 à r0 et r1, qui représentent maintenant les adresses mémoire 21 et 31
+7. On revient au début du programme pour traiter la case suivante du tableau.
+8. La ligne 5 est exécutée quand la valeur lue est négative, et mène à la fin du programme, ligne 11.
 
 
 
@@ -387,7 +384,7 @@ Point 5  : est-ce qu'on aurait pu raccourcir
 
 
 
-    Ecrire le même programme que dans l'exercice précédent, mais cette fois, l'indice de fin est connu.
+Ecrire le même programme que dans l'exercice précédent, mais cette fois, l'indice de fin est connu.
 
 
 
@@ -430,7 +427,7 @@ Point 5  : est-ce qu'on aurait pu raccourcir
 
 
 
-	mettre 2 valeurs dans r0 et r1 et échanger leur valeurs en se servant de r2 , puis  en se servant de la mémoire au lieu de r2, puis de la pile.
+mettre 2 valeurs dans r0 et r1 et échanger leur valeurs en se servant de r2 , puis  en se servant de la mémoire au lieu de r2, puis de la pile.
 Echanger 2 valeurs en mémoire sans transférer ces valeurs dans les registres (r0 et r1) mais grâce à leurs adresses.
 Refaire les mêmes exercices, mais n’échangez que si la première valeur est supérieure à la seconde.
 
@@ -451,7 +448,7 @@ Refaire les mêmes exercices, mais n’échangez que si la première valeur est 
 
 
 
-	Écrire un programme de tri à bulles effectuant le résultat suivant :
+Écrire un programme de tri à bulles effectuant le résultat suivant :
 
 
 
@@ -464,7 +461,7 @@ Refaire les mêmes exercices, mais n’échangez que si la première valeur est 
 
 
 
-	Écrire un programme lisant deux nombres a et b, remplaçant a par b dans le cas où a < b et retournant a, b et a mod b (reste de la division entière de a par b).
+Écrire un programme lisant deux nombres a et b, remplaçant a par b dans le cas où a < b et retournant a, b et a mod b (reste de la division entière de a par b).
 
 
 
@@ -477,8 +474,8 @@ Refaire les mêmes exercices, mais n’échangez que si la première valeur est 
 
 
 
-	Écrire un programme qui retourne le PGCD de 2 nombres (Algorithme d'Euclide).
-	![algorithme  d'Euclide](http://qkzk.xyz/docs/doc06/pgcd.png)
+Écrire un programme qui retourne le PGCD de 2 nombres (Algorithme d'Euclide).
+![algorithme  d'Euclide](http://qkzk.xyz/docs/doc06/pgcd.png)
 
 
 
@@ -512,7 +509,7 @@ Refaire les mêmes exercices, mais n’échangez que si la première valeur est 
 # Exercice 11 : ppcm
 
 
-	Sachant que PGCD(a,b)*PPCM(a,b)=a*b, écrire un programme (ou ajouter au pg précédent) qui rend le PPCM de 2 nbs a et b.
+Sachant que PGCD(a,b)*PPCM(a,b)=a*b, écrire un programme (ou ajouter au pg précédent) qui rend le PPCM de 2 nbs a et b.
 
 
 
@@ -613,7 +610,7 @@ Refaire les mêmes exercices, mais n’échangez que si la première valeur est 
 
 
 
-	Écrire un programme qui partant de trois données entrées en mémoire (v, d, l) va mettre v en mémoire à partir de l'adresse d et ce pour l adresses consécutives.
+Écrire un programme qui partant de trois données entrées en mémoire (v, d, l) va mettre v en mémoire à partir de l'adresse d et ce pour l adresses consécutives.
 
 
 
@@ -626,7 +623,7 @@ Refaire les mêmes exercices, mais n’échangez que si la première valeur est 
 
 
 
-	Écrire un programme qui partant de trois données entrées en mémoire (v, d, l) va mettre 1 en mémoire à partir de l'adresse d et ce pour l adresses consécutives.
+Écrire un programme qui partant de trois données entrées en mémoire (v, d, l) va mettre 1 en mémoire à partir de l'adresse d et ce pour l adresses consécutives.
 mettre 0 dans les adresses en d+2v,d+3v...d+iv.
 
 
@@ -639,10 +636,10 @@ mettre 0 dans les adresses en d+2v,d+3v...d+iv.
 
 
 
-    En se servant des 2 exercices précédents, programmer le crible d'Eratostène.
-	![algorithme Crible Eratostene](http://www.fil.univ-lille1.fr/~wegrzyno/portail/API1/Doc/TP/TP-Tableaux/New_Animation_Sieve_of_Eratosthenes.gif)
+En se servant des 2 exercices précédents, programmer le crible d'Eratostène.
+![algorithme Crible Eratostene](http://www.fil.univ-lille1.fr/~wegrzyno/portail/API1/Doc/TP/TP-Tableaux/New_Animation_Sieve_of_Eratosthenes.gif)
 
-	Le crible d’Eratosthene
+Le crible d’Eratosthene
 Eratosthene , mathématicien grec du IIIème siècle avant JC, a établi une méthode connue sous le nom de crible d’Eratosthene permettant de déterminer par exclusion tous les nombres premiers.
 Cette méthode consiste à lister tous les nombres entiers depuis 2 jusqu’à une valeur limite n que l’on se fixe, puis à barrer successivement ces nombres
 

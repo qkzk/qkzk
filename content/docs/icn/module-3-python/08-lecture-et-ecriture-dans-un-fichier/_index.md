@@ -4,7 +4,7 @@ date: 2017-04-13 16:49:43+00:00
 draft: false
 title: 08 - Lecture et écriture dans un fichier
 
-url: /
+
 ---
 
 
@@ -18,8 +18,8 @@ Il existe deux types de fichiers :
 
 
 
- 	  * Les **fichiers textes** : l'information est stockée sous forme de caractères lisibles par un éditeur de texte (principalement des lettres et des chiffres).
- 	  * Les **fichiers binaires** : l'information est stockée en binaire (une suite d'octets dont la valeur est comprise entre 0x00 et 0xFF).
+ Les **fichiers textes** : l'information est stockée sous forme de caractères lisibles par un éditeur de texte (principalement des lettres et des chiffres).
+ Les **fichiers binaires** : l'information est stockée en binaire (une suite d'octets dont la valeur est comprise entre 0x00 et 0xFF).
 
 
 
@@ -244,16 +244,16 @@ Les fichiers suivants sont-ils de type binaire ou de type texte ?
 
 
 
- 	  * Une photo au format JPEG
- 	  * Une image au format PNG
- 	  * Une image au format SVG
- 	  * Un fichier audio au format MP3
- 	  * Un document texte au format TXT
- 	  * Une page web au format HTML
- 	  * Un fichier exécutable (extension .exe)
- 	  * Un document au format PDF
- 	  * Un fichier compressé au format ZIP
- 	  * Un script en langage Python (extension .py)
+ Une photo au format JPEG
+ Une image au format PNG
+ Une image au format SVG
+ Un fichier audio au format MP3
+ Un document texte au format TXT
+ Une page web au format HTML
+ Un fichier exécutable (extension .exe)
+ Un document au format PDF
+ Un fichier compressé au format ZIP
+ Un script en langage Python (extension .py)
 
 
 
@@ -334,13 +334,13 @@ Exemple d'interface :
 
 
 
- 	  * [Documentation sur la fonction open()](http://docs.python.org/3/library/functions.html#open)
- 	  * [Input and Output : Reading and Writing Files](http://docs.python.org/3/tutorial/inputoutput.html#reading-and-writing-files)
- 	  * [Documentation sur le module Pickle](http://docs.python.org/3/library/pickle.html)
- 	  * [Le jeu de caractères ASCII](http://fr.wikipedia.org/wiki/American_Standard_Code_for_Information_Interchange)
- 	  * [Le jeu de caractères Unicode UTF-8](http://fr.wikipedia.org/wiki/UTF-8)
- 	  * [Le jeu de caractères Windows-1252](http://fr.wikipedia.org/wiki/Windows-1252)
- 	  * [7-Zip un logiciel libre de compression et d'archivage (pour Windows)](http://www.7-zip.org/)
+ [Documentation sur la fonction open()](http://docs.python.org/3/library/functions.html#open)
+ [Input and Output : Reading and Writing Files](http://docs.python.org/3/tutorial/inputoutput.html#reading-and-writing-files)
+ [Documentation sur le module Pickle](http://docs.python.org/3/library/pickle.html)
+ [Le jeu de caractères ASCII](http://fr.wikipedia.org/wiki/American_Standard_Code_for_Information_Interchange)
+ [Le jeu de caractères Unicode UTF-8](http://fr.wikipedia.org/wiki/UTF-8)
+ [Le jeu de caractères Windows-1252](http://fr.wikipedia.org/wiki/Windows-1252)
+ [7-Zip un logiciel libre de compression et d'archivage (pour Windows)](http://www.7-zip.org/)
 
 
 

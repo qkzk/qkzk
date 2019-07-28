@@ -4,7 +4,7 @@ date: 2017-04-09 09:59:49+00:00
 draft: false
 title: tutoriel_python_camera
 
-url: /
+
 ---
 
 

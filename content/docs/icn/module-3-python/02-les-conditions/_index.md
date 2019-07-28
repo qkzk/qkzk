@@ -4,7 +4,7 @@ date: 2017-04-12 21:33:32+00:00
 draft: false
 title: 02. Les conditions
 
-url: /
+
 ---
 
 ## Chapitre 2 - Les conditions
@@ -230,8 +230,8 @@ Si l'expression 1 est fausse alors on teste l'expression 2 :
 
 
 
- 	  * si l'expression 2 est vraie on exécute le bloc d'instructions 2, et on passe à la suite du programme.
- 	  * si l'expression 2 est fausse alors on teste l'expression 3, etc.
+ si l'expression 2 est vraie on exécute le bloc d'instructions 2, et on passe à la suite du programme.
+ si l'expression 2 est fausse alors on teste l'expression 3, etc.
 
 Le bloc d'instructions 4 est donc exécuté si toutes les expressions sont fausses (c'est le bloc "par défaut").
 

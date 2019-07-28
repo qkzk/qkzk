@@ -16,8 +16,8 @@ Notions abordées
 
 
 
- 	  * représentations : binaire, octal, hexadécimal
- 	  * calcul booléen
+* représentations : binaire, octal, hexadécimal
+* calcul booléen
 
 
 
@@ -79,8 +79,8 @@ On distingue donc les **valeurs entières** (les entiers) et leur représentati
 
 
 
- 	  * On utilise habituellement la **représentation décimale**.
- 	  * D'autres représentations sont possibles. En particulier, dans le monde du numérique, la **représentation binaire** est souvent utilisée.
+* On utilise habituellement la **représentation décimale**.
+* D'autres représentations sont possibles. En particulier, dans le monde du numérique, la **représentation binaire** est souvent utilisée.
 
 À une valeur entière donnée est associée une représentation décimale, mais aussi une représentation binaire.
 
@@ -592,8 +592,8 @@ L'égalité des contenus des deux dernières colonnes démontrent l'équivalenc
 
 
 
- 	  1. Trouvez une expression équivalente à _a_ ET _b _construite uniquement à partir des opérateurs NON et OU.
- 	  2. Démontrez que votre proposition est correcte à l'aide des tables de vérité.
+1. Trouvez une expression équivalente à _a_ ET _b _construite uniquement à partir des opérateurs NON et OU.
+2. Démontrez que votre proposition est correcte à l'aide des tables de vérité.
 
 
 
@@ -604,16 +604,16 @@ L'égalité des contenus des deux dernières colonnes démontrent l'équivalenc
 
 
 
- 	  1. Démontrez les règles de distributivité suivantes :
+1. Démontrez les règles de distributivité suivantes :
 
- 	    1. _a_ ET (_b_ OU _c_) = (_a_ ET _b_) OU (_a_ ET _c_)
- 	    2. _a_ OU (_b_ ET _c_) = (_a_ OU _b_) ET (_a_ OU _c_)
+  1. _a_ ET (_b_ OU _c_) = (_a_ ET _b_) OU (_a_ ET _c_)
+  2. _a_ OU (_b_ ET _c_) = (_a_ OU _b_) ET (_a_ OU _c_)
 
 
- 	  2. Démontrez les lois de Morgan :
+2. Démontrez les lois de Morgan :
 
- 	    1. NON (_a_ OU _b_) = (NON _a_) ET (NON _b_)
- 	    2. NON (_a_ ET _b_) = (NON _a_) OU (NON _b_)
+  1. NON (_a_ OU _b_) = (NON _a_) ET (NON _b_)
+  2. NON (_a_ ET _b_) = (NON _a_) OU (NON _b_)
 
 
 
@@ -680,7 +680,7 @@ On rencontre également défini l'opérateur OU-exclusif, également appelé XO
 
 
 
- 	  1. Démontrez l'équivalence : _a_ XOR _b_ = (_a_ ET (NON _b_))) OU ((NON _a_) ET _b_)
+1. Démontrez l'équivalence : _a_ XOR _b_ = (_a_ ET (NON _b_))) OU ((NON _a_) ET _b_)
 
 
 
@@ -709,10 +709,10 @@ masque.
 
 
 
- 	  1. Calculez le code binaire correspondant à l'adresse `192.168.100.2` (ou partez de l'adresse de votre machine).
- 	  2. Calculez le code binaire correspondant au masque `255.255.255.0`.
- 	  3. Calculez l'adresse binaire du sous-réseau puis donnez sa forme décimale.
- 	  4. Calculez l'adresse hôte puis donnez sa forme décimale.
+1. Calculez le code binaire correspondant à l'adresse `192.168.100.2` (ou partez de l'adresse de votre machine).
+2. Calculez le code binaire correspondant au masque `255.255.255.0`.
+3. Calculez l'adresse binaire du sous-réseau puis donnez sa forme décimale.
+4. Calculez l'adresse hôte puis donnez sa forme décimale.
 
 
 

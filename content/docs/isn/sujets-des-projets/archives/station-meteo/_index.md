@@ -10,8 +10,8 @@ title: Station météo
 ### Projet de base
 
 
-	Vous créerez une page web de présentation des données méteo issues de la station météo du lycée. 
-	
+Vous créerez une page web de présentation des données méteo issues de la station météo du lycée. 
+
 
 
 
@@ -53,7 +53,6 @@ Une station similaire est présentée à [ cette adresse.](http://qkzk.xyz/docs/
 
 
 
-  * Le cadre exact sera défini avec M. Le Gallou et votre professeur
-  * Chaque fonctionnalité de la station peut être exploitée
-  * Idéalement il sera fonctionnel.
-
+* Le cadre exact sera défini avec M. Le Gallou et votre professeur
+* Chaque fonctionnalité de la station peut être exploitée
+* Idéalement il sera fonctionnel.

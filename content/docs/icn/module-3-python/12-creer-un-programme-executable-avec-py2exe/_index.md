@@ -4,7 +4,7 @@ date: 2017-04-13 17:08:18+00:00
 draft: false
 title: 12 - Créer un programme exécutable avec Py2exe
 
-url: /
+
 ---
 
 #### Attention !
@@ -63,8 +63,8 @@ Enregistrer le script `setup.py` dans le répertoire courant de Python.
 
 
 
- 	  * si vous voulez disposer de la console en plus de l'interface graphique (GUI), remplacer `setup(windows=["jeu_puissance4.py"])` par `setup(console=["jeu_puissance4.py"])`
- 	  * pour traiter plusieurs scripts en même temps, il suffit de compléter la liste :
+ si vous voulez disposer de la console en plus de l'interface graphique (GUI), remplacer `setup(windows=["jeu_puissance4.py"])` par `setup(console=["jeu_puissance4.py"])`
+ pour traiter plusieurs scripts en même temps, il suffit de compléter la liste :
 `setup(windows=["jeu_puissance4.py","script2.py","script3.py"])`
 
 Ouvrir l'interpréteur de commande de Windows (Démarrer → Exécuter → cmd)
@@ -98,8 +98,8 @@ Py2exe est donc un moyen de fermer le code source (stratégie commerciale des lo
 
 
 
- 	  * [www.py2exe.org](http://www.py2exe.org/)
- 	  * [inventwithpython.com](http://inventwithpython.com/appendixc.html)
+ [www.py2exe.org](http://www.py2exe.org/)
+ [inventwithpython.com](http://inventwithpython.com/appendixc.html)
 
 
 
@@ -110,8 +110,8 @@ Dans la même catégorie de logiciels que Py2exe, on peut citer :
 
 
 
- 	  * [cx_Freeze](http://cx-freeze.sourceforge.net/) (pour Python 2 et 3)
- 	  * [py2app (pour Mac OS)](http://svn.pythonmac.org/py2app/py2app/trunk/doc/index.html)
+ [cx_Freeze](http://cx-freeze.sourceforge.net/) (pour Python 2 et 3)
+ [py2app (pour Mac OS)](http://svn.pythonmac.org/py2app/py2app/trunk/doc/index.html)
 
 
 

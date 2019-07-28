@@ -1,5 +1,5 @@
 ---
-title: ISN
+title: isn
 author: qu3nt1n
 date: 2016-07-01 12:19:26+00:00
 draft: false
@@ -167,7 +167,7 @@ A nouveau, rien ne vous empêche de prouver votre valeur en réalisant rapideme
 
 
 
-* * *
+---
 
 
 
@@ -187,7 +187,7 @@ Les thèmes retenus ainsi que les contraintes et les modalités d'évaluation so
 
 
 
-* * *
+---
 
 
 

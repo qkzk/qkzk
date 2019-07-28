@@ -4,10 +4,10 @@ date: 2017-04-09 09:25:22+00:00
 draft: false
 title: '11. Pygame et la camera : introduction du module'
 
-url: /
+weight: 11
 ---
 
-<table rules="none" width="638" style="height: 122px;" class="docinfo docutils field-list" frame="void" > 
+<table rules="none" width="638" style="height: 122px;" class="docinfo docutils field-list" frame="void" >
 <tbody valign="top" >
 <tr class="field-odd field" >
 Author:
@@ -55,11 +55,11 @@ Tradution:
 
 
 
-    
+
     import pygame
     import pygame.camera
     from pygame.locals import *
-    
+
     pygame.init()
     pygame.camera.init()
 
@@ -74,7 +74,7 @@ Commençons par le cas le plus simple, on ouvre la camera et on capture une fram
 On assume dans l'exemple suivant qu'il y a une camera à /dev/video0 et on l'initialise en 640x480
 La surface est ce que la camera voit quand get_image() est appelé
 
-    
+
     cam = pygame.camera.Camera("/dev/video0",(640,480))
     cam.start()
     image = cam.get_image()
@@ -87,7 +87,7 @@ La surface est ce que la camera voit quand get_image() est appelé
 
 Et si on ne connait pas le chemin de la camera ? On peut demander au module de fournir une liste de cameras raccordées à l'ordi et d'initialiser la première de la liste.
 
-    
+
     camlist = pygame.camera.list_cameras()
     if camlist:
         cam = pygame.camera.Camera(camlist[0],(640,480))
@@ -101,7 +101,7 @@ Et si on ne connait pas le chemin de la camera ? On peut demander au module de 
 La plupart des cameras supportent les contrôles tels que retourner l'image et changer sa luminosité.
 set_controls() et get_controls() peuvent etre utilisés à tout moment après avoir utilisé start().
 
-    
+
     cam.set_controls(hflip = True, vflip = False)
     print cam.get_controls()
 
@@ -116,25 +116,25 @@ Pour cela, nous utiliserons la classe définie ci-dessous. Comme décrit, nous 
 C'est grosso-modo ce à quoi on s'attend, on boucle get_image(), on blit sur la surface d'affichage et on la retourne.
 Pour des raisons de performance, on demandera à la camera d'utiliser toujours la même surface.
 
-    
+
     class Capture(object):
         def __init__(self):
             self.size = (640,480)
             # crée une suface d'affichage. comme tjrs dans pygame
             self.display = pygame.display.set_mode(self.size, 0)
-    
+
             # on reprend ce qu'on a fait plus tot
             self.clist = pygame.camera.list_cameras()
             if not self.clist:
                 raise ValueError("Sorry, no cameras detected.")
             self.cam = pygame.camera.Camera(self.clist[0], self.size)
             self.cam.start()
-    
+
             # on crée une surface sur laquelle capture. Pour des raisons
             # de performance, les dimensions sont celles de la surface
             # d'affichage
             self.snapshot = pygame.surface.Surface(self.size, 0, self.display)
-    
+
         def get_and_flip(self):
             # Vous pouvez délier les framerates de la camera et de l'application
             # vous pouvez vérifier si la camera a une image de prete.
@@ -142,11 +142,11 @@ Pour des raisons de performance, on demandera à la camera d'utiliser toujours 
             # certaines ne répondront jamais True.
             if self.cam.query_image():
                 self.snapshot = self.cam.get_image(self.snapshot)
-    
+
             # on blit l'objet sur la surface d'affichage. Simple !
             self.display.blit(self.snapshot, (0,0))
             pygame.display.flip()
-    
+
         def main(self):
             going = True
             while going:
@@ -156,7 +156,7 @@ Pour des raisons de performance, on demandera à la camera d'utiliser toujours 
                         # ferme proprement la camera
                         self.cam.stop()
                         going = False
-    
+
                 self.get_and_flip()
 
 
@@ -178,25 +178,25 @@ En initialisant une camera on peut définir un paramètre optionnel de couleur,
 
 'YUV' et 'HSB' sont plus utiles pour le computer vision car il est plus facile de filtrer par couleur, ce que nous ferons plus bas dans ce tutoriel.
 
-    
+
     self.cam = pygame.camera.Camera(self.clist[0], self.size, "RGB")
-    
+
 
 
 ![](http://www.pygame.org/docs/_images/camera_rgb.jpg)
 
 
-    
+
     self.cam = pygame.camera.Camera(self.clist[0], self.size, "YUV")
-    
+
 
 
 ![](http://www.pygame.org/docs/_images/camera_yuv.jpg)
 
 
-    
+
      self.cam = pygame.camera.Camera(self.clist[0], self.size, "HSV")
-    
+
 
 
 ![](http://www.pygame.org/docs/_images/camera_hsv.jpg)
@@ -208,11 +208,11 @@ En initialisant une camera on peut définir un paramètre optionnel de couleur,
 
 En employant la fonction threshold du module transform on peut isoler des objets de couleur dans une scène. Dans l'exemple ci-dessous, on filtre l'arbre vert (en l'affichant) et on rend le reste de l'image noir. Lisez la référence à la fonction threshold pour plus de détails. [`threshold function`](http://www.pygame.org/docs/ref/transform.html#pygame.transform.threshold).
 
-    
+
     self.thresholded = pygame.surface.Surface(self.size, 0, self.display)
     self.snapshot = self.cam.get_image(self.snapshot)
     pygame.transform.threshold(self.thresholded,self.snapshot,(0,255,0),(90,170,170),(0,0,0),2)
-    
+
 
 
 ![](http://www.pygame.org/docs/_images/camera_thresholded.jpg)
@@ -222,7 +222,7 @@ Bien sur, ceci n'est utile que si vous connaissez déjà la couleur exacte d'un
 Pour éviter ce problème et rendre le filtrage par seuil utile dans le monde réel, on a besoin d'une étape de calibrage où l'on identifie la couleur d'un objet et où on l'utilise pour filtrer contre elle.
 Nous allons utiliser la fonction average_color() du module transform pour faire ça. Un exemple de fonction de calibrage est fourni ci-dessous. Vous pouvez la faire tourner en boucle jusqu'à avoir une couleur satisfaisante et l'arrêter par un événement comme une pression clavier. La couleur dans la boite sera celle utilisée comme seuil. Remarquez qu'on utilise les couleurs HSV.
 
-    
+
     def calibrate(self):
         # capture the image
         self.snapshot = self.cam.get_image(self.snapshot)
@@ -240,7 +240,7 @@ Nous allons utiliser la fonction average_color() du module transform pour faire
 ![](http://www.pygame.org/docs/_images/camera_average.jpg)
 
 
-    
+
     # threshold recupéré pendant le calibrage
     pygame.transform.threshold(self.thresholded,self.snapshot,self.ccolor,(30,30,30),(0,0,0),2)
 
@@ -250,7 +250,7 @@ Nous allons utiliser la fonction average_color() du module transform pour faire
 
 Vous pouvez utiliser la meme idee pour faire un fond vert/bleu, d'abord en en recuperant une image de fond et ensuite en filtrant par seuil contre elle. L'exemple ci dessous pointe d'abord la camera sur un mur blanc en couleur HSV.
 
-    
+
     def calibrate(self):
         # capture quelques images de fond
         bg = []
@@ -266,7 +266,7 @@ Vous pouvez utiliser la meme idee pour faire un fond vert/bleu, d'abord en en re
 ![](http://www.pygame.org/docs/_images/camera_background.jpg)
 
 
-    
+
     pygame.transform.threshold(self.thresholded,self.snapshot,(0,255,0),(30,30,30),(0,0,0),1,self.background)
 
 
@@ -281,7 +281,7 @@ Les exemples ci-dessus sont très bien si vous voulez simplement afficher une i
 [`mask module`](http://www.pygame.org/docs/ref/mask.html#module-pygame.mask), vous pouvez aussi utiliser la camera comme un périphérique de jeu.
 Par exemple, en filtrant par seuil un objet particulier, on peut s'en servir pour repérer la position d'un objet spécifique et l'utiliser pour contrôler un autre objet sur l'écran.
 
-    
+
     def get_and_flip(self):
         self.snapshot = self.cam.get_image(self.snapshot)
         # filtre contre la couleur obtenue plus tot

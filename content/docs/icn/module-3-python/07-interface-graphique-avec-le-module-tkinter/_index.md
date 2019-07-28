@@ -4,7 +4,7 @@ date: 2017-04-13 16:39:10+00:00
 draft: false
 title: 07 - Interface graphique avec le module Tkinter
 
-url: /
+
 ---
 
 
@@ -839,10 +839,10 @@ Pour se faire, on utilise l'événement associé à l'appui d'une touche du clav
 
 
 
- 	  * touche a déplacement vers le haut
- 	  * touche q déplacement vers le bas
- 	  * touche l déplacement vers la gauche
- 	  * touche m déplacement vers la droite
+ touche a déplacement vers le haut
+ touche q déplacement vers le bas
+ touche l déplacement vers la gauche
+ touche m déplacement vers la droite
 
 ![Python Tkinter Canvas](http://fsincere.free.fr/isn/python/picto/tkinter_key_event.png)
 
@@ -1069,8 +1069,8 @@ Un gros projet à décomposer en plusieurs tâches :
 
 
 
- 	  * jeu en local avec Python
- 	  * [applications Web](http://fsincere.free.fr/isn/langages_web/isn_langages_web.php) (en PHP ou CGI-Python, base de données MySQL)
+ jeu en local avec Python
+ [applications Web](http://fsincere.free.fr/isn/langages_web/isn_langages_web.php) (en PHP ou CGI-Python, base de données MySQL)
 
  	    * [nombre d'inscrits](http://fsincere.free.fr/tetris/nombre_inscription.php)
  	    * [inscription en ligne](http://fsincere.free.fr/tetris/formulaire.html) (essayez !)
@@ -1088,7 +1088,7 @@ Un gros projet à décomposer en plusieurs tâches :
 
 
 
- 	  * Télécharger le fichier exécutable
+ Télécharger le fichier exécutable
 
 Le fichier exécutable est téléchargeable [ici](http://fsincere.free.fr/isn/python/cours_python_tkinter.php#executable).
 
@@ -1132,8 +1132,8 @@ Liens utiles :
 
 
 
- 	  * [cormas.cirad.fr](http://cormas.cirad.fr/fr/applica/fireautomata.htm)
- 	  * [deptinfo-ensip.univ-poitiers.fr](https://deptinfo-ensip.univ-poitiers.fr/FILES/TPS/AUTOMATES_CELLULAIRES/feuforet.php)
+ [cormas.cirad.fr](http://cormas.cirad.fr/fr/applica/fireautomata.htm)
+ [deptinfo-ensip.univ-poitiers.fr](https://deptinfo-ensip.univ-poitiers.fr/FILES/TPS/AUTOMATES_CELLULAIRES/feuforet.php)
 
 **Projet n°7 ★★★** Distance entre deux villes
 
@@ -1162,7 +1162,7 @@ Have fun !
 
 
 
- 	  * Testé avec succès sous Windows XP, Windows 7 et ... Linux/Ubuntu (avec l'émulateur Wine).
+ Testé avec succès sous Windows XP, Windows 7 et ... Linux/Ubuntu (avec l'émulateur Wine).
 
 
 
@@ -1172,19 +1172,19 @@ Have fun !
 
 
 
- 	  * [Création d'interface graphique avec le module tkinter (niveau classe de seconde)](http://fabrice.sincere.free.fr/ressources/SECONDE/)
- 	  * [leducdenormandie.itslearning.com](https://leducdenormandie.itslearning.com/9689/ISN/ISN)
- 	  * [fr.wikibooks.org (tkinter)](http://fr.wikibooks.org/wiki/Programmation_Python/Tkinter)
- 	  * [fr.wikibooks.org (fenêtres et graphismes)](https://fr.wikibooks.org/wiki/Apprendre_%C3%A0_programmer_avec_Python/Utilisation_de_fen%C3%AAtres_et_de_graphismes)
- 	  * [python.developpez.com](http://python.developpez.com/faq/?page=Tkinter)
- 	  * [docs.python.org](http://docs.python.org/3/library/tkinter.html)
- 	  * [infohost.nmt.edu](http://infohost.nmt.edu/tcc/help/pubs/tkinter/web/index.html)
- 	  * [effbot.org](http://effbot.org/tkinterbook/)
- 	  * [epydoc.sourceforge.net](http://epydoc.sourceforge.net/stdlib/Tkinter-module.html)
- 	  * [www.tutorialspoint.com](http://www.tutorialspoint.com/python/python_gui_programming.htm)
- 	  * [lmgtfy.com](http://lmgtfy.com/?q=python+tkinter)
- 	  * [Module pygame.mixer.Sound (documentation)](http://www.pygame.org/docs/ref/mixer.html#pygame.mixer.Sound)
- 	  * [Module pygame.mixer.music (documentation)](http://www.pygame.org/docs/ref/music.html)
+ [Création d'interface graphique avec le module tkinter (niveau classe de seconde)](http://fabrice.sincere.free.fr/ressources/SECONDE/)
+ [leducdenormandie.itslearning.com](https://leducdenormandie.itslearning.com/9689/ISN/ISN)
+ [fr.wikibooks.org (tkinter)](http://fr.wikibooks.org/wiki/Programmation_Python/Tkinter)
+ [fr.wikibooks.org (fenêtres et graphismes)](https://fr.wikibooks.org/wiki/Apprendre_%C3%A0_programmer_avec_Python/Utilisation_de_fen%C3%AAtres_et_de_graphismes)
+ [python.developpez.com](http://python.developpez.com/faq/?page=Tkinter)
+ [docs.python.org](http://docs.python.org/3/library/tkinter.html)
+ [infohost.nmt.edu](http://infohost.nmt.edu/tcc/help/pubs/tkinter/web/index.html)
+ [effbot.org](http://effbot.org/tkinterbook/)
+ [epydoc.sourceforge.net](http://epydoc.sourceforge.net/stdlib/Tkinter-module.html)
+ [www.tutorialspoint.com](http://www.tutorialspoint.com/python/python_gui_programming.htm)
+ [lmgtfy.com](http://lmgtfy.com/?q=python+tkinter)
+ [Module pygame.mixer.Sound (documentation)](http://www.pygame.org/docs/ref/mixer.html#pygame.mixer.Sound)
+ [Module pygame.mixer.music (documentation)](http://www.pygame.org/docs/ref/music.html)
 
 
 

@@ -3,8 +3,8 @@ author: qu3nt1n
 date: 2016-07-08 14:09:56+00:00
 draft: false
 title: 'Annexe : Logiciels libres, les bonnes pratiques'
+weight: 12
 
-url: /
 ---
 
 # Introduction
@@ -272,5 +272,3 @@ Ce qui signifie que que tout ce que vous y faites, tout ce que vous y enregistre
 Facebook vous propose de récupérer l'intégralité de vos données, c'est aussi la loi. Il se garde par contre le droit de vendre vos données, anonymisées (mais votre nom n'a plus aucune importance, vous pouvez néanmoins être identifié) à des régies publicitaires et autres. C'est ainsi qu'il se paye sur votre dos.
 
 Il existe des Clouds libres ([OwnCloud](https://owncloud.org/) par exemple) qui se soucient de la sécurité et de la vie privée de leurs utilisateurs. Leur usage est malheureusement peu répandu. Idem pour les réseaux sociaux, il en existe des libres... mais à nouveau, vous n'y retrouverez pas le beau Kerwann du club de foot ni la jolie Arantxa de l'abris bus. Libre à vous de leur faire découvrir (et bon courage).
-
-

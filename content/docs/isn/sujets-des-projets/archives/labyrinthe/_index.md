@@ -63,8 +63,8 @@ On pourra ajouter des fonctionnalités, voici quelques suggestions (liste non li
 
 
 
-  * Solveur qui explore le labyrinthe et affiche une solution.
-  * Niveaux de difficultés, options, dimensions...
-  * affichages, graphismes, animations etc.
+* Solveur qui explore le labyrinthe et affiche une solution.
+* Niveaux de difficultés, options, dimensions...
+* affichages, graphismes, animations etc.
 
 

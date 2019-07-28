@@ -24,11 +24,11 @@ Ces activités sont structurées de façon logique en suivant plus ou moins l'or
 
 
 
- 	  * 0. Introduction
- 	  * 1. html
- 	  * 3.1. Codage binaire - la deuxième partie n'est plus au programme.
- 	  * 4. Programmation - (de 2 à 8)
- 	  * 3.bis. CSS
+* 0. Introduction
+* 1. html
+* 3.1. Codage binaire - la deuxième partie n'est plus au programme.
+* 4. Programmation - (de 2 à 8)
+* 3.bis. CSS
 
 Vous avez donc jusqu'aux vacances de Toussaint environ pour en arriver là. Ensuite vous aborderez un mini-projet.
 
@@ -45,15 +45,14 @@ Vous avez donc jusqu'aux vacances de Toussaint environ pour en arriver là. Ens
 
 
 
-
- 	    * Partie n°0 : [Introduction](http://qkzk.xyz/?page_id=119)
- 	    * Partie n°1 : [Première page HTML](http://qkzk.xyz/?page_id=123)
- 	    * Partie n°2 : [Réseau, routage et protocole](http://qkzk.xyz/?page_id=142)
- 	    * Partie n°3 : [Codage de l'information](http://qkzk.xyz/?page_id=279)
- 	    * Partie n°3 bis : [La mise en page avec CSS](http://qkzk.xyz/?page_id=298)
- 	    * Partie n°4 : [Introduction à la programmation](http://qkzk.xyz/?page_id=320)
- 	    * Partie n°4 bis : [Notions d'algorithmique : la programmation récursive](http://qkzk.xyz/?page_id=420)
- 	    * Partie n°4 ter : [Algorithmie : trier une liste, parcourir un graphe](http://qkzk.xyz/?page_id=1126)
- 	    * Partie n°5 : [Dessiner une palette de couleurs](http://qkzk.xyz/?page_id=439)
- 	    * Partie n°6 : [Architecture](http://qkzk.xyz/?page_id=444)
- 	    * Partie n°7 : [Stéganographie](http://qkzk.xyz/?page_id=447) : dissimulation d'une information dans une image
+* [0-introduction](/docs/isn/isn-travaux-pratiques/0-introduction)
+* [1-html](/docs/isn/isn-travaux-pratiques/1-html)
+* [2-reseaux](/docs/isn/isn-travaux-pratiques/2-reseaux)
+* [3-bis-css](/docs/isn/isn-travaux-pratiques/3-bis-css)
+* [3-codage-de-linformation](/docs/isn/isn-travaux-pratiques/3-codage-de-linformation)
+* [4-programmation](/docs/isn/isn-travaux-pratiques/4-programmation)
+* [4-bis-la-programmation-recursive](/docs/isn/isn-travaux-pratiques/4-bis-la-programmation-recursive)
+* [4-ter-algorithmie-trier-parcourir-un-graphe](/docs/isn/isn-travaux-pratiques/4-ter-algorithmie-trier-parcourir-un-graphe)
+* [5-dessiner-une-palette-de-couleurs](/docs/isn/isn-travaux-pratiques/5-dessiner-une-palette-de-couleurs)
+* [6-architecture](/docs/isn/isn-travaux-pratiques/6-architecture)
+* [7-steganographie](/docs/isn/isn-travaux-pratiques/7-steganographie)

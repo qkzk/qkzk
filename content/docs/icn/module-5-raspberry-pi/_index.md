@@ -3,11 +3,11 @@ author: qu3nt1n
 date: 2016-07-09 09:56:01+00:00
 draft: false
 title: 'module 5 : raspberry pi'
+weight: -4
 
-url: /
 ---
 
-## 
+##
 
 
 
@@ -29,4 +29,4 @@ On suppose que le lecteur maîtrise déjà les bases de Python.
 
 
 
-# 
+#

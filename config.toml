@@ -1,4 +1,4 @@
-baseURL = "/"
+baseURL = "http://qkzk.github.io/"
 languageCode = "en-us"
 title = "qkzk"
 theme = "book"
@@ -20,13 +20,13 @@ pygmentscodefencesguesssyntax = true
     identifier = "isn"
     name = "isn"
     url = "/docs/isn"
-    weight = 1
+    weight = 2
 
   [[menu.banner]]
     identifier = "nsi"
     name = "nsi"
     url = "/docs/nsi"
-    weight = 2
+    weight = 1
 
   [[menu.banner]]
     identifier = "collegues"

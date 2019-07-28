@@ -4,7 +4,7 @@ date: 2017-04-12 22:08:04+00:00
 draft: false
 title: 03. Les boucles
 
-url: /
+
 ---
 
 ## Chapitre 3 - Les boucles

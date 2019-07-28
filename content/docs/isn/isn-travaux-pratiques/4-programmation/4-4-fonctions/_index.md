@@ -12,10 +12,10 @@ Notions abordées dans cette page
 
 
 
- 	  * les fonctions
- 	  * spécification
- 	  * paramètres (formels effectifs)
- 	  * appel de fonction
+* les fonctions
+* spécification
+* paramètres (formels effectifs)
+* appel de fonction
 
 
 
@@ -142,23 +142,27 @@ Voici une spécification de `getHours` du type `Date` :
 
 
 **type concerné :** Date
+
 **nom** : getHours
+
 **Paramètres** : 0
+
 **Résultat** :
-**  type** : un nombre
-**  description** : l'heure de la date concernée
+
+**type** : un nombre
+**description** : l'heure de la date concernée
 
 
 Cette spécification nous suffit pour savoir comment utiliser cette
 fonction sur une donnée de type `Date` :
 
-
-    var maintenant = new Date();                                  // date a pour la valeur la date courante
-    var nbHeures = maintenant.getHours();                         // heures a pour valeur le nombre d'heures de <b>Date</b>
-    document.writeln("le nombre d'heures est " + nbHeures);       // on affiche ce nombre d'heures (on note l'utilisation de la concaténation)
-    document.writeln("ou encore :" + maintenant.getHours());      // il n'est pas obligatoire de définir une variable pour utiliser le résultat
-    document.writeln("ou encore :" + new Date().getHours());
-
+~~~javascript
+var maintenant = new Date();                                  // date a pour la valeur la date courante
+var nbHeures = maintenant.getHours();                         // heures a pour valeur le nombre d'heures de <b>Date</b>
+document.writeln("le nombre d'heures est " + nbHeures);       // on affiche ce nombre d'heures (on note l'utilisation de la concaténation)
+document.writeln("ou encore :" + maintenant.getHours());      // il n'est pas obligatoire de définir une variable pour utiliser le résultat
+document.writeln("ou encore :" + new Date().getHours());
+~~~
 
 Il existe de nombreuses autres méthodes similaires qui s'appliquent
 sur et permettent la manipulation des données de
@@ -178,18 +182,18 @@ Un peu plus haut nous avons vu qu'il n'était pas indispensable de
 définir une variable pour la date.
 Expliquez néanmoins la différence qu'il y a entre les deux codes suivants :
 
-
-        var maintenant = new Date();
-        document.writeln(maintenant.getFullYear());
-        document.writeln(maintenant.getFullYear());
-
+~~~javascript
+var maintenant = new Date();
+document.writeln(maintenant.getFullYear());
+document.writeln(maintenant.getFullYear());
+~~~
 
 et
 
-
-        document.writeln(new Date().getFullYear());
-        document.writeln(new Date().getFullYear());
-
+~~~javascript
+document.writeln(new Date().getFullYear());
+document.writeln(new Date().getFullYear());
+~~~
 
 Notamment que se passe-t-il si on remplace l'appel à la
 fonction `getFullYear` par `getSeconds`
@@ -240,11 +244,9 @@ Il existe également une fonction
 
 
 
- 	  1. Faites quelques tests d'appel de cette fonction avec des données
-de type `Date` définies avec différentes années.
- 	  2. Déduisez-en une spécification pour cette fonction.
- 	  3. Avez-vous une idée de pourquoi cette fonction a été considérée comme
-n'étant pas compatible avec le passage à l'an 2000 ?
+1. Faites quelques tests d'appel de cette fonction avec des données de type `Date` définies avec différentes années.
+2. Déduisez-en une spécification pour cette fonction.
+3. Avez-vous une idée de pourquoi cette fonction a été considérée comme n'étant pas compatible avec le passage à l'an 2000 ?
 
 
 
@@ -281,9 +283,9 @@ les fonctions du type `Date` :
 
 
 
- 	  * `toLocaleString`
- 	  * `toLocaleDateString`
- 	  * `toLocaletimeString`
+* `toLocaleString`
+* `toLocaleDateString`
+* `toLocaletimeString`
 
 Ecrivez leur spécification.
 
@@ -312,15 +314,18 @@ caractère dans une chaîne.
 
 
 **type concerné :** String
+
 **nom** : charAt
+
 **Paramètres** : 1
-**  pos** : (numérique) correspond à
-l'indice du caractère demandé, le premier caractère a pour indice
-0
+
+**pos** : (numérique) correspond à l'indice du caractère demandé, le premier caractère a pour indice 0
+
 **Résultat**
-**  type** : une chaine de longueur 1 (on rappelle
+
+**type** : une chaine de longueur 1 (on rappelle
 qu'en javascript il n'y a pas de type spécifique pour les caractères)
-**  description** : le caractère
+**description** : le caractère
 d'indice pos dans la chaîne de caractères concernée
 
 
@@ -332,18 +337,11 @@ appel de fonction permet de connaître :
 
 
 
- 	  1. le premier caractère de `chaine`,
- 	  2. le quatrième caractère de `chaine`,
- 	  3. le dernier caractère de `chaine`.
- 	  4. Reprenez vos réponses à ces trois questions en modifiant la valeur
-de la variable `chaine` en `"javascript"`,
-la dernière expression est-elle encore correcte ? Quelle
-expression permet de la corriger ?
- 	  5. Donnez en fonction de la propriété `length` une
-expression qui permet d'obtenir le dernier caractère d'une
-variable `chaine` indépendamment de sa valeur (supposée
-différente de `""`).Vérifiez votre proposition avec les deux valeurs précédentes
-puis avec quelques autres.
+1. le premier caractère de `chaine`,
+2. le quatrième caractère de `chaine`,
+3. le dernier caractère de `chaine`.
+4. Reprenez vos réponses à ces trois questions en modifiant la valeur de la variable `chaine` en `"javascript"`, la dernière expression est-elle encore correcte ? Quelle expression permet de la corriger ?
+5. Donnez en fonction de la propriété `length` une expression qui permet d'obtenir le dernier caractère d'une variable `chaine` indépendamment de sa valeur (supposée différente de `""`). Vérifiez votre proposition avec les deux valeurs précédentes puis avec quelques autres.
 
 
 
@@ -435,11 +433,15 @@ pour `setHours` :
 
 
 **type concerné :** Date
+
 **nom** : setHours
+
 **Paramètres** : 1
-**  h** : (numérique) correspond à
-la nouvelle valeur des heures pour la date concernée
+
+**h** : (numérique) correspond à la nouvelle valeur des heures pour la date concernée
+
 **Résultat** : aucun
+
 **Effet de bord** : modifie les heures pour la date
 concernée, la nouvelle valeur est h
 

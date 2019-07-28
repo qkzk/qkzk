@@ -12,14 +12,14 @@ Notions abordées dans cette page
 
 
 
- 	  * introduction à javascript
- 	  * javascript ans une page HTML
- 	  * déclaration de variables en javascript
- 	  * affectation
- 	  * séquence d'instructions
- 	  * "debuggage", utilisation de Firebug
- 	  * introduction à la portée de variables
- 	  * environnement
+* introduction à javascript
+* javascript ans une page HTML
+* déclaration de variables en javascript
+* affectation
+* séquence d'instructions
+* "debuggage", utilisation de la console de développement
+* introduction à la portée de variables
+* environnement
 
 
 
@@ -129,15 +129,15 @@ mot `var` et on comprend bien pourquoi.
 
 Les noms de variables suivants sont donc autorisés :
 
-
-    x
-    y$
-    x1
-    laTemperature
-    une_autre_temperature
-    _duree_en_secondes
-    $nomArtiste
-
+~~~javascript
+x
+y$
+x1
+laTemperature
+une_autre_temperature
+_duree_en_secondes
+$nomArtiste
+~~~
 
 
 
@@ -201,12 +201,12 @@ lignes en les encadrant des signes `/*` et `*/`.
 
 
 
-
-    var temperature;               // définit la variable temperature
-    temperature = 37;              // fixe la valeur de temperature à 37
-    var _duree_en_secondes = 324;  // définit la variable _duree_en_secondes et fixe sa valeur à 324
-    _duree_en_secondes = 238;      // modifie la valeur de _duree_en_secondes qui vaut maintenant 238
-
+~~~javascript
+var temperature;               // définit la variable temperature
+temperature = 37;              // fixe la valeur de temperature à 37
+var _duree_en_secondes = 324;  // définit la variable _duree_en_secondes et fixe sa valeur à 324
+_duree_en_secondes = 238;      // modifie la valeur de _duree_en_secondes qui vaut maintenant 238
+~~~
 
 
 La partie droite d'une affectation peut en fait être une
@@ -214,11 +214,11 @@ expression. Cette expression sera évaluée (calculée) et c'est le
 résultat de cette évaluation qui constituera la valeur affectée
 à la variable.
 
-
-    var n = 12+5;               // la variable n est créée avec la valeur 17
-    var numero = 10+n;          // la variable numero est créée avec la valeur 27
-    numero = numero+1;          // modifie la valeur de numero qui vaut maintenant 28
-
+~~~javascript
+var n = 12+5;               // la variable n est créée avec la valeur 17
+var numero = 10+n;          // la variable numero est créée avec la valeur 27
+numero = numero+1;          // modifie la valeur de numero qui vaut maintenant 28
+~~~
 
 
 
@@ -239,9 +239,9 @@ le navigateur.
 Pour pouvoir réaliser l'affichage nous allons utiliser une
 instruction particulière :
 
-
-      document.writeln(expression);
-
+~~~javascript
+document.writeln(expression);
+~~~
 
 
 dont l'exécution produit l'écriture du résultat de l'évaluation
@@ -252,14 +252,14 @@ ensuite interprété par le navigateur pour son affichage.
 Il faut donc créer une page HTML dans laquelle on va placer d'une part
 le code de déclaration des variables :
 
+~~~javascript
+<script type="text/Javascript">
 
-    <script type="text/Javascript">
+     var nombre1 = 12;
+     var nombre2 = 20;
 
-         var nombre1 = 12;
-         var nombre2 = 20;
-
-    </script>
-
+</script>
+~~~
 
 puis d'autre part le message qui affiche leur
 somme :
@@ -337,21 +337,20 @@ nombre2=12`_.
 ## Des erreurs dans mon code...
 
 
+La ***Console de Développement** est l'outil le plus important pour développer
+en javascript. Dans votre navigateur Chrome, pressez F12 pour ouvrir la console
+de développement.
 
+Vous remarquez qu'une fenêtre s'ouvre à droite de la page. Elle contient de
+nombreux outils utiles à différentes phases de la conception d'un site web.
 
-**Firebug**.
-Firebug est un module (ou
-extension) de Firefox qui dispose d'un certain nombre d'outils utiles
-pour le développement de page web utilisant HTML, CSS et Javascript.Pour l'installer il faut aller sur le site des modules de
-Mozilla et y trouver Firebug. Le plus simple est certainement de
-simplement faire une recherche avec comme mot-clé "firebug", le
-premier lien-réponse devrait être le bon.
-Il faut ensuite
-cliquer sur le bouton qui propose de l'ajouter au navigateur et
-accepter l'installation.
+Ceux qui vous nous intéresser le plus sont :
 
-Firebug s'active par l'appui de la touche F12, via le (nouveau) bouton
-représentant une espèce de coccinnelle ou en passant par le menu Outils.
+* la console (onglet _console_ en haut) où apparaissent les erreurs et certains messages
+* l'icône carré contenant une flèche tout en haut à gauche. Elle permet de cliquer sur un élément de la page et de voir le code correspondant. On peut ainsi repérer et modifier les éléments ou leur style (CSS)
+* les sources (onglet _source_ en haut) où le code des différents fichiers est présenté. On y trouve un _débuggueur_ qui nous permettra d'exécuter notre code étape par étape et de consulter l'état des variables au fur et à mesure.
+
+Tous les navigateurs récents proposent une console de développement équivalente.
 
 
 
@@ -369,18 +368,18 @@ trouve l'erreur et quelle en est la cause probable.
 Il est important et même indispensable de savoir retrouver les erreurs
 et comprendre les messages d'erreur afin de pouvoir corriger le code
 en autonomie.
-En ce qui nous concerne nous allons utiliser l'outil Firebug pour
+En ce qui nous concerne nous allons utiliser l'outil la console de développement pour
 retrouver ces erreurs.
 
 
 Reprenez le document qui affiche la somme de 2 nombres et modifiez
 la ligne qui affiche la somme **exactement** ainsi :
 
-
-    <script type="text/Javascript">
-    document.wrteln(nombre+nombre2);
-    </script>
-
+~~~javascript
+<script type="text/Javascript">
+document.wrteln(nombre+nombre2);
+</script>
+~~~
 
 
 
@@ -403,20 +402,20 @@ aux erreurs que nous avons introduites.
 
 
 
-Activez Firebug via la touche F12.
+Activez la console de développement via la touche F12.
 
 
 
 
 Une zone s'active en bas de la
-fenêtre du navigateur. Pour ce premier contact avec Firebug nous
+fenêtre du navigateur. Pour ce premier contact avec la console de développement nous
 allons nous contenter du premier onglet intitulé "Console". Dans cette
 zone nous trouvons affichés la portion de code Javascript qui pose
 problème, un message d'erreur en rouge, le nom du
 fichier contenant l'erreur et le numéro de la ligne dans le fichier
 qui contient l'erreur.
 
-![Firebug](http://qkzk.xyz/docs/doc04/doc/firebug1.png)
+![la console de développement](http://qkzk.xyz/docs/doc04/doc/firebug1.png)
 
 
 
@@ -438,7 +437,7 @@ Corrigez l'erreur, sauvegardez et rechargez la page.
 
 Que constate-t-on ?
 
-Utilisez Firebug pour localiser la nouvelle erreur, quel est le message ?
+Utilisez la console de développement pour localiser la nouvelle erreur, quel est le message ?
 
 L'erreur de frappe provoque cette fois la non reconnaissance d'une
 fonction (`writeln`). Corrigez et vérifiez que tout est
@@ -464,12 +463,12 @@ de `nombre2` en la remplaçant par :
 
 
 
- 	  1. Consultez la console de Firebug.
- 	  2. Combien d'erreurs sont mentionnées ?
- 	  3. A quelles lignes sont-elles signalées ?
- 	  4. Que pensez-vous du premier message d'erreur ?
- 	  5. Que signifient les autres messages d'erreur ? Comment les expliquer ?
- 	  6. Corrigez cette première erreur et consultez à nouveau la console.
+1. Consultez la console de la console de développement.
+2. Combien d'erreurs sont mentionnées ?
+3. A quelles lignes sont-elles signalées ?
+4. Que pensez-vous du premier message d'erreur ?
+5. Que signifient les autres messages d'erreur ? Comment les expliquer ?
+6. Corrigez cette première erreur et consultez à nouveau la console.
 
 
 
@@ -484,16 +483,16 @@ de `nombre2` en la remplaçant par :
 Modifiez à nouveau le code dans le document en supprimant la valeur de
 l'initialisation de `nombre1` :
 
+~~~javascript
+<script type="text/Javascript">
 
-    <script type="text/Javascript">
-
-      var nombre1;
-    </script>
-
+  var nombre1;
+</script>
+~~~
 
 Rechargez la page, que constate-t-on ?
 
-Des erreurs sont-elles signalées par Firebug ?
+Des erreurs sont-elles signalées par la console de développement ?
 
 
 

@@ -12,8 +12,8 @@ Notions abordées
 
 
 
- 	  * codag de caractères : le code ASCII, codage UTF-8
- 	  * codage et HTML, URL
+*  codag de caractères : le code ASCII, codage UTF-8
+*  codage et HTML, URL
 
 
 
@@ -226,10 +226,8 @@ codage ASCII :
 
 
 
- 	  * le codage des caractères présents dans la table ASCII est
-conservé ;
- 	  * le principe du codage de chacun des caractères sur un octet
-est conservé.
+*  le codage des caractères présents dans la table ASCII est conservé ;
+*  le principe du codage de chacun des caractères sur un octet est conservé.
 
 Mais les 8 bits de l'octet vont être utilisés. Cela permet de coder
 28 = 256 caractères, soit 128 caractères
@@ -352,17 +350,17 @@ l'exemple :
 
 
 
+~~~html
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+</head>
 
-    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
-    </head>
+<body>
 
-    <body>
+<p>J'écris € en UTF-8.</p>
 
-    <p>J'écris € en UTF-8.</p>
-
-    </body>
-    </html>
-
+</body>
+</html>
+~~~
 
 
 

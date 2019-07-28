@@ -53,10 +53,9 @@ participer à cette activité.
 
 
 
- 	  * un paquet de (petites) feuilles de papier identiques
- 	  * un paquet d'enveloppes identiques
- 	  * textes assez courts et facilement décomposables (poème, chanson
-etc)
+* un paquet de (petites) feuilles de papier identiques
+* un paquet d'enveloppes identiques
+* textes assez courts et facilement décomposables (poème, chanson etc)
 
 
 
@@ -83,9 +82,8 @@ messages :
 
 
 
- 	  * n'échanger qu'avec vos voisins directs (ex : devant, derrière,
-gauche, droite),
- 	  * ne pas stocker de message qui ne vous soit pas adressé.
+* n'échanger qu'avec vos voisins directs (ex : devant, derrière, gauche, droite),
+* ne pas stocker de message qui ne vous soit pas adressé.
 
 
 
@@ -94,14 +92,10 @@ Suite à ces échanges, réfléchissez aux questions suivantes :
 
 
 
- 	  * Quels éléments vous semblent nécessaires pour que
-l'acheminement des messages se déroule bien ?
- 	  * Comment définir la notion de _protocole_ ? Donnez des
-exemples de protocoles tirés de la vie quotidienne.
- 	  * Quel protocole avez vous adopté pour la transmission des
-messages dans la classe ?
- 	  * Comment déterminez-vous à quel voisin vous devez transmettre un message
-pour qu'il arrive à la bonne personne ?
+* Quels éléments vous semblent nécessaires pour que l'acheminement des messages se déroule bien ?
+* Comment définir la notion de _protocole_ ? Donnez des exemples de protocoles tirés de la vie quotidienne.
+* Quel protocole avez vous adopté pour la transmission des messages dans la classe ?
+* Comment déterminez-vous à quel voisin vous devez transmettre un message pour qu'il arrive à la bonne personne ?
 
 
 
@@ -115,16 +109,10 @@ le réseau.
 
 
 
- 	  * Elaborez une stratégie au sein de la classe.
- 	  * Que se passe-t-il lorsqu'une ou plusieurs personnes cessent de
-participer au réseau ?
- 	  * Quelle(s) propriété(s) la stratégie choisie pour le routage
-doit possèder pour fonctionner dans un réseau dont la topologie peut
-évoluer ?
- 	  * Réfléchir aux problèmes de sécurité qui peuvent être rencontrés
-dans le réseau lorsqu'un ou plusieurs routeurs/éléves cessent de
-suivre le protocole choisi par tout le groupe à des fins plus ou moins
-malveillantes.
+* Elaborez une stratégie au sein de la classe.
+* Que se passe-t-il lorsqu'une ou plusieurs personnes cessent de participer au réseau ?
+* Quelle(s) propriété(s) la stratégie choisie pour le routage doit possèder pour fonctionner dans un réseau dont la topologie peut évoluer ?
+* Réfléchir aux problèmes de sécurité qui peuvent être rencontrés dans le réseau lorsqu'un ou plusieurs routeurs/éléves cessent de suivre le protocole choisi par tout le groupe à des fins plus ou moins malveillantes.
 
 
 
@@ -150,9 +138,9 @@ mis en oeuvre ce qui appartient à chacune de ces couches.
 
 
 
- 	  1. **couche physique**
- 	  2. **couche lien ou liaison de données**
- 	  3. **couche réseau**
+1. **couche physique**
+2. **couche lien ou liaison de données**
+3. **couche réseau**
 
 A quelle couche appartient le protocole **IP** ? D'ailleur comment fonctionne-t-il ?
 
@@ -177,7 +165,7 @@ chansons. Mais attention, maintenant la taille de chaque message est
 limitée, un seul vers est autorisé par message !
 
 Que dire sur l'arrivée des messages composant un poème ?
-Elaborez une stratégie pour pouvoir lire correctement un poème que
+Élaborez une stratégie pour pouvoir lire correctement un poème que
 vous recevez.
 
 
@@ -194,7 +182,7 @@ réel. Expliquez le rôle de cette couche et identifiez les éléments de
 votre propre réseau appartenant à cette couche.
 
 Penchez-vous plus précisément sur le cas de deux protocoles
-célébres, **TCP** et **UDP**, dont vous
+célèbres, **TCP** et **UDP**, dont vous
 expliquerez les principes respectifs.
 
 
@@ -259,7 +247,7 @@ pour éviter ces détournements.
 
 
 **Attribution des adresses**On impose maintenant un format d'adresse. Combien d'adresses distinctes sont disponibles avec le nouveau
-format ? Y en a-t-il suffisament pour tous dans la salle ?
+format ? Y en a-t-il suffisamment pour tous dans la salle ?
 
 
 Et **DHCP** ?
@@ -283,7 +271,7 @@ mécanimes pour envoyer différents types de messages, comme des
 requêtes pour les DNS mais aussi HTTP, SMTP, FTP etc.
 
 
-## Réseau planéraire et normalisation
+## Réseau planétaire et normalisation
 
 
 Vous aurez compris que la définition de protocoles communs est

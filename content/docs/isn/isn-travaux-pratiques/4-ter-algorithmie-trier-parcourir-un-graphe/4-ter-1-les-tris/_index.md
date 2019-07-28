@@ -34,8 +34,8 @@ Trier constitue donc une des premières étapes dans la réduction de l'informat
 
 
 
- 	  * le temps d'exécution d'une opération lui même.
- 	  * l'espace en mémoire occupé par votre programme.
+* le temps d'exécution d'une opération lui même.
+* l'espace en mémoire occupé par votre programme.
 
 Selon les contextes l'un de ces coûts pourra totalement écraser l'autre.
 Par exemple, si vous connaissez la suite de Fibonacci en mathématiques, il existe deux grands algorithmes pour en calculer les termes successifs.
@@ -43,10 +43,11 @@ Par exemple, si vous connaissez la suite de Fibonacci en mathématiques, il exis
 Tous deux ont sensiblement le même coût en terme de temps d’exécution mais l'espace occupé par le premier est beaucoup beaucoup plus grand que celui occupé par le second. Ainsi, il est difficile de calculer des termes de rang élevé avec l'un tandis qu'il est aisé d'arriver beaucoup plus loin avec l'autre.
 
 3. Enfin, ces problèmes de tris permettent de mettre en oeuvre la démarche naturelle de la programmation :
-1. analyse de l'énoncé et recherche de solution simple
-2. réalisation d'un algorithme papier
-3. développement pratique du programme dans un vrai langage
-4. tests et comparaison des méthodes.
+  1. analyse de l'énoncé et recherche de solution simple
+  2. réalisation d'un algorithme papier
+  3. développement pratique du programme dans un vrai langage
+  4. tests et comparaison des méthodes.
+
 Sans tarder davantage, intéressons nous aux algorithmes de tris.
 
 Sachez d'abord qu'il en existe beaucoup ! C'est un problème fondamental et on a affiné leur développement. Certains algorithmes sont relativement bons en toute circonstance (que la liste soit totalement aléatoire ou presque ordonnée dès le départ), d'autres ont des champs d'application plus restreints, ils sont spécialisés (pour des listes aléatoires, des listes faiblement désordonnées etc.)
@@ -216,7 +217,9 @@ On va mettre dans liste3 les éléments successifs dont on est certain qu'ils so
 liste3 = []
 
 on donne 2 compteurs i et j valant d'abord 0
-Tant que i<longueur(liste1) et j < longueur(liste2):
+
+
+Tant que i < longueur(liste1) et j < longueur(liste2):
 si liste1[i] < liste2[i], on sait que liste1[i] est l'élément le plus petit donc
 on ajoute liste1[i] à la fin de liste3
 i augmente de 1.
@@ -294,8 +297,8 @@ Quelques mots sur la complexité en général.
 
 
 
- 	  * On ne s'est penché que sur l'efficacité (nombre d'opération) et on a omis l'espace en mémoire. Souvent l'un des deux est négligeable devant l'autre... mais pas toujours !
- 	  * On range souvent les problèmes dans des catégories bien distinctes :
+* On ne s'est penché que sur l'efficacité (nombre d'opération) et on a omis l'espace en mémoire. Souvent l'un des deux est négligeable devant l'autre... mais pas toujours !
+* On range souvent les problèmes dans des catégories bien distinctes :
 ceux pour lesquels on dispose d'un algorithme au pire polynômial et les autres.
 Exemple : les tris ! Le tri par sélection est polynomial d'ordre 2 dans tous les cas. Le tri par fusion est même bien meilleur.
 

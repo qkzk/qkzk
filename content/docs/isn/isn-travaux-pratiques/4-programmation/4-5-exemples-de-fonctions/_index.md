@@ -10,8 +10,8 @@ Notions abordées dans cette page
 
 
 
- 	  * interactivité
- 	  * "conversion" de types
+* interactivité
+* "conversion" de types
 
 
 
@@ -38,22 +38,29 @@ valeur_". Nous aurons l'occasion de revenir dessus ultérieurement.
 
 
 
+
 **type concerné :** Window
+
 **nom** : prompt
+
 **Paramètres** : 2 (voir note)
+
 **  message** : (chaîne), le message d'invite
-**  val_init** : _(optionnel)_ (chaîne),
-la valeur par défaut
+
+**  val_init** : _(optionnel)_ (chaîne), la valeur par défaut
+
 **Résultat** :
-**  type** : chaîne de caractères
-**  description** : la chaîne de caractères saisie
+
+**type** : chaîne de caractères
+
+**description** : la chaîne de caractères saisie
 par l'utilisateur lorsqu'il clique sur Valider
 ou `null` si il clique sur Annuler.
 
-**Effet de bord ** : fait apparaitre une boîte de dialogue avec une zone de saisie
+**Effet de bord** : fait apparaître une boîte de dialogue avec une zone de saisie
 de texte et deux boutons Valider et Annuler.
 message est affiché dans la fenêtre au-dessus de la zone
-de saisie. Le champ de saisie est pré-rempli avec la valeur de val_init;
+de saisie. Le champ de saisie est pré-rempli avec la valeur de `val_init`;
 **note** : le second paramètre peut-être omis, dans ce cas
 le champ de saisie est vide (ce qui revient à dire que la valeur
 de `val_init` est `""`).
@@ -67,15 +74,15 @@ fonction, testons-la :
 
 
 
- 	  1. Créez une page qui définit une variable `nom`,
+1. Créez une page qui définit une variable `nom`,
 initialise sa valeur à l'aide du résultat fourni par un appel à la
 fonction `prompt` demandant à l'utilisateur de saisir
 son nom, puis crée le contenu de la page avec le
 message `Hello _xxx_` où `_xxx_`
 est la valeur de la variable `nom` qui aura donc été
 fournir lors de la saisie.
- 	  2. Testez la fonction `prompt` avec ou sans second paramètre.
- 	  3. Que se passe-t-il si l'utilisateur clique sur le bouton Annuler
+2. Testez la fonction `prompt` avec ou sans second paramètre.
+3. Que se passe-t-il si l'utilisateur clique sur le bouton Annuler
 de la boîte de dialogue ? Testez.
 
 
@@ -104,19 +111,19 @@ Reprenons une autre manipulation que nous avons déjà rencontrée :
 
 
 
- 	  1. Créez une page HTML dans laquelle sont définies deux
+1. Créez une page HTML dans laquelle sont définies deux
 variables `chaine1` et `chaine2` de type
 chaîne de caractères que vous initialiserez à l'aide d'un appel à la
 fonction `prompt` et qui affiche le
 résultat de l'expression
 `chaine1 + chaine2`.
- 	  2. Testez la page avec différentes valeurs pour `chaine1` et `chaine2`
- 	  3. Avez-vous fait le test avec des valeurs ne contenant que des
+2. Testez la page avec différentes valeurs pour `chaine1` et `chaine2`
+3. Avez-vous fait le test avec des valeurs ne contenant que des
 caractères-chiffres ? Essayez avec par exemple `12`
 pour `chaine1` et `20`
 pour `chaine2`.
- 	  4. Qu'affiche la page ?
- 	  5. Cela correspond-il au résultat auquel vous vous attendiez ?
+4. Qu'affiche la page ?
+5. Cela correspond-il au résultat auquel vous vous attendiez ?
 Justifiez le résultat obtenu.
 
 
@@ -174,29 +181,29 @@ ces fonctions :
 
 
 
- 	  * seul le premier nombre dans la chaîne est retourné, les autres
+* seul le premier nombre dans la chaîne est retourné, les autres
 caractères (y compris correspondant à des nombres) sont
 ignorés,
- 	  * si le premier caractère ne peut être converti en un nombre, le
+* si le premier caractère ne peut être converti en un nombre, le
 résultat sera `NaN`,
- 	  * les espaces en tête sont ignorés,
- 	  * avec `parseInt` il est possible de préciser un second paramètre
+* les espaces en tête sont ignorés,
+* avec `parseInt` il est possible de préciser un second paramètre
 qui sera la base (8, 10, 16) à utiliser pour analyser la chaîne.
 
 Exemples :
 
-
-    parseFloat("1.24");                //   1.24
-    parseInt("42");                    //   42
-    parseInt("42 est la réponse");     //   42
-    parseInt("    42 est la réponse"); //   42
-    parseInt("1.24");                  //   1
-    parseInt("42estlaréponse");        //   42
-    parseInt("42 43 44");              //   42
-    parseInt("réponse = 42");          //   NaN
-    parseInt("10",16);                 //   16
-    parseInt("AA",16)                  //   170
-
+~~~javascript
+parseFloat("1.24");                //   1.24
+parseInt("42");                    //   42
+parseInt("42 est la réponse");     //   42
+parseInt("    42 est la réponse"); //   42
+parseInt("1.24");                  //   1
+parseInt("42estlaréponse");        //   42
+parseInt("42 43 44");              //   42
+parseInt("réponse = 42");          //   NaN
+parseInt("10",16);                 //   16
+parseInt("AA",16)                  //   170
+~~~
 
 
 
@@ -222,10 +229,10 @@ La fonction `parseInt` peut donc être appliquée au
 résultat d'un appel à la fonction `prompt` pour produire
 un nombre, lorsque cela a un sens :
 
-
-    var texteSaisi = prompt("Donnez une valeur entière");
-    var unEntier = parseInt(texteSaisi);
-
+~~~javascript
+var texteSaisi = prompt("Donnez une valeur entière");
+var unEntier = parseInt(texteSaisi);
+~~~
 
 
 Mais dans la mesure ou la fonction `parseInt` prend pour
@@ -234,9 +241,9 @@ fonction `prompt` a pour résultat une chaîne de caractères,
 on peut également "enchainer" les appels de fonction sans passer par
 une variable intermédiaire :
 
-
-    var unEntier = parseInt(prompt("Donnez une valeur entière"));
-
+~~~javascript
+var unEntier = parseInt(prompt("Donnez une valeur entière"));
+~~~
 
 
 On obtient ainsi le moyen d'obtenir une valeur entière saisie par l'utilisateur.
@@ -296,10 +303,10 @@ fonction `writeln` que nous avons déjà beaucoup
 utilisée. Le paramètre de cette fonction doit être de
 type `String` or nous avons pu écrire :
 
-
-    var x = 12;
-    document.writeln(x);
-
+~~~javascript
+var x = 12;
+document.writeln(x);
+~~~
 
 
 Cela est possible car Javascript réalise automatiquement l'appel d'un
@@ -307,9 +314,11 @@ traitement qui convertit la donnée numérique `12` en la
 chaîne `"12"` avant d'exécuter le traitement
 du `writeln`. Si le langage ne réalisait pas à notre place
 cette conversion il faudrait écrire :
-`
+
+~~~javascript
 document.writeln(x.toString());
-`
+~~~
+
 Ce qui alourdit le code pour une fonction assez souvent utilisée. Les
 concepteurs du langage ont ici voulu faciliter le travail des
 programmeurs.
@@ -320,13 +329,12 @@ exprimée en Fahrenheit en Celsius puis l'inverse.
 
 
 
- 	  1. Recherchez sur internet les formules de conversion entre ces
+1. Recherchez sur internet les formules de conversion entre ces
 unités de mesure.
- 	  2. Ecrivez le code qui demande la saisie d'une température en Fahrenheit et affiche la
-température Celsius équivalente.
- 	  3. Ecrivez le code qui demande la saisie d'une température en Celsius
+2. Écrivez le code qui demande la saisie d'une température en Fahrenheit et affiche la température Celsius équivalente.
+3. Écrivez le code qui demande la saisie d'une température en Celsius
 et affiche la température Fahrenheit équivalente.
- 	  4. Testez la page créée.
+4. Testez la page créée.
 
 
 

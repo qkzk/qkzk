@@ -11,9 +11,7 @@ weight: 3
 
 
 
-
-
- 	  1. [Représentation binaire](http://qkzk.xyz/?page_id=238)
- 	  2. [Codage des caractères](http://qkzk.xyz/?page_id=256)
- 	  3. [Codage des couleurs](http://qkzk.xyz/?page_id=271)
- 	  4. [Structure des pages HTML](http://qkzk.xyz/?page_id=285)
+1. [representation-binaire](/docs/isn/isn-travaux-pratiques/3-codage-de-linformation/3-1-representation-binaire)
+1. [codage-des-caracteres](/docs/isn/isn-travaux-pratiques/3-codage-de-linformation/3-2-codage-des-caracteres)
+1. [codage-des-couleurs](/docs/isn/isn-travaux-pratiques/3-codage-de-linformation/3-3-codage-des-couleurs)
+1. [structure-des-pages-html](/docs/isn/isn-travaux-pratiques/3-codage-de-linformation/3-4-structure-des-pages-html)

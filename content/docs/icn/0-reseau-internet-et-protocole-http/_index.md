@@ -3,8 +3,7 @@ author: qu3nt1n
 date: 2016-07-09 07:44:59+00:00
 draft: false
 title: '00. Réseau : internet et protocole HTTP'
-
-url: /
+weight: -1
 ---
 
 
@@ -76,18 +75,18 @@ Voici une version simplifiée de la composition d'une requête :
 
 
 
- 	  * la méthode employée pour effectuer la requête
- 	  * l'URL de la ressource
- 	  * la version du protocole utilisé par le client (souvent HTTP 1.1)
- 	  * le navigateur employé (Firefox, Chrome) et sa version
- 	  * le type du document demandé (par exemple HTML)
- 	  * ...
+ la méthode employée pour effectuer la requête
+ l'URL de la ressource
+ la version du protocole utilisé par le client (souvent HTTP 1.1)
+ le navigateur employé (Firefox, Chrome) et sa version
+ le type du document demandé (par exemple HTML)
+ ...
 
 Certaines de ces lignes sont optionnelles.
 
 Voici un exemple de requête HTTP (la méthode, l'URL et la version du protocole se trouvent sur la première ligne) :
 
-    
+
     GET /mondossier/monFichier.html HTTP/1.1
     User-Agent : Mozilla/5.0
     Accept : text/html
@@ -107,10 +106,10 @@ Détaillons 4 de ces méthodes :
 
 
 
- 	  * GET : C'est la méthode la plus courante pour demander une ressource. Elle est sans effet sur la ressource.
- 	  * POST : Cette méthode est utilisée pour soumettre des données en vue d'un traitement (côté serveur). Typiquement c'est la méthode employée lorsque l'on envoie au serveur les données issues d'un formulaire ( avec une balise form, voir les activités sur HTML5 et CSS3).
- 	  * DELETE : Cette méthode permet de supprimer une ressource sur le serveur.
- 	  * PUT : Cette méthode permet de modifier une ressource sur le serveur
+ GET : C'est la méthode la plus courante pour demander une ressource. Elle est sans effet sur la ressource.
+ POST : Cette méthode est utilisée pour soumettre des données en vue d'un traitement (côté serveur). Typiquement c'est la méthode employée lorsque l'on envoie au serveur les données issues d'un formulaire ( avec une balise form, voir les activités sur HTML5 et CSS3).
+ DELETE : Cette méthode permet de supprimer une ressource sur le serveur.
+ PUT : Cette méthode permet de modifier une ressource sur le serveur
 
 
 
@@ -158,7 +157,7 @@ Remarque : la façon d'écrire les chemins (avec des slash (/) comme séparateu
 
 Une fois la requête reçue, le serveur va renvoyer une réponse, voici un exemple de réponse du serveur :
 
-    
+
     HTTP/1.1 200 OK
     Date: Thu, 15 feb 2013 12:02:32 GMT
     Server: Apache/2.0.54 (Debian GNU/Linux) DAV/2 SVN/1.1.4
@@ -186,8 +185,8 @@ La 1re ligne se nomme la ligne de statut :
 
 
 
- 	  * HTTP/1.1 : version de HTTP utilisé par le serveur
- 	  * 200 : code indiquant que le document recherché par le client a bien été trouvé par le serveur. Il existe d'autres codes dont un que vous connaissez peut-être déjà : le code 404 (qui signifie  «Le document recherché n'a pu être trouvé»).
+ HTTP/1.1 : version de HTTP utilisé par le serveur
+ 200 : code indiquant que le document recherché par le client a bien été trouvé par le serveur. Il existe d'autres codes dont un que vous connaissez peut-être déjà : le code 404 (qui signifie  «Le document recherché n'a pu être trouvé»).
 
 Les 5 lignes suivantes constituent l'en-tête de la réponse, une ligne nous intéresse plus particulièrement : «Server: Apache/2.0.54 (Debian GNU/Linux)».
 
@@ -201,9 +200,9 @@ Il existe différents types de serveur capable de répondre à des requêtes HTT
 
 
 
- 	  * un ordinateur (souvent ce sont des machines spécialisées : elles sont conçues pour fonctionner 24h/24h mais il est possible d'utiliser un ordinateur « classique » surtout si votre but est uniquement de faire des tests).
- 	  * un système d'exploitation : Les distributions GNU/Linux sont, pour différentes raisons, à privilégier. Dans la réponse HTTP que nous avons étudiée ci-dessus, le serveur fonctionne sous une distribution GNU/Linux dénommée Debian (mais si vous êtes sous Windows, il est tout de même possible de mettre en place un serveur web).
- 	  * Un logiciel destiné à recevoir les requêtes HTTP et à fournir des réponses. Un des logiciels les plus « populaires » se nomme Apache (il équipe plus de la moitié de serveur web en activité dans le monde !), mais il en existe d'autres : nginx, lighttpd......(j'ai volontairement choisi d'évoquer uniquement les solutions « libres », mais vous devez savoir qu'il existe aussi des solutions « propriétaires », si c'est 2 termes vous sont inconnus, il serait bon de rechercher leur signification).
+ un ordinateur (souvent ce sont des machines spécialisées : elles sont conçues pour fonctionner 24h/24h mais il est possible d'utiliser un ordinateur « classique » surtout si votre but est uniquement de faire des tests).
+ un système d'exploitation : Les distributions GNU/Linux sont, pour différentes raisons, à privilégier. Dans la réponse HTTP que nous avons étudiée ci-dessus, le serveur fonctionne sous une distribution GNU/Linux dénommée Debian (mais si vous êtes sous Windows, il est tout de même possible de mettre en place un serveur web).
+ Un logiciel destiné à recevoir les requêtes HTTP et à fournir des réponses. Un des logiciels les plus « populaires » se nomme Apache (il équipe plus de la moitié de serveur web en activité dans le monde !), mais il en existe d'autres : nginx, lighttpd......(j'ai volontairement choisi d'évoquer uniquement les solutions « libres », mais vous devez savoir qu'il existe aussi des solutions « propriétaires », si c'est 2 termes vous sont inconnus, il serait bon de rechercher leur signification).
 
 
 

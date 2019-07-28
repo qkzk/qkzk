@@ -4,7 +4,7 @@ date: 2017-04-13 16:52:02+00:00
 draft: false
 title: 09 - Le son au format audio WAV
 
-url: /
+
 ---
 
 L'écriture et la lecture du contenu d'un fichier audio au format WAV est simplifiée par l'utilisation du module `wave`.
@@ -290,14 +290,14 @@ On ne tiendra pas compte des échos multiples.
 
 
 
- 	  * [Documentation sur le module wave](http://docs.python.org/3/library/wave.html)
- 	  * [WAVEform audio file format](http://fr.wikipedia.org/wiki/WAVEform_audio_format)
- 	  * [PCM (Pulse Code Modulation)](http://fr.wikipedia.org/wiki/Modulation_d%27impulsion_codee)
- 	  * [Site officiel du logiciel libre et gratuit Audacity](http://audacity.sourceforge.net/?lang=fr)
- 	  * [Lecteur multimédia](http://fr.wikipedia.org/wiki/Lecteur_multim%C3%A9dia)
- 	  * [Editeur hexadécimal](http://fr.wikipedia.org/wiki/%C3%89diteur_hexad%C3%A9cimal)
- 	  * [Code DTMF](http://fr.wikipedia.org/wiki/Code_DTMF)
- 	  * [Module pygame.mixer (documentation)](http://www.pygame.org/docs/ref/mixer.html)
+ [Documentation sur le module wave](http://docs.python.org/3/library/wave.html)
+ [WAVEform audio file format](http://fr.wikipedia.org/wiki/WAVEform_audio_format)
+ [PCM (Pulse Code Modulation)](http://fr.wikipedia.org/wiki/Modulation_d%27impulsion_codee)
+ [Site officiel du logiciel libre et gratuit Audacity](http://audacity.sourceforge.net/?lang=fr)
+ [Lecteur multimédia](http://fr.wikipedia.org/wiki/Lecteur_multim%C3%A9dia)
+ [Editeur hexadécimal](http://fr.wikipedia.org/wiki/%C3%89diteur_hexad%C3%A9cimal)
+ [Code DTMF](http://fr.wikipedia.org/wiki/Code_DTMF)
+ [Module pygame.mixer (documentation)](http://www.pygame.org/docs/ref/mixer.html)
 
 
 

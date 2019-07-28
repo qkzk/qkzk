@@ -133,7 +133,7 @@ _arbre4 = {1:[2,3],2:[4,5],3:[6,7],4:[],5:[],6:[],7:[]}_
 
 Solution en Python :
 
-
+~~~python
     def parcoursLargeur(arbre, sommet):
     f = []
     f.append(sommet) # ajoute à la fin de la liste
@@ -145,7 +145,7 @@ Solution en Python :
     for t in arbre[s]:
     print t
     f.append(t)
-
+~~~
 
 Tester cette fonction sur nos arbres1 et arbres4.
 
@@ -220,10 +220,10 @@ Ce théorème a des applications surprenantes et que vous utilisez en permanenc
 
 
 
- 	  * Affecter des fréquences différentes à des cellules voisines dans un réseau de téléphone mobile GSM.
- 	  * Organiser un examen suivant les matières que doit passer chaque étudiant. Comment mettre en parallèle plusieurs épreuves sans léser un candidat ?
- 	  * Optimiser l'utilisation des machines de travail. Comment mettre en parallèle des fabrications utilisant plusieurs machines ?
- 	  * Problème d'incompatibilité. Comment faire cohabiter des personnes ou des animaux en tenant compte de leur incompatibilité ?
- 	  * La résolution du Sudoku peut se ramener à un problème de coloration de graphe.
+* Affecter des fréquences différentes à des cellules voisines dans un réseau de téléphone mobile GSM.
+* Organiser un examen suivant les matières que doit passer chaque étudiant. Comment mettre en parallèle plusieurs épreuves sans léser un candidat ?
+* Optimiser l'utilisation des machines de travail. Comment mettre en parallèle des fabrications utilisant plusieurs machines ?
+* Problème d'incompatibilité. Comment faire cohabiter des personnes ou des animaux en tenant compte de leur incompatibilité ?
+* La résolution du Sudoku peut se ramener à un problème de coloration de graphe.
 
 [Solution des problèmes présentés plus haut](https://drive.google.com/open?id=0B4Mq2ZGzUQ3VNWN1NUo3T193TDQ)

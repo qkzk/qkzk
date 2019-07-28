@@ -40,14 +40,14 @@ Vous réaliserez une page web (html, css, js) permettant à deux joueurs de s'af
 
 
 
- 	  * Page web présentant l'Othellier. La page peut être un grand tableau bien mis en page dans lequel chaque case est une cellule. Idéalement, l'othellier occupe le maximum de place disponible à l'écran et s'adapte aux différentes résolutions (responsive design).
- 	  * On intégrera les références des cases selon les notations officielles
- 	  * Un lien vers les règles et quelques illustrations doivent être présents
- 	  * Chaque clic sur une case y ajoute un jeton et retourne les jetons capturés
- 	  * Votre script empêche un coup illégal et affiche un message d'erreur dans la page (pas de popup dans la version finale)
- 	  * Si aucun coup n'est possible pour un joueur un message est affiché
- 	  * Votre script détecte la fin de partie et affiche le résultat
- 	  * On peut alors rejouer et le score finale vient s'ajouter. Il est possible de réinitialiser les scores sans rafraîchir la page.
+* Page web présentant l'Othellier. La page peut être un grand tableau bien mis en page dans lequel chaque case est une cellule. Idéalement, l'othellier occupe le maximum de place disponible à l'écran et s'adapte aux différentes résolutions (responsive design).
+* On intégrera les références des cases selon les notations officielles
+* Un lien vers les règles et quelques illustrations doivent être présents
+* Chaque clic sur une case y ajoute un jeton et retourne les jetons capturés
+* Votre script empêche un coup illégal et affiche un message d'erreur dans la page (pas de popup dans la version finale)
+* Si aucun coup n'est possible pour un joueur un message est affiché
+* Votre script détecte la fin de partie et affiche le résultat
+* On peut alors rejouer et le score finale vient s'ajouter. Il est possible de réinitialiser les scores sans rafraîchir la page.
 
 De toute évidence il faut d'abord savoir jouer. Installer une version gratuite sur son smartphone est un point de départ.
 
@@ -72,9 +72,9 @@ Il n'est pas encore envisageable sur nos machines d'explorer tous les coups jusq
 
 
 
- 	  * score = 0 : la position est nulle.
- 	  * score > 0 : les blancs ont un avantage, plus le score est élevé plus cet avantage est grand.
- 	  * score < 0 : inversement, les noirs ont un avantage.
+* score = 0 : la position est nulle.
+* score > 0 : les blancs ont un avantage, plus le score est élevé plus cet avantage est grand.
+* score < 0 : inversement, les noirs ont un avantage.
 
 De nombreux algorithmes existent déjà, une version "light" de cette partie peut-être d'en implémenter un. Dans ce cas on s'attend à ce que le programme tourne convenablement à la fin du projet.
 
@@ -90,10 +90,10 @@ Différentes stratégies existent mais aucune n'est parfaite.
 
 
 
- 	  * Maximiser à chaque tour le nombre de jetons capturés - c'est une stratégie très faible qui ne peut servir que de premier jet.
- 	  * Pondérer chaque case en fonction de sa position. Chaque case se voit affecter une valeur et l'ordinateur cherche la meilleure combinaison possible - cette stratégie ne gagnera pas contre un joueur humain un peu expérimenté.
- 	  * Optimiser la mobilité : le nombre de coups disponibles et minimiser les disques frontières (voisins d'une case vide) - cela devrait vaincre sans problème un humain "normal" :)
- 	  * Reconnaissance de schémas : maximiser la mobilité, minimiser les disques frontières et découper localement des configurations. On évalue ensuite la meilleure configuration depuis une base de donnée de parties et on calcule les statistiques des meilleurs résultats.
+* Maximiser à chaque tour le nombre de jetons capturés - c'est une stratégie très faible qui ne peut servir que de premier jet.
+* Pondérer chaque case en fonction de sa position. Chaque case se voit affecter une valeur et l'ordinateur cherche la meilleure combinaison possible - cette stratégie ne gagnera pas contre un joueur humain un peu expérimenté.
+* Optimiser la mobilité : le nombre de coups disponibles et minimiser les disques frontières (voisins d'une case vide) - cela devrait vaincre sans problème un humain "normal" :)
+* Reconnaissance de schémas : maximiser la mobilité, minimiser les disques frontières et découper localement des configurations. On évalue ensuite la meilleure configuration depuis une base de donnée de parties et on calcule les statistiques des meilleurs résultats.
 
 La grande difficulté de ce travail consiste donc à explorer les différents coups possibles en les repérant, les triant convenablement puis en les évaluant. Ensuite la contrainte de temps est majeure : l'ordinateur doit répondre à temps.
 

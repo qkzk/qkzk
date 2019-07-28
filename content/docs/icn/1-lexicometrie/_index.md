@@ -3,8 +3,8 @@ author: qu3nt1n
 date: 2016-07-01 14:20:49+00:00
 draft: false
 title: 01. Lexicométrie
+weight: 1
 
-url: /
 ---
 
 
@@ -13,10 +13,10 @@ Notions abordées
 
 
 
- 	  * lexicométrie
- 	  * extraction d'un texte à partir d'un pdf
- 	  * encodage des caractères
- 	  * python
+ lexicométrie
+ extraction d'un texte à partir d'un pdf
+ encodage des caractères
+ python
 
 
 
@@ -139,7 +139,7 @@ Il est maintenant prêt à l'emploi !
 
 
 
-* * *
+---
 
 
 
@@ -164,15 +164,15 @@ Récupérer le script [count_letter.py](http://qkzk.xyz/docs/count_letter.py) et
 
 
 
-    
-    <code>
+
+
     #!/usr/bin/env python
     # -*- coding: utf-8 -*-
-    
+
     '''
-    
+
     '''
-    
+
     from string import ascii_lowercase     # ascii_lowercase =='abcdefghijklmnopqrstuvwxyz'
     print "Nom du fichier"
     with open('votrefichier.txt') as f:
@@ -181,7 +181,7 @@ Récupérer le script [count_letter.py](http://qkzk.xyz/docs/count_letter.py) et
         for x in ascii_lowercase:
             dic[x] = text.count(x)
     print dic
-    </code>
+
 
 
 Les deux premières lignes indiquent à Python que c'est un code source Python écrit en utf8. Entre les ''' et ''' on peut écrire autant de commentaire qu'on veut, ils ne seront pas interprétés.

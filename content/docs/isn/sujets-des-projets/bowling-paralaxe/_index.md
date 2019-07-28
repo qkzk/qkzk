@@ -63,7 +63,7 @@ Si la boule passe trop près d'un quille en jeu, celle-ci devient "touchée". El
 * D'autres combinaisons font tomber certaines quilles à coup sûr.
 
 
-* Les points sont grandement simplifiés par rapport aux règles du bowling.
+* Les scores sont grandement simplifiés par rapport aux règles du bowling.
 
   * 12 tours. Fin de partie au 13ème (on développera avec moins, bien sûr)
   * 2 lancers par tours. Un strike fait passer au premier lancer du tour suivant.

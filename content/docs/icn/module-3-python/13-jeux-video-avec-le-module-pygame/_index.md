@@ -4,7 +4,7 @@ date: 2017-04-13 17:10:23+00:00
 draft: false
 title: 13 - Jeux vidéo avec le module Pygame
 
-url: /
+
 ---
 
 ![Python Pygame](http://fsincere.free.fr/isn/python/picto/pygame_logo.png)
@@ -63,8 +63,8 @@ Deux ouvrages sur Pygame (pour Python version 3) sont consultables et téléchar
 
 
 
- 	  * [inventwithpython.com](http://inventwithpython.com/)
- 	  * [inventwithpython.com/chapters](http://inventwithpython.com/chapters/) (chapters 17 to 20)
- 	  * [inventwithpython.com/pygame/chapters](http://inventwithpython.com/pygame/chapters/)
+ [inventwithpython.com](http://inventwithpython.com/)
+ [inventwithpython.com/chapters](http://inventwithpython.com/chapters/) (chapters 17 to 20)
+ [inventwithpython.com/pygame/chapters](http://inventwithpython.com/pygame/chapters/)
 
 Source - [Fabrice Sincère](http://fsincere.free.fr/isn/python/cours_python_pygame.php) - [Contenu sous licence CC BY-NC-SA 3.0](http://creativecommons.org/licenses/by-nc-sa/3.0/fr/)

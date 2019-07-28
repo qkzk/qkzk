@@ -7,12 +7,16 @@ weight: 9
 ---
 
 
+**Remarque :** l'API Google Map a considérablement changé depuis la rédaction
+de ce tutoriel. Il n'est plus possible de l'intégrer à une page web et d'y
+faire des requêtes. Des alternatives gratuites et libres existent comme openStreetMap
+mais ce tutoriel ne sera pas remis à jour pour autant.
 
 Notions abordées dans cette page
 
 
 
- 	  * un exemple d'API : Google Map v3
+* un exemple d'API : Google Map v3
 
 
 
@@ -98,9 +102,9 @@ utilisée. Dans notre cas cela se fait en ajoutant la ligne suivante
 dans la partie `head` de la page HTML, avant la
 déclaration de nos propres scripts :
 
-
-    <script src="http://maps.google.com/maps/api/js?sensor=false" type="text/javascript"></script>
-
+~~~javascript
+<script src="http://maps.google.com/maps/api/js?sensor=false" type="text/javascript"></script>
+~~~
 
 Il faudra également que notre page HTML contienne un élément
 identifié qui accueillera l'image de la carte désirée. Donc quelque
@@ -112,9 +116,9 @@ On peut bien sûr ajouter des informations CSS telle `class="..."`
 
 
 
-
-    <div id="maCarte"></div>
-
+~~~javascript
+<div id="maCarte"></div>
+~~~
 
 
 Le chargement de cette API nous permet d'en utiliser les
@@ -139,10 +143,10 @@ Les valeurs définies par le type `google.maps.MapTypeId`
 
 
 
- 	  * les coordonnées (latitude, longitude) du centre de la carte :
+* les coordonnées (latitude, longitude) du centre de la carte :
  option `center`, de type `google.maps.LatLng`
- 	  * le facteur de zoom : option `zoom`, un entier
- 	  * le type de carte utilisée :
+* le facteur de zoom : option `zoom`, un entier
+* le type de carte utilisée :
  option `mapTypeId`, de
  type `google.maps.MapTypeId`
 
@@ -151,17 +155,17 @@ Pour créer une carte, il faut donc définir ces données ce qui donne
  quelque chose comme :
 
 
+~~~javascript
+var lElement  = document.getElementById("maCarte");
+var leCentre = new google.maps.LatLng(50.609731,3.137511);
+var lesOptions = {
+	center: leCentre,
+	zoom: 17,
+	mapTypeId: google.maps.MapTypeId.ROADMAP
+};
 
-    var lElement  = document.getElementById("maCarte");
-    var leCentre = new google.maps.LatLng(50.609731,3.137511);
-    var lesOptions = {
-    	center: leCentre,
-    	zoom: 17,
-    	mapTypeId: google.maps.MapTypeId.ROADMAP
-    };
-
-    var laCarte = new google.maps.Map(lElement, lesOptions);
-
+var laCarte = new google.maps.Map(lElement, lesOptions);
+~~~
 
 
 Les scripts Google Map et les informations sur les images sont
@@ -206,8 +210,8 @@ s'affichent alors dans la zone de texte en haut.
 
 
 
- 	  1. Adaptez l'exercice précédent pour centrer la carte sur votre lycée.
- 	  2. Ajoutez aux options déjà gérées celle-ci :
+1. Adaptez l'exercice précédent pour centrer la carte sur votre lycée.
+2. Ajoutez aux options déjà gérées celle-ci :
 
 
     disableDefaultUI: true
@@ -215,7 +219,7 @@ s'affichent alors dans la zone de texte en haut.
 
 
 et testez.
- 	  3. Idem pour celle-ci
+3. Idem pour celle-ci
 
 
     scrollwheel:false
@@ -223,7 +227,7 @@ et testez.
 
 
 
- 	  4. Pour faciliter le travail qui suit, nous allons gérer dans une variable globale
+4. Pour faciliter le travail qui suit, nous allons gérer dans une variable globale
 pour représenter la donnée de type `google.maps.Map`
 manipulée.
 Faites la modification nécessaire qui consiste à placer la déclaration
@@ -235,13 +239,13 @@ Faites la modification nécessaire qui consiste à placer la déclaration
 
 en dehors de toute fonction et à ne pas la masquer par une déclaration
 locale au sein d'une fonction.
- 	  5. Ajoutez à votre page un champ de saisie (`input`) dans
+5. Ajoutez à votre page un champ de saisie (`input`) dans
 lequel l'utilisateur peut fournir un entier. A chaque changement de
 valeur, le facteur de zoom de la carte est changé.
- 	  6. Ajoutez deux nouveaux champs de saisie, un pour la
+6. Ajoutez deux nouveaux champs de saisie, un pour la
 latitude, un pour la longitude, à chaque changement de l'un ou
 l'autre on change le centre de la carte en conséquence.
- 	  7. Ajoutez un "bouton" qui permet de basculer entre les affichages en
+7. Ajoutez un "bouton" qui permet de basculer entre les affichages en
 mode "_satellite_" et "_route_", sachant qu'initialement
 le mode est "_route_".
 
@@ -281,9 +285,9 @@ On peut aussi préférer écrire ainsi :
 
 
 
- 	  1. Ajoutez ce code à la page créée lors de la **Manip' 1** pour en
+1. Ajoutez ce code à la page créée lors de la **Manip' 1** pour en
 constater le résultat.
- 	  2. Ajoutez deux nouveaux champs de saisie, un pour la
+2. Ajoutez deux nouveaux champs de saisie, un pour la
 latitude, un pour la longitude, plus un "bouton" **Ajouter**. Un
 clic sur ce bouton provoque l'ajout sur la carte d'un marqueur aux
 coordonnées fournies par les deux champs de saisie.
@@ -303,14 +307,14 @@ caractères contenant du code HTML.
 
 
 
- 	  1. Ajoutez une "_info window_" à la place de la punaise
+1. Ajoutez une "_info window_" à la place de la punaise
 précédente. Mettez pour `content` la valeur `"un
 **premier** exemple d'info"`.
- 	  2. Testez
- 	  3. Modifiez pour centrer la carte sur votre lycée et afficher
+2. Testez
+3. Modifiez pour centrer la carte sur votre lycée et afficher
 une fenêtre d'information qui reprend le nom de votre lycée et une
 photo de celui-ci (pas trop grande !)
- 	  4. Reprenez la **Manip'** sur les monuments et affichez dans une
+4. Reprenez la **Manip'** sur les monuments et affichez dans une
 page la carte de France (cherchez le bon zoom initial) avec
 une _info window_ par monument.
 
@@ -323,7 +327,7 @@ une _info window_ par monument.
 
 
 
- 	  1. Reprenez le travail produit à la **Manip' 1** et ajoutez le
+1. Reprenez le travail produit à la **Manip' 1** et ajoutez le
 code suivant à la fin de la fonction de création de la carte :
 
 
@@ -353,9 +357,9 @@ code suivant à la fin de la fonction de création de la carte :
 Il vous permet de visualiser le trajet entre le bâtiment M3 qui
 héberge le Laboratoire d'Informatique de Lille ([LIFL](http://www.lifl.fr)) et le
 Restaurant Universitaire sur le campus de Lille 1.
- 	  2. Testez le résultat et analysez ce code pour comprendre son
+2. Testez le résultat et analysez ce code pour comprendre son
 fonctionnement
- 	  3. En vous en inspirant, créez une page sur laquelle vous afficherez
+3. En vous en inspirant, créez une page sur laquelle vous afficherez
 une carte avec un marqueur pour votre domicile et un pour votre
 lycée et vous tracerez le trajet que vous empruntez chaque matin
 pour vous rendre au lycée (adaptez le facteur de zoom si nécessaire).

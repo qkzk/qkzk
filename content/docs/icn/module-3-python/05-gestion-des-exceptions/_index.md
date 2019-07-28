@@ -4,7 +4,7 @@ date: 2017-04-13 16:10:35+00:00
 draft: false
 title: 05. Gestion des exceptions
 
-url: /
+
 ---
 
 Intéressons-nous au script suivant :
@@ -215,6 +215,6 @@ Compléter le script pour gérer proprement l'exception :
 
 
 
- 	  * [Documentation sur les exceptions](http://docs.python.org/3/tutorial/errors.html#exceptions)
+ [Documentation sur les exceptions](http://docs.python.org/3/tutorial/errors.html#exceptions)
 
 Source : [Fabrice Sincère](http://fsincere.free.fr/isn/python/cours_python_ch5.php) - [Contenu sous licence CC BY-NC-SA 3.0](http://creativecommons.org/licenses/by-nc-sa/3.0/fr/)

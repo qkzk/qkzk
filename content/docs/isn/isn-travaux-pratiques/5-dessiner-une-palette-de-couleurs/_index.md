@@ -14,17 +14,17 @@ Notions abordées / pré-requis
 
 
 
-  * le codage des couleurs
-  * propriétés CSS modifiant les couleurs
-  * programmation évènementielle
-  * fonctions
+* le codage des couleurs
+* propriétés CSS modifiant les couleurs
+* programmation évènementielle
+* fonctions
 
 
 Nouvelles notions
 
 
 
-  * boucle pour
+* boucle pour
 
 
 
@@ -79,9 +79,9 @@ de 00 à FF (en décimale de 0 à 255). Ainsi le noir correspond à 000000 et le
 
 
 
-  Sachant que la couleur jaune est un mélange de rouge et de vert,
-  quel sera le nombre qui représentera le jaune (en codage
-  héxadécimal).
+Sachant que la couleur jaune est un mélange de rouge et de vert,
+quel sera le nombre qui représentera le jaune (en codage
+héxadécimal).
 
 
 
@@ -100,7 +100,7 @@ couleur de fond est `background-color`. On se rappelle aussi qu'en HTML le code 
 
 
 
-  Ecrire une page HTML avec un texte en rouge sur fond jaune. Vous définirez un style CSS nommé `rougesurjaune`.
+Ecrire une page HTML avec un texte en rouge sur fond jaune. Vous définirez un style CSS nommé `rougesurjaune`.
 
 
 
@@ -121,7 +121,7 @@ On souhaite maintenant créer un carré de couleur qui, lorsqu'on clique dessus,
 
 
 
-
+~~~html
     <html>
 
       <head>
@@ -148,7 +148,7 @@ On souhaite maintenant créer un carré de couleur qui, lorsqu'on clique dessus,
         </div>
     </body>
     </html>
-
+~~~html
 
 
 
@@ -164,9 +164,9 @@ propriété CSS est le suivant.
 
 
 
-
+~~~javascript
     document.getElementById("monCarre").style.background = "#00FF00";
-
+~~~
 
 
 
@@ -193,32 +193,21 @@ pour les propriétés de couleur CSS.
 
 
 
-
-    // transforme le nombre d exprimé en décimal
-    // en une chaîne de caratères représentant le nombre
-    // en hexadécimal sur 6 digits
-    function decimalToHex (d) {
-      var hex = Number(d).toString(16);
-      var padding = 6 - hex.length;
-      // ajoute des 0 en tête de la chaîne pour obtenir 6 digits
-      for (var i = 0; i < padding; i++) {
-        hex = "0" + hex;
-      }
-      // enfin, ajoute # devant la chaîne de caractères
-      return "#"+hex;
-    }
-
-
-
-
-
-
-
-
-  Ajouter dans votre page ce code JavaScript puis créer une
-  fonction `couleurAleatoire` qui retourne une couleur
-  aléatoire sous forme d'une chaîne de caratère formattée pour les
-  propriétés de couleur CSS.
+~~~javascript
+// transforme le nombre d exprimé en décimal
+// en une chaîne de caratères représentant le nombre
+// en hexadécimal sur 6 digits
+function decimalToHex (d) {
+  var hex = Number(d).toString(16);
+  var padding = 6 - hex.length;
+  // ajoute des 0 en tête de la chaîne pour obtenir 6 digits
+  for (var i = 0; i < padding; i++) {
+    hex = "0" + hex;
+  }
+  // enfin, ajoute # devant la chaîne de caractères
+  return "#"+hex;
+}
+~~~
 
 
 
@@ -226,8 +215,10 @@ pour les propriétés de couleur CSS.
 
 
 
-  On est prêt maintenant pour ajouter une action de changement de
-  couleur sur l'élément `monCarre`.
+Ajouter dans votre page ce code JavaScript puis créer une
+fonction `couleurAleatoire` qui retourne une couleur
+aléatoire sous forme d'une chaîne de caratère formattée pour les
+propriétés de couleur CSS.
 
 
 
@@ -235,7 +226,8 @@ pour les propriétés de couleur CSS.
 
 
 
-  On rappelle que le code suivant :
+On est prêt maintenant pour ajouter une action de changement de
+couleur sur l'élément `monCarre`.
 
 
 
@@ -243,8 +235,16 @@ pour les propriétés de couleur CSS.
 
 
 
-    document.getElementById('monCarre').addEventListener("click",changeCouleurMonCarre);
+On rappelle que le code suivant :
 
+
+
+
+
+
+~~~javascript
+document.getElementById('monCarre').addEventListener("click",changeCouleurMonCarre);
+~~~
 
 
 
@@ -260,10 +260,10 @@ l'évènement `click` sur l'objet `monCarre`.
 
 
 
-    Ajouter au code JavaScript de votre page une
-    fonction `changeCouleurAleatoire` qui prend en paramètre
-    l'identifiant d'un élément de la page et qui a pour effet
-    d'attribuer une couleur aléatoire à cet élément.
+Ajouter au code JavaScript de votre page une
+fonction `changeCouleurAleatoire` qui prend en paramètre
+l'identifiant d'un élément de la page et qui a pour effet
+d'attribuer une couleur aléatoire à cet élément.
 
 
 
@@ -271,12 +271,12 @@ l'évènement `click` sur l'objet `monCarre`.
 
 
 
-    Ajouter au code JavaScript de votre page une
-    fonction `changeCouleurMonCarre` qui aura pour effet
-    d'attribuer une couleur aléatoire à
-    l'objet `monCarre`. Puis ajouter le code JavaScript
-    d'abonnement de cette fonction. Tester, vous devriez pouvoir
-    modifier la couleur du carré en cliquant dessus.
+Ajouter au code JavaScript de votre page une
+fonction `changeCouleurMonCarre` qui aura pour effet
+d'attribuer une couleur aléatoire à
+l'objet `monCarre`. Puis ajouter le code JavaScript
+d'abonnement de cette fonction. Tester, vous devriez pouvoir
+modifier la couleur du carré en cliquant dessus.
 
 
 
@@ -301,14 +301,11 @@ seule fois, comme par exemple dans le code ci-dessous :
 
 
 
-
-    1: x = 1;
-    2: y = x * x;
-    3: document.write(x + " * " + x + " = " + y);
-
-
-
-
+~~~javascript
+x = 1;
+y = x * x;
+document.write(x + " * " + x + " = " + y);
+~~~
 
 
 
@@ -321,14 +318,14 @@ d'écrire :
 
 
 
-
-    1: x = 1;
-    2: y = x * x;
-    3: document.write(x + " * " + x + " = " + y);
-    4: x = 2;
-    5: y = x * x;
-    6: document.write(x + " * " + x + " = " + y);
-
+~~~javascript
+x = 1;
+y = x * x;
+document.write(x + " * " + x + " = " + y);
+x = 2;
+y = x * x;
+document.write(x + " * " + x + " = " + y);
+~~~
 
 
 
@@ -355,21 +352,22 @@ une meilleure écriture du code ci-dessus.
 
 
 
+~~~javascript
+function carre (x) {
+  return x * x;
+}
 
-    function carre (x) {
-      return x * x;
-    }
+function imprimer_carre (x) {
+  var y = x * x;
+  document.write(x + " * " + x + " = " + y);
+}
 
-    function imprimer_carre (x) {
-      var y = x * x;
-      document.write(x + " * " + x + " = " + y);
-    }
+x = 1;
+imprimer_carre (x);
+x = 2;
+imprimer_carre (x);
 
-    1: x = 1;
-    2: imprimer_carre (x);
-    3: x = 2;
-    4: imprimer_carre (x);
-
+~~~
 
 
 
@@ -395,12 +393,12 @@ répéter les instructions ci-dessus 10 fois.
 
 
 
-
-    for (i = 1; i <= 10; i++) {
-      document.write("x = " + i + ";</br>");
-      document.write(imprime_carre(x)+"</br>");
-    }
-
+~~~javascript
+for (i = 1; i <= 10; i++) {
+  document.write("x = " + i + ";</br>");
+  document.write(imprime_carre(x)+"</br>");
+}
+~~~
 
 
 
@@ -456,11 +454,11 @@ En Javascrit, répéter 52 fois l'affichage du mot semaine s'écrira :
 
 
 
-
-    for (var i = 1; i <= 52; i++) {
-      document.write("semaine");
-    }
-
+~~~javascript
+for (var i = 1; i <= 52; i++) {
+  document.write("semaine");
+}
+~~~
 
 
 
@@ -493,16 +491,16 @@ trois instructions entre les parenthèses :
 
 
 
-  * la première instruction détermine l'action
+* la première instruction détermine l'action
 faite avant la première exécution du
 bloc d'instructions entre les accolades : on y initialise la variable
 de boucle
-  * la seconde instruction est le test
+* la seconde instruction est le test
 d'arrêt de la boucle, ce test est
 réalisé avant l'exécution du bloc
 d'instructions, dès qu'il est faux alors le bloc d'instructions n'est
 pas réalisé et on sort de la boucle : on y indique la valeur maximale que peut atteindre la variable de boucle
-  * la troisième instruction est l'action
+* la troisième instruction est l'action
 exécutée après l'exécution du bloc
 d'instructions : on y modifie la variable de boucle
 
@@ -538,11 +536,11 @@ ci-dessous.
 
 
 
-
-    for (var i = 1; i <= 52; i++) {
-      document.write("semaine " + i);
-    }
-
+~~~javascript
+for (var i = 1; i <= 52; i++) {
+  document.write("semaine " + i);
+}
+~~~
 
 
 
@@ -597,14 +595,14 @@ de la division entière.
 
 
 
-
-    var i = 0;
-    for (i = 0; i < 100; i++) {
-      if ((i % 3 == 0) && (i % 5 == 0)) {
-        document.write(i + " ");
-      }
-    }
-
+~~~javascript
+var i = 0;
+for (i = 0; i < 100; i++) {
+  if ((i % 3 == 0) && (i % 5 == 0)) {
+    document.write(i + " ");
+  }
+}
+~~~
 
 
 
@@ -617,15 +615,15 @@ mais il serait préférable d'écrire :
 
 
 
-
-    var i = 0;
-    var max = 100;
-    for (i = 0; i < max; i++) {
-      if ((i % 3 == 0) && (i % 5 == 0)) {
-        document.write(i + " ");
-      }
-    }
-
+~~~javascript
+var i = 0;
+var max = 100;
+for (i = 0; i < max; i++) {
+  if ((i % 3 == 0) && (i % 5 == 0)) {
+    document.write(i + " ");
+  }
+}
+~~~
 
 
 
@@ -646,16 +644,16 @@ et on pourrait même en faire une fonction :
 
 
 
-
-    function imprimer_multiples_de_2_et_3 (max) {
-      var i = 0;
-      for (i = 0; i < max; i++) {
-        if ((i % 3 == 0) && (i % 5 == 0)) {
-          document.write(i + " ");
-        }
-      }
+~~~javascript
+function imprimer_multiples_de_2_et_3 (max) {
+  var i = 0;
+  for (i = 0; i < max; i++) {
+    if ((i % 3 == 0) && (i % 5 == 0)) {
+      document.write(i + " ");
     }
-
+  }
+}
+~~~
 
 
 
@@ -843,16 +841,16 @@ de 4*4 = 16 couleurs. Cette solution utilise deux boucles pour imbriquées.
 
 
 
-
-    var i = 0, j = 0;
-    for (i = 0; i < 256; i = i + 85) {
-      for (j = 0; j < 256; j = j + 85) {
-        var couleur = 256 * i + j;
-        document.write("<div class="carre" id="carre" + couleur + ""></div>");
-        changeCouleur("carre"+couleur,couleur);
-      }
-    }
-
+~~~javascript
+var i = 0, j = 0;
+for (i = 0; i < 256; i = i + 85) {
+  for (j = 0; j < 256; j = j + 85) {
+    var couleur = 256 * i + j;
+    document.write("<div class="carre" id="carre" + couleur + ""></div>");
+    changeCouleur("carre"+couleur,couleur);
+  }
+}
+~~~
 
 
 

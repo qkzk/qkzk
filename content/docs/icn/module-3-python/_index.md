@@ -3,8 +3,8 @@ author: qu3nt1n
 date: 2016-07-01 12:47:04+00:00
 draft: false
 title: 'module 3 : python'
+weight: -7
 
-url: /
 ---
 
 # Découverte du Langage Python
@@ -31,11 +31,11 @@ Un autre point capital à réaliser est que Python nécessite une installation. 
 
 
 
- 	  * Comme tous les cours de programmation on suppose une certaine acquisition de l'autonomie au fur et à mesure de vos découvertes...
- 	  * Chapitres indispensables : de 0 à 4
- 	  * Chapitres indispensables pour développer de manière efficace et se lancer dans un long projet : 5 et 6
- 	  * Les chapitres 8 à 10 sont à envisager dans un contexte de projet
- 	  * Les derniers chapitres correspondent plus à une série de projets à développer dont ils posent les fondations. Le reste est à construire...
+ Comme tous les cours de programmation on suppose une certaine acquisition de l'autonomie au fur et à mesure de vos découvertes...
+ Chapitres indispensables : de 0 à 4
+ Chapitres indispensables pour développer de manière efficace et se lancer dans un long projet : 5 et 6
+ Les chapitres 8 à 10 sont à envisager dans un contexte de projet
+ Les derniers chapitres correspondent plus à une série de projets à développer dont ils posent les fondations. Le reste est à construire...
 
 
 
@@ -77,12 +77,12 @@ Un autre point capital à réaliser est que Python nécessite une installation. 
 ## LES ANCIENS ENSEIGNEMENTS
 
 
-Ce qui suit n'est plus d'actualité. Je l'ai laissé pour mémoire. 
+Ce qui suit n'est plus d'actualité. Je l'ai laissé pour mémoire.
 
 Pour tous les élèves commençant un enseignement après la rentrée 2018, **il faut travailler avec les supports du menu.**
 
 
-# 
+#
 
 
 
@@ -103,9 +103,9 @@ Notions abordées
 
 
 
- 	  * Premier programme
- 	  * découpage d'un programme en séquences
- 	  * tutoriel openclassrooms : [Python partie 1](https://openclassrooms.com/courses/apprenez-a-programmer-en-python/qu-est-ce-que-python)
+ Premier programme
+ découpage d'un programme en séquences
+ tutoriel openclassrooms : [Python partie 1](https://openclassrooms.com/courses/apprenez-a-programmer-en-python/qu-est-ce-que-python)
 
 
 
@@ -140,7 +140,7 @@ Autre remarque importante, la partie suivante étant un TP à réaliser en class
 
 
 
-* * *
+---
 
 
 
@@ -158,14 +158,14 @@ Pré-requis On suppose qu'ont été vues les notions de :
 
 
 
- 	  * tutoriel openclassrooms : [Python partie 1](https://openclassrooms.com/courses/apprenez-a-programmer-en-python/qu-est-ce-que-python)
+ tutoriel openclassrooms : [Python partie 1](https://openclassrooms.com/courses/apprenez-a-programmer-en-python/qu-est-ce-que-python)
 
 Notions abordées
 
 
 
- 	  * Utilisation des fonctions de base de Python
- 	  * premiers travaux
+ Utilisation des fonctions de base de Python
+ premiers travaux
 
 
 
@@ -197,10 +197,10 @@ Trois critères seront pris en compte :
 
 
 
- 	  * Le respect des consignes énoncées plus haut.
- 	  * La qualité du code et les commentaires que vous y apporterez. J'insiste sur ce point.
- 	  * La gestion des erreurs : si l'utilisateur tape n'importe quoi, comment votre programme réagit-il ?
- 	  * Le temps qu'il vous faut pour le réaliser. Il faudra donc m'envoyer un mail signifiant la réalisation de votre programme et son dépôt sur le drive.
+ Le respect des consignes énoncées plus haut.
+ La qualité du code et les commentaires que vous y apporterez. J'insiste sur ce point.
+ La gestion des erreurs : si l'utilisateur tape n'importe quoi, comment votre programme réagit-il ?
+ Le temps qu'il vous faut pour le réaliser. Il faudra donc m'envoyer un mail signifiant la réalisation de votre programme et son dépôt sur le drive.
 
 **Ce travail est un TP de groupe mais peut être individuel.** Son objectif est d'évaluer vos capacités, bien plus que de vous pénaliser si vous rencontrez des difficultés. Si vous êtes incapable de le réaliser, vous n'avancerez que très difficilement par la suite... Aussi n'hésitez pas à demander de l'aide.
 
@@ -212,18 +212,18 @@ Muni de vos outils, découpez votre programme en séquences. Voici un plan :
 
 
 
- 	  * Tirer un entier au hasard entre 1 et 10 et l'afficher.
+ Tirer un entier au hasard entre 1 et 10 et l'afficher.
 _Durant la programmation, vous aurez besoin de connaitre le nombre choisi par la machine. Ce n'est qu'une fois terminé qu'il faut le cacher._
- 	  * Demander à l'utilisateur de proposer un nombre et afficher une réponse si celui-ci est juste.
- 	  * Réaliser les autres comparaisons (plus petit, plus grand).
- 	  * Réaliser une fonction contenant une boucle while. Celle-ci demande un nombre à l'utilisateur et l'affiche. Le critère d'arrêt de la boucle est que le nombre soit égal à une valeur prédéfinie.
- 	  * Recommencer en affichant "plus petit !", "plus grand !" selon les cas.
- 	  * Tous les éléments pour créer le jeu sont alors à votre disposition, il s'agit maintenant de les combiner.
+ Demander à l'utilisateur de proposer un nombre et afficher une réponse si celui-ci est juste.
+ Réaliser les autres comparaisons (plus petit, plus grand).
+ Réaliser une fonction contenant une boucle while. Celle-ci demande un nombre à l'utilisateur et l'affiche. Le critère d'arrêt de la boucle est que le nombre soit égal à une valeur prédéfinie.
+ Recommencer en affichant "plus petit !", "plus grand !" selon les cas.
+ Tous les éléments pour créer le jeu sont alors à votre disposition, il s'agit maintenant de les combiner.
 
 
 
 
-* * *
+---
 
 
 
@@ -241,14 +241,14 @@ Pré-requis On suppose qu'ont été vues les notions de :
 
 
 
- 	  * tutoriel openclassrooms : [Python partie 1](https://openclassrooms.com/courses/apprenez-a-programmer-en-python/qu-est-ce-que-python)
- 	  * Création d'un premier programme
+ tutoriel openclassrooms : [Python partie 1](https://openclassrooms.com/courses/apprenez-a-programmer-en-python/qu-est-ce-que-python)
+ Création d'un premier programme
 
 Notions abordées
 
 
 
- 	  * Les listes, les tableaux
+ Les listes, les tableaux
 
 
 
@@ -262,7 +262,7 @@ La consigne est de parvenir à la fin de la [ deuxième partie](https://openclas
 
 
 
-* * *
+---
 
 
 
@@ -270,7 +270,7 @@ _Ici s'arrêtent les pré requis nécessaires à l'option facultative de premiè
 
 
 
-* * *
+---
 
 
 
@@ -299,13 +299,13 @@ Pré-requis On suppose qu'ont été vues les notions de :
 
 
 
- 	  * tutoriel openclassrooms : Python, les deux premières parties
+ tutoriel openclassrooms : Python, les deux premières parties
 
 Notions abordées
 
 
 
- 	  * Pygame
+ Pygame
 
 
 
@@ -320,7 +320,7 @@ Votre objectif est donc très simple, parvenir jusqu'au TP du tutoriel. Celui-ci
 
 
 
-* * *
+---
 
 
 
@@ -345,13 +345,13 @@ Pré-requis On suppose qu'ont été vues les notions de :
 
 
 
- 	  * tutoriel openclassrooms : Python (les deux premières parties), pygame
+ tutoriel openclassrooms : Python (les deux premières parties), pygame
 
 Notions abordées
 
 
 
- 	  * Pygame : création d'un petit jeu-video
+ Pygame : création d'un petit jeu-video
 
 
 
@@ -433,25 +433,25 @@ C'est l'occasion d'implémenter la fin de partie.
 
 
 
- 	  * Créer les éléments premiers graphiques (joueur, bonus, malus, sol, ciel). On pourra utiliser [photofiltre](http://www.photofiltre-studio.com/pf7.htm).
- 	  * Afficher le personne sur le sol.
- 	  * Le déplacer au clavier (gauche, droite).
+ Créer les éléments premiers graphiques (joueur, bonus, malus, sol, ciel). On pourra utiliser [photofiltre](http://www.photofiltre-studio.com/pf7.htm).
+ Afficher le personne sur le sol.
+ Le déplacer au clavier (gauche, droite).
 Tourner le personnage selon sa direction
- 	  * Afficher un bonus, le faire descendre verticalement (et disparaitre).
- 	  * Faire revenir le bonus en haut de l'écran.
- 	  * Choisir aléatoirement l'absisse du bonus quand il revient en haut de l'écran.
- 	  * Détecter la collision de Tête de Pioche et du bonus.
+ Afficher un bonus, le faire descendre verticalement (et disparaitre).
+ Faire revenir le bonus en haut de l'écran.
+ Choisir aléatoirement l'absisse du bonus quand il revient en haut de l'écran.
+ Détecter la collision de Tête de Pioche et du bonus.
 Il frappe alors la brique.
- 	  * Afficher un score
- 	  * Adapter ce travail au malus, choisir aléatoirement l'un ou l'autre quand l'objet arrive en bas. Gérer la défaite.
- 	  * Afficher 4 objets qui font la même chose (nature aléatoire, absisse aléatoire, descente, collision).
+ Afficher un score
+ Adapter ce travail au malus, choisir aléatoirement l'un ou l'autre quand l'objet arrive en bas. Gérer la défaite.
+ Afficher 4 objets qui font la même chose (nature aléatoire, absisse aléatoire, descente, collision).
 Le jeu est maitnenant jouable.
- 	  * L'étape suivante est la gestion d'une quantité quelconque de bonus/malus.
+ L'étape suivante est la gestion d'une quantité quelconque de bonus/malus.
 
 
 
 
-* * *
+---
 
 
 
@@ -476,13 +476,13 @@ Pré-requis On suppose qu'ont été vues les notions de :
 
 
 
- 	  * Tête de pioche
+ Tête de pioche
 
 Notions abordées
 
 
 
- 	  * Zigzag
+ Zigzag
 
 
 
@@ -514,15 +514,15 @@ On créera dans cet ordre les éléments :
 
 
 
- 	  * une cellule
- 	  * le déplacement de cette cellule
- 	  * un "ruban" continu de cellule - c'est clairement la première étape cruciale
- 	  * la balle et son déplacement
- 	  * la défaite (tomber) - voici la deuxième étape importante
- 	  * le score
- 	  * le rebord vertical des cellules
- 	  * les bonus (les diamants mauves)
- 	  * le changement aléatoire de couleur
+ une cellule
+ le déplacement de cette cellule
+ un "ruban" continu de cellule - c'est clairement la première étape cruciale
+ la balle et son déplacement
+ la défaite (tomber) - voici la deuxième étape importante
+ le score
+ le rebord vertical des cellules
+ les bonus (les diamants mauves)
+ le changement aléatoire de couleur
 
 
 
@@ -542,15 +542,15 @@ On pourra ajouter des fonctionnalités, voici quelques suggestions (liste non li
 
 
 
- 	  * meilleur score dans un cookie
- 	  * la chute des cellules parvenues en bas de l'écran
- 	  * la chute de la balle qui tombe
- 	  * les menus : pause, restart etc.
- 	  * les autres statistiques du joueur : nombre de parties, de bonus etc.
- 	  * l'effet de lumière autour de la bille (regardez bien)
- 	  * des sons
- 	  * différentes résolutions
- 	  * rendre le jeu jouable avec une manette
+ meilleur score dans un cookie
+ la chute des cellules parvenues en bas de l'écran
+ la chute de la balle qui tombe
+ les menus : pause, restart etc.
+ les autres statistiques du joueur : nombre de parties, de bonus etc.
+ l'effet de lumière autour de la bille (regardez bien)
+ des sons
+ différentes résolutions
+ rendre le jeu jouable avec une manette
 
 
 
@@ -561,11 +561,11 @@ Si Zigzag ne vous branche pas ou si vous trouvez le principe difficile, vous pou
 
 
 
- 	  * **Pong**, à deux joueurs sur le même clavier
- 	  * **Démineur, **un grand tableau, une seule action possible (cliquer sur une case)
- 	  * **Un jeu de plateformes,** déjà plus difficile. En particulier les sauts.
- 	  * **Le jeu de la vie** (de Conway). Aussi difficile à réaliser que Zigzag, assez simple en Python (on verra pourquoi) et très intéressant d'un point de vue historique.
- 	  * Et sinon ? **Mastermind**, **Le compte est bon**, **Don't click the white tile...** Ou presque n'importe quel jeu simple...
+ **Pong**, à deux joueurs sur le même clavier
+ **Démineur, **un grand tableau, une seule action possible (cliquer sur une case)
+ **Un jeu de plateformes,** déjà plus difficile. En particulier les sauts.
+ **Le jeu de la vie** (de Conway). Aussi difficile à réaliser que Zigzag, assez simple en Python (on verra pourquoi) et très intéressant d'un point de vue historique.
+ Et sinon ? **Mastermind**, **Le compte est bon**, **Don't click the white tile...** Ou presque n'importe quel jeu simple...
 
 Hormis Démineur et don't click the white tile (que j'ai prévu de préparer, un jour quand je n'aurais rien à faire) tous ces projets ont déjà été réalisés par des élèves et je suis donc certain qu'ils sont tous faisables. Ils peuvent être longs et demander quelques efforts...
 

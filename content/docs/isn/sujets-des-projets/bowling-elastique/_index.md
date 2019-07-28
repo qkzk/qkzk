@@ -66,11 +66,11 @@ Plusieurs solutions existent mais celle développée en Python dont je parle plu
 
 
 
- 	  * Les classes : **
- 	  * Détecter un choc : *
- 	  * Créer les fonctions mathématiques de calcul (hors choc élastique): **
- 	  * Choc élastique (nouvelles vitesses) : ***
- 	  * S'assurer que les physiques fonctionnent : *****
+* Les classes : **
+* Détecter un choc : *
+* Créer les fonctions mathématiques de calcul (hors choc élastique): **
+* Choc élastique (nouvelles vitesses) : ***
+* S'assurer que les physiques fonctionnent : *****
 
 
 
@@ -99,12 +99,12 @@ Toujours dans cette direction, on peut soigner les graphismes...
 
 
 
- 	  * Créer boules, quilles avec des instances de classe via un constructeur.
- 	  * Changer leurs paramètres via des fonctions extérieures.
- 	  * Le projet nécessitant beaucoup d'objets, il faut factoriser le code au maximum (ie. éviter d'écrire plusieurs fois la même chose et réutiliser un maximum d'outils).
- 	  * Réaliser les calculs mathématiques (idéalement) ou en utilisant des librairies.
- 	  * Intégrer un modèle de choc élastique, il faudra le présenter rapidement.
- 	  * Définir un canvas et une boucle de rafraîchissement (afficher, déplacer, calculer les collisions).
- 	  * On se contentera d'une vue en 2D. Il est possible de faire de la fausse 3D mais les collisions avec le
- 	  * Afficher puis animer les objets à l'écran (astuce pour le débogage : arrêter le rafraîchissement dès qu'une collision est détectée, ajouter ensuite un bouton pause permettant de faire la même chose).
- 	  * Intégrer un moyen de lancer la boule. Différentes solutions sont possibles, j'ai opté pour celle demandant le moins d’interaction du joueur (presser, relâcher).
+* Créer boules, quilles avec des instances de classe via un constructeur.
+* Changer leurs paramètres via des fonctions extérieures.
+* Le projet nécessitant beaucoup d'objets, il faut factoriser le code au maximum (ie. éviter d'écrire plusieurs fois la même chose et réutiliser un maximum d'outils).
+* Réaliser les calculs mathématiques (idéalement) ou en utilisant des librairies.
+* Intégrer un modèle de choc élastique, il faudra le présenter rapidement.
+* Définir un canvas et une boucle de rafraîchissement (afficher, déplacer, calculer les collisions).
+* On se contentera d'une vue en 2D. Il est possible de faire de la fausse 3D mais les collisions avec le
+* Afficher puis animer les objets à l'écran (astuce pour le débogage : arrêter le rafraîchissement dès qu'une collision est détectée, ajouter ensuite un bouton pause permettant de faire la même chose).
+* Intégrer un moyen de lancer la boule. Différentes solutions sont possibles, j'ai opté pour celle demandant le moins d’interaction du joueur (presser, relâcher).

@@ -3,8 +3,8 @@ author: qu3nt1n
 date: 2017-01-19 17:33:18+00:00
 draft: false
 title: 'Internet of Objects : IoT'
+weight: 101
 
-url: /
 ---
 
 Brouillon rapide
@@ -34,22 +34,22 @@ Adafruit conçoit et vend des objets connectés munis de capteurs ou de leds en 
 
 
 
- 	  * Ils proposent aussi une plateforme IO qui réunit plusieurs avantages :
- 	  * Elle est gratuite (tant qu'à faire)
- 	  * Elle est - relativement - simple d'emploi. Un minimum de Python suffit, par exemple
- 	  * Elle s'intègre bien à leurs produits (là aussi, on s'y attendait)
- 	  * Adafruit propose des tutoriels assez clairs pour commencer à développer et utilisant des objets courants
+ Ils proposent aussi une plateforme IO qui réunit plusieurs avantages :
+ Elle est gratuite (tant qu'à faire)
+ Elle est - relativement - simple d'emploi. Un minimum de Python suffit, par exemple
+ Elle s'intègre bien à leurs produits (là aussi, on s'y attendait)
+ Adafruit propose des tutoriels assez clairs pour commencer à développer et utilisant des objets courants
 
 Découvrir Adafruit IO
 
-[	 	 
- 	 	 
- 	 	 
- 	 	 
- 	 	 
- Your browser does not support the video tag.	 	 
- 	 	 
- __	 	 
+[
+
+
+
+
+ Your browser does not support the video tag.
+
+ __
 ](/assets/24612)
 
 

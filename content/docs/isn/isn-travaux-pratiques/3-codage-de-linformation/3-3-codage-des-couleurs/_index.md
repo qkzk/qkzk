@@ -42,19 +42,19 @@ Nous pouvons désigner une couleur par son nom. En HTML, seize couleurs de base 
 
 
 
+~~~html
+<html>
+<body style="background-color:black;">
 
-    <html>
-    <body style="background-color:black;">
+<p style="color:red;">
+Un paragrphe en rouge</p>
 
-    <p style="color:red;">
-    Un paragrphe en rouge</p>
+<p style="color:green;">
+Un paragraphe en vert</p>
 
-    <p style="color:green;">
-    Un paragraphe en vert</p>
-
-    </body>
-    </html>
-
+</body>
+</html>
+~~~
 
 
 

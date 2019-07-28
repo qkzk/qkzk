@@ -4,7 +4,7 @@ date: 2017-04-13 16:17:07+00:00
 draft: false
 title: 06. Classes et modules
 
-url: /
+
 ---
 
 
@@ -475,8 +475,8 @@ On pourra définir un nouvel attribut de type `list` :
 
 
 
- 	  * [Documentation sur les classes](http://docs.python.org/3/tutorial/classes.html)
- 	  * [Documentation sur les objets](http://docs.python.org/3/reference/datamodel.html)
+ [Documentation sur les classes](http://docs.python.org/3/tutorial/classes.html)
+ [Documentation sur les objets](http://docs.python.org/3/reference/datamodel.html)
 
 
 

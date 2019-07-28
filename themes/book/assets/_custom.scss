@@ -1,28 +1,35 @@
 /* To be overridden by theme user */
 // @import "variables";
+html {
+  height: 100vh
+}
 body {
     background-image: url("/back_qkzk.jpg");
     background-repeat: repeat;
     background-position: top left;
     background-attachment: scroll;
+    min-height: 100vh
 }
 .white-back {
   background-color: $body-background;
   margin: 21px;
   padding: 40px;
-  min-height: 970px;
-  // box-sizing: inherit;
+  min-height: 96vh;
 }
 .container {
   background-color: #FFF;
 }
-.banner{
+.banner {
   display: block;
   width:95%;
   max-width: $container-max-width;
   margin:7px auto;
-  height: 150px;
   color: #000;
+  height: 120px;
+}
+#bannerImg {
+  height: 200px;
+  background-size: cover;
 }
 .title-link{
   font-weight: bold;
@@ -47,20 +54,33 @@ body {
   font-size: 20px;
   padding-right: 20px;
 }
-.book-menu nav{
+.book-menu nav {
   position:sticky;
   // top:400px;
   top: 0;
   // height: 800px;
 }
-.book-toc nav{
+.book-toc nav {
   position:sticky;
   // top:400px;
   top: 0;
   // height: 800px;
 }
-
-.a{
-  font-size: 44px;
+.book-toc ul li a {
+  font-size: $font-size-14;
+  color: #000;
+}
+details {
+  display: inline;
+}
+summary {
+  display: inline;
+}
+details li {
+  padding-left: 0.5em;
+  list-style: none;
+}
+a.nav-link {
+  // font-size: 44px;
   color: #000;
 }

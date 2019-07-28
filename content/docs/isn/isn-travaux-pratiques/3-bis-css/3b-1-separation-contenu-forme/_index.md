@@ -12,8 +12,8 @@ Notions abordées dans cette page
 
 
 
-  * feuilles de style et traitement de textes
-  * séparation de la forme et du contenu
+* feuilles de style et traitement de textes
+* séparation de la forme et du contenu
 
 
 
@@ -63,12 +63,12 @@ que la police, la couleur, les marges, etc.
 
 
 Dans LibreOffice le nom du style appliqué à un élément est visible
-  dans la zone de gestion des styles qui se trouve généralement à
-  gauche au-dessus du texte, comme présenté sur l'image ci-contre. Un
-  style peut être **appliqué** à un élément de texte dont
-  l'apparence adopte alors toutes les propriétés définies par le
-  style. Un même style peut être appliqué à plusieurs éléments d'un
-  même document.
+dans la zone de gestion des styles qui se trouve généralement à
+gauche au-dessus du texte, comme présenté sur l'image ci-contre. Un
+style peut être **appliqué** à un élément de texte dont
+l'apparence adopte alors toutes les propriétés définies par le
+style. Un même style peut être appliqué à plusieurs éléments d'un
+même document.
 
 
 
@@ -77,9 +77,9 @@ Dans LibreOffice le nom du style appliqué à un élément est visible
 
 
 
-  Placez votre curseur à différents endroits du texte de la page et repérez
-  les différents noms des styles utilisés ainsi que les différents
-  pour lequel le style est le même.
+Placez votre curseur à différents endroits du texte de la page et repérez
+les différents noms des styles utilisés ainsi que les différents
+pour lequel le style est le même.
 
 
 
@@ -87,11 +87,11 @@ Dans LibreOffice le nom du style appliqué à un élément est visible
 
 
 L'utilisation des styles permet de gérer efficacement l'apparence
-  d'un document en agissant sur les propriétés du style plutôt que sur
-  les propriétés du contenu. Un premier intérêt est part que la gestion
-  de la cohérence de l'apparence du document est facilitée car toute
-  modfication est
-  "automatiquement" appliquée à tous les éléments concernés.
+d'un document en agissant sur les propriétés du style plutôt que sur
+les propriétés du contenu. Un premier intérêt est part que la gestion
+de la cohérence de l'apparence du document est facilitée car toute
+modfication est
+"automatiquement" appliquée à tous les éléments concernés.
 
 
 
@@ -101,24 +101,15 @@ L'utilisation des styles permet de gérer efficacement l'apparence
 
 
 
-  1. Placez le curseur sur le texte _Voici un premier titre_, dont
-  le style à pour nom _Titre 1_.
+1. Placez le curseur sur le texte _Voici un premier titre_, dont le style à pour nom _Titre 1_.
 
-  2. Faites un clic droit puis choisissez dans le menu _Editer le
-    style de paragraphe..._.
+2. Faites un clic droit puis choisissez dans le menu _Editer le style de paragraphe..._.
 
-  3. Faites différentes manipulations à l'aide de la fenêtre qui
-  apparaît. Par exemple, à partir de l'onglet _Police_ modifiez
-  la famille, le style et la taille de la police et cliquez sur le
-  bouton _Appliquer_ en bas de la fenêtre.
+3. Faites différentes manipulations à l'aide de la fenêtre qui apparaît. Par exemple, à partir de l'onglet _Police_ modifiez la famille, le style et la taille de la police et cliquez sur le bouton _Appliquer_ en bas de la fenêtre.
 
-  4. Que constatez-vous pour le texte _Voici un premier
-    titre_ ? Et pour les autres éléments de texte auxquels
-    s'applique le style _Titre 1_ ?
+4. Que constatez-vous pour le texte _Voici un premier titre_ ? Et pour les autres éléments de texte auxquels s'applique le style _Titre 1_ ?
 
-  5. Vous pouvez faire d'autres manipulations sur le style par exemple
-  changer la couleur (_Effets de caractères_), l'alignement ou
-  les retraits. Validez le tout à l'aide du bouton _OK_.
+5. Vous pouvez faire d'autres manipulations sur le style par exemple changer la couleur (_Effets de caractères_), l'alignement ou les retraits. Validez le tout à l'aide du bouton _OK_.
 
 
 
@@ -126,12 +117,8 @@ L'utilisation des styles permet de gérer efficacement l'apparence
 
 
 
-Un second intérêt est qu'il est facile de modifier fortement
-  l'apparence d'un document sans "toucher à"
-  celui-ci. Une feuille de style peut
-  être définie indépendamment d'un document et appliqué à un tout
-  document. Cela permet par exemple de définir une charte graphique
-  commune à un ensemble de documents.
+Un second intérêt est qu'il est facile de modifier fortement l'apparence d'un document sans "toucher à" celui-ci. Une feuille de style peut être définie indépendamment d'un document et appliqué à un tout document. Cela permet par exemple de définir une charte graphique
+commune à un ensemble de documents.
 
 
 
@@ -142,27 +129,18 @@ Un second intérêt est qu'il est facile de modifier fortement
 
 
 
-  1. Récupérez les fichiers de définition des feuilles de style (LibreOffice utilise le
-  terme _modèle_) `[modele1.ott](http://qkzk.xyz/docs/doc03b/exemples/modele1.ott)`
-  et `[modele2.ott](http://qkzk.xyz/docs/doc03b/exemples/modele2.ott)` et
-  sauvegardez-lessur votre disque.
+1. Récupérez les fichiers de définition des feuilles de style (LibreOffice utilise le terme _modèle_) `[modele1.ott](http://qkzk.xyz/docs/doc03b/exemples/modele1.ott)`et `[modele2.ott](http://qkzk.xyz/docs/doc03b/exemples/modele2.ott)` et sauvegardez-lessur votre disque.
 
 
 
+2. ![zone boutons de gestion des styles](http://qkzk.xyz/docs/doc03b/boutonsStyles.png)
 
-  2. ![zone boutons de
-  gestion des styles](http://qkzk.xyz/docs/doc03b/boutonsStyles.png)
-
-A partir du document précédent, cliquez sur le bouton à gauche de
-  la liste des styles (cf. imgae ci-dessus) ou appuyez sur la
-  touche. Cela fait apparaître une fenêtre nommée _Styles et
-  formatage_.
+A partir du document précédent, cliquez sur le bouton à gauche de la liste des styles (cf. image ci-dessus) ou appuyez sur la touche. Cela fait apparaître une fenêtre nommée _Styles et formatage_.
 
 Cliquez sur le bouton  le plus à droite et choisissez _Chargez les styles..._.
 
 
-
-  3. ![fenêtre Chargez les styles](http://qkzk.xyz/docs/doc03b/chargerLesStyles.png)
+3. ![fenêtre Chargez les styles](http://qkzk.xyz/docs/doc03b/chargerLesStyles.png)
 
 
 Dans la fenêtre qui s'ouvre cochez la case _Ecraser_ puis cliquez
@@ -189,12 +167,8 @@ Dans la fenêtre qui s'ouvre cochez la case _Ecraser_ puis cliquez
 
 
 
-
-  1. Créez un nouveau document texte avec LibreOffice et créez du
-  contenu en attribuant les
-  styles _Titre_, _Titre 1_, _Titre 2_
-  et _Corps de Texte à différentes parties du document.
-  2. Appliquez à ce document le style défini par `modele1.ott`_
+1. Créez un nouveau document texte avec LibreOffice et créez du contenu en attribuant le  styles _Titre_, _Titre 1_, _Titre 2_ et _Corps de Texte à différentes parties du document.
+2. 2. Appliquez à ce document le style défini par `modele1.ott`_
 
 
 

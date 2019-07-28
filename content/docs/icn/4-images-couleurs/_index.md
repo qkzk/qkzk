@@ -3,8 +3,8 @@ author: qu3nt1n
 date: 2016-07-01 14:38:32+00:00
 draft: false
 title: 04. Images, couleurs
+weight: 4
 
-url: /
 ---
 
 
@@ -13,10 +13,9 @@ Notions abordées
 
 
 
- 	  * traitement des images : matriciel et vectoriel
- 	  * compression de données
- 	  * les cartes
- 	  * anamorphose
+* traitement des images : matriciel et vectoriel
+* compression de données
+* les cartes en  anamorphose
 
 
 
@@ -50,7 +49,7 @@ Et pourtant, grosso modo, c'est ce que font les appareils photo numériques et l
 Si, bien-sûr, mais c'est vite complexe et cela demande des choix... que l'appareil photo numérique n'est pas toujours capable de faire seul.
 
 
-##### **Quelques formats de compression.**
+#### **Quelques formats de compression.**
 
 
 
@@ -61,32 +60,32 @@ Premièrement, il y a deux façons de compresser : [Sans perte](http://en.wikipe
 
 
 
- 	  * **Sans perte** signifie que l'image est rendue plus petite (en espace disque), mais pas au détriment de la qualité.
- 	  * **A perte** signifie que que l'image est rendue (encore plus) petite, mais cela joue sur la qualité. Si vous enregistrez plusieurs fois une image dans un format à perte, la qualité de l'image va se dégrader de plus en plus.
+ **Sans perte** signifie que l'image est rendue plus petite (en espace disque), mais pas au détriment de la qualité.
+ **A perte** signifie que que l'image est rendue (encore plus) petite, mais cela joue sur la qualité. Si vous enregistrez plusieurs fois une image dans un format à perte, la qualité de l'image va se dégrader de plus en plus.
 
 Il y a aussi plusieurs façon de définir les couleurs (palettes): [Indexed color](http://en.wikipedia.org/wiki/Indexed_color) et [Direct color](http://en.wikipedia.org/wiki/Color_depth#Direct_color).
 
 
 
- 	  * **Indexed** signifie que l'image ne peut disposer que d'un petit nombre de couleur (généralement 256), définies par l'auteur, dans ce qu'on appelle une Carte de couleur.
- 	  * **Direct** signifie que l'on peut enregistrer des _milliers_ de couleurs qui n'auront pas été choisies une par une par l'auteur.
+ **Indexed** signifie que l'image ne peut disposer que d'un petit nombre de couleur (généralement 256), définies par l'auteur, dans ce qu'on appelle une Carte de couleur.
+ **Direct** signifie que l'on peut enregistrer des _milliers_ de couleurs qui n'auront pas été choisies une par une par l'auteur.
 
 
 
 
-* * *
-
-
-
-
-
-##### **Les formats d'image matricielle**
+---
 
 
 
 
 
-* * *
+#### **Les formats d'image matricielle**
+
+
+
+
+
+---
 
 
 
@@ -101,7 +100,7 @@ Bon pour : Rien. Il n'y a rien que le BMP fasse mieux que les autres.
 
 
 
-* * *
+---
 
 
 
@@ -118,7 +117,7 @@ Bon pour : les logos, les dessins avec des lignes et des formes géométriques s
 
 
 
-* * *
+---
 
 
 
@@ -133,7 +132,7 @@ Bon pour : Photographie. Aussi les dégradés (gradients).
 
 
 
-* * *
+---
 
 
 
@@ -150,7 +149,7 @@ Bon pour : Ce que le PNG-8 fait mieux que les GIF est d'intégrer la transparenc
 
 
 
-* * *
+---
 
 
 
@@ -164,13 +163,13 @@ PNG-24 gère aussi la transparence alpha.
 
 
 
-* * *
+---
 
 
 
 
 
-##### **L'image vectorielle**
+#### **L'image vectorielle**
 
 
 C'est le fait de décrire la construction, élément par élément, d'une figure à l'aide de commandes simples. Celle-ci est alors construite objet par objet quand on l'affiche. L'immense avantage est qu'on peut décrire exactement ce qu'on veut... et que le résultat restera totalement identique à tous les niveaux de zoom ! L'inconvénient est que décrire ainsi une photographie relève du travail de forçat et va demander un espace disque considérable... C'est un format qui a beaucoup d'emplois : polices de caractères, plans, cartes, logos, figures scientifiques, grandes affiches etc.
@@ -179,7 +178,7 @@ Le format d'image vectorielle le plus répandu est le SVG.
 
 
 
-* * *
+---
 
 
 
@@ -217,7 +216,7 @@ AVI, par contre n'est qu'un conteneur qui n'indique en rien l'algorithme d'encod
 
 
 
-* * *
+---
 
 
 
@@ -247,9 +246,9 @@ L'ordinateur fonctionne grâce à l’électronique. Le courant passe 1, ou non 
 
 <blockquote>
 
-> 
+>
 > “There are only 10 types of people in the world: those who understand binary and those who don't.”
-> 
+>
 > </blockquote>
 
 
@@ -278,7 +277,7 @@ En html et presque partout ailleurs, on utilise le codage hexadécimal pour repr
 
 
 
-* * *
+---
 
 
 
