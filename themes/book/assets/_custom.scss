@@ -1,0 +1,66 @@
+/* To be overridden by theme user */
+// @import "variables";
+body {
+    background-image: url("/back_qkzk.jpg");
+    background-repeat: repeat;
+    background-position: top left;
+    background-attachment: scroll;
+}
+.white-back {
+  background-color: $body-background;
+  margin: 21px;
+  padding: 40px;
+  min-height: 970px;
+  // box-sizing: inherit;
+}
+.container {
+  background-color: #FFF;
+}
+.banner{
+  display: block;
+  width:95%;
+  max-width: $container-max-width;
+  margin:7px auto;
+  height: 150px;
+  color: #000;
+}
+.title-link{
+  font-weight: bold;
+  color: #000;
+  margin-bottom: 0px;
+}
+#bannerTitle{
+  padding-left: 0px;
+  float: left;
+}
+.slogan{
+  clear:both;
+  float: left;
+  font-size: 16px;
+  color: #666;
+}
+.menu-banner{
+  float: right;
+}
+.nav-link{
+  color: #000;
+  font-size: 20px;
+  padding-right: 20px;
+}
+.book-menu nav{
+  position:sticky;
+  // top:400px;
+  top: 0;
+  // height: 800px;
+}
+.book-toc nav{
+  position:sticky;
+  // top:400px;
+  top: 0;
+  // height: 800px;
+}
+
+.a{
+  font-size: 44px;
+  color: #000;
+}

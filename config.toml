@@ -1,0 +1,41 @@
+baseURL = "/"
+languageCode = "en-us"
+title = "qkzk"
+theme = "book"
+BookDateFormat = '2-1-2006'
+
+
+pygmentsstyle = "b2"
+pygmentscodefences = true
+pygmentscodefencesguesssyntax = true
+
+[params]
+  author = "qkzk"
+  description = "Informatique au Lycée des Flandres"
+  minify = "true"
+
+
+[menu]
+  [[menu.banner]]
+    identifier = "isn"
+    name = "isn"
+    url = "/docs/isn"
+    weight = 1
+
+  [[menu.banner]]
+    identifier = "nsi"
+    name = "nsi"
+    url = "/docs/nsi"
+    weight = 2
+
+  [[menu.banner]]
+    identifier = "collegues"
+    name = "collegues"
+    url = "/docs/collegues"
+    weight = 3
+
+  [[menu.banner]]
+    identifier = "ressources"
+    name = "ressources"
+    url = "/docs/ressources"
+    weight = 4
