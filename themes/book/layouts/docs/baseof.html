@@ -11,23 +11,23 @@
 
 <div class="white-back">
 
-  <div class="container flex">
+  <div class="container flex content-desktop">
       <div class="hr banner book-page" id="bannerTitle">
         <a href="/"><h1 class="title-link">{{ .Site.Title}}</h1></a>
-        <div class="menu-banner">
+        <div class="menu-banner content-desktop">
           {{ range .Site.Menus.banner }}
             {{ $text := print " " .Name | safeHTML }}
           <a class="nav-link" href="{{ .URL }}">{{ $text }}</a>
         {{ end }}
       </div>
-        <div class="slogan">{{ $.Site.Params.description}}</div>
+        <div class="slogan content-desktop">{{ $.Site.Params.description}}</div>
       </div>
   </div>
-  <div class="container flex">
+  <div class="container flex content-desktop">
     <div class="hr banner book-page" id="bannerImg"> </div>
 
   </div>
-  <!-- <input type="checkbox" style="display: none" id="menu-control" /> -->
+  <input type="checkbox" style="display: none" id="menu-control" />
   <main class="flex container" id="main-container">
 
     <aside class="book-menu fixed">

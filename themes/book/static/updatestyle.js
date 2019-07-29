@@ -23,6 +23,7 @@ function styleMenuLinks(){
     if (parentNode.nodeName = "DETAILS"){
       // open the DETAILS
       parentNode.open = true;
+      // parentNode.style.color = "#5555FF";
       // color the links of direct parents
       colorParentLinks(parentNode);
     parentNode = parentNode.parentNode;
@@ -43,6 +44,7 @@ function colorParentLinks(parentNode){
       if (siblingsNodes[1].nodeName == "SUMMARY"){
         // console.log(siblingsNodes[1])
         let summaryNode = siblingsNodes[1];
+        summaryNode.style.color = "#5555FF";
         let summaryChildren = summaryNode.childNodes;
         // console.log(summaryChildren)
         let linkNode = summaryChildren[1];
