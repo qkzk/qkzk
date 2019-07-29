@@ -2,7 +2,8 @@
 author: qu3nt1n
 date: 2019-05-05 05:48:59+00:00
 draft: false
-title: Programmation avec Python 3
+title: Python
+weight: 1
 
 ---
 
