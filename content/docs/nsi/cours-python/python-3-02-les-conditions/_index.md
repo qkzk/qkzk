@@ -15,7 +15,7 @@ weight: 2
 ### L'instruction `if`
 
 
-![python_if](http://qkzk.xyz/wp-content/uploads/2017/04/python_if.png)
+![python_if](/uploads/uploads/2017/04/python_if.png)
 
 
 

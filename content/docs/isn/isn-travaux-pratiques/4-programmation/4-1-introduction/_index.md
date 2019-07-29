@@ -105,8 +105,8 @@ donnée :
 
 
 * on peut additionner 2 données de type numérique. exemple
-* on peut calculer la longueur d'un texte. [exemple](http://qkzk.xyz/docs/doc04/exemples/exemple_longueurChaine.html)
-* on peut modifier la taille d'affichage d'une image. [exemple](http://qkzk.xyz/docs/doc04/exemples/exemple_changeTailleImage.html)
+* on peut calculer la longueur d'un texte. [exemple](/uploads/docs/doc04/exemples/exemple_longueurChaine.html)
+* on peut modifier la taille d'affichage d'une image. [exemple](/uploads/docs/doc04/exemples/exemple_changeTailleImage.html)
 
 
 
@@ -202,7 +202,7 @@ nous appelons `points` la première valeur
 alors `=points+bonus`. On peut remarquer qu'elle ne
 dépend plus des références mais uniquement des noms. Testons cette version :
 
-![zone nommage de donnée dans libreOffice](http://qkzk.xyz/docs/doc04/doc/zoneNommageTableur.png)
+![zone nommage de donnée dans libreOffice](/uploads/docs/doc04/doc/zoneNommageTableur.png)
 
 
 
@@ -267,7 +267,7 @@ billets apparaissent les informations suivantes :
 Ouvrez le traitement de texte de libreoffice et créez, rapidement, le
 billet numéro 1 pour cette tombola dont le tirage se déroulera le 16
 juin 2012 et dont le gros lot est une console
-PS3. [exemple de billet](http://qkzk.xyz/docs/doc04/doc/billet-tombola1.odt)
+PS3. [exemple de billet](/uploads/docs/doc04/doc/billet-tombola1.odt)
 
 
 On souhaite éditer 1000 billets pour cette tombola. Comment
@@ -428,7 +428,7 @@ d'une variable, en fait il s'agit de la redéfinition de la
 variable `numero` avec pour _Valeur_ la formule de
 traitement `numero+1` (voir image).
 
-![saisie formule pour numéro](http://qkzk.xyz/docs/doc04/doc/saisie_formule_numero.png)
+![saisie formule pour numéro](/uploads/docs/doc04/doc/saisie_formule_numero.png)
 
 
 
@@ -458,4 +458,4 @@ chaque fois déterminée par rapport à la valeur du billet précédent
 d'où le résultat obtenu.
 
 
-[résultat final](http://qkzk.xyz/docs/doc04/doc/billet-tombola2.odt)
+[résultat final](/uploads/docs/doc04/doc/billet-tombola2.odt)

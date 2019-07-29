@@ -16,7 +16,7 @@ Une boucle permet d'exécuter une portion de code plusieurs fois de suite.
 ### L'instruction `while`
 
 
-![python_while](http://qkzk.xyz/wp-content/uploads/2017/04/python_while.png)
+![python_while](/uploads/uploads/2017/04/python_while.png)
 
 
 
@@ -474,7 +474,7 @@ Par exemple :
 
 Estimer la valeur numérique de la fraction continue suivante :
 
-![formule_fraction_continue](http://qkzk.xyz/wp-content/uploads/2017/04/formule_fraction_continue.png)
+![formule_fraction_continue](/uploads/uploads/2017/04/formule_fraction_continue.png)
 
 
 

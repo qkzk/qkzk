@@ -19,8 +19,8 @@ weight: 4
 
 
 
-[![jeudelavie](http://qkzk.xyz/wp-content/uploads/2016/07/jeudelavie.gif)
-](http://qkzk.xyz/wp-content/uploads/2016/07/jeudelavie.gif)
+[![jeudelavie](/uploads/uploads/2016/07/jeudelavie.gif)
+](/uploads/uploads/2016/07/jeudelavie.gif)
 
 
 

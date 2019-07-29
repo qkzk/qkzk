@@ -46,8 +46,8 @@ On enregistre ce résultat en précisant dans le nom de fichier le titre de la p
 
 Voilà ! Vous devriez obtenir autant d'images que de palettes x images de départ. J'ai simplement collé les images correspondantes pour recréer le cadre initial.
 
-![gal_gadot](http://qkzk.xyz/wp-content/uploads/2018/03/gal_gadot.png)
-![sarah_gadon](http://qkzk.xyz/wp-content/uploads/2018/03/sarah_gadon.png)
+![gal_gadot](/uploads/uploads/2018/03/gal_gadot.png)
+![sarah_gadon](/uploads/uploads/2018/03/sarah_gadon.png)
 
 
 Si vous n'arrivez à rien, voici un tutoriel à compléter. Je n'ai enlevé qu'une dizaine de lignes.

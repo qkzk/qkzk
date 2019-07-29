@@ -52,7 +52,7 @@ Le fichier `test.txt` est créé dans le répertoire courant (sous Windows c'est
 
 Vous pouvez vérifier son contenu en l'ouvrant avec un éditeur de texte (ou même avec un logiciel de traitement de texte) :
 
-![ecriture_fichier1](http://qkzk.xyz/wp-content/uploads/2017/04/ecriture_fichier1.png)
+![ecriture_fichier1](/uploads/uploads/2017/04/ecriture_fichier1.png)
 
 
 
@@ -63,12 +63,12 @@ Pour Python, le codage par défaut des caractères est cp1252 (Windows-1252) sou
 
 Avec le codage cp1252, le fichier fait 16 octets :
 
-![fichier_cp1252](http://qkzk.xyz/wp-content/uploads/2017/04/fichier_cp1252.png)
+![fichier_cp1252](/uploads/uploads/2017/04/fichier_cp1252.png)
 
 
 Avec le codage UTF-8, le fichier fait 17 octets !
 
-![fichier_utf8](http://qkzk.xyz/wp-content/uploads/2017/04/fichier_utf8.png)
+![fichier_utf8](/uploads/uploads/2017/04/fichier_utf8.png)
 
 
 La différence est due au codage du caractère accentué **à** :
@@ -98,7 +98,7 @@ Repartons du fichier précédent :
 Ce qui donne :
 
 
-### ![ecriture_fichier2](http://qkzk.xyz/wp-content/uploads/2017/04/ecriture_fichier2.png)
+### ![ecriture_fichier2](/uploads/uploads/2017/04/ecriture_fichier2.png)
 
 
 

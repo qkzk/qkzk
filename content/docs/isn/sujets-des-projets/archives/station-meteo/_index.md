@@ -15,8 +15,8 @@ Vous créerez une page web de présentation des données méteo issues de la sta
 
 
 
-[![meteo](http://qkzk.xyz/wp-content/uploads/2016/07/meteo.jpg)
-](http://qkzk.xyz/wp-content/uploads/2016/07/meteo.jpg)
+[![meteo](/uploads/uploads/2016/07/meteo.jpg)
+](/uploads/uploads/2016/07/meteo.jpg)
 
 
 
@@ -31,7 +31,7 @@ Votre rôle est de présenter de façon dynamique les données dans une page web
 
 La station météo exporte ses données dans un document éditable dont vous tirerez l'information utile. Celle-ci sera ensuite formatée et intégrée à votre site. Il s'agira ensuite de rendre le fonctionnement opérationnel en live ou quand l'utilsateur rafraichit la page. Une collaboration active avec un groupe de TSTI2D est alors envisageable.
 
-Une station similaire est présentée à [ cette adresse.](http://qkzk.xyz/docs/dossierressourcestationmeteo.pdf)
+Une station similaire est présentée à [ cette adresse.](/uploads/docs/dossierressourcestationmeteo.pdf)
 
 
 

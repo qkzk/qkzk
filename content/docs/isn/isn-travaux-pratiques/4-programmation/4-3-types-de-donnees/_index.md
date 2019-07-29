@@ -55,7 +55,7 @@ Dans la mesure où l'on peut espérer une certaine cohérence dans la définitio
 
 On souhaite écrire une page qui reprend le poème de Jacques Prévert extrait de "_Paroles_" intitulé "_Les belles familles_" mais avec la possibilité de pouvoir facilement créer des variantes en changeant le prénom.  1. Faites une recherche pour trouver le texte du poème.  2. Ecrivez une page HTML de telle manière qu'une seule modification permette de modifier le prénom répété.  3. Testez votre solution.
 
-[poème initial](http://qkzk.xyz/docs/doc04/corrections/louis.html) - [ 1ère version avec variable](http://qkzk.xyz/docs/doc04/corrections/louis2.html) - [2nde version avec variable](http://qkzk.xyz/docs/doc04/corrections/louis2Bis.html) - Comparer les 2 versions.
+[poème initial](/uploads/docs/doc04/corrections/louis.html) - [ 1ère version avec variable](/uploads/docs/doc04/corrections/louis2.html) - [2nde version avec variable](/uploads/docs/doc04/corrections/louis2Bis.html) - Comparer les 2 versions.
 
 ## Quelques manipulations
 

@@ -1,0 +1,35 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+    <title>_variables et somme en javascript 2 </title>
+
+    <link href="somme1.css" rel="stylesheet" type="text/css" media="screen"/>
+  </head>
+  <body>
+
+
+<h1>Somme de 2 variables</h1>
+
+<script type="text/javascript">
+  var nombre1 = 12;
+  var nombre2 = 20;
+</script>
+
+  Le résultat de la somme de
+<span class="valeur"><script type="text/javascript"> document.writeln(nombre1);</script></span>
+et
+<span class="valeur"><script type="text/javascript"> document.writeln(nombre2);</script></span>
+
+est 
+
+
+<span id="resultat">
+ <script type="text/javascript"> document.writeln(nombre1+nombre2);
+</script></span>.
+
+  </body>
+</html>

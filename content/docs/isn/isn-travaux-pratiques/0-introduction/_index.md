@@ -9,6 +9,6 @@ weight: -1
 ## La spécialité ISN
 
 
-Votre premier travail consiste à lire cette brève [introduction](http://qkzk.xyz/wp-content/uploads/2016/07/introduction.pdf). Bien qu'elle soit un peu datée les principes n'ont pas changé.
+Votre premier travail consiste à lire cette brève [introduction](/uploads/uploads/2016/07/introduction.pdf). Bien qu'elle soit un peu datée les principes n'ont pas changé.
 
-Ensuite faîtes connaissance avec le [cloud de google](http://qkzk.xyz/wp-content/uploads/2016/07/cloud-google.pdf) : google drive. On l'utilisera principalement pour les partages de documents.
+Ensuite faîtes connaissance avec le [cloud de google](/uploads/uploads/2016/07/cloud-google.pdf) : google drive. On l'utilisera principalement pour les partages de documents.

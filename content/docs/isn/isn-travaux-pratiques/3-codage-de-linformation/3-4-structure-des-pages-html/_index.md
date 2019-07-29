@@ -35,7 +35,7 @@ donnée.  Nous allons maintenant découvrir différentes balises. Pour
 mémoire, un fichier HTML est du texte dont les catégories de mise en
 page et de mise en forme sont indiquées par des balises (appelées tag
 en anglais). Un exemple de fichier HTML simple est donné (cf.
-[ex_html1.html](http://qkzk.xyz/docs/doc03/ex_html1.html)).
+[ex_html1.html](/uploads/docs/doc03/ex_html1.html)).
 
 
 
@@ -266,7 +266,7 @@ une taille raisonnable.
 
 
 
-1. Affichez le fichier [ex_html2.html](http://qkzk.xyz/docs/doc03/ex_html2.html) dans
+1. Affichez le fichier [ex_html2.html](/uploads/docs/doc03/ex_html2.html) dans
 votre navigateur. Est-ce que l'affichage semble correct ?
 2. Ouvrez le
 fichier à l'aide de votre éditeur de texte et corrigez les erreurs de

@@ -73,9 +73,9 @@ Les tableurs, tels que "Calc" (Libre Office), sont normalement capables de lire 
 #### À faire vous-même 1.1
 
 
-Après avoir téléchargé le fichier [ident_pointVirgule.csv](http://informatiquelycee.fr/asset/ident_pointVirgule.csv), ouvrez ce dernier à l'aide d'un tableur.
+Après avoir téléchargé le fichier [ident_pointVirgule.csv](https://pixees.fr/informatiquelycee/asset/ident_pointVirgule.csv), ouvrez ce dernier à l'aide d'un tableur.
 
-Si par hasard votre tableur ne gère pas correctement le fichier avec le séparateur "point-virgule", voici une version "séparateur virgule" du fichier : [ident_virgule.csv](http://informatiquelycee.fr/asset/ident_virgule.csv)
+Si par hasard votre tableur ne gère pas correctement le fichier avec le séparateur "point-virgule", voici une version "séparateur virgule" du fichier : [ident_virgule.csv](https://pixees.fr/informatiquelycee/asset/ident_virgule.csv)
 
 Dans la suite, gardez toujours cet éventuel problème à l'esprit (surtout avec des données "made in France")
 
@@ -87,7 +87,7 @@ Dans la suite, gardez toujours cet éventuel problème à l'esprit (surtout avec
 
 Vous devriez obtenir ceci :
 
-![](http://informatiquelycee.fr/img/procAnDo_a1_1.png)
+![](https://pixees.fr/informatiquelycee/img/procAnDo_a1_1.png)
 
 
 Vous pouvez constater que les données sont bien "rangées" dans un tableau avec des lignes et des colonnes (voilà pourquoi on parle de données tabulaires.
@@ -98,7 +98,7 @@ Il est possible de trouver sur le web des données beaucoup plus intéressantes 
 #### À faire vous-même 1.2
 
 
-Ouvrez le fichier [ville_point_virgule.csv](http://www.ac-grenoble.fr/disciplines/informatiquelycee/asset/ident_pointVirgule.csv) à l'aide d'un tableur (c’est une version légèrement modifiée de celle disponible sur le site sql.sh, j’y ai notamment ajouté des entêtes). En cas de problème avec votre tableur, voici une version "séparateur virgule" : [ville_virgule.csv](http://www.ac-grenoble.fr/disciplines/informatiquelycee/asset/ident_virgule.csv) (attention le séparateur "décimal" est ici le point)
+Ouvrez le fichier [ville_point_virgule.csv](https://pixees.fr/informatiquelycee/asset/ident_pointVirgule.csv) à l'aide d'un tableur (c’est une version légèrement modifiée de celle disponible sur le site sql.sh, j’y ai notamment ajouté des entêtes). En cas de problème avec votre tableur, voici une version "séparateur virgule" : [ville_virgule.csv](https://pixees.fr/informatiquelycee/asset/ident_virgule.csv) (attention le séparateur "décimal" est ici le point)
 
 
 
@@ -258,7 +258,7 @@ Pour en savoir plus sur le JSON, vous pouvez lire l'article sur [Wikipédia](htt
 #### À faire vous-même 2.1
 
 
-Téléchargez le fichier [ident.json](http://informatiquelycee.fr/asset/ident.json) et ouvrez-le à l'aide d'un éditeur de texte.
+Téléchargez le fichier [ident.json](https://pixees.fr/informatiquelycee/asset/ident.json) et ouvrez-le à l'aide d'un éditeur de texte.
 
 
 
@@ -266,7 +266,7 @@ Téléchargez le fichier [ident.json](http://informatiquelycee.fr/asset/ident.js
 
 
 
-De nombreux sites web proposent des services basés sur des API (Application Programming Interface). Ces sites sont capables de fournir des données aux formats JSON sur "simple demande". Souvent, ces "demandes" sont effectuées par l'intermédiaire d'une url (si vous avez besoin de vous rafraichir la mémoire à propos de la notion d'url, n'hésitez pas à consulter ce [document](http://informatiquelycee.fr/reseau_a1.html)).
+De nombreux sites web proposent des services basés sur des API (Application Programming Interface). Ces sites sont capables de fournir des données aux formats JSON sur "simple demande". Souvent, ces "demandes" sont effectuées par l'intermédiaire d'une url (si vous avez besoin de vous rafraichir la mémoire à propos de la notion d'url, n'hésitez pas à consulter ce [document](https://pixees.fr/informatiquelycee/reseau_a1.html)).
 
 Nous allons illustrer ce propos en utilisant l'API d'un site qui fournit des informations météo au format JSON. Vous trouverez ce site à l'adresse suivante : [openweathermap.org/api](http://openweathermap.org/api)
 
@@ -418,4 +418,4 @@ d3js est une librairie javascript permettant ce genre d'opération complexe.
 
 
 
-_Sources : http://informatiquelycee.fr/_
+_Sources : https://pixees.fr/informatiquelycee/_

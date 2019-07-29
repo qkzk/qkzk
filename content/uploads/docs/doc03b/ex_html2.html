@@ -1,0 +1,98 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<meta http-equiv="content-type" content="text/html;
+					 charset=windows-1252" />
+  <title>ISN - Page d'exemple 2</title>
+
+
+</head>
+
+<body>
+
+<h1>Valider sa page HTML</h1>
+
+<p>Même si le HTML est un langage universel, le rendu peu varier selon les navigateurs.
+Si la version du langage HTML utilisée n'est pas précisée dans la page, les navigateurs
+se mettent en <strong>quirk mode</strong>, c'est-à-dire qu'ils sont plus indulgents et plus
+permissifs sur la structure du fichier pour pouvoir lire du "vieux HTML".
+Par exemple, l'oubli de certaines balises fermantes est toléré. Mais, la page risque
+de ne pas s'afficher comme vous le souhaitez.<br/>
+Il faut préciser au navigateur dans quelle version de HTML la page est écrite. L'indication 
+se fait à l'aide de la ligne <code>DOCTYPE</code> que nous avons déjà vue. Il faut ensuite
+respecter les conventions d'écriture correspondantes.
+</p>
+
+<h2>Les validateurs</h2>
+
+<p>L'organisation internationale W3C qui définit les standards du web propose
+de valider les pages web via le site 
+<a href="http://validator.w3.org/">http://validator.w3.org/</a>. Vous pouvez
+y soumettre une page HTML soit :
+
+</p>
+<ul>
+  <li>via une adresse de page web
+  </li>
+<li>en téléchargeant un fichier qui est sur votre ordinateur
+  </li>
+<li>en copiant-collant le code source d'une page
+</li>
+</ul>
+
+<p>
+Ainsi, les lignes du fichier qui ne respectent pas les normes du HTML définit 
+par le DOCTYPE sont indiquées, avec avec une information concernant l'erreur
+probable.<br/>
+Il existe d'autres validateurs comme l'add-on de Firefox
+<a href="https://addons.mozilla.org/en-US/firefox/addon/html-validator/">HTML validator</a>
+</p>
+
+<h2>Quelques Conseils pour écrire une page web conforme en XHTML 1.0</h2>
+
+<ul><li>Définir la structure globale de la page avant de l'écrire, à l'aide
+des éléments en bloc.</li>
+
+<li>Affiner ensuite à l'aide des éléments en ligne. Les éléments en ligne
+doivent être contenus dans un élément de bloc, même les images.</li>
+
+<li>Ecrire les balises en minuscules</li>
+
+<li>Ne pas inclure un élément de bloc dans un élément <code>p</code>. Par contre
+un élément <code>li</code> peut contenir d'autres élements de bloc.</li>
+
+<li>Utiliser les éléments les plus proches du type de contenu. Par exemple,
+il vaut mieux utiliser un <code>h3</code> plutot qu'un <code>p</code> mis
+en gras avec la balise <code>b</code>, s'il s'agit d'un titre.<code>h3</code></li>
+
+<li>Commencer tous les fichiers XHTML par le <code>DOCTYPE</code> :<br/>
+<code>
+&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"&gt;</code>
+</code><br/>
+suivi de la balise : <code>&lt;html  xmlns="http://www.w3.org/1999/xhtml"&gt;</code>. </li>
+
+<li>Définir un élément <code>head</code> et un élement <code>body</code>.
+Les autres éléments sont insérés dedans.</li>
+
+<li>Ajouter dans l'élément <code>head</code> un élément <code>title</code>,
+l'élément <code>meta</code> qui définit le type de contenu et l'encodage des 
+caractères  et qui doit être en 1ère ligne et, éventuellement, un élément 
+<code>style</code> pour définir le style de la page.</li>
+
+<li>Ne pas oublier les balises ouvrantes et fermantes (sauf pour img, br et hr
+qui s'écrivent, par exemple &lt;br /&gt;) </li>
+</ul>
+
+<img alt="logo FIL" src="logo-filw200.png" height="51" width="200"></img>
+<!-- Vous constaterez que l'image ne s'affiche pas dans votre navigateur
+puisqu'elle n'est pas sur votre ordinateur. Il faut que vous enregistriez
+une image sur votre ordinateur dans le même répertoire que votre page web
+et que vous indiquiez le nom de cette image dans l'attribut src=""  -->
+<img src="ex_html2_fichiers/88x31.png" alt="creative-common"></img>
+
+
+
+
+</body></html>

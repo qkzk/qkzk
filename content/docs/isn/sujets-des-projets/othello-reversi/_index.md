@@ -21,7 +21,7 @@ La capture de pions survient lorsqu'un joueur place un de ses pions à l'extrém
 
 Par exemple, la figure de gauche ci-dessous montre la position de départ. La figure centrale montre les 4 cases où Noir peut jouer, grâce à la capture d'un pion Blanc. Enfin, la figure de droite montre la position résultante si Noir joue en **d3**. Le pion Blanc **d4** a été capturé (retourné), devenant ainsi un pion Noir.
 
-[caption id="attachment_1405" align="aligncenter" width="1044"]![Début d'une partie](http://qkzk.xyz/wp-content/uploads/2018/08/othello.jpg)
+[caption id="attachment_1405" align="aligncenter" width="1044"]![Début d'une partie](/uploads/uploads/2018/08/othello.jpg)
 Début d'une partie d'Othello[/caption]
 
 Le texte précédent est un extrait [de wikipedia](https://fr.wikipedia.org/wiki/Othello_(jeu)).

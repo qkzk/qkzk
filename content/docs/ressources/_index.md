@@ -36,7 +36,7 @@ weight: 6
 
 * [OpenClassRooms](http://fr.openclassrooms.com/informatique/cours/dynamisez-vos-sites-web-avec-javascript) : LA référence en français, complète et didactique (anciennement : site du zéro).
 * [France IOI](http://www.france-ioi.org/algo/chapters.php) : Site d'entrainement à la programmation et à l'algorithmique. De nombreux cours et exercices interactifs dans plusieurs langages (Python, C, C++, Python, Java, CAML etc.)
-* [Le manuel de référence, édité par l'INRIA.](http://qkzk.xyz/docs/livreISN.pdf) Il est mis à votre disposition gratuitement mais son usage est protégé. Un [mirroir](https://wiki.inria.fr/wikis/sciencinfolycee/images/7/73/Informatique_et_Sciences_du_Num%C3%A9rique_-_Sp%C3%A9cialit%C3%A9_ISN_en_Terminale_S.pdf) sur le site de l'INRIA.
+* [Le manuel de référence, édité par l'INRIA.](/uploads/docs/livreISN.pdf) Il est mis à votre disposition gratuitement mais son usage est protégé. Un [mirroir](https://wiki.inria.fr/wikis/sciencinfolycee/images/7/73/Informatique_et_Sciences_du_Num%C3%A9rique_-_Sp%C3%A9cialit%C3%A9_ISN_en_Terminale_S.pdf) sur le site de l'INRIA.
 * Vous souhaitez découvrir linux ? Lisez [cette introduction](http://raspbian-france.fr/decouvrir-linux-cours-introduction-debutants/) et regardez les slides.  Une distribution populaire, facile d'accès et entièrement libre : [Ubuntu](http://www.ubuntu.com/). Une [communauté](http://ubuntu-fr.org/) d'utilisateurs avec des ressources en français.
 
 
@@ -102,4 +102,4 @@ Dans tous les cas ils étaient libres de droits et le sont toujours. Merci à eu
 ## Ça marche pas, y'a un bug là...
 
 
-Merci de me le signaler à [cette adresse.](http://qkzk.xyz/docs/ecrire.html)
+Merci de me le signaler à [cette adresse.](/uploads/docs/ecrire.html)

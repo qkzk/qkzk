@@ -1,0 +1,40 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+    <title>_prompt, chaines et nombres en javascript 2 </title>
+
+    <link href="somme1.css" rel="stylesheet" type="text/css" media="screen"/>
+  </head>
+  <body>
+
+
+<h1>Saisie et "+" sur 2 variables...</h1>
+
+<script type="text/javascript">
+  var chaine1 = prompt("valeur pour chaine 1 ?");
+  var chaine2 = prompt("valeur pour chaine 2 ?");
+</script>
+
+  Le résultat de la 'chaine1+chaine2' est
+
+<span id="resultat">
+ <script type="text/javascript"> document.writeln(chaine1+chaine2);
+document.writeln("<br/>");
+</script></span>
+
+
+Valeur "entière" de la première chaîne : <span id="resultat">
+ <script type="text/javascript"> 
+   document.writeln(parseInt(chaine1)+"<br/>");
+</script></span>
+
+
+
+
+
+  </body>
+</html>

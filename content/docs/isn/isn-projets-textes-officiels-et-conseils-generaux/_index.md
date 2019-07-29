@@ -167,7 +167,7 @@ Il faut donc aborder tôt le dossier projet et et l'oral. Aucune raison de tarde
 
 * Le [ programme officiel](http://www.education.gouv.fr/pid25535/bulletin_officiel.html?cid_bo=57572)
 * Le [BO : Bulletin officiel de l’éducation nationale ](http://isn.ac-amiens.fr/sites/isn.ac-amiens.fr/IMG/pdf/BO_MEN_03-05-12_213932.pdf)n°18 du 03/05 2012 définit une grille de compétences et d’évaluation pour l’ISN.
-* [Résumé](http://qkzk.xyz/docs/grilles-competences.html)
+* [Résumé](/uploads/docs/grilles-competences.html)
 * Extraits de la note de service du recteur :
 _Cette épreuve d’une durée de 20 minutes se déroule pendant le temps scolaire. Elle est notée sur 20 points (8 points pour l’évaluation d’un projet et sa soutenance orale ; 12 points pour le dialogue argumenté avec la commission d’évaluation)._
 

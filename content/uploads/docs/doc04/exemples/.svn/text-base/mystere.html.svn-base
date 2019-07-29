@@ -1,0 +1,47 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+  <head>
+
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <title> Texte mystere </title>
+
+
+    <link href="styleMystere.css" rel="stylesheet" type="text/css"
+    media="screen"/>
+
+   
+  </head>
+  <body>
+
+    <h1 class="titre1">Mystère</h1>
+
+<div>
+ Il y a du texte caché ici...
+<span class="button" id="devoile">
+Montrer
+</span>
+<span class="button" id="cache">
+Cacher
+</span>
+</div>
+
+<div id="txtcache">
+LE MYSTERE ENFIN DEVOILE...
+</div>
+
+
+<div id="piedDePage">
+Cliquez sur l'un des "boutons" Montrer/Cacher ci-dessus et observer ce
+qui se passe.
+</div>
+
+
+  </body>
+
+
+
+ 
+</html>
+

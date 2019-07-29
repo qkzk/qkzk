@@ -31,13 +31,13 @@ Notre image est donc un tableau rectangulaire où chaque case, repérée par ses
 
 On dispose d'une image telle que celle-ci où nous gêne la présence de gris autour des pattes de l'araignée.
 
-![spider](http://qkzk.xyz/wp-content/uploads/2016/07/spider.jpg)
+![spider](/uploads/uploads/2016/07/spider.jpg)
 On repère que les pattes sont très marquées, presque noire, le niveau de gris moyen est autour de 30. Le niveau du "bruit" autour des pattes est plus élevé, entre 150 et 255. On décide de filtrer tout le gris au dessus de 125.
 Pour chaque pixel de l'image, s'il est supérieur à 125 on le remplace par 255. S'il est inférieur à 125 on n'y touche pas.
 C'est ce qu'on appelle un masque et ce genre de procédé (plus élaboré on s'en doute) est couramment employé en graphisme.
 
-![spider_mask](http://qkzk.xyz/wp-content/uploads/2016/07/spider_mask.jpg)
-![spider_complet](http://qkzk.xyz/wp-content/uploads/2016/07/spider_complet.png)
+![spider_mask](/uploads/uploads/2016/07/spider_mask.jpg)
+![spider_complet](/uploads/uploads/2016/07/spider_complet.png)
 Les logiciels de retouche d'image et la majorité des langages de programmation disposent d'outils pour réaliser de tels masque. On en rencontrera à la fin du tutoriel associé.
 On peut se servir du masque pour laisser passer ou arrêter une couleur prédéfinie et donc faire apparaître une partie seulement d'une image.
 
@@ -87,7 +87,7 @@ Différents niveaux de contrasteLe calcul du contraste d'une photographie est co
 Au sein d'une même image le contraste peut varier énormément !
 
 
- ![histo-exemple](http://qkzk.xyz/wp-content/uploads/2016/07/histo-exemple.png)
+ ![histo-exemple](/uploads/uploads/2016/07/histo-exemple.png)
 
 
 

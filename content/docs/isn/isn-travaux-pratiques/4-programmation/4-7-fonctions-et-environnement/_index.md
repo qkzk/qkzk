@@ -41,7 +41,7 @@ dégager collectivement les règles de portée.
 
 
 
-1. Activez, si besoin, Firebug et rechargez le document [version 2](http://qkzk.xyz/docs/doc04/doc/monuments-version2.html).
+1. Activez, si besoin, Firebug et rechargez le document [version 2](/uploads/docs/doc04/doc/monuments-version2.html).
 2. S'il n'y est plus replacez un point d'arrêt sur la première ligne de code du corps de la
 fonction `afficheMonument`, et supprimez les éventuels autres.
 3. Sélectionnez ensuite l'onglet **Espions** dans la zone
@@ -164,7 +164,7 @@ géré par le langage ?
 
 
 
-Reprenez le document [version 2](http://qkzk.xyz/docs/doc04/doc/monuments-version2.html) dans sa version initiale.
+Reprenez le document [version 2](/uploads/docs/doc04/doc/monuments-version2.html) dans sa version initiale.
 
 
 

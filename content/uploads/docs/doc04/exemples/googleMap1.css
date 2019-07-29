@@ -1,0 +1,16 @@
+ body {    
+     font-family: sans-serif; 
+ } 
+ h1 { 
+     font-size:24px; 
+     color : white; 
+     font-weight : bold; 
+     background-color : purple;
+     padding : 3px;
+ } 
+
+
+#maCarte {
+    width:600px;
+    height:600px;
+}

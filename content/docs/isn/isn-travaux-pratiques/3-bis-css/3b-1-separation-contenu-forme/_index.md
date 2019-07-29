@@ -31,7 +31,7 @@ Notions abordées dans cette page
 
 
 
-Ouvrez [ce fichier](http://qkzk.xyz/docs/doc03b/exemples/gestionStyles.odt) avec le
+Ouvrez [ce fichier](/uploads/docs/doc03b/exemples/gestionStyles.odt) avec le
 logiciel LibreOffice. Vous découvrez un fichier dont le contenu est
 structuré avec des titres et des paragraphes.
 
@@ -54,7 +54,7 @@ que la police, la couleur, les marges, etc.
 
 
 ![liste de gestion des
-						    styles](http://qkzk.xyz/docs/doc03b/zoneStylList.png)
+						    styles](/uploads/docs/doc03b/zoneStylList.png)
 
 
 
@@ -129,18 +129,18 @@ commune à un ensemble de documents.
 
 
 
-1. Récupérez les fichiers de définition des feuilles de style (LibreOffice utilise le terme _modèle_) `[modele1.ott](http://qkzk.xyz/docs/doc03b/exemples/modele1.ott)`et `[modele2.ott](http://qkzk.xyz/docs/doc03b/exemples/modele2.ott)` et sauvegardez-lessur votre disque.
+1. Récupérez les fichiers de définition des feuilles de style (LibreOffice utilise le terme _modèle_) `[modele1.ott](/uploads/docs/doc03b/exemples/modele1.ott)`et `[modele2.ott](/uploads/docs/doc03b/exemples/modele2.ott)` et sauvegardez-lessur votre disque.
 
 
 
-2. ![zone boutons de gestion des styles](http://qkzk.xyz/docs/doc03b/boutonsStyles.png)
+2. ![zone boutons de gestion des styles](/uploads/docs/doc03b/boutonsStyles.png)
 
 A partir du document précédent, cliquez sur le bouton à gauche de la liste des styles (cf. image ci-dessus) ou appuyez sur la touche. Cela fait apparaître une fenêtre nommée _Styles et formatage_.
 
 Cliquez sur le bouton  le plus à droite et choisissez _Chargez les styles..._.
 
 
-3. ![fenêtre Chargez les styles](http://qkzk.xyz/docs/doc03b/chargerLesStyles.png)
+3. ![fenêtre Chargez les styles](/uploads/docs/doc03b/chargerLesStyles.png)
 
 
 Dans la fenêtre qui s'ouvre cochez la case _Ecraser_ puis cliquez

@@ -159,7 +159,7 @@ Il faut ensuite préciser dans le document que l'on souhaite utiliser cette feui
 
 
 Reprenez le
-document [ex_html2.html](http://qkzk.xyz/docs/doc03b/ex_html2.html)
+document [ex_html2.html](/uploads/docs/doc03b/ex_html2.html)
 que vous avez corrigé, appliquez-lui la feuille de style du
 fichier `styleCSS1.css` (que vous aurez placé dans le même
 dossier) et visualisez le résultat.
@@ -548,7 +548,7 @@ Vous avez déjà pu observer le comportement de la
 
 ![CSS : boite
 						    englobante, bordure et
-						    marges](http://qkzk.xyz/docs/doc03b/css-box.png)
+						    marges](/uploads/docs/doc03b/css-box.png)
 
 
 

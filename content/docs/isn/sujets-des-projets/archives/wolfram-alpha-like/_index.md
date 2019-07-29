@@ -31,8 +31,8 @@ second degré :
 
 
 
-[![doc00019_1](http://qkzk.xyz/wp-content/uploads/2016/07/doc00019_1.jpeg)
-](http://qkzk.xyz/wp-content/uploads/2016/07/doc00019_1.jpeg)
+[![doc00019_1](/uploads/uploads/2016/07/doc00019_1.jpeg)
+](/uploads/uploads/2016/07/doc00019_1.jpeg)
 
 
 

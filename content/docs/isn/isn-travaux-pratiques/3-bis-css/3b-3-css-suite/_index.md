@@ -189,9 +189,9 @@ classe `tableaux` :
 
 
 
-<img src="http://qkzk.xyz/docs/doc03b/brueghel-babel.jpg" alt="Brueghel Babel" class="brueghel"></img>
-<img src="http://qkzk.xyz/docs/doc03b/brueghel-carnaval.jpg" alt="Brueghel Carnaval et Carême" class="brueghel"></img>
-<img src="http://qkzk.xyz/docs/doc03b/brueghel-noces.jpg" alt="Brueghel noces paysannes" class="brueghel"></img>
+<img src="/uploads/docs/doc03b/brueghel-babel.jpg" alt="Brueghel Babel" class="brueghel"></img>
+<img src="/uploads/docs/doc03b/brueghel-carnaval.jpg" alt="Brueghel Carnaval et Carême" class="brueghel"></img>
+<img src="/uploads/docs/doc03b/brueghel-noces.jpg" alt="Brueghel noces paysannes" class="brueghel"></img>
 
 
 

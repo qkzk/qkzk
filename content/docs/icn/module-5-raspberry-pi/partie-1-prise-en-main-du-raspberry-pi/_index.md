@@ -293,7 +293,7 @@ Dans quel ordre aborder le GPIO ?
  	  6. Des capteurs ! Température, pression, humidité + serveur web = station météo.
  	  7. Les différents projets proposés aux terminales ISN : [jeu portable](http://qkzk.xyz/?page_id=478), [caméra de surveillance](http://qkzk.xyz/?page_id=62), [panic button](http://qkzk.xyz/?page_id=66)
  	  8. Créer une timelapse box qu'on dépose 24 heures et qui filme seule le passage du temps. Un peu de poésie.
-![time-lapse-2_4972189_GIFSoup.com](http://qkzk.xyz/wp-content/uploads/2016/07/time-lapse-2_4972189_GIFSoup.com_.gif)
+![time-lapse-2_4972189_GIFSoup.com](/uploads/uploads/2016/07/time-lapse-2_4972189_GIFSoup.com_.gif)
 
 
 Bon ne rêvez pas vous n'avez pas l'appareil photo qu'il faut pour réaliser une vidéo pareille.

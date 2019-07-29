@@ -19,11 +19,11 @@ Avant de commencer cette description, un petit rappel à la [loi](https://www.se
 
 Dans ce projet vous utiliserez le raspberry et sa caméra pour surveiller automatiquement un lieu.
 
-![camera-module](http://qkzk.xyz/wp-content/uploads/2016/07/camera-module-300x169.png)
+![camera-module](/uploads/uploads/2016/07/camera-module-300x169.png)
 
 Des événements peuvent déclencher la surveillances et l'enregristrement des données : détection de mouvement, signal émis à distance.
 
-![mounted_sm](http://qkzk.xyz/wp-content/uploads/2016/07/mounted_sm-300x235.jpg)
+![mounted_sm](/uploads/uploads/2016/07/mounted_sm-300x235.jpg)
 
 
 Il sera possible d'afficher sur un autre ordinateur ce que voit la caméra en temps réel.

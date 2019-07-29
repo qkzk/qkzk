@@ -485,24 +485,24 @@ Commençons par la rotation qui permet de "tourner" le système de coordonnées 
 
 Au départ nous avons :
 
-![repere](http://www.ac-grenoble.fr/disciplines/informatiquelycee/img/procDes_a4_1.png)
+![repere](https://pixees.fr/informatiquelycee/img/procDes_a4_1.png)
 
 
 après une rotation, nous obtenons ceci :
 
-![repere](http://www.ac-grenoble.fr/disciplines/informatiquelycee/img/procDes_a4_2.png)
+![repere](https://pixees.fr/informatiquelycee/img/procDes_a4_2.png)
 
 
 Pour effectuer une rotation d'un angle α, il suffit de rajouter l'attribut _transform_(_transform="rotate(α)"_)
 
 sans le _transform="rotate(α)"_
 
-![repere](http://www.ac-grenoble.fr/disciplines/informatiquelycee/img/procDes_a4_3.png)
+![repere](https://pixees.fr/informatiquelycee/img/procDes_a4_3.png)
 
 
 avec le _transform="rotate(α)"_
 
-![repere](http://www.ac-grenoble.fr/disciplines/informatiquelycee/img/procDes_a4_4.png)
+![repere](https://pixees.fr/informatiquelycee/img/procDes_a4_4.png)
 
 
 
@@ -569,14 +569,14 @@ Saisissez et testez ce code
 
 avant
 
-![repere](http://www.ac-grenoble.fr/disciplines/informatiquelycee/img/procDes_a4_1.png)
+![repere](https://pixees.fr/informatiquelycee/img/procDes_a4_1.png)
 
 
 après un _transform="translate(dx,dy)"_
 
 on obtient ceci
 
-![repere](http://www.ac-grenoble.fr/disciplines/informatiquelycee/img/procDes_a4_6.png)
+![repere](https://pixees.fr/informatiquelycee/img/procDes_a4_6.png)
 
 
 
@@ -611,12 +611,12 @@ Saisissez et testez ce code
 
 sans le _transform="translate(dx,dy)"_
 
-![repere](http://www.ac-grenoble.fr/disciplines/informatiquelycee/img/procDes_a4_3.png)
+![repere](https://pixees.fr/informatiquelycee/img/procDes_a4_3.png)
 
 
 avec le _transform="translate(dx,dy)"_
 
-![repere](http://www.ac-grenoble.fr/disciplines/informatiquelycee/img/procDes_a4_7.png)
+![repere](https://pixees.fr/informatiquelycee/img/procDes_a4_7.png)
 
 
 "scale" ne devrait pas vous poser de difficultés :
@@ -655,7 +655,7 @@ Attention, comme pour rotate ou translate, c'est le système de coordonnées qui
 
 Il est possible de combiner "rotate", "translate" et "scale" (attention l'ordre d'application à son importance) :
 
-![repere](http://www.ac-grenoble.fr/disciplines/informatiquelycee/img/procDes_a4_8.png)
+![repere](https://pixees.fr/informatiquelycee/img/procDes_a4_8.png)
 
 
 
@@ -684,7 +684,7 @@ Complétez le code suivant avec les couleurs (fill) correctes.
     </html>
 ~~~
 
-![repere](http://www.ac-grenoble.fr/disciplines/informatiquelycee/img/svg_a4_5.png)
+![repere](https://pixees.fr/informatiquelycee/img/svg_a4_5.png)
 
 
 
@@ -761,7 +761,7 @@ Il existe aussi des outils en ligne, directement utilisables dans le navigateur,
 
 Faites le dessin de votre choix.
 
-Une fois le dessin terminé, cliquez sur le bouton ![btn_svg](http://www.ac-grenoble.fr/disciplines/informatiquelycee/img/svg_a5_1.png)
+Une fois le dessin terminé, cliquez sur le bouton ![btn_svg](https://pixees.fr/informatiquelycee/img/svg_a5_1.png)
 (en haut à gauche)
 
 Vous devriez voir le code svg de votre image.
@@ -779,4 +779,4 @@ Modifiez le code comme bon vous semble et vérifiez que votre image a, elle auss
 
 
 
-_Ce cours a été rédigé [par un collègue.](http://www.ac-grenoble.fr/disciplines/informatiquelycee/)_
+_Ce cours a été rédigé [par un collègue.](https://pixees.fr/informatiquelycee/)_

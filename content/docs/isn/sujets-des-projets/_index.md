@@ -15,7 +15,7 @@ weight: 3
 # Sujets des mini-projets 2019
 
 
-![ZV3FWKD](http://qkzk.xyz/wp-content/uploads/2016/07/ZV3FWKD-1024x768.jpg)
+![ZV3FWKD](/uploads/uploads/2016/07/ZV3FWKD-1024x768.jpg)
 
 
 
@@ -54,9 +54,8 @@ Ce miniprojet vise à l'apprentissage du canvas en vue d'un projet final.
 ![](http://amigamuseum.emu-france.info/Fichiers/Biographie/images/pong/pong.gif)
 
 
-Pong : le jeu historique et bien connu. 2 Raquettes defendant chacune un but (bords gauche et droit) se déplacent verticalement et font rebondir une balle. Celle-ci rebondit aussi sur les murs.
-Il sera réalisé dans une page html contenant un canvas qui permet l'affichage et l'animation d'objets. On developpera d'abord la version deux joeurs sur un même clavier (l'ordinateur ne joue pas). Un tutoriel presque complet est disponible [ici.
-](http://qkzk.xyz/?page_id=29)La dernière partie (l'ordinateur joue contre vous) n'est pas détaillée dans ce tutoriel. On L'envisagera en deux temps : 1. Quelle ordonnée doit-il viser ? 2. Il se déplace étape par étape.
+Pong : le jeu historique et bien connu. 2 Raquettes défendant chacune un but (bords gauche et droit) se déplacent verticalement et font rebondir une balle. Celle-ci rebondit aussi sur les murs.
+Il sera réalisé dans une page html contenant un canvas qui permet l'affichage et l'animation d'objets. On développera d'abord la version deux joueurs sur un même clavier (l'ordinateur ne joue pas). Un tutoriel presque complet est disponible [ici.](/docs/isn/isn-travaux-pratiques/4-programmation/4-12-tutoriel-pong-en-javascript/)La dernière partie (l'ordinateur joue contre vous) n'est pas détaillée dans ce tutoriel. On L'envisagera en deux temps : 1. Quelle ordonnée doit-il viser ? 2. Il se déplace étape par étape.
 **Extension :** les niveaux de difficulté.
 *
 
@@ -87,10 +86,10 @@ C'est un mini-projet ambitieux qui demande un investissement certain pour les no
 
 **p5js** est la librairie javascript adaptée de processing. Elle permet de réaliser très simplement des animations et du traitement de l'image à intégrer dans une page html ou un programme.
 C'est une librairie dont la prise en main est simple mais qui s'avère très puissante.
-Votre mini projet consiste à suivre les [activités](http://www.ac-grenoble.fr/disciplines/informatiquelycee/p5_base_a1.html) réalisées par un collègue et ensuite à réaliser soit :
+Votre mini projet consiste à suivre les [activités](https://pixees.fr/informatiquelycee/p5_base_a1.html) réalisées par un collègue et ensuite à réaliser soit :
 
  	* (facile) une animation automatique présentant des bulles qui rebondissent les unes sur les autres en changeant de couleur.
- 	* (moyen) du traitement vidéo depuis un flux vidéo récupéré par une webcam. A nouveau un tutoriel en deux parties ([1.](http://www.ac-grenoble.fr/disciplines/informatiquelycee/p5_Img_a1.html) [2.](http://www.ac-grenoble.fr/disciplines/informatiquelycee/p5_vid_a1.html)) est disponible.
+ 	* (moyen) du traitement vidéo depuis un flux vidéo récupéré par une webcam. A nouveau un tutoriel en deux parties ([1.](https://pixees.fr/informatiquelycee/p5_Img_a1.html) [2.](https://pixees.fr/informatiquelycee/p5_vid_a1.html)) est disponible.
 
 L'objectif de ce mini-projet est la prise en main de p5js afin de réaliser **ensuite** un jeu vidéo complet en p5js. Les animations et transformations sont grandement simplifiées par p5js et votre projet final devra donc aller un peu plus loin qu'un simple jeu dans un canvas.
 
@@ -121,7 +120,7 @@ Le raspberry Pi est un outil d'initiation à la programmation avec une visée é
 Afin de communiquer avec le GPIO l'apprentissage d'un nouveau langage est nécessaire et vous découvrirez donc Python.
 
 **En parallèle vous devrez donc vous initier à Python.**
-Les cours que vous allez suivre sont [ici](http://qkzk.xyz/?page_id=39). S'ils ne vous conviennent pas, de bonnes sources en français sont disponibles sur le site d'[OpenClassrooms](http://openclassrooms.com/courses/apprenez-a-programmer-en-python) (inscription nécessaire).
+Les cours que vous allez suivre sont [ici](/docs/nsi/cours-python/_index.md). S'ils ne vous conviennent pas, de bonnes sources en français sont disponibles sur le site d'[OpenClassrooms](http://openclassrooms.com/courses/apprenez-a-programmer-en-python) (inscription nécessaire).
 
 Ce mini projet est indispensable pour aborder un projet final demandant le Raspberry-Pi. Deux ou trois projets utilisant le raspberry Pi peuvent se dérouler en même temps. Pas plus.
 
@@ -166,27 +165,27 @@ Le dossier projet sera évalué et constituera une partie de votre note.
 
 
 
-* [Le compte est bon - Javascript- abordable](http://qkzk.xyz/?page_id=470)
-* [2048 - python + pygame ou javascript + canvas/p5js - abordable / intémédiaire](http://qkzk.xyz/?page_id=1093)
-* [ZagZig : JS, Canvas - intermédiaire](http://qkzk.xyz/?page_id=58)
-* [Jeu de la vie - Canvas - intermédiaire](http://qkzk.xyz/?page_id=474)
-* [Space orbit - p5js - intermédiaire](http://qkzk.xyz/?page_id=1097)
-* [Stack - html, js, canvas - difficile](http://qkzk.xyz/?page_id=1108)
-* [Video Surveillance : Raspberry Pi, Python, Linux, Electronique - intermédiaire](http://qkzk.xyz/?page_id=62)
-* [Papy Panic : Raspberry Pi, Python, Linux, Electronique - assez difficile](http://qkzk.xyz/?page_id=66)
-* [Domotique et raspberry Pi - très difficile](http://qkzk.xyz/?page_id=1115)
-* [Abelian Sandpile : automate cellulaire en Python (ou autre) - difficulté variable (peut monter très haut).](http://qkzk.xyz/?page_id=1290)
-* [Bowling Parallaxe : très sommaire, en fausse 3D et avec une gestion simplifiée des collisions. (intermédiaire - difficile)](http://qkzk.xyz/?page_id=1444)
-* [Bowling Elastique : une version apauvrie mais néanmoins intéressante du bowling. Extension vers le mouvement Brownien... (difficile)](http://qkzk.xyz/?page_id=1434)
-* [Othello (Reversi) : à deux joueurs (intermédiaire) et contre l'ordinateur (expert)](http://qkzk.xyz/?page_id=1404).
+* [Le compte est bon - Javascript- abordable](/docs/isn/sujets-des-projets/archives/le-compte-est-bon)
+* [2048 - python + pygame ou javascript + canvas/p5js - abordable / intémédiaire](/docs/isn/sujets-des-projets/2048-projet)
+* [ZagZig : JS, Canvas - intermédiaire](/docs/isn/sujets-des-projets/zagzig-js-canvas)
+* [Jeu de la vie - Canvas - intermédiaire](/docs/isn/sujets-des-projets/jeu-de-la-vie)
+* [Space orbit - p5js - intermédiaire](/docs/isn/sujets-des-projets/space-orbit)
+* [Stack - html, js, canvas - difficile](/docs/isn/sujets-des-projets/stack)
+* [Video Surveillance : Raspberry Pi, Python, Linux, Electronique - intermédiaire](/docs/isn/sujets-des-projets/video-surveillance-rpi-python)
+* [Papy Panic : Raspberry Pi, Python, Linux, Electronique - assez difficile](/docs/isn/sujets-des-projets/papy-panic-rpi-python)
+* [Domotique et raspberry Pi - très difficile](/docs/isn/sujets-des-projets/domotique-et-raspberry-pi)
+* [Abelian Sandpile : automate cellulaire en Python (ou autre) - difficulté variable (peut monter très haut).](/docs/isn/sujets-des-projets/sandpiles)
+* [Bowling Parallaxe : très sommaire, en fausse 3D et avec une gestion simplifiée des collisions. (intermédiaire - difficile)](/docs/isn/sujets-des-projets/bowling-paralaxe)
+* [Bowling Elastique : une version apauvrie mais néanmoins intéressante du bowling. Extension vers le mouvement Brownien... (difficile)](/docs/isn/sujets-des-projets/bowling-elastique)
+* [Othello (Reversi) : à deux joueurs (intermédiaire) et contre l'ordinateur (expert)](/docs/isn/sujets-des-projets/othello-reversi).
 
 D'autres projets sont possibles mais n'ont pas été décrits :
 
 * **Bot telegram** : créer un bot contrôle a distance d'un raspberry pi OU jeu vidéo dans un channel - intéressabt mais aucune documentation en français. Le projet est vite fonctionnel mais nécessite trop d'outils à mes yeux.
 * **Correcteur orthographique utilisant la distance de Leveinshtein.** Intéressant mais la difficulté n'est pas progressive. Une fois les premiers outils mis en place (distance, dictionnaire) la réalisation du correcteur est délicate.
 * **Cryptographie** - passage en revue de méthodes célèbres ou étude exhaustive du chiffre de Vigenère. Demande un investissement certain. Envisageable pour qui a déjà quelques notions de Cryptographie.
-Il est possible de traiter d'abord un mini-projet pour se familiariser, par exemple en suivant ces activités proposées aux élèves d'ICN première : [Code César, Substitution simple](http://qkzk.xyz/?page_id=83), [lexicométrie](http://qkzk.xyz/?page_id=92), [analyse fréquentielle](http://qkzk.xyz/?page_id=1257).
-* **Hero Stick** - Je vous laisse regarder [une vidéo](https://www.youtube.com/watch?v=Ph0LxvHM_EQ) pour ceux qui ne connaîtraient pas. C'est plus difficile (à développer...) qu'il n'y paraît.
+Il est possible de traiter d'abord un mini-projet pour se familiariser, par exemple en suivant ces activités proposées aux élèves d'ICN première : [Code César, Substitution simple](/docs/icn/2-Cryptographie), [lexicométrie](/docs/icn/1-lexicometrie), [analyse fréquentielle](/docs/icn/3-casser-un-code-secret).
+* **Hero Stick** - Je vous laisse regarder [une vidéo](https://www.youtube.com/watch?v=Ph0LxvHM_EQ) pour ceux qui ne connaîtraient pas. C'est plus difficile à développer qu'il n'y paraît.
 
 D'autres idées en vrac :
 
@@ -210,5 +209,6 @@ Logistic Map[/caption]
 
 ##  Archives des sujets proposés les années précédentes :
 
+Elles sont toutes disponibles en dépliant le dossier **isn/sujets-des-projets/archives**.
 
-[ici](http://qkzk.xyz/?page_id=467)
+Il suffit de le déplier.

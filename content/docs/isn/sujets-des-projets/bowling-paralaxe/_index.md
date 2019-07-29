@@ -11,7 +11,7 @@ weight: 3
 
 
 
-[video width="662" height="776" mp4="http://qkzk.xyz/wp-content/uploads/2018/12/bowling_paralax_1.mp4"][/video]
+[video width="662" height="776" mp4="/uploads/uploads/2018/12/bowling_paralax_1.mp4"][/video]
 
 Dans cette version du jeu de Bowling on s'approche davantage des jeux de bowling type "bowling 3D"  concernant les graphismes et on s'en éloigne d'un point de vue de la physique.
 

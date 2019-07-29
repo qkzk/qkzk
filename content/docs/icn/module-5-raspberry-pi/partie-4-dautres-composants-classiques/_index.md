@@ -113,7 +113,7 @@ Le potentiomètre "sens" (droite sur le plan) ajuste la sensibilité. Elle augme
 
 Des jumpers permettent parfois de changer de mode entre "H" : _non rettrigered_ et "L" : _rettrigered_.
 
-![PIR_simple_test_bb](http://qkzk.xyz/wp-content/uploads/2017/06/PIR_simple_test_bb-1024x913.png)
+![PIR_simple_test_bb](/uploads/uploads/2017/06/PIR_simple_test_bb-1024x913.png)
 
 
 Il ne nécessite aucun script Python pour fonctionner ! Et se contente d'éclairer la LED (protégée par une resistance 220 Ohms) quand un mouvement est détecté. Le raspberry ne sert ici que d'alimentation 5V mais puisque c'est ce que nous avons sous la main...
@@ -382,7 +382,7 @@ Adafruit propose un tutoriel permettant d'[updater une page google drive](https:
 
 De façon moins rudimentaire un joli projet consiste à stocker les données dans une base de donnée SQlite et les afficher dans une page web (qui demande alors un petit serveur web). C'est tout à fait faisable et les effets peuvent-être bluffants. (Je trouve).
 
-![download](http://qkzk.xyz/wp-content/uploads/2017/06/download.png)
+![download](/uploads/uploads/2017/06/download.png)
 
 
 Puisque je vous dis qu'il fait trop chaud, vous me croyez maintenant ?
@@ -462,7 +462,7 @@ large.
 **Attention : les lasers sont dangereux, ils peuvent détruire les cellules de la rétine et rendre aveugle. Soyez prudent, cela arrive plus vite que vous ne le pensez peut-être.**
 
 
-![laserCat_bb](http://qkzk.xyz/wp-content/uploads/2017/06/laserCat_bb-1024x787.png)
+![laserCat_bb](/uploads/uploads/2017/06/laserCat_bb-1024x787.png)
 
 
 Le projet complet [en action](https://learn.adafruit.com/raspberry-pi-wifi-controlled-cat-laser-toy/overview).

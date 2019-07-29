@@ -20,7 +20,7 @@ C'est un projet qui mêle différentes technologies : html, css, js et node.js
 
 Parmi tous les projets "javascript" c'est de loin le plus abouti.
 
-![YTchat](http://qkzk.xyz/wp-content/uploads/2017/12/YTchat.gif)
+![YTchat](/uploads/uploads/2017/12/YTchat.gif)
 
 
 

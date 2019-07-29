@@ -55,8 +55,8 @@ Sur le même procédé mais adapté au besoin du concepteur. Avant, il fallait d
 
 Mais heureusement c'est plus rapide. On utilise maintenant des logiciels dédiés qui permettent de relier des données (population d'un département) à un contour (celui des départements) pour intégrer une information à l'aide d'une couleur par exemple.
 
-**Le taux de chômage par département au 1er trimestre 2014**[![France_Dept_Chom](http://qkzk.xyz/wp-content/uploads/2016/07/France_Dept_Chom.png)
-](http://qkzk.xyz/wp-content/uploads/2016/07/France_Dept_Chom.png)Le niveau de bleu indique le taux.
+**Le taux de chômage par département au 1er trimestre 2014**[![France_Dept_Chom](/uploads/uploads/2016/07/France_Dept_Chom.png)
+](/uploads/uploads/2016/07/France_Dept_Chom.png)Le niveau de bleu indique le taux.
 
 
 # Manipulation d'une carte vectorielle
@@ -121,7 +121,7 @@ Il est possible d'afficher le trafic en temps réel et à certains horaires. Adm
 
 Google maps propose une API (interface de programmation) qui permet d'intégrer dans des logiciels et sites web une carte et des informations supplémentaires. On consultera [leur site](https://developers.google.com/maps/) pour quelques exemples.
 
-Voici un très simple exemple qui présente le trafic en temps réel autour de Lille : [map_test_trafic](http://qkzk.xyz/?attachment_id=111) (C'est pénible d'activer Javascript dans une page wordpress aussi vous devrez l'ouvrir dans un autre onglet).
+Voici un très simple exemple qui présente le trafic en temps réel autour de Lille : [map_test_trafic](/uploads/uploads/2016/07/map_test_trafic.html) (C'est pénible d'activer Javascript dans une page wordpress aussi vous devrez l'ouvrir dans un autre onglet).
 
 Examinons le code cette page :
 
@@ -199,11 +199,11 @@ Pour des questions de sécurité, google map n'autorise que deux approches :
 
 
  Ajouter les éléments depuis le fichier html directement.
-Dans ce premier exemple : [test_googlemap_png](http://qkzk.xyz/?attachment_id=112), on ajoute une image, transparente à des coordonnées précises. Cet objet ne s'affiche que si le zoom est compris entre certaines valeurs (dézoomer et rezoomer).
+Dans ce premier exemple : [test_googlemap_png](/uploads/uploads/2016/07/test_googlemap_png.html), on ajoute une image, transparente à des coordonnées précises. Cet objet ne s'affiche que si le zoom est compris entre certaines valeurs (dézoomer et rezoomer).
 C'est commode pour dessiner une figure simple, ça l'est moins pour les objets complexes
  Ajouter des éléments depuis un fichier .kml. C'est un format de fichier assez simple, c'est en fait du XML (comme SVG). L'inconvénient est qu'il faut absolument que ce fichier soit hébergé quelque part sur internet. Il est impossible de charger un fichier kml depuis votre ordinateur en local. Il faut qu'il soit accessible via une url. [Par exemple](https://developers.google.com/maps/documentation/javascript/examples/layer-kml)
 
-Voici un autre exemples simples tiré des exemples de l'api de google : [test_googlemap_dropmarkers](http://qkzk.xyz/?attachment_id=113). On fait apparaître des marqueurs qui tombent de façon animée.
+Voici un autre exemples simples tiré des exemples de l'api de google : [test_googlemap_dropmarkers](/uploads/uploads/2016/07/test_googlemap_dropmarkers.html). On fait apparaître des marqueurs qui tombent de façon animée.
 
 
 
@@ -235,7 +235,7 @@ Nous allons dessiner un cabre surplombant le bâtiment B du lycée et l'afficher
 Commencer par relever précisément les coordonnées GPS des 4 coins du bâtiment B du Lycée qu'on assimile à un long rectangle.
 
 
-L'exemple [test_googlemap_bermudes](http://qkzk.xyz/?attachment_id=114) dessine un triangle dans lequel on peut cliquer et qui affiche alors un tas d'informations passionnantes.
+L'exemple [test_googlemap_bermudes](/uploads/uploads/2016/07/test_googlemap_bermudes.html) dessine un triangle dans lequel on peut cliquer et qui affiche alors un tas d'informations passionnantes.
 
 
 Télécharger le fichier source et l'éditer.
@@ -268,8 +268,7 @@ Ne garder que : numero de département, nom du département, taux dans un seul f
 
 Le résultat que vous obtiendrez est celui déjà affiché en début de partie :
 
-**Le taux de chômage par département au 1er trimestre 2014**[![France_Dept_Chom](http://qkzk.xyz/wp-content/uploads/2016/07/France_Dept_Chom.png)
-](http://qkzk.xyz/?attachment_id=108)
+**Le taux de chômage par département au 1er trimestre 2014**[![France_Dept_Chom](/uploads/uploads/2016/07/France_Dept_Chom.png)](/uploads/uploads/2016/07/test_googlemap_bermudes.html)
 Le niveau de bleu indique le taux.Pour la suite, seul le résultat m'intéresse : la carte de France avec les données statistiques de la population de chaque département au format SHP
 
 

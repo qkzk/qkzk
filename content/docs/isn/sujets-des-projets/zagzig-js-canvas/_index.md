@@ -11,7 +11,7 @@ weight: 14
 
 ZagZig est un remake du jeu ZigZag disponible sur google play et itunes.
 
-![zigzag](http://qkzk.xyz/wp-content/uploads/2016/07/zigzag-168x300.jpg)
+![zigzag](/uploads/uploads/2016/07/zigzag-168x300.jpg)
 
 
 

@@ -179,7 +179,7 @@ traitement correspondra au code ci-dessus.
 
 Rassemblez les différentes informations pour construire une page
 contenant votre première carte Google Map non statique.
-Vous devriez obtenir [ ce résultat](http://qkzk.xyz/docs/doc04/exemples/googleMap1.html).
+Vous devriez obtenir [ ce résultat](/uploads/docs/doc04/exemples/googleMap1.html).
 
 
 

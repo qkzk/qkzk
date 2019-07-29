@@ -120,7 +120,7 @@ Une URI (Uniform Ressource Identifier) permet d'identifier une ressource sur un 
 
 L'URL indique « l'endroit » où se trouve une ressource sur le serveur. Un fichier peut se trouver dans un dossier qui peut lui-même se trouver dans un autre dossier.....on parle d'une structure en arborescence, car elle ressemble à un arbre à l'envers :
 
-![arbo](http://informatiquelycee.fr/img/url.jpg)
+![arbo](https://pixees.fr/informatiquelycee/img/url.jpg)
 
 
 Comme vous pouvez le constater, la base de l'arbre s'appelle la racine de l'arborescence et se représente par un /
@@ -220,4 +220,4 @@ Demander au serveur d'effectuer tous les calculs pour toutes les pages n'est pas
 
 
 
-_Sources : http://informatiquelycee.fr/_
+_Sources : https://pixees.fr/informatiquelycee/_

@@ -73,7 +73,7 @@ donc codé par un octet dont le 8ème bit est à 0.
 
 
 
-Observez la [table ASCII](http://qkzk.xyz/docs/doc03/ascii.txt).
+Observez la [table ASCII](/uploads/docs/doc03/ascii.txt).
 On remarque que certains caractères de la table ASCII sont des
 caractères dits de contrôle, ils ne sont pas imprimables ou ne
 peuvent pas être affichés.)
@@ -107,7 +107,7 @@ Donnez la représentation binaire ASCII du texte suivant :
 
 On utilise la table ASCII. C'est laborieux... Vous pouvez
 vérifier que vous trouvez bien le
-[résultat suivant](http://qkzk.xyz/docs/doc03/je-code-en-binaire.txt).
+[résultat suivant](/uploads/docs/doc03/je-code-en-binaire.txt).
 
 
 
@@ -183,7 +183,7 @@ et colonnes. Cf [http://en.wikipedia.org/wiki/File:ASCII_Code_Chart.svg](http://
 
 On pourra utiliser un éditeur hexadécimal (mode hexl d'emacs ou
 Online hexeditor, [http://www.onlinehexeditor.com/](http://www.onlinehexeditor.com/)) pour observer
-le contenu du fichier [az.txt](http://qkzk.xyz/docs/doc03/az.txt) qui
+le contenu du fichier [az.txt](/uploads/docs/doc03/az.txt) qui
 contient les seuls deux caractères 'a' et 'z'.
 
 

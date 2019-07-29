@@ -20,7 +20,7 @@ Le senior garde sur lui une radiocommande équipée d'un bouton qu'il presse en 
 Cette radiocommande émet un signal capté par un recepteur radio connecté au raspberry Pi.
 Celui-ci affichera alors l'information (leds, signal sonore etc.) et altera les secours via internet (ou autre)
 
-![rpiModel-A](http://qkzk.xyz/wp-content/uploads/2016/07/rpiModel-A-300x208.jpg)
+![rpiModel-A](/uploads/uploads/2016/07/rpiModel-A-300x208.jpg)
 Ce projet a pour but d'explorer les possibilités du raspberry Pi en terme de domotique. Il peut-être adapté selon les besoins.
 
 
@@ -51,7 +51,7 @@ Your browser does not support the video tag.
 
 
 * D'un [récepteur radio](https://www.adafruit.com/products/1096) :
-![1096-05](http://qkzk.xyz/wp-content/uploads/2016/07/1096-05-300x225.jpg)
+![1096-05](/uploads/uploads/2016/07/1096-05-300x225.jpg)
 
 * De la connectique nécessaire pour connecter tout ce beau monde et afficher des infomations (breadboard, jumpers, boutons, leds).
 

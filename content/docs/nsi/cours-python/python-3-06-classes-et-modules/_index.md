@@ -16,10 +16,10 @@ En langage Python, vous pouvez très bien écrire un script sans définir de cla
 Cependant, vous manipulez forcement des **objets (ou instances de classes)** : une variable entière est une instance de la classe `int`, une chaîne de caractères est une instance de la classe `str`...
 
 
-Le module `Tkinter` (que nous aborderons dans le [chapitre 7](http://qkzk.xyz/?page_id=1536)) sert à créer des interfaces graphiques : ce module fournit une bibliothèque de classes.
+Le module `Tkinter` (que nous aborderons dans le [chapitre 7](/docs/nsi/cours-python/python-3-07-interface-graphique-avec-le-module-tkinter)) sert à créer des interfaces graphiques : ce module fournit une bibliothèque de classes.
 Il est donc important d'étudier les classes notamment pour bien comprendre comment les utiliser (pour un débutant, c'est déroutant !).
 
-Ce chapitre est difficile : je vous conseille de relire ce que l'on a vu dans le [chapitre 1](http://qkzk.xyz/?page_id=1502).
+Ce chapitre est difficile : je vous conseille de relire ce que l'on a vu dans le [chapitre 1](/docs/nsi/cours-python/python-3-01-les-variables-les-types).
 
 
 ### Définition d'une classe
@@ -301,7 +301,7 @@ IDLE dispose de l'outil **Path Browser** pour connaître la structure d'un modul
 
 File → Path Browser
 
-![IDLE_Path_Browser_3](http://qkzk.xyz/wp-content/uploads/2017/04/IDLE_Path_Browser_3.png)
+![IDLE_Path_Browser_3](/uploads/uploads/2017/04/IDLE_Path_Browser_3.png)
 
 
 Un module peut contenir des classes (`CompteBancaire`), des fonctions ([`animation`](http://fsincere.free.fr/isn/python/cours_python_tkinter.php#animation)) ou des fonctions et des classes.
@@ -378,7 +378,7 @@ Si vous êtes familiarisé avec le module `Tkinter`, voici un exemple qui montre
 
 
 
-![class_tkinter_frame](http://qkzk.xyz/wp-content/uploads/2017/04/class_tkinter_frame.png)
+![class_tkinter_frame](/uploads/uploads/2017/04/class_tkinter_frame.png)
 
 
 

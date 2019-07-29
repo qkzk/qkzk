@@ -34,11 +34,11 @@ Voilà qui ne semble pas très facile : il y a 26! = 4x1026 combinaisons possibl
 
 On va simplement appliquer l'analyse des fréquences sur un texte crypté.
 
-Le texte d'origine, pré formaté : [texte_clair](http://qkzk.xyz/?attachment_id=98)
+Le texte d'origine, pré formaté : [texte_clair](/uploads/uploads/2016/07/texte_clair.txt)
 
-Le texte crypté : [texte-crypt](http://qkzk.xyz/?attachment_id=99)
+Le texte crypté : [texte-crypt](/uploads/uploads/2016/07/texte-crypt.txt)
 
-La tentative de décryptage : [texte-decrypt](http://qkzk.xyz/?attachment_id=100)
+La tentative de décryptage : [texte-decrypt](/uploads/uploads/2016/07/texte-decrypt.txt)
 
 On peut remarquer que c'est loin d'être parfait... C'est tout à fait logique, les fréquences d'apparition des lettres fluctuent d'un texte à l'autre. Néanmoins une quinzaine de lettres sont justes et, pour déterminer les autres on procède en repérant des mots probables.
 

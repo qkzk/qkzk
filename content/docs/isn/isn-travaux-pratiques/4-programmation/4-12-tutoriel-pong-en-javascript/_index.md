@@ -9,8 +9,8 @@ weight: 12
 
 
 
-[![pong](http://qkzk.xyz/wp-content/uploads/2016/07/pong.gif)
-](http://qkzk.xyz/wp-content/uploads/2016/07/pong.gif)
+[![pong](/uploads/uploads/2016/07/pong.gif)
+](/uploads/uploads/2016/07/pong.gif)
 
 
 

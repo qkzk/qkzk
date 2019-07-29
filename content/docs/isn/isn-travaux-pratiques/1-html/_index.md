@@ -142,7 +142,7 @@ proiectare.</p>
 </html>
 ~~~
 
-Ce contenu a été sauvegardé dans un fichier nommé `premier-html.html`. Vous pouvez en visualiser le rendu en cliquant sur le lien suivant : [premier-html](http://qkzk.xyz/wp-content/uploads/2016/07/premier-html.html) .
+Ce contenu a été sauvegardé dans un fichier nommé `premier-html.html`. Vous pouvez en visualiser le rendu en cliquant sur le lien suivant : [premier-html](/uploads/uploads/2016/07/premier-html.html) .
 
 
 
@@ -258,14 +258,14 @@ on atteindra la page web de Wikipédia consacrée au terme URL.
 
 
 
-Consultez la page [que voici](http://qkzk.xyz/wp-content/uploads/2016/07/lien.html). Elle contient deux liens hypertextes. Consultez le code HTML de la page pour vérifier que les textes associés aux liens hypertextes présentés sont cohérents.
+Consultez la page [que voici](/uploads/uploads/2016/07/lien.html). Elle contient deux liens hypertextes. Consultez le code HTML de la page pour vérifier que les textes associés aux liens hypertextes présentés sont cohérents.
 
 
 
 
 
 **Attention !**
-Consultez la [page suivante](http://qkzk.xyz/wp-content/uploads/2016/07/lien-escroc.html). Que cache-t-elle ? Des images peuvent être insérées dans des documents HTML : Connaissez-vous [Wikimedia Commons](http://commons.wikimedia.org/wiki/Accueil?uselang=fr), la médiathèque libre des projets Wikimedia ? Son logo
+Consultez la [page suivante](/uploads/uploads/2016/07/lien-escroc.html). Que cache-t-elle ? Des images peuvent être insérées dans des documents HTML : Connaissez-vous [Wikimedia Commons](http://commons.wikimedia.org/wiki/Accueil?uselang=fr), la médiathèque libre des projets Wikimedia ? Son logo
 est le suivant :
 
 
@@ -295,7 +295,7 @@ Nous remarquons que la balise `img` s'utilise seule, sans balise fermante corre
 
 
 
-D'autres utilisations de cette balise `img` sont illustrées sur la [page dédiée](http://qkzk.xyz/?attachment_id=178), visualisez le code HTML pour vous en inspirer. Observez les changements de mise en page quand vous agrandissez ou diminuez la largeur de la fenêtre. Créez une page html affichant les images suivantes :
+D'autres utilisations de cette balise `img` sont illustrées sur la [page dédiée](/uploads/uploads/2016/07/img.html), visualisez le code HTML pour vous en inspirer. Observez les changements de mise en page quand vous agrandissez ou diminuez la largeur de la fenêtre. Créez une page html affichant les images suivantes :
 
 
 

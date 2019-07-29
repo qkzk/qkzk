@@ -16,7 +16,7 @@ On lance une boule avec "presser, relâcher" vers le haut.
 La boule entre en collision avec les quilles qui changent de couleur.
 Après quelques secondes, les distances parcourues par les billes s'ajoutent et forment le score.
 
-[video width="518" height="906" mp4="http://qkzk.xyz/wp-content/uploads/2018/12/bowling_qkzk.mp4" loop="true" autoplay="true"][/video]
+[video width="518" height="906" mp4="/uploads/uploads/2018/12/bowling_qkzk.mp4" loop="true" autoplay="true"][/video]
 
 
 ## PRINCIPE :
@@ -81,11 +81,11 @@ Le sujet est très vaste...
 Mon adaptation ressemble beaucoup plus à un jeu de billard qu'à autre chose...
 Il est possible d'illustrer le [mouvement Brownien](https://fr.wikipedia.org/wiki/Mouvement_brownien) via ces principes.
 
-[video width="700" height="818" mp4="http://qkzk.xyz/wp-content/uploads/2018/12/mouvement_brownien.mp4"][/video]
+[video width="700" height="818" mp4="/uploads/uploads/2018/12/mouvement_brownien.mp4"][/video]
 
 On peut aussi, une fois les collisions intégrées, faire mumuse avec les graphiques et appeler ça de l'art...
 
-[video width="760" height="910" mp4="http://qkzk.xyz/wp-content/uploads/2018/12/collisions_simples.mp4"][/video]
+[video width="760" height="910" mp4="/uploads/uploads/2018/12/collisions_simples.mp4"][/video]
 
 Se rapprocher du vrai bowling va demander trop d'efforts, il vaudrait mieux repartir de 0 et envisager de la fausse 3D (cf. le projet "Bowling parallax")
 Le calcul des scores du bowling est un exercice prisé des développeurs (en particulier américains). Il est possible d'intégrer un vrai calculateur de score ou d'en créer un soi même.

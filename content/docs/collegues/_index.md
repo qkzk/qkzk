@@ -71,7 +71,7 @@ _ De nombreux autres sites proposent l'édition et l'exécution de Python (ou au
  	  * **[snakify.org](https://snakify.org/)** : site de formation dont proviennent ces exercices. En anglais à nouveau.
 L'intérêt majeur de ce site sur repl.it est de proposer un débogueur avec affichage de toutes les variables directement dans l'interface. C'est un outil énorme. Son seul problème est d'être intégralement en anglais... Autre inconvénient majeur, il n'est pas prévu pour créer du code librement, on ne peut donc jamais disposer d'une page blanche avec un problème papier.
 _Une nouvelle version doit sortir le 20 août 2017, il est possible que cette source ait évolué après la rédaction de cette page._ _J'ai contacté l'auteur afin d'aborder l'idée d'une traduction... on verra bien où cela me mène._
- 	  * [Informatique Lycée](http://www.ac-grenoble.fr/disciplines/informatiquelycee/). Le site de David Roche (enseignants de Physique de l'académie de Grenoble ayant contribué à la rédaction du programme d'ICN). Il est orienté ICN/ISN. Cependant il est très riche et très varié. Je l'utilise beaucoup en ICN.
+ 	  * [Informatique Lycée](https://pixees.fr/informatiquelycee/). Le site de David Roche (enseignants de Physique de l'académie de Grenoble ayant contribué à la rédaction du programme d'ICN). Il est orienté ICN/ISN. Cependant il est très riche et très varié. Je l'utilise beaucoup en ICN.
  	  * Installer Python soi même. Voir tout en bas.
 
 
@@ -88,7 +88,7 @@ _Utilisé avec succès par des collègues d'autres établissements._
  	  * [Tutoriel officiel Python](https://docs.python.org/fr/3.5/tutorial/), en français. Vaste mais pas interactif. Il a le mérite d'exister. La documentation officielle de Python est très complète et contient systématiquement des exemples détaillés. C'est une source de qualité.
  	  * [OpenClassrooms](https://openclassrooms.com/courses/apprenez-a-programmer-en-python) (anciennement site du zéro) : banque de ressources de formation dans le domaine de l'informatique. Très complet et intégralement en français, OpenClassrooms propose des activités et tutoriels dans la majorité des langages de programmation. Son objectif est l'autonomie et l'autoformation. Néanmoins, en faisant le tri on peut s'en servir en classe.
 _Il faut créer un compte (gratuitement) et ensuite le site propose quelques contenus supplémentaires payants (vidéos, exercices) mais pas indispensables. Déjà testés par les élèves, ça fonctionne mais il faut environ 20 / 30h pour qu'ils en viennent à bout._
- 	  * Les cours sur Python que [je propose aux élèves](http://qkzk.xyz/?page_id=39) en ICN/ISN - rédigés par Fabrice Sincère. Je n'ai transcrit que la version Python 2 (plus commode aux raspberry pi) mais Fabrice Sincère propose les deux versions. [Python 2](http://fsincere.free.fr/isn/python/cours_python.php), [Python 3](http://fsincere.free.fr/isn/python/cours_python.php?version=3). Je les utiliserai à partir de 2017-2018 en ICN. Je les trouve bien (on s'en doutait).
+ 	  * Les cours sur Python que [je propose aux élèves](http://localhost:1313/docs/nsi/cours-python/) en ICN/ISN - rédigés par Fabrice Sincère. Je n'ai transcrit que la version Python 2 (plus commode aux raspberry pi) mais Fabrice Sincère propose les deux versions. [Python 2](http://fsincere.free.fr/isn/python/cours_python.php), [Python 3](http://fsincere.free.fr/isn/python/cours_python.php?version=3). Je les utiliserai à partir de 2017-2018 en ICN. Je les trouve bien (on s'en doutait).
  	  * Apprendre "comme les élèves", ils regardent des vidéos sur Youtube... faisons comme eux !
 Voici [une playlist](https://www.youtube.com/playlist?list=PL5TvtEevd4IbBjsZe94pdU8r98DVr71rm) parcourant le programme de seconde. **J'en ai regardé 20 secondes** ça a l'air bien.
  	  * Comment trouver des idées de projet ? [GitHub](https://github.com/) !
@@ -118,7 +118,7 @@ _On trouve ici des livres (en ligne ou papier) permettant d'apprendre Python "à
 
 C'est dommage. Si la découverte peut sembler fastidieuse, la prise en main de Python est rapide. Inutile d'avoir tout lu de ce qui précède pour faire des bidules amusants !
 
-[caption id="attachment_1320" align="aligncenter" width="520"]![Screenshot from 2017-07-11 16:26:14](http://qkzk.xyz/wp-content/uploads/2017/07/Screenshot-from-2017-07-11-162614.png)
+[caption id="attachment_1320" align="aligncenter" width="520"]![Screenshot from 2017-07-11 16:26:14](/uploads/uploads/2017/07/Screenshot-from-2017-07-11-162614.png)
 L'ensemble de Mandelbrot réalisé en Python 2. 40 lignes de code (voir tout en bas).[/caption]
 
 Certes la calculatrice a d'immenses avantages (les élèves en ont tous une, les programmes s'exécutent sans surprise, elle nécessite peu de maintenance etc.) mais elle reste très limitée. En initiant vos élèves à un vrai langage de programmation vous leur ouvrez des portes inouïes.
@@ -134,8 +134,8 @@ Commencer par les bases : manipuler les objets élémentaires, créer des foncti
 Ensuite passer à des programmes plus utiles : programme trinôme, dichotomie, valeur approchée d'une intégrale, méthode d'Euler etc. Un peu plus d'algorithmie...
 Enfin essayer un projet plus complet dépassant le cadre du programme du Lycée. J'en propose peut-être une trentaine aux élèves sur ce site et tous sont faisables en Python. On peut même créer de jolies images !
 
-![6puiss6-step_24600_temps 5.11s-taille_143](http://qkzk.xyz/wp-content/uploads/2017/07/6puiss6-step_24600_temps-5.11s-taille_143.png)
-![Screenshot from 2017-07-11 16:48:32](http://qkzk.xyz/wp-content/uploads/2017/07/Screenshot-from-2017-07-11-164832.png)
+![6puiss6-step_24600_temps 5.11s-taille_143](/uploads/uploads/2017/07/6puiss6-step_24600_temps-5.11s-taille_143.png)
+![Screenshot from 2017-07-11 16:48:32](/uploads/uploads/2017/07/Screenshot-from-2017-07-11-164832.png)
 
 
 

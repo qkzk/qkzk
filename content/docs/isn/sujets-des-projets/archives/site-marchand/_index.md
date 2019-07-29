@@ -40,8 +40,8 @@ L'interface pourra prendre la forme suivante :
 
 
 
-[![doc00001_1](http://qkzk.xyz/wp-content/uploads/2016/07/doc00001_1.jpeg)
-](http://qkzk.xyz/wp-content/uploads/2016/07/doc00001_1.jpeg)
+[![doc00001_1](/uploads/uploads/2016/07/doc00001_1.jpeg)
+](/uploads/uploads/2016/07/doc00001_1.jpeg)
 
 
 

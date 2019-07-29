@@ -46,11 +46,11 @@ Jean-François Przydatek a rédigé un cours d'initiation à l'assembleur dont o
 et que l'on peut télécharger :
 
 
-* [au format powerpoint(pptx)](http://qkzk.xyz/docs/doc06/transparents/ARCHI.pptx)
-* [au format libreOffice ou openOffice(odp)](http://qkzk.xyz/docs/doc06/transparents/ARCHI.odp)
-* [au format pdf](http://qkzk.xyz/docs/doc06/transparents/ARCHI.pdf)
+* [au format powerpoint(pptx)](/uploads/docs/doc06/transparents/ARCHI.pptx)
+* [au format libreOffice ou openOffice(odp)](/uploads/docs/doc06/transparents/ARCHI.odp)
+* [au format pdf](/uploads/docs/doc06/transparents/ARCHI.pdf)
 
-ainsi qu'une [série d'exercices](http://qkzk.xyz/docs/doc06/transparents/ARCHI_exos.pptx).
+ainsi qu'une [série d'exercices](/uploads/docs/doc06/transparents/ARCHI_exos.pptx).
 Ce document est conçu comme un accompagnement de cette série
 d'exercices.
 
@@ -475,7 +475,7 @@ Refaire les mêmes exercices, mais n’échangez que si la première valeur est 
 
 
 Écrire un programme qui retourne le PGCD de 2 nombres (Algorithme d'Euclide).
-![algorithme  d'Euclide](http://qkzk.xyz/docs/doc06/pgcd.png)
+![algorithme  d'Euclide](/uploads/docs/doc06/pgcd.png)
 
 
 

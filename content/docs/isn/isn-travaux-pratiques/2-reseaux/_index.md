@@ -20,9 +20,9 @@ weight: 2
 
 On pourra lire les documents suivants qui sont très complets.
 
-Le chapitre 16 [Les réseaux](http://qkzk.xyz/docs/16-reseaux.pdf) du manuel ["Une introduction à la science informatique pour les enseignants de la discipline en lycée"](https://wiki.inria.fr/sciencinfolycee/Une_introduction_%C3%A0_la_science_informatique_pour_les_enseignants_de_la_discipline_en_lyc%C3%A9e).
+Le chapitre 16 [Les réseaux](/uploads/docs/16-reseaux.pdf) du manuel ["Une introduction à la science informatique pour les enseignants de la discipline en lycée"](https://wiki.inria.fr/sciencinfolycee/Une_introduction_%C3%A0_la_science_informatique_pour_les_enseignants_de_la_discipline_en_lyc%C3%A9e).
 
-Le [tutoriel](http://qkzk.xyz/docs/346829-comprendre-les-reseaux-tcp-ip-et-le-fonctionnement-d-internet.pdf) d'[OpenClassrooms](http://www.openclassrooms.com/) sur le fonctionnement d'internet et TCP/IP.
+Le [tutoriel](/uploads/docs/346829-comprendre-les-reseaux-tcp-ip-et-le-fonctionnement-d-internet.pdf) d'[OpenClassrooms](http://www.openclassrooms.com/) sur le fonctionnement d'internet et TCP/IP.
 
 Ces deux références sont plutôt complètes et serviront de références sur le thème du réseau.
 

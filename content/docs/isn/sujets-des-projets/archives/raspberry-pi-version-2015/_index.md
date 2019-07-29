@@ -17,8 +17,8 @@ Dans ce projet vous utliserez le raspberry pi à des fins qui peuvent être vari
 
 
 
-[![rpiModel-A](http://qkzk.xyz/wp-content/uploads/2016/07/rpiModel-A-1024x710.jpg)
-](http://qkzk.xyz/wp-content/uploads/2016/07/rpiModel-A.jpg)
+[![rpiModel-A](/uploads/uploads/2016/07/rpiModel-A-1024x710.jpg)
+](/uploads/uploads/2016/07/rpiModel-A.jpg)
 
 
 

@@ -389,4 +389,4 @@ C'est l'exercice le plus difficile.
 
 
 
-[corrections](http://qkzk.xyz/docs/doc04b/corrections.zip)
+[corrections](/uploads/docs/doc04b/corrections.zip)

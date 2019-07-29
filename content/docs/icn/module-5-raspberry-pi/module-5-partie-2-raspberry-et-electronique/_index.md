@@ -28,7 +28,7 @@ Le site de référence (à mes yeux) pour explorer les possibilités du GPIO est
 
 Commençons par regarder le raspberry et apprendre à se repérer. Ouvrez le site [pinout.xyz](https://fr.pinout.xyz/) et réduisez les dimensions de la fenêtre afin de lire ce document en même temps.
 
-![Raspberry_Pi_2_Model_B_v1.1_top_new](http://qkzk.xyz/wp-content/uploads/2017/06/Raspberry_Pi_2_Model_B_v1.1_top_new-683x1024.jpg)
+![Raspberry_Pi_2_Model_B_v1.1_top_new](/uploads/uploads/2017/06/Raspberry_Pi_2_Model_B_v1.1_top_new-683x1024.jpg)
 
 
 Voici l'orientation du raspberry permettant le mieux de se repérer. Le pin physique numéro 1 est celui en haut à gauche. Le 2 est à sa droite et on continue ainsi de suite. Toute la colonne de gauche est impaire (1, 3, 5 etc.) et celle de droite paire (2, 4, 6). **Quel est le numéro physique du dernier pin en bas à gauche ?**
@@ -78,7 +78,7 @@ _
 Ces fonctions permettent de réaliser des montages beaucoup plus complexes : alimentation de moteur, lecture de valeurs (température renvoyée par un capteur), gestion d'un écran à cristaux liquides etc.
 Parmi ces fonctions citons :
 **I2C** qui permet de connecter de nombreux périphériques à l'aide de 4 broches seulement (pin 3 et 5 pour les données et l'horloge, une masse et une alimentation).
-![grove-lcd-rgb_bb](http://qkzk.xyz/wp-content/uploads/2017/06/grove-lcd-rgb_bb-1024x695.png)
+![grove-lcd-rgb_bb](/uploads/uploads/2017/06/grove-lcd-rgb_bb-1024x695.png)
 
 _Un écran à cristaux liquides RGB raccordés à un raspberry. La "logique" électronique de cet écran est 5V il faut donc l'alimenter en 5V (fil rouge). Les informations (fils blanc et jaune) transitent par un convertisseur de niveau logique (le carré rouge) (à gauche 3.3V, à droite 5V). Le circuit est complété par une masse (fil noir) qui transite elle aussi par le convertisseur.
 Ajoutons un capteur d'humidité et de température et voilà ce qu'on peut réaliser :

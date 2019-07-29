@@ -15,7 +15,7 @@ Une variable est un espace mémoire dans lequel il est possible de stocker une v
 Ouvrir IDLE :
 Démarrer → Programmes → Python → IDLE (Python GUI)
 
-![idle_1](http://qkzk.xyz/wp-content/uploads/2017/04/idle_1.png)
+![idle_1](/uploads/uploads/2017/04/idle_1.png)
 
 
 

@@ -21,7 +21,7 @@ On peut gérer de nombreux événements : clic sur la souris, déplacement de la
 
 `Tkinter` est l'interface graphique des logiciels [IDLE](http://fr.wikipedia.org/wiki/IDLE_%28Python%29) (environnement de développement intégré pour le langage Python) et [PyMOL](http://www.pymol.org/PyMOL) (logiciel libre de visualisation de structures chimiques en 3D) :
 
-![740px-PyMOL_large](http://qkzk.xyz/wp-content/uploads/2017/04/740px-PyMOL_large.png)
+![740px-PyMOL_large](/uploads/uploads/2017/04/740px-PyMOL_large.png)
 
 
 
@@ -37,7 +37,7 @@ Les exemples qui suivent ont été écrits avec Python version 3.
 Commençons par le traditionnel Hello world !
 
 
-![tkinter_bonjour](http://qkzk.xyz/wp-content/uploads/2017/04/tkinter_bonjour.png)
+![tkinter_bonjour](/uploads/uploads/2017/04/tkinter_bonjour.png)
 
 
 
@@ -119,7 +119,7 @@ Ce code est détaillé [ici](http://nbviewer.ipython.org/urls/leducdenormandie.i
 Un widget Frame est une zone rectangulaire qui peut contenir d'autres widgets.
 
 
-![tkinter_frame](http://qkzk.xyz/wp-content/uploads/2017/04/tkinter_frame.png)
+![tkinter_frame](/uploads/uploads/2017/04/tkinter_frame.png)
 
 
 
@@ -253,7 +253,7 @@ Un script d'authentification :
 
 
 
-![tkinter_scale](http://qkzk.xyz/wp-content/uploads/2017/04/tkinter_scale.png)
+![tkinter_scale](/uploads/uploads/2017/04/tkinter_scale.png)
 
 
 
@@ -301,7 +301,7 @@ Un script d'authentification :
 
 Le script `cercle.py` dessine, à chaque clic sur le bouton Go, un disque de rayon 20 pixels à une position aléatoire :
 
-![tkinter_cercle](http://qkzk.xyz/wp-content/uploads/2017/04/tkinter_cercle.png)
+![tkinter_cercle](/uploads/uploads/2017/04/tkinter_cercle.png)
 
 
 
@@ -354,11 +354,11 @@ Ce code est détaillé [ici](http://nbviewer.ipython.org/urls/leducdenormandie.i
 
 Ce script reprend le script `cercle.py` avec une image de fond (méthode `create_image()` de la classe `Canvas`) et la possibilité d'effacer la dernière action (pour cela, on se sert du numéro identifiant de chaque item d'un widget Canvas) :
 
-![tkinter_cible1](http://qkzk.xyz/wp-content/uploads/2017/04/tkinter_cible1.jpg)
+![tkinter_cible1](/uploads/uploads/2017/04/tkinter_cible1.jpg)
 
 
 
-![tkinter_cible2](http://qkzk.xyz/wp-content/uploads/2017/04/tkinter_cible2.png)
+![tkinter_cible2](/uploads/uploads/2017/04/tkinter_cible2.png)
 
 
 
@@ -444,17 +444,17 @@ Le script suivant est un browser d'images (formats .gif .ppm .pgm), avec un widg
 
 
 
-![tkinter_menu_widget](http://qkzk.xyz/wp-content/uploads/2017/04/tkinter_menu_widget.png)
+![tkinter_menu_widget](/uploads/uploads/2017/04/tkinter_menu_widget.png)
 
 
 une boîte de dialogue `FileDialog` pour rechercher un fichier :
 
-![tkinter_tkFileDialog](http://qkzk.xyz/wp-content/uploads/2017/04/tkinter_tkFileDialog.png)
+![tkinter_tkFileDialog](/uploads/uploads/2017/04/tkinter_tkFileDialog.png)
 
 
 et un widget `Canvas` dans lequel sera affiché l'image :
 
-![tkinter_canvas_image](http://qkzk.xyz/wp-content/uploads/2017/04/tkinter_canvas_image.png)
+![tkinter_canvas_image](/uploads/uploads/2017/04/tkinter_canvas_image.png)
 
 
 
@@ -525,7 +525,7 @@ et un widget `Canvas` dans lequel sera affiché l'image :
 
 L'heure courante est mise à jour toutes les secondes :
 
-![tkinter_heure](http://qkzk.xyz/wp-content/uploads/2017/04/tkinter_heure.png)
+![tkinter_heure](/uploads/uploads/2017/04/tkinter_heure.png)
 
 
 
@@ -563,7 +563,7 @@ Pour cela, on utilise la méthode `after()` qui appelle une fonction après une 
 
 Le script `animation.py` est un exemple d'animation (affichage d'environ 20 disques par seconde) :
 
-![tkinter_animation](http://qkzk.xyz/wp-content/uploads/2017/04/tkinter_animation.png)
+![tkinter_animation](/uploads/uploads/2017/04/tkinter_animation.png)
 
 
 On se sert de la méthode `after()` pour actualiser la zone graphique toutes les 50 ms :
@@ -632,7 +632,7 @@ On se sert de la méthode `after()` pour actualiser la zone graphique toutes les
 
 Le script `animation_balle.py` est une animation qui gère le déplacement d'une balle et de ses rebonds sur les bords :
 
-![tkinter_animation_balle](http://qkzk.xyz/wp-content/uploads/2017/04/tkinter_animation_balle.png)
+![tkinter_animation_balle](/uploads/uploads/2017/04/tkinter_animation_balle.png)
 
 
 
@@ -765,7 +765,7 @@ Ce code est détaillé [ici](http://nbviewer.ipython.org/urls/leducdenormandie.i
 
 Nous allons voir comment déplacer un objet graphique avec la souris (clic, drag and drop) :
 
-![tkinter_drag_and_drop](http://qkzk.xyz/wp-content/uploads/2017/04/tkinter_drag_and_drop.png)
+![tkinter_drag_and_drop](/uploads/uploads/2017/04/tkinter_drag_and_drop.png)
 
 
 
@@ -907,7 +907,7 @@ Ce code est détaillé [ici](http://nbviewer.ipython.org/urls/leducdenormandie.i
 ### Exemple n°15 : widgets `Checkbutton` et `Button` ; musiques et sons avec `pygame`
 
 
-![tkinter_pygame_mixer](http://qkzk.xyz/wp-content/uploads/2017/04/tkinter_pygame_mixer.png)
+![tkinter_pygame_mixer](/uploads/uploads/2017/04/tkinter_pygame_mixer.png)
 
 
 Le module `pygame` est un module externe de création de jeux vidéo en 2D.
@@ -977,32 +977,32 @@ Télécharger la musique [chavmusic7.mp3](http://fsincere.free.fr/isn/python/dow
 
 Par exemple, le calcul de √3 donne :
 
-![tkinter_racine_carree](http://qkzk.xyz/wp-content/uploads/2017/04/tkinter_racine_carree.png)
+![tkinter_racine_carree](/uploads/uploads/2017/04/tkinter_racine_carree.png)
 
 
 **Exercice 7.2 ★** Reprendre le script `mot_de_passe.py` de manière à limiter le nombre d'essais à trois.
 
-![tkinter_ex_motdepasse](http://qkzk.xyz/wp-content/uploads/2017/04/tkinter_ex_motdepasse.png)
+![tkinter_ex_motdepasse](/uploads/uploads/2017/04/tkinter_ex_motdepasse.png)
 
 
 **Exercice 7.3 ★** En s'inspirant des scripts `de.py` et `mot_de_passe.py`, écrire une application avec interface graphique qui calcule l'addition ou la soustraction de deux nombres :
 
-![tkinter_somme](http://qkzk.xyz/wp-content/uploads/2017/04/tkinter_somme.png)
+![tkinter_somme](/uploads/uploads/2017/04/tkinter_somme.png)
 
 
 **Exercice 7.4 ★** A partir du script `cercle.py`, dessiner des disques de positions, rayons et couleurs aléatoires :
 
-![](http://qkzk.xyz/wp-content/uploads/2017/04/unnamed-file.png)
+![](/uploads/uploads/2017/04/unnamed-file.png)
 
 
 **Exercice 7.5 ★** A partir du script `animation.py`, faire une animation avec des disques de positions, rayons et couleurs aléatoires.
 
-![tkinter_animation_couleur](http://qkzk.xyz/wp-content/uploads/2017/04/tkinter_animation_couleur.png)
+![tkinter_animation_couleur](/uploads/uploads/2017/04/tkinter_animation_couleur.png)
 
 
 **Exercice 7.6 ★★** A partir du script `animation_balle.py`, faire une animation qui gère la trajectoire d'un nombre quelconque de balles :
 
-![tkinter_animation_balles](http://qkzk.xyz/wp-content/uploads/2017/04/tkinter_animation_balles.png)
+![tkinter_animation_balles](/uploads/uploads/2017/04/tkinter_animation_balles.png)
 
 
 Remarque : on ne tiendra pas compte des chocs entre balles.
@@ -1011,7 +1011,7 @@ Remarque : on ne tiendra pas compte des chocs entre balles.
 
 1) Reprendre le script `cible.py` et remplacer le disque noir par une image :
 
-![tkinter_ex_cible](http://qkzk.xyz/wp-content/uploads/2017/04/tkinter_ex_cible.jpg)
+![tkinter_ex_cible](/uploads/uploads/2017/04/tkinter_ex_cible.jpg)
 
 
 Télécharger l'image [impact.gif](http://fsincere.free.fr/isn/python/download/tkinter/cible/tk_impact.gif)
@@ -1023,21 +1023,21 @@ Remarque : l'image de l'impact doit avoir un fond transparent.
 
 On utilisera la méthode `create_line()` de la classe `Canvas`.
 
-![tkinter_mouvement_aleatoire](http://qkzk.xyz/wp-content/uploads/2017/04/tkinter_mouvement_aleatoire.png)
+![tkinter_mouvement_aleatoire](/uploads/uploads/2017/04/tkinter_mouvement_aleatoire.png)
 
 
 **Exercice 7.9 ★** Compléter le script `pion.py` de manière à dessiner une grille.
 
 On utilisera la méthode `create_line()` de la classe `Canvas`.
 
-![tkinter_key_event_1](http://qkzk.xyz/wp-content/uploads/2017/04/tkinter_key_event_1.png)
+![tkinter_key_event_1](/uploads/uploads/2017/04/tkinter_key_event_1.png)
 
 
 **Exercice 7.10 ★★**
 
 Ecrire un script qui tire une carte et l'affiche à une position aléatoire.
 
-![tkinter_jeu52cartes](http://qkzk.xyz/wp-content/uploads/2017/04/tkinter_jeu52cartes.png)
+![tkinter_jeu52cartes](/uploads/uploads/2017/04/tkinter_jeu52cartes.png)
 
 
 Il faut se servir d'une référence comme dans le script `lecture_gif.py`
@@ -1054,7 +1054,7 @@ Un projet relativement simple pour un travail en binôme.
 
 Le fichier exécutable est téléchargeable [ici](http://fsincere.free.fr/isn/python/cours_python_tkinter.php#executable).
 
-![tkinter_tic_tac_toe](http://qkzk.xyz/wp-content/uploads/2017/04/tkinter_tic_tac_toe.png)
+![tkinter_tic_tac_toe](/uploads/uploads/2017/04/tkinter_tic_tac_toe.png)
 
 
 
@@ -1081,7 +1081,7 @@ Un gros projet à décomposer en plusieurs tâches :
 
 
 
-![tkinter_tetris](http://qkzk.xyz/wp-content/uploads/2017/04/tkinter_tetris.png)
+![tkinter_tetris](/uploads/uploads/2017/04/tkinter_tetris.png)
 
 
 
@@ -1100,7 +1100,7 @@ Le fichier exécutable est téléchargeable [ici](http://fsincere.free.fr/isn/py
 
 
 
-![tkinter_snake](http://qkzk.xyz/wp-content/uploads/2017/04/tkinter_snake.png)
+![tkinter_snake](/uploads/uploads/2017/04/tkinter_snake.png)
 
 
 **Projet n°4 ★★★★** Jeu de Pong
@@ -1109,7 +1109,7 @@ Un jeu qui se joue à deux.
 
 Le fichier exécutable est téléchargeable [ici](http://fsincere.free.fr/isn/python/cours_python_tkinter.php#executable).
 
-![tkinter_pong](http://qkzk.xyz/wp-content/uploads/2017/04/tkinter_pong.png)
+![tkinter_pong](/uploads/uploads/2017/04/tkinter_pong.png)
 
 
 
@@ -1118,14 +1118,14 @@ Le fichier exécutable est téléchargeable [ici](http://fsincere.free.fr/isn/py
 
 Le fichier exécutable est téléchargeable [ici](http://fsincere.free.fr/isn/python/cours_python_tkinter.php#executable).
 
-![tkinter_puzzle](http://qkzk.xyz/wp-content/uploads/2017/04/tkinter_puzzle.jpg)
+![tkinter_puzzle](/uploads/uploads/2017/04/tkinter_puzzle.jpg)
 
 
 
 
 **Projet n°6 ★★★** Simulation de feux de forêt
 
-![feu_foret](http://qkzk.xyz/wp-content/uploads/2017/04/feu_foret.gif)
+![feu_foret](/uploads/uploads/2017/04/feu_foret.gif)
 
 
 Liens utiles :
@@ -1137,7 +1137,7 @@ Liens utiles :
 
 **Projet n°7 ★★★** Distance entre deux villes
 
-![tkinter_distance](http://qkzk.xyz/wp-content/uploads/2017/04/tkinter_distance.png)
+![tkinter_distance](/uploads/uploads/2017/04/tkinter_distance.png)
 
 
 Vous aurez besoin des modules `urllib` et `json` ainsi que de l'[API Google Maps](https://developers.google.com/maps/?hl=fr).

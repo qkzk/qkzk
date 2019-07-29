@@ -501,7 +501,7 @@ Exemple :
 **Exercice 4.7 ★** Ecrire une fonction qui retourne une grille de numéros du jeu Euro Millions.
 On utilisera la fonction `sample()` du module `random`.
 
-![euromillions](http://qkzk.xyz/wp-content/uploads/2017/04/euromillions.png)
+![euromillions](/uploads/uploads/2017/04/euromillions.png)
 
 
 
@@ -551,7 +551,7 @@ Ecrire le script correspondant.
 
 Annexe : représentation graphique de la fonction `f(x)= 27x3 -27x2 -18x +8` (graphique réalisé avec la librairie [matplotlib](http://matplotlib.org/examples/pylab_examples/axes_props.html) de Python)
 
-![fonction_matplotlib](http://qkzk.xyz/wp-content/uploads/2017/04/fonction_matplotlib.png)
+![fonction_matplotlib](/uploads/uploads/2017/04/fonction_matplotlib.png)
 
 
 

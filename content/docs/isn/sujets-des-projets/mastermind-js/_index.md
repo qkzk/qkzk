@@ -14,7 +14,7 @@ weight: 5
 
 
 
-# ![doc00022](http://qkzk.xyz/wp-content/uploads/2016/07/doc00022.jpeg)
+# ![doc00022](/uploads/uploads/2016/07/doc00022.jpeg)
 
 
 

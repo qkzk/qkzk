@@ -20,8 +20,8 @@ Le but du projet est de réaliser ce jeu en javascript. L'interface pourra avoir
 
 
 
-[![doc00020_1](http://qkzk.xyz/wp-content/uploads/2016/07/doc00020_1.jpeg)
-](http://qkzk.xyz/wp-content/uploads/2016/07/doc00020_1.jpeg)
+[![doc00020_1](/uploads/uploads/2016/07/doc00020_1.jpeg)
+](/uploads/uploads/2016/07/doc00020_1.jpeg)
 
 
 

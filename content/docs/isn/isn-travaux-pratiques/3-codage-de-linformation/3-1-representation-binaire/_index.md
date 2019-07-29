@@ -729,9 +729,9 @@ masque.
 A chaque porte est associée une représentation graphique. Voici pour les portes ET et XOR :
 
 
-![porte ET](http://qkzk.xyz/docs/doc03/porte-et.png)
+![porte ET](/uploads/docs/doc03/porte-et.png)
 
-![porte XOR](http://qkzk.xyz/docs/doc03/porte-xor.png)
+![porte XOR](/uploads/docs/doc03/porte-xor.png)
 
 
 
@@ -753,7 +753,7 @@ circuits logiques et on peut ainsi réaliser des calculs.
 Prenons l'exemple de ce circuit :
 
 
-![demi additionneur](http://qkzk.xyz/docs/doc03/demi-additionneur.png)
+![demi additionneur](/uploads/docs/doc03/demi-additionneur.png)
 
 
 
@@ -773,7 +773,7 @@ Circuit intégré 7400 contenant 4 portes NON-ET (NAND). Les deux autres broche
 
 
 
-![circuit intégré 7400](http://qkzk.xyz/docs/doc03/circuit-7400.jpg)
+![circuit intégré 7400](/uploads/docs/doc03/circuit-7400.jpg)
 
 
 

@@ -84,3 +84,12 @@ a.nav-link {
   // font-size: 44px;
   color: #000;
 }
+summary:hover a{
+    color:red;
+}
+summary:active{
+    color:green;
+}
+details[open] summary a.active{
+  color:green;
+}

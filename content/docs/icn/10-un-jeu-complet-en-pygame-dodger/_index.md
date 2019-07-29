@@ -72,7 +72,7 @@ pygame.time.Clock - L'objet Clock du module pygame.time permet de rendre nos jeu
 
 Récupérez le code suivant et sauvegardez le dans un fichier _dodger.py. _Ce jeu requiert aussi quelques fichiers d'images et de sons disponibles.
 
-Le [joueur](http://qkzk.xyz/docs/tutos/python/dodger/player.png), le [méchant](http://qkzk.xyz/docs/tutos/python/dodger/baddie.png), le [son gameover](http://qkzk.xyz/docs/tutos/python/dodger/gameover.wav), la [musique de fond](http://qkzk.xyz/docs/tutos/python/dodger/background.mid).
+Le [joueur](/uploads/docs/tutos/python/dodger/player.png), le [méchant](/uploads/docs/tutos/python/dodger/baddie.png), le [son gameover](/uploads/docs/tutos/python/dodger/gameover.wav), la [musique de fond](/uploads/docs/tutos/python/dodger/background.mid).
 
 
     #!/usr/bin/env python

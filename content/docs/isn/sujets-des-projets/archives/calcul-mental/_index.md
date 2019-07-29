@@ -15,8 +15,8 @@ Dans ce projet vous créerez un générateur d'exercices de calcul mental.
 
 
 
-[![calculmental](http://qkzk.xyz/wp-content/uploads/2016/07/calculmental.jpg)
-](http://qkzk.xyz/wp-content/uploads/2016/07/calculmental.jpg)
+[![calculmental](/uploads/uploads/2016/07/calculmental.jpg)
+](/uploads/uploads/2016/07/calculmental.jpg)
 
 
 

@@ -1,0 +1,39 @@
+ body {    
+     font-family: sans-serif; 
+ } 
+ h1 { 
+     font-size:24px; 
+     color : white; 
+     font-weight : bold; 
+     background-color : purple;
+     padding : 3px;
+ } 
+
+
+#changeante {
+    margin :15px;
+    width : 300px;
+    border-color : red;
+}
+
+#groupe {
+    width:500px;
+    text-align:center;
+}
+
+
+.button {
+    color:white;
+    background-color:green;
+    padding: 0 4px;
+    border-radius : 4px;
+    border : 2px solid white;    
+margin:10px;
+padding:10px;
+font-weight:bold;
+}
+.button:hover {
+    border : 2px solid darkgreen;    
+    color : green;
+    background-color:white;
+}

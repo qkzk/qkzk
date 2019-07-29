@@ -14,7 +14,7 @@ weight: 8
 ### Projet de base
 
 
-![puissance4.jpg](http://qkzk.xyz/wp-content/uploads/2016/07/mb-jeux-puissance-4-300x300.jpg)
+![puissance4.jpg](/uploads/uploads/2016/07/mb-jeux-puissance-4-300x300.jpg)
 
 
 

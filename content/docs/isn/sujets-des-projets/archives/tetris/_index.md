@@ -18,8 +18,8 @@ Tetris est un jeu vidéo de puzzle conçu en 1984 par Alekseï Pajitnov. Bâti s
 
 
 
-[![doc00021](http://qkzk.xyz/wp-content/uploads/2016/07/doc00021.png)
-](http://qkzk.xyz/wp-content/uploads/2016/07/doc00021.png)
+[![doc00021](/uploads/uploads/2016/07/doc00021.png)
+](/uploads/uploads/2016/07/doc00021.png)
 
 
 

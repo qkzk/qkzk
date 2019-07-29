@@ -74,7 +74,7 @@ Sous Windows, pour installer Python avec l'**environnement de développement IDL
 Une fois installé, vous pouvez lancer IDLE en allant dans :
 Démarrer → Programmes → Python → IDLE (Python GUI)
 
-![idle_1](http://qkzk.xyz/wp-content/uploads/2017/04/idle_1.png)
+![idle_1](/uploads/uploads/2017/04/idle_1.png)
 
 
 
@@ -137,14 +137,14 @@ Démarrer → Programmes → Python → IDLE (Python GUI)
 File → Open → jeu_puissance4.py
 L'éditeur de texte s'ouvre avec le code source du script (environ 1000 lignes de code, soit plusieurs dizaines d'heures de travail pour un développeur expérimenté) :
 
-![idle_2](http://qkzk.xyz/wp-content/uploads/2017/04/idle_2.png)
+![idle_2](/uploads/uploads/2017/04/idle_2.png)
 
 
 Pour exécuter le script : Run → Run module (ou touche F5)
 
 A vous de jouer !
 
-![jeu_puissance4](http://qkzk.xyz/wp-content/uploads/2017/04/jeu_puissance4.png)
+![jeu_puissance4](/uploads/uploads/2017/04/jeu_puissance4.png)
 
 
 

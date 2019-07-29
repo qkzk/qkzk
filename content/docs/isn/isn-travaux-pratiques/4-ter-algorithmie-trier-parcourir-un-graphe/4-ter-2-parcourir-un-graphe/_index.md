@@ -37,7 +37,7 @@ Un arbre est un graphe particulier, les arcs vont dans un sens précis et aucune
 
 Deux arbres identiques sont représentés ci-dessous. Remarquons que seule la numérotation change. A ce détail près ils sont identiques.
 
-![graphes_figures (1)](http://qkzk.xyz/wp-content/uploads/2017/06/graphes_figures-1.png)
+![graphes_figures (1)](/uploads/uploads/2017/06/graphes_figures-1.png)
 
 
 Imaginons partir du sommet 1 et chercher à parcourir tout l'arbre à la recherche d'un sommet particulier. On peut se représenter cette démarche comme le parcours d'un utilisateur cherchant un fichier particulier dans ses dossiers depuis la racine de son disque dur. Il pourrait lancer une recherche (qui fera peut-être la même chose - mais d'autres méthodes plus efficaces existent) mais il décide de chercher "à la main".
@@ -53,7 +53,7 @@ Nous allons mettre en place des algorithmes de parcours en largeur et en profond
 
 L'exemple ci-dessous (graphe3) présente un graphe avec des cycles possibles (1,2,3,1) ou (1,4,3,2,1) etc.
 
-![graphes_figures (2)](http://qkzk.xyz/wp-content/uploads/2017/06/graphes_figures-2.png)
+![graphes_figures (2)](/uploads/uploads/2017/06/graphes_figures-2.png)
 
 
 Le parcourir présentera une difficulté supplémentaire : il est possible de passer plusieurs fois par le même sommet. Nous verrons donc comment l'éviter.
@@ -75,7 +75,7 @@ et parcoursLargeur(arbre2, 1) renvoie donc [1,2,4,3,5]
 Pour l'exemple 4 ci-dessous, nous aurons donc :
 parcoursLargeur(arbre4, 1) qui renvoie [1,2,3,4,5,6,7]
 
-![graphes_figures (3)](http://qkzk.xyz/wp-content/uploads/2017/06/graphes_figures-3.png)
+![graphes_figures (3)](/uploads/uploads/2017/06/graphes_figures-3.png)
 
 
 
@@ -92,7 +92,7 @@ On utilsera donc un object dictionnaire qui permet d'avoir un ensemble de clé, 
 
 Pour l'arbre4 cela donne :
 
-![graphes_figures (3)](http://qkzk.xyz/wp-content/uploads/2017/06/graphes_figures-3.png)
+![graphes_figures (3)](/uploads/uploads/2017/06/graphes_figures-3.png)
 
 
 _arbre4 = {1:[2,3],2:[4,5],3:[6,7],4:[],5:[],6:[],7:[]}_
@@ -100,7 +100,7 @@ Remarquons qu'on note les arcs comme s'ils étaient orientés du haut vers le ba
 
 Pour le graphe3 :
 
-![graphes_figures (2)](http://qkzk.xyz/wp-content/uploads/2017/06/graphes_figures-2.png)
+![graphes_figures (2)](/uploads/uploads/2017/06/graphes_figures-2.png)
 
 _graphe3 = {1:[2,3,4],2:[3],3:[4],4:[]}_
 
@@ -169,7 +169,7 @@ C'est l'autre méthode classique de parcours des graphes : on explore les chemin
 
 Pour notre arbre4 cela donne : 1,2,4,5,3,6,7
 
-![graphes_figures (3)](http://qkzk.xyz/wp-content/uploads/2017/06/graphes_figures-3.png)
+![graphes_figures (3)](/uploads/uploads/2017/06/graphes_figures-3.png)
 
 
 Sa mise en oeuvre la plus simple nécessite **une récursion** : la fonction s'appelle elle même.

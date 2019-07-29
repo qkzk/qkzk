@@ -1,0 +1,258 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title> ISN - programmation 8 - Fonctions et événement </title>
+    <meta name="author" content="Jean-Christophe Routier - Université
+    Lille 1" />
+
+    <link href="../../css/styleISN.css" rel="stylesheet"
+    type="text/css" media="screen"/>
+    <link href="table.css" rel="stylesheet" type="text/css" media="screen"/>
+
+  </head>
+  <body>
+
+<h1>Tables des équivalences des propriétés CSS/Javascript</h1>
+
+<p>Rappel&nbsp;: pour modifier le style d’un élément ayant
+  comme <code>id</code> <i>monElement</i> et donner la
+  valeur <i>laValeur</i> à sa propriété <i>laPropriete</i>  il faut utiliser la syntaxe suivante&nbsp;:
+
+<pre>document.getElementById(<i>monElement</i>).style.<i>laPropriete</i> = "<i>laValeur</i>";</pre>
+
+</p>
+<p>Les propriétés CSS composées d’un seul mot ont un equivalent en javascript.</p>
+
+<table id="tableEquiv">
+<tbody>
+<tr class="titre">
+<td><strong>Javascript</strong></td>
+<td><strong>Css</strong></td>
+</tr>
+<tr class="clair">
+<td>textDecoration</td>
+<td>text-decoration</td>
+</tr>
+<tr class="fonce">
+<td>textDecorationLineThrough</td>
+<td>text-decoration: line-through</td>
+</tr>
+<tr class="clair">
+<td>textDecorationNone</td>
+<td>text-decoration: none</td>
+</tr>
+<tr class="fonce">
+<td>textDecorationUnderline</td>
+<td>text-decoration: underline</td>
+</tr>
+<tr class="clair">
+<td>textDecorationOverline</td>
+<td>text-decoration: overline</td>
+</tr>
+<tr class="fonce">
+<td>textIndent</td>
+<td>text-indent</td>
+</tr>
+<tr class="clair">
+<td>textTransform</td>
+<td>text-transform</td>
+</tr>
+<tr class="fonce">
+<td>styleFloat</td>
+<td>float</td>
+</tr>
+<tr class="clair">
+<td>listStyle</td>
+<td>list-style</td>
+</tr>
+<tr class="fonce">
+<td>listStyleImage</td>
+<td>list-style-image</td>
+</tr>
+<tr class="clair">
+<td>listStylePosition</td>
+<td>list-style-position</td>
+</tr>
+<tr class="fonce">
+<td>listStyleType</td>
+<td>list-style-type</td>
+</tr>
+<tr class="clair">
+<td>paddingBottom</td>
+<td>padding-bottom</td>
+</tr>
+<tr class="fonce">
+<td>paddingLeft</td>
+<td>padding-left</td>
+</tr>
+<tr class="clair">
+<td>paddingRight</td>
+<td>padding-right</td>
+</tr>
+<tr class="fonce">
+<td>paddingTop</td>
+<td>padding-top</td>
+</tr>
+<tr class="clair">
+<td>pageBreakAfter</td>
+<td>page-break-after</td>
+</tr>
+<tr class="fonce">
+<td>pageBreakBefore</td>
+<td>page-break-before</td>
+</tr>
+<tr class="clair">
+<td>font-family</td>
+<td>fontFamily</td>
+</tr>
+<tr class="fonce">
+<td>font-size</td>
+<td>fontSize</td>
+</tr>
+<tr class="clair">
+<td>font-weight</td>
+<td>fontWeight</td>
+</tr>
+<tr class="fonce">
+<td>font-variant</td>
+<td>fontVariant</td>
+</tr>
+<tr class="clair">
+<td>borderBottom</td>
+<td>border-bottom</td>
+</tr>
+<tr class="fonce">
+<td>borderBottomColor</td>
+<td>border-bottom-color</td>
+</tr>
+<tr class="clair">
+<td>borderBottomStyle</td>
+<td>border-bottom-style</td>
+</tr>
+<tr class="fonce">
+<td>borderBottomWidth</td>
+<td>border-bottom-width</td>
+</tr>
+<tr class="clair">
+<td>borderColor</td>
+<td>border-color</td>
+</tr>
+<tr class="fonce">
+<td>borderLeft</td>
+<td>border-left</td>
+</tr>
+<tr class="clair">
+<td>borderLeftColor</td>
+<td>border-left-color</td>
+</tr>
+<tr class="fonce">
+<td>borderLeftStyle</td>
+<td>border-left-style</td>
+</tr>
+<tr class="clair">
+<td>borderLeftWidth</td>
+<td>border-left-width</td>
+</tr>
+<tr class="fonce">
+<td>borderRight</td>
+<td>border-right</td>
+</tr>
+<tr class="clair">
+<td>borderRightColor</td>
+<td>border-right-color</td>
+</tr>
+<tr class="fonce">
+<td>borderRightStyle</td>
+<td>border-right-style</td>
+</tr>
+<tr class="clair">
+<td>borderRightWidth</td>
+<td>border-right-width</td>
+</tr>
+<tr class="fonce">
+<td>borderStyle</td>
+<td>border-style</td>
+</tr>
+<tr class="clair">
+<td>borderTop</td>
+<td>border-top</td>
+</tr>
+<tr class="fonce">
+<td>borderTopColor</td>
+<td>border-top-color</td>
+</tr>
+<tr class="clair">
+<td>borderTopStyle</td>
+<td>border-top-style</td>
+</tr>
+<tr class="fonce">
+<td>borderTopWidth</td>
+<td>border-top-width</td>
+</tr>
+<tr class="clair">
+<td>borderWidth</td>
+<td>border-width</td>
+</tr>
+<tr class="fonce">
+<td>marginBottom</td>
+<td>margin-bottom</td>
+</tr>
+<tr class="clair">
+<td>marginLeft</td>
+<td>margin-left</td>
+</tr>
+<tr class="fonce">
+<td>marginRight</td>
+<td>margin-right</td>
+</tr>
+<tr class="clair">
+<td>marginTop</td>
+<td>margin-top</td>
+</tr>
+<tr class="fonce">
+<td>lineHeight</td>
+<td>line-height</td>
+</tr>
+<tr class="clair">
+<td>letterSpacing</td>
+<td>letter-spacing</td>
+</tr>
+<tr class="fonce">
+<td>verticalAlign</td>
+<td>vertical-align</td>
+</tr>
+<tr class="clair">
+<td>zIndex</td>
+<td>z-index</td>
+</tr>
+<tr class="fonce">
+<td>backgroundAttachment</td>
+<td>background-attachment</td>
+</tr>
+<tr class="clair">
+<td>backgroundColor</td>
+<td>background-color</td>
+</tr>
+<tr class="fonce">
+<td>backgroundImage</td>
+<td>background-image</td>
+</tr>
+<tr class="clair">
+<td>backgroundPosition</td>
+<td>background-position</td>
+</tr>
+<tr class="fonce">
+<td>backgroundRepeat</td>
+<td>background-repeat</td>
+</tr>
+</tbody>
+</table>
+
+
+
+  </body>
+
+</html>

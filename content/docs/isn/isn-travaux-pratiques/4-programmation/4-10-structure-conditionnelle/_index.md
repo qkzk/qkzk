@@ -43,7 +43,7 @@ Nous avons précédemment rencontré la **Manip'** suivante :
 
 
 
-1. Récupérez et étudiez ce [document HTML](http://qkzk.xyz/docs/doc04/exemples/temperature.html) et sa [feuille de style](http://qkzk.xyz/docs/doc04/exemples/styleTemperature.css).
+1. Récupérez et étudiez ce [document HTML](/uploads/docs/doc04/exemples/temperature.html) et sa [feuille de style](/uploads/docs/doc04/exemples/styleTemperature.css).
 2. Un événement `change` est déclenché à chaque fois que la valeur d'un élément `input` est modifiée par l'utilisateur (l'événement est activé lorsque l'on "quitte" l'élément `input` - on dit qu'il perd le focus). En partant du travail lors la **Manip** sur conversion de température, ajoutez à ce document le code Javascript qui permet lors d'une saisie (numérique, **_on ne s'occupera pas pour l'instant de ce qui se passe dans un autre cas_**) dans un champ à la valeur correspondante pour l'autre unité de mesure de afficher dans l'autre champ.
 
   3. Testez évidemment...
@@ -65,7 +65,7 @@ on peut le résoudre_". Et bien disons que ce jour est arrivé.
 
 
 
-Reprenez la solution que vous avez produite, ou utilisez [celle-ci](http://qkzk.xyz/docs/doc04/exemples/temperatureComplet.html) et son [code javascript](http://qkzk.xyz/docs/doc04/exemples/temperature.js),  pour la Manip' précédente et testez ce qu'il se passe avec une saisie non numérique.
+Reprenez la solution que vous avez produite, ou utilisez [celle-ci](/uploads/docs/doc04/exemples/temperatureComplet.html) et son [code javascript](/uploads/docs/doc04/exemples/temperature.js),  pour la Manip' précédente et testez ce qu'il se passe avec une saisie non numérique.
 
 
 
@@ -369,7 +369,7 @@ secret et même le nom, et donc l'URL, de l'image "cachée".
 
 
 Considérons l'exemple fourni
-par [cette page](http://qkzk.xyz/docs/doc04/exemples/sesame.html). Une image est
+par [cette page](/uploads/docs/doc04/exemples/sesame.html). Une image est
 affichée **si** l'utilisateur fourni le mot demandé **sinon** un message
 d'alerte apparaît. Ce comportement est produit par la
 fonction `sesame` appelée au chargement de la page :

@@ -39,3 +39,8 @@ pygmentscodefencesguesssyntax = true
     name = "ressources"
     url = "/docs/ressources"
     weight = 4
+
+
+
+[permalinks]
+  docs = "/"

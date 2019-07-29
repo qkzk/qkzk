@@ -121,7 +121,7 @@ Quelques éléments de la boîte à outils de Gimp que nous utiliserons :
 
 
 
-![boite à outils de Gimp](http://qkzk.xyz/docs/doc07/doc/gimp-boite-outils-annotee.png)
+![boite à outils de Gimp](/uploads/docs/doc07/doc/gimp-boite-outils-annotee.png)
 
 
 
@@ -135,7 +135,7 @@ Quelques éléments de la boîte à outils de Gimp que nous utiliserons :
 
 
 
-  1. Récupérez [cette image](http://qkzk.xyz/docs/doc07/doc/img0.png), et visualisez-la avec le logiciel Gimp.
+  1. Récupérez [cette image](/uploads/docs/doc07/doc/img0.png), et visualisez-la avec le logiciel Gimp.
   2. Effectuez le grossissement maximal de l’image : utilisez l'outil "loupe" et cliquez sur l'image (un appui sur la touche "Ctrl" pendant le clic permet un zoom arrière).
 
 Avec la version 2.6 de Gimp ce grossissement maximal est
@@ -146,9 +146,9 @@ Avec la version 2.6 de Gimp ce grossissement maximal est
 
 
 
-![](http://qkzk.xyz/docs/doc07/doc/gimp-img0-100.png)
+![](/uploads/docs/doc07/doc/gimp-img0-100.png)
 
-![](http://qkzk.xyz/docs/doc07/doc/gimp-img0-25600.png)
+![](/uploads/docs/doc07/doc/gimp-img0-25600.png)
 
 
 

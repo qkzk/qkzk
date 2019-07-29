@@ -1,0 +1,13 @@
+body {
+    font-family: sans-serif;
+    color:#111111;
+    margin: 1% 3%;
+}
+
+#resultat {
+    color:red;
+ }
+
+.valeur {
+    color : green; 
+}

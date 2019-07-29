@@ -38,13 +38,13 @@ Notions abordées dans cette page
 
 Récupérez les 4 images suivantes :
 
-![](http://qkzk.xyz/docs/doc04/images/ballade-des-oliviers.jpg)
+![](/uploads/docs/doc04/images/ballade-des-oliviers.jpg)
 
-![](http://qkzk.xyz/docs/doc04/images/vallon-pont-darc.jpg)
+![](/uploads/docs/doc04/images/vallon-pont-darc.jpg)
 
-![](http://qkzk.xyz/docs/doc04/images/pont-du-gard.jpg)
+![](/uploads/docs/doc04/images/pont-du-gard.jpg)
 
-![](http://qkzk.xyz/docs/doc04/images/fontenay.jpg)
+![](/uploads/docs/doc04/images/fontenay.jpg)
 
 
 
@@ -88,7 +88,7 @@ provoque la modification du contenu de la source
 
 Récupérez l'image supplémentaire suivante :
 
-![](http://qkzk.xyz/docs/doc04/images/colisee-rome.jpg)
+![](/uploads/docs/doc04/images/colisee-rome.jpg)
 
 
 
@@ -110,13 +110,13 @@ la seconde et la troisième image.
 9. Faites les modifications nécessaires pour que les images
 apparaissent désormais dans cet ordre :
 
-![](http://qkzk.xyz/docs/doc04/images/vallon-pont-darc.jpg)
+![](/uploads/docs/doc04/images/vallon-pont-darc.jpg)
 
-![](http://qkzk.xyz/docs/doc04/images/pont-du-gard.jpg)
+![](/uploads/docs/doc04/images/pont-du-gard.jpg)
 
-![](http://qkzk.xyz/docs/doc04/images/colisee-rome.jpg)
+![](/uploads/docs/doc04/images/colisee-rome.jpg)
 
-![](http://qkzk.xyz/docs/doc04/images/ballade-des-oliviers.jpg)
+![](/uploads/docs/doc04/images/ballade-des-oliviers.jpg)
 
 
 10. Testez votre solution.
@@ -500,7 +500,7 @@ interrompt le timer précédent.
 
 
 
-Testez [cette page](http://qkzk.xyz/docs/doc04/exemples/exemple_timer.html) et étudiez le [code javascript](http://qkzk.xyz/docs/doc04/exemples/exemple_timer.js) qui l'accompagne, notamment les fonctions `start` et `stop` et leur usage.
+Testez [cette page](/uploads/docs/doc04/exemples/exemple_timer.html) et étudiez le [code javascript](/uploads/docs/doc04/exemples/exemple_timer.js) qui l'accompagne, notamment les fonctions `start` et `stop` et leur usage.
 
 
 

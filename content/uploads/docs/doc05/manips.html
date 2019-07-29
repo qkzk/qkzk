@@ -1,0 +1,158 @@
+<!DOCTYPE html PUBLIC  "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html  xmlns="http://www.w3.org/1999/xhtml" xml:lang="fr" lang="fr">
+  
+  <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+    <style type="text/css">
+
+      .carre {
+      display: inline-block; /* sert à ne pas avoir de retour à la ligne apres un div */
+      margin : 5;
+      width  : 20;
+      height : 20;
+      border : thin solid black;
+      background : #FF0000;
+      }
+
+    </style>
+
+  </head>
+  
+  <body>
+
+    <h1>Codage des couleurs</h1>
+
+    <h3>Un carré de base</h3>
+
+    <div class="carre">
+    </div>
+
+
+    <h3>Changer une couleur de manière aléatoire en cliquant</h3>
+
+    <script type="text/javascript">
+    // transforme le nombre d exprimé en décimal 
+    // en une chaîne de caratères représentant le nombre 
+    // en hexadécimal sur 6 digits
+    function decimalToHex (d) {
+      var hex = Number(d).toString(16);
+      var padding = 6 - hex.length;
+      // ajoute des 0 en tête de la chaîne pour obtenir 6 digits
+      for (var i = 0; i < padding; i++) {
+        hex = "0" + hex;
+      }
+      // enfin, ajoute # devant la chaîne de caractères
+      return "#"+hex;
+    }
+
+    function couleurAleatoire () {
+        var couleur = parseInt(Math.random() * (256*256*256-1));
+        return decimalToHex(couleur) ;
+    }
+    
+    function changeCouleurAleatoire (id) {
+        document.getElementById(id).style.background = couleurAleatoire ();
+    }
+    
+    function changeCouleurMonCarre () {
+        changeCouleurAleatoire('carreAChanger');
+    }
+
+
+    </script>
+
+    <div id="carreAChanger" class="carre" onclick="changeCouleurMonCarre()">
+    </div>
+
+    
+    <h1>Utiliser la boucle pour</h1>
+
+
+    <h3>Création de 64 carrés</h3>
+
+    <script type="text/javascript">
+      var i = 0;
+      for (i = 0; i < 64; i++) {
+        document.write("<div class='carre'></div>");
+      }
+    </script>      
+
+    <h3>Création de 64 carrés avec identifiant</h3>
+
+    <script type="text/javascript">
+      var i = 0;
+      for (i = 0; i < 64; i++) {
+        document.write("<div class='carre' id='carre" + i + "'></div>");
+      }
+      for (i = 0; i < 64; i++) {
+        changeCouleurAleatoire("carre"+i);
+      }
+    </script>      
+
+
+    <h3>Enumération de 64 valeurs de 0 à 256^3</h3>
+
+    <script type="text/javascript">
+      var i = 0;
+      for (i = 0; i < 256*256*256; i = i + 256*256*4) {
+        document.write(decimalToHex(i));
+	document.write(" ");	      
+      }
+    </script>
+
+
+    <h3>Palette de 64 valeurs (qui ne fonctionne pas)</h3>
+
+    <script type="text/javascript">
+      function changeCouleur (id,couleur) {
+        document.getElementById(id).style.background = decimalToHex(couleur);
+      }
+
+      var i = 0;
+      for (i = 0; i < 256*256*256; i = i + 256*256*4) {
+        document.write("<div class='carre' id='carre_" + i + "'></div>");
+      }
+      for (i = 0; i < 256*256*256; i = i + 256*256*4) {
+        changeCouleur("carre_"+i,i);
+      }
+    </script>
+
+
+    <h3>Exemple de double boucle pour</h3>
+
+    <script type="text/javascript">
+      function changeCouleur (id,couleur) {
+        document.getElementById(id).style.background = decimalToHex(couleur);
+      }
+
+      var i = 0, j = 0;
+      for (i = 0; i < 256; i = i + 85) {
+        for (j = 0; j < 256; j = j + 85) {
+          var couleur = 256 * i + j;
+          document.write("<div class='carre' id='carre__" + couleur + "'></div>");
+          changeCouleur("carre__"+couleur,couleur);
+        }
+      } 
+    </script>
+
+    <h3>Palette de 64 couleurs avec triple boucle pour</h3>
+
+    <script type="text/javascript">
+      var i = 0, j = 0, k = 0;
+      for (i = 0; i < 256; i = i + 85) {
+        for (j = 0; j < 256; j = j + 85) {
+          for (k = 0; k < 256; k = k + 85) {
+            var couleur = 256 * 256 * i + 256 * j + k;
+            document.write("<div class='carre' id='carre___" + couleur + "'></div>");
+            changeCouleur("carre___"+couleur,couleur);
+          }
+        }
+      } 
+    </script>
+
+  </body>
+  
+</html>

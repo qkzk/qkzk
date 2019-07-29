@@ -93,7 +93,7 @@ Bref... un simple fichier qui semble très compliqué à utiliser.
 
 Poppler s’exécute alors et crée un fichier 'verlaine.txt' dans le même dossier. OUF.
 A l'avenir il vous suffira de faire de même pour extraire du texte d'un pdf.
-Je réalise bien qu'il est fort possible qu'une des étapes précédentes échoue... auquel cas vous n'avancerez-plus. On trouvera donc ici le fichier texte : [verlaine.txt](http://qkzk.xyz/?attachment_id=93)
+Je réalise bien qu'il est fort possible qu'une des étapes précédentes échoue... auquel cas vous n'avancerez-plus. On trouvera donc ici le fichier texte : [verlaine.txt](/uploads/uploads/2016/07/verlaine.txt)
 
 Une dernière remarque avant d'avancer. Ce que nous venons de faire, d'autres l'ont déjà fait !?! Et mieux. On trouvera [ici](http://pdftotext.com/) un site (en php je pense) prêt à l'emploi réalisant toute la démarche. Etant donné qu'il renvoie exactement le fichier que Poppler pour windows il y a fort à penser qu'il utilise une autre version de Poppler : poppler pour unix, compilée pour les systèmes unix généralement utilisées par les serveurs web.
 _"Ah ouais c'est bien tout ça... mais au final j'ai simplement utilisé un .exe pour faire tout le travail ! Je pensais que j'allais apprendre à coder moi même un truc comme poppler !"_ Non... Premièrement ça nous (et je m'y inclus) dépasse totalement. Deuxièmement pourquoi réinventer la roue ? A la rigueur je peux comprendre le principe général et vous l'expliquer... mais ce qu'on trouve dans un fichier .pdf est beaucoup plus compliqué qu'il n'y parait. Le texte est entièrement formaté et ce formatage respecte des contraintes très élaborées. Un gentil développeur s'est épuisé à le faire et partage son travail, on l'en remercie.
@@ -101,7 +101,7 @@ _"Ah ouais c'est bien tout ça... mais au final j'ai simplement utilisé un .exe
 **tl;dr** résumé :
 dl poppler [ici :](http://blog.alivate.com.au/poppler-windows/) télécharger le fichier "Latest binary : poppler..._x86.7z"
 décomprésser avec 7zip (clic droit) et naviguer jusque .../bin
-glisser le fichier 'verlaine.pdf' sur pdftotext.exe : le texte apparait dans verlaine.txt (si ça veut pas : [verlaine.txt](http://qkzk.xyz/?attachment_id=93))
+glisser le fichier 'verlaine.pdf' sur pdftotext.exe : le texte apparait dans verlaine.txt (si ça veut pas : [verlaine.txt](/uploads/uploads/2016/07/verlaine.txt)
 Remarquons que des sites prêts à l'emploi font de même : [par exemple](http://pdftotext.com/).
 
 
@@ -160,7 +160,7 @@ Nous allons ici utiliser le langage Python pour compter les lettres de chaque mo
 
 
 
-Récupérer le script [count_letter.py](http://qkzk.xyz/docs/count_letter.py) et l'ouvrir dans IDLE.
+Récupérer le script [count_letter.py](/uploads/docs/count_letter.py) et l'ouvrir dans IDLE.
 
 
 

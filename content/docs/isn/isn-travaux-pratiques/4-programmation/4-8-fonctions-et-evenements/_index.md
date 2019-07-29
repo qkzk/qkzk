@@ -349,7 +349,7 @@ fenêtre _pop-up_ affichant le message passé en paramètre (de type
 
 
 
-1. Etudiez et testez [cet exemple](http://qkzk.xyz/docs/doc04/exemples/exemple_event1.html).
+1. Etudiez et testez [cet exemple](/uploads/docs/doc04/exemples/exemple_event1.html).
 2. Complétez le code Javascript pour qu'une une fenêtre d'alerte
 (utilisez `window.alert`) s'affiche dès que l'on passe la
 souris sur l'image, le type de l'événement
@@ -391,7 +391,7 @@ Sur un élément donné on peut avoir
 
 
 On réutilise la version initiale de
-l'[exemple précédent](http://qkzk.xyz/docs/doc04/exemples/exemple_event1.html).
+l'[exemple précédent](/uploads/docs/doc04/exemples/exemple_event1.html).
 
 
 
@@ -425,7 +425,7 @@ var piedEnBleu = function() {
 
 
 
-Cette [page](http://qkzk.xyz/docs/doc04/doc/equivalences-css-javascript.html) propose
+Cette [page](/uploads/docs/doc04/doc/equivalences-css-javascript.html) propose
 une table des équivalences de nom entre les propriétés CSS et Javascript.
 
 
@@ -594,8 +594,8 @@ un peu plus tard...
 
 
 1. Récupérez et étudiez ce [document
-HTML](http://qkzk.xyz/docs/doc04/exemples/temperature.html) et sa [feuille de
-style](http://qkzk.xyz/docs/doc04/exemples/styleTemperature.css).
+HTML](/uploads/docs/doc04/exemples/temperature.html) et sa [feuille de
+style](/uploads/docs/doc04/exemples/styleTemperature.css).
 2. Un événement `change` est déclenché à chaque fois que
 la valeur d'un élément `input` est modifiée par
 l'utilisateur (l'événement est activé lorsque l'on "quitte"
@@ -626,7 +626,7 @@ placer des balises, elles seront interprétées.
 
 1. Créez une page HTML avec un élément identifié et un autre élément
 type "bouton".
-2. ![Alan Turing](http://qkzk.xyz/docs/doc04/exemples/alan-turing.jpeg)
+2. ![Alan Turing](/uploads/docs/doc04/exemples/alan-turing.jpeg)
 
 Ajoutez un abonnement sur le "bouton" pour qu'un clic modifie le
 contenu de l'élément identifié en attribuant à sa
@@ -637,7 +637,7 @@ le contenu a été changé. On peut placer dans innerHTML de l'HTML
 qui est interprété. Du gras ou une image par  exemple :
 
 ~~~javascript
-<img src="http://qkzk.xyz/docs/doc04/alan-turing.jpeg" alt="Alan Turing"></img>
+<img src="/uploads/docs/doc04/alan-turing.jpeg" alt="Alan Turing"></img>
 ~~~
 
 
@@ -718,8 +718,8 @@ et au second
 7. Déduisez-en le sens de ces couples propriétés/valeurs, quelles
 différences faites-vous entre les proprités `display`
 et `visibility` ?
-8. Etudiez ce [document HTML](http://qkzk.xyz/docs/doc04/exemples/mystere.html) et
-sa [feuille de style](http://qkzk.xyz/docs/doc04/exemples/styleMystere.css)
+8. Etudiez ce [document HTML](/uploads/docs/doc04/exemples/mystere.html) et
+sa [feuille de style](/uploads/docs/doc04/exemples/styleMystere.css)
 9. Ajoutez le code Javascript qui permet d'afficher le contenu de
 l'élément identifié `txtcache` lorsque l'on clique sur
 le "bouton" _Montrer_ et de le masquer avec le
@@ -764,9 +764,9 @@ fois !",
 
 
 
-![eclipse](http://qkzk.xyz/docs/doc04/exemples/eclipse.jpg)
+![eclipse](/uploads/docs/doc04/exemples/eclipse.jpg)
 
-![soleil](http://qkzk.xyz/docs/doc04/exemples/soleil.jpg)
+![soleil](/uploads/docs/doc04/exemples/soleil.jpg)
 
 
 Récupérez les deux images sur la droite et, en utilisant les possibilités d'abonnement/désabonnement, créez une page HTML qui contient **un seul** élément `img` dont le contenu passe à chaque fois que l'on clique dessus d'une image à l'autre.

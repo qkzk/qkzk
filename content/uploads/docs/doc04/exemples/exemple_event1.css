@@ -1,0 +1,29 @@
+ body {    
+     font-family: sans-serif; 
+ } 
+ h1 { 
+     font-size:24px; 
+     color : navy; 
+     font-weight : bold; 
+ } 
+ #principal { 
+     margin : 10px; 
+ } 
+ div#principal, p {
+     font-size : 12px; 
+ } 
+ .petite {
+     width : 300px; 
+ } 
+
+#piedDePage{
+    padding : 10px;
+    background-color:#AAAAFF;
+    color : #222222;
+    border : thin solid black; 
+}
+
+.info {
+    font-weight : bold;
+    color : red;
+}

@@ -9,18 +9,18 @@ weight: 9
 # les piles de sable abéliennes
 
 
-[caption id="attachment_1291" align="aligncenter" width="599"]![Backtang2](http://qkzk.xyz/wp-content/uploads/2017/07/Backtang2.png)
+[caption id="attachment_1291" align="aligncenter" width="599"]![Backtang2](/uploads/uploads/2017/07/Backtang2.png)
 28 millions de grains sur une grille de 1024 x 1024[/caption]
 
 Une **pile de sable abélienne** est un automate cellulaire modélisant sommairement une vraie pile de sable. Nous la voyons comme une grille infinie de cellules carrées. Chaque cellule peut comporter un certain nombre de grains.
 Chaque seconde nous déposons un grain dans la cellule (0,0). Si le nombre de grains d'une pile est supérieur ou égal à 4 alors la pile s'effondre immédiatement et les grains partent simultanément vers les quatre cellules avoisinantes (à gauche, à droite, au dessus, en dessous).
 
-![sandpiles_1](http://qkzk.xyz/wp-content/uploads/2017/07/sandpiles_1.png)
+![sandpiles_1](/uploads/uploads/2017/07/sandpiles_1.png)
 
-![sandpiles_2](http://qkzk.xyz/wp-content/uploads/2017/07/sandpiles_2.png)
+![sandpiles_2](/uploads/uploads/2017/07/sandpiles_2.png)
 
 
-![sandpiles_3](http://qkzk.xyz/wp-content/uploads/2017/07/sandpiles_3.png)
+![sandpiles_3](/uploads/uploads/2017/07/sandpiles_3.png)
 
 
 
@@ -70,7 +70,7 @@ De manière générale les voisins de la cellule (x,y) sont donc (x-1, y), (x+1,
 
 Voici une représentation de cette pile finale en colorant les cases :
 
-[caption id="attachment_1295" align="aligncenter" width="181"]![](http://qkzk.xyz/wp-content/uploads/2017/07/puiss_4-taille_5-steps_6-temps_0.00-color_grayscale_crop.png)
+[caption id="attachment_1295" align="aligncenter" width="181"]![](/uploads/uploads/2017/07/puiss_4-taille_5-steps_6-temps_0.00-color_grayscale_crop.png)
 16 grains. 0 : blanc, 1 : gris clair, 2  : gris foncé, 3 : noir.[/caption]
 
 
@@ -86,7 +86,7 @@ Votre algorithme doit être capable de renvoyer rapidement l'image obtenue quand
 
 
 
-[caption id="attachment_1302" align="aligncenter" width="840"]![puiss_17-taille_267-steps_132320-temps_88.88-color_hot](http://qkzk.xyz/wp-content/uploads/2017/07/puiss_17-taille_267-steps_132320-temps_88.88-color_hot-1024x1012.png)
+[caption id="attachment_1302" align="aligncenter" width="840"]![puiss_17-taille_267-steps_132320-temps_88.88-color_hot](/uploads/uploads/2017/07/puiss_17-taille_267-steps_132320-temps_88.88-color_hot-1024x1012.png)
 2 puissance 17 grains. La structure fractale apparaît clairement.[/caption]
 
 **Plan envisageable**

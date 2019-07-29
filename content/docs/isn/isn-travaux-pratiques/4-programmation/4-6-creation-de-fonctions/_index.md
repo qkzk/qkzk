@@ -31,7 +31,7 @@ Notions abordées dans cette page
 
 
 
-Télécharger sur le bureau les quatre fichiers : [monuments1.html](http://qkzk.xyz/docs/doc04/doc/monuments-version2.html), [monuments-fonction.js](http://qkzk.xyz/docs/doc04/doc/monuments-fonction.js), [monuments-version2.html](http://qkzk.xyz/docs/doc04/doc/monuments-version2.html) et [monuments-fonction2.js](http://qkzk.xyz/docs/doc04/doc/monuments-fonction2.js)
+Télécharger sur le bureau les quatre fichiers : [monuments1.html](/uploads/docs/doc04/doc/monuments-version2.html), [monuments-fonction.js](/uploads/docs/doc04/doc/monuments-fonction.js), [monuments-version2.html](/uploads/docs/doc04/doc/monuments-version2.html) et [monuments-fonction2.js](/uploads/docs/doc04/doc/monuments-fonction2.js)
 Les fonctions qu'ils contiennent sont susceptibles d'être bloquées par le serveur qui héberge les fichiers.
 Dans la suite du document tous les liens mènent vers ces fichiers.
 
@@ -42,7 +42,7 @@ Dans la suite du document tous les liens mènent vers ces fichiers.
 
 
 
-1. Consultez les 2 pages suivantes : [version 1](http://qkzk.xyz/docs/doc04/doc/monuments-version1.html), [version 2](http://qkzk.xyz/docs/doc04/doc/monuments-version2.html). Rafraîchir la page si les images ne se chargent pas.
+1. Consultez les 2 pages suivantes : [version 1](/uploads/docs/doc04/doc/monuments-version1.html), [version 2](/uploads/docs/doc04/doc/monuments-version2.html). Rafraîchir la page si les images ne se chargent pas.
 2. Voyez-vous des différences entre ces 2 versions ?
 3. Consultez les codes HTML de ces 2 pages.
 4. Quelles différences constatez-vous ? Qu'en pensez-vous ? L'un des deux fichiers HTML est-il plus facile à comprendre ? Si oui, lequel ?
@@ -200,16 +200,16 @@ en examiner le fonctionnement en détail :
 
 
 1. Activez Firebug et ouvrez le document dans
-sa [version 2](http://qkzk.xyz/docs/doc04/doc/monuments-version2.html).
+sa [version 2](/uploads/docs/doc04/doc/monuments-version2.html).
 2. Ouvrez l'onglet script et choisissez le
 fichier`monuments-fonction.js` contenant le code des
 fonctions que nous voulons analyser.
-![Firebug - code](http://qkzk.xyz/docs/doc04/doc/firebugDebugger1.png)
+![Firebug - code](/uploads/docs/doc04/doc/firebugDebugger1.png)
 
 3. Placez un point d'arrêt sur la première ligne de code du corps de la
 fonction `afficheMonument` en cliquant dans la marge du
 code :
-![Firebug - point arret](http://qkzk.xyz/docs/doc04/doc/firebugDebugger2.png)
+![Firebug - point arret](/uploads/docs/doc04/doc/firebugDebugger2.png)
 
 4. Rechargez la page. Celle-ci commence à être évaluée, comme
 l'indique l'affichage du contenu de la balise `h1` puis
@@ -221,7 +221,7 @@ est en attente avant l'évaluation de cette ligne.
 l'onglet **Pile**. Celui-ci indique par quel chemin (qui se lit
 de bas en haut) on est arrivé à ce point d'arrêt. Vous pouvez
 cliquer sur les noms pour accéder directement aux codes impliqués.
-![Firebug - pile exécution](http://qkzk.xyz/docs/doc04/doc/firebugDebugger3.png)
+![Firebug - pile exécution](/uploads/docs/doc04/doc/firebugDebugger3.png)
 
 6. Dans l'image ci-dessus on peut apercevoir un groupe de
 boutons, située au-dessus de la zone contenant le code
@@ -266,7 +266,7 @@ ces définitions dans un fichier "à part").
 
 
 1. Chargez le
-fichier [monuments-fonction-meilleurePratique.js](http://qkzk.xyz/docs/doc04/doc/monuments-fonction-meilleurePratique.js)
+fichier [monuments-fonction-meilleurePratique.js](/uploads/docs/doc04/doc/monuments-fonction-meilleurePratique.js)
 et
 étudiez-en le code.
 2. Quelles sont les données qui ont été nommées ? Où sont-elles utilisées ?

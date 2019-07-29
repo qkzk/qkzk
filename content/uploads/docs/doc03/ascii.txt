@@ -1,0 +1,69 @@
+%% $Id: ascii.txt 103 2012-06-28 13:29:44Z marquet $
+%%------------------------------
+%%  
+%% Table des caracteres ASCII
+%%
+%%------------------------------------------------------------
+
+
+     |0000 |0001 |0010 |0011 |0100 |0101 |0110 |0111 |1000 |1001 |1010 |1011 |1100 |1101 |1110 |1111 |
+ ----+-----------------------------------------------------------------------------------------------+ 
+0000 | NUL | SOH | STX | ETX | EOT | ENQ | ACK | BEL |  BS |  HT |  LF |  VT |  FF |  CR |  SO |  SI |
+0001 | DLE | DC1 | DC2 | DC3 | DC4 | NAK | SYN | ETB | CAN |  EM | SUB | ESC |  FS |  GS |  RS |  US |
+0010 |  SP |  !  |  "  |  #  |  $  |  %  |  &  |  '  |  (  |  )  |  *  |  +  |  ,  |  -  |  .  |  /  |  
+0011 |  0  |  1  |  2  |  3  |  4  |  5  |  6  |  7  |  8  |  9  |  :  |  ;  |  <  |  =  |  >  |  ?  |
+0100 |  @  |  A  |  B  |  C  |  D  |  E  |  F  |  G  |  H  |  I  |  J  |  K  |  L  |  M  |  N  |  O  |  
+0101 |  P  |  Q  |  R  |  S  |  T  |  U  |  V  |  W  |  X  |  Y  |  Z  |  [  |  \  |  ]  |  ^  |  _  |
+0110 |  `  |  a  |  b  |  c  |  d  |  e  |  f  |  g  |  h  |  i  |  j  |  k  |  l  |  m  |  n  |  o  |
+0111 |  p  |  q  |  r  |  s  |  t  |  u  |  v  |  w  |  x  |  y  |  z  |  {  |  |  |  }  |  ~  | DEL |
+ ----+-----------------------------------------------------------------------------------------------+ 
+
+On lit dans cette table que la representation binaire du caractere 
+'a' est '0110_0001' (7e ligne, 2e colonne).
+
+On lit dans cette table que le caractere de representation binaire
+'0111_1010' est 'z' ('0111' 8e ligne, '1010' 11e colonne) 
+
+
+
+
+Note : les 33 caracteres de controle (deux premieres lignes et
+       caractere DEL) correspondent aux significations suivantes : 
+
+    NUL     Null (nul)
+    SOH     Start of Header (debut d'en-tete)
+    STX     Start of Text (debut du texte)
+    ETX     End of Text (fin du texte)
+    EOT     End of Transmission (fin de transmission)
+    ENQ     Enquiry (End of Line) (demande, fin de ligne)
+    ACK     Acknowledge (accuse de reception)
+    BEL     Bell (caractere d'appel)
+    BS      Backspace (espacement arriere)
+    HT      Horizontal Tab (tabulation horizontale)
+    LF      Line Feed (saut de ligne)
+    VT      Vertical Tab (tabulation verticale)
+    FF      Form Feed (saut de page)
+    CR      Carriage Return (retour chariot)
+    SO      Shift Out (fin d'extension)
+    SI      Shift In (demarrage d'extension)
+    
+    DLE     Data Link Escape
+    DC1-DC4 Device Control (controle de peripherique)
+    NAK     Negative Acknowledge (accuse de reception negatif)
+    SYN     Synchronous Idle
+    ETB     End of Transmission Block (fin du bloc de transmission)
+    CAN     Cancel (annulation)
+    EM      End of Medium (fin de support)
+    SUB     Substitute (substitution)
+    ESC     Escape (echappement)
+    FS      File Separator (separateur de fichier)
+    GS      Group Separator (separateur de groupe)
+    RS      Record Separator (separateur d'enregistrement)
+    US      Unit Separator (separateur d'unite)
+    SP      Space (espace)
+    
+    DEL     Delete (effacement)
+
+%%------------------------------
+%% eof
+%%------------------------------------------------------------

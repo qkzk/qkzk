@@ -18,8 +18,8 @@ title: Labyrinthe
 
 
 
-[![labyrinthe_difficile](http://qkzk.xyz/wp-content/uploads/2016/07/labyrinthe_difficile.gif)
-](http://qkzk.xyz/wp-content/uploads/2016/07/labyrinthe_difficile.gif)
+[![labyrinthe_difficile](/uploads/uploads/2016/07/labyrinthe_difficile.gif)
+](/uploads/uploads/2016/07/labyrinthe_difficile.gif)
 
 
 

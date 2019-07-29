@@ -415,7 +415,7 @@ problème, un message d'erreur en rouge, le nom du
 fichier contenant l'erreur et le numéro de la ligne dans le fichier
 qui contient l'erreur.
 
-![la console de développement](http://qkzk.xyz/docs/doc04/doc/firebug1.png)
+![la console de développement](/uploads/docs/doc04/doc/firebug1.png)
 
 
 

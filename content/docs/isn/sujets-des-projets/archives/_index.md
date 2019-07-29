@@ -25,7 +25,7 @@ weight: 1000
 
 
 
- 	*
+
 
 
 ### Feu de forêt - canvas
@@ -47,7 +47,7 @@ Le programme demande une probabilité à l'utilisateur (entre 0 et 1) et génèr
 
 
 
- 	*
+
 
 
 ### Palindrome - javascript
@@ -62,7 +62,7 @@ Votre programme devra distinguer un cas tel que «À l’étape, épate-la!» qu
 
 
 
-*
+
 
 
 ### Prise en main et utilisation du raspberry-pi
@@ -84,7 +84,7 @@ Présentation de quelques tutoriels utilisant le GPIO.
 
 
 Le même que cette année.
-*
+
 
 
 ### Le score du Ping pong.
@@ -129,10 +129,10 @@ Le même que cette année.
 
 
 
- 	* [Le compte est bon - Javascript](http://qkzk.xyz/?page_id=470)
- 	* [Jeu de la vie - Canvas](http://qkzk.xyz/?page_id=474)
- 	* [ZagZig - Canvas](projets/zagzig.html)
- 	* [Raspberry Pi - Python, Linux, Electronique](http://qkzk.xyz/?page_id=478)
+* [Le compte est bon - Javascript](http://qkzk.xyz/?page_id=470)
+* [Jeu de la vie - Canvas](http://qkzk.xyz/?page_id=474)
+* [ZagZig - Canvas](projets/zagzig.html)
+* [Raspberry Pi - Python, Linux, Electronique](http://qkzk.xyz/?page_id=478)
 
 
 
@@ -150,13 +150,13 @@ Le même que cette année.
 
 
 
- 	* [Puissance 4](http://qkzk.xyz/?page_id=47)
- 	* [Le compte est bon](http://qkzk.xyz/?page_id=470)
- 	* [WolframAlpha-like](http://qkzk.xyz/?page_id=480)
- 	* [Projet collaboratif ISN / STI2D SIN : Station météo](http://qkzk.xyz/?page_id=483)
- 	* [Raspberry](http://qkzk.xyz/?page_id=478)
- 	* [Labyrinthe](http://qkzk.xyz/?page_id=487)
- 	* [Calcul mental](http://qkzk.xyz/?page_id=490)
+* [Puissance 4](http://qkzk.xyz/?page_id=47)
+* [Le compte est bon](http://qkzk.xyz/?page_id=470)
+* [WolframAlpha-like](http://qkzk.xyz/?page_id=480)
+* [Projet collaboratif ISN / STI2D SIN : Station météo](http://qkzk.xyz/?page_id=483)
+* [Raspberry](http://qkzk.xyz/?page_id=478)
+* [Labyrinthe](http://qkzk.xyz/?page_id=487)
+* [Calcul mental](http://qkzk.xyz/?page_id=490)
 
 
 
