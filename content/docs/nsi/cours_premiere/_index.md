@@ -20,7 +20,7 @@ weight: 2
 ### Les cours
 
 
-La liste des fichiers déjà réalisés à cette date est [ici](/uploads/docs/NSI/premiere/cours/) :
+La liste des fichiers déjà réalisés à cette date est [ici](/uploads/docsnsi/pdf/) :
 <table >
 <tbody >
 <tr >
@@ -33,10 +33,10 @@ Diaporama
 <td >**Algorithmique**
 </td>
 
-<td >[cours](/uploads/docs/NSI/premiere/cours/algorithmique-Article.pdf)
+<td >[cours](/uploads/docsnsi/pdf/algorithmique-Article.pdf)
 </td>
 
-<td >[diaporama](/uploads/docs/NSI/premiere/slides/algorithmique-Beamer.pdf)
+<td >[diaporama](/uploads/docsnsi/pdf/algorithmique-Beamer.pdf)
 </td>
 </tr>
 <tr >
@@ -44,10 +44,10 @@ Diaporama
 <td >**Architecture des machines**
 </td>
 
-<td >[cours](/uploads/docs/NSI/premiere/cours/architecture-Article.pdf)
+<td >[cours](/uploads/docsnsi/pdf/architecture-Article.pdf)
 </td>
 
-<td >[diaporama](/uploads/docs/NSI/premiere/slides/architecture-Beamer.pdf)
+<td >[diaporama](/uploads/docsnsi/pdf/architecture-Beamer.pdf)
 </td>
 </tr>
 <tr >
@@ -55,10 +55,10 @@ Diaporama
 <td >**Réseaux**
 </td>
 
-<td > [cours](/uploads/docs/NSI/premiere/cours/reseaux-Article.pdf)
+<td > [cours](/uploads/docsnsi/pdf/reseaux-Article.pdf)
 </td>
 
-<td >[diaporama](/uploads/docs/NSI/premiere/slides/reseaux-Beamer.pdf)
+<td >[diaporama](/uploads/docsnsi/pdf/reseaux-Beamer.pdf)
 </td>
 </tr>
 <tr >
@@ -66,10 +66,10 @@ Diaporama
 <td >**Représentation des données**
 </td>
 
-<td > [cours](/uploads/docs/NSI/premiere/cours/reprensetations_donnees-Article.pdf)
+<td > [cours](/uploads/docsnsi/pdf/representation_donnees-Article.pdf)
 </td>
 
-<td >[diaporama](/uploads/docs/NSI/premiere/slides/reprensetations_donnees-Beamer.pdf)
+<td >[diaporama](/uploads/docsnsi/pdf/representation_donnees-Beamer.pdf)
 </td>
 </tr>
 <tr >
@@ -77,10 +77,10 @@ Diaporama
 <td >**Trier**
 </td>
 
-<td > [cours](/uploads/docs/NSI/premiere/cours/tris-Article.pdf)
+<td > [cours](/uploads/docsnsi/pdf/tris-Article.pdf)
 </td>
 
-<td >[diaporama](/uploads/docs/NSI/premiere/slides/tris-Beamer.pdf)
+<td >[diaporama](/uploads/docsnsi/pdf/tris-Beamer.pdf)
 </td>
 </tr>
 <tr >
@@ -99,7 +99,7 @@ Diaporama
 <td >partie 1
 </td>
 
-<td > [cours](/uploads/docs/NSI/premiere/cours/1_tables_csv_intro-Article.pdf)
+<td > [cours](/uploads/docsnsi/pdf/1_tables_csv_intro-Article.pdf)
 </td>
 
 <td >
@@ -110,7 +110,7 @@ Diaporama
 <td >partie 3
 </td>
 
-<td > [cours](/uploads/docs/NSI/premiere/cours/3_csv_chercher-Article.pdf)
+<td > [cours](/uploads/docsnsi/pdf/3_csv_chercher-Article.pdf)
 </td>
 
 <td >
@@ -121,7 +121,7 @@ Diaporama
 <td >partie 2
 </td>
 
-<td > [cours](/uploads/docs/NSI/premiere/cours/2_csv_nettoyer-Article.pdf)
+<td > [cours](/uploads/docsnsi/pdf/2_csv_nettoyer-Article.pdf)
 </td>
 
 <td >
@@ -156,7 +156,7 @@ Les travaux pratiques vous seront communiqués par l'intermédiaire de Google Cl
 ### Idées de projets
 
 
-[Ici](/uploads/docs/NSI/premiere/divers/liste_projets.pdf) un document de travail comprénant les extraits du programme définissant le cadre des projets et leurs enjeux ainsi qu'une liste de projets plus ou moins réalistes.
+[Ici](/uploads/docsnsi/pdf/liste_projets.pdf) un document de travail comprénant les extraits du programme définissant le cadre des projets et leurs enjeux ainsi qu'une liste de projets plus ou moins réalistes.
 
 Certains dépassent largement les enjeux du programme, leur difficulté est à chaque fois mentionnée.
 

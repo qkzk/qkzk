@@ -2,7 +2,7 @@
 title: 1 - Introduction
 author: qkzk
 theme: Hannover
-
+weight: 1
 ---
 
 # Algorithmique
@@ -123,6 +123,7 @@ theme: Hannover
     * $p = 100.000 \quad q = 10.000 \;;\; p = 10 \times q$ donc $p^2 = 100 \times q^2$.
 
       On a besoin de $100$ fois plus de puissance.
+      
     * $2^6 = 64 \quad 2^7=128$. Elle sera obtenue dans $7\times 2 = 14$ ans !!!
 
 ## Exemple - correction - suite

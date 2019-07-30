@@ -3,13 +3,6 @@
 html {
   height: 100vh
 }
-// body {
-//     background-image: url("/back_qkzk.jpg");
-//     background-repeat: repeat;
-//     background-position: top left;
-//     background-attachment: scroll;
-//     min-height: 100vh
-// }
 .white-back {
   background-color: $body-background;
   margin: 21px;
@@ -19,6 +12,10 @@ html {
 .container {
   background-color: #FFF;
 }
+
+/*
+BANNER AND HEADER
+*/
 .banner {
   display: block;
   width:95%;
@@ -50,6 +47,10 @@ html {
   background-size: cover;
   margin-bottom: 13vh;
 }
+
+/*
+BOOK PAGES AND TOCS
+*/
 .book-page {
   padding-top: 0;
 }
@@ -60,33 +61,20 @@ html {
 }
 .book-menu nav, .book-toc nav {
   position:sticky;
-  // top:400px;
   top: 0;
   margin: 0;
   padding: 0;
-  // height: 800px;
 }
 
 .book-toc h1, .book-brand {
   font-weight: bold;
 }
 .book-brand {
-  // margin-top: 0;
-  // padding-top: 0.5em;
-  // padding-bottom: 0;
-  // margin-bottom: 1em;
+
 }
 .menu-nav {
   line-height: normal;
 }
-// .book-toc nav {
-//   position:sticky;
-//   // top:400px;
-//   padding-left: 0;
-//   padding-top: 1em;
-//   top: 2em;
-//   // height: 800px;
-// }
 .book-toc ul li a {
   font-size: $font-size-14;
   color: #000;
@@ -105,26 +93,19 @@ details li {
   list-style: none;
 }
 a.nav-link {
-  // font-size: 44px;
   color: #000;
 }
 summary:hover a{
     // color:red;
     opacity: 0.5;
 }
-// summary:active{
-//     color:green;
-// }
-// // details[open]{
-// //   color:"#5555FF";
-// // }
 details[open] summary a.active{
   color:green;
 }
 
 
 /*
-footer
+FOOTER
 */
 .footer-qkzk {
   margin-top: 5em;
@@ -134,12 +115,16 @@ footer
   padding-top: 1.5em;
 }
 
-
 /*
-mobile
+RESPONSIVE DESIGN
 */
-@media (min-width: 1200px) {
+// desktop
 
+.content-desktop {
+  display: flex;
+}
+
+@media (min-width: 1200px) {
   body {
     background-image: url("/back_qkzk.jpg");
     background-repeat: repeat;
@@ -147,15 +132,17 @@ mobile
     background-attachment: scroll;
     min-height: 100vh
     }
-
 }
 
-.content-desktop {
-  display: flex;
+@media screen and (min-width: 768px){
+  .book-toc, .book-menu {
+    border-top: 4px solid #1a1a1a;
+    margin-bottom: 2em;
+    padding-bottom: 2em;
+    padding-top: 1.75em;
+    padding-left: 0;
+  }
 }
-
-
-// #content-mobile {
 
 // mobile
 @media screen and (max-width: 768px) {
@@ -175,17 +162,5 @@ mobile
   }
   #bannerTitle{
     padding-left: 2vh;
-  }
-}
-
-// desktop
-@media screen and (min-width: 768px){
-  .book-toc, .book-menu {
-    border-top: 4px solid #1a1a1a;
-    // margin-top: 20vh;
-    margin-bottom: 2em;
-    padding-bottom: 2em;
-    padding-top: 1.75em;
-    padding-left: 0;
   }
 }

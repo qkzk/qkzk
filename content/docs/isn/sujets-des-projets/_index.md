@@ -30,7 +30,7 @@ Le choix du mini-projet est déterminant pour la suite. Je ne vous laisserai pas
 
 
 
-*
+---
 
 
 ### Le score du Ping-Pong - html, javascript, éventuellement canvas - abordable
@@ -42,7 +42,8 @@ Un état de la partie sera affiché indiquant aussi qui doit servir.
 On enregristera le déroulé de la partie (l'ordre des points) dans un tableau afin d'afficher des statistiques (point marqué quand on sert etc.)
 Extentions : on pourra indiquer le type de point : faute (nature ?), coup direct, ace etc.
 On pourra, éventuellement, afficher des animations dans un canvas ou simplement avec des images.
-*
+
+---
 
 
 ### Pong - html, javascript, canvas - abordable
@@ -57,7 +58,9 @@ Ce miniprojet vise à l'apprentissage du canvas en vue d'un projet final.
 Pong : le jeu historique et bien connu. 2 Raquettes défendant chacune un but (bords gauche et droit) se déplacent verticalement et font rebondir une balle. Celle-ci rebondit aussi sur les murs.
 Il sera réalisé dans une page html contenant un canvas qui permet l'affichage et l'animation d'objets. On développera d'abord la version deux joueurs sur un même clavier (l'ordinateur ne joue pas). Un tutoriel presque complet est disponible [ici.](/docs/isn/isn-travaux-pratiques/4-programmation/4-12-tutoriel-pong-en-javascript/)La dernière partie (l'ordinateur joue contre vous) n'est pas détaillée dans ce tutoriel. On L'envisagera en deux temps : 1. Quelle ordonnée doit-il viser ? 2. Il se déplace étape par étape.
 **Extension :** les niveaux de difficulté.
-*
+
+
+---
 
 
 ### Feu de forêt - html, javascript, canvas - assez difficile
@@ -74,7 +77,8 @@ Le programme demande une probabilité à l'utilisateur (entre 0 et 1) et génèr
 C'est un mini-projet ambitieux qui demande un investissement certain pour les novices. Il permettra d'aborder les projets les plus difficiles avec confiance.
 
 [Projet](http://mathematice.fr/chapitre.php?menu=isn&num=12) similaire déjà réalisé en ISN.
-*
+
+---
 
 
 ### Réalisation d'une animation en p5js - html, javascript + p5js, canvas - moyen.
@@ -88,16 +92,15 @@ C'est un mini-projet ambitieux qui demande un investissement certain pour les no
 C'est une librairie dont la prise en main est simple mais qui s'avère très puissante.
 Votre mini projet consiste à suivre les [activités](https://pixees.fr/informatiquelycee/p5_base_a1.html) réalisées par un collègue et ensuite à réaliser soit :
 
- 	* (facile) une animation automatique présentant des bulles qui rebondissent les unes sur les autres en changeant de couleur.
- 	* (moyen) du traitement vidéo depuis un flux vidéo récupéré par une webcam. A nouveau un tutoriel en deux parties ([1.](https://pixees.fr/informatiquelycee/p5_Img_a1.html) [2.](https://pixees.fr/informatiquelycee/p5_vid_a1.html)) est disponible.
+* (facile) une animation automatique présentant des bulles qui rebondissent les unes sur les autres en changeant de couleur.
+* (moyen) du traitement vidéo depuis un flux vidéo récupéré par une webcam. A nouveau un tutoriel en deux parties ([1.](https://pixees.fr/informatiquelycee/p5_Img_a1.html) [2.](https://pixees.fr/informatiquelycee/p5_vid_a1.html)) est disponible.
 
 L'objectif de ce mini-projet est la prise en main de p5js afin de réaliser **ensuite** un jeu vidéo complet en p5js. Les animations et transformations sont grandement simplifiées par p5js et votre projet final devra donc aller un peu plus loin qu'un simple jeu dans un canvas.
 
 Remarquons que processing est à l'origine de deux autres projets majeurs que vous connaissez peut-être : **arduino** et **fritzing**.
 
 
-
-*
+---
 
 
 ### Prise en main et utilisation du Raspberry-Pi et découverte de Python
@@ -112,10 +115,10 @@ Le raspberry Pi est un outil d'initiation à la programmation avec une visée é
 
 **Objectifs indispensables pour le raspberry-pi** :
 
- 	* Installation de l'OS
- 	* Prise en main de linux et contrôle à distance depuis une autre machine réseau
- 	* Intégration de capteurs et présentation dans une petite page web de leurs valeurs.
- 	* Animation de quelques leds en fonction d'événements extérieurs
+* Installation de l'OS
+* Prise en main de linux et contrôle à distance depuis une autre machine réseau
+* Intégration de capteurs et présentation dans une petite page web de leurs valeurs.
+* Animation de quelques leds en fonction d'événements extérieurs
 
 Afin de communiquer avec le GPIO l'apprentissage d'un nouveau langage est nécessaire et vous découvrirez donc Python.
 
@@ -153,7 +156,7 @@ Le dossier projet sera évalué et constituera une partie de votre note.
 
 
 
-## Sujets des projets 2019 :
+## Sujets des projets 2020 :
 
 
 ![](http://static.nautil.us/5779_7d3d5bcad324d3edc08e40738e663554.png)
@@ -178,14 +181,18 @@ Le dossier projet sera évalué et constituera une partie de votre note.
 * [Bowling Parallaxe : très sommaire, en fausse 3D et avec une gestion simplifiée des collisions. (intermédiaire - difficile)](/docs/isn/sujets-des-projets/bowling-paralaxe)
 * [Bowling Elastique : une version apauvrie mais néanmoins intéressante du bowling. Extension vers le mouvement Brownien... (difficile)](/docs/isn/sujets-des-projets/bowling-elastique)
 * [Othello (Reversi) : à deux joueurs (intermédiaire) et contre l'ordinateur (expert)](/docs/isn/sujets-des-projets/othello-reversi).
+* [Rogulelike (difficile / expert)](/docs/isn/sujets-des-projets/rogulike)
+* [Chemins Hamiltoniens sur les polyèdres (difficile / expert)](/docs/isn/sujets-des-projets/chemins_hamiltoniens_polyedres)
+* [Labyrinthes (moyen / difficile) : générer et résoudre des labyrinthes](/docs/isn/sujets-des-projets/labyrinthe)
 
 D'autres projets sont possibles mais n'ont pas été décrits :
 
 * **Bot telegram** : créer un bot contrôle a distance d'un raspberry pi OU jeu vidéo dans un channel - intéressabt mais aucune documentation en français. Le projet est vite fonctionnel mais nécessite trop d'outils à mes yeux.
 * **Correcteur orthographique utilisant la distance de Leveinshtein.** Intéressant mais la difficulté n'est pas progressive. Une fois les premiers outils mis en place (distance, dictionnaire) la réalisation du correcteur est délicate.
-* **Cryptographie** - passage en revue de méthodes célèbres ou étude exhaustive du chiffre de Vigenère. Demande un investissement certain. Envisageable pour qui a déjà quelques notions de Cryptographie.
-Il est possible de traiter d'abord un mini-projet pour se familiariser, par exemple en suivant ces activités proposées aux élèves d'ICN première : [Code César, Substitution simple](/docs/icn/2-Cryptographie), [lexicométrie](/docs/icn/1-lexicometrie), [analyse fréquentielle](/docs/icn/3-casser-un-code-secret).
-* **Hero Stick** - Je vous laisse regarder [une vidéo](https://www.youtube.com/watch?v=Ph0LxvHM_EQ) pour ceux qui ne connaîtraient pas. C'est plus difficile à développer qu'il n'y paraît.
+* **Cryptographie** - passage en revue de méthodes célèbres ou étude exhaustive du chiffre de Vigenère. Demande un investissement certain. Envisageable pour qui a déjà quelques notions de Cryptographie ou souhaite progresser en mathématiques.<br>
+Il est possible de traiter d'abord un mini-projet pour se familiariser, par exemple en suivant ces activités proposées aux élèves d'ICN première : [Code César, Substitution simple](/docs/icn/2-Cryptographie), [lexicométrie](/docs/icn/1-lexicometrie), [analyse fréquentielle](/docs/icn/3-casser-un-code-secret).<br>
+De nombreuses extensions sont possibles : stéganographie (moyen), chiffrement asymétrique RSA (difficile), symétrique AES (expert). _Le chiffrement asymétrique couvre une grande partie du programme de la spécialité mathématiques de TS._
+* **Hero Stick** - pour ceux qui ne connaîtraient pas, [une vidéo](https://www.youtube.com/watch?v=Ph0LxvHM_EQ). C'est plus difficile à développer qu'il n'y paraît.
 
 D'autres idées en vrac :
 

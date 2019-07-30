@@ -16,12 +16,12 @@ theme: metropolis
 
 
 
-![Boulier](/uploads/docsnsi/architecture/img/boulier3.jpg){width=300px}
+![Boulier](/uploads/docsnsi/architecture/img/boulier3.jpg)
 
 ## Antiquité : naviguer
 
-![La machine d'Anticythère](/uploads/docsnsi/architecture/img/anticythere_4.jpg){width=8cm}
-![Reconstituée](/uploads/docsnsi/architecture/img/anticythere_5.png){width=6cm}
+![La machine d'Anticythère](/uploads/docsnsi/architecture/img/anticythere_4.jpg)
+![Reconstituée](/uploads/docsnsi/architecture/img/anticythere_5.png)
 
 --------------------------
 
@@ -73,7 +73,9 @@ Trop complexe, trop coûteuse la machine de Babbage ne verra jamais le jour.
 
 ## Ada Lovelace
 
-![Nombres de Bernoulli](/uploads/docsnsi/architecture/img/lovelace_bernoulli_2.jpg){width=8cm}![Ada Lovelace](/uploads/docsnsi/architecture/img/ada_lovelace_2.jpg){width=4cm}
+![Nombres de Bernoulli](/uploads/docsnsi/architecture/img/lovelace_bernoulli_2.jpg)
+
+![Ada Lovelace](/uploads/docsnsi/architecture/img/ada_lovelace_2.jpg)
 
 ## Électricité
 
@@ -90,7 +92,9 @@ Citons Enigma, utilisée par les allemands, déchiffrée par Turing grâce à _l
 
 ## Enigma et la bombe
 
-###![Enigma](/uploads/docsnsi/architecture/img/enigma_2.jpg){width=2.5cm}![La Bombe](/uploads/docsnsi/architecture/img/bombe_2.jpg){width=8cm}
+![Enigma](/uploads/docsnsi/architecture/img/enigma_2.jpg)
+
+![La Bombe](/uploads/docsnsi/architecture/img/bombe_2.jpg)
 
 ## ENIAC
 
@@ -113,7 +117,7 @@ Les machines sont encore colossales !
 
 ## l'ENIAC : un monstre
 
-###![l'Eniac](/uploads/docsnsi/architecture/img/eniac_2.jpg){width=100%}
+###![l'Eniac](/uploads/docsnsi/architecture/img/eniac_2.jpg)
 
 # Modèle de Von Neumann
 
@@ -122,7 +126,7 @@ Les machines sont encore colossales !
 
 Il propose en 1944 un modèle _d'architecture_ novateur qui sert toujours de base à nos architectures actuelles.
 
-### ![Von Neumann](/uploads/docsnsi/architecture/img/timbre_2.jpg){wdith=6cm}
+### ![Von Neumann](/uploads/docsnsi/architecture/img/timbre_2.jpg)
 
 ## Présentation du modèle de Von Neumann
 
@@ -167,7 +171,7 @@ while x < 255:
 
 Et en C
 
-~~~~C
+~~~C
       # include <stdio.h>
       int main(void){
         int x, y, z;
@@ -182,8 +186,9 @@ Et en C
           } while (x < 255);
         }
       }
-~~~~~~~~
--------------------------
+~~~
+
+---
 
 En assembleur
 
@@ -194,7 +199,7 @@ En assembleur
 
 ## Présentation
 
-###![système d'exploitation](/uploads/docsnsi/architecture/img/os.png){height=6cm}
+![système d'exploitation](/uploads/docsnsi/architecture/img/os.png)
 Le système d'exploitation est un intermédiaire entre les logiciels d'application et le matériel
 
 ## Fonctionnalités
@@ -222,7 +227,8 @@ Parmi UNIX on trouve, en particulier :
 * iOS
 * FreeBSD, NetBSD etc.
 
--------------------------
+---
+
 ### Répartition
 
 * **Ordinateurs personnels** : Windows (90% de part depuis 15 ans)

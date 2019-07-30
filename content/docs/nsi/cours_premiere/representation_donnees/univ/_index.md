@@ -186,12 +186,12 @@ Par exemple, en prenant $b=10$ :
 
 * $0,1 = (-1)^0\times 10^{-1}\times 1$
 * $0,25 = (-1)^0\times 10^{-2}\times 25$
-* $1/3 = (-1)^0\times 10^{-beaucoup}\times 33333\ldots$
+* $\frac{1}{3} = (-1)^0\times 10^{-beaucoup}\times 33333\ldots$
 * $0,0000421 = (-1)^0\times 10^{-7}\times 421$
 * $-421000 = (-1)^1\times 10^{3}\times 421$
 
 Mais lorsque la représentation se fait sur ordinateur, il est plus aisé d'avoir une base $b=2$.
-En base 2 le nombre 1,110001$_2$ est $1+1/2+1/4+1/64$.
+En base 2 le nombre 1,110001$_2$ est $1+\frac{1}{2}+\frac{1}{4}+\frac{1}{64}$.
 Voici quelques valeurs pour les puissances de 2 négatives :
 
 |  $x$  |  $2^{-x}$    |
@@ -208,6 +208,7 @@ Voici quelques valeurs pour les puissances de 2 négatives :
 | 10    | 0.0009765625 |
 
 Dans ce cas, on a :
+
 * $0,1 = (-1)^0\times 2^{-4}\times 1,6$. Or $1,6 = 1 +
   1/2+1/16+1/32+1/256+1/512+\cdots$. De la même manière qu'on ne peut pas
   représenter 1/3 de manière exacte avec $b=10$, on ne pourra pas
@@ -398,7 +399,7 @@ une compatibilité avec cet encodage.
 
 Voici [la table des caractères ISO-8859-1](http://std.dkuug.dk/jtc1/sc2/wg3/docs/n411.pdf) :
 
-![](./fig/iso-8859-1.png)
+![](/uploads/docsnsi/donnees_univ_fig/iso-8859-1.png)
 
 ### UTF-8
 
@@ -417,7 +418,7 @@ de milliers de caractères Unicode (incluant les [caractères des langues
 vivantes ou
 mortes](https://unicode.org/cldr/charts/latest/supplemental/languages_and_scripts.html)
 et également de [nombreux emojis
-indispensables](https://unicode.org/emoji/charts-12.0/full-emoji-list.html)
+indispensables](https://unicode.org/emoji/charts-12.0/full-emoji-list.html) 😜
 
 Les caractères en UTF-8 doivent avoir une forme particulière décrite dans la
 table ci-dessous :
@@ -432,7 +433,7 @@ table ci-dessous :
 L'encodage UTF-8 est lui aussi compatible avec l'ASCII. En revanche ISO-8859-1
 et UTF-8 sont incompatibles entre eux pouvant conduire à ce genre de problèmes :
 
-![](fig/martine.jpg)
+![](/uploads/docsnsi/donnees_univ_fig/martine.jpg)
 
 # Aller plus loin
 

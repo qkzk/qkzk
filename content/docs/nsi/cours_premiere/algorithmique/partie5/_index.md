@@ -2,7 +2,7 @@
 title: 5 - Tuples et dictionnaires
 author: qkzk
 theme: Hannover
-
+weight: 5
 ---
 
 # Tuples et dictionnaires

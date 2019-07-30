@@ -61,7 +61,7 @@ factorielle (n) =
 
 ## Python
 
-Fichier [factorielle.py](./src/factorielle.py).
+Fichier [factorielle.py](/uploads/docsnsi/comparaison_langage/factorielle.py).
 
 ```python
 def factorielle(n):
@@ -107,7 +107,7 @@ On présente ici deux versions, une avec la syntaxe "ancienne" de javascript et 
 
 ### old school
 
-Fichier [factorielle-old.js](./src/factorielle-old.js).
+Fichier [factorielle-old.js](/uploads/docsnsi/comparaison_langage/factorielle-old.js).
 
 ```javascript
 var factorielle = function(n) {
@@ -131,7 +131,7 @@ Le langage javascript a évolué fortement  (et dans le bon sens) ces dernières
 
 ### version ES6
 
-Fichier [factorielle.js](./src/factorielle.js).
+Fichier [factorielle.js](/uploads/docsnsi/comparaison_langage/factorielle.js).
 
 ```javascript
 const factorielle =
@@ -163,7 +163,7 @@ Dans les deux cas on peut utiliser la console javascript fournie avec firefox pa
 
 ## Java
 
-Fichier [Math.java](./src/Math.java).
+Fichier [Math.java](/uploads/docsnsi/comparaison_langage/Math.java).
 
 ```java
 public class Math {
@@ -206,7 +206,7 @@ $ java Math 5
 *NB* L'usage de `static` pour la méthode `factorielle`n'est pas caractéristique des méthodes en Java, mais il est légitime et pertinent ici car le résultat de `factorielle` ne dépend que de son paramètre et d'aucun objet particulier.
 
 ## C
-Fichier [factorielle.c](./src/factorielle.c).
+Fichier [factorielle.c](/uploads/docsnsi/comparaison_langage/factorielle.c).
 
 ```C
 int factorielle ( int n ) {
@@ -248,7 +248,7 @@ $ ./factorielle 5
 
 ## Scheme
 
-Fichier [factorielle.scm](./src/factorielle.scm).
+Fichier [factorielle.scm](/uploads/docsnsi/comparaison_langage/factorielle.scm).
 
 Le langage Scheme (descendant de Lisp) n'est vraiment pas fait pour de l'itération ni les affectations, le code suivant ferait donc hurler tout progammeur Scheme. Mais on respecte le schéma de pseudo-code fourni initialement.
 
@@ -281,7 +281,7 @@ Pour utiliser ce code on évalue cette définition dans l'interprète Scheme (pa
 ## Prolog
 
 
-Fichier [factorielle.pl](./src/factorielle.pl).
+Fichier [factorielle.pl](/uploads/docsnsi/comparaison_langage/factorielle.pl).
 
 
 Et pour montrer qu'il y a des langages qui se distinguent fortement des autres, voici la programmation de `factorielle` en Prolog.

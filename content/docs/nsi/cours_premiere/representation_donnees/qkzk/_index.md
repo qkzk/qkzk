@@ -30,11 +30,11 @@ En 1725 on voit l'apparition des cartes perforées : feuilles de papier rigides 
 
 On stockait, par exemple, les plans de conception de tricot jacquard
 
-![Métier jacquard](./img/metier_jacquard.jpg){width=60%}
+![Métier jacquard](/uploads/docsnsi/donnees_qkzk_img/metier_jacquard.jpg)
 
 ## Une accélération récente
 
-<!-- ![Carte perforée](./img/papertape.jpg) -->
+<!-- ![Carte perforée](/uploads/docsnsi/donnees_qkzk_img/papertape.jpg) -->
 
 On a rapidement distingué la _mémoire vive_ (qui se vide quand le courant ne circule plus) de la _mémoire morte_ (dont l'information persiste).
 
@@ -49,14 +49,16 @@ Au XXeme siècle on utilise
 
 
 
-### ![Bandes de stockage](./img/Computer_tapes.jpg){width=400px}
+### ![Bandes de stockage](/uploads/docsnsi/donnees_qkzk_img/Computer_tapes.jpg)
 
 ##
 
 Depuis une trentaine d'année la mémoire flash, plus rapide, sans élément mécanique, peu gourmande en énergie mais coûteuse et limitée en nombre de cycles de réinscription.
 
 
-### ![Carte SD](./img/sdcard.jpg){width=150px} ![Disque dur SSD](./img/ssd.png){width=250px}
+![Carte SD](/uploads/docsnsi/donnees_qkzk_img/sdcard.jpg)
+
+![Disque dur SSD](/uploads/docsnsi/donnees_qkzk_img/ssd.png)
 
 ## Pyramide de la mémoire
 
@@ -67,7 +69,7 @@ On peut résumer ainsi :
 
 ##
 
-### ![Pyramide de la mémoire](./img/PyramideMem.gif)
+### ![Pyramide de la mémoire](/uploads/docsnsi/donnees_qkzk_img/PyramideMem.gif)
 
 ## Données : deux unités de mesure
 
@@ -86,13 +88,13 @@ En informatique on emploie un autre système pour représenter les nombres :
 
 
 
-Préfixe   long               $10^n$      Exemple
--------   ----------         --------    --------------------------------------
-kilo      milliers           $10^3$      $3,5$ kb = $3500$ bits
-mega      millions           $10^6$      $1$ Mb = 1 million de bits = 125 kB
-giga      milliards          $10^9$
-téra      billions           $10^{12}$   $1$ TB = $8 \times 10 ^{12}$ b
-péta      billiards          $10^{15}$
+|Préfixe   |long               |$10^n$      |Exemple
+|-------   |----------         |--------    |--------------------------------------
+|kilo      |milliers           |$10^3$      |$3,5$ kb = $3500$ bits
+|mega      |millions           |$10^6$      |$1$ Mb = 1 million de bits = 125 kB
+|giga      |milliards          |$10^9$      |
+|téra      |billions           |$10^{12}$   |$1$ TB = $8 \times 10 ^{12}$ b
+|péta      |billiards          |$10^{15}$   |
 
 ## Confusions
 
@@ -104,15 +106,15 @@ Par exemple, les *vitesses de transfert* sont souvent exprimées *en bits* et le
 
 ## Quelques exemples
 
-Objet                     Espace mémoire
-------------------        ----------------------------------------
- 1 lettre                    7 bits en ASCII
- 1 page de texte             $3 \times 10^4$ bits
- Disquette 3.5"              $1,44$ MB = $1,2 \times 10^7$ bits
- Disque dur en 1980          $20$ MB = $1,6 \times 10^8$ bits
- Bdd du WDCC                 $5000$ TB = $4 \times 10^{16}$ bits
- Trafic internet (2016)     $1.56\times 10^9$ TB= $1,25 \times 10^{22}$ bits
- 1 gramme d'ADN              $1,8 \times 10^{22}$ bits
+|Objet                     |Espace mémoire
+|------------------        |----------------------------------------
+| 1 lettre                 |   7 bits en ASCII
+| 1 page de texte          |   $3 \times 10^4$ bits
+| Disquette 3.5"           |   $1,44$ MB = $1,2 \times 10^7$ bits
+| Disque dur en 1980       |   $20$ MB = $1,6 \times 10^8$ bits
+| Bdd du WDCC              |   $5000$ TB = $4 \times 10^{16}$ bits
+| Trafic internet (2016)   |  $1.56\times 10^9$ TB= $1,25 \times 10^{22}$ bits
+| 1 gramme d'ADN           |   $1,8 \times 10^{22}$ bits
 
 # Nombres en informatique.
 
@@ -130,7 +132,7 @@ Par exemple :
 * 1971 : 2300 transistors dans un processeur 4004.
 * 2014 : 2,6 milliards dans un core i7 d'intel.
 
-![Intel C4004 - 1971](./img/Intel_C4004.jpg){width=300px}
+![Intel C4004 - 1971](/uploads/docsnsi/donnees_qkzk_img/Intel_C4004.jpg)
 
 ##
 
@@ -239,14 +241,14 @@ Python converti naturellement un entier **d'une base *b* vers le décimal** avec
 
 La conversion **vers le binaire** se fait avec `bin` et renvoie une *string*
 
-~~~~~~python
+~~~python
 >>> a = '0b11'
 >>> int(a, 2)
 3
 >>> b = 10
 >>> bin(b)
 '0b1010'
-~~~~~~
+~~~
 
 ##
 
@@ -259,7 +261,7 @@ Pour l'instant nous n'avons parlé que d'entiers **positifs** et pour justifier 
 ### Booléen
 
 Le terme *booléen* vient du nom du mathématicien britannique [George
-Boole](./img/http://fr.wikipedia.org/wiki/George_Boole). Il est le créateur de
+Boole](/uploads/docsnsi/donnees_qkzk_img/http://fr.wikipedia.org/wiki/George_Boole). Il est le créateur de
 la logique moderne qui s'appuie sur l'algèbre qui porte désormais son
 nom : l'*algèbre de Boole*. Un **booléen**
 est une donnée dont la valeur ne peut prendre que deux états, soit
@@ -281,10 +283,10 @@ On définit sur ces valeurs booléennes trois opérations :
 
 Le NON logique d'un booléen *a* se définit par :
 
-  a    NON a
-  --- -------
-  0       1
-  1       0
+|a   |NON a
+|--- |------
+|0   |1
+|1   |0
 
 NON *a* vaut VRAI si et seulement si *a* vaut FAUX.
 
@@ -292,12 +294,12 @@ NON *a* vaut VRAI si et seulement si *a* vaut FAUX.
 
 Le ET logique entre deux booléens *a* et *b* se définit par :
 
-  a   b    a ET b
-  --- --- --------
-  0   0     0
-  0   1     0
-  1   0     0
-  1   1     1
+|a   |b   |a ET b
+|--- |--- |-------
+|0   |0   |0
+|0   |1   |0
+|1   |0   |0
+|1   |1   |1
 
   *a* ET *b* vaut VRAI si et seulement si *a* vaut VRAI et *b* vaut VRAI.
 
@@ -305,12 +307,12 @@ Le ET logique entre deux booléens *a* et *b* se définit par :
 
 Le OU logique entre deux booléens *a* et *b* se définit par :
 
-  a   b    a OU b
-  --- --- --------
-  0   0     0
-  0   1     1
-  1   0     1
-  1   1     1
+|a   |b   | a OU b
+|--- |--- |--------
+|0   |0   |  0
+|0   |1   |  1
+|1   |0   |  1
+|1   |1   |  1
 
 *a* OU *b* vaut VRAI si et seulement si *a* vaut VRAI ou *b* vaut VRAI.
 
@@ -342,26 +344,26 @@ alors (NON *a*) ET (NON *b*)=*x* ET *y*.
 
 ## Table intermédiaire
 
-  a   b   NON a   NON b   (NON a) ET (NON b)
-  --- --- ------- ------- --------------------
-          x       y       x ET y
-  0   0   1       1       1
-  0   1   1       0       0
-  1   0   0       1       0
-  1   1   0       0       0
+|a   |b   |NON a   |NON b   |(NON a) ET (NON b)
+|--- |--- |------  |------- |--------------------
+|    |    |x       |y       |x ET y
+|0   |0   |1       |1       |1
+|0   |1   |1       |0       |0
+|1   |0   |0       |1       |0
+|1   |1   |0       |0       |0
 
 On complète alors la table avec les expressions : NON ((NON *a*) ET (NON
 *b*)) et (*a* OU *b*)
 
 ## Table finale
 
-  a   b   (NON a) ET (NON b)   (NON *a*) ET (NON *b*)     *a* OU *b*
-  --- --- -------------------- -------------------------- --------------
-          (x ET y) = z         NON z
-  0   0   1                    0                          0
-  0   1   0                    1                          1
-  1   0   0                    1                          1
-  1   1   0                    1                          1
+|a   |b   |(NON a) ET (NON b)   |(NON *a*) ET (NON *b*)     |*a* OU *b*
+|--- |--- |-------------------- |-------------------------- |--------------
+|    |    |(x ET y) = z         |NON z                      |
+|0   |0   |1                    |0                          |0
+|0   |1   |0                    |1                          |1
+|1   |0   |0                    |1                          |1
+|1   |1   |0                    |1                          |1
 
 L'égalité des contenus des deux dernières colonnes
 démontre l'équivalence des deux expressions.
@@ -390,12 +392,12 @@ uniquement à partir des opérateurs NON et OU.
 
 ## OU exclusif
 
-a   b   a XOR b
---- --- ---------
-0   0   0
-0   1   1
-1   0   1
-1   1   0
+|a   |b   |a XOR b
+|--- |--- |---------
+|0   |0   |0
+|0   |1   |1
+|1   |0   |1
+|1   |1   |0
 
 On rencontre également défini l'opérateur OU-exclusif, également appelé
 XOR (pour "eXclusive OR").
@@ -409,7 +411,7 @@ Démontrez l'équivalence :
 ## Les masques de sous-réseau
 
 Très largement inspiré de
-[cet article](./img/http://fr.wikipedia.org/wiki/Sous-r%C3%A9seau#Masque_de_sous-r.C3.A9seau) de Wikipedia.
+[cet article](/uploads/docsnsi/donnees_qkzk_img/http://fr.wikipedia.org/wiki/Sous-r%C3%A9seau#Masque_de_sous-r.C3.A9seau) de Wikipedia.
 
 
 Les adresses IP de version 4, IPv4, sont codés sur **32 bits**.
@@ -452,11 +454,11 @@ portes ET et XOR :
 
 * porte ET
 
-![porte ET](./img/porte-et.png){ width=150px }
+![porte ET](/uploads/docsnsi/donnees_qkzk_img/porte-et.png){ width=150px }
 
 * Porte XOR
 
-![porte XOR](./img/porte-xor.png){ width=150px }
+![porte XOR](/uploads/docsnsi/donnees_qkzk_img/porte-xor.png){ width=150px }
 
 
 
@@ -480,7 +482,7 @@ du ET. Les portes peuvent être connectées entre elles pour réaliser des
 **circuits logiques** et on peut ainsi réaliser des calculs. Prenons l'exemple de ce circuit :
 
 
-![demi-additionneur](./img/demi-additionneur.png){width=300px}
+![demi-additionneur](/uploads/docsnsi/donnees_qkzk_img/demi-additionneur.png)
 
 Il est appelé *demi-additionneur* car il réalise l'addition de 2 bits
 (**A** et **B**), le résultats de cette somme est représentée par **S**
@@ -497,7 +499,7 @@ Vérifiez, avec une table de vérité, que **S** et **R** correspondent bien au
 Circuit intégré 7400 contenant 4 portes NON-ET (NAND). Les deux
 autres broches servent à l'alimentation 0V / 5V.
 
-![circuit intégré 7400](./img/circuit-7400.jpg){width=400px}
+![circuit intégré 7400](/uploads/docsnsi/donnees_qkzk_img/circuit-7400.jpg)
 
 ## Combinaisons plus complexes
 
@@ -530,37 +532,37 @@ Chaque bit est inversé.
 
 Sur 4 bits, NOT 7 = 8
 
-~~~~~~
+~~~
 NOT 0111
   = 1000
-~~~~~~
+~~~
 
 ## ET bit à bit
 Sur 4 bits, 5 AND 3 = 1 :
 
-~~~~
+~~~
     0101
 AND 0011
   = 0001
-~~~~
+~~~
 
 ## OU bit à bit
 Sur 4 bits, 5 OR 3 = 7 :
 
-~~~~
+~~~
    0101
 OR 0011
  = 0111
-~~~~
+~~~
 
 ## XOR bit à bit
 Sur 4 bits, 5 XOR 3 = 6 :
 
-~~~~~~
+~~~
     0101
 XOR 0011
   = 0110
-~~~~~~~
+~~~
 
 ## Décalage de bits
 
@@ -575,21 +577,21 @@ En binaire :
 
 On supprime un bit d'un côté et on le remplace par un zéro.
 
-![Décalage à gauche](./img/Rotate_left_logically.png){width=50%}
+![Décalage à gauche](/uploads/docsnsi/donnees_qkzk_img/Rotate_left_logically.png)
 
 ## Décalages à gauche et à droite Python
 
-~~~~~~python
+~~~python
 >>> # 1 * 2**5 = 32
 >>> 1 << 5
 32
 >>> # 128 / 2**4 = 8
 >>> 128 >> 4
 8
-~~~~~~~~~~~
+~~~
 
 # Complément à 2
-<!--  Source [Complément à 2](./img/https://mathsp.tuxfamily.org/spip.php?article312)-->
+<!--  Source [Complément à 2](/uploads/docsnsi/donnees_qkzk_img/https://mathsp.tuxfamily.org/spip.php?article312)-->
 
 ## Mise en garde
 
@@ -641,7 +643,7 @@ Pour le reste, on échange tous les 1 et tous les 0.
 On peut représenter les entiers de $-128 = -2^7$ à $+127 = 2^7-1$ sur un octet
 
 ## Table de valeurs
-~~~~~~
+~~~
  bit
  de
 signe
@@ -655,7 +657,7 @@ signe
     1      ...      =  ...
     1 0 0 0 0 0 0 1 = -127
     1 0 0 0 0 0 0 0 = -128
-~~~~~~~
+~~~
 
 ## Revenir au décimal depuis le complément à 2
 
@@ -667,21 +669,21 @@ signe
 
 * $36 + (-24) = 12$
 
-~~~~~
+~~~
   0010 0100
 + 1110 1000
 = 0000 1100
-~~~~~
+~~~
 
 C'est bien 12
 
 * $24 + (-36) = -12$
 
-~~~~~
+~~~
   0001 1000
 + 1101 1100
 = 1111 0100
-~~~~~
+~~~
 
 Dont l'opposé est 0000 1100 soit 12
 
@@ -695,14 +697,14 @@ Aie, c'est compliqué. Les opérations précédentes ont toutes supposées une t
 
 Dans Python les entiers ont une taille arbitraire, il ne peut afficher le complément à deux.
 
-~~~~~~python
+~~~python
 >>> bin(12)
 '0b1100'
 >>> bin(-12)
 '-0b1100'
 >>> 2**7
 128
-~~~~~~
+~~~
 
 # Hexadécimal
 
@@ -727,35 +729,34 @@ $$1010~0011~1011~1100_2 = A3BC_{16}$$
 
 ##  On peut utiliser une table
 
-![Table de conversion](./img/table_hexa.png){height=7cm}
+![Table de conversion](/uploads/docsnsi/donnees_qkzk_img/table_hexa.png)
 
 
 ## De l'hexadécimal vers le décimal
 
-Pour convertir $4D5_{16}$ de l'hexa. vers le décimal, \newline
-on commence par le dernier chiffre :
+Pour convertir $4D5_{16}$ de l'hexa. vers le décimal,<br> on commence par le dernier chiffre :
 
 * $5 \times 16^0$ et on recule :
 * $13 \times 16^1$ ($D$ correspond au nombre 13)
 * $4 \times 16^2$
 
-$$4D5_{16} = 5 \times 16^0 + 13\times 16^1 + 4\times 16^2 = 1~237_{10}$$
+$4D5_{16} = 5 \times 16^0 + 13 \times 16 ^ 1 + 4 \times 16^2 = 1237$
 
 ## Du décimal vers l'hexadécimal
 
-* Divisions entières successives par 16 jusqu'à trouver 0.\newline
+* Divisions entières successives par 16 jusqu'à trouver 0.<br>
   Les **restes** donnent les chiffres dans l'ordre **inverse**
 $$959 = 59 \times 16 + 15 \; \longrightarrow F$$
 $$59 = 3 \times 16 + 11   \; \longrightarrow B$$
 $$3 = 0 \times 16 + 3 \; \longrightarrow 3$$
 $$959_{10} = 3BF_{16}$$
 
-~~~~~python
+~~~python
 >>> int('3BF', 16)
 959
 >>> hex(145)
 '0x3bf'
-~~~~~
+~~~
 
 ## Les couleurs
 
@@ -764,7 +765,7 @@ En informatique on distingue
 * les couleurs à l'écran : synthèse additive
 * les couleurs imprimées : synthèse soustractive
 
-![synthèses additive et soustractive](./img/syntheses.jpg)
+![synthèses additive et soustractive](/uploads/docsnsi/donnees_qkzk_img/syntheses.jpg)
 
 
 ## Synthèse additive
@@ -774,17 +775,17 @@ En informatique on distingue
 *  `#FF0080` : FF rouge à fond, 00 pas de vert, 80 bleu à moitié :
   un joli rose, noté parfois : rgb(255, 0, 128)
 
-  ![#FF0080](./img/ff0080.jpg){height=5cm}
+  ![#FF0080](/uploads/docsnsi/donnees_qkzk_img/ff0080.jpg)
 
 ## Quelques exemples
 
-~~~~~~
+~~~
           blanc #FFFFFF     noir    #000000
           rouge #FF0000     jaune   #FFFF00
           vert  #00FF00     cyan    #00FFFF
           bleu  #0000FF     magenta #FF00FF
-~~~~~~~
-![synthèse additive](./img/synthese_additive.png){height=150px}
+~~~
+![synthèse additive](/uploads/docsnsi/donnees_qkzk_img/synthese_additive.png)
 
 ## Synthèse soustractive
 
@@ -792,7 +793,7 @@ En informatique on distingue
 
 * Le niveau de noir permet d'économiser les encres et améliore le rendu. On a développé de nombreuses méthodes.
 
-![synthèse soustractive](./img/synthese_soustractive.png){height=150px}
+![synthèse soustractive](/uploads/docsnsi/donnees_qkzk_img/synthese_soustractive.png)
 
 
 # Nombre à virgule flottantes
@@ -801,17 +802,17 @@ En informatique on distingue
 Partons d'un constat :
 Les ordinateurs savent manipuler les "nombres à virgules"
 
-~~~~~~python
+~~~python
 >>> 1.255465 * 753156.45
 945561.5624992499
-~~~~~~
+~~~
 
 mais les résultats sont parfois surprenants :
 
-~~~~~~python
+~~~python
 >>> 0.1 + 0.2
 0.30000000000000004
-~~~~~~
+~~~
 
 ## Nombres à virgule flottante
 
@@ -828,10 +829,10 @@ Nos machines travaillent en base 2 et les nombres à virgules flottantes sont re
 Dans le système décimal on utilise les puissances de 10 avant et après la virgule :
 Par exemple 325,47 s'écrit
 
-~~~~~
+~~~
 100     10    1.    1/10    1/100...
   3      2    5.    4       7
-~~~~~
+~~~
 
 
 ## Nombres _dyadiques_
@@ -841,10 +842,10 @@ On parle de nombres _dyadiques_
 
 Par exemple : 7.625 = 4 + 2 + 1 + 1/2 + 1/8 et s'écrit en dyadique :
 
-~~~~~
+~~~
   4     2     1.    1/2   1/4   1/8
   1     1     0.    1     0     1
-~~~~~
+~~~
 
 ## Revenons sur 0,1 + 0,2
 
@@ -929,9 +930,9 @@ Dans cette norme, les nombres dyadiques sont codés sur 64 bits en réservant :
 * 11 bits pour l’exposant ;
 * 52 bits pour la mantisse.
 
-\fbox{$s$}\fbox{ \qquad $e$ \qquad }\fbox{ \qquad\qquad\qquad $m$ \qquad\qquad\qquad  }
-
-$\leftrightarrow$\parbox{0.5cm}{\leftarrowfill} 11 bits \parbox{0.5cm}{\rightarrowfill}\parbox{2cm}{\leftarrowfill} 52 bits \parbox{2cm}{\rightarrowfill}
+| $s$   | $e$     | $m$     |
+|-------|---------|---------|
+| 1 bit | 11 bits | 52 bits |
 
 
 ## Amplitude
@@ -953,7 +954,7 @@ inf
 
 ## Quelques surprises avec `inf`
 
-~~~~python
+~~~python
 >>> a = float('inf') # rapide pour définir inf
 >>> a
 inf
@@ -969,7 +970,7 @@ True
 >>> c = 2   * 10 ** 1000 # un integer
 >>> c > b # inf est plus grand que tous les nombres
 False
-~~~~
+~~~
 
 ## Deux problèmes dans les calculs avec les flottants
 
@@ -993,7 +994,7 @@ Soustraire deux nombres proches fait perdre de la précision
 * Le missile a été mis en route 100h avant son lancement, ce qui entraine un décalage de
 $$0,000000095 \times 100 \times 3600 \times 10 \approx 0,34s.$$
 
-* C'est assez pour qu'il rate sa cible. [Source](./img/http://ta.twi.tudelft.nl/nw/users/vuik/wi211/disasters.html)
+* C'est assez pour qu'il rate sa cible. [Source](/uploads/docsnsi/donnees_qkzk_img/http://ta.twi.tudelft.nl/nw/users/vuik/wi211/disasters.html)
 
 
 # Représentation d’un texte en machine
@@ -1016,23 +1017,25 @@ Idée d'ASCII (1961) : uniformiser les nombreux encodages incompatibles entre eu
 
 ## La table ASCII complète
 
-![La table ASCII](./img/ascii_table.png)
+![La table ASCII](/uploads/docsnsi/donnees_qkzk_img/ascii_table.png)
 
 ## Remarques sur la table précédente
 
 * Tout élément de la table est codé sur 7 bits, 1 octet par caractère suffit ($2^8 = 256$)
-* Les chiffres commencent à $30_{16}$, les majuscules à $41_{16}$ et les minuscules à $61_{16}$
-* Pour obtenir la notation binaire, on part de l'hexa.\newline
+
+* Pour obtenir la notation binaire, on part de l'hexa.<br>
   Premier chiffre : 3 bits, second chiffre 4 bits
+
     $$A \rightarrow 41_{16} \rightarrow 4\times 16 + 1 \rightarrow 0100~0001$$
+
     $$s \rightarrow 73_{16} \rightarrow 7\times 16 + 3 \rightarrow 0111~0011$$
 * Seulement 95 caractères imprimables, pas de caractère accentués :
 
-~~~~~~
+~~~
           !"#$%&'()*+,-./0123456789:;<=>?
           @ABCDEFGHIJKLMNOPQRSTUVWXYZ[\]^_
           `abcdefghijklmnopqrstuvwxyz{|}~
-~~~~~~
+~~~
 
 ## Python et la table ascii
 
@@ -1053,9 +1056,9 @@ L'encodage iso-8859-1, dit iso-Latin-1 est apparu en 1986 et correspond à l'Eur
 D'autres versions pour les caractères iso-Latin-2 de l'Europe de l'est etc.
 
 * Reprend la table ascii et ajoute les accents au coût d'un octet supplémentaire.
-* Encore incomplet : œ et Œ n'y sont pas !\newline
+* Encore incomplet : œ et Œ n'y sont pas !<br>
 _Ce qui a contribué à leur disparition de nombreux documents écrits dans les années 90..._
-* Windows (Windows-1252) et Mac (MacRoman) ont leurs versions\newline
+* Windows (Windows-1252) et Mac (MacRoman) ont leurs versions<br>
 Échange de documents et développement de logiciels **plus que pénibles.**
 
 Bref, c'est ~~de la merde~~ imparfait.
@@ -1099,10 +1102,10 @@ Ici prudence... **Python2** supporte bien UTF8 à condition de lui demander.
 
 On trouve souvent dans l'entête d'un fichier .py :
 
-~~~~python
+~~~python
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
-~~~~
+~~~
 qui signifient :
 
 * Execute ce fichier avec `python`, situé dans le dossier `/usr/bin/env`
@@ -1121,12 +1124,12 @@ Alors c'est facile :
 
 ### les fonctions chr et ord supportent unicode :)
 
-~~~~python
+~~~python
 >>> chr(29483)
 猫 # qui signifie "chat" en chinois traditionnel
 >>> ord('猫') # Et qui se prononce Māo
 29483
-~~~~
+~~~
 
 <!-- cours LLG
 https://www.youtube.com/watch?v=PZRI1IfStY0 -->

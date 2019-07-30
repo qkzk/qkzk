@@ -2,7 +2,7 @@
 title: 3 - Pseudo langage, Python
 author: qkzk
 theme: Hannover
-
+weight: 3
 ---
 
 
@@ -363,12 +363,12 @@ a été passé en entrée
 
 ## Tandis que...
 
-~~~~~~{.Python}
-def f(l):
-  l[0] = 5
+~~~Python
+def f(liste):
+  liste[0] = 5
 a = [0, 1, 2]
 print(a[0]) # 0
 f(a)
 print(a[0]) # 5
-~~~~~~~
+~~~
 Cette fois on modifie l'élément 0 de la liste a !

@@ -2,7 +2,7 @@
 title: 4 - Tableaux
 author: qkzk
 theme: Hannover
-
+weight: 4
 ---
 # Tableaux
 
@@ -53,7 +53,7 @@ On peut les construire de plusieurs manières :
 
 Les listes sont **mutables** :
 
-~~~~~~{.Python}
+~~~Python
 >>> l = ['abc', 'def', 'ghi']
 >>> l[1]
 'def'
@@ -66,32 +66,32 @@ Les listes sont **mutables** :
 >>> l.remove('abc') # supprimer l'élément 'abc'
 >>> l
 ['xyz', 'mno', 'ghi']
-~~~~~~
+~~~
 
 ## Affecter : le même objet !
 
 ### Dans Python quand on affecte un objet à un autre, ils sont identiques !
 
-~~~~~~{.Python}
+~~~Python
 >>> l = ['abc', 'def', 'ghi']
 >>> m = l # m et l : les mêmes objets
 >>> m[1] = "xyz" ; l[0] = "pqr" # l et m modifiés
 >>> l, m
 (['pqr', 'xyz', 'ghi'], ['pqr', 'xyz', 'ghi'])
-~~~~~~
+~~~
 
 ## Copier : une copie de l'objet
 
 ### On contourne cette difficulté avec un "slice"
 
-~~~~~~{.Python}
+~~~Python
 >>> l = ['abc', 'def', 'ghi']
 >>> l[1:] # une copie de l à partir de l'élément 1
 >>> n = l[:] # une COPIE complète de l
 >>> l[0] = "pqr" # l est modifée, pas n
 >>> l, n
 (['pqr', 'def', 'ghi'], ['abc', 'xyz', 'ghi'])
-~~~~~~
+~~~
 
 ## Retour sur les tableaux
 
@@ -128,12 +128,11 @@ Un **tableau bidimensionnel** ou **matrice** est un tableau qui contient des tab
 
   $$T \leftarrow [\;[a, b, c], [d, e, f], [m, n, o]\;]$$
 
-l/c     0       1       2
------   -----   -----   -----
-0       $a$     $b$     $c$
-1       $d$     $e$     **$f$**
-2       $m$     $n$     $o$
------   -----   -----   -----
+|l/c     |0       |1       |2
+|-----   |-----   |-----   |-----
+|0       |$a$     |$b$     |$c$
+|1       |$d$     |$e$     |**$f$**
+|2       |$m$     |$n$     |$o$
 
 * On dit que $T$ est une matrice à 3 lignes et 3 colonnes
 
@@ -143,12 +142,11 @@ l/c     0       1       2
 
   $$T \leftarrow [\;[a, b, c], [d, e, f], [m, n, o]\;]$$
 
-l/c     0       1       2
------   -----   -----   -----
-0       $a$     $b$     $c$
-1       $d$     $e$     **$f$**
-2       $m$     $n$     $o$
------   -----   -----   -----
+|l/c     |0       |1       |2
+|-----   |-----   |-----   |-----
+|0       |$a$     |$b$     |$c$
+|1       |$d$     |$e$     |**$f$**
+|2       |$m$     |$n$     |$o$
 
 * **$f$** est l'élément $T[1][2]$
 
@@ -156,10 +154,9 @@ l/c     0       1       2
 
 ## Python : listes de listes
 
------   -----
-`0`     `1`
-`2`     `3`
------   -----
+|0         |1
+|---       |---
+| **2**    | **3**
 
 Pour présenter facilement on s'aligne au même niveau
 
@@ -174,12 +171,12 @@ T[1][0] # 2
 
 ### Une méthode efficace :
 
-~~~~~~python
+~~~python
 T = [
      [j for j in range(3*i, 3*i+3)]
         for i in range(3)
      ]
-~~~~~~
+~~~
 
 Qu'obtient-on dans `T` ?
 
@@ -195,12 +192,11 @@ Qu'obtient-on dans `T` ?
 [[0, 1, 2], [3, 4, 5], [6, 7, 8]]
 ~~~
 
-l/c     0       1       2
------   -----   -----   -----
-0       `0`     `1`     `2`
-1       `3`     `4`     `5`
-2       `6`     `7`     `8`
------   -----   -----   -----
+|l/c     |0       |1       |2
+|-----   |-----   |-----   |-----
+|0       |`0`     |`1`     |`2`
+|1       |`3`     |`4`     |`5`
+|2       |`6`     |`7`     |`8`
 
 ## Itérer dans une matrice.
 
@@ -232,42 +228,43 @@ Créer une fonction qui prenne une matrice en entrée et renvoie la moyenne de s
 
 ## Solution "naturelle"
 
-~~~~~~~~~~python
+~~~python
 def moyenne(T):
   s = 0; n = len(T); p = len(T[0])
   for i in range(n):
     for j in range(p):
       s += T[i][j]
   return s / (n * p)
-~~~~~~~~~~
+~~~
 
 ## Solution avec des outils de python
-~~~~~~~~~~python
+~~~python
 def moyenne(T):
   s = 0; k = len(T)*len(T[0])
   for ligne in T:
     for x in ligne:
       s += x
   return s / k
-~~~~~~~~~~
+~~~
 
 ## Solutions encore plus radicale...
 
-~~~~~python
+~~~python
 def moyenne(T):
     s = 0; k = len(T) * len(T[0])
     for ligne in T:
         s += sum(ligne)
     return s/k
-~~~~~
+~~~
+
 [Python Tutor](https://goo.gl/aov75J)
 Et la plus courte à laquelle j'ai pensé :
 
-~~~~python
+~~~python
 def moyenne(T):
     return sum([sum(row) for row in T])\
       / (len(T) * len(T[0]))
-~~~~
+~~~
 
 ## Il y a encore plus court...
 
@@ -291,7 +288,7 @@ Programmer une fonction `zeroADroite(liste)` qui renvoie une liste de même tail
 
 Exemples :
 
-~~~~~~python
+~~~python
 >>> zeroADroite([2, 0, 4, 8])
 [2, 4, 8, 0]
 >>> zeroADroite([0, 0, 4, 0])
@@ -300,4 +297,4 @@ Exemples :
 [2, 4, 8, 0]
 >>> zeroADroite([4, 0, 0, 16])
 [4, 16, 0, 0]
-~~~~~~
+~~~
