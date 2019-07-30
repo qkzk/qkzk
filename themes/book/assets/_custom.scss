@@ -79,6 +79,8 @@ BOOK PAGES AND TOCS
 
 .book-toc h1, .book-brand {
   font-weight: bold;
+  margin-top: 0;
+  margin-bottom: 5vh;
 }
 .book-brand {
 
@@ -148,9 +150,9 @@ RESPONSIVE DESIGN
 @media screen and (min-width: 768px){
   .book-toc, .book-menu {
     border-top: 4px solid #1a1a1a;
-    margin-bottom: 2em;
-    padding-bottom: 2em;
-    padding-top: 1.75em;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    padding-top: 20px;
     padding-left: 0;
   }
 }
