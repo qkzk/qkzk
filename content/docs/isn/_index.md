@@ -6,14 +6,10 @@ draft: false
 weight: 2
 ---
 
+**Remarque de juillet 2019 :** <br>
+_C'est déjà la dernière année de l'ISN ! Ces supports seront intégrés à des projets de NSI d'ici quelques temps._
+
 # ISN
-
-
-
-
-
-
-
 
 ## Attentes et approche
 
