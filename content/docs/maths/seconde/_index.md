@@ -10,7 +10,7 @@ weight: 1
 
 ## Progression et liens vers les cours.
 
-**Attention :** ces cours sont généralement publiés durant l'été qui précède la rentrée et sont succeptibles d'évoluer durant l'année.
+**Attention :** ces cours sont généralement publiés durant l'été qui précède la rentrée et sont susceptibles d'évoluer durant l'année.
 
 
 | Progression            	| **Seconde**                	                                                                                                |                      	|
