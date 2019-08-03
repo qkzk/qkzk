@@ -164,7 +164,7 @@ Dans votre répertoire "Flask", créez un répertoire "templates". Dans
 ce répertoire templates, créez un fichier index.html. Saisissez le code
 HTML ci-dessous dans ce fichier index.html
 
-~~~python
+~~~html
 <!doctype html>
 <html lang="fr">
     <head>
@@ -330,7 +330,7 @@ Nous allons maintenant nous intéresser à la gestion des formulaires.
 
 Modifiez le fichier "index.html" comme suit :
 
-~~~python
+~~~html
 <!doctype html>
 <html lang="fr">
     <head>
@@ -469,7 +469,7 @@ index.html
        <form action="http://localhost:5000/resultat" method="get">
                <label>Nom</label> : <input type="text" name="nom" />
                <label>Prénom</label> : <input type="text" name="prenom" />
-               </input type="submit" value="Envoyer" />
+               <input type="submit" value="Envoyer" />
        </form>
    </body>
 </html>
