@@ -45,6 +45,7 @@ function colorParentLinks(parentNode){
         // console.log(siblingsNodes[1])
         let summaryNode = siblingsNodes[1];
         summaryNode.style.color = "#5555FF";
+        // summaryNode.style.content = "+z";
         let summaryChildren = summaryNode.childNodes;
         // console.log(summaryChildren)
         let linkNode = summaryChildren[1];

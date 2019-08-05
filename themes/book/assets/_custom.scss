@@ -112,14 +112,38 @@ summary:hover a{
     // color:red;
     opacity: 0.5;
 }
+
+
+
 details[open] summary a.active{
   color:green;
 }
 
+// DETAIL SUMMARY DECORATE THE SYMBOL
+
+summary::-webkit-details-marker {
+   display: none
+}
+
+summary:before {
+   content: "+";
+   float: left;
+   font-size: 150%;
+   font-weight: bold;
+   margin: -5px 5px 0 0;
+   padding: 0;
+   text-align: center;
+   width: 20px;
+}
+
+details[open] > summary:before {
+   content: "–"; // dash
+}
 
 /*
 FOOTER
 */
+
 .footer-qkzk {
   margin-top: 5em;
 }
