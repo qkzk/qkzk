@@ -1546,7 +1546,7 @@ Une solution naïve consiste à explorer toutes les combinaisons possibles.
 * $x_1 = 1$ je prends le poids 1. $x_1 = 0$, je ne le prends pas.
 * On note le poids total dans le rond et on explore le tout.
 
-![Arbre d'exploration binaire](./arbre_binaire.png)\
+![Arbre d'exploration binaire](/uploads/docsnsi/algo/arbre_binaire.png)\
 
 
 ## coût exponentiel
