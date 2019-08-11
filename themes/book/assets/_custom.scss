@@ -55,10 +55,12 @@ back to top
 .backtotop {
   padding-top: 4em;
   padding-bottom: 0;
-  margin: 0;
-  text-align: right!important;
+  // margin: 0;
+  text-align: center!important;
   font-size: 2em;
 }
+
+
 
 /*
 BOOK PAGES AND TOCS
@@ -203,4 +205,20 @@ RESPONSIVE DESIGN
   #bannerTitle{
     padding-left: 2vh;
   }
+}
+
+// btn navigation
+
+.right {
+  float: right;
+}
+.left {
+  float: left;
+}
+.center {
+  margin: auto;
+  width: 50%;
+}
+#link_next, #link_previous {
+  display: none;
 }

@@ -12,34 +12,33 @@ weight: 2
 
 ## Progression
 
-| Progression        	| **BTS Aéro 1**         	|                	    |                                     	|             	|
-|--------------------	|-----------------------	|-------------------	|--------------------------------------	|-------------  |
-| **Date**           	| **Période**            	| **Total semaines**  | **Chapitres**                       	| **Semaines** 	|
-| Vendredi 29 Août   	| Période 1             	| 7              	    | 00. Consolidations                  	| 2        	    |
-|                   	|                       	|               	    | 01. Calcul vectoriel                	| 2        	    |
-|                    	|                       	|                	    | 02. Étude de fonctions              	| 4        	    |
-|                    	|                       	|                	    | 03. Algorithmes                     	| 1        	    |
-| Samedi 19 octobre  	| Vacances de Toussaint 	| 2              	    |                                     	|          	    |
-| Lundi 4 novembre   	| Période 2             	| 7              	    | 04. Probabilités discrètes          	| 2        	    |
-|                    	|                       	|                	    | 05. Intégration                     	| 2        	    |
-|                    	|                       	|                	    | 06. Courbes paramétrées             	| 2        	    |
-|                    	|                       	|                	    | --- Révisions, devoirs              	| 1        	    |
-| Samedi 21 décembre 	| Vacances de Noël      	| 2              	    |                                     	|          	    |
-| Lundi 6 janvier    	| Période 3             	| 6              	    | 07. Équations différentielles 1      	| 3        	    |
-|                    	|                       	|                	    | 08. Repérage spatial                	| 2        	    |
-|                    	|                       	|                	    | --- Révisions, devoirs              	| 1        	    |
-| Samedi 15 février  	| Vacances d'hiver      	| 2              	    |                                     	|          	    |
-| Lundi 2 mars       	| Période 4             	| 6              	    | 09. Développements limités          	| 2        	    |
-|                    	|                       	|                	    | 10. Lois continues (uniforme, expo) 	| 2        	    |
-|                    	|                       	|                	    | --- BTS blanc ?                     	| 1        	    |
-|                    	|                       	|                	    | --- Révisions, devoirs              	| 1        	    |
-| Samedi 11 avril    	| Vacances de Printemps 	| 2              	    |                                     	|          	    |
-| Lundi 27 avril     	| Période 5             	| 7              	    | 11. Statistiques à 1 variable       	| 1        	    |
-|                    	|                       	|                	    | 12. Statistiques à 2 variables      	| 2        	    |
-|                    	|                       	|                	    | 13. Calcul formel                   	| 1        	    |
-|                    	|                       	|                	    | --- Révisions, devoirs              	| 1        	    |
-| 1er juin           	| Stages période 1      	|                	    |                                     	|          	    |
-
+| Progression            	| **BTS Aéro 1**                      	|         	|
+|------------------------	|-------------------------------------	|---------	|
+| **Date**               	| **Chapitres**                       	| **Sem** 	|
+| **Vendredi 29 Août**   	| 00. Consolidations                  	| 2       	|
+|                        	| 01. Calcul vectoriel                	| 2       	|
+| _7 semaines_           	| 02. Étude de fonctions              	| 4       	|
+|                        	| 03. Algorithmes                     	| 1       	|
+| **Samedi 19 octobre**  	| **Vacances de Toussaint**           	|         	|
+| **Lundi 4 novembre**   	| 04. Probabilités discrètes          	| 2       	|
+|                        	| 05. Intégration                     	| 2       	|
+| _7 semaines_           	| 06. Courbes paramétrées             	| 2       	|
+|                        	| --- Révisions, devoirs              	| 1       	|
+| **Samedi 21 décembre** 	| **Vacances de Noël**                	|         	|
+| **Lundi 6 janvier**    	| 07. Équations différentielles 1     	| 3       	|
+| _6 semaines_           	| 08. Repérage spatial                	| 2       	|
+|                        	| --- Révisions, devoirs              	| 1       	|
+| **Samedi 15 février**  	| **Vacances d'hiver**                	|         	|
+| **Lundi 2 mars**       	| 09. Développements limités          	| 2       	|
+|                        	| 10. Lois continues (uniforme, expo) 	| 2       	|
+| _6 semaines_           	| --- BTS blanc ?                     	| 1       	|
+|                        	| --- Révisions, devoirs              	| 1       	|
+| **Samedi 11 avril**    	| **Vacances de Printemps**           	|         	|
+| **Lundi 27 avril**     	| 11. Statistiques à 1 variable       	| 1       	|
+|                        	| 12. Statistiques à 2 variables      	| 2       	|
+| _7 semaines_           	| 13. Calcul formel                   	| 1       	|
+|                        	| --- Révisions, devoirs              	| 1       	|
+| **1er juin**           	| **Stages période 1**                	|         	|
 
 ## Liste des documents
 

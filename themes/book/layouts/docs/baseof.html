@@ -38,7 +38,10 @@
       {{ partial "docs/mobile-header" . }}
       {{ template "main" . }}
       <div class="backtotop">
-        <a href="#">↑</a>
+
+        <a href="#" class="left" title="Previous" accesskey="p" rel="previous" id="link_previous">← </a>
+        <a href="#" class="center" title="top" accesskey="t" id="link_top">↑</a>
+        <a href="#" class="right" title="Next" accesskey="n" rel="next" id="link_next">→ </a>
       </div>
       {{ partial "docs/git-footer" . }}
       {{ partial "docs/inject/footer" . }}
