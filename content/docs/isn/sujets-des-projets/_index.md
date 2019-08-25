@@ -184,6 +184,7 @@ Le dossier projet sera évalué et constituera une partie de votre note.
 * [Rogulelike (difficile / expert)](/docs/isn/sujets-des-projets/rogulike)
 * [Chemins Hamiltoniens sur les polyèdres (difficile / expert)](/docs/isn/sujets-des-projets/chemins_hamiltoniens_polyedres)
 * [Labyrinthes (moyen / difficile) : générer et résoudre des labyrinthes](/docs/isn/sujets-des-projets/labyrinthe)
+* [SmartCity : le lampadaire connecté](/docs/isn/sujets-des-projets/smartcity/)
 
 D'autres projets sont possibles mais n'ont pas été décrits :
 
