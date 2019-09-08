@@ -6,16 +6,53 @@ title: Python 3 - 01 Les variables, les types
 weight: 1
 
 ---
+# Consignes pour le suivi des cours
+
+**Pour chacun des cours :**
+
+1. Ouvrez l'éditeur Thonny.
+2. Tapez chacune des commandes présentées et vérifiez son résultat.
+3. Complétez votre script **resume_ch1.py** avec les nouvelles commandes
+  apprises. C'est léquivalent d'une fiche de cours, prenez-en soin.
+4. Déposez les dans votre drive, dans un dossier `NSI_nom_prenom`
+    **que vous me partagez.**
+5. Voici, par exemple, ce que vous pourriez noter dans le script
+
+  ~~~python
+  # Ch1 variables
+
+  ## noms
+  # minuscules > majuscules
+  age = 17 # int
+  print(age) # afficher la variable
+  ...
+  ~~~
+---
+
+
+**Pour chaque série d'exercice (à la fin des cours) :**
+
+1. Réalisez les exercices dans un fichier bien nommé : **exo_ch1.py**
+
+    Vous pouvez préférer les traiter un par un : **exo_ch1_01.py**
+2. Vous pouvez les traiter **dans Thonny** ou dans **repl.it**
+3. Vous devez traiter tous les exercices **ayant au plus une étoile.**
+4. Déposez les dans votre drive, dans un dossier `NSI_nom_prenom`
+    **que vous me partagez.**
+
+
+## Attention, les fiches de cours et les exercices seront notés.
+---
 
 ## Chapitre 1 - Variables, types et opérateurs
 
 
 Une variable est un espace mémoire dans lequel il est possible de stocker une valeur (une donnée).
 
-Ouvrir IDLE :
-Démarrer → Programmes → Python → IDLE (Python GUI)
+Ouvrir Thonny dont le raccourci devrait être dans le dossier informatique :
 
-![idle_1](/uploads/uploads/2017/04/idle_1.png)
+<!-- ![idle_1](/uploads/uploads/2017/04/idle_1.png) -->
+![idle_1](/uploads/docsnsi/python/thonny.jpg)
 
 
 
@@ -29,7 +66,7 @@ En langage Python, l'usage est de ne pas utiliser de lettres majuscules pour nom
 
 Exemple : `age, mon_age, temperature1`
 
-A éviter : `<del>Age, AGE, MonAge, monAge, Temperature1</del>`
+A éviter : `Age, AGE, MonAge, monAge, Temperature1`
 
 
 ### 1- Le type `int` (integer : nombres entiers)
@@ -37,27 +74,27 @@ A éviter : `<del>Age, AGE, MonAge, monAge, Temperature1</del>`
 
 Pour affecter (on dit aussi assigner) la valeur 17 à la variable nommée `age` :
 
-~~~py3
+~~~python
 >>> age = 17
 ~~~
 
 La fonction `print` affiche la valeur de la variable :
 
-~~~py3
+~~~python
 >>> print(age)
 17
 ~~~
 
 La fonction `type()` retourne le type de la variable :
 
-~~~py3
+~~~python
 >>> print(type(age))
-<type 'int'>
+<class 'int'>
 ~~~
 
 `int` est le type des nombres entiers.
 
-~~~py3
+~~~python
 >>> # ceci est un commentaire
 >>> age = age + 1	# en plus court : age += 1
 >>> print(age)
@@ -65,20 +102,20 @@ La fonction `type()` retourne le type de la variable :
 >>> age = age - 3	# en plus court : age -= 3
 >>> print(age)
 15
->>> age = age*2		# en plus court : age *= 2
+>>> age = age * 2		# en plus court : age *= 2
 >>> print(age)
 30
 ~~~
 
 
-~~~py3
+~~~python
 >>> a = 6*3 - 20
 >>> print(a)
 -2
 ~~~
 
 
-~~~py3
+~~~python
 >>> b = 25
 >>> c = a + 2*b
 >>> print(b, c)          # ne pas oublier la virgule
@@ -87,8 +124,8 @@ La fonction `type()` retourne le type de la variable :
 
 L'opérateur `//` donne la division entière :
 
-~~~py3
->>> 4//3  # 4 = 3 * 1 + reste
+~~~python
+>>> 4 // 3  # 4 = 3 * 1 + reste
 1
 >>> tour = 450//360
 >>> print(tour)
@@ -97,19 +134,19 @@ L'opérateur `//` donne la division entière :
 
 L'opérateur `%` donne le reste de la division (opération modulo) :
 
-~~~py3
->>> angle = 450%360
+~~~python
+>>> angle = 450 % 360
 >>> print(angle)
 90
 ~~~
 
 L'opérateur `**` donne la puissance :
 
-~~~py3
->>> mo = 2**20
+~~~python
+>>> mo = 2 ** 20 # 2 puissance 20
 >>> print(mo)
 1048576
->>> racine2 = 2**0.5
+>>> racine2 = 2 ** 0.5 # 2 puissance 1/2
 >>> print(racine2)
 1.41421356237
 ~~~
@@ -120,32 +157,32 @@ L'opérateur `**` donne la puissance :
 
 
 
-~~~py3
+~~~python
 >>> b = 17.0 	# le séparateur décimal est un point (et non une virgule)
 >>> print(b)
 17.0
 >>> print(type(b))
-<type 'float'>
+<class 'float'>
 ~~~
 
 
-~~~py3
->>> c = 14.0/3.0
+~~~python
+>>> c = 14.0 / 3.0
 >>> print(c)
 4.66666666667
 ~~~
 
 
-~~~py3
->>> c = 14.0//3.0	# division entière
+~~~python
+>>> c = 14.0 // 3.0	# division entière
 >>> print(c)
 4.0
 ~~~
 
 Attention : avec des nombres entiers, l'opérateur `/` renvoie généralement un flottant :
 
-~~~py3
->>> c = 14/3
+~~~python
+>>> c = 14 / 3
 >>> print(c)
 4.666666666666667
 ~~~
@@ -153,7 +190,7 @@ Attention : avec des nombres entiers, l'opérateur `/` renvoie généralement un
 
 Notation scientifique :
 
-~~~py3
+~~~python
 >>> a = -1.784892e4
 >>> print(a)
 -17848.92
@@ -166,12 +203,13 @@ Notation scientifique :
 
 Pour utiliser les fonctions mathématiques, il faut commencer par importer le module `math` :
 
-~~~py3
+~~~python
 >>> import math
 ~~~
 
+On peut lister un paquet avec la fonction `dir()`
 
-~~~py3
+~~~python
 >>> dir(math)
 ['__doc__', '__name__', '__package__', 'acos', 'acosh', 'asin', 'asinh', 'atan',
 'atan2', 'atanh', 'ceil', 'copysign', 'cos', 'cosh', 'degrees', 'e', 'erf',
@@ -181,10 +219,10 @@ Pour utiliser les fonctions mathématiques, il faut commencer par importer le mo
 ~~~
 
 Pour appeler une fonction d'un module, la syntaxe est la suivante :
-**module.fonction(arguments)**
+`module.fonction(arguments)`
 
 Pour accéder à une donnée d'un module :
-**module.data**
+`module.data`
 
 ~~~python
 >>> print(math.pi)		# donnée pi du module math (nombre pi)
@@ -214,7 +252,7 @@ ValueError: math domain error
 >>> print(nom)
 Dupont
 >>> print(type(nom))
-<type 'str'>
+<class 'str'>
 >>> prenom = "Pierre" 	# on peut aussi utiliser les guillemets
 >>> print(prenom)
 Pierre
@@ -249,7 +287,7 @@ La fonction `len()` retourne la longueur (length) de la chaîne de caractères :
 ~~~
 
 
-Indexage et slicing :
+Indices et tranches (_index_ and _slices_ en anglais) :
 
 ~~~python
 >>> print(chaine[0]) 	# premier caractère (indice 0)
@@ -275,6 +313,8 @@ position depuis la fin :  -6  -5  -4  -3  -2  -1
 ~~~
 
 
+Attetion aux apostrophes et guillemets dans les chaînes de caractères !
+
 ~~~python
 >>> chaine = 'Aujourd'hui'
 SyntaxError: invalid syntax
@@ -297,7 +337,9 @@ Premiere ligne
 Deuxieme ligne
 ~~~
 
-Plus simplement, on peut utiliser les triples guillemets (ou les triples apostrophes) pour encadrer une chaîne définie sur plusieurs lignes :
+Plus simplement, on peut utiliser les triples guillemets
+(ou les triples apostrophes) pour encadrer une chaîne définie sur plusieurs
+lignes :
 
 ~~~python
 >>> chaine = """Premiere ligne
@@ -307,12 +349,13 @@ Premiere ligne
 Deuxieme ligne
 ~~~
 
-On ne peut pas mélanger les serviettes et les torchons (ici type `str` et type `int`) :
+On ne peut pas mélanger les serviettes et les torchons
+(ici type `str` et type `int`) :
 
 ~~~python
 >>> chaine = '17.45'
 >>> print(type(chaine))
-<type 'str'>
+<class 'str'>
 >>> chaine = chaine + 2
 TypeError: cannot concatenate 'str' and 'int' objects
 ~~~
@@ -324,13 +367,23 @@ La fonction `float()` permet de convertir un type `str` en type `float`
 >>> print(nombre)
 17.45
 >>> print(type(nombre))
-<type 'float'>
+<class 'float'>
 >>> nombre = nombre + 2		# en plus court : nombre += 2
 >>> print(nombre)
 19.45
 ~~~
 
-La fonction `input()` lance une invite de commande (en anglais : prompt) pour saisir une chaîne de caractères.
+Inversement, `str` transforme un nombre en chaîne de caractère :
+
+~~~python
+>>> a = 1
+>>> b = str(a)
+>>> type(b)
+<class 'str'>
+~~~
+
+La fonction `input()` lance une invite de commande (en anglais : prompt)
+pour saisir une chaîne de caractères.
 
 ~~~python
 >>> # saisir une chaîne de caractères et valider avec la touche Enter
@@ -339,12 +392,13 @@ Entrer un nombre : 14.56
 >>> print(chaine)
 14.56
 >>> print(type(chaine))
-<type 'str'>
+<class 'str'>
 >>> nombre = float(chaine)	# conversion de type
 >>> print(nombre**2)
 211.9936
 ~~~
 
+En Python 3, le résultat de `input` est _toujours_ une chaîne de caractère.
 
 
 ### 4- Le type `list` (liste)
@@ -358,7 +412,7 @@ Dans une liste, on peut avoir des éléments de plusieurs types.
 >>> infoperso = ['Pierre', 'Dupont', 17, 1.75, 72.5]
 >>> # la liste infoperso contient 5 éléments de types str, str, int, float et float
 >>> print(type(infoperso))
-<type 'list'>
+<class 'list'>
 >>> print(infoperso)
 ['Pierre', 'Dupont', 17, 1.75, 72.5]
 >>> print('Prénom : ', infoperso[0]) 		# premier élément (indice 0)
@@ -369,26 +423,34 @@ Age :  17
 Taille :  1.75
 ~~~
 
-La fonction `range()` crée une liste d'entiers régulièrement espacés :
+La fonction `range()` crée un itérateur qui se comporte grossièrement comme une
+liste d'entiers régulièrement espacés :
 
 ~~~python
->>> maliste = range(10)
->>> print(maliste)
+>>> mon_range = range(10)
+>>> print(mon_range)
+range(0, 10)
+>>> print(type(mon_range))
+<class 'range'>
+>>> ma_liste = list(mon_range)
+>>> print(ma_liste)
 [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
->>> print(type(maliste))
-<type 'list'>
+>>> print(type(ma_liste))
+<class 'list'>
 ~~~
 
+`range(10)` : **10** nombres, à partir de **0**.
 
 ~~~python
->>> maliste = range(1,10,2)	# range(début,fin non comprise,intervalle)
+>>> maliste = list(range(1, 10, 2))	# range(début, fin non comprise, pas)
 >>> print(maliste)
 [1, 3, 5, 7, 9]
 >>> print(maliste[2])		# le troisième élément a l'indice 2
 5
 ~~~
 
-On peut créer une liste de listes, qui s'apparente à un tableau à 2 dimensions (ligne, colonne) :
+On peut créer une liste de listes, qui s'apparente à un tableau à 2 dimensions
+(ligne, colonne) :
 
 ~~~
 0  1  2
@@ -405,7 +467,7 @@ On peut créer une liste de listes, qui s'apparente à un tableau à 2 dimension
 >>> print(maliste[2][1])		# élément à la troisième ligne et deuxième colonne
 21
 >>> maliste[2][1] = 69		# nouvelle affectation
->>> print(maliste
+>>> print(maliste)
 [[0, 1, 2], [10, 11, 12], [20, 69, 22]]
 ~~~
 
@@ -419,7 +481,7 @@ Deux valeurs sont possibles : `True` et `False`
 ~~~python
 >>> choix = True
 >>> print(type(choix))
-<type 'bool'>
+<class 'bool'>
 ~~~
 
 Les opérateurs de comparaison :
@@ -552,13 +614,13 @@ True
 ### 6- Le type `dict` (dictionnaire)
 
 
-Un dictionnaire stocke des données sous la forme **clé ⇒ valeur**
+Un dictionnaire stocke des données sous la forme **clé ⇒ valeur**.
 Une clé est unique et n'est pas nécessairement un entier (comme c'est le cas de l'indice d'une liste).
 
 ~~~python
 >>> moyennes = {'math': 12.5, 'anglais': 15.8}	# entre accolades
 >>> print(type(moyennes))
-<type 'dict'>
+<class 'dict'>
 >>> print(moyennes['anglais'])		# entre crochets
 15.8
 >>> moyennes['anglais'] = 14.3		# nouvelle affectation
@@ -574,7 +636,7 @@ Une clé est unique et n'est pas nécessairement un entier (comme c'est le cas d
 ### 7- Autres types
 
 
-Nous avons vu les types les plus courants.
+Nous avons survolé les types les plus courants.
 Il en existe bien d'autres :
 
 
@@ -591,23 +653,28 @@ Il en existe bien d'autres :
 ### 8- Programmation Orientée Objet (POO)
 
 
-Python est un langage de programmation **orienté objet** (comme les langages C++, Java, PHP, Ruby...).
+Python est un langage de programmation **orienté objet** (comme les langages
+C++, Java, PHP, Ruby...).
 Une variable est en fait un **objet** d'une certaine **classe**.
 
 Par exemple, la variable `amis` est un objet de la classe `list`.
 On dit aussi que la variable `amis` est une **instance** de la classe `list`.
-L'**instanciation** (action d'instancier) est la création d'un objet à partir d'une classe (syntaxe : **NouvelObjet = NomdelaClasse(arguments)**) :
+
+L'**instanciation** (action d'instancier) est la création d'un objet à partir
+d'une classe (syntaxe : **NouvelObjet = NomdelaClasse(arguments)**) :
 
 ~~~python
 >>> # instanciation de l'objet amis de la classe list
 >>> amis = ['Nicolas', 'Julie']	# ou bien : amis = list(['Nicolas', 'Julie'])
 >>> print(type(amis))
-<type 'list'>
+<class 'list'>
 ~~~
 
-Une classe possède des fonctions que l'on appelle **méthodes** et des données que l'on appelle **attributs**.
+Une classe possède des fonctions que l'on appelle **méthodes** et des données
+que l'on appelle **attributs**.
 
-La méthode `append()` de la classe `list` ajoute un nouvel élément en fin de liste :
+La méthode `append()` de la classe `list` ajoute un nouvel élément en fin
+de liste :
 
 ~~~python
 >>> # instanciation d'une liste vide
@@ -623,6 +690,16 @@ La méthode `append()` de la classe `list` ajoute un nouvel élément en fin de 
 ['Nicolas', 'Julie', 'Pauline']
 ~~~
 
+La méthode `pop` de la classe liste renvoie le premier de la liste et l'enlève
+de celle-ci
+
+~~~python
+>>> ma_liste = [1, 2, 3]
+>>> ma_liste.pop()
+1
+>>> ma_liste
+[2, 3]
+~~~
 
 ~~~python
 >>> amis.sort()			# la méthode sort() trie les éléments
@@ -678,22 +755,36 @@ La méthode `pop()` de la classe `dict` supprime une clé :
 ### Exercices
 
 
-**Exercice 1.1 ☆** Afficher la taille en octets et en bits d'un fichier de 536 ko.
-On donne : 1 ko (1 kilooctet) = 210 octets !!!
+**Exercice 1.1 ☆** Afficher la taille en octets et en bits d'un fichier de
+536 ko.
+
+On donne : 1 ko (1 kilooctet) = 1000 octets !!!
 1 octet = 1 byte = 8 bits
 
-**Exercice 1.2 ★** Le numéro de sécurité sociale est constitué de 13 chiffres auquel s'ajoute la clé de contrôle (2 chiffres).
+**Exercice 1.2 ★** Le numéro de sécurité sociale est constitué de 13 chiffres
+auquel s'ajoute la clé de contrôle (2 chiffres).
 Exemple : 1 89 11 26 108 268 91
-La clé de contrôle est calculée par la formule : 97 - (numéro de sécurité sociale modulo 97)
+
+La clé de contrôle est calculée par la formule :
+
+97 - (numéro de sécurité sociale modulo 97)
+
 Retrouver la clé de contrôle de votre numéro de sécurité sociale.
 Quel est l'intérêt de la clé de contrôle ?
 
 **Exercice 1.3 ★** Afficher la valeur numérique de √(4,63 - 15/16)
 Comparer avec votre calculette.
 
-**Exercice 1.4 ★** A partir des deux variables `prenom` et `nom`, afficher les initiales (par exemple LM pour Léa Martin).
+**Exercice 1.4 ★** A partir des deux variables `prenom` et `nom`, afficher
+les initiales (par exemple LM pour Léa Martin).
 
-**Exercice 1.5 ★☆** L'identifiant d'accès au réseau du lycée est construit de la manière suivante : initiale du prénom puis les 8 premiers caractères du nom (le tout en minuscule).
+---
+**Remarque pour les chapitres suivants :** les exercices suivants comportent
+deux étoiles et ne sont pas obligatoires.
+
+**Exercice 1.5 ★☆** L'identifiant d'accès au réseau du lycée est construit de
+la manière suivante : initiale du prénom puis les 8 premiers caractères du nom (le tout en minuscule).
+
 Exemple : Alexandre Lecouturier → alecoutur
 A partir des deux variables `prenom` et `nom`, construire l'identifiant.
 
@@ -705,17 +796,23 @@ A partir des deux variables `prenom` et `nom`, construire l'identifiant.
     fsincere   gnugpl
 
 
-1) Créer une variable de type `dict` qui contient les couples identifiant - mot de passe ci-dessus.
+1) Créer une variable de type `dict` qui contient les couples
+identifiant - mot de passe ci-dessus.
+
 2) La saisie du login fournit deux variables `identifiant` et `motdepasse` : une pour l'identifiant et l'autre pour le mot de passe.
 
-Construire une variable booléenne qui donne `True` en cas d'identification correcte, et `False` dans le cas contraire :
-lmartin monty → True
-alecoutur fqsdf → False
-martin monty → False (ce cas est plus compliqué à traiter)
+Construire une variable booléenne qui donne `True` en cas d'identification
+
+correcte, et `False` dans le cas contraire :
+
+* lmartin monty → True
+* alecoutur fqsdf → False
+* martin monty → False (ce cas est plus compliqué à traiter)
 
 
 ### QCM
 
 
 [QCM sur les types int, float et str](http://fabrice.sincere.free.fr/qcm/qcm.php?nom=qcm_python3x_1)
+
 Source : [Fabrice Sincère](http://fsincere.free.fr/isn/python/cours_python_ch1.php) - [Contenu sous licence CC BY-NC-SA 3.0](http://creativecommons.org/licenses/by-nc-sa/3.0/fr/)

@@ -18,10 +18,11 @@ Le langage Python est gratuit, sous **licence libre**.
 C'est un des langages informatiques les plus populaires avec C, C++, C#, Objective-C, Java, PHP, JavaScript, Delphi, Visual Basic, Ruby et Perl ([liste non exhaustive](http://www.tiobe.com/index.php/content/paperinfo/tpci/index.html)).
 
 Actuellement, Python en est à sa version 3.
-Cependant, la version 2 est encore majoritairement utilisée.
-Attention : Python 2 n'est pas compatible avec Python 3 !
+Cependant, la version 2 est encore utilisée.
 
-Python est un langage de script. Grossièrement cela signifie que les commandes sont exécutés par le programme Python lui même plutôt que par le processeur. Elles n'ont pas besoin d'être compilées pour être exécutées. Il est donc plus simple de développer en Python qu'en C ou en Java, par exemple.
+Attention : Python 2 n'est généralement pas compatible avec Python 3 !
+
+Python est un langage interprété (on dit parfois : langage de script). Cela signifie que les commandes sont interprétées par le programme Python lui même avant d'être traitées par le processeur. Il est donc plus simple de développer en Python qu'en C ou en Java, par exemple.
 
 La syntaxe de Python ne reprend pas la syntaxe la plus courante, dérivée du langage C.
 Il faut donc un temps d'adaptation (assez court) pour commencer à développer en Python si on a déjà développé en C, Java etc. Le trajet inverse est similaire.
@@ -59,13 +60,13 @@ Des **dizaines de milliers** de librairies sont disponibles sur le dépôt offic
 #### Au LYCEE des FLANDRES
 
 
-Par défaut, Python 2.7 **devrait** être installé sur vos machines. Si une autre version de Python existe (par exemple 2.5 ou 3.4) ce n'est pas forcement gênant. La majorité des instructions sont identiques et il n'est pas toujours indispensable de mettre à jour. Pour débuter ce cours vous pouvez utiliser la version existante.
+Par défaut, Python 3.7 **devrait** être installé sur vos machines. Si une autre version de Python existe (par exemple 2.7 ou 3.4) ce n'est pas forcement gênant. La majorité des instructions sont identiques et il n'est pas toujours indispensable de mettre à jour. Pour débuter ce cours vous pouvez utiliser la version existante.
 Il arrive souvent que les raccourcis du menu démarrer n'apparaissent pas. Il faut alors chercher à partir de la racine du disque dur principal **c:\** pour localiser Python... N'étant pas maître des installations, je ne peux rien y faire.
 
 D'autre part nous utiliserons souvent des outils en ligne permettant de travailler directement dans le navigateur et simplifiant considérablement l'échange de documents : [repl.it](https://repl.it)  et [google colab](https://colab.research.google.com/).
 
 
-#### Sous Windows
+#### Sous Windows -- à la maison.
 
 
 Sous Windows, pour installer Python avec l'**environnement de développement IDLE**, il suffit de télécharger puis d'exécuter le fichier d'installation qui se trouve sur le site officiel :
@@ -81,13 +82,17 @@ Démarrer → Programmes → Python → IDLE (Python GUI)
 #### Sous Linux
 
 
-Python est pré-installé sur la plupart des distributions Linux.
+Python 3 est pré-installé sur la plupart des distributions Linux.
 
 
 #### SOUS MAC OSX
 
 
-Je n'ai pas de Mac donc c'est à prendre avec des pincettes... Cependant d'après [ce que je lis](https://hdrapin.com/2017/03/04/installer-python-sur-mac/) il suffit d'utiliser le gestionnaire de paquets HomeBrew :
+Je n'ai pas de Mac donc c'est à prendre avec des pincettes...
+
+À ma connaissance, Python 2 a longtemps été installé sur OSX. Python 3 devrait être la version présente sur les distributions les plus récentes.
+
+Cependant d'après [ce que je lis](https://hdrapin.com/2017/03/04/installer-python-sur-mac/) il suffit d'utiliser le gestionnaire de paquets HomeBrew :
 
 ~~~bash
 $ brew install python3
@@ -96,11 +101,19 @@ $ brew install python3
 [caption id="" align="aligncenter" width="820"]![](https://hdrapin.files.wordpress.com/2016/11/image-022.png?w=820)
 L'installation de Python avec HomeBrew (c)[/caption]
 
+#### Thonny
+
+[Thonny](https://thonny.org/) est un éditeur de texte spécifique à Python. Vous ne pouvez développer que du Python dans Thonny. Au delà de ça, il est excellent pour les débutants.
+
+Thonny intègre de nombreux outils : coloration syntaxique, auto complétion, panneau de variables et d'appels de fonctions, débogueur, etc.
+
+Regardez la vidéo de présentation (en anglais, hélas) et installez le chez vous.
+
 
 #### IDLE
 
 
-IDLE est un environnement de développement intégré (IDE en anglais : Integrated Development Environment) pour Python.
+IDLE est l'environnement de développement intégré (IDE en anglais : Integrated Development Environment) proposé par Python.
 IDLE propose un certain nombre d'outils :
 
 
@@ -109,7 +122,12 @@ IDLE propose un certain nombre d'outils :
 * un interpréteur (pour exécuter le programme)
 * un débogueur (pour tester le programme)
 
-Il existe d'autres IDE pour Python : [Thonny](https://thonny.org/), [Sublime Text](https://www.sublimetext.com/), [Atom](https://atom.io/), [VS Code](https://code.visualstudio.com/), [Spyder](https://pypi.python.org/pypi/spyder) ...
+Il existe d'autres IDE multilangage comme :
+
+* [Sublime Text](https://www.sublimetext.com/),
+* [Atom](https://atom.io/),
+* [VS Code](https://code.visualstudio.com/),
+* [Spyder](https://pypi.python.org/pypi/spyder) ...
 
 
 
@@ -153,7 +171,7 @@ A vous de jouer !
 
 Par défaut, Python 2 ne gère pas les caractères accentués dans les scripts. La version 3 de python résout ce problème en autorisant la majorité des caractères courant. Cependant, évitez d'utiliser des variables contenant des caractères spéciaux, réservez les aux chaînes de caractères.
 
-~~~py3
+~~~python
 >>> é
   File "<stdin>", line 1
     é
@@ -164,7 +182,7 @@ SyntaxError: invalid syntax
 
 On prendra donc soin, d'insérer en haut de chaque script (par exemple : **exemple.py**) l'encodage suivant :
 
-~~~py3
+~~~python
 # coding=utf-8
 ~~~
 
@@ -173,7 +191,7 @@ Oui, il est précédé d'un # et donc paraît être un commentaire mais les prem
 
 On trouvera souvent le préambule suivant :
 
-~~~py3
+~~~python
 #!/usr/bin/env python
 # coding=utf-8
 ~~~
@@ -188,7 +206,7 @@ De manière générale, on recommande d'éviter les accents, cédilles etc. dans
 
 En Python la structure d'un programme est **définie par son indentation**. Ce sont les espaces qui séparent le bord gauche de l'éditeur du début de l'instruction.
 
-~~~py3
+~~~python
 if 2>1:
     print("bravo !")
 ~~~
@@ -198,7 +216,7 @@ On veillera donc à se méfier des copier coller hâtifs en Python. Si l'indenta
 
 Que se passe-t-il si on n'indente pas ?
 
-~~~py3
+~~~python
 >>> if 2>1:
 ... print("bla")
   File "<stdin>", line 2
