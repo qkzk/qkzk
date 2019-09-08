@@ -25,11 +25,11 @@ weight: 2
 
 
 
-
-    if expression:			# ne pas oublier le signe de ponctuation ':'
-        bloc d'instructions		# attention à l'indentation
-    # suite du programme
-
+~~~
+if expression:  			    # ne pas oublier la ponctuation ':'
+    bloc d'instructions		# attention à l'indentation
+# suite du programme
+~~~
 
 Si l'expression est vraie (True) alors le bloc d'instructions est exécuté.
 Si l'expression est fausse (False) on passe directement à la suite du programme.
@@ -40,11 +40,7 @@ Si l'expression est fausse (False) on passe directement à la suite du programme
 
 Nous allons commencer par créer le script `Condition1.py` :
 
-Ouvrir IDLE :
-Démarrer → Programmes → Python → IDLE (Python GUI)
-
-File → New Window
-Copier puis coller le code source ci-dessous :
+Ouvrir Thonny et coller le code ci-dessous :
 
 ~~~python
 # script Condition1.py
@@ -69,8 +65,7 @@ Exemple : _H:\Travail\NSI\Python\Cours\Condition1.py_
 
 Pensez aussi à partager vos travaux sur Google Drive...
 
-Pour exécuter le script depuis IDLE :
-Run → Run Module (ou touche F5) :
+Pour exécuter le script menu Run > Run current script (ou touche F5) :
 
 ~~~python
 >>>
@@ -94,13 +89,13 @@ Une instruction `else` est toujours associée à une instruction `if`
 
 
 
-
-    if expression:
-        bloc d'instructions 1		# attention à l'indentation
-    else:					# else est au même niveau que if
-        bloc d'instructions 2		# attention à l'indentation
-    # suite du programme
-
+~~~
+if expression:
+    bloc d'instructions 1		# attention à l'indentation
+else:					# else est au même niveau que if
+    bloc d'instructions 2		# attention à l'indentation
+# suite du programme
+~~~
 
 Si l'expression est vraie (True) alors le bloc d'instructions 1 est exécuté.
 

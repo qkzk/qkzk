@@ -799,7 +799,8 @@ A partir des deux variables `prenom` et `nom`, construire l'identifiant.
 1) Créer une variable de type `dict` qui contient les couples
 identifiant - mot de passe ci-dessus.
 
-2) La saisie du login fournit deux variables `identifiant` et `motdepasse` : une pour l'identifiant et l'autre pour le mot de passe.
+2) La saisie du login fournit deux variables `identifiant` et `motdepasse` :
+une pour l'identifiant et l'autre pour le mot de passe.
 
 Construire une variable booléenne qui donne `True` en cas d'identification
 
