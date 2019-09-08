@@ -364,9 +364,12 @@ Par exemple :
 
 
 Remarque : il est vilain de forcer l'arrêt d'un programme avec CTRL + C
-Nous verrons comment interrompre proprement un programme dans le chapitre [Gestion des exceptions](http://fsincere.free.fr/isn/python/cours_python_ch5.php).
+Nous verrons comment interrompre proprement un programme dans le chapitre
+[Gestion des exceptions](/docs/nsi/cours-python/python-3-05-gestion-des-exceptions/).
 
-**Exercice 3.5 ★☆**
+
+**Exercice 3.5 ★**
+
 1) Ecrire le script du jeu de devinette suivant :
 
 
@@ -393,6 +396,8 @@ Nous verrons comment interrompre proprement un programme dans le chapitre [Gesti
 
 Bibliographie : [La dichotomie](http://fr.wikipedia.org/wiki/Dichotomie)
 
+Remarque : l'algorithme de Dichotomie est au programme de première NSI.
+
 Remarque : pour créer un nombre entier aléatoire entre 1 et 100 :
 
 ~~~python
@@ -402,11 +407,18 @@ nombre = random.randint(1,100)
 
 
 **Exercice 3.6 ★★** Code de César
-En cryptographie, le code de César est une technique de chiffrement élémentaire qui consiste à décaler une lettre de 3 rangs vers la droite :
+
+En cryptographie, le code de César est une technique de chiffrement
+élémentaire qui consiste à décaler une lettre de 3 rangs vers la droite :
+
 A → D
+
 B → E
+
 ...
+
 Z → C
+
 1) Ecrire le script de ce codage.
 Par exemple :
 
@@ -423,7 +435,8 @@ Par exemple :
     prqwb sbwkrq'v ioblqj flufxv
 
 
-On pourra utiliser la chaîne `'abcdefghijklmnopqrstuvwxyz'` et la méthode `find()` de la classe `str`.
+On pourra utiliser la chaîne `'abcdefghijklmnopqrstuvwxyz'` et la méthode
+`find()` de la classe `str`.
 Pour obtenir de l'aide sur cette méthode :
 
 
@@ -445,11 +458,15 @@ Par exemple :
 
 
 Pour ne pas être dérangé dans ses aventures il décide de les couper chaque fois qu'ils font plus de 40 cm. Ce matin Geralt a coupé ses cheveux et ils mesurent 17 cm. Chaque jour la longueur de ses cheveux augmente d'un pour cent (leur longueur est multipliée par 1.01).
-Ecrire un script qui affiche dans combien de jours Geralt devra couper ses cheveux.
+
+Écrire un script qui affiche dans combien de jours Geralt devra couper ses cheveux.
 
 **Les exercices suivants sont nécessitent quelques aptitudes en mathématiques...**
 
-**Exercice 3.8 ★★** Ecrire un script qui donne l'évolution de la suite convergente : un+1 = un/2 + 1/un
+**Exercice 3.8 ★★** Ecrire un script qui donne l'évolution de la suite convergente :
+
+$u_{n+1} = \dfrac{u_n}{2} + \dfrac{1}{u_n}$
+
 Par exemple :
 
 
@@ -482,24 +499,26 @@ Estimer la valeur numérique de la fraction continue suivante :
 Comparer avec la valeur exacte : (1 + √5)/2
 
 **Exercice 3.10**
-1) ★ Ecrire un script qui détermine si un nombre entier est premier ou pas.
-**Rappel :** un nombre **premier **est un entier naturel qui n'a que deux diviseurs : 1 et lui même.
-Ex : 3 est premier mais 6 ne l'est pas car 2*3=6.
-Par exemple :
 
+1. ★ Ecrire un script qui détermine si un nombre entier est premier ou pas.
 
+2. **Rappel :** un nombre **premier** est un entier naturel qui n'a que deux diviseurs : 1 et lui même.
+    Ex : 3 est premier mais 6 ne l'est pas car 2*3=6.
+    Par exemple :
+
+    ~~~
     >>>
     Nombre ? 17
     17 est un nombre premier
+    ~~~
 
+3. ★★★ Ecrire un script qui décompose un nombre entier en un produit de facteurs premiers.
 
-2) ★★ Ecrire un script qui décompose un nombre entier en un produit de facteurs premiers.
-
-
+    ~~~
     >>>
     Nombre à décomposer ? 2142
     2142 = 2 * 3 * 3 * 7 * 17
-
+    ~~~
 
 
 
