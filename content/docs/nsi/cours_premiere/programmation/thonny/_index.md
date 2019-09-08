@@ -20,8 +20,8 @@ La dernière version disponible à ce jour (avril 2019) est la 3.1.2.
 
 Sites officiels :
 
-* [Thonny](https://thonny.org)
-* Wiki [Wiki](https://github.com/thonny/thonny/wiki)
+* [Thonny](/uploads/docsnsi/thonny/https://thonny.org)
+* Wiki [Wiki](/uploads/docsnsi/thonny/https://github.com/thonny/thonny/wiki)
 
 **Remarque** distinguer Python qui est un langage et Thonny qui est un environnement intégré de
 programmation en Python.
@@ -110,7 +110,7 @@ ne se traduit que par la mention `%Run nom_script.py` dans le shell et rien d'au
 ### Illustration de ces points avec suite Syracuse
 cf fichier [demo_syracuse.py](/uploads/docsnsi/thonny/demo_syracuse.py)
 
-* **demo_00.py** commencer par écrire la première fonction `syracuse` sans docstring. Profiter de
+* [**demo_00.py**](/uploads/docsnsi/thonny/demo_00.py) commencer par écrire la première fonction `syracuse` sans docstring. Profiter de
   l'ouverture de la parenthèse des paramètres pour souligner la coloration syntaxique (en gris).
 * exécuter => il faut donner un nom au script (qui change l'intitulé de l'onglet) => il ne se passe
   rien dans le shell.
@@ -124,14 +124,14 @@ cf fichier [demo_syracuse.py](/uploads/docsnsi/thonny/demo_syracuse.py)
   => on travaille toujours dans un environnement de variables «propre» : celui des définitions du
   script plus éventuellement quelques variables définies dans la session en cours
 
-* **demo_01.py** dans le shell utiliser la fonction `syracuse`
+* [**demo_01.py**](/uploads/docsnsi/thonny/demo_01.py) dans le shell utiliser la fonction `syracuse`
 * dans l'éditeur écrire le deuxième fonction `terme_syracuse` sans docstring. Profiter de la
   complétion pour écrire l'appel à `syracuse`.
 * observer le surlignement des identificateurs identiques en plaçant le curseur sur l'un d'eux
   (par exemple syracuse, u, res) => portée des variables
 * exécuter (pas besoin de redonner un nom au script) => il ne se passe rien
 * Observer la vue sur les variables
-* **demo_02.py** dans le shell utiliser la foncton `terme_syracuse`
+* [**demo_02.py**](/uploads/docsnsi/thonny/demo_02.py) dans le shell utiliser la foncton `terme_syracuse`
   contruire une liste de valeurs pour n=10 et a compris entre 1 et 10
 * écrire la troisième fonction `atterrissage_syracuse` sans docstring.
 * exécuter une nouvelle fois
@@ -170,7 +170,7 @@ cf fichier [demo_syracuse.py](/uploads/docsnsi/thonny/demo_syracuse.py)
 
 * partir de la fonction `help` dans le shell sur quelques fcts prédéfinies (`abs`, `len`, `print`)
 * essayer `help` avec les fcts du script `syracuse` => pas grand chose
-* **demo_03.py** on ajoute une docstring dans `syracuse`
+* [**demo_03.py**](/uploads/docsnsi/thonny/demo_03.py) on ajoute une docstring dans `syracuse`
   ```python
   def syracuse(u):
       '''
@@ -181,7 +181,7 @@ cf fichier [demo_syracuse.py](/uploads/docsnsi/thonny/demo_syracuse.py)
   qui s'étend généralement sur plusieurs lignes et donc qui est délimité par un triple `'` ou un
   triple `"`.
 * exécuter et utiliser la fonction `help` sur `syracuse`
-* **demo04.py** on complète la doctring avec des informations de type des paramètres et de valeur renvoyée,
+* [**demo_04.py**](/uploads/docsnsi/thonny/demo_04.py) on complète la doctring avec des informations de type des paramètres et de valeur renvoyée,
   en mentionnant les contraintes (ou conditions) d'utilisation (ici aucune) et en donnant quelques
   exemples (préparation aux doctests vus à la session prochaine)
   ```python
@@ -201,6 +201,6 @@ cf fichier [demo_syracuse.py](/uploads/docsnsi/thonny/demo_syracuse.py)
       25
 	  '''
   ```
-* **demo05.py** faire de même pour les deux autres fonctions
+* [**demo_05.py**](/uploads/docsnsi/thonny/demo_05.py) faire de même pour les deux autres fonctions
 
 ![Docstring et fonction help](/uploads/docsnsi/thonny/thonny_docstring.png)
