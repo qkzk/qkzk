@@ -433,7 +433,15 @@ Exemple :
 
 **Exercice 4.3 ★**
 1) Ecrire une fonction qui retourne la factorielle d'un nombre entier N.
-On rappelle que : N ! = 1×2×...×(N-1)×N
+On rappelle que :
+
+* factorielle de $N$ est noté $N!$
+* $N! = 1\times 2\times \ldots \times (N-1)\times N$
+* Par exemple : $3! = 1 \times 2 \times 3 = 6$
+* $1! = 1$
+* Par convention, $0!=1$
+
+
 Exemple :
 
 
@@ -482,6 +490,8 @@ ListeCarte = ['2s','2h','2d','2c','3s','3h','3d','3c','4s','4h','4d','4c','5s','
     Kd
 
 
+---
+
 **Exercice 4.6 ★★**
 
 1) Ecrire une fonction qui retourne une liste de N cartes **différentes** d'un jeu de Poker à 52 cartes.
@@ -498,7 +508,7 @@ Exemple :
 
 2) Simplifier le script avec la fonction `shuffle()` ou `sample()` du module `random`.
 
-**Exercice 4.7 ★** Ecrire une fonction qui retourne une grille de numéros du jeu Euro Millions.
+**Exercice 4.7 ★★** Ecrire une fonction qui retourne une grille de numéros du jeu Euro Millions.
 On utilisera la fonction `sample()` du module `random`.
 
 ![euromillions](/uploads/uploads/2017/04/euromillions.png)

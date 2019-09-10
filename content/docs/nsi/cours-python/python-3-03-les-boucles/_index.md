@@ -395,7 +395,7 @@ Gagné en 6 coups !
 
 2. Quelle est la stratégie la plus efficace ?
 
-3. Montrer que l'on peut deviner un nombre en 7 coups maximum.
+3. Question bonus : Montrer que l'on peut deviner un nombre en 7 coups maximum.
 
 Bibliographie : [La dichotomie](http://fr.wikipedia.org/wiki/Dichotomie)
 
