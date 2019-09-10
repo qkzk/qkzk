@@ -315,42 +315,6 @@ Votre numéro de sécurité sociale est INVALIDE !
 >>>
 ~~~
 
-**Exercice 2.2 ★** Nombre entier non signé et signé
-Dans un octet, on peut stocker un nombre entier compris entre 0b00000000 = 0 et 0b11111111 = 255 (entier non signé, en numération binaire naturel).
-On peut aussi stocker un entier compris entre -128 et +127 (entier signé, représentation dite en complément à deux).
-En complément à deux, les nombres négatifs sont codés de la manière suivante :
-
-* -1 correspond à 255 en binaire naturel
-* -2 correspond à 254 en binaire naturel
-
-...
-
-* -127 correspond à 129 en binaire naturel
-* -128 correspond à 128 en binaire naturel
-
-Les nombres entre 0 et 127 ont le même codage en complément à deux et en binaire
-naturel.
-
-1. Ecrire un script qui donne la correspondance entre entier signé et entier non signé.
-Par exemple :
-
-~~~
->>>
-Entrer un entier signé en complément à deux (-128 à +127): 25
-La représentation en binaire naturel est : 25
->>>
-Entrer un entier signé en complément à deux (-128 à +127): -15
-La représentation en binaire naturel est : 241
-~~~
-
-2. Ecrire un script qui donne la correspondance entre entier non signé et entier signé.
-Par exemple :
-
-~~~
->>>
-Entrer un nombre entier (0 à 255): 250
-Cela représente l'entier signé : -6
-~~~
 
 **Exercice 2.3 ★** Ecrire un script qui demande la note au bac et qui affiche la mention correspondante.
 Par exemple :

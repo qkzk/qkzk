@@ -238,7 +238,7 @@ La création d'une table de multiplication paraît plus simple avec une boucle `
 ~~~python
 # script Boucle7.py
 
-for compteur in range(1,11):
+for compteur in range(0, 11):
     print(compteur, '* 9 =', compteur*9)
 print("Et voilà !")
 ~~~
@@ -246,6 +246,7 @@ print("Et voilà !")
 
 
     >>>
+    0 * 9 = 0
     1 * 9 = 9
     2 * 9 = 18
     3 * 9 = 27
