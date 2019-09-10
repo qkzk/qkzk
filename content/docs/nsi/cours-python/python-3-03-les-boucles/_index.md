@@ -405,7 +405,7 @@ Remarque : pour créer un nombre entier aléatoire entre 1 et 100 :
 
 ~~~python
 import random
-nombre = random.randint(1,100)
+nombre = random.randint(1, 100)
 ~~~
 
 
