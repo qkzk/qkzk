@@ -26,11 +26,11 @@ Une boucle permet d'exécuter une portion de code plusieurs fois de suite.
 
 
 
-
-    while expression:		# ne pas oublier le signe de ponctuation ':'
-        bloc d'instructions		# attention à l'indentation
-    # suite du programme
-
+~~~
+while expression:		# ne pas oublier le signe de ponctuation ':'
+    bloc d'instructions		# attention à l'indentation
+# suite du programme
+~~~
 
 Si l'expression est vraie (`True`) le bloc d'instructions est exécuté, puis l'expression est à nouveau évaluée.
 Le cycle continue jusqu'à ce que l'expression soit fausse (`False`) : on passe alors à la suite du programme.
@@ -314,27 +314,28 @@ Autrement, utiliser une boucle `while` (notamment pour faire des boucles sans fi
 **Exercice 3.2 ★** Ecrire un script qui calcule la moyenne d'une série de notes.
 On pourra utiliser une variable qui contient la somme intermédiaire des notes.
 
-
-    >>>
-    Nombre de notes ? 3
-    -->  15
-    -->  11.5
-    -->  14
-    Moyenne : 13.5
-    >>>
-
+~~~
+>>>
+Nombre de notes ? 3
+-->  15
+-->  11.5
+-->  14
+Moyenne : 13.5
+>>>
+~~~
 
 **Exercice 3.3 ★**
-1) Avec une boucle `for`, écrire un script qui compte le nombre de lettres z dans une chaîne de caractères.
+
+1. Avec une boucle `for`, écrire un script qui compte le nombre de lettres z dans une chaîne de caractères.
 Par exemple :
 
+~~~
+>>>
+Entrer la chaîne : Zinedine Zidane
+Résultat : 2
+~~~
 
-    >>>
-    Entrer la chaîne : Zinedine Zidane
-    Résultat : 2
-
-
-2) Faire la même chose, directement avec la méthode `count()` de la classe `str`.
+2. Faire la même chose, directement avec la méthode `count()` de la classe `str`.
 Pour obtenir de l'aide sur cette méthode :
 
 ~~~python
@@ -343,6 +344,7 @@ Pour obtenir de l'aide sur cette méthode :
 
 **Exercice 3.4 ★** Avec une boucle `while`, écrire un script qui affiche l'heure courante avec une actualisation chaque seconde.
 On utilisera la fonction `sleep()` du module `time`.
+
 Pour obtenir de l'aide sur cette fonction :
 
 ~~~python
@@ -352,16 +354,16 @@ Pour obtenir de l'aide sur cette fonction :
 
 Par exemple :
 
-
-    >>> # Taper CTRL + C pour arrêter le programme.
-    >>>
-    Heure courante  12:40:59
-    Heure courante  12:41:00
-    Heure courante  12:41:01
-    Heure courante  12:41:02
-    KeyboardInterrupt
-    >>>
-
+~~~
+>>> # Taper CTRL + C pour arrêter le programme.
+>>>
+Heure courante  12:40:59
+Heure courante  12:41:00
+Heure courante  12:41:01
+Heure courante  12:41:02
+KeyboardInterrupt
+>>>
+~~~
 
 Remarque : il est vilain de forcer l'arrêt d'un programme avec CTRL + C
 Nous verrons comment interrompre proprement un programme dans le chapitre
@@ -370,29 +372,29 @@ Nous verrons comment interrompre proprement un programme dans le chapitre
 
 **Exercice 3.5 ★**
 
-1) Ecrire le script du jeu de devinette suivant :
+1. Ecrire le script du jeu de devinette suivant :
 
+~~~
+>>>
+Le jeu consiste à deviner un nombre entre 1 et 100 :
 
-    >>>
-    Le jeu consiste à deviner un nombre entre 1 et 100 :
+--->   50
+trop petit !
+--->   75
+trop petit !
+--->   87
+trop grand !
+--->   81
+trop petit !
+--->   84
+trop petit !
+--->   85
+Gagné en 6 coups !
+~~~
 
-    --->   50
-    trop petit !
-    --->   75
-    trop petit !
-    --->   87
-    trop grand !
-    --->   81
-    trop petit !
-    --->   84
-    trop petit !
-    --->   85
-    Gagné en 6 coups !
+2. Quelle est la stratégie la plus efficace ?
 
-
-2) Quelle est la stratégie la plus efficace ?
-
-3) Montrer que l'on peut deviner un nombre en 7 coups maximum.
+3. Montrer que l'on peut deviner un nombre en 7 coups maximum.
 
 Bibliographie : [La dichotomie](http://fr.wikipedia.org/wiki/Dichotomie)
 
@@ -406,11 +408,14 @@ nombre = random.randint(1,100)
 ~~~
 
 
+---
+
 **Exercice 3.6 ★★** Code de César
 
 En cryptographie, le code de César est une technique de chiffrement
 élémentaire qui consiste à décaler une lettre de 3 rangs vers la droite :
 
+~~~
 A → D
 
 B → E
@@ -418,41 +423,37 @@ B → E
 ...
 
 Z → C
+~~~
 
-1) Ecrire le script de ce codage.
+
+1. Ecrire le script de ce codage.
 Par exemple :
 
+~~~
+>>> Message à coder ? abcdefghijklmnopqrstuvwxyz
+defghijklmnopqrstuvwxyzabc
 
-    >>>
-    Message à coder ? abcdefghijklmnopqrstuvwxyz
-    defghijklmnopqrstuvwxyzabc
-
-
-
-
-    >>>
-    Message à coder ? Monty Python's Flying Circus
-    prqwb sbwkrq'v ioblqj flufxv
-
+>>> Message à coder ? Monty Python's Flying Circus
+prqwb sbwkrq'v ioblqj flufxv
+~~~
 
 On pourra utiliser la chaîne `'abcdefghijklmnopqrstuvwxyz'` et la méthode
 `find()` de la classe `str`.
 Pour obtenir de l'aide sur cette méthode :
 
+~~~
+>>> help(str.find)
+~~~
 
-    >>> help(str.find)
-
-
-2) Ecrire le script du décodage.
+2. Ecrire le script du décodage.
 Par exemple :
 
+~~~
+>>> Message à décoder ? prqwb sbwkrq'v ioblqj flufxv
+monty python's flying circus
+~~~
 
-    <span class="shell">>>></span>
-    <span class="stdout">Message à décoder ?</span> prqwb sbwkrq'v ioblqj flufxv
-    <span class="stdout">monty python's flying circus</span>
-
-
-**Exercice 3.7 ** Geralt kiffe ses cheveux.
+**Exercice 3.7** Geralt kiffe ses cheveux.
 
 ![](https://s-media-cache-ak0.pinimg.com/736x/9c/04/96/9c0496717e938a311f4ed1286fc11f4f.jpg)
 
