@@ -258,18 +258,13 @@ on atteindra la page web de Wikipédia consacrée au terme URL.
 
 
 
-Consultez la page [que voici](/uploads/uploads/2016/07/lien.html). Elle contient deux liens hypertextes. Consultez le code HTML de la page pour vérifier que les textes associés aux liens hypertextes présentés sont cohérents.
-
-
+Consultez la page [que voici](http://qkzk.free.fr/wp-content/uploads/2016/07/lien.html). Elle contient deux liens hypertextes. Consultez le code HTML de la page pour vérifier que les textes associés aux liens hypertextes présentés sont cohérents.
 
 
 
 **Attention !**
-Consultez la [page suivante](/uploads/uploads/2016/07/lien-escroc.html). Que cache-t-elle ? Des images peuvent être insérées dans des documents HTML : Connaissez-vous [Wikimedia Commons](http://commons.wikimedia.org/wiki/Accueil?uselang=fr), la médiathèque libre des projets Wikimedia ? Son logo
+Consultez la [page suivante](http://qkzk.free.fr/wp-content/uploads/2016/07/lien-escroc.html). Que cache-t-elle ? Des images peuvent être insérées dans des documents HTML : Connaissez-vous [Wikimedia Commons](http://commons.wikimedia.org/wiki/Accueil?uselang=fr), la médiathèque libre des projets Wikimedia ? Son logo
 est le suivant :
-
-
-
 
 
 ![logo de wikimedia](http://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/Commons-logo.svg/89px-Commons-logo.svg.png)
