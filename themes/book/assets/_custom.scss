@@ -162,21 +162,12 @@ RESPONSIVE DESIGN
 */
 // desktop
 
-.content-desktop {
-  display: flex;
-}
 
-@media (min-width: 1200px) {
-  body {
-    background-image: url("/back_qkzk.jpg");
-    background-repeat: repeat;
-    background-position: top left;
-    background-attachment: scroll;
-    min-height: 100vh
-    }
-}
 
-@media screen and (min-width: 768px){
+
+
+// @media screen and (min-width: 768px){
+@media screen and (min-width: $sm-breakpoint){
   .book-toc, .book-menu {
     border-top: 4px solid #1a1a1a;
     margin-bottom: 20px;
@@ -184,10 +175,14 @@ RESPONSIVE DESIGN
     padding-top: 20px;
     padding-left: 0;
   }
+  .content-desktop {
+    display: none;
+  }
 }
 
 // mobile
-@media screen and (max-width: 768px) {
+// @media screen and (max-width: 768px) {
+@media screen and (max-width: $sm-breakpoint) {
   .white-back{
     padding: 0;
     margin: 0;
@@ -204,6 +199,20 @@ RESPONSIVE DESIGN
   }
   #bannerTitle{
     padding-left: 2vh;
+  }
+}
+
+// @media (min-width: 1200px) {
+@media (min-width: $md-breakpoint) {
+  body {
+    background-image: url("/back_qkzk.jpg");
+    background-repeat: repeat;
+    background-position: top left;
+    background-attachment: scroll;
+    min-height: 100vh
+  }
+  .content-desktop {
+      display: flex;
   }
 }
 

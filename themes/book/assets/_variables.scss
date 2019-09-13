@@ -39,5 +39,6 @@ $header-height: 3.5rem;
 $menu-width: 16rem;
 $toc-width: 16rem;
 
-$md-breakpoint: $menu-width + $body-min-width * 1.25 + $toc-width;
-$sm-breakpoint: $menu-width + $body-min-width;
+// $md-breakpoint: $menu-width + $body-min-width * 1.25 + $toc-width;
+$md-breakpoint: $menu-width + $body-min-width * 2 + $toc-width;
+$sm-breakpoint: $menu-width + $body-min-width * 2;
