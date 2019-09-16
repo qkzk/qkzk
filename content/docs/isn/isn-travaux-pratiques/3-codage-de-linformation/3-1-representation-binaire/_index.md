@@ -34,12 +34,12 @@ Notions abordées
 
 Habituellement, nous représentons les valeurs entières dans le système décimal, on dit aussi en base 10. Nous utilisons les dix chiffres de 0 à 9. La position des chiffres définit la valeur associée à ce chiffre. Par exemple, 542 est compris comme
 
-542 = 5 x 100 + 4 x 10 + 2
+$542 = 5 \times 100 + 4 \times 10 + 2$
 
 Les différents chiffres correspondent aux puissances successives de 10 :
 
 
-542 = 5 × 102 + 4 × 101 + 2 × 100
+$542 = 5 \times 10^2 + 4 \times 10^1 + 2 \times 10^0$
 
 
 L'information numérique, qu'il s'agisse de valeurs entières, de textes, d'images, ou de sons est en fin de compte représentée par des suites de 0 et de 1. On parle de bit : un bit peut prendre deux valeurs, 0 ou 1.
@@ -61,10 +61,11 @@ De même que pour la base 10, les positions des chiffres sont associées aux pu
 
 Ainsi la valeur entière qui correspond à la représentation binaire 101010 est
 
+$1 \times 2^5 + 0 \times 2^4 + 1 \times 23 +  0 \times 2^2 + 1 \times 2^1 + 0 \times 2^0$
 
-1 × 25 + 0 × 24 + 1 × 23 +  0 × 22 + 1 × 21 + 0 × 20
-= 1 × 32 + 0 × 16 + 1 × 8 + 0 × 4 + 1 × 2 + 0 × 1
-= 42
+$= 1 \times 32 + 0 \times 16 + 1 \times 8 + 0 \times 4 + 1 \times 2 + 0 \times 1$
+
+$= 42$
 
 
 Il nous faut pouvoir indiquer que 101010 est une représentation binaire et non une représentation décimale, qui serait comprise _cent un mille dix_ (ou encore une représentation dans une autre
