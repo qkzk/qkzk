@@ -1,0 +1,38 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<meta http-equiv="content-type" content="text/html;
+					 charset=windows-1252" />
+  <title>ISN - Des images</title>
+
+   <link href="styleImage.css" rel="stylesheet" type="text/css"/>
+
+</head>
+
+<body>
+
+<p>
+Tableaux de Brueghel l'Ancien
+<img alt="Brueghel Babel" src="brueghel-babel.jpg"></img>
+<img alt="Brueghel Carnaval et Carême" src="brueghel-carnaval.jpg"></img>
+<img alt="Brueghel noces paysannes" src="brueghel-noces.jpg"></img>
+</p>
+
+<p>
+Tableaux de Claude Monet
+<img alt="Monet Saint Georges au Crépuscule" src="monet-crepuscule.jpg"></img>
+<img alt="Monet les Nymphéas" src="monet-nympheas.jpg"></img>
+<img alt="Monet Promenade sur la falaise" src="monet-promenade.jpg"></img>
+</p>
+
+<p>
+Tableaux de Matisse
+<img alt="Matisse - Gerbe " src="matisse-gerbe.jpg"></img>
+<img alt="Matisse - La Danse" src="matisse-danse.jpg"></img>
+<img alt="Matisse - Nu bleu" src="matisse-nu-bleu.jpg"></img>
+</p>
+
+</body>
+
+</html>

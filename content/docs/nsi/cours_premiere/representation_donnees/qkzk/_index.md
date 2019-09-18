@@ -199,8 +199,7 @@ Ainsi la valeur entière qui correspond à la représentation
 binaire $101010$ est
 
 $$1\times2^5+0\times2^4+1\times2^3+0\times2^2+1\times2^1+0\times2^0$$
-$$=1\times32+0\times16+1\times8+0+\times4+1\times2+0\times1=42$$
-
+$$=1\times32+0\times16+1\times8+0\times4+1\times2+0\times1=42$$
 
 ### On distingue les notations en notant $0b101010$ ou $101010_2$
 Il nous faut pouvoir indiquer que 101010 est une représentation binaire
