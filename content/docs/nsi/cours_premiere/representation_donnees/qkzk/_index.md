@@ -410,7 +410,7 @@ Démontrez l'équivalence :
 ## Les masques de sous-réseau
 
 Très largement inspiré de
-[cet article](/uploads/docsnsi/donnees_qkzk_img/http://fr.wikipedia.org/wiki/Sous-r%C3%A9seau#Masque_de_sous-r.C3.A9seau) de Wikipedia.
+[cet article](/http://fr.wikipedia.org/wiki/Sous-r%C3%A9seau#Masque_de_sous-r.C3.A9seau) de Wikipedia.
 
 
 Les adresses IP de version 4, IPv4, sont codés sur **32 bits**.
@@ -470,7 +470,7 @@ Les opérations logiques évoquées ci-dessus sont mises en oeuvre en
 
 Les circuits électroniques calculent des fonctions logiques de l'algèbre de Boole.
 
-Pour chacun des opérateurs logiques évoquées ci-dessus (et d'autres) il existe donc des portes logiques appelés *porte ET*, *porte NON*, etc. Les valeurs *vrai *et *faux* sont représentées par deux niveaux de tension, *haut* et *bas*.
+Pour chacun des opérateurs logiques évoqués ci-dessus (et d'autres) il existe donc des portes logiques appelés *porte ET*, *porte NON*, etc. Les valeurs *vrai *et *faux* sont représentées par deux niveaux de tension, *haut* et *bas*.
 
 ## Demi additionneur
 
