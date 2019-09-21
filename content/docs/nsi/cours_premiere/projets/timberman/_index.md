@@ -34,7 +34,7 @@ _gauche_ pour taper à gauche et _droite_ pour taper à droite.
 
 ## État du projet que vous récupérez.
 
-Le fichier [`timber_0.py`](/uploads/docsnsi/projets/timberman/timber_0.py) est déjà assez avancé.
+Le fichier [`timber_0.py`](/uploads/docsnsi/projets/timberman/timber_0.py) est déjà assez avancé. ([version sur github](https://github.com/qkzk/data_colab/blob/master/timber_0.py)).
 
 En fait, pas tant que ça. Quand on débute un jeu, on part rarement de zéro.
 On récupère souvent une version "précoce" d'un jeu précédent qu'on adapte.
@@ -47,7 +47,7 @@ Seules quelques fonctions sont à compléter.
 
 Avant de vous décrire votre travail, examinons les éléments :
 
-Le code est constitué d'un seul fichier constiué de plusieurs parties.
+Le code est constitué d'un seul fichier constitué de plusieurs parties.
 
 Chaque partie est découpée par des commentaires visibles, par exemple :
 
@@ -88,7 +88,7 @@ _Elles sont toutes déjà définies_
 ### Fonctions
 
 Toutes les fonctions sont présentes.
-Toutes les fonctions ont une description comlpète de ce qu'elles font.
+Toutes les fonctions ont une description complète de ce qu'elles font.
 
 Par contre, la majorité sont à compléter.
 
@@ -143,7 +143,7 @@ Tous les éléments sont dessinés un par un :
 * le score
 * le tronc
 * les branches une par une à l'aide d'une boucle
-* le bucheron
+* le bûcheron
 * le chrono (afin qu'il soit devant les branches)
 
 _Rien à coder ici_
@@ -153,14 +153,14 @@ _Rien à coder ici_
 Dans cette partie on met à jour les derniers éléments :
 
 * le score augmente régulièrement
-* si le bucheron à mis à coup,
+* si le bûcheron à mis à coup,
 
     * on calcule la position des nouvelles branches
     * et on s'assure qu'il n'est pas mort (collision timber / branche du bas)
     * enfin, on lui donne du temps
 
 * s'il est mort on arrête la boucle
-* Enfin on met pygame à jour avec tous les nouveux éléments. Tous les dessins
+* Enfin on met pygame à jour avec tous les nouveaux éléments. Tous les dessins
     apparaissent à l'écran à cette étape.
 * et on fait avancer le temps.
 
@@ -169,7 +169,7 @@ _Rien à coder ici_
 ### Sortie du jeu
 
 Pour sortir proprement, on affiche une dernière information : le score atteint.
-Et on ferme le jeu en arrếtant pygame. A priori c'est inutile mais c'est
+Et on ferme le jeu en arrêtant pygame. A priori c'est inutile mais c'est
 une bonne pratique.
 
 ## Cahier des charges
@@ -207,7 +207,7 @@ calculer (pensez à un produit en croix...).
 
 _À compléter_
 
-Il manque la nouvelle position et le nouvel objet `rect` du bucheron.
+Il manque la nouvelle position et le nouvel objet `rect` du bûcheron.
 La position dépend de la direction (`"gauche"` ou `"droite"`) et le `rect`
 dépend de la position.
 
@@ -313,7 +313,7 @@ Deux possibilités pour faire ce projet :
 Vous pouvez travailler sur un fichier source local que vous partagez avec
 votre binôme via google drive.
 
-Vous utilisez Thonny au lycée, ce que vous voulez chez vous.
+Vous utilisez `Thonny` au lycée, ce que vous voulez chez vous.
 Assurez-vous d'avoir installé la librairie `pygame` chez vous.
 
 Installer une libaririe Python n'est pas difficile si Python est installé
@@ -327,10 +327,12 @@ etc.
 
 1. Rendez-vous sur [repl.it](https://repl.it) et connectez-vous.
 2. "New repl", tapez "**pygame**".
-3. Ensuite collez le code, assurez-vous qu'il tourne
+3. Ensuite collez le code, assurez-vous qu'il tourne (RUN)
 4. Activez le **multiplayer** (icone avec 2 bonhommes à gauche)
-4. **Partagez ce repl avec moi (via mon adresse @lyceedesflandres habituelle) et avec votre binôme**.
-5. Développez dedans. (Les deux élèves dans le même repl.) On doit voir apparaître deux curseurs avec les noms.
+4. **Partagez ce repl avec moi (via mon adresse @lyceedesflandres habituelle)
+    et avec votre binôme**.
+5. Développez dedans. (Les deux élèves dans le même repl.) On doit voir
+    apparaître deux curseurs avec les noms.
 
 ### Dans TOUS LES CAS
 
@@ -339,3 +341,13 @@ Vous envoyez un mail chaque semaine avec :
 * votre avancée (terminé, ça bug là etc.)
 * votre nom, le nom du binôme
 * un lien vers le fichier (local ou dans le cloud)
+
+
+## Quelques conseils
+
+* Commencez par survoler le code afin de repérer les étapes
+* Apprenez le fonctionnement voulu du jeu (en testant quelques cas dans le vrai jeu)
+* Faîtes un schéma très rapide des différents éléments
+* Relisez bien la description des éléments du cahier des charges et de ce que
+    les fonctions doivent faire.
+* Si vous pensez avoir compris, vous pouvez commencer à programmer.
