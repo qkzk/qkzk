@@ -291,7 +291,7 @@ ordonnées.
 _La fin est déjà traitée :_
 
 si la branche du bas quitte l'écran, elle est enlevée du tableau et une
-nouvelle apparaît en haut. Sa position est aléatoire.
+nouvelle apparaît en haut. Sa position (gauche ou droite) est aléatoire.
 
 ## Extensions
 
