@@ -64,7 +64,7 @@ Une exception arrête l'exécution normale d'un programme.
 
 
 Heureusement, il est possible de gérer les exceptions pour éviter l'arrêt brutal du programme.
-Par cela, on utilise conjointement les instructions `try` et `except`.
+Pour cela, on utilise conjointement les instructions `try` et `except`.
 L'instruction `else` est optionnelle :
 
 ~~~python
@@ -127,7 +127,7 @@ N'oubliez pas : un programme bien écrit doit gérer proprement les exceptions.
 
 
 **Exercice 5.1**
-1) Compléter le script précédent de manière à ressaisir le nombre en cas d'erreur.
+1) Compléter le script précédent de manière à ressaisir le nombre en cas d'erreur. On pourra englober le script dans une boucle `while`.
 Par exemple :
 
 
@@ -153,6 +153,15 @@ Par exemple :
 
 On pourra utiliser la méthode `replace()` de la classe `str`
 
+Exemple :
+
+~~~python
+>>> 'abc'.replace("b", "z") # b est remplacé par z
+'azc'
+>>> 'raoul'.replace('x', 'z') # pas de x dans la chaîne de départ...
+'raoul' # la méthode renvoie la chaîne initiale
+~~~
+
 **Exercice 5.2** Ecrire un script qui calcule la racine carrée d'un nombre, avec gestion des exceptions.
 Par exemple :
 
@@ -166,6 +175,7 @@ Par exemple :
     La racine carrée de 16.0 est : 4.0
     >>>
 
+Remarquez bien qu'on demande le nombre à l'utilisateur _jusqu'à_ ce qu'il convienne.
 
 **Exercice 5.3** Soit le script :
 
@@ -177,7 +187,7 @@ Par exemple :
 
 
 Il s'agit d'une boucle sans fin.
-Pour arrêter ce programme, il faut appuyer sur les touches CTRL + C, ce qui lève une exception de type `KeyboardInterrupt` :
+Pour arrêter ce programme, il faut appuyer sur les touches CTRL + C quand on exécute dans la console et le bouton arrêter dans Colab, ce qui lève une exception de type `KeyboardInterrupt` :
 
 
     >>>
