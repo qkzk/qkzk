@@ -406,7 +406,7 @@ vers le client. On remarque 2 attributs dans cette balise
 `form : action="http://localhost:5000/resultat"` et `method="post"`. Ces 2
 attributs indiquent que le client devra effectuer une requête de type
 `POST` (la méthode `POST` a déjà été vue dans la partie consacrée au
-[protocole HTTP](/docs/nsi/cours_premiere/http)) dès que l'utilisateur appuiera
+[protocole HTTP](/docs/nsi/cours_premiere/ihm_web/http)) dès que l'utilisateur appuiera
 sur le bouton "Envoyer". Cette requête `POST` sera envoyée à l'URL
 "http://localhost:5000/resultat" (voir l'attribut "action"). Les
 données saisies dans le formulaire seront envoyées au serveur par
