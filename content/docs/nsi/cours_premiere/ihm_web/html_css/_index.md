@@ -113,7 +113,7 @@ un élément important.
 Vous devez aussi savoir qu'il existe des balises qui sont à la fois
 ouvrantes et fermantes (`<balise/>`) : un exemple, la balise permettant
 de sauter une ligne, la balise `<br/>` (balise qu'il faut d'ailleurs
-éviter d'utiliser par différentes raisons que nous n'aborderons pas
+éviter d'utiliser pour différentes raisons que nous n'aborderons pas
 ici).
 
 Il est possible d'ajouter des éléments à une balise ouvrante, on parle

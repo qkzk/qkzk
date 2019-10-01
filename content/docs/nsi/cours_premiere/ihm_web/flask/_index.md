@@ -35,7 +35,7 @@ Dans votre répertoire personnel, créez un répertoire nommé "flask".
 
 ## À faire vous-même 2
 
-À l'aide de Spyder, créez un fichier Python "views.py" (ce fichier
+À l'aide de Thonny, créez un fichier Python "views.py" (ce fichier
 devra être sauvegardé dans le répertoire "flask" précédemment créé).
 Saisissez le code suivant dans le fichier "views.py"
 
@@ -73,7 +73,7 @@ renseignée avec l'adresse du serveur web. Le "5000" indique le port,
 nous n'étudierons pas cet aspect des choses ici, vous devez juste
 savoir que le "5000" doit suivre le "localhost".
 
-Stoppez l'exécution du programme dans Spyder.
+Stoppez l'exécution du programme dans Thonny.
 
 Essayons de comprendre en détail ce qui s'est passé :
 
@@ -128,7 +128,7 @@ présente.
 
 ## À faire vous-même 4
 
-À l'aide de Spyder, modifiez le fichier Python "views.py" :
+À l'aide de Thonny, modifiez le fichier Python "views.py" :
 
 ~~~python
 from flask import Flask
@@ -206,7 +206,7 @@ fichier "index.html" qui a été créé dans le répertoire "templates".
 Attention, les fichiers HTML devront systématiquement se trouver dans un
 répertoire nommé "templates".
 
-N. B. le "debug=True" de la dernière ligne permet de modifier les
+N. B. le `debug=True` de la dernière ligne permet de modifier les
 fichiers HTML sans être obligé de redémarrer le programme "views.py".
 
 Pour l'instant notre site est statique : la page reste identique,
@@ -223,7 +223,7 @@ pages dynamiques :
 
 ## À faire vous-même 7
 
-Modifiez le fichier views.py comme suit :
+Modifiez le fichier "views.py" comme suit :
 
 ~~~python
 from flask import Flask, render_template
@@ -242,7 +242,7 @@ def index():
 app.run(debug=True)
 ~~~
 
-Dans le programme ci-dessous nous importons le module "datetime" afin
+Dans le programme ci-dessous nous importons le module `datetime` afin
 de pouvoir déterminer la date et l'heure courante. Le
 
 ~~~python
@@ -268,8 +268,8 @@ return render_template("index.html", heure = h, minute = m, seconde = s)
 ~~~
 
 contient 3 paramètres de plus par rapport à l'exemple du "À faire
-vous-même 6" : le paramètre "heure", le paramètre "minute" et le
-paramètre "seconde", nous allons retrouver ces 3 paramètres dans le
+vous-même 6" : le paramètre `heure`, le paramètre `minute` et le
+paramètre `seconde`, nous allons retrouver ces 3 paramètres dans le
 fichier HTML.
 
 ---
@@ -307,7 +307,7 @@ Attention, il est bien important de comprendre que la page HTML envoyée
 par le serveur au client ne contient plus les paramètres `{{heure}}`,
 `{{minute}}` et `{{seconde}}`. Au moment de créer la page, le serveur
 remplace ces paramètres par les valeurs passées en paramètres de la
-fonction "render_template" (s'il est 14 h 45 minutes et 31 secondes,
+fonction `render_template` (s'il est 14 h 45 minutes et 31 secondes,
 le serveur remplacera "Le serveur fonctionne parfaitement, il est
 `{{heure}}` h `{{minute}}` minutes et `{{seconde}}` secondes" par "Le
 serveur fonctionne parfaitement, il est 15 h 45 minutes et 31
@@ -405,19 +405,19 @@ contient un formulaire (balise `<form action="http://localhost:5000/resultat" me
 vers le client. On remarque 2 attributs dans cette balise
 `form : action="http://localhost:5000/resultat"` et `method="post"`. Ces 2
 attributs indiquent que le client devra effectuer une requête de type
-POST (la méthode POST a déjà été vue dans la partie consacrée au
-[protocole HTTP](nsi_prem_http.html)) dès que l'utilisateur appuiera
-sur le bouton "Envoyer". Cette requête POST sera envoyée à l'URL
+`POST` (la méthode `POST` a déjà été vue dans la partie consacrée au
+[protocole HTTP](/docs/nsi/cours_premiere/http)) dès que l'utilisateur appuiera
+sur le bouton "Envoyer". Cette requête `POST` sera envoyée à l'URL
 "http://localhost:5000/resultat" (voir l'attribut "action"). Les
 données saisies dans le formulaire seront envoyées au serveur par
 l'intermédiaire de cette requête.
 
 N.B Vous avez sans doute remarqué que la méthode à employer pour
 effectuer la requête HTTP n'est pas précisée dans le
-"\@app.route('/')". Si rien n'est précisé, par défaut, c'est la
-méthode GET qui est utilisée.
+`\@app.route('/')`. Si rien n'est précisé, par défaut, c'est la
+méthode `GET` qui est utilisée.
 
-Intéressons-nous à la fonction "resultat", puisque c'est cette
+Intéressons-nous à la fonction `resultat`, puisque c'est cette
 fonction qui sera exécutée côté serveur pour traiter la requête POST :
 
 ~~~python
@@ -428,8 +428,8 @@ def resultat():
     return render_template("resultat.html", nom=n, prenom=p)
 ~~~
 
-"request.form" est un dictionnaire Python qui a pour clés les
-attributs "name" des balises "input" du formulaire (dans notre cas
+`request.form` est un dictionnaire Python qui a pour clés les
+attributs `name` des balises `input` du formulaire (dans notre cas
 les clés sont donc "nom" et "prenom") et comme valeurs ce qui a été
 saisi par l'utilisateur. Si l'utilisateur saisit "Martin" et
 "Sophie", le dictionnaire "request.form" sera :
@@ -443,14 +443,14 @@ Le reste du code ne devrait pas vous poser de problème.
 Le template "resultat.html" utilise des paramètres "nom" et
 "prenom".
 
-En réponse à la requête POST, le serveur renvoie une page HTML créée à
-partir du template "resultat.html" et des paramètres "nom" et
-"prenom". Si l'utilisateur a saisi "Martin" et "Sophie", le
+En réponse à la requête `POST`, le serveur renvoie une page HTML créée à
+partir du template `resultat.html` et des paramètres `nom` et
+`prenom`. Si l'utilisateur a saisi `Martin` et `Sophie`, le
 navigateur affichera "Bonjour Sophie Martin, j'espère que vous allez
 bien."
 
 Pour gérer le formulaire, il est possible d'utiliser une méthode HTTP
-"GET" à la place de la méthode "POST" :
+`GET` à la place de la méthode `POST` :
 
 ## À faire vous-même 10
 
@@ -511,15 +511,15 @@ def resultat():
 app.run(debug=True)
 ~~~
 
-Dans "index.html", la méthode POST a été remplacée par la méthode GET.
-Dans le fichier "views.py" nous avons aussi remplacé POST par GET, et
-on utilise "request.args" à la place de "request.form".
+Dans "index.html", la méthode `POST` a été remplacée par la méthode `GET`.
+Dans le fichier "views.py" nous avons aussi remplacé `POST` par `GET`, et
+on utilise `request.args` à la place de `request.form`.
 
 ---
 
 ## À faire vous-même 11
 
-Relancez l'exécution de "views.py" et saisissez "localhost:5000"
+Relancez l'exécution de "views.py" et saisissez `localhost:5000`
 dans la barre d'adresse d'un navigateur web. Une fois la page web
 affichée dans votre navigateur, Saisissez "Sophie" pour le prénom et
 "Martin" pour le nom puis validez en cliquant sur le bouton
@@ -535,13 +535,13 @@ localhost:5000/resultat?nom=Martin&prenom=Sophie
 
 ---
 
-Dans le cas de l'utilisation d'une méthode "POST" les données issues
+Dans le cas de l'utilisation d'une méthode `POST` les données issues
 d'un formulaire sont envoyées au serveur sans être directement
 visibles, alors que dans le cas de l'utilisation d'une méthode
-"GET", les données sont visibles (et accessibles) puisqu'elles sont
+`GET`, les données sont visibles (et accessibles) puisqu'elles sont
 envoyées par l'intermédiaire de l'URL.
 
-Les données envoyées par l'intermédiaire d'une méthode "GET" peuvent
+Les données envoyées par l'intermédiaire d'une méthode `GET` peuvent
 être modifiées directement dans l'URL :
 
 ## À faire vous-même 12
@@ -565,13 +565,13 @@ Même si dans notre cas cette opération de modification d'URL est
 inoffensive, vous devez bien vous douter que dans des situations plus
 complexes, une telle modification pourrait entraîner des conséquences
 plus problématiques (piratage). Il faut donc éviter d'utiliser la
-méthode "GET" pour transmettre les données issues d'un formulaire
+méthode `GET` pour transmettre les données issues d'un formulaire
 vers un serveur.
 
-Il est important de bien comprendre que la méthode "POST" n'offre pas
+Il est important de bien comprendre que la méthode `POST` n'offre pas
 non plus une sécurité absolue puisque toute personne ayant un bagage
 technique minimum sera capable de lire les données transmises à l'aide
-de la méthode "POST" en analysant la requête HTTP, même si ces données
+de la méthode `POST` en analysant la requête HTTP, même si ces données
 ne sont pas directement visibles dans l'URL. Seule l'utilisation du
 protocole sécurisé HTTPS garantit un transfert sécurisé des données
 entre le client et le serveur (les données sont chiffrées et donc
