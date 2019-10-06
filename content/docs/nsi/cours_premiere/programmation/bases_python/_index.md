@@ -148,11 +148,11 @@ Les dictionnaires sont mutables.
 
 ~~~python
 if condition_1:                           # les : sont obligatoires !
-    bloc execute si condition_1 est True  # indentation !!!
+  bloc execute si condition_1 est True  # indentation !!!
 elif autre condition_2:
-    bloc execute si condition_1 est False et condition_2 True
+  bloc execute si condition_1 est False et condition_2 True
 else:
-    bloc execute si condition_1 est False et condition_2 False
+  bloc execute si condition_1 est False et condition_2 False
 bloc toujours execute car pas indente
 ~~~
 
