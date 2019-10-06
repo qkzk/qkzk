@@ -210,7 +210,7 @@ On peut parcourir une liste, un tuple, une chaîne ou un dictionnaire (vu plus t
 0
 4
 16
->>> for lettre in 'abcd':
+>>> for lettre in 'abc':
 ...    lettre
 'a'
 'b'
