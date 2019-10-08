@@ -90,3 +90,5 @@ un raspberry.
 * Prévisions sur une semaine, formatage des images etc.
 * Utilisation de capteurs pour récupérer la météo locale avec un raspberry
 * Toute autre idée inspirée d'un site météo...
+
+# Les différentes étapes d'un échange sur le site 
