@@ -82,6 +82,7 @@ un raspberry.
     Lisez rapidement les éléments dans l'ordre. La partie qui vous intéresse le plus et la
     [dernière](http://qkzk.xyz/docs/nsi/cours_premiere/ihm_web/flask/)
 * [api d'openweather map](https://openweathermap.org/api)
+* [Exemple d'utilisation de l'api OWM en Python](https://code-maven.com/openweathermap-api-using-python)
 
 # Extensions
 
