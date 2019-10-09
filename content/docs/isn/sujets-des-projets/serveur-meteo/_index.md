@@ -1,7 +1,7 @@
 ---
-author: qu3nt1n
+author: qkzk
 draft: false
-title: Serveur meteo
+title: Serveur méteo
 weight: 9
 ---
 
@@ -16,12 +16,13 @@ Le principe est de créer :
 * un serveur web en Python avec [Flask](https://flask.palletsprojects.com/en/1.1.x/tutorial/) qui sert cette page
 * une application intégrée au serveur qui communique avec [openweathermap](https://openweathermap.org/api)
 
+
 ---
 
 ## Utilisation
 
 * L'utilisateur se connecte via le navigateur sur votre site
-* Il remplit un formulaire demandant précisant une ville et le type de requête (instantanné, prévision)
+* Il remplit un formulaire demandant précisant une ville et le type de requête (instantané, prévision)
 * Votre serveur transforme ça en une requête API pour openweathermap et envoie la question
 * openweathermap renvoie un json
 * votre application en extraie les infos
@@ -73,6 +74,22 @@ C'est aussi cet équipier qui pourra commencer les extensions "physiques" du
 projet : remplacer les requêtes à openweathermap en une communication avec
 un raspberry.
 
+
+---
+
+Prérequis
+
+Je vous invite à tous réaliser les étapes suivantes avant de commencer ce projet
+
+* Cours Python (qkzk > NSI > cours python)
+
+  Parties 1 à 4 (bases, conditions, boucles, fonctions). Traitez les exos à une étoile
+
+* Cours de première "IHM sur le web" (qkzk > NSI > première > IHM sur le web)
+    La dernière étape est le même projet que vous, mais réalisé en beaucoup moins de temps et dirigé par mes soins. Inutile de comparer ça n'aurait aucun sens, les conditions changent
+    trop.
+
+
 ---
 
 # Sources :
@@ -84,6 +101,8 @@ un raspberry.
 * [api d'openweather map](https://openweathermap.org/api)
 * [Exemple d'utilisation de l'api OWM en Python](https://code-maven.com/openweathermap-api-using-python)
 
+---
+
 # Extensions
 
 * Créer une carte de France et intégrer la météo de différentes villes
@@ -91,4 +110,79 @@ un raspberry.
 * Utilisation de capteurs pour récupérer la météo locale avec un raspberry
 * Toute autre idée inspirée d'un site météo...
 
-# Les différentes étapes d'un échange sur le site 
+---
+
+# Les étapes de la requête et le trajet de l'information
+
+
+## Les éléments
+
+Le client (navigateur web)
+
+Le serveur web (Python + Flask)
+
+Et le site Openweathermap
+
+* ![Le client, le serveur flask et openweathermap](/uploads/docsnsi/ihm_web/img/meteo_flask/meteo_flask(9).svg)
+
+
+
+## Le serveur se lance
+
+Quand on exécute le script Python du serveur il attend qu'un client se connecte...
+
+* ![Le serveur se lance et sert une page *index.html*](/uploads/docsnsi/ihm_web/img/meteo_flask/meteo_flask(8).svg)
+
+
+## Le client se connecte sur le site
+
+L'utilisateur a tapé l'adresse du site dans sa barre d'adresse...
+
+* ![Le client se connecte sur le site](/uploads/docsnsi/ihm_web/img/meteo_flask/meteo_flask(7).svg)
+
+
+## Le serveur web renvoie alors une page html
+
+La page html est un formulaire à remplir (ville ?) avec un bouton _submit_
+
+* ![première requête : *index.html*, réponse du serveur](/uploads/docsnsi/ihm_web/img/meteo_flask/meteo_flask(6).svg)
+
+
+## Formulaire rempli, _submit_
+
+L'utilisateur a rempli son formulaire avec _Lille_ et cliqué sur submit
+
+* ![l'utilisateur remplit le formulaire (_Lille_) sur le client, clique *submit*](/uploads/docsnsi/ihm_web/img/meteo_flask/meteo_flask(4).svg)
+
+
+## Le serveur reçoit et traite la requête
+
+Le serveur Python récupère les données du formulaire et appelle une fonction...
+
+* ![la requête est envoyée au serveur web, qui la traite...](/uploads/docsnsi/ihm_web/img/meteo_flask/meteo_flask(3).svg)
+
+
+## Le serveur envoie à son tour une requête à OWM...
+
+La requête est transmise à OWM via une URL (string...) qu'on formate
+
+* ![le serveur envoie une requête à OMW avec leur API (_...weather lille..._)](/uploads/docsnsi/ihm_web/img/meteo_flask/meteo_flask(2).svg)
+
+
+## OWM lit traite la requête et renvoie la météo dans un JSON
+
+JSON (Javascript Object Notation) est le format le plus populaire pour échanger des données sur le web.
+Les données ressemblent à un dictionnaire Python. Python manipule sans difficulté les JSON.
+
+* ![OWM lit la requête et répond avec un JSON contenant la météo (*...temp 12.3...*)](/uploads/docsnsi/ihm_web/img/meteo_flask/meteo_flask(1).svg)
+
+
+## Le serveur traite la réponse et injecte la météo dans une page _resultat.html_
+
+Elle est envoyée au client
+
+Qui l'affiche dans le navigateur.
+
+L'utilisateur lit la météo de Lille : **il fait 12.3°C** !
+
+* ![Le serveur traite la réponse JSON et sert une page au client (*`<p>12.3°C</p>`*)](/uploads/docsnsi/ihm_web/img/meteo_flask/meteo_flask.svg)
