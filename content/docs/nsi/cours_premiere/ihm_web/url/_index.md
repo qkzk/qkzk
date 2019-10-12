@@ -8,9 +8,9 @@ weight: 2
 
 Dans la barre d'adresse de votre navigateur web vous trouverez, quand
 vous visitez un site, des choses du genre :
-"https://qkzk.github.io/docs/nsi/cours_premiere/programmation/comparaison/".
+"https://qkzk.xyz/docs/nsi/cours_premiere/programmation/comparaison/".
 Nous aurons l'occasion de reparler du "http" et du
-"qkzk.github.io" plus tard. La partie
+"qkzk.xyz" plus tard. La partie
 "/docs/nsi/cours_premiere/programmation/comparaison/" s'appelle une URL.
 
 Une URL (Uniform Resource Locator) permet d'identifier une ressource

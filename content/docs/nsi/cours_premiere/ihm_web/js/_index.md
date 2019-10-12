@@ -15,26 +15,60 @@ programmation, mais juste d'étudier quelques exemples d'utilisation du
 JavaScript, notamment dans le cas des interactions entre un utilisateur
 et une page web.
 
-Avant d'entrer dans le vif du sujet, un petit rappel historique :
-JavaScript a été créé en dix jours par Brendan Eich en 1995. Malgré son
-nom, JavaScript n'a rien à voir avec le langage Java, même si Brendan
-Eich affirme s'être inspiré de nombreux langage, dont Java, pour mettre
-au point JavaScript. Après des débuts chaotiques, il est, comme déjà dit
-plus haut, devenu incontournable dans le développement web.
+---
+
+Avant d'entrer dans le vif du sujet, un petit historique :
+
+* JavaScript a été créé en dix jours par Brendan Eich en 1995. Malgré son
+    nom, JavaScript n'a rien à voir avec le langage Java, même si Brendan
+    Eich affirme s'être inspiré de nombreux langage, dont Java, pour mettre
+    au point JavaScript. Après des débuts chaotiques, il est, comme déjà dit
+    plus haut, devenu incontournable dans le développement web.
+
+
+* JavaScript a été conçu pour être exécuté directement _par le navigateur_ et
+    côté client.
+
+    Quand vous ouvrez une page web contenant du JS, il sera exécuté par _votre_
+    machine et non par le serveur. C'est très important, car cela permet au
+    serveur de limiter sa _charge_. 100 clients en même temps ? Il sert
+    _une fois_ la page par client et les calculs sont effectués chez ceux-ci.
+
+* HTML5 est une norme qui voit le jour en 2014 décrivant le web moderne.
+  Par abus de langage, HTML5 désigne le trio 'html, css, js'.
+
+* Depuis quelques années JavaScript a beaucoup évolué et il existe de nombreux
+  projets majeurs :
+
+    * possibilité d'exécuter un **serveur** qui fonctionne en JS :
+        c'est **node.js** (2009)
+    * possibilité de créer des applications de bureau qui fonctionnent sur un
+        serveur **node.js** et s'exécutent dans "chromium"
+        (partie open source de Google Chrome). Par exemple : `atom`
+        (présent sur vos machines) qui utilise la technologie
+        **electron (2013/2016)**.
+
+* JavaScript est le langage informatique le plus populaire depuis quelques
+  années, il a surpassé Java, C/C++ avec l'essor du web. Il est talonné par
+  Python. En 2019, presque tous les éléments "dynamiques" d'une page web moderne
+  sont programmés en JavaScript.
+
+---
+
 
 Commençons par mettre en place notre environnement de travail :
 
 ## À faire vous-même 1
 
-Dans votre répertoire de travail, créez 3 fichiers : index.html,
-style.css et script.js
+Dans votre répertoire de travail, créez 3 fichiers : `index.html`,
+`style.css` et `script.js`
 
 ---
 
 ## À faire vous-même 2
 
 Après avoir ouvert le fichier index.html à l'aide d'un éditeur de
-texte, saisissez le code ci-dessous :
+texte (sublime text, atom), saisissez le code ci-dessous :
 
 ~~~html
 <!doctype html>
@@ -80,7 +114,7 @@ Après avoir ouvert le fichier script.js à l'aide d'un éditeur de
 texte, saisissez le code ci-dessous :
 
 ~~~javascript
-alert("Le JavaScript fonctionne !")
+alert("Le JavaScript fonctionne !");
 ~~~
 
 ---
@@ -135,9 +169,9 @@ Modifiez le code HTML comme suit :
 
 Modifiez le code JavaScript comme suit :
 
-~~~JavaScript
+~~~javascript
 function maFonction() {
-    alert("Le JavaScript fonctionne !")
+    alert("Le JavaScript fonctionne !");
 }
 ~~~
 
@@ -198,6 +232,39 @@ function maFonction() {
 Testez cette nouvelle page en cliquant sur le fichier index.html
 
 ---
+
+## DevTools
+
+Dans Chrome, vous pouvez presser F12 pour ouvrir un menu (F12 pour le refermer).
+
+C'est la fenêtre de développement (DevTools). C'est un outil très puissant
+dont je ne prétends pas avoir fait le tour...
+
+Parmi les éléments les plus importants on trouve :
+
+* L'onglet **Element**, où vous trouvez le code html de la page devant vous.
+  * On peut modifier localement le style ou le contenu.
+      C'est dans cette page qu'on essaie les styles CSS. Rien n'est sauvegardé
+      mais c'est rapide.
+  * On peut examiner en détail tous les éléments de style appliqués à une balise
+   avec le sous menu "computed"
+* L'onglet **Console**, où s'affichent les erreurs et les messages obtenus par
+  l'instruction : `console.log( ..quelque chose.. )`. Elle est similaire à
+  celle de Python : `print( ..quelque chose.. )`
+* L'onglet **Sources**, qui vous présente les fichiers sources utilisés par la
+    page. On peut débugguer le code JavaScript depuis les sources. C'est ici
+    qu'on comprend les erreurs et résout les problèmes.
+
+Faîtes un peu le tour, votre page ne risque rien. Ne modifiez par les options de
+`DevTools`, elles sont sauvegardées dans Chrome.
+
+Un dernier mot d'historique, `devTools` est une copie de `FireBug`, crée en 2005
+et qui est considéré comme un changement fondatemental dans l'approche du
+développement web.
+
+---
+
+Revenons à votre page.
 
 Dans l'exemple ci-dessous, nous avons déjà ajouté un id ("monPara") à
 la balise "p" dans notre code HTML. Dans le code JavaScript, la ligne
@@ -287,10 +354,12 @@ la classe CSS "rouge" (si cette association n'existe pas, cette ligne
 n'a aucun effet). Dans un deuxième temps, on associe la classe CSS
 "vert" avec la balise d'id "monPara" avec la ligne
 
-    document.querySelector("#monPara").classList.add("vert");
 
+~~~javascript
+document.querySelector("#monPara").classList.add("vert");
+~~~
 
-Le principe est identique avec la fonction "foncRouge()".
+Le principe est identique avec la fonction "`foncRouge()`".
 
 Il est également possible de modifier le contenu d'une balise HTML :
 
@@ -325,6 +394,24 @@ function modifMessage() {
 
 Après avoir analysé le code ci-dessus, testez cette nouvelle page en
 cliquant sur le fichier index.html
+
+**En détail, analyse du code de la fonction :**
+
+* `document` permet de selectionner toute la page html.
+* `document.querySelector(...)` va chercher dans la page un élément portant
+  l'attribut entre les parenthèses
+* `document.querySelector("#monPara")` va trouver l'élément portant l'id `#monPara`
+* `document.querySelector("#monPara").innerHTML` désigne le _contenu_ compris
+  entre les balises.
+* `document.querySelector("#monPara").innerHTML = "Bravo, vous avez cliqué sur le bouton !"`
+  On écrase ce contenu et le remplace par "Bravo...". Le code HTML de la page
+  est modifié.
+* Les " . " qui séparent les éléments font référence à de la programmation
+    **"objet"**.
+
+    Python aussi est langage "objet" est on rencontre aussi cette notation,
+    par exemple : "`[1, 2].append(3)`"
+
 
 ---
 
@@ -414,3 +501,5 @@ possible de mettre en place dans le code HTML des événements. Un
 événement donné pourra déclencher l'exécution d'instructions
 JavaScript.
 :::
+
+---

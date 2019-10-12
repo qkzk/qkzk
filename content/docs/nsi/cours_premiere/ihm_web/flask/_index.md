@@ -7,36 +7,46 @@ weight: 7
 # Formulaire d'une page web : Utilisation de Flask
 
 Comme déjà évoqué dans la partie consacrée au modèle
-[client-serveur](nsi_prem_clsv.html), un serveur web (aussi appelé
+[client-serveur](/docs/nsi/cours_premiere/ihm_web/clsv/), un serveur web (aussi appelé
 serveur HTTP) permet de répondre à une requête HTTP effectuée par un
-client (très souvent un navigateur web). Nous allons travailler avec le
+client (très souvent un navigateur web).
+
+Nous allons travailler avec le
 serveur web qui est installé sur votre ordinateur. Nous allons donc
 avoir une configuration un peu particulière puisque le client et le
 serveur vont se trouver sur la même machine. Cette configuration est
 classique lorsque l'on désire effectuer de simples tests. Nous aurons
 donc 2 logiciels sur le même ordinateur : le client (navigateur web) et
-le serveur (serveur web), ces 2 logiciels vont communiquer en utilisant
-le [protocole HTTP](nsi_prem_http.html). Il existe de nombreux serveurs
-web, mais le plus utilisé se nomme Apache. Nous n'allons pas utiliser
-Apache, car nous allons travailler avec le framework Python Flask. Ce
-framework va nous permettre de générer des pages web côté serveur, il
-possède son propre serveur web.
+le serveur (serveur web).
+
+Ces 2 programmes vont communiquer en utilisant
+le [protocole HTTP](/docs/nsi/cours_premiere/ihm_web/http/).
+
+Il existe de nombreux serveurs
+web, les plus utilisés étant Apache et NGINX.
+Nous n'allons pas utiliser
+Apache, car nous allons travailler avec le framework Python Flask.
+
+Ce framework (cadre de développement) va nous permettre de
+
+* générer des pages web côté serveur,
+* servir ces pages web avec son propre serveur web.
 
 Nous allons commencer par un cas très simple où le serveur va renvoyer
 au client une simple page HTML statique (ne pas hésiter à consulter la
-partie consacrée au modèle [client-serveur](nsi_prem_clsv.html) pour
+partie consacrée au modèle [client-serveur](/docs/nsi/cours_premiere/ihm_web/clsv/) pour
 plus de précision sur ce terme "statique").
 
 ## À faire vous-même 1
 
-Dans votre répertoire personnel, créez un répertoire nommé "flask".
+Dans votre répertoire personnel, créez un répertoire nommé "serveur_essai".
 
 ---
 
 ## À faire vous-même 2
 
 À l'aide de Thonny, créez un fichier Python "views.py" (ce fichier
-devra être sauvegardé dans le répertoire "flask" précédemment créé).
+devra être sauvegardé dans le répertoire "serveur_essai" précédemment créé).
 Saisissez le code suivant dans le fichier "views.py"
 
 
@@ -69,18 +79,22 @@ nous l'avons déjà dit, notre serveur et notre client se trouvent sur la
 même machine, avec le "localhost", on indique au navigateur que le
 serveur web se trouve sur le même ordinateur que lui (on parle de
 machine locale). Dans un cas normal, la barre d'adresse devrait être
-renseignée avec l'adresse du serveur web. Le "5000" indique le port,
-nous n'étudierons pas cet aspect des choses ici, vous devez juste
-savoir que le "5000" doit suivre le "localhost".
+renseignée avec l'adresse du serveur web. Le ":5000" indique le port,
+nous n'étudierons pas cet aspect des choses aujourd'hui, vous devez juste
+savoir que le ":5000" doit suivre le "localhost".
 
 Stoppez l'exécution du programme dans Thonny.
+
+---
 
 Essayons de comprendre en détail ce qui s'est passé :
 
 En exécutant le programme Python ci-dessus, le framework Flask a lancé
 un serveur web. Ce serveur web attend des requêtes HTTP sur le port
 5000. En ouvrant un navigateur web et en tapant "localhost:5000", nous
-faisons une requête HTTP, le serveur web fourni avec Flask répond à
+faisons une requête HTTP.
+
+Le serveur web fourni avec Flask répond à
 cette requête HTTP en envoyant une page web contenant uniquement
 `<p>Tout fonctionne parfaitement</p>`.
 
@@ -96,15 +110,15 @@ Nous importons la bibliothèque Flask
 app = Flask(__name__)
 ~~~
 
-Nous créons un objet app : cette ligne est systématique nécessaire.
+Nous créons un objet app : cette ligne est systématiquement nécessaire.
 
 ~~~python
 @app.route('/')
 ~~~
 
 Nous utilisons ici un décorateur (cette notion de décorateur ne sera pas
-traitée en NSI). Vous devez juste comprendre la fonction qui suit ce
-décorateur ("index"), sera exécutée dans le cas où le serveur web
+traitée en NSI). Vous devez juste comprendre la fonction ("index") qui suit ce
+décorateur, sera exécutée dans le cas où le serveur web
 recevra une requête HTTP avec une URL correspondant à la racine du site
 ('/'), c'est à dire, dans notre exemple, le cas où on saisie dans la
 barre d'adresse "localhost:5000/" (ou simplement "localhost:5000")
@@ -124,7 +138,10 @@ app.run(debug=True)
 ~~~
 
 Cette ligne permet de lancer le serveur, elle sera systématiquement
-présente.
+présente. Le paramètre `debug=True` permet d'avoir des informations de
+debuggage dans le navigateur.
+
+Ce n'est souhaitable que durant le _développement_ d'un site web.
 
 ## À faire vous-même 4
 
@@ -160,7 +177,7 @@ plus satisfaisante :
 
 ## À faire vous-même 5
 
-Dans votre répertoire "Flask", créez un répertoire "templates". Dans
+Dans votre répertoire "serveur_web", créez un répertoire "templates". Dans
 ce répertoire templates, créez un fichier index.html. Saisissez le code
 HTML ci-dessous dans ce fichier index.html
 
@@ -182,7 +199,7 @@ HTML ci-dessous dans ce fichier index.html
 
 ## À faire vous-même 6
 
-Modifiez le programme views.py comme suit :
+Modifiez le programme `views.py` comme suit :
 
 ~~~python
 from flask import Flask, render_template
@@ -316,13 +333,21 @@ secondes").
 Le fichier "index.html" ne contient donc pas du HTML (même si cela
 ressemble beaucoup à du HTML), car les paramètres `{{heure}}`, `{{minute}}`
 et `{{seconde}}` n'existent pas en HTML. Le fichier "index.html"
-contient en fait un langage de template nommé Jinja. Jinja ressemble
-beaucoup au HTML, mais il rajoute beaucoup de fonctionnalités par
+contient en fait un langage de template nommé Jinja.
+
+Jinja ressemble ajoute beaucoup de fonctionnalités par
 rapport au HTML (notamment les paramètres entourés d'une double
-accolade comme `{{heure}}`). Si vous utilisez Jinja seul (sans un
-framework comme Flask), les paramètres ne seront pas remplacés et votre
-navigateur affichera "Le serveur fonctionne parfaitement, il est
+accolade comme `{{heure}}`).
+
+Si vous utilisez Jinja seul (sans un framework comme Flask),
+les paramètres ne seront pas remplacés et votre
+navigateur affichera :
+
+"Le serveur fonctionne parfaitement, il est
 `{{heure}}` h `{{minute}}` minutes et `{{seconde}}` secondes".
+
+C'est donc Flask qui transforme ces `{{ }}` en du code HTML compréhensible par
+le navigateur.
 
 Nous allons maintenant nous intéresser à la gestion des formulaires.
 
@@ -576,3 +601,17 @@ ne sont pas directement visibles dans l'URL. Seule l'utilisation du
 protocole sécurisé HTTPS garantit un transfert sécurisé des données
 entre le client et le serveur (les données sont chiffrées et donc
 illisibles pour une personne ne possédant pas la clé de déchiffrement).
+
+
+---
+
+## Poursuite des activités.
+
+La suite des activités est la réalisation d'un mini-projet à l'aide de Flask.
+
+Le point de départ est ce que vous venez d'obtenir.
+
+Il faut donc vous assurer d'avoir compris ce que vous venez de faire avant
+de poursuivre, sans quoi vous serez incapable de l'adapter.
+
+Prenez le temps de relire cette partie et les précédentes si nécessaire.

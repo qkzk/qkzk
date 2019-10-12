@@ -64,10 +64,41 @@ Qu'est-ce qui s'affiche dans la fenêtre ?
 
 ---
 
+**Remarques concernant les TP :**
+
+
+C'est dans ces "fiddles" que vous développerez vos réponses _courtes_.
+
+1. Pensez à sauvegarder régulièrement ce
+"fiddle" (bouton save). La première fois que vous le faîtes, vous obtenez
+alors une nouvelle adresse avec un code.
+
+2. **Ajoutez cette adresse à votre compte rendu** et assurez-vous qu'elle fonctionne
+_avant_ de poursuivre.
+
+3. Chaque fois que vous commencez une partie ou changez de fichier, vous créez
+    un nouveau fiddle, le sauvegarez et le référencez.
+
+    Par exemple :
+
+    * HTML/CSS, première partie : [https://jsfiddle.net/num3r04l4n01x/](https://jsfiddle.net/num3r04l4n01x/)
+
+C'est _votre réponse au travail demandé_.
+
+Il est tout à fait possible de copier le contenu de chacun des fichiers et
+de tester localement si fiddle refuse de fonctionner. C'est ce que nous ferons
+pour les réponses _longues_.
+
+Elles seront déposées sur votre drive (dossier partagé / ihm_web/html)
+
+Pensez à donner des noms différents
+
+---
+
 Comme déjà évoqué ci-dessus, en HTML tout est une histoire de balise que
 l'on ouvre et que l'on ferme. Une balise ouvrante est de la forme
 `<nom_de_la_balise>`, les balises fermantes sont de la forme
-`<nom_de_la_balise>`.
+`</nom_de_la_balise>`.
 
 En observant attentivement le code, vous devriez forcément remarquer que
 toute balise ouverte doit être refermée à un moment ou un autre. La
@@ -101,8 +132,10 @@ Notez que dans notre exemple nous respectons bien cette règle
 « d'imbrication » des balises avec la balise `<p>` et la balise
 `<strong>`.
 
+---
+
 Il est important de comprendre que chaque balise a une signification
-qu'il faut bien respecter (on parle de la sémantique des balises). Par
+qu'il faut bien respecter (on parle de la _sémantique_ des balises). Par
 exemple le texte situé entre la balise ouvrante et fermante `<h1>` est
 obligatoirement un titre important (il existe des balises `<h2>`,
 `<h3>`......qui sont aussi des titres, mais des titres moins
@@ -116,15 +149,21 @@ de sauter une ligne, la balise `<br/>` (balise qu'il faut d'ailleurs
 éviter d'utiliser pour différentes raisons que nous n'aborderons pas
 ici).
 
+On noterait :
+
+~~~html
+<p>Première ligne <br/> Deuxième ligne </p>
+~~~
+
 Il est possible d'ajouter des éléments à une balise ouvrante, on parle
 d'attribut. Une balise peut contenir plusieurs attributs :
 
 ~~~html
-<ma_balise attribut_1= "valeur_1" attribut_2="valeur_2">
+<mabalise attribut_1= "valeur_1" attribut_2="valeur_2">
 ~~~
 
 Il existe beaucoup d'attributs différents, nous allons nous contenter
-de 2 exemples avec l'attribut id (id pour identifiant) et class. Nous
+de 2 exemples avec les attributs `id` (id pour identifiant) et `class`. Nous
 verrons l'intérêt de ces attributs dans l'activité suivante.
 
 ## À faire vous-même 2
@@ -161,7 +200,7 @@ Dans JSFIDDLE, il est possible d'écrire du CSS dans la fenêtre en haut
 <p>Ceci est un <strong>paragraphe</strong>. Avez-vous bien compris ?</p>
 ~~~
 
-Écrivez le code CSS suivant :
+Écrivez le code CSS suivant (dans la fenêtre CSS !):
 
 ~~~css
 h1
@@ -215,10 +254,9 @@ utilisant l'id du paragraphe (en CSS l'id se traduisant par le signe
 Il est aussi possible d'utiliser l'attribut class à la place de l'id.
 Dans le CSS on utilisera le point . à la place du #.
 
-La différence entre "id" et "class" n'est pas très importante.
-
-L'attribut "class" permet de donner le même nom à plusieurs reprises
-dans une même page.
+* L'attribut "class" permet de donner la même _classe_ à plusieurs éléments
+  d'une page.
+* L'attribut "id" désigne un unique élément _identifié_.
 
 Si nous avions eu un 3e paragraphe, nous aurions pu avoir :
 `<p class="para_1">Voici un 3e paragraphe<p>`, mais nous n'aurions
@@ -233,7 +271,7 @@ Nous allons créer 2 fichiers : un fichier qui contiendra du HTML
 
 ## À faire vous-même 5
 
-À l'aide d'un éditeur de texte, créer un nouveau fichier.
+À l'aide d'un éditeur de texte (sublime text, atom...), créer un nouveau fichier.
 
 Sauvegardez-le en précisant son nom, par exemple "index.html".
 
@@ -254,7 +292,7 @@ sauvegarder quand vous avez terminé) :
 </html>
 ~~~
 
-Testez votre code à l'aide d'un navigateur web (Firefox ou Chrome) en
+Testez votre code à l'aide d'un navigateur web (Chrome) en
 "double-cliquant" sur le fichier index.html
 
 ---
@@ -273,19 +311,19 @@ Tout votre code HTML devra se trouver entre ces 2 balises.
 Le reste des balises devraient vous êtes inconnues. Passons-les en revue
 :
 
-La première ligne (`<!doctype html>`) permet d'indiquer au navigateur
-que nous utiliserons la dernière version du HTML, le fameux HTML5.
+* La première ligne (`<!doctype html>`) permet d'indiquer au navigateur
+  que nous utiliserons la dernière version du HTML, le fameux HTML5.
 
-La balise `<html>` est obligatoire, l'attribut lang="fr" permet
-d'indiquer au navigateur que nous utiliserons le français pour écrire
-notre page.
+* La balise `<html>` est obligatoire, l'attribut lang="fr" permet
+  d'indiquer au navigateur que nous utiliserons le français pour écrire
+  notre page.
 
-Les balises `<head>...<head>` délimitent ce que l'on appelle
-l'en-tête. L'en-tête contient, dans notre exemple, 2 balises : la
-balise `<meta charset="utf-8">` qui permet de définir l'encodage des
-caractères (utf-8) et la balise `<title>` qui définit le titre de la
-page (attention ce titre ne s'affiche pas dans le navigateur, ne pas
-confondre avec la balise `<h1>`).
+* Les balises `<head>...<head>` délimitent ce que l'on appelle
+  l'en-tête. L'en-tête contient, dans notre exemple, 2 balises : la
+  balise `<meta charset="utf-8">` qui permet de définir l'encodage des
+  caractères (utf-8) et la balise `<title>` qui définit le titre de la
+  page (attention ce titre ne s'affiche pas dans le navigateur, ne pas
+  confondre avec la balise `<h1>`).
 
 ## À faire vous-même 6
 
@@ -487,3 +525,11 @@ Testez ce code
 ## À faire vous-même 9
 
 Élaborez une page HTML en utilisant les balises vues ci-dessus.
+
+* Le contenu de la page sera ce document. Essayez de respecter la structure
+  d'origine (titres, sous-titres, liens, images).
+* La mise en forme (CSS) est laissée libre. On doit voir apparaître chacune
+  des propriétés CSS citées dans la page.
+
+
+---
