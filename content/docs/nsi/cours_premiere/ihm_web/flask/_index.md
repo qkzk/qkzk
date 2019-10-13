@@ -607,7 +607,7 @@ illisibles pour une personne ne possédant pas la clé de déchiffrement).
 
 ## Poursuite des activités.
 
-La suite des activités est la réalisation d'un mini-projet à l'aide de Flask.
+Vous allez maintenant réaliser un mini-projet à l'aide de Flask.
 
 Le point de départ est ce que vous venez d'obtenir.
 

@@ -235,22 +235,24 @@ Testez cette nouvelle page en cliquant sur le fichier index.html
 
 ## DevTools
 
-Dans Chrome, vous pouvez presser F12 pour ouvrir un menu (F12 pour le refermer).
+Dans Chrome, vous pouvez presser F12 pour ouvrir la fenêtre de
+développement (F12 pour la refermer).
 
-C'est la fenêtre de développement (DevTools). C'est un outil très puissant
-dont je ne prétends pas avoir fait le tour...
+C'est un outil très puissant qui permet de comprendre, de tester, d'analyser
+le code d'une page web.
 
 Parmi les éléments les plus importants on trouve :
 
 * L'onglet **Element**, où vous trouvez le code html de la page devant vous.
   * On peut modifier localement le style ou le contenu.
-      C'est dans cette page qu'on essaie les styles CSS. Rien n'est sauvegardé
-      mais c'est rapide.
+      C'est dans cet onglet qu'on essaie les styles CSS. Rien n'est sauvegardé
+      (il faut transcrire les essais dans le fichier source) mais c'est rapide.
   * On peut examiner en détail tous les éléments de style appliqués à une balise
    avec le sous menu "computed"
 * L'onglet **Console**, où s'affichent les erreurs et les messages obtenus par
-  l'instruction : `console.log( ..quelque chose.. )`. Elle est similaire à
-  celle de Python : `print( ..quelque chose.. )`
+  l'instruction : `console.log( ..quelque chose.. )`. Cette console est
+  similaire à celle de Python.
+  L'équivalent javascript de `print(abc)` est `console.log(abc);`
 * L'onglet **Sources**, qui vous présente les fichiers sources utilisés par la
     page. On peut débugguer le code JavaScript depuis les sources. C'est ici
     qu'on comprend les erreurs et résout les problèmes.
