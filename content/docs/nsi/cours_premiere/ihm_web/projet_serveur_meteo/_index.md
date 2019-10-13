@@ -1,5 +1,5 @@
 ---
-title: Projet serveur méteo
+title: Mini Projet serveur méteo
 author: qkzk
 weight: 8
 ---
