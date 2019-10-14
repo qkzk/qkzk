@@ -76,19 +76,20 @@ Python emploie [Timsort](https://fr.wikipedia.org/wiki/Timsort) (_Tim Peters_, 2
 
 1. `liste.sort()` : **seulement les listes**
 
-~~~~~~python
+~~~python
 >>> liste = [4,3,2]
 >>> liste.sort() # change la liste !
 >>> liste
 [2, 3, 4]
-~~~~~~
+~~~
+
 2. `sorted(objet)` : tous les objets **itérables**
 
-~~~~~~python
+~~~python
 >>> strs = ['ccc', 'aaaa', 'd', 'bb']
 >>> sorted(strs, key=len) # ne change pas l'objet
 ['d', 'bb', 'ccc', 'aaaa']
-~~~~~~
+~~~
 
 <!-- ne pas entrer dans les détails -->
 
@@ -108,18 +109,19 @@ J'ajouterai **Le tri à bulle**, **le tri fusion** et **le tri rapide**
 
 ## Comparons ces exemples :
 
-  Nom             Cas moyen          Pire des cas      Espace
-------------   ---------------    ----------------  ----------
-  Fusion        $n \log n$        $n \log n$          $n$
-  Rapide        $n \log n$        $n^2$               $n$
-  Insertion     $n^2$             $n^2$               $1$
-  Selection     $n^2$             $n^2$               $1$
-  Bulle         $n^2$             $n^2$               $1$
+| Nom       | Cas moyen  | Pire des cas | Espace |
+|-----------|------------|--------------|--------|
+| Fusion    | $n \log n$ | $n \log n$   | $n$    |
+| Rapide    | $n \log n$ | $n^2$        | $n$    |
+| Insertion | $n^2$      | $n^2$        | $1$    |
+| Selection | $n^2$      | $n^2$        | $1$    |
+| Bulle     | $n^2$      | $n^2$        | $1$    |
 
 $\log n$ croît moins vite que $n$ vers l'$\infty$
+
 $n \log n$ : mieux que $n^2$
 
-## Limites, contraintes (en théorie)
+## Limites, contraintes (en théorie)
 
 * En terme de complexité calculatoire, $n \log n$ est mieux que $n^2$
   Un tri _par comparaison_ ne peut pas faire mieux que ça.
@@ -133,7 +135,7 @@ $n \log n$ : mieux que $n^2$
 * Enormément de données ? Il faut sortir l'artillerie lourde...
 
 
-#Tri par insertion
+# Tri par insertion
 
 ## Présentation
 
@@ -164,7 +166,7 @@ Tri en _place_ : il n'utilise pas plus de mémoire
 
 ## Python : tri par insertion
 
-~~~~~~Python
+~~~python
 def tri_insertion(A):
     i = 1
     while i < len(A):
@@ -173,7 +175,7 @@ def tri_insertion(A):
             A[j-1], A[j] = A[j], A[j-1]
             j = j - 1
         i = i + 1
-~~~~~~
+~~~
 
 [InteractivePython.org](http://interactivepython.org/courselib/static/pythonds/SortSearch/TheInsertionSort.html)
 
@@ -196,13 +198,13 @@ Tri en _place_ : il n'utilise pas plus de mémoire
 
 ## Exemple
 
-  Triés                   Non Triés            Plus petit restant
-----------------        -----------------    ----------------------
-  ()                      (1, 3, 4, 2)             (1)
-  (1)                     (3, 4, 2)               (2)
-  (1, 2)                  (3, 4)                  (3)
-  (1, 2, 3)               (4)                     (4)
-  (1, 2, 3, 4)
+|     Triés    |   Non Triés  | Plus petit restant |
+|:------------:|:------------:|:------------------:|
+|      ()      | (1, 3, 4, 2) |         (1)        |
+|      (1)     |   (3, 4, 2)  |         (2)        |
+|    (1, 2)    |    (3, 4)    |         (3)        |
+|   (1, 2, 3)  |      (4)     |         (4)        |
+| (1, 2, 3, 4) |      ()      |         ()         |
 
 ## Pseudo code
 
@@ -218,7 +220,7 @@ Tri en _place_ : il n'utilise pas plus de mémoire
 
 ## Python
 
-~~~~~~~~python
+~~~python
 def selection(a):
 	n = len(a)
 	for i in range(n):
@@ -227,7 +229,7 @@ def selection(a):
 			if a[m] > a[j]:
         m = j
     a[m],a[i] = a[i],a[m] # on echange
-~~~~~~~~
+~~~
 
 [InteractivePython](http://interactivepython.org/courselib/static/pythonds/SortSearch/TheSelectionSort.html)
 
@@ -250,16 +252,17 @@ C'est une propriété qui est **vraie à chaque étape d'une boucle**
 
 ### Tri par insertion
 
-    i = 1
-    Tant que i < longueur(A)
-        j = i
-        Tant que j > 0 et A[j-1] > A[j]
-            echanger A[j] et A[j-1]
-            j = j - 1
-        fin tant que
-        i = i + 1
+~~~
+i = 1
+Tant que i < longueur(A)
+    j = i
+    Tant que j > 0 et A[j-1] > A[j]
+        echanger A[j] et A[j-1]
+        j = j - 1
     fin tant que
-
+    i = i + 1
+fin tant que
+~~~
 
 ## Tri par insertion : invariant et terminaison
 
@@ -278,19 +281,21 @@ Les `i` premiers éléments sont triés.
 
 ### Tri par selection
 
-    tri_selection(tableau t, entier n)
-        pour i de 1 à n - 1
-            min = i
-            pour j de i + 1 à n
-                si t[j] < t[min], alors min = j
-            fin pour
-            si min = i, alors échanger t[i] et t[min]
+~~~
+tri_selection(tableau t, entier n)
+    pour i de 1 à n - 1
+        min = i
+        pour j de i + 1 à n
+            si t[j] < t[min], alors min = j
         fin pour
-
+        si min = i, alors échanger t[i] et t[min]
+    fin pour
+~~~
 
 ## Tri par sélection : invariant et terminaison
 
 ### Invariant
+
 Les `i` premiers éléments sont triés.
 
 1. C'est vrai dès le départ car on commence à `i = 1`
@@ -314,12 +319,14 @@ Les `i` premiers éléments sont triés.
 :   **Majoration** de **l'espace en mémoire** nécessaire à un algorithme
 
 ## Étude expérimentale
+
 * On trie des tableaux de taille croissante de 1000 à 10000 par pas de 100
   * Déjà triés
   * Aléatoires
   * Triés par ordre inverse
 
 ## Déjà triés
+
 ![Déjà triés](/uploads/docsnsi/algo/insertion_complexite_best_case.png)
 
 Complexité ?
@@ -331,6 +338,7 @@ Complexité ?
 Complexité ?
 
 ## Triés par ordre inverse
+
 ![Triés par ordre inverse](/uploads/docsnsi/algo/insertion_complexite_worst_case.png)
 
 Complexité ?
@@ -375,17 +383,17 @@ Le tri par insertion est de complexité **quadratique**
 
 Le plus facile à comprendre et implémenter
 
-
-    tri_à_bulles(Tableau T)
-        pour i allant de taille de T - 1 à 1
-            tableau_trié = vrai
-            pour j allant de 0 à i - 1
-                si T[j+1] < T[j]
-                    échanger(T[j+1], T[j])
-                    tableau_trié = faux
-            si tableau_trié
-                fin tri_à_bulles
-
+~~~
+tri_à_bulles(Tableau T)
+    pour i allant de taille de T - 1 à 1
+        tableau_trié = vrai
+        pour j allant de 0 à i - 1
+            si T[j+1] < T[j]
+                échanger(T[j+1], T[j])
+                tableau_trié = faux
+        si tableau_trié
+            fin tri_à_bulles
+~~~
 
 ## Tri à bulles
 
@@ -399,7 +407,7 @@ Le plus facile à comprendre et implémenter
 
 ## Tri à bulles en Python
 
-~~~~~~python
+~~~python
 def bubble_sort(l):
     while True:
         changement = False
@@ -409,7 +417,7 @@ def bubble_sort(l):
                 changement = True
         if not changement:
             return l
-~~~~~~
+~~~
 
 ## Tri Fusion
 
