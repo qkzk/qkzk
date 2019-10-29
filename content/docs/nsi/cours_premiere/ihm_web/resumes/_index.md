@@ -7,6 +7,6 @@ weight: 100
 
 Les résumés concernant :
 
-* HTML, CSS
-* Javascript
-* 
+* [URL et HTTP](./resume_url_http)
+* [HTML, CSS](./resume_html_css)
+* [Javascript](./resume_javascript)

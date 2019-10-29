@@ -30,7 +30,7 @@ L'URL peut se terminer par un nom précis de fichier (`index.html`) ou non.
 
 La domaine peut généralement être remplacé par une adresse IP.
 
-Par exemple : [185.199.110.153](https://185.199.110.153) pointe vers le même site que [impots.gouv.fr](https://impots.gouv.fr)
+Par exemple : [145.242.11.26](http://145.242.11.26) pointe vers le même site que [impots.gouv.fr](http://impots.gouv.fr)
 
 C'est le _serveur DNS_ (domain name serveur) qui traduit cette adresse IP en nom de domaine.
 
@@ -45,6 +45,8 @@ Pour se déplacer dans une arborescence on peut employer deux méthodes :
 
     Depuis _dossier1_ ver _fichier6.html_ : `../dossier2/dossier4/fichier6.html`
 
+    `../` permet de remonter d'un dossier. On utilise des `/` entre les dossiers et sous dossiers.
+
 2. Depuis n'importe quel point : **chemin absolu**
 
     `nom_domaine.extension/dossier2/dossier4/fichier6.html`
@@ -55,12 +57,43 @@ Les deux approches conduisent (normalement) au même point.
 
 # Protocole HTTP
 
-## Définition Protocole
+## Définition : Protocole
 
 Un **protocole** est un ensemble de règles qui permettent à deux ordinateurs de communiquer ensemble. HTTP (HyperText Transfer Protocol) permet au client d'effectuer des requêtes à destination d'un serveur web. En retour le serveur web envoie une réponse.
 
-## Requête HTTP
+* HTTP est le "messager" du web.
 
+* HTTP est protocole "application" (on verra plus tard, mais c'est le plus haut niveau) basé sur TCP/IP
+
+  * TCP permet de découper les paquets et de s'assurer qu'ils sont arrivés
+  * IP donne une adresse aux machines sur un réseau
+
+* HTTP est utilisé pour échanger des données et fournir des contenus : images, vidéos, textes (pages web) etc.
+
+* HTTP est un protocole client / serveur.
+
+    * Le client (généralement le navigateur) émet une requête,
+    * Le serveur renvoie une réponse à la requête.
+
+## Quelques détails sur HTTP
+
+1. C'est un **protocole sans connexion** (connectionless) : après émission d'une requête, la connexion est fermée (contrairement à un jeu en ligne où la connexion est maintenue durant la partie). Le serveur réétabli la connexion pour envoyer la réponse. Et il ferme la connexion.
+2. HTTP **peut envoyer n'importe quel type de données** tant que les deux ordinateurs sont capables de les lire. Le plus souvent : texte, image, vidéos etc. mais pas que !
+3. HTTP est un **protocole "sans état"** (stateless) : le client et le serveur se connaissent que durant l'émission d'une requête ou la réception d'une réponse. Ensuite pour se parler à nouveau, ils doivent fournir à nouveau l'information.
+
+Moins important :
+
+1. HTTP a été crée en 1991 par Tim Berners Lee pour transférer des pages web,
+2. HTTP a rapidement évolué et a été massivement adopté dans les années 90.
+
+
+## Cycle requête / réponse HTTP
+
+**Le client envoie une requête, le serveur renvoie une réponse.**
+
+![cycle requête reponse http](/uploads/docsnsi/ihm_web/img/http_request_response_cycle.svg)
+
+## Requête HTTP
 
 Exemple de requête HTTP  :
 
@@ -85,7 +118,7 @@ Ici :
 * Le navigateur est Mozilla 5.0 (firefox...),
 * On attend une réponse en texte formaté en HTML.
 
-## Méthode employée
+### Méthode employée
 
 Il existe de nombreuses méthodes HTTP (parfois appelées _verbes_) :
 
@@ -104,8 +137,9 @@ On utilisera principalement les deux premières :
 * **GET** : demande une représentation d'une ressource : obtenir une page web, un fichier, une donnée.
 * **POST** : envoie une entité vers la ressource : soumettre des données au serveur.
 
-## Réponse du serveur à une requête
+## Réponse HTTP du serveur à une requête
 
+Un exemple de réponse
 
 ~~~html
 HTTP/1.1 200 OK
@@ -127,17 +161,17 @@ Content-Type: text/html; charset=UTF-8
 </html>
 ~~~
 
-Quelques détails :
+### Quelques détails :
 
 * Première ligne : `HTTP/1.1 200 OK` version de HTTP et code réponse.
     Parmi les codes courant on trouve :
 
-    * 200 : succès de la requête,
-    * 301/302 : redirection,
+    * **200 : succès de la requête,**
+    * 301, 302 : redirection,
     * 401 : utilisateur non authentifié,
-    * 403 : accès refusé,
-    * 404 : ressource introuvable,
-    * 500/503 : erreur serveur,
+    * **403 : accès refusé,**
+    * **404 : ressource introuvable,**
+    * **500, 503 : erreur serveur,**
     * 504 : le serveur n'a pas répondu.
 
     [Liste complète des codes](https://fr.wikipedia.org/wiki/Liste_des_codes_HTTP)
@@ -150,19 +184,20 @@ Quelques détails :
 
     La connexion est fermée après chaque requête terminée. C'est normal.
 
-4. Cinquième et sixième lignes :
+* Cinquième et sixième lignes :
 
-    `Transfer-Encoding: chunked
+    `Transfer-Encoding: chunked`
+
     `Content-Type: text/html; charset=UTF-8`
 
     Le contenu est découpé en plusieurs paquets, c'est du texte formaté en HTML et encodé en utf-8.
 
-5. Le corps du message est ce qui suit.
+* Le corps du message est ce qui suit.
 
 Souvenons nous que cette réponse est en fait une série de bit que le client interprète comme une réponse HTTP. Ce sont des _bits_ qui transitent sur le réseau.
 
 
-## Contenu de la page.
+### Contenu de la page.
 
 Le contenu "habituel" d'une page web :
 
@@ -183,22 +218,24 @@ Le contenu "habituel" d'une page web :
 Il est généralement envoyé en réponse à une requête (GET, POST) APRES l'entête dans le CORPS de la requête
 
 
-## Etapes du protocole HTTPS
+## Etapes supplémentaires du protocole HTTPS
 
 **HTTPS** pour **SECURED** HTTP
 
-1. Demande du client d'établir une connexion sécurisée (http**s** ...)
-2. Réponse du serveur : OK. Il fournit un certificat prouvant son identité
-3. Le client (généralement le navigateur) vérifie le certificat et affiche à côté de l'adresse une information à l'utilisateur sur ce certificat (valide, invalide, périmé etc.)
-3. Les échanges sont maintenants chiffrés grâce à une clé publique et une clé privée (chiffrement asynchrone)
+1. Demande du client d'établir une **connexion sécurisée** (http**s** ...)
+2. Réponse du serveur : OK. Il fournit un **certificat** prouvant son identité
+3. **Le client** (généralement le navigateur) **vérifie le certificat et affiche à côté de l'adresse une information à l'utilisateur** sur ce certificat (valide, invalide, périmé etc.)
+3. Les échanges sont maintenants **chiffrés** grâce à une **clé publique et une clé privée** (chiffrement asynchrone)
 
 ## Etablir une connexion HTTP dans un langage de programmation
 
-Python (et presque tous les langages modernes) permet d'établir facilement une connexion HTTP.
+L'usage courant est d'employer un navigateur (chrome, firefox) pour faire des requêtes HTTP. Elles sont alors cachées à l'utilisateur.
+
+**Un développeur peut écrire lui même ses requêtes et les exécuter**. Python (et presque tous les langages modernes) permet d'établir facilement une connexion HTTP.
 
 C'est une méthode courante pour faire communiquer directement les machines. Chaque fois que vous entendez parler _d'API REST_ ou _d'API HTTP_ c'est ce qui est fait.
 
-**API** : Application Programming Interface (interface de programmation d'application). Nom générique pour désigner l'ensemble des méthodes par lequel un logiciel offre ses services à d'autres logiciels.
+**API** : _Application Programming Interface_ (interface de programmation d'application). Nom générique pour désigner l'ensemble des méthodes par lequel un logiciel offre ses services à d'autres logiciels.
 
 En Python 2 lignes suffisent pour obtenir une réponse HTTP et la traiter ensuite.
 
@@ -254,9 +291,9 @@ La requête transmise par _le client_ lui même au serveur :
 
 Dans cet exemple :
 
-* L'utilisateur : moi. Je suis celui qui a tapé les commandes
-* Le client : Python
-* Le serveur : Github (qui heberge mon site) et a répondu à la requête
+* **L'utilisateur** : moi. Je suis celui qui a tapé les commandes
+* **Le client** : Python
+* **Le serveur**: Github (qui heberge mon site) et a répondu à la requête
 
 
 ---
