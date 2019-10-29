@@ -43,7 +43,7 @@ Pour se déplacer dans une arborescence on peut employer deux méthodes :
 
 1. Depuis son point de départ : **chemin relatif**
 
-    Depuis _dossier1_ ver _fichier6.html_ : `../dossier2/dossier4/fichier6.html`
+    Depuis _dossier1_ vers _fichier6.html_ : `../dossier2/dossier4/fichier6.html`
 
     `../` permet de remonter d'un dossier. On utilise des `/` entre les dossiers et sous dossiers.
 
