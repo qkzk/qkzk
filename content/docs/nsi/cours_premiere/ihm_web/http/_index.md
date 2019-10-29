@@ -154,6 +154,7 @@ utilisant le protocole HTTPS :
     pirate. Afin d'éviter ce genre d'attaque, des organismes délivrent
     donc des certificats prouvant l'identité des sites qui proposent
     des connexions "https".
+
 -   à partir de ce moment-là, les échanges entre le client et le serveur
     seront chiffrés grâce à un système de "clé publique - clé privée"
     (nous aborderons le principe du chiffrement par "clé
