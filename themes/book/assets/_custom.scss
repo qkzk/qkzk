@@ -1,5 +1,92 @@
 /* To be overridden by theme user */
 // @import "variables";
+/* Remove default bullets */
+
+
+/*
+NEW NAVIGATION MENUS
+FINALLY WORKS ON FIREFOX !
+*/
+ul, #myUL {
+  list-style-type: none;
+}
+
+/* Remove margins and padding from the parent ul */
+#myUL {
+  margin: 0;
+  padding: 0;
+}
+
+/* Style the caret/arrow */
+.caret {
+  cursor: pointer;
+  width: auto;
+  display: table;
+  -webkit-user-select: none; /* Safari 3.1+ */
+  -moz-user-select: none; /* Firefox 2+ */
+  -ms-user-select: none; /* IE 10+ */
+  user-select: none; /* Prevent text selection */
+}
+
+.caret-down {
+  width: auto;
+  display: table-row;
+  -webkit-user-select: none; /* Safari 3.1+ */
+  -moz-user-select: none; /* Firefox 2+ */
+  -ms-user-select: none; /* IE 10+ */
+  user-select: none; /* Prevent text selection */
+}
+
+/* Create the caret/arrow with a unicode, and style it */
+.caret::before {
+  content: "+";
+  display: table-cell;
+  font-size: 150%;
+  font-weight: bold;
+  padding: 0px 0px 0px 0px;
+  vertical-align: super;
+}
+
+.caret a, .caret-down a {
+  margin: 10px 0px 0px 20px;
+}
+
+.bookkkk {
+  margin: -10px 0px 0px 0px;
+}
+
+.coucher {
+  margin: -10px 0px 0px 0px;
+}
+
+/* Rotate the caret/arrow icon when clicked on (using JavaScript) */
+.caret-down::before {
+  content: "-";
+  display: table-cell;
+  font-size: 150%;
+  font-weight: bold;
+  margin: -10px 0px 0px 0px;
+  vertical-align: super;
+}
+
+.caret-down {
+  margin: -200px 0px 0px 0px;
+}
+
+/* Hide the nested list */
+.nested {
+  display: none;
+}
+
+/* Show the nested list when the user clicks on the caret/arrow (with JavaScript) */
+.active {
+  display: block;
+}
+
+/*
+END NEW MENUS
+*/
+
 html {
   height: 100vh
 }
@@ -90,60 +177,20 @@ BOOK PAGES AND TOCS
 }
 .menu-nav {
   line-height: normal;
+  margin-left: 20px;
 }
 .book-toc ul li a {
   font-size: $font-size-14;
   color: #000;
 }
 .book-menu summary, .book-menu li{
-  margin-bottom: 0.4em;
+  // margin-bottom: 0.4em;
 }
-details {
-  display: inline;
-}
-summary {
-  display: inline;
-}
-details li {
-  padding-left: 0.5em;
-  list-style: none;
-}
+
 a.nav-link {
   color: #000;
 }
-summary:hover a{
-    // color:red;
-    opacity: 0.5;
-}
 
-
-
-details[open] summary a.active{
-  color:green;
-}
-
-/*
-DETAIL SUMMARY DECORATE THE SYMBOL
-*/
-
-summary::-webkit-details-marker {
-   display: none
-}
-
-summary:before {
-   content: "+";
-   float: left;
-   font-size: 150%;
-   font-weight: bold;
-   margin: -5px 5px 0 0;
-   padding: 0;
-   text-align: center;
-   width: 20px;
-}
-
-details[open] > summary:before {
-   content: "–"; // dash
-}
 
 /*
 FOOTER
@@ -160,11 +207,6 @@ FOOTER
 /*
 RESPONSIVE DESIGN
 */
-// desktop
-
-
-
-
 
 // @media screen and (min-width: 768px){
 @media screen and (min-width: $sm-breakpoint){

@@ -22,46 +22,36 @@
 {{ end }}
 
 {{ define "book-section" }}
-{{ with .Section }}
-  <li {{ if .Params.BookFlatSection}} class="book-section-flat" {{ end }}>
-    {{ if .Content }}
-      {{ template "book-page-link" (dict "Page" . "CurrentPage" $.CurrentPage) }}
-    {{ else }}
-      <span>{{ template "title" . }}</span>
-    {{ end }}
+  {{ with .Section }}
+    <li class="bookkkk"{{ if .Params.BookFlatSection}} class="book-section-flat" {{ end }}>
+      {{ if .Content }}
+        {{ template "book-page-link" (dict "Page" . "CurrentPage" $.CurrentPage) }}
+      {{ else }}
+        <span>{{ template "title" . }}</span>
+      {{ end }}
 
-    {{ template "book-section-children" (dict "Section" . "CurrentPage" $.CurrentPage) }}
-  </li>
-{{ end }}
+      {{ template "book-section-children" (dict "Section" . "CurrentPage" $.CurrentPage) }}
+    </li>
+  {{ end }}
 {{ end }}
 
 {{ define "book-section-children" }}
-{{ with .Section }}
-  <!-- <ul> -->
-    <details>
-      <summary>
-        <a href="{{ .RelPermalink }}" {{ if eq $.CurrentPage .Permalink }} class="active"{{ end }}>
-          {{ template "title" . }}
-        </a>
-      </summary>
-      {{ range where .Sections "Params.bookhidden" "!=" true }}
-        {{ template "book-section" (dict "Section" . "CurrentPage" $.CurrentPage) }}
+  {{ with .Section }}
+    <ul  class="nested">
+        {{ range where .Sections "Params.bookhidden" "!=" true }}
+          {{ template "book-section" (dict "Section" . "CurrentPage" $.CurrentPage) }}
         {{ end }}
-        {{ range where .Pages "Params.bookhidden" "!=" true }}
-        <!-- <li> -->
-          {{ template "book-page-link" (dict "Page" . "CurrentPage" $.CurrentPage) }}
-        <!-- </li> -->
-        {{ end }}
-      </details>
-  <!-- </ul> -->
+    </ul>
 
-{{ end }}
+  {{ end }}
 {{ end }}
 
 {{ define "book-page-link" }}
-{{ with .Page }}
-  <!-- <a href="{{ .RelPermalink }}" {{ if eq $.CurrentPage .Permalink }} class="active"{{ end }}>
-    {{ template "title" . }}
-  </a> -->
-{{ end }}
+  {{ with .Page }}
+    <span class="caret">
+      <a href="{{ .RelPermalink }}" {{ if eq $.CurrentPage .Permalink }} class="active"{{ end }}>
+        {{ template "title" . }}
+      </a>
+    </span>
+  {{ end }}
 {{ end }}
