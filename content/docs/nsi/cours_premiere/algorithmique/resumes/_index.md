@@ -21,6 +21,9 @@ weight: 0
 | - | |
 | Algorithmes gloutons                        	| Résoudre un problème grâce à un algorithme glouton.                                                                                                              	| Exemples : problèmes du sac à dos ou du rendu de monnaie. Les algorithmes gloutons constituent une méthode algorithmique parmi d’autres qui seront vues en terminale. 	|
 
+
+---
+
 # Parcours séquentiel d'un tableau
 
 **Attendus :** Écrire un algorithme de recherche d’une occurrence sur des valeurs de type quelconque. Écrire un algorithme de recherche d’un extremum, de calcul d’une moyenne.
@@ -240,6 +243,11 @@ La partie suivante s'intéresse à une autre manière de chercher les éléments
 
 Cette fois le complexité est bien meilleure.
 
+
+---
+
+# Recherche dichotomique dans un tableau trié
+
 ## Principe de la recherche dichotomique
 
 C'est celui du jeu du "plus ou moins"
@@ -324,7 +332,11 @@ rechercheDicho(liste, clé)
 | 2ème tour       	| 0     	| 2      	| 4   	| faux   	    | 3 > 2 : vrai   	|
 | 3ème tour       	| 3     	| 3      	| 4   	| **vrai**   	| /              	|
 
-\newpage
+
+
+---
+
+
 
 ## En Python
 
@@ -356,9 +368,9 @@ Attention, il faut aussi tester si la clé n'est pas égale à la dernière vale
 ~~~
 
 
-\newpage
+---
 
-## Tableaux à deux dimensions
+# Tableaux à deux dimensions
 
 On rencontre souvent des données qui sont présentées sous la forme d'un tableau
 à deux dimensions :
