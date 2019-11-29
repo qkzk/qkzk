@@ -443,4 +443,4 @@ display(img) # afficher dans colab
 ~~~
 
 
-![Degradé rouge -> noir](degrade.jpg)
+![Degradé rouge -> noir](/uploads/docsnsi/algo/degrade.jpg)
