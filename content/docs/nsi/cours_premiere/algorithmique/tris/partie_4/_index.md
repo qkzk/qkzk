@@ -4,7 +4,7 @@ weight: 4
 ---
 
 
-[article](/uploads/docnsi/algo/tris/tris_4-Article.pdf) et [diapos](/uploads/docnsi/algo/tris/tris_4-Beamer.pdf)
+[article](/uploads/docsnsi/algo/tris/tris_4-Article.pdf) et [diapos](/uploads/docsnsi/algo/tris/tris_4-Beamer.pdf)
 
 
 # Quatrième partie : complexité
@@ -49,15 +49,15 @@ pour le tri par insertion
 
 ## Meilleur cas
 
-![meilleur cas](/uploads/docnsi/algo/tris/insertion_complexite_best_case.png)
+![meilleur cas](/uploads/docsnsi/algo/tris/insertion_complexite_best_case.png)
 
 ## Cas random
 
-![random](/uploads/docnsi/algo/tris/insertion_complexite_random.png)
+![random](/uploads/docsnsi/algo/tris/insertion_complexite_random.png)
 
 ## Pire des cas
 
-![pire cas](/uploads/docnsi/algo/tris/insertion_complexite_worst_case.png)
+![pire cas](/uploads/docsnsi/algo/tris/insertion_complexite_worst_case.png)
 
 
 # insertion : preuve de la complexité
@@ -102,12 +102,12 @@ Le tri par insertion est de complexité **quadratique**
 
 ## Tri par insertion vs Tri natif en Python
 
-.![insertion vs timsort](/uploads/docnsi/algo/tris/insertion_vs_timsort.png){ width=400px }
+.![insertion vs timsort](/uploads/docsnsi/algo/tris/insertion_vs_timsort.png){ width=400px }
 
 Le tri natif est-il à temps constant ????
 
 ## Tri natif en Python seul
 
-.![timsort](/uploads/docnsi/algo/tris/timsort.png){ width=400px }
+.![timsort](/uploads/docsnsi/algo/tris/timsort.png){ width=400px }
 
 non... le tri natif (TimSort) est en $O(n\times log(n))$

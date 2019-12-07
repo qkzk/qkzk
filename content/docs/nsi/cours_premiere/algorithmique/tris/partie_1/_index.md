@@ -3,7 +3,7 @@ title: Trier introduction
 weight: 1
 ---
 
-[article](/uploads/docnsi/algo/tris/tris_1-Article.pdf) et [diapos](/uploads/docnsi/algo/tris/tris_1-Beamer.pdf)
+[article](/uploads/docsnsi/algo/tris/tris_1-Article.pdf) et [diapos](/uploads/docsnsi/algo/tris/tris_1-Beamer.pdf)
 
 
 # Trier

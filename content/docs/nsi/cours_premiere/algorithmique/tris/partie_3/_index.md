@@ -3,7 +3,7 @@ title: Invariants de boucle
 weight: 3
 ---
 
-[article](/uploads/docnsi/algo/tris/tris_3-Article.pdf) et [diapos](/uploads/docnsi/algo/tris/tris_3-Beamer.pdf)
+[article](/uploads/docsnsi/algo/tris/tris_3-Article.pdf) et [diapos](/uploads/docsnsi/algo/tris/tris_3-Beamer.pdf)
 
 # troisième partie : preuves de la correction
 

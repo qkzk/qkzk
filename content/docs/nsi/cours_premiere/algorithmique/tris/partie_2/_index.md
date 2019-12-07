@@ -4,7 +4,7 @@ weight: 2
 
 ---
 
-[article](/uploads/docnsi/algo/tris/tris_2-Article.pdf) et [diapos](/uploads/docnsi/algo/tris/tris_2-Beamer.pdf)
+[article](/uploads/docsnsi/algo/tris/tris_2-Article.pdf) et [diapos](/uploads/docsnsi/algo/tris/tris_2-Beamer.pdf)
 
 # Seconde partie : pseudo code
 
@@ -89,7 +89,7 @@ Tri en _place_ : il n'utilise pas plus de mémoire
 
 ## Exemple 2
 
-![Tri par insertion](uploads/docnsi/algo/tris/insertionsort.png)
+![Tri par insertion](uploads/docsnsi/algo/tris/insertionsort.png)
 
 
 ## Pseudo code
