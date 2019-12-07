@@ -1,6 +1,6 @@
 ---
 title:
- 7. les algorithmes de tri
+ 7. Algorithmes de tri
 author:
  qkzk
 theme:
