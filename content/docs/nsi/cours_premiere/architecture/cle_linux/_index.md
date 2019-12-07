@@ -21,7 +21,7 @@ d'exploitation et les logiciels libres.
 
 Elle utilise la distribution **debian** et l'environnement de bureau **cinnamon**
 
-[debian et cinnamon](https://philippe.scoffoni.net/wp-content/uploads/2015/04/S%C3%A9lection_0123.png)
+![debian et cinnamon](https://philippe.scoffoni.net/wp-content/uploads/2015/04/S%C3%A9lection_0123.png)
 
 ## Créer la clé.
 
@@ -34,7 +34,7 @@ La démarche est entièrement détaillée [ici](https://usb.freeduc.org/freeduc-
 3. `df` devrait afficher la clé sur `/dev/sdb`. Sinon ouvrir un gestionnaire de fenêtre et repérer la clé.
 
   Si elle n'apparait toujours pas, essayer `$ sudo gparted` pour repérer la clé.
-  
+
 4. Télécharger la version "légère" (3 GB) de la clé : **live-image-amd64.hybrid.iso**
 5. Copier avec dd le contenu sur la clé : `$ sudo dd if=live-image-amd64.hybrid.iso of=/dev/sdX status=progress bs=4M oflag=dsync`
     où on remplace `X` par l'adresse de la clé
