@@ -1,6 +1,6 @@
 ---
 title:
- Trier
+ 7. les algorithmes de tri
 author:
  qkzk
 theme:
@@ -8,6 +8,9 @@ theme:
 weight:
   7
 ---
+
+Cette version du cours est "complète" mais indigeste. Vous pouvez l'utiliser
+**après** avoir vu la version détaillée et étalée.
 
 # Trier
 

@@ -1,6 +1,6 @@
 ---
 title:
-- NSI 1ère - Algorithmique  - Catalogue
+- 9 - Résumés
 theme:
 - Metropolis
 author: qkzk
