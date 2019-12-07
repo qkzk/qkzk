@@ -89,7 +89,7 @@ Tri en _place_ : il n'utilise pas plus de mémoire
 
 ## Exemple 2
 
-![Tri par insertion](uploads/docsnsi/algo/tris/insertionsort.png)
+![Tri par insertion](/uploads/docsnsi/algo/tris/insertionsort.png)
 
 
 ## Pseudo code
