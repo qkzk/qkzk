@@ -54,6 +54,7 @@ Si vous êtes derrière un proxy :
 
 ## Servir une page statique avec un jeu P5JS, par exemple
 
+[Dépôt du projet](https://github.com/qkzk/qkzk_flask_intro)
 
 Dans **le même dossier**, créer deux dossiers : `templates` et `static`
 et les fichiers suivants :
