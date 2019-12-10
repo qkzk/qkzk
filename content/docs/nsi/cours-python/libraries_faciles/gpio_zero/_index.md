@@ -10,9 +10,7 @@ weight: 1
 # GPIO Zero
 
 
-Cette brève présentation est une traduction de la page d'accueil de la
-[documentation officielle](https://gpiozero.readthedocs.io/en/stable/)
-de la librairie.
+_Cette brève présentation est une traduction de la page d'accueil de la [documentation officielle](https://gpiozero.readthedocs.io/en/stable/) de la librairie._
 
 ## GPIO Zero
 
