@@ -54,3 +54,13 @@ MQTT n'est pas spécifique à Python et existe sous UNIX, Windows, sous forme
 de libriarie pour tous les langages modernes etc.
 
 C'est un standard de l'industrie.
+
+
+## [Flask](flask)
+
+Flask est utilisé
+mondialement pour créer des sites web en Python.
+
+Flask est un "micro framework", un cadre minimaliste qu'on peut étendre à l'infini.
+
+Toute sortes de sites web peuvent être crées avec Flask : pages statiques, chat bot, réseaux sociaux etc.

@@ -2,7 +2,7 @@
 author: qkzk
 date: 2019-12-10 07:08:58+00:00
 draft: false
-title: Python 3 - Pygame Zero
+title: Pygame Zero
 weight: 2
 ---
 
