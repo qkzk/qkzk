@@ -2,6 +2,7 @@
 title: Clé Linux
 author: qkzk
 theme: metropolis
+weight: 0
 # mainfont: Noto Sans CJK JP
 ---
 
