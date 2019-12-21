@@ -12,6 +12,11 @@ theme: metropolis
 3. [performances](/uploads/docsnsi/architecture/diapos/3_performances-Beamer.pdf)
 4. [assembleur](/uploads/docsnsi/architecture/diapos/4_assembleur-Beamer.pdf)
 
+# Videos
+
+1. [video Comparaison](/uploads/docsnsi/architecture/videos/Comparing.mp4), [soustitres](/uploads/docsnsi/architecture/videos/Comparing.srt)
+2. [video Breadboard](/uploads/docsnsi/architecture/videos/breadboard.mp4), [soustitres](/uploads/docsnsi/architecture/videos/breadboard.srt)
+
 # Historique de la machine
 
 ## Préhistoire informatique
