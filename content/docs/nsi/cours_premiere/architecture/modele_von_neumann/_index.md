@@ -3,11 +3,10 @@ title: Modèle Von Neumann
 author: David Roche
 theme: metropolis
 weight: 2
-# mainfont: Noto Sans CJK JP
 ---
 
-On entend souvent dire qu'"un ordinateur utilise uniquement des "1"
-et des "0". Cette affirmation mérite d'être précisée.
+On entend souvent dire qu'_un ordinateur utilise uniquement des "1"
+et des "0"_. Cette affirmation mérite d'être précisée.
 
 À la base de la plupart des composants d'un ordinateur, on retrouve le
 transistor. Ce composant électronique a été inventé fin 1947 par les
@@ -63,7 +62,7 @@ courante.
 Le transistor est l'élément de base des circuits logiques. Un circuit
 logique permet de réaliser une opération booléenne. Ces opérations
 booléennes sont directement liées à l'algèbre de Boole (Georges Boole,
-mathématicien Britanique 1815-1864). L'étude de l'algèbre de Boole
+mathématicien Britannique 1815-1864). L'étude de l'algèbre de Boole
 dépasse le cadre de ce cours, vous devez juste savoir qu'un circuit
 logique prend en entrée un ou des signaux électriques (chaque entrée est
 dans un état "haut" (symbolisé par un "1") ou à un état "bas"
@@ -158,7 +157,7 @@ Additionneur
 Comme son nom l'indique, l'additionneur permet d'additionner 2 bits
 (E1 et E2) en tenant compte de la retenue entrante ("Cin" "carry in"
 en anglais). En sortie on obtient le résultat de l'addition (S) et la
-retenue sortante ("Cout").
+retenue sortante ("Coût").
 
 #### À faire vous-même 1
 
@@ -193,7 +192,7 @@ circuits logiques permet d'obtenir des circuits plus complexes (exemple
 Au sommet de cet édifice (on pourrait parler de poupée russe), nous
 allons trouver la mémoire vive (RAM) et le microprocesseur (CPU).
 
-#### La mémoire vive RAM (Random Acess Memory)
+#### La mémoire vive RAM (Random Access Memory)
 
 La mémoire vive permet de stocker des données et des programmes. Comme
 nous l'avons vu, l'ordinateur utilise uniquement 2 états, la mémoire
