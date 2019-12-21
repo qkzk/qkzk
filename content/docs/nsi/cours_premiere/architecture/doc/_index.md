@@ -2,7 +2,7 @@
 title: Documentation Assembleur AQA
 author: qkzk
 theme: metropolis
-weight: 4
+weight: 6
 # mainfont: Noto Sans CJK JP
 ---
 

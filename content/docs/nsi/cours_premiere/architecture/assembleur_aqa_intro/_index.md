@@ -2,8 +2,7 @@
 title: Simulation CPU assembleur AQA
 author: David Roche
 theme: metropolis
-weight: 3
-# mainfont: Noto Sans CJK JP
+weight: 5
 ---
 
 # Simulation d'un CPU : l'assembleur AQA

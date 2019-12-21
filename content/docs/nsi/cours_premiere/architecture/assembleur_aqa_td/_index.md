@@ -2,7 +2,7 @@
 title: Travaux dirigés assembleur AQA
 author: qkzk
 theme: metropolis
-weight: 3
+weight: 6
 # mainfont: Noto Sans CJK JP
 ---
 
@@ -15,7 +15,7 @@ Dans ce TD nous allons travailler avec l'assembleur AQA disponible
 La documentation d'origine est [ici](http://www.peterhigginson.co.uk/AQA/info.html)
 et une traduction des commandes principales est disponible [ici](doc)
 
-Après avoir réalisé les [premières questions](TODO importer sur qkzk),
+Après avoir réalisé les [premières questions](../assembleur_aqa_intro),
 répondre aux questions suivantes.
 
 ## Exercice 1 - quelques exemples
