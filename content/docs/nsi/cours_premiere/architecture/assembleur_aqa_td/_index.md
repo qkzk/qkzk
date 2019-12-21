@@ -13,7 +13,7 @@ Dans ce TD nous allons travailler avec l'assembleur AQA disponible
 [ici](http://www.peterhigginson.co.uk/AQA/).
 
 La documentation d'origine est [ici](http://www.peterhigginson.co.uk/AQA/info.html)
-et une traduction des commandes principales est disponible [ici](doc)
+et une traduction des commandes principales est disponible [ici](../doc)
 
 Après avoir réalisé les [premières questions](../assembleur_aqa_intro),
 répondre aux questions suivantes.
