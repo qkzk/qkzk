@@ -5,6 +5,13 @@ theme: metropolis
 # mainfont: Noto Sans CJK JP
 ---
 
+# Diapos du cours
+
+1. [intro](/uploads/docsnsi/architecture/diapos/1_intro-Beamer.pdf)
+2. [composants](/uploads/docsnsi/architecture/diapos/2_composants-Beamer.pdf)
+3. [performances](/uploads/docsnsi/architecture/diapos/3_performances-Beamer.pdf)
+4. [assembleur](/uploads/docsnsi/architecture/diapos/4_assembleur-Beamer.pdf)
+
 # Historique de la machine
 
 ## Préhistoire informatique
