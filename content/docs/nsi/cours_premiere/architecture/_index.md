@@ -5,6 +5,12 @@ theme: metropolis
 # mainfont: Noto Sans CJK JP
 ---
 
+La séquence se découpe ainsi :
+
+1. présentation des différentes diapos
+2. Si on a le temps, les deux vidéos sous-titrées
+3. travail pratique sur l'assembleur AQA
+
 # Diapos du cours
 
 1. [intro](/uploads/docsnsi/architecture/diapos/1_intro-Beamer.pdf)
@@ -16,6 +22,12 @@ theme: metropolis
 
 1. la [video Comparaison](/uploads/docsnsi/architecture/videos/Comparing.mp4) et les [soustitres](/uploads/docsnsi/architecture/videos/Comparing.srt)
 2. la [video Breadboard](/uploads/docsnsi/architecture/videos/breadboard.mp4) et les [soustitres](/uploads/docsnsi/architecture/videos/breadboard.srt)
+
+# Travail pratique sur l'assembleur AQA
+
+* [Les exercices](assembleur_aqa_td)
+* [La documentation en français](doc)
+
 
 # Historique de la machine
 
