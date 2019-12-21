@@ -28,6 +28,9 @@ La séquence se découpe ainsi :
 * [Les exercices](assembleur_aqa_td)
 * [La documentation en français](doc)
 
+---
+
+Ce qui suit est la version "d'origine" du cours que j'ai largement étoffé depuis.
 
 # Historique de la machine
 
