@@ -1,5 +1,5 @@
 ---
-title: 5 - Tuples et dictionnaires
+title: 5 - Tuples, dictionnaires
 author: qkzk
 theme: Hannover
 weight: 5

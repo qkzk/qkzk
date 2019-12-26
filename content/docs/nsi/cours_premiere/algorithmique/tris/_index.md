@@ -1,6 +1,6 @@
 ---
 title:
- 7. Algorithmes de tri
+ 7 - Trier
 author:
  qkzk
 theme:

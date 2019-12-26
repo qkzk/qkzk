@@ -1,5 +1,5 @@
 ---
-title: 8 - Recherche dichotomique
+title: 8 - Dichotomie
 author: qkzk
 theme: Hannover
 weight: 100

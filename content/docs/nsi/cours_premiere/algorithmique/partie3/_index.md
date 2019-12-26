@@ -1,5 +1,5 @@
 ---
-title: 3 - Pseudo langage, Python
+title: 3 - Langage
 author: qkzk
 theme: Hannover
 weight: 3

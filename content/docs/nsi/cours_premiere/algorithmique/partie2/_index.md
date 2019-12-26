@@ -1,5 +1,5 @@
 ---
-title: 2 - Structure de données
+title: 2 - Données
 author: qkzk
 theme: Hannover
 weight: 2
