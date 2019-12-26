@@ -11,12 +11,12 @@ Au cours d'un de ses cambriolages, il a la possibilité de dérober 4
 objets A, B, C et D. Voici un tableau qui résume les caractéristiques de
 ces objets :
 
-  objet              A       B       C       D
-  ------------------ ------- ------- ------- -------
-  masse              13 Kg   12 Kg   8 Kg    10 Kg
-  valeur marchande   700 €   400 €   300 €   300 €
+|objet              |A       |B       |C       |D |
+|------------------ |------- |------- |------- |------- |
+|masse              |13 Kg   |12 Kg   |8 Kg    |10 Kg |
+|valeur marchande   |700 €   |400 €   |300 €   |300 € |
 
-  : caractéristiques des objets
+_caractéristiques des objets_
 
 
 ### Question 1
@@ -85,9 +85,9 @@ dos :
   établir un tableau nous donnant la "valeur massique" de chaque
   objet (pour chaque objet on divise sa valeur par sa masse) :
 
-    objet             A         B         C         D
-    ----------------- --------- --------- --------- ---------
-    valeur massique   54 €/Kg   33 €/Kg   38 €/Kg   30 €/Kg
+|objet             |A         |B         |C         |D |
+|----------------- |--------- |--------- |--------- |--------- |
+|valeur massique   |54 €/Kg   |33 €/Kg   |38 €/Kg   |30 €/Kg |
 
     : valeur massique des objets
 
@@ -99,9 +99,9 @@ dos :
   fait "le choix glouton", à chaque étape, on prend l'objet ayant
   le rapport "valeur-masse" le plus intéressant au vu des objectifs :
 
-  * 1re étape : A (13 Kg)
-  * 2e étape : C (13+8=21 Kg)
-  * 3e étape : B (13+8+12=33 Kg) =\> impossible, on dépasse les 30
+    * 1re étape : A (13 Kg)
+    * 2e étape : C (13+8=21 Kg)
+    * 3e étape : B (13+8+12=33 Kg) =\> impossible, on dépasse les 30
       Kg.
 
 Le sac est donc composé de 2 objets : A et C pour un montant total de
