@@ -9,9 +9,9 @@ weight: 2
 ## Travaux dirigés
 
   * énoncé au format [pdf](/uploads/docnsitale/arbres/travaux/td_arbres1.pdf)
-  * énoncé sur le [site](travaux_diriges)
+  * énoncé sur le [site](td)
 
 ## Travaux pratiques
 
-* énoncé au format [pdf]()
-* énoncé sur le [site](travaux_pratiques)
+* énoncé au format [pdf](/uploads/docnsitale/arbres/travaux/tp_arbres2.pdf)
+* énoncé sur le [site](tp)

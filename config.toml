@@ -57,3 +57,6 @@ pygmentscodefencesguesssyntax = true
 
 [permalinks]
   docs = "/"
+
+[markup.goldmark.renderer]
+  unsafe= true

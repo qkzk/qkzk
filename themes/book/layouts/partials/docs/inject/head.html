@@ -60,3 +60,11 @@ MathJax.Hub.Config({
     }
 });
 </script> -->
+<script async src="https://unpkg.com/mermaid@8.2.3/dist/mermaid.min.js"></script>
+<!-- {{ $mermaid := resources.Get "https://unpkg.com/mermaid@8.2.3/dist/mermaid.min.js" }}
+<script src="{{ $mermaid }}"></script>
+<script>
+    window.onload = function() {
+        mermaid.init(undefined, ".language-mermaid");
+    };
+</script> -->

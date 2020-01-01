@@ -1,5 +1,5 @@
 ---
-title: Travaux pratiques
+title: Travaux dirigés
 date: novembre-décembre 2019
 lang: fr
 weight: 1

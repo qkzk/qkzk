@@ -1,5 +1,5 @@
 ---
-title: Travaux dirigés
+title: Travaux pratiques
 author: qkzk
 date: décembre 2019
 lang: fr
@@ -9,11 +9,12 @@ weight: 2
 Un module de manipulation d'arbres binaires
 ===========================================
 
-```mermaid
+<div class="mermaid">
 graph LR
     alert(Ressource)
     style alert fill:orange
-```
+</div>
+
 
 La classe `BinaryTree`, définie dans le
 [module `binary_tree.py`](/uploads/docnsitale/arbres/travaux/binary_tree.py) proposé ici, permet de
@@ -53,11 +54,11 @@ binaires, et d'exportation aux formats DOT et PNG.
 Parcourir les arbres
 ====================
 
-```mermaid
+<div class="mermaid">
 graph LR
     alert(Notions)
     style alert fill:orange
-```
+</div>
 
 Parcourir un arbre consiste à visiter chacun des nœuds de l'arbre,
 à effectuer un traitement sur chacune des étiquettes des nœuds de
@@ -93,11 +94,11 @@ pour désigner ces trois parcours en profondeur.
 
 ### $\gg$ Préfixe, infixe, et postfixe ###
 
-```mermaid
+<div class="mermaid">
 graph LR
     alert(Application)
     style alert fill:orange
-```
+</div>
 
 Donnez le résultat de l'appel de chacune des trois fonctions suivantes
 
@@ -136,11 +137,11 @@ fonctions selon le schéma suivant :
 Représentation d'expressions arithmétiques
 ------------------------------------------
 
-```mermaid
+<div class="mermaid">
 graph LR
     alert(Programmation)
     style alert fill:orange
-```
+</div>
 
 Une expression arithmétique construite avec des opérateurs binaires –
 c'est-à-dire à deux opérandes telles l'addition, la soustraction, la
@@ -194,11 +195,11 @@ ces associations ?
 ### $\gg$ Écriture polonaise inverse ###
 
 
-```mermaid
+<div class="mermaid">
 graph LR
     alert(Aller plus loin)
     style alert fill:orange
-```
+</div>
 
 Quel affichage produit un parcours postfixe de l'arbre représentant
 notre expression arithmétique ?
@@ -212,11 +213,11 @@ d'évaluation de l'expression pour une machine à pile.
 Parcours en largeur
 -------------------
 
-```mermaid
+<div class="mermaid">
 graph LR
     alert(Notion)
     style alert fill:orange
-```
+</div>
 
 Un parcours en largeur visite les nœuds d'un arbre niveau par niveau :
 le nœud racine de profondeur nulle, les nœuds de profondeur 1, puis
@@ -244,11 +245,11 @@ gauche de sa racine, puis l'arbre fils droit de sa racine, etc.
 
 ### $\gg$ Parcourir en largeur ###
 
-```mermaid
+<div class="mermaid">
 graph LR
     alert(Programmation)
     style alert fill:orange
-```
+</div>
 
 Proposez une fonction Python qui renvoie la liste des étiquettes d'un
 arbre binaire donné ; cette liste sera ordonnée selon un parcours en
@@ -256,11 +257,11 @@ largeur d'abord de l'arbre.
 
 ### $\gg$ Parcourir avec une pile ###
 
-```mermaid
+<div class="mermaid">
 graph LR
     alert(Aller plus loin)
     style alert fill:orange
-```
+</div>
 
 Quel parcours de l'arbre obtient-on si on remplace la _file_ utilisé
 dans l'algorithme précédent par une _pile_, donc une structure LIFO,
@@ -272,11 +273,11 @@ profondeur ?
 Arbres de recherche
 ===================
 
-```mermaid
+<div class="mermaid">
 graph LR
     alert(Notion)
     style alert fill:orange
-```
+</div>
 
 Un _arbre de recherche_, ABR, est un arbre binaire qui va être utilisé
 pour réaliser « efficacement » des opérations de recherche d'une
@@ -301,11 +302,11 @@ d'étiquette _e_ :
 
 ### $\gg$ Des arbres binaires de recherche ###
 
-```mermaid
+<div class="mermaid">
 graph LR
     alert(Application)
     style alert fill:orange
-```
+</div>
 
 Indiquez quels sont parmi les arbres suivants ceux qui sont des
 arbres binaires de recherche.
@@ -330,11 +331,11 @@ nœuds d'un ABR dans l'ordre des étiquettes ?
 
 ### $\gg$ Reconnaître un arbre binaire de recherche ###
 
-```mermaid
+<div class="mermaid">
 graph LR
     alert(Programmation)
     style alert fill:orange
-```
+</div>
 
 Proposez un prédicat Python qui reconnaît si un arbre binaire donné
 est un arbre binaire de recherche.
@@ -353,11 +354,11 @@ Deux pistes possibles pour cela sont
 Recherche d'une valeur dans un arbre binaire de recherche
 ---------------------------------------------------------
 
-```mermaid
+<div class="mermaid">
 graph LR
     alert(Programmation)
     style alert fill:orange
-```
+</div>
 
 Proposez une fonction Python qui renvoie le nœud d'un arbre binaire de
 recherche dont l'étiquette est égale à une valeur donnée. \
@@ -387,11 +388,11 @@ reposer sur le déroulé récursif suivant :
 
 ### $\gg$ Insérer une valeur dans un ABR ###
 
-```mermaid
+<div class="mermaid">
 graph LR
     alert(Programmation)
     style alert fill:orange
-```
+</div>
 
 Proposez une fonction Python qui renvoie un arbre binaire de recherche
 donné augmenté d'une valeur donnée.
@@ -399,11 +400,11 @@ donné augmenté d'une valeur donnée.
 Suppression d'une valeur dans un arbre binaire de recherche
 -----------------------------------------------------------
 
-```mermaid
+<div class="mermaid">
 graph LR
     alert(Aller plus loin)
     style alert fill:orange
-```
+</div>
 
 Soit une valeur $v$, nous cherchons à supprimer, s'il exsite, le
 nœud d'étiquette $v$ dans un arbre binaire de recherche donné.
@@ -444,11 +445,11 @@ pour supprimer le nœud portant cette valeur.
 Coût des opérations
 -------------------
 
-```mermaid
+<div class="mermaid">
 graph LR
     alert(Aller plus loin)
     style alert fill:orange
-```
+</div>
 
 Les arbres binaires de recherche sont introduits pour répondre au
 besoin de réaliser avec la même efficacité les trois opérations de
@@ -489,11 +490,11 @@ Nous ne mènerons pas cette étude ici.
 
 ### → _Résultat._ Complexité des algorithmes sur les arbres binaires de recherche ###
 
-```mermaid
+<div class="mermaid">
 graph LR
     alert(À retenir)
     style alert fill:orange
-```
+</div>
 
 La complexité des algorithmes de _recherche_, _insertion_, et
 _suppression_ d'une valeur dans un arbre binaire de recherche est
@@ -507,11 +508,11 @@ de recherche _équilibrés_.
 Maintenir l'équilibre
 ---------------------
 
-```mermaid
+<div class="mermaid">
 graph LR
     alert(Aller plus loin)
     style alert fill:orange
-```
+</div>
 
 Le coût au pire logarithmique des opérations sur les arbres de
 recherche équilibrés motive la modification de nos algorithmes pour
