@@ -1,5 +1,5 @@
 ---
-title: Python & complexité
+title: Complexité
 weight: 4
 ---
 

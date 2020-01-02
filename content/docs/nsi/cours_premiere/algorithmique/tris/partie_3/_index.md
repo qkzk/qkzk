@@ -1,5 +1,5 @@
 ---
-title: Invariants de boucle
+title: Python et invariants
 weight: 3
 ---
 
