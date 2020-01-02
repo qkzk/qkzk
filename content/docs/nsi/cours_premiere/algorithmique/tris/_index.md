@@ -225,11 +225,11 @@ Tri en _place_ : il n'utilise pas plus de mémoire
 
 ~~~python
 def selection(a):
-	n = len(a)
-	for i in range(n):
-		m = i  # on cherche l'indice du min
-		for j in range(i+1, n):
-			if a[m] > a[j]:
+  n = len(a)
+  for i in range(n):
+    m = i  # on cherche l'indice du min
+    for j in range(i+1, n):
+      if a[m] > a[j]:
         m = j
     a[m],a[i] = a[i],a[m] # on echange
 ~~~

@@ -53,10 +53,24 @@ Est-on certain que notre algorithme va se termine bien ?
 
 ## Convertir les algorithmes du pseudo code vers Python
 
-## Programme donné
+## Programmes Python
 
+### Tri par insertion
 
-~~~~~~~~python
+~~~python
+def tri_insertion(A):
+    i = 1
+    while i < len(A):
+        j = i
+        while j > 0 and A[j-1] > A[j]:
+            A[j-1], A[j] = A[j], A[j-1]
+            j = j - 1
+        i = i + 1
+~~~
+
+### Tri par sélection
+
+~~~python
 def selection(a):
 	n = len(a)
 	for i in range(n):
@@ -65,7 +79,7 @@ def selection(a):
 			if a[m] > a[j]:
         m = j
     a[m],a[i] = a[i],a[m] # on echange
-~~~~~~~~
+~~~
 
 
 ## Tri par insertion : invariant
