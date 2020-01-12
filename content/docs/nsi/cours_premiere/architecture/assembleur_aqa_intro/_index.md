@@ -22,6 +22,8 @@ Une version en ligne de ce simulateur est disponible [ici](http://www.peterhiggi
 Voici ce que vous devriez obtenir en vous rendant à l\'adresse indiquée
 ci-dessus :
 
+![aqa](/uploads/docsnsi/architecture/aqa/img/aqa.png)
+
 Il est relativement facile de distinguer les différentes parties du
 simulateur :
 
@@ -117,7 +119,7 @@ Nous pouvons donc maintenant affirmer que :
 
 Au passage, pour l\'instruction machine
 \"11100011 10100000 00000000 00101010\", vous pouvez remarquer que
-l\'octet le plus à droite, (00101010)~2~, est bien égale à (42)~10~ !
+l\'octet le plus à droite, $00101010_2$, est bien égale à $42_{10}$ !
 
 Repassez à un affichage en base 10 afin de faciliter la lecture des
 données présentes en mémoire.
@@ -193,10 +195,11 @@ Saisissez et testez le programme suivant :
 
 Voici un programme Python :
 
-    x=0
-    while x&lt3:
-       x=x+1
-
+~~~python
+x=0
+while x<3:
+   x=x+1
+~~~
 
 Écrivez et testez un programme en assembleur équivalent au programme
 ci-dessus.
