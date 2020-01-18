@@ -84,3 +84,194 @@ while x < 255:
 
 _Remarquez qu'on obtient les résultats en lignes, ce qui nous convient tout à_
 _à fait_
+
+
+## 5. Test de parité
+
+### Problème
+
+On souhaite écrire un programme assembleur qui résolve le problème suivant :
+
+on lui donne un nombre entier et il affiche "pair" ou "impair".
+
+### Solution naïve en Python
+
+En Python, c'est trivial : il suffit d'utiliser modulo. `n % 2` renvoie le
+reste de la division entière par 2. Si ce reste est nul, l'entier est pair.
+Sinon, l'entier est impair.
+
+Dans une fonction, on peut envisager ceci :
+
+~~~python
+def parite(entier):
+  '''
+  @param entier: (int)
+  @return: (str)
+  '''
+  if entier % 2 == 0:
+    return "pair"
+  else:
+    return "impair"
+~~~
+
+qui s'utilise comme ceci :
+
+~~~python
+>>> parite(20)
+"pair"
+>>> parite(21)
+"impair"
+~~~
+
+On le comprend bien :
+
+**Créer un test de parité équivaut à créer un opérateur "modulo 2"**
+
+C'est ce que nous allons faire.
+
+Mais comment faire quand on ne dispose que de très peu d'opérations comme
+dans l'assembleur AQA ?
+
+### Solution avec des soustractions
+
+Considérons l'algorithme suivant :
+
+~~~
+n un entier positif
+Tant que n > 0:
+    n prend la valeur n - 2
+Si n == 0:
+    renvoyer "pair"
+Si n < 0:
+    renvoyer "impair"
+~~~
+
+* Testons pour `n=3` :
+
+  `n` prend successivement les valeurs `3, 1 et -1` ensuite la boucle s'arrête.\
+  `-1` étant négatif, l'algorithme renvoie "impair". C'est juste.
+
+* Testons pour `n=4` :
+
+  `n` prend successivement les valeurs `4, 2, 0` et la boucle s'arrête.\
+  `n=0` et l'algorithme renvoie "pair". C'est juste encore une fois.
+
+
+### Programmer cet algorithme en AQA
+
+Description des étapes du code assembleur.
+
+On commence par demander une entrée, sous la forme d'un entier:
+
+~~~
+   INP R0, 2
+~~~
+
+Ensuite on crée un label "soustraction"
+
+~~~
+soustraction:
+~~~
+
+On compare le registre 0 avec l'entier `1`. Si la comparaison  est égale, on saute au label "impair"
+On compare le registre 0 avec l'entier `0`. Si la comparaison  est égale, on saute au label "pair"
+
+
+Sinon, on soustrait 2 au registre 0 et on revient à "soustraction"
+
+* programmer cette partie
+
+~~~
+SUB R0, R0, #2
+B soustraction
+~~~
+
+Après avoir écrit la boucle, il faut écrire ce que contiennent les labels "pair" et "impair"
+
+~~~
+impair:
+      MOV R1,#1
+      OUT R1,4
+      HALT
+~~~
+
+Ajouter ensuite le label "pair"
+
+<!--
+### Correction complète
+
+~~~
+  INP R0,2
+soustraction:
+  CMP R0,#1
+  BEQ impair
+  CMP R0,#0
+  BEQ pair
+  SUB R0, R0, #2
+  B soustraction
+impair:
+  MOV R1,#1
+  OUT R1,4
+  HALT
+pair:
+  MOV R1,#0
+  OUT R1,4
+  HALT
+~~~
+-->
+
+### Complément : l'opérateur modulo
+
+L'opérateur modulo peut se programmer pour n'importe quel couple d'entier `a, b`
+de la même manière, par soustraction successives.
+
+Écrire un algorithme en langage naturel qui renvoie `a % b` et n'utilise
+que des soustraction.
+
+Programmez le dans l'assembleur AQA.
+
+Votre programme a deux entrées successives (`a` et `b`) et une sortie `a % b`
+
+<!--
+~~~
+  INP R0,2
+  INP R1,2
+soustraction:
+  CMP R0,R1
+  BLT sortie
+  SUB R0, R0, R1
+  B soustraction
+sortie:
+  OUT R0,4
+  HALT
+~~~
+-->
+
+
+### Complément : la division entière
+
+Améliorez votre algorithme pour qu'il renvoie le quotient et le reste de la
+division entière de `a` par `b`.
+
+Par exemple, pour les entiers `a=7` et `b=3` votre algorithme renvoie `2` et `1`
+
+car `7 = 2 * 3 + 1`
+
+
+<!--
+~~~
+  INP R0,2
+  INP R1,2
+  MOV R2,#0
+soustraction:
+  CMP R0,R1
+  BLT sortie
+  SUB R0, R0, R1
+  ADD R2, R2, #1
+  B soustraction
+sortie:
+  OUT R2,4
+  OUT R0,4
+  HALT
+~~~
+-->
