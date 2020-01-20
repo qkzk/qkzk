@@ -73,7 +73,7 @@ while x < 255:
   print(x)
   z = y
   y = x + y
-  x = y
+  x = z
 ~~~
 
 1. Vérifiez que ce programme Python fonctionne.
