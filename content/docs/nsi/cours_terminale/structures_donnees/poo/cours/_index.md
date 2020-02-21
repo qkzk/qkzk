@@ -22,11 +22,11 @@ weight: 2
 * le module `Competitor.py` permet de manipuler des valeurs représentant les compétiteurs de la course. (...)
 * Les performances des compétiteurs vont être représentées par leur temps de course (...) Créer un module `Time.py` qui définit le type `Time`
 
-### Première, projet "Wator"
+### Première, "rpg texte"
 
 * expression d'un typage de données à représenter :
 
-    _Une correction possible qui utilise les dictionnaires pour modéliser des poissons._
+    _Une correction possible qui utilise les dictionnaires pour modéliser les combattants._
 
 ## définition d'un type `Competitor`
 
@@ -96,16 +96,15 @@ def set_performance(comp, time):
   comp['performance'] = time
 
 # dans wator
-def create_shark():
-  '''
-  create a shark data
-  :return: the created shark
-  '''
-  return {'char': 'S', 'gestation': 5, 'energy': 3}
->>> shark = Wator.create_shark()
->>> Competitor.set_performance(shark, None)
->>> shark
-{'char', 'S', 'gestation': 5, 'energy': 3, 'performance': None}
+def joueur(nom=None, vie=5, force=1):
+    if nom is None:
+        raise ValueError("Vous devez donner un nom à votre joueur")
+    return {"nom": nom,
+            "vie": vie,
+            "force": force}
+>>> robert = Joueur('Robert')
+>>> robert
+{'nom': 'Robert', 'vie': 5, 'force': 1}
 ~~~
 
 Le type n'existe que "dans la tête" du programmeur, les données et les traitements sont séparés.
@@ -123,7 +122,7 @@ Approche de la modélisation du problème à résoudre en terme d'objets :
 ---
 
 * **421** : Dés/Groupe de 3 dés/Joueur/Partie
-* **wator** : Mer/Case/Poisson/Simulation
+* **combat rpg** : Combattant/Arme/Combat etc.
 * **chicon** : Compétiteur/Temps(performance)/Course(/Palmares)
 * **minimax** : Jeu/Situation/Joueur/Algorithme/Fonction évaluation
 
