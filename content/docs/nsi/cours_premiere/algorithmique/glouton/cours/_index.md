@@ -37,7 +37,7 @@ et la compare à s.
 L'algorithme est ainsi répété jusqu'à obtenir une somme à rendre nulle.
 
 **Remarque.** Il s'agit effectivement d'un algorithme glouton, la plus grande valeur de pièce étant systématiquement choisie si sa valeur est inférieure à la somme à rendre. Ce choix ne garantit en rien l'optimalité globale de la solution. Le choix fait est considéré comme pertinent et permet d'avancer plus avant dans le calcul. Toutefois, comme nous l'écrivions plus haut, si le système monétaire est canonique, la solution est optimale. Pour savoir si le système est canonique, on peut se contenter du principe suivant : la somme des $n$ premières pièces doit être inférieure à la pièce $n+1$ (1 + 2 < 5, 1 + 2 + 5 < 10 etc.)
-
+<!--
 ## 2.2 Code
 
 2.2. Code
@@ -94,4 +94,4 @@ def pieces_a_rendre(somme_a_rendre, systeme_monnaie):
       lst_pieces.append(valeur)
       somme_a_rendre -= valeur
   return lst_pieces
-~~~
+~~~ -->
