@@ -85,11 +85,13 @@ dos :
   établir un tableau nous donnant la "valeur massique" de chaque
   objet (pour chaque objet on divise sa valeur par sa masse) :
 
-|objet             |A         |B         |C         |D |
-|----------------- |--------- |--------- |--------- |--------- |
-|valeur massique   |54 €/Kg   |33 €/Kg   |38 €/Kg   |30 €/Kg |
+    **valeur massique des objets**
+    
+    | objet           | A       | B       | C       | D       |
+    |-----------------|---------|---------|---------|---------|
+    | valeur massique | 54 €/Kg | 33 €/Kg | 38 €/Kg | 30 €/Kg |
 
-    : valeur massique des objets
+
 
 
 * On classe ensuite les objets par ordre décroissant de valeur
