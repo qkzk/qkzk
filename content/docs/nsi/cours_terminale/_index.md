@@ -7,14 +7,16 @@ type: docs
 weight: 3
 ---
 
+## Terminale NSI
 
-# Les contenus de cours de la spécialité NSI
+# Le programme
 
+* [Algorithmique](algorithmique)
+* [Architecture](architecture)
+* [Programmation](prog)
+* [Structure de données](structure_donnees)
 
+# Les compléments et projets
 
-
-## Classe de Terminale
-
-
-
-_Remarque d'août 2019._ Vous ne trouverez pas grand chose pour l'instant. La spécialité ne sera pas enseignée avant septembre 2020 et je ne fais que recenser quelques essais où activités vaguement prêtes.
+* [Réseau de neurones](NN)
+* [Tutoriel Rogue Like](RogueTuto)

@@ -156,7 +156,7 @@ Les travaux pratiques vous seront communiqués par l'intermédiaire de Google Cl
 ### Idées de projets
 
 
-[Ici](/uploads/docsnsi/pdf/liste_projets.pdf) un document de travail comprénant les extraits du programme définissant le cadre des projets et leurs enjeux ainsi qu'une liste de projets plus ou moins réalistes.
+[Ici](/uploads/docsnsi/pdf/liste_projets.pdf) un document de travail comprenant les extraits du programme définissant le cadre des projets et leurs enjeux ainsi qu'une liste de projets plus ou moins réalistes.
 
 Certains dépassent largement les enjeux du programme, leur difficulté est à chaque fois mentionnée.
 
