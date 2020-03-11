@@ -592,7 +592,7 @@ On utilisera **Wireshark** (logiciel de capture de paquets) pour analyser quelqu
 
 ## Relier les réseaux : le travail du routeur
 
-Un **routeur** est une **ordinateur** qui dispose de plusieurs interfaces (=cartes réseau) et est configuré pour aiguiller l'information.
+Un **routeur** est un **ordinateur** qui dispose de plusieurs interfaces (=cartes réseau) et est configuré pour aiguiller l'information.
 
 * Votre box : internet (ADSL, Fibre, Satellite etc.), 100BT / 1000BT (RJ45), Wifi
 * N'importe quel PC muni de 2 cartes réseau et configuré comme tel.
@@ -845,7 +845,7 @@ Ping et traceroute sont deux programmes qui utilisent ICMP.
 
 ### Un serveur est un programme qui est en écoute sur une machine
 
-### Un client est une programme connecté à un service pour l'utiliser
+### Un client est un programme connecté à un service pour l'utiliser
 
 
 Exemple : la machine A accède à un site web sur une machine B.
