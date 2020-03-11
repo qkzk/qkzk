@@ -17,7 +17,7 @@ La séquence se découpe ainsi :
 2. [composants](/uploads/docsnsi/architecture/diapos/2_composants-Beamer.pdf)
 3. [performances](/uploads/docsnsi/architecture/diapos/3_performances-Beamer.pdf)
 4. [assembleur](/uploads/docsnsi/architecture/diapos/4_assembleur-Beamer.pdf)
-5. [réseau](/uploads/docsnsi/reseau/reseaux-Beamer.pdf) et [format imprimable](/uploads/docsnsi/reseau/reseaux-Article.pdf)
+5. [réseau](/uploads/docsnsi/reseau/reseaux-Beamer.pdf), sur le [site](reseau) et [format imprimable](/uploads/docsnsi/reseau/reseaux-Article.pdf)
 
 # Videos
 
