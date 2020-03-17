@@ -75,3 +75,8 @@ Par exemple *02 1-fonctions limites* est un support de cours du chapitre 02 : **
 * [11 2-FDE_stat2var](/uploads/maths/bts_aero_1/11-2-FDE_stat2var.pdf)
 * [11 statistiques_descriptives-cours&exos](/uploads/maths/bts_aero_1/11-statistiques_descriptives-cours&exos.pdf)
 * [13 Calcul_formel_avec_geogebra](/uploads/maths/bts_aero_1/13-Calcul_formel_avec_geogebra.pdf)
+
+
+## Correction des exercices
+
+* Correction de certains exercices du [chapitre 11 : statistiques.](/uploads/maths/bts_aero_1/chapitre_11_exos.pdf)
