@@ -5,6 +5,8 @@ theme: metropolis
 # mainfont: Noto Sans CJK JP
 ---
 
+## Lien vers les [diapos du cours](/uploads/docsnsi/reseau/reseaux-Beamer.pdf)
+
 
 # Réseaux
 
