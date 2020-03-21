@@ -80,3 +80,5 @@ Par exemple *02 1-fonctions limites* est un support de cours du chapitre 02 : **
 ## Correction des exercices
 
 * Correction de certains exercices du [chapitre 11 : statistiques.](/uploads/maths/bts_aero_1/chapitre_11_exos.pdf)
+
+  _Mis à jour le 21 mars : TP2 et exo 3 du polycopié d'exos [stats à 1 variable](/uploads/maths/bts_aero_1/11-1-FDE_stat1var.pdf)
