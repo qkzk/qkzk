@@ -24,3 +24,11 @@ sur des sujets inabordables.
 * [devoir 5 - évaluation](/uploads/docsnsi/devoirs/Evaluation.pdf)
 * [devoir 6 - interro](/uploads/docsnsi/devoirs/interro_1.pdf)
 * [devoir 7 - interro expressions](/uploads/docsnsi/devoirs/interro_expr_a_if.pdf)
+
+# Sujets type E3C
+
+* [Sujet 15](/uploads/docsnsi/devoirs/Q15-SUJET.pdf) - [Corrigé 15](/uploads/docsnsi/devoirs/Q15-CORRIGE.pdf)
+* [Sujet 16](/uploads/docsnsi/devoirs/Q16-SUJET.pdf) - [Corrigé 16](/uploads/docsnsi/devoirs/Q16-CORRIGE.pdf)
+* [Sujet 17](/uploads/docsnsi/devoirs/Q17-SUJET.pdf) - [Corrigé 17](/uploads/docsnsi/devoirs/Q15-CORRIGE.pdf)
+* [Sujet 19](/uploads/docsnsi/devoirs/Q19-SUJET.pdf) - [Corrigé 19](/uploads/docsnsi/devoirs/Q15-CORRIGE.pdf)
+* [Sujet 20](/uploads/docsnsi/devoirs/Q20-SUJET.pdf) - [Corrigé 20](/uploads/docsnsi/devoirs/Q15-CORRIGE.pdf)
