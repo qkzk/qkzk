@@ -6,6 +6,14 @@
   weight: 2
 ---
 
-Vous trouverez ici la [correction de quelques exercices](/uploads/maths/divers/correction_exos.pdf).
+## Résumé des derniers chapitres
 
-Si je trouve le temps, je continuerai de remplir ce document.
+* [Chapitre 3 : déterminant](/uploads/maths/divers/resume_cours_determinant.pdf)
+* [Chapitre 4 : diagonalisation](/uploads/maths/divers/resume_chap4.pdf)
+
+## Exercices
+
+[correction de la majorité des exercices](/uploads/maths/divers/correction_exos.pdf).
+
+Cette correction, non détaillée, ne saurait remplacer une préparation active des
+exercices.
