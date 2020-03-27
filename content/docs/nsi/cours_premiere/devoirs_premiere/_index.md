@@ -27,6 +27,7 @@ sur des sujets inabordables.
 
 # Sujets type E3C
 
+* [Sujet 01](/uploads/docsnsi/devoirs/Q01-SUJET.pdf) - [Corrigé 01](/uploads/docsnsi/devoirs/Q01-CORRIGE.pdf) - [Notes 01](/uploads/docsnsi/devoirs/Q15-NOTES.pdf)
 * [Sujet 15](/uploads/docsnsi/devoirs/Q15-SUJET.pdf) - [Corrigé 15](/uploads/docsnsi/devoirs/Q15-CORRIGE.pdf)
 * [Sujet 16](/uploads/docsnsi/devoirs/Q16-SUJET.pdf) - [Corrigé 16](/uploads/docsnsi/devoirs/Q16-CORRIGE.pdf)
 * [Sujet 17](/uploads/docsnsi/devoirs/Q17-SUJET.pdf) - [Corrigé 17](/uploads/docsnsi/devoirs/Q15-CORRIGE.pdf)
