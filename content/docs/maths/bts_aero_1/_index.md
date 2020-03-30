@@ -79,6 +79,10 @@ Par exemple *02 1-fonctions limites* est un support de cours du chapitre 02 : **
 * [11 statistiques_descriptives-cours&exos](/uploads/maths/bts_aero_1/11-statistiques_descriptives-cours&exos.pdf)
 * [13 Calcul_formel_avec_geogebra](/uploads/maths/bts_aero_1/13-Calcul_formel_avec_geogebra.pdf)
 
+---
+
+Complément de mécanique : [dérivée d'un vecteur unitaire](content/uploads/maths/bts_aero_1/derivee_vecteur_unitaire.pdf)
+
 
 ## Correction des exercices
 
