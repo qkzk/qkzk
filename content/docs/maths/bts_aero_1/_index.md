@@ -81,7 +81,7 @@ Par exemple *02 1-fonctions limites* est un support de cours du chapitre 02 : **
 
 ---
 
-Complément de mécanique : [dérivée d'un vecteur unitaire](content/uploads/maths/bts_aero_1/derivee_vecteur_unitaire.pdf)
+Complément de mécanique : [dérivée d'un vecteur unitaire](/uploads/maths/bts_aero_1/derivee_vecteur_unitaire.pdf)
 
 
 ## Correction des exercices
