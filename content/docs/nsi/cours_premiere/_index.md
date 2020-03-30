@@ -21,114 +21,17 @@ weight: 2
 
 
 La liste des fichiers déjà réalisés à cette date est [ici](/uploads/docsnsi/pdf/) :
-<table >
-<tbody >
-<tr >
-Intitulé
-Cours
-Diaporama
-</tr>
-<tr >
 
-<td >**Algorithmique**
-</td>
 
-<td >[cours](/uploads/docsnsi/pdf/algorithmique-Article.pdf)
-</td>
+| Intitulé                       	| Cours                                                                                                                                                                                      	| Diaporama                                                           	|
+|--------------------------------	|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------	|---------------------------------------------------------------------	|
+| **Algorithmique**              	| [cours](/uploads/docsnsi/pdf/algorithmique-Article.pdf)                                                                                                                                    	| [diaporama](/uploads/docsnsi/pdf/algorithmique-Beamer.pdf)          	|
+| **Architecture des machines**  	| [cours](/uploads/docsnsi/pdf/architecture-Article.pdf)                                                                                                                                     	| [diaporama](/uploads/docsnsi/pdf/architecture-Beamer.pdf)           	|
+| **Réseaux**                    	| [cours](/uploads/docsnsi/pdf/reseaux-Article.pdf)                                                                                                                                          	| [diaporama](/uploads/docsnsi/pdf/reseaux-Beamer.pdf)                	|
+| **Représentation des données** 	| [cours](/uploads/docsnsi/pdf/representation_donnees-Article.pdf)                                                                                                                           	| [diaporama](/uploads/docsnsi/pdf/representation_donnees-Beamer.pdf) 	|
+| **Trier**                      	| [cours](/uploads/docsnsi/pdf/tris-Article.pdf)                                                                                                                                             	| [diaporama](/uploads/docsnsi/pdf/tris-Beamer.pdf)                   	|
+| **Tables CSV**                 	| [cours](/uploads/docsnsi/pdf/1_tables_csv_intro-Article.pdf), <br>[cours](/uploads/docsnsi/pdf/2_csv_nettoyer-Article.pdf) et <br>[cours](/uploads/docsnsi/pdf/3_csv_chercher-Article.pdf) 	|                                                                     	|
 
-<td >[diaporama](/uploads/docsnsi/pdf/algorithmique-Beamer.pdf)
-</td>
-</tr>
-<tr >
-
-<td >**Architecture des machines**
-</td>
-
-<td >[cours](/uploads/docsnsi/pdf/architecture-Article.pdf)
-</td>
-
-<td >[diaporama](/uploads/docsnsi/pdf/architecture-Beamer.pdf)
-</td>
-</tr>
-<tr >
-
-<td >**Réseaux**
-</td>
-
-<td > [cours](/uploads/docsnsi/pdf/reseaux-Article.pdf)
-</td>
-
-<td >[diaporama](/uploads/docsnsi/pdf/reseaux-Beamer.pdf)
-</td>
-</tr>
-<tr >
-
-<td >**Représentation des données**
-</td>
-
-<td > [cours](/uploads/docsnsi/pdf/representation_donnees-Article.pdf)
-</td>
-
-<td >[diaporama](/uploads/docsnsi/pdf/representation_donnees-Beamer.pdf)
-</td>
-</tr>
-<tr >
-
-<td >**Trier**
-</td>
-
-<td > [cours](/uploads/docsnsi/pdf/tris-Article.pdf)
-</td>
-
-<td >[diaporama](/uploads/docsnsi/pdf/tris-Beamer.pdf)
-</td>
-</tr>
-<tr >
-
-<td >**Tables CSV**
-</td>
-
-<td >
-</td>
-
-<td >
-</td>
-</tr>
-<tr >
-
-<td >partie 1
-</td>
-
-<td > [cours](/uploads/docsnsi/pdf/1_tables_csv_intro-Article.pdf)
-</td>
-
-<td >
-</td>
-</tr>
-<tr >
-
-<td >partie 3
-</td>
-
-<td > [cours](/uploads/docsnsi/pdf/3_csv_chercher-Article.pdf)
-</td>
-
-<td >
-</td>
-</tr>
-<tr >
-
-<td >partie 2
-</td>
-
-<td > [cours](/uploads/docsnsi/pdf/2_csv_nettoyer-Article.pdf)
-</td>
-
-<td >
-</td>
-</tr>
-</tbody>
-</table>
 Par ailleurs ces documents vous seront partagés directement dans google classroom afin que vous puissiez les consulter facilement sur tous les supports.
 
 
