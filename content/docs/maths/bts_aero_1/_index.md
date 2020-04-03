@@ -89,3 +89,4 @@ Complément de mécanique : [dérivée d'un vecteur unitaire](/uploads/maths/bts
 * Correction de certains exercices du [chapitre 11 : statistiques.](/uploads/maths/bts_aero_1/chapitre_11_exos.pdf)
 
   _Mis à jour le 21 mars : TP2 et exo 3 du polycopié d'exos [stats à 1 variable](/uploads/maths/bts_aero_1/11-1-FDE_stat1var.pdf)
+* Correction des exercices 2 à 7 du [chapitre 10 : lois continues](/uploads/maths/bts_aero_1/chapitre_10.pdf)
