@@ -6,6 +6,14 @@
   weight: 2
 ---
 
+_Note du 7 avril 2020_ :
+
+* J'ai ajouté les corrections transmises la semaine dernière (23, 25, 26).
+* Suite à une amélioration de la sécurité, le site est passé en HTTP**S** avec l'adresse **https://qkzk.xyz**
+
+    Tous les précédents liens doivent malheureusement être mis à jour.
+
+
 ## Résumé des derniers chapitres
 
 * [Chapitre 3 : déterminant](/uploads/maths/divers/resume_cours_determinant.pdf)
@@ -20,7 +28,7 @@ Corrections détaillées :
 
 * [exercice 23](/uploads/maths/divers/correction23.pdf). Attention il manque un signe $-$ lorsqu'on développe le premier déterminant. La réponse est donc $-14$
 * [exercice 25](/uploads/maths/divers/correction25.pdf)
-* [exercice 26](/uploads/maths/divers/correction26.pdf) 
+* [exercice 26](/uploads/maths/divers/correction26.pdf)
 
 
 
