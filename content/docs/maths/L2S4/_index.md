@@ -15,5 +15,14 @@
 
 [correction de la majorité des exercices](/uploads/maths/divers/correction_exos.pdf).
 
+
+Corrections détaillées :
+
+* [exercice 23](/uploads/maths/divers/correction23.pdf). Attention il manque un signe $-$ lorsqu'on développe le premier déterminant. La réponse est donc $-14$
+* [exercice 25](/uploads/maths/divers/correction25.pdf)
+* [exercice 26](/uploads/maths/divers/correction26.pdf) 
+
+
+
 Cette correction, non détaillée, ne saurait remplacer une préparation active des
 exercices.
