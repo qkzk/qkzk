@@ -126,7 +126,7 @@ Traceback (most recent call last):
 AttributeError: 'tuple' object has no attribute 'pop'
 ~~~
 
-## d) Les dictionnaires (tables de hashage), type `dic`
+## d) Les dictionnaires (tables de hashage), type `dict`
 
 Ce sont des tables d'associations entre une clé et une valeur. On les notes
 entre accolades. Attention, dans les accolades on utilise `:`.
