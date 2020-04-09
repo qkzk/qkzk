@@ -39,7 +39,7 @@ Certaines agissent différemment selon l'objet : `'a' + 'b' == 'ab'`
 
 # 2. Affecter
 
-Pour affecter une valeur à une on utilise la notation `variable = valeur`.
+Pour affecter une valeur à une variable on utilise la notation `variable = valeur`.
 
 Par exemple `note = 20`. On peut inclure n'importe quel objet Python dans une variable.
 
