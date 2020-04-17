@@ -7,9 +7,13 @@ date:
   "2019/06"
 theme:
   metropolis
+weight: 9
 ---
 
+### pdf [pour impression](/uploads/docsnsi/comparaison_langage/comparaison_langages_print.pdf)
+
 # Exemples sur repl
+
 [ici](https://repl.it/repls/folder/Comparaisons%20de%20langages%2Fdiu_comparaison)
 
 # Diversité et unité des langages de programmation
