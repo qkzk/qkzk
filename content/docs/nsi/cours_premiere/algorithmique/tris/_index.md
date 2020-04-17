@@ -2,7 +2,7 @@
 title: Tri par insertion et sélection
 author:
  qkzk
-weight: 3
+weight: 2
 ---
 
 Cette version du cours est "complète" mais indigeste. Vous pouvez l'utiliser

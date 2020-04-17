@@ -1,6 +1,6 @@
 ---
 title: Algorithmique - version antérieure
 author: qkzk
-weight: 15
+weight: 1000
 # mainfont: Noto Sans CJK JP"
 ---
