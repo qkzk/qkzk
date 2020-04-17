@@ -1,30 +1,83 @@
 ---
-title:
-  Tester ses programmes
-author: 
-  "qkzk"
-theme: 
-  metropolis
+title: Tester ses programmes
+author:
+- qkzk
+weight: 5
 ---
 
+### pdf : [pour impression](/uploads/docsnsi/programmation/tester/tester_ses_programmes_print.pdf)
 
 # Tester ses programmes
 
 De toute évidence, le code qu'on écrit n'a aucune assurance de fonctionner si on ne le teste pas...
 
-Il existe plusieurs approches en Python pour s'assurer qu'un code fonctionne.
+
+## Pourquoi doit-on tester ?
+
+Imaginons la situation courante du développeur :
+
+* équipe de 100 personnes,
+* projet comportant déjà 100.000 lignes dans 1000 fichiers,
+* il travaille environ 18 mois sur ce projet avant de passer à autre chose.
+
+Comment espérer comprendre l'intégralité du programme ?
+
+## Solution
+
+* On crée deux environnements :
+  * **Production** : le programme qui est utilisé par les clients
+  * **Développement** : le code sur lequel on travaille
+* Objectif : ne déployer en production que le code le plus sûr possible
+
+## Démarche
+
+Pour chaque modification du code en **développement** :
+
+* Automatiser de nombreux tests
+* si la modification passe les tests, un superviseur le relit
+* S'il est validé par le superviseur, alors il passe en **production**
+
+
+## Mais peut-on TOUT tester ?
+
+Non, malheureusement.
+
+
+## Infinité de tests
+
+Imaginons une simple fonction qui encode les mots de passe :
+
+```
+password -> liJoijoiuOIuIUoiyTYiughuiguigiIOtgvycRFTgvuik
+```
+
+Comment s'assurer que deux mots de passes différents sont encodés différemment ?
+
+Il faudrait une infinité de tests. C'est impossible.
+
+# Alors comment faire ?
+
+Il faut essayer de tester tous les cas intéressants, couvrant toutes les situations possibles.
+Certains développeurs sont spécialisés dans ce domaine. Ils cherchent les cas
+limites susceptibles de provoquer des erreurs.
+
+C'est le seul moyen de les éviter sur le produit.
+
+# Les tests en pratique
+
+Python (et tous les langages modernes) propose de nombreuses méthodes
 
 # Écrire les tests soi même
 
 Le moyen le plus simple consiste à écrire un jeu de test après `if __name__="__main__":`
 
-~~~python
+```python
 def ma_fonction(n):
   ...
 
 if __name__ == '__main__':
   print(ma_fonction(5))
-~~~
+```
 
 C'est généralement ce qu'on fait quand on développe. Ces tests doivent couvrir tous les cas possibles et être compréhensibles.
 
@@ -36,14 +89,14 @@ Il est préférable de les remplacer par de vrais tests...
 
 Python intègre un mot clef `assert` qui va lever une exception `AssertionError` si la condition qui suit est fausse:
 
-~~~python
+```python
 >>> assert 1 == 1 # ne fait rien
 
 >>> assert 1 == 2 # plante le programme
 Traceback (most recent call last):
   File "<stdin>", line 1, in <module>
 AssertionError
-~~~
+```
 
 C'est le moyen le plus efficace et rapide de tester un programme ou une fonction.
 
@@ -53,10 +106,11 @@ Il ne faut pas intégrer les assertions à la fonction elle même. Il est préf�
 
 Reprenons notre fonction Fibonacci
 
-~~~python
+```python
 def fibonacci(n):
   '''
-  Liste des termes de la suite de Fibonacci de l'indice 0 à l'indice n inclus
+  Liste des termes de la suite de Fibonacci
+    de l'indice 0 à l'indice n inclus
 
   @param n: (int) l'indice maximal voulu
   @return: (list) la liste des termes
@@ -72,7 +126,9 @@ def fibonacci(n):
     suite_fibonacci.append(x)
     indice += 1
   return suite_fibonacci
-~~~
+```
+
+##
 
 On peut tester plusieurs choses :
 
@@ -82,7 +138,7 @@ On peut tester plusieurs choses :
 * La propriété de Fibonacci : $u_n + u_{n + 1} = u_{n + 2}$
 * La sortie dans les cas impossibles : paramètre négatif, paramètre non entier
 
-~~~python
+```python
 
 def tester_fibonacci():
     '''
@@ -112,7 +168,7 @@ def tester_fibonacci():
     assert fibonacci(-1) == None
     assert fibonacci('a') == None
     assert fibonacci(3.14) == None
-~~~
+```
 
 
 # Doctest
@@ -125,7 +181,7 @@ Pour les fonctions qui réalisent des calculs cela est pratique.
 
 ## Un exemple :
 
-~~~python
+```python
 def multiply(a, b):
     """
     Calcule produit de a et b
@@ -143,14 +199,14 @@ def multiply(a, b):
 if __name__ == '__main__':
   import doctest
   doctest.testmod() # s'il ne se passe rien, les test sont justes
-~~~
+```
 
 
 Quand on exécute le programme, il ne se passe rien.
 
 ## Un exemple qui échoue :
 
-~~~python
+```python
 def Fonction_mal_testee():
     '''
     Simple fonction qui echoue
@@ -163,11 +219,11 @@ def Fonction_mal_testee():
 if __name__ == "__main__":
     import doctest
     doctest.testmod()  # s'il ne se passe rien, les tests sont justes.
-~~~
+```
 
 Voici la sortie d'un exemple qui échoue
 
-~~~
+```
 >>> python3 2_tester_doctest.py
 **********************************************************************
 File "/home/quentin/realiser_des_tests/2_tester_doctest.py", line 5,
@@ -178,19 +234,22 @@ Expected:
     3
 Got:
     2
-￼
+
 **********************************************************************
 1 items had failures:
    1 of   1 in __main__.Fonction_mal_testee
 ***Test Failed*** 1 failures.
-~~~
+```
 
 
 # Unitest, tesmod
 
-Il existe une librairie dédiée aux tests : `Unitest` et qui permet de tester toutes les propriétés possibles d'un objet.
+Il existe une librairie dédiée aux tests : `Unitest` et qui permet de tester
+toutes les propriétés possibles d'un objet.
 
-Elle est un peu vaste et trop complexe pour nos objectifs aussi nous ne l'utiliserons pas.
+Elle est un peu vaste et trop complexe pour nos objectifs aussi nous ne
+l'utiliserons pas.
 
 
-Voici sa [documentation](https://docs.python.org/fr/3.7/library/unittest.html) et un [guide détaillé](http://sametmax.com/un-gros-guide-bien-gras-sur-les-tests-unitaires-en-python-partie-2/).
+Voici sa [documentation](https://docs.python.org/fr/3.7/library/unittest.html)
+et un [guide détaillé](http://sametmax.com/un-gros-guide-bien-gras-sur-les-tests-unitaires-en-python-partie-2/).
