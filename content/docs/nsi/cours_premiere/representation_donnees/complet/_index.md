@@ -1,10 +1,13 @@
 ---
 title: Données - version qkzk
 author: qkzk
-theme: metropolis
+weight: 15
 # mainfont: Noto Sans CJK JP"
 ---
 
+
+
+## pdf pour [impression](/uploads/docsnsi/donnees_qkzk_img/reprensetations_donnees-Article.pdf) et [diaporama](/uploads/docsnsi/donnees_qkzk_img/reprensetations_donnees-Beamer.pdf)
 
 <!--
 Lier la mémoire et le stockage des données
