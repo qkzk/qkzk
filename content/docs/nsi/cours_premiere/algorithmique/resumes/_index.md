@@ -1,9 +1,9 @@
 ---
-title: 11 - Résumés
+title: Résumés
 theme:
 - Metropolis
 author: qkzk
-weight: 0
+weight: 100
 ---
 
 # Résumés des cours d'algorithmie

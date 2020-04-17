@@ -1,12 +1,8 @@
 ---
-title:
- 7 - Trier
+title: Tri par insertion et sélection
 author:
  qkzk
-theme:
- Hannover
-weight:
-  7
+weight: 3
 ---
 
 Cette version du cours est "complète" mais indigeste. Vous pouvez l'utiliser

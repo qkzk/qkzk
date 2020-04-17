@@ -1,7 +1,7 @@
 ---
-title: 10 - kNN
+title: algorithmes des k plus proches voisins
 author: qkzk
-weight: 102
+weight: 12
 ---
 
 # Les k plus proches voisins

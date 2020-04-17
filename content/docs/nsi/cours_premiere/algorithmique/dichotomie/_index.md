@@ -1,8 +1,8 @@
 ---
-title: 8 - Dichotomie
+title: Dichotomie
 author: qkzk
 theme: Hannover
-weight: 100
+weight: 4
 ---
 
 [Présentation](/uploads/docsnsi/algo/dicho_exemple.pdf)

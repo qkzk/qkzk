@@ -1,7 +1,7 @@
 ---
-title: 9 - Glouton
+title: algorithmes glouton
 author: qkzk
-weight: 101
+weight: 10
 ---
 
 # Les algorithmes glouton
