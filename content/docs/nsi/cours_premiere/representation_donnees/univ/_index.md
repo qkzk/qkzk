@@ -1,9 +1,9 @@
 ---
 author: 'DIU'
-draft: false
 title: Données - version univ
-weight: -1
+weight: 115
 ---
+## pdf pour [impression](/uploads/docsnsi/donnees_qkzk_img/representations_donnees_resume_diu-Article.pdf)
 
 # Représentation des données : types et valeurs de base
 

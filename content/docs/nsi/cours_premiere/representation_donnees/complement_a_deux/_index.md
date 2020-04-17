@@ -1,10 +1,10 @@
 ---
 title:
-- NSI 1ère - Données - Complément à deux
-author:
-- QK
-theme: metropolis
+- Complément à deux
+weight: 4
 ---
+
+## pdf [pour impression](/uploads/docsnsi/donnees_qkzk_img/complement_a_2_print.pdf) et [diaporama](/uploads/docsnsi/donnees_qkzk_img/complement_a_2_slides.pdf)
 
 # Le complément à deux : comment coder les entiers négatifs dans une machine ?
 
