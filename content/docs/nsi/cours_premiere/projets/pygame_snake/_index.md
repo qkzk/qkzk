@@ -1,6 +1,6 @@
 ---
 title:
-  Snake en Python 3 avec Pygame
+  pygame snake
 author:
     qkzk
 theme:

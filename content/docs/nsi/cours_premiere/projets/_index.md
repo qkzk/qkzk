@@ -5,4 +5,5 @@ draft: false
 
 # Projets
 
-* Mini projet de la première période : [compléter **Timberman**](/docs/nsi/cours_premiere/projets/timberman)
+
+Quelques projets, essentiellement autour des jeux vidéos avec pygame et pgzero.
