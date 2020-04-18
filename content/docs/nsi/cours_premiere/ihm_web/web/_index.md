@@ -4,6 +4,9 @@ author: David Roche
 theme: metropolis
 weight: 1
 ---
+
+pdf : [pour impression](/uploads/docsnsi/ihm_web/nsi_prem_web.pdf)
+
 # Le web
 
 Le "World Wide Web", plus communément appelé "Web" a été développé

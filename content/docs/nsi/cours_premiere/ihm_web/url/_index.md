@@ -4,6 +4,10 @@ author: David Roche
 theme: metropolis
 weight: 2
 ---
+
+pdf : [pour impression](/uploads/docsnsi/ihm_web/nsi_prem_url_print.pdf)
+
+
 # Les URL
 
 Dans la barre d'adresse de votre navigateur web vous trouverez, quand

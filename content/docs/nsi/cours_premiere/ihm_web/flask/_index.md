@@ -4,6 +4,10 @@ author: David Roche
 theme: metropolis
 weight: 7
 ---
+
+pdf : [pour impression](/uploads/docsnsi/ihm_web/nsi_prem_flask_print.pdf)
+
+
 # Formulaire d'une page web : Utilisation de Flask
 
 Comme déjà évoqué dans la partie consacrée au modèle

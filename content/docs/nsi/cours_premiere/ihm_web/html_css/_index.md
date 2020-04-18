@@ -4,6 +4,10 @@ author: David Roche
 theme: metropolis
 weight: 3
 ---
+
+pdf : [pour impression](/uploads/docsnsi/ihm_web/nsi_prem_html_css_print.pdf)
+
+
 # HTML et CSS : les bases
 
 Nous allons nous intéresser à un acteur fondamental du développement

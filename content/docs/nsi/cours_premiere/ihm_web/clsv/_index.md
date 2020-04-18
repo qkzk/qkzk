@@ -4,6 +4,10 @@ author: David Roche
 theme: metropolis
 weight: 5
 ---
+
+pdf : [pour impression](/uploads/docsnsi/ihm_web/nsi_prem_clsv_print.pdf)
+
+
 # Modèle Client-Server
 
 Deux ordinateurs en réseau peuvent s'échanger des données. Dans la

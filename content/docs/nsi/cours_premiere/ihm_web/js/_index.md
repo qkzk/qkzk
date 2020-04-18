@@ -4,6 +4,10 @@ author: David Roche
 theme: metropolis
 weight: 4
 ---
+
+pdf : [pour impression](/uploads/docsnsi/ihm_web/nsi_prem_js_print.pdf)
+
+
 # Utilisation de JavaScript
 
 Nous avons déjà pu nous familiariser avec le couple HTML-CSS, en fait,
