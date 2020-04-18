@@ -5,7 +5,7 @@ license: '[CC-BY 4.0](http://creativecommons.org/licenses/by/4.0/)'
 thanks: Ce document est mis à disposition selon les termes de la Licence Creative Commons Attribution 4.0 International \protect ![](https://licensebuttons.net/l/by/4.0/88x31.png){width=3em}
 date: décembre 2018 - janvier 2019
 lang: fr
-weight: 1
+weight: 10
 ---
 
 1.- M-10, la machine débranchée

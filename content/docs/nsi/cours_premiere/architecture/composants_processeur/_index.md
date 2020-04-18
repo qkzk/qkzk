@@ -2,7 +2,7 @@
 title: Composants d'un processeur
 author: David Roche
 theme: metropolis
-weight: 2
+weight: 3
 ---
 
 On entend souvent dire qu'_un ordinateur utilise uniquement des "1"
