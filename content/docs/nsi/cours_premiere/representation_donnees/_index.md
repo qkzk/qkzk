@@ -1,6 +1,7 @@
 ---
 title: "Représentation des données"
 draft: false
+weight: 3
 ---
 
 # Représentation des données

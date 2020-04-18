@@ -2,7 +2,7 @@
 title: Modèle de Von Neumann - Résumé
 author: qkzk
 theme: metropolis
-weight: 100
+weight: 100000
 ---
 
 ## Modèle de Von Neumann

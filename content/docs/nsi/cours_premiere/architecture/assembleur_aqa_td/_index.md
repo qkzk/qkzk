@@ -2,7 +2,7 @@
 title: Travaux dirigés assembleur AQA
 author: qkzk
 theme: metropolis
-weight: 6
+weight: 16
 # mainfont: Noto Sans CJK JP
 ---
 

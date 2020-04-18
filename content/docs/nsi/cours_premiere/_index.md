@@ -12,55 +12,12 @@ weight: 2
 
 
 
-## Classe de première :
+## Progression et contenu
+
+## Liens utiles
+
+consulter les [ressources](../../ressources)
 
 
 
-
-### Les cours
-
-
-La liste des fichiers déjà réalisés à cette date est [ici](/uploads/docsnsi/pdf/) :
-
-
-| Intitulé                       	| Cours                                                                                                                                                                                      	| Diaporama                                                           	|
-|--------------------------------	|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------	|---------------------------------------------------------------------	|
-| **Algorithmique**              	| [cours](/uploads/docsnsi/pdf/algorithmique-Article.pdf)                                                                                                                                    	| [diaporama](/uploads/docsnsi/pdf/algorithmique-Beamer.pdf)          	|
-| **Architecture des machines**  	| [cours](/uploads/docsnsi/pdf/architecture-Article.pdf)                                                                                                                                     	| [diaporama](/uploads/docsnsi/pdf/architecture-Beamer.pdf)           	|
-| **Réseaux**                    	| [cours](/uploads/docsnsi/pdf/reseaux-Article.pdf)                                                                                                                                          	| [diaporama](/uploads/docsnsi/pdf/reseaux-Beamer.pdf)                	|
-| **Représentation des données** 	| [cours](/uploads/docsnsi/pdf/representation_donnees-Article.pdf)                                                                                                                           	| [diaporama](/uploads/docsnsi/pdf/representation_donnees-Beamer.pdf) 	|
-| **Trier**                      	| [cours](/uploads/docsnsi/pdf/tris-Article.pdf)                                                                                                                                             	| [diaporama](/uploads/docsnsi/pdf/tris-Beamer.pdf)                   	|
-| **Tables CSV**                 	| [cours](/uploads/docsnsi/pdf/1_tables_csv_intro-Article.pdf), <br>[cours](/uploads/docsnsi/pdf/2_csv_nettoyer-Article.pdf) et <br>[cours](/uploads/docsnsi/pdf/3_csv_chercher-Article.pdf) 	|                                                                     	|
-
-Par ailleurs ces documents vous seront partagés directement dans google classroom afin que vous puissiez les consulter facilement sur tous les supports.
-
-
-### Travaux pratiques
-
-
-
-
-#### Initiation à la programmation :
-
-
-
-
-
-
-1. Python 3
-2. Les langages du Web : HTML, CSS, JavaScript
-
-
-
-
-Les travaux pratiques vous seront communiqués par l'intermédiaire de Google Classroom
-
-
-### Idées de projets
-
-
-[Ici](/uploads/docsnsi/pdf/liste_projets.pdf) un document de travail comprenant les extraits du programme définissant le cadre des projets et leurs enjeux ainsi qu'une liste de projets plus ou moins réalistes.
-
-Certains dépassent largement les enjeux du programme, leur difficulté est à chaque fois mentionnée.
-
-Il est à noter que j'ai déjà réalisé personnellement une très grande partie d'entre eux. Certains n'ont jamais été enseignés, d'autres ne sont que des idées.
+##

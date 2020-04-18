@@ -1,8 +1,8 @@
 ---
-title: Clé Linux
+title: Créer une clé Linux
 author: qkzk
 theme: metropolis
-weight: 1
+weight: 2
 # mainfont: Noto Sans CJK JP
 ---
 

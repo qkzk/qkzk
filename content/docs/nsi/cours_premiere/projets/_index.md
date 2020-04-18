@@ -1,6 +1,7 @@
 ---
 title: "Projets"
 draft: false
+weight: 20
 ---
 
 # Projets

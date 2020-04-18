@@ -2,7 +2,7 @@
 title: Modèle de Von Neumann
 author: qkzk
 theme: metropolis
-weight: 2
+weight: 12
 ---
 
 # Architecture des machines : le modèle de Von Neumann

@@ -2,7 +2,7 @@
 title: Devoirs de première
 author: qkzk
 theme: metropolis
-# mainfont: Noto Sans CJK JP
+weight: 100
 ---
 
 

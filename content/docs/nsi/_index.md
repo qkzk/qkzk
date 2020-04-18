@@ -69,11 +69,10 @@ Il convient donc de se préparer à cet examen le mieux possible.
 
 Aussi les séances seront de plusieurs nature :
 
-
-
-* Des séquences de cours vidéo projettés dont les contenus sont déjà majoritairement disponibles.
+* Des séquences de cours dont les supports sont hébergés ici.
+* Des travaux dirigés sur papier, souvent réalisés en classe.
 * Des travaux pratiques individuels ou en binôme.
-* Des projets en groupe de 3/4 élèves conduisant à des exposés.
+* Des projets en groupe.
 
 Les évaluations seront elles aussi variées :
 
@@ -103,7 +102,7 @@ Sur chaque poste vous trouverez plusieurs interfaces de développement (IDE) :
 
 
 * Thony qui permet de visualiser facilement les états des varaibles de debugguer
-* Sublime Text ou Atom qui sont des IDE généralistes auxquels on peut ajouter des modules offrant une grande richesse et beaucoup de souplesse.
+* Sublime Text et Atom qui sont des IDE généralistes auxquels on peut ajouter des modules offrant une grande richesse et beaucoup de souplesse.
 * Idle qui est l'IDE officiel de Python, d'une grande simplicité.
 
 Une grande partie de vos travaux se dérouleront en ligne et nous utiliserons la suite logicielle de Google :
@@ -133,25 +132,4 @@ Une grande partie d'entre eux sont disponibles sur Android. J'imagine que c'est 
 
 ### Outils spécifiques
 
-
-Nous ne ferons pas que programmer et nous utiliserons donc d'autres outils de manière ponctuelle.
-
-Dans le désordre :
-
-
-
-* HTML, CSS pour réaliser des pages webs statiques
-* Javascript pour les rendre dynamique (seules des connaissances rudimentaires seront apportées).
-* L'assembleur et le langage C en guise de comparaison des différents langages
-* Cisco Packet Tracer pour simuler des réseaux
-* Wireshark pour analyser ce qui circule dans un réseau
-* Différentes librairies Python :
-
- 	* pygame pour les jeux,
- 	* numpy et matplotlib pour manipuler des nombres et afficher les résultats
- 	* D'autres librairies selon les projets ou les TP
-
-
-* REPL.IT pour apprendre les rudiments de Python
-* Des micro ordinateurs Raspberry Pi pour découvrir les systèmes d'exploitation UNIX, son shell et les objets connectés.
-* La suite bureautique de Google (docs, sheets, slides etc.) pour présenter ou stocker de l'information.
+Consulter les [ressources](../ressources)

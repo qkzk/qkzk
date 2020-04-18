@@ -1,7 +1,7 @@
 ---
 title: "IHM sur le Web"
 draft: false
-weight: 10
+weight: 6
 ---
 
 # Interactions entre l'homme et la machine sur le web

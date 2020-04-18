@@ -2,7 +2,7 @@
 title: Algorithmique
 author: qkzk
 theme: Hannover
-
+weight: 2
 ---
 
 # Algorithmique
