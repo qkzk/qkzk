@@ -7,24 +7,16 @@ weight: 8
 
 ---
 
-# Réseau
 
-Cette partie poursuit le travail initié en SNT sur le réseau.
-
-### Les documents :
-
-* sur le [site](reseau)
-* au [format imprimable](/uploads/docsnsi/reseau/reseaux-Article.pdf)
-* [diaporama](/uploads/docsnsi/reseau/reseaux-Beamer.pdf),
-
-
-Nous aurons (si tout se passe bien) l'occasion de réaliser quelques TP :
+### pdf au [format imprimable](/uploads/docsnsi/reseau/reseaux-Article.pdf) et [diaporama](/uploads/docsnsi/reseau/reseaux-Beamer.pdf),
 
 * simulation d'un réseau,
 * capture de paquets sur un réseau.
 
-## Lien vers les [diapos du cours](/uploads/docsnsi/reseau/reseaux-Beamer.pdf)
-## Lien vers le [résumé du cours](/uploads/docsnsi/reseau/feuille-internet.pdf) à apprendre
+# Réseau
+
+Cette partie poursuit le travail initié en SNT sur le réseau.
+
 
 ## Programme :
 
