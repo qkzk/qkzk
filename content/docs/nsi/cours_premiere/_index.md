@@ -9,7 +9,7 @@ weight: 2
 
 # Les contenus de cours de la spécialité NSI
 
-Les infos générales de la spé NSI sont disponible un [étage plus haut](../)
+Les infos générales de la spé NSI sont disponibles un [étage plus haut](../)
 
 
 ## Progression envisagée
