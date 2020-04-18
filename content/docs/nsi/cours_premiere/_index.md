@@ -12,10 +12,26 @@ weight: 2
 Les infos générales de la spé NSI sont disponible un [étage plus haut](../)
 
 
-## Progression et contenu
+## Progression envisagée
 
 
-_à faire_
+| Thème                      	| Chapitres                                 	|
+|----------------------------	|-------------------------------------------	|
+| **Programmation**          	| Constructions élémentaires                	|
+| **Programmation**          	| Mise au point des programmes              	|
+| **Données**                	| Types et valeurs de base                  	|
+| **Donnée**                	| Tableaux en Python, dictionnaires, tuples 	|
+| **IHM sur le web**         	| HTML, CSS, formulaires, Flask             	|
+| **Système d'exploitation** 	| Linux                                     	|
+| **Algorithmique**          	| Les tris                                  	|
+| **Architecture**           	| Modèle de Von Neumann                     	|
+| **Données**                	| Tables indexées                           	|
+| **Données**                	| Flottants                                 	|
+| **Architecture**           	| Assembleur                                	|
+| **Algorithmique**          	| Gloutons                                  	|
+| **Algorithmique**          	| KNN                                       	|
+| **Réseau**                 	| Simulation d'un réseau, TCP/IP             	|
+| **Programmation**          	| Similarités des langages                  	|
 
 
 ## Liens utiles
