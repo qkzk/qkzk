@@ -1,5 +1,5 @@
 ---
-title: "Représentation des données"
+title: "Données"
 draft: false
 weight: 3
 ---
