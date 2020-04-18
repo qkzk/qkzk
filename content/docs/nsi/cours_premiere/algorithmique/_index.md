@@ -5,6 +5,27 @@ theme: Hannover
 weight: 2
 ---
 
+# Les cours sont accessibles via les menus.
+
+Ce qui suit est la version "initiale" du cours sur l'algorithmique de première.
+
+Tout y est passé en revue, sans grande organisation.
+
+# UTILISEZ LES MENUS POUR NAVIGUER
+
+---
+
+# LA SUITE EST UNE ARCHIVE
+
+---
+
+Vous avez été prévenus.
+
+---
+
+# Archive du cours :
+
+
 # Algorithmique
 
 **« L'informatique n'est pas plus la science des ordinateurs que l'astronomie n'est celle des téléscopes »**
