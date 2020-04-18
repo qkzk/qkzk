@@ -6,6 +6,9 @@ weight: 2
 # mainfont: Noto Sans CJK JP
 ---
 
+
+### pdf [pour impression](/uploads/docsnsi/architecture/linux/creer_cle_linux_print.pdf)
+
 # Utiliser Linux
 
 Le programme de NSI demande à ce que vous utilisiez un système libre.

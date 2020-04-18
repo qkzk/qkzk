@@ -5,6 +5,8 @@ theme: metropolis
 weight: 3
 ---
 
+### pdf [pour impression](/uploads/docsnsi/architecture/linux/correction_linux_debian_intro.pdf)
+
 # TP Linux "débian".
 
 # Correction : liste des commandes rencontrées :

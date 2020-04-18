@@ -5,6 +5,11 @@ author:
 weight: 1
 ---
 
+
+
+
+### pdf [pour impression](/uploads/docsnsi/architecture/linux/linux_intro.pdf)
+
 # Linux
 
 ## Linux et les systèmes libres
