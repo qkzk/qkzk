@@ -4,6 +4,9 @@ author: qkzk
 weight: 8
 ---
 
+
+pdf : [pour impression](/uploads/docsnsi/ihm_web/nsi_prem_projet_flask_print.pdf)
+
 # Serveur méteo
 
 L'objectif de ce mini projet est de mettre en oeuvre ce que vous

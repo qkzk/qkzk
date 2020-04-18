@@ -4,6 +4,8 @@
   weight: 3
 ---
 
+pdf : [pour impression](/uploads/docsnsi/ihm_web/nsi_prem_projet_css_print.pdf)
+
 # Mini projet CSS
 
 ![Margaret Hamilton](https://i.f1g.fr/media/madame/400x/sites/default/files/img/2019/07/margaret-hamilton.jpg)
