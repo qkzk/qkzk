@@ -7,6 +7,16 @@ weight: 8
 
 ---
 
+# Deux versions d'un même cours.
+
+Vous trouverez :
+
+* **dans les menus** : la version de David Roche, utilisée en 2020 durant le télétravail
+* **ci-dessous** : la version prévue initialement. Les deux recouvrent l'intégralité du programme.
+
+---
+
+
 
 ### pdf au [format imprimable](/uploads/docsnsi/reseau/reseaux-Article.pdf) et [diaporama](/uploads/docsnsi/reseau/reseaux-Beamer.pdf),
 
