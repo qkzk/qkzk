@@ -1,5 +1,5 @@
 ---
-title: "BDD : introduction"
+title: "introduction"
 author: qkzk
 weight: 10
 ---
