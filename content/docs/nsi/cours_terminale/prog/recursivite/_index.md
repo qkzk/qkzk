@@ -14,4 +14,4 @@ weight: 1
 ## Sur le site
 
 1. Le même [cours](cours)
-2. Les [exos de TD](exos)
+2. Les [exos de TD](td)
