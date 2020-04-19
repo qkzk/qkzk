@@ -4,7 +4,7 @@ author: qu3nt1n
 date: 2019-05-04 11:17:30+00:00
 draft: false
 type: docs
-weight: 11
+weight: 100
 ---
 
 # Petit tutoriel sur la création d'un réseau de Neurones
