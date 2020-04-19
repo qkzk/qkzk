@@ -40,11 +40,11 @@ l'**acheminement du trafic** entre ces réseaux.
 
 ## Mais qu'est-ce que le routage ?
 
-![routage](/uploads/docnsitale/routage/router.png)
+![routage](/uploads/docnsitale/routage/img/router.png)
 
 ## Mais qu'est-ce que le routage ?
 
-![routage](/uploads/docnsitale/routage/router_2.png)
+![routage](/uploads/docnsitale/routage/img/router_2.png)
 
 ## Mais qu'est-ce que le routage ?
 
@@ -268,11 +268,11 @@ On cherche à joindre $D$ depuis $S$.
 
 Dessiner le plan du réseau depuis cette table de routage
 
-![table de routage](/uploads/docnsitale/routage/table_routage.png)
+![table de routage](/uploads/docnsitale/routage/img/table_routage.png)
 
 ## Exemple 2 correction
 
-![table de routage : solution](/uploads/docnsitale/routage/table_routage_solution.png)
+![table de routage : solution](/uploads/docnsitale/routage/img/table_routage_solution.png)
 
 ## Exemple 2 - routage
 
