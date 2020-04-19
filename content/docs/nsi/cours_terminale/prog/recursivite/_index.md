@@ -15,3 +15,13 @@ weight: 1
 
 1. Le même [cours](cours)
 2. Les [exos de TD](td)
+
+
+## Programme
+
+**Contenus** : Récursivité.
+
+**Capacités attendues** : Écrire un programme récursif. Analyser le
+fonctionnement d’un programme récursif.
+
+**Commentaires :** Des exemples relevant de domaines variés sont à privilégier.
