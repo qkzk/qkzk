@@ -4,6 +4,9 @@ author: qkzk
 weight: 1
 ---
 
+### [pdf pour impression](/uploads/docnsitale/processus/psfssh_print.pdf), [diaporama](/uploads/docnsitale/processus/psfssh_slides.pdf)
+
+
 <!-- à compiler par
 pandoc -t beamer --slide-level 2 -V "aspectratio=1610" -s psfssh.md -o psfssh_slides.pdf
 -->
