@@ -6,7 +6,7 @@ weight: 2
 
 ## Le cours
 
-* sur le site [slides](slides),
+* sur le [site](slides),
 * [pdf pour impression](/uploads/docnsitale/processus/psfssh_print.pdf)
 * [diaporama](/uploads/docnsitale/processus/psfssh_slides.pdf)
 
@@ -36,14 +36,12 @@ l’interblocage peut être proposée.
 * pratique sur le shell
 *
 
-## Sources
+## Sources complémentaires
 
 
 * DIU :
   * [psfssh](/home/quentin/gdrive/cours/DIU-EIL/gitlab_from_univ/contenu_formation/portail/bloc3/psfssh)
     * complet sur les états d'un processus
-    * d'autres notions à intégrer dans d'autres chapitres (selon la progression, p-ê traiter le thème entier ?)
-    * manque la partie interblocage
   * [shell, gitlab](/home/quentin/gdrive/cours/DIU-EIL/gitlab_from_univ/contenu_formation/portail/bloc3/seance0)
 
 * Wikipedia
