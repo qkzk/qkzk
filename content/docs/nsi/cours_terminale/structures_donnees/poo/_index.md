@@ -5,12 +5,19 @@ weight: 1
 
 # La programmation orientée objet
 
-## En pdf
-
-1. le [tp](/uploads/docnsitale/poo/1_td.pdf)
-2. le [cours](/uploads/docnsitale/poo/2_slides.pdf)
-
-## Sur le site
+## Les contenus
 
 1. le [tp](tp)
 2. le [cours](cours)
+
+
+## Programme
+
+**Contenus** : Vocabulaire de la programmation objet : classes, attributs,
+méthodes, objets.
+
+**Capacités attendues** : Écrire la définition d’une classe. Accéder aux
+attributs et méthodes d’une classe.
+
+**Commentaires :** On n’aborde pas ici tous les aspects de la programmation
+objet comme le polymorphisme et l’héritage

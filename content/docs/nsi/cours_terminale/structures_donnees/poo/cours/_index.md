@@ -4,6 +4,8 @@ author: qkzk
 weight: 2
 ---
 
+### pdf : [pour impression](/uploads/docnsitale/poo/2_cours_print.pdf), [slides](/uploads/docnsitale/poo/2_cours_slides.pdf)
+
 # Introduction à la programmation objet
 
 ## Programmation modulaire

@@ -4,6 +4,9 @@ author: qkzk
 weight: 1
 ---
 
+### pdf : [pour impression](/uploads/docnsitale/poo/1_td.pdf)
+
+
 # La programmation objet
 
 ## Les objets : un moyen de séparer la conception de l'utilisation
