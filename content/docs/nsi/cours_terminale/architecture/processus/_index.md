@@ -39,11 +39,6 @@ l’interblocage peut être proposée.
 ## Sources complémentaires
 
 
-* DIU :
-  * [psfssh](/home/quentin/gdrive/cours/DIU-EIL/gitlab_from_univ/contenu_formation/portail/bloc3/psfssh)
-    * complet sur les états d'un processus
-  * [shell, gitlab](/home/quentin/gdrive/cours/DIU-EIL/gitlab_from_univ/contenu_formation/portail/bloc3/seance0)
-
 * Wikipedia
   * [interblocage](https://fr.wikipedia.org/wiki/Interblocage)
   * [deadlock](https://en.wikipedia.org/wiki/Deadlock)
