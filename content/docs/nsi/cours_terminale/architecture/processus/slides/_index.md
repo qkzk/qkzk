@@ -1,23 +1,14 @@
 ---
-title: Slides
-author: |
-    | qkzk
-    | Lycée des Flandres
-date: |
-    | jan 2020
-    |
-    |
-    | \protect ![](/uploads/docnsitale/processus/fig/by.png){width=12%}
-lang: fr
+title: processus, système de fichiers, shell
+author: qkzk
+weight: 1
 ---
 
 <!-- à compiler par
-pandoc -t beamer --slide-level 2 -V "aspectratio=1610" -s psfssh.md -o psfssh.pdf
+pandoc -t beamer --slide-level 2 -V "aspectratio=1610" -s psfssh.md -o psfssh_slides.pdf
 -->
 
-Ce contenu est prévu pour être projeté avec ces [slides](/uploads/docnsitale/processus/psfssh.pdf)
-
-# Système d'exploitation
+Système d'exploitation
 
 Première
 
@@ -700,6 +691,8 @@ Connecter les commandes via les pipes
 
 \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \  ![](/uploads/docnsitale/processus/fig/pipe.png){width=60%}
 
+
+##
 
 * Forme générale :
 
