@@ -106,7 +106,7 @@ pandoc -t beamer --slide-level 2 -V "aspectratio=1610" -s cours_sql2.md -o cours
     * est unique: ne peut être le même pour deux entités
 * Se représente par un rectangle, l'identifiant est souligné
 
-![Entité client](fig/entite_client.png "Entité client")
+![Entité client](/uploads/docnsitale/bdd/fig/entite_client.png "Entité client")
 
 
 
@@ -116,7 +116,7 @@ pandoc -t beamer --slide-level 2 -V "aspectratio=1610" -s cours_sql2.md -o cours
 * Elle est représentée par un cercle entre entités
      * Exemples: `commande`, `est_inscrit`, `travaille_pour`, `est_marie`, `habite_dans`....
 
-  ![Association commande](fig/client_asso_sans_card.png "Association commande")
+  ![Association commande](/uploads/docnsitale/bdd/fig/client_asso_sans_card.png "Association commande")
 
 ## MCD: Cardinalités
 
@@ -124,31 +124,31 @@ pandoc -t beamer --slide-level 2 -V "aspectratio=1610" -s cours_sql2.md -o cours
 * La valeur minimale est 0 ou 1, la valeur maximale est 1 ou n
 * L'association peut-être hiérarchique (maximum 1 d'un côté, n de l'autre)  ou maillée (maximum n des deux côtés), entre une ou plusieurs entités
 
-![Association commande](fig/asso_client_card.png "Association commande")
+![Association commande](/uploads/docnsitale/bdd/fig/asso_client_card.png "Association commande")
 
 ## MCD: Autres exemples
-![Association est_inscrit](fig/etudiant_sans_card.png "Association est_inscrit")
+![Association est_inscrit](/uploads/docnsitale/bdd/fig/etudiant_sans_card.png "Association est_inscrit")
 
 ## MCD: Autres exemples
-![Association est_inscrit](fig/etudiant_card.png "Association est_inscrit")
+![Association est_inscrit](/uploads/docnsitale/bdd/fig/etudiant_card.png "Association est_inscrit")
 
 ## MCD: Autres exemples
-![Association est_marie](fig/mariage_sans_card.png "Association est_marie")
+![Association est_marie](/uploads/docnsitale/bdd/fig/mariage_sans_card.png "Association est_marie")
 
 ## MCD: Autres exemples
-![Association est_marie](fig/mariage_card.png "Association est_marie")
+![Association est_marie](/uploads/docnsitale/bdd/fig/mariage_card.png "Association est_marie")
 
 ## MCD: Autres exemples
-![Association est_divorce](fig/divorce_sans_card.png "Association est_divorce")
+![Association est_divorce](/uploads/docnsitale/bdd/fig/divorce_sans_card.png "Association est_divorce")
 
 ## MCD: Autres exemples
-![Association est_divorce](fig/divorce_card.png "Association est_divorce")
+![Association est_divorce](/uploads/docnsitale/bdd/fig/divorce_card.png "Association est_divorce")
 
 ## MCD: Autres exemples
-![Association reservation](fig/resa_sans.png "Association reservation")
+![Association reservation](/uploads/docnsitale/bdd/fig/resa_sans.png "Association reservation")
 
 ## MCD: Autres exemples
-![Association reservation](fig/resa_avec.png "Association reservation")
+![Association reservation](/uploads/docnsitale/bdd/fig/resa_avec.png "Association reservation")
 
 
 
@@ -177,39 +177,39 @@ pandoc -t beamer --slide-level 2 -V "aspectratio=1610" -s cours_sql2.md -o cours
 
 ## Lien hiérarchique
 
-![Association est_inscrit](fig/etudiant_card.png "Association est_inscrit")
+![Association est_inscrit](/uploads/docnsitale/bdd/fig/etudiant_card.png "Association est_inscrit")
 
-![Modèle Relationnel-Lien Hiérarchique](fig/etudiant_MLD.png "Modèle Relationnel-Lien Hiérarchique")
+![Modèle Relationnel-Lien Hiérarchique](/uploads/docnsitale/bdd/fig/etudiant_MLD.png "Modèle Relationnel-Lien Hiérarchique")
 
 ## Passage du MCD au Modèle Relationnel
 ### Lien Maillé
 * Une association maillée (0-n)-(0-n) donne lieu à la création d'une nouvelle table dont la clé primaire est l'union des clés primaires des entités qu'elle relie. Ces attributs sont aussi des clés étrangères.
 
-![Association commande](fig/asso_client_card.png "Association commande")
+![Association commande](/uploads/docnsitale/bdd/fig/asso_client_card.png "Association commande")
 
 
 
 ## Lien Maillé
 
-![Modèle Relationnel-Lien Maillé](fig/client_asso_MLD.png "Modèle Relationnel-Lien Maillé")
+![Modèle Relationnel-Lien Maillé](/uploads/docnsitale/bdd/fig/client_asso_MLD.png "Modèle Relationnel-Lien Maillé")
 
 ## Autres exemples
-![Association est_marie](fig/mariage_card.png "Association est_marie")
+![Association est_marie](/uploads/docnsitale/bdd/fig/mariage_card.png "Association est_marie")
 
-![Modèle Relationnel mariage](fig/mariage_MLD.png "Modèle Relationnel mariage")
-
-## Autres exemples
-![Association est_divorce](fig/divorce_card.png "Association est_divorce")
-
-![Modèle Relationnel divorce](fig/divorce_MLD.png "Modèle Relationnel divorce")
+![Modèle Relationnel mariage](/uploads/docnsitale/bdd/fig/mariage_MLD.png "Modèle Relationnel mariage")
 
 ## Autres exemples
+![Association est_divorce](/uploads/docnsitale/bdd/fig/divorce_card.png "Association est_divorce")
 
-![MCD Categorie](fig/resa_avec.png "MCD Categorie")
+![Modèle Relationnel divorce](/uploads/docnsitale/bdd/fig/divorce_MLD.png "Modèle Relationnel divorce")
 
 ## Autres exemples
 
-![Modèle Relationnel Categorie](fig/resa_MLD.png "Modèle Relationnel Categorie")
+![MCD Categorie](/uploads/docnsitale/bdd/fig/resa_avec.png "MCD Categorie")
+
+## Autres exemples
+
+![Modèle Relationnel Categorie](/uploads/docnsitale/bdd/fig/resa_MLD.png "Modèle Relationnel Categorie")
 
 # Conception à partir d'un csv
 
@@ -244,7 +244,7 @@ pandoc -t beamer --slide-level 2 -V "aspectratio=1610" -s cours_sql2.md -o cours
 
 ### Cas des catégories socioprofessionnelles du Nord.
 
-![Fichier d'origine : CSV](fig/categorie_socio_csv.png "Fichier d'origine : CSV")
+![Fichier d'origine : CSV](/uploads/docnsitale/bdd/fig/categorie_socio_csv.png "Fichier d'origine : CSV")
 
 ## Construire une structure pertinente
 
@@ -270,15 +270,15 @@ pandoc -t beamer --slide-level 2 -V "aspectratio=1610" -s cours_sql2.md -o cours
 
 ## MCD possible
 
-![MCD Categorie](fig/categorie.png "MCD Categorie")
+![MCD Categorie](/uploads/docnsitale/bdd/fig/categorie.png "MCD Categorie")
 
 ## Modèle Relationnel possible
 
-![Modèle Relationnel Categorie](fig/categorie_MLD.png "Modèle Relationnel Categorie")
+![Modèle Relationnel Categorie](/uploads/docnsitale/bdd/fig/categorie_MLD.png "Modèle Relationnel Categorie")
 
 ## Modèle Relationnel utilisé
 
-![Modèle Relationnel utlisé](fig/shema_final.png "Modèle Relationnel utlisé")
+![Modèle Relationnel utlisé](/uploads/docnsitale/bdd/fig/shema_final.png "Modèle Relationnel utlisé")
 
 # Bilan
 

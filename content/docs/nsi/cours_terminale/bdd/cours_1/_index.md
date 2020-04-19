@@ -45,7 +45,7 @@ l'organisation répond à une logique systématique.
 
 ### Exemple
 
-![données de la table ville](fig/table_ville.png "données de la table ville")\
+![données de la table ville](/uploads/docnsitale/bdd/fig/table_ville.png "données de la table ville")\
 
 ## Définitions
 
@@ -170,7 +170,7 @@ Ainsi, le numéro de sécu est à la fois :
 
 ### Cas des catégories socioprofessionnelles du Nord.
 
-![Fichier d'origine : CSV](fig/categorie_socio_csv.png "Fichier d'origine : CSV")
+![Fichier d'origine : CSV](/uploads/docnsitale/bdd/fig/categorie_socio_csv.png "Fichier d'origine : CSV")
 
 ## Construire une structure pertinente
 
@@ -226,7 +226,7 @@ Ainsi, le numéro de sécu est à la fois :
 * Logiciel permettant de manipuler le contenu des bases de données relationnelles
 * Garantit la qualité, la pérennité et la confidentialité des informations
 * Exemple : [SQLite](https://sqlite.org/) est un SGBDR dont le code
-source est dans le domaine public ![logo SQLite](fig/SQLite370.svg.png)
+source est dans le domaine public ![logo SQLite](/uploads/docnsitale/bdd/fig/SQLite370.svg.png)
 
 ### C'est un langage déclaratif
 * Décrit le résultat voulu sans décrire la manière de l'obtenir
@@ -401,7 +401,7 @@ pour chaque ville.
 
 ## Exemples avec ou sans agrégat
 
-![résultats avg sans GROUP BY](fig/avg.png "sans agrégat") ![résultats avg avec GROUP BY](fig/avg_group_by.png "avec agrégat")
+![résultats avg sans GROUP BY](/uploads/docnsitale/bdd/fig/avg.png "sans agrégat") ![résultats avg avec GROUP BY](/uploads/docnsitale/bdd/fig/avg_group_by.png "avec agrégat")
 
 ## Extraction des données de deux tables
 
@@ -411,7 +411,7 @@ associations possibles entre les lignes des deux tables
   * Nb_total_lignes = Nb_lignes_ville * Nb_lignes_evolution = 650 * 10400
 * Non pertinent
 
-![](fig/produit_cartesien.png)
+![](/uploads/docnsitale/bdd/fig/produit_cartesien.png)
 
 ## Extraction des données de deux tables
 
@@ -421,7 +421,7 @@ par des clés primaires et étrangères identiques.
   * Nb_total_lignes = Nb_lignes_table_clé_étrangère = NB_lignes_evolution
 * À utiliser pour associer deux tables
 
-![](fig/join_on.png)
+![](/uploads/docnsitale/bdd/fig/join_on.png)
 
 ## Modification des données
 
