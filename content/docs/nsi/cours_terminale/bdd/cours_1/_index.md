@@ -9,6 +9,7 @@ weight: 10
 
 
 ### pdf : [pour impression](/uploads/docnsitale/bdd/cours_sql1_print.pdf), [diapo](/uploads/docnsitale/bdd/cours_sql1_slides.pdf)
+
 <!-- à compiler par
 pandoc -t beamer --slide-level 2 -V "aspectratio=1610" -s cours_sql1.md -o cours_sql1_slides.pdf
 -->
