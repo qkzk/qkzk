@@ -10,6 +10,9 @@ pandoc -t beamer --slide-level 2 -V "aspectratio=1610" -s race_condition.md -o r
 
 ### [pdf pour impression](/uploads/docnsitale/processus/race_condition_print.pdf), [diaporama](/uploads/docnsitale/processus/race_condition_slides.pdf)
 
+## Exemples
+
+Les exemples sont [sur le github NSI terminale]()
 
 
 # Race condition
