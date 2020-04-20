@@ -28,14 +28,6 @@ processus actifs ou en attente sur une machine. Une présentation débranchée d
 l’interblocage peut être proposée.
 
 
-## Plan d'une séquence
-
-* séquence de cours sur le shell qui mène à l'interblocage (théorique)
-  * faire le lien avec une boucle infinie, peut-être reprendre les animations de wikipedia us
-* activité debranchée avec des extraits (donner des résultats de commande et recommander des actions)
-* pratique sur le shell
-*
-
 ## Sources complémentaires
 
 
