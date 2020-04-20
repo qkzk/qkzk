@@ -6,9 +6,9 @@ weight: 2
 
 ## Le cours
 
-* sur le [site](slides),
-* [pdf pour impression](/uploads/docnsitale/processus/psfssh_print.pdf)
-* [diaporama](/uploads/docnsitale/processus/psfssh_slides.pdf)
+1. [processus, système de fichiers, shell](processus)
+2. [condition de compétition](race_condition)
+
 
 
 
