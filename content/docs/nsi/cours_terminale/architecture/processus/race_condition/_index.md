@@ -12,7 +12,7 @@ pandoc -t beamer --slide-level 2 -V "aspectratio=1610" -s race_condition.md -o r
 
 ## Exemples
 
-Les exemples sont [sur le github NSI terminale]()
+Les exemples sont [sur le github NSI terminale](https://github.com/NSI-T-2021/Tale_nsi_2021/tree/master/archi/processus/race_condition)
 
 
 # Race condition
