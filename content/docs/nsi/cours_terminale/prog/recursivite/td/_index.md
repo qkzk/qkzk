@@ -331,6 +331,32 @@ Il est donc certainement pertinent de disposer de l'information
 
 **Remarque** Ce problème entre dans la classe plus large des problèmes qui consistent à chercher un chemin dans un graphe. Ici les n&oelig;uds du graphe sont les mots et il existe une arête entre deux mots s'ils sont voisins. Ce sujet sera abordé en algorithmique (dans le chapitre sur les graphes).
 
-### Flocons de Von Koch
+### Flocons de Von Koch : Production de fractales
 
-Utilisez le [module `turtle`](https://docs.python.org/3.3/library/turtle.html?highlight=turtle#module-turtle) pour tracer des [flocons de Von Koch](https://gitlab-fil.univ-lille.fr/diu-eil-lil/portail/tree/master/bloc1/recursivite/readme.md#processus-récursif).
+le [flocon de Von Koch](./img/Koch_anime.gif)
+
+On dispose de la primitive *tracer(l)* qui permet de tracer un segment de longueur *l*.
+
+Le processus de tracé d'un segment de von koch de taille *l*  à l'ordre *n* est :
+
+
+*vonkoch*(l,n)
+
+- si n = 1, *tracer(l)*
+- sinon
+
+  - *vonkoch*(l/3, n-1)
+  - tourner à gauche de 60°
+  - *vonkoch*(l/3, n-1)
+  - tourner à droite de 120°
+  - *vonkoch*(l/3, n-1)
+  - tourner à gauche de 60°
+  - *vonkoch*(l/3, n-1)
+
+Utilisez le [module `turtle`](https://docs.python.org/3.3/library/turtle.html?highlight=turtle#module-turtle) p
+
+![vonkoch](./img/vonkoch.jpg)
+
+Si turtle n'est pas installé sur vos postes : [vous le trouverez ici](https://trinket.io/python)
+
+*tracer(l)* = `forward(l)` et les fonctions `right` et `left` permettent les rotations
