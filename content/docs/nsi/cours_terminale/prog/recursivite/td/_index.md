@@ -1,5 +1,5 @@
 ---
-title: Exercices sur la récursivité
+title: Travaux dirigés
 author: qkzk
 weight: 2
 ---
@@ -253,6 +253,8 @@ Autres exercices
 
 ### Les tours de Hanoï
 
+![Hanoï](https://upload.wikimedia.org/wikipedia/commons/thumb/0/07/Tower_of_Hanoi.jpeg/300px-Tower_of_Hanoi.jpeg)
+
 Il s'agit d'un exemple très classique d'algorithme récursif.
 
 Voici ce qu'en dit [Wikipedia](https://fr.wikipedia.org/wiki/Tours_de_Hano%C3%AF)
@@ -261,6 +263,14 @@ Voici ce qu'en dit [Wikipedia](https://fr.wikipedia.org/wiki/Tours_de_Hano%C3%AF
 >
 >  - on ne peut déplacer plus d'un disque à la fois ;
 >  - on ne peut placer un disque que sur un autre disque plus grand que lui ou sur un emplacement vide.
+
+![Hanoï animation](https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/Tower_of_Hanoi_4.gif/300px-Tower_of_Hanoi_4.gif)
+
+Pour ceux qui souhaitent [s'entrainer](http://towersofhanoi.info/Play.aspx).
+
+* choisir : "play",
+* discs : "5",
+* pegs : "3"
 
 Trouver (puis programmer) un algorithme pour résoudre ce problème *n* disques.
 On pourra se contenter d'afficher sur la sortie standard les déplacements réalisés au cours de la résolution (par exemple *"dique de taille 3 déplacer de la tour 1 à la tour 2"*).

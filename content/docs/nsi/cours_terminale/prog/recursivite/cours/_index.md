@@ -5,7 +5,7 @@ date: 2019/12/25
 weight: 1
 ---
 
-### pdf : [pour impression](/uploads/docnsitale/recursivite/pdf/1_cours_article.pdf), diapo [avec anim](/uploads/docnsitale/recursivite/pdf/1_cours_slides_animes.pdf), diapo [sans anim](content/uploads/docnsitale/recursivite/pdf/1_cours_slides.pdf)
+### pdf : [pour impression](/uploads/docnsitale/recursivite/pdf/1_cours_print.pdf), diapo [avec anim](/uploads/docnsitale/recursivite/pdf/1_cours_slides_animes.pdf), diapo [sans anim](content/uploads/docnsitale/recursivite/pdf/1_cours_slides.pdf)
 
 # Récursivité
 
