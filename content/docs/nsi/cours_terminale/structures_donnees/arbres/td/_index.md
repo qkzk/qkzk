@@ -1,9 +1,16 @@
 ---
-title: Travaux dirigés
+title: Travaux dirigés : arbres binaires
 date: novembre-décembre 2019
-lang: fr
 weight: 1
 ---
+
+
+### pdf: [pour impression](/uploads/docnsitale/arbres/cours_td_intro.pdf)
+
+
+<!-- à compiler par
+pandoc -t beamer --slide-level 2 -V "aspectratio=1610" -s cours_sql1.md -o cours_sql1_slides.pdf
+-->
 
 Qu'est-ce qu'un arbre ?
 =======================
@@ -32,6 +39,42 @@ Par exemple[^arbre-exemple] :
 * sites web,
 * fichiers XML.
 
+## Quelques exemples
+
+
+
+* En biologie :
+
+    . ![biologie](https://runestone.academy/runestone/books/published/pythonds/_images/biology.png){height=30%}
+
+* Les dossiers d'un ordinateur
+
+    . ![dossiers UNIX](https://runestone.academy/runestone/books/published/pythonds/_images/directory.png)
+
+* Les balises d'une page web forment un arbre (appelé DOM) :
+
+    ```html
+    <html xmlns="http://www.w3.org/1999/xhtml"
+          xml:lang="en" lang="en">
+    <head>
+        <meta http-equiv="Content-Type"
+              content="text/html; charset=utf-8" />
+        <title>simple</title>
+    </head>
+    <body>
+    <h1>A simple web page</h1>
+    <ul>
+        <li>List item one</li>
+        <li>List item two</li>
+    </ul>
+    <h2><a href="http://www.cs.luther.edu">Luther CS </a><h2>
+    </body>
+    </html>
+    ```
+
+    . ![structure d'une page web](https://runestone.academy/runestone/books/published/pythonds/_images/htmltree.png)
+
+
 [^arbre-informatique]: Le terme d'arbre recouvre plusieurs notions
 distinctes : arbres libres, arbres enracinés, arbres binaires, etc. \
 Nous ne traiterons pas des arbres libres qui relèvent de la théorie des
@@ -40,15 +83,9 @@ Nous nous intéresserons aux _arbres enracinés_ que nous nommerons plus
 simplement _arbres_, et aux _arbres binaires_, un cas particulier de
 ces arbres enracinés.
 
-[^arbre-exemple]: Voir aussi la section
-[_Examples of trees_](https://runestone.academy/runestone/books/published/pythonds/Trees/ExamplesofTrees.html)
-de _Problem Solving with Algorithms and Data Structures using Python_,
-	Brad Miller and David Ranum, Luther College.
-	Franklin, Beedle & Associates Inc. (2011).
-	Consultable en ligne à [runestone.academy/runestone/static/pythonds/index.html](https://runestone.academy/runestone/static/pythonds/index.html).
 
 Un arbre est une structure de données non-linéaire (comparée aux
-tableaux, listes, piles, et files qui sont des strutures linéaires).
+tableaux, listes, piles, et files qui sont des structures linéaires).
 
 Une structure de données arborescente peut être définie récursivement
 comme un ensemble de nœuds accessibles depuis un nœud racine. Chaque
