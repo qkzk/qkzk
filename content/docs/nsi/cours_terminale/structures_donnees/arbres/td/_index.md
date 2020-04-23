@@ -1,5 +1,5 @@
 ---
-title: Travaux dirigés : arbres binaires
+title: "Travaux dirigés : arbres binaires"
 date: novembre-décembre 2019
 weight: 1
 ---
@@ -32,20 +32,14 @@ Les _arbres_ sont des structures de données[^arbre-informatique]
 
 utilisées pour représenter des ensembles de données structurées
 hiérarchiquement.
-Par exemple[^arbre-exemple] :
 
-* système de fichiers,
-* base de données,
-* sites web,
-* fichiers XML.
 
 ## Quelques exemples
 
 
-
 * En biologie :
 
-    . ![biologie](https://runestone.academy/runestone/books/published/pythonds/_images/biology.png){height=30%}
+    . ![biologie](https://runestone.academy/runestone/books/published/pythonds/_images/biology.png)
 
 * Les dossiers d'un ordinateur
 
