@@ -34,10 +34,10 @@ fusionner (`tableau`, `gauche`, `droite`):
     de tableau
 ```
 
-<!--
-## Exemple simple
 
-[Vidéo Geek for geek](https://www.youtube.com/watch?v=JSceec-wEyw) -->
+## Exemple en vidéo
+
+[Vidéo Geek for geek](https://www.youtube.com/watch?v=JSceec-wEyw)
 
 ## Exemple détaillé 0
 
