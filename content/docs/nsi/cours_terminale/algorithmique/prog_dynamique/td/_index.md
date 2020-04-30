@@ -5,7 +5,7 @@ date: 2020/04/29
 weight: 2
 ---
 
-### pdf: [pour impression](/uploads/docnsitale/algo/prog_dynamique/2_td_prog_dynamique_corrige.pdf)
+### pdf: [pour impression](/uploads/docnsitale/algo/prog_dynamique/2_td_prog_dynamique.pdf)
 
 ## Introduction
 
@@ -58,11 +58,11 @@ les sommets 2 et 5 ne sont pas reliés.
 1.  Déterminer le chemin optimal de la seconde pyramide de nombres.
 
 
-    **Correction**
+    <!-- **Correction**
 
     `3 + 4 + 7 + 5 = 19`
 
-    **Correction**
+    **Correction** -->
 
 2.  Proposer un algorithme récursif.
 
@@ -72,7 +72,7 @@ les sommets 2 et 5 ne sont pas reliés.
     à partir de $x$.
 
 
-    **Correction**
+    <!-- **Correction**
 
     **définition récursive de $c(x)$ :**
 
@@ -82,25 +82,25 @@ les sommets 2 et 5 ne sont pas reliés.
     > et $d(x)$ sont les positions inférieures gauche et droite sous la
     > position $x$.
 
-    **Correction**
+    **Correction** -->
 
 3.  Est-ce qu'on effectue plusieurs fois le même calcul ? Est-ce optimal ?
 
-    **Correction**
+    <!-- **Correction**
 
     Cet algorithme effectue toujours beaucoup trop de calculs.
 
     La valeur $7$ de la troisième ligne est visitée une fois en venant du 2
     et une fois en venant du 4 (de la première ligne).
 
-    **Correction**
+    **Correction** -->
 
 ### En utilisant la progression dynamique.
 
 4.  Rappeler les deux principes à respecter avant d'envisager la progression
     dynamique. Sont-ils respectés ici ?
 
-    **Correction**
+    <!-- **Correction**
 
     *   _Chevauchement des sous-problèmes_
 
@@ -112,7 +112,7 @@ les sommets 2 et 5 ne sont pas reliés.
         Une fois qu'on a la somme maximale qu'on peut atteindre pour un noeud,
         il est inutile de la recalculer pour un autre
 
-    **Correction**
+    **Correction** -->
 
 Nous allons construire un algorithme différent. Il ne part plus de la pointe
 mais de la base.
@@ -137,7 +137,7 @@ Par exemple,
     3   9  5  4  6
     ```
 
-    **Correction**
+    <!-- **Correction**
 
     ```
     Sommes montantes ex 2
@@ -147,11 +147,11 @@ Par exemple,
     3  9   5   4   6
     ```
 
-    **Correction**
+    **Correction** -->
 6.  Proposer un algorithme calculant itérativement ces sommes montantes.
     Où la somme maximale est-elle référencée ?
 
-    **Correction**
+    <!-- **Correction**
 
     On crée une pyramide de mêmes dimensions remplie de zéros.
     L'étage le plus bas est initialisé avec les valeurs de la pyramide
@@ -163,48 +163,48 @@ Par exemple,
         les fils gauche et droit sont : 1 étage plus bas,
 
     La somme maximale est référencée tout en haut de la pyramide
-    **Correction**
+    **Correction** -->
 
 8.  Combien de sommes sont-elles effectuées ?
 
 
-    **Correction**
+    <!-- **Correction**
 
     Une somme par élément de la pyramide sauf la dernière ligne.
 
     Donc $n(n-1)/2$ sommes et $n(n-1)/2$ maximums.
 
-    **Correction**
+    **Correction** -->
 
 
 7.  Vérifier sur les exemples.
 
-    **Correction**
+    <!-- **Correction**
 
     Voir plus haut
 
-    **Correction**
+    **Correction** -->
 
 On envisage d'implémenter cet algorithme (lire : vous le ferez en TP).
 
 8.  Choisir une structure de donnée adaptée pour les pyramides à cet algorithme.
 
-    **Correction**
+    <!-- **Correction**
 
     On peut utiliser un dictionnaire ou une double liste.
     Chaque étage dans une liste.
 
-    **Correction**
+    **Correction** -->
 
 10. **Complément pas indispensable**. On obtient bien la somme maximale, mais
     pas le chemin qui y mène. Que pourrait-on ajouter pour l'obtenir ?
 
-    **Correction**
+    <!-- **Correction**
 
     On peut conserver l'information du fils qui a fourni la somme la meilleure.
     Par exemple sa valeur ou sa position.
 
-    **Correction**
+    **Correction** -->
 
 
 _Remarque finale :_ les pyramides de nombres sont des graphes. Alors ce qu'on
@@ -287,7 +287,7 @@ Le tableau ci-dessous se remplit par ligne.
 
 1.  Compléter le tableau
 
-    **correction**
+    <!-- **correction**
 
     |                      	| 0  	| 1 	| 2 	| 3 	| 4 	| 5 	|
     |----------------------	|----	|---	|---	|---	|---	|---	|
@@ -296,18 +296,18 @@ Le tableau ci-dessous se remplit par ligne.
     | $[1, \textbf{2}]$    	| 1  	| 1 	| 2 	| 2 	| 3 	| 3 	|
     | $[1, 2, \textbf{5}]$ 	| 1  	| 1 	| 2 	| 2 	| 3 	| 4 	|
 
-    **correction**
+    **correction** -->
 
 2.  Proposer un algorithme pour résoudre le problème.
 
-    **correction**
+    <!-- **correction**
 
     ```
     pour toute pièce p de S,
         pour tout reste à rendre r entre 1 et n,
             C(S, r) = C(S - {p}, r) + C(S, r - p)
     ```
-    **correction**
+    **correction** -->
 
 ## 2. Le rendu de monnaie : nombre minimal de pièces
 
@@ -344,7 +344,7 @@ qui retourne toujours la solution optimale.
 
 1.  Quel algorithme naïf pourrait-on envisager ? Inconvénient ?
 
-    **Correction**
+    <!-- **Correction**
 
     On pourrait calculer toutes les sommes qui valent la somme à rendre
     Ensuite on choisit parmi ces dernières celle qui est optimale.
@@ -354,11 +354,11 @@ qui retourne toujours la solution optimale.
 
     Autre problème, on calcule plusieurs fois la même somme.
 
-    **Correction**
+    **Correction** -->
 
 2.  Peut-on appliquer ici la programmation dynamique ?
 
-    **Correction**
+    <!-- **Correction**
 
 
     *   Sous structure optimale :
@@ -380,14 +380,14 @@ qui retourne toujours la solution optimale.
 
         Ces deux problèmes ne sont pas indépendants.
 
-    **Correction**
+    **Correction** -->
 
 3.  On note $S$ la somme, $n$ la somme, $S$ le jeu de pièces dont on dispose
     et $f(n, S)$ le nombre minimal de pièces à utiliser.
 
     Proposer une relation de récurrence sur $f$.
 
-    **Correction**
+    <!-- **Correction**
 
     On considère une configuration optimale permettant de rendre $n$ et une
     pièce de valeur $c$.
@@ -401,12 +401,12 @@ qui retourne toujours la solution optimale.
 
     $$f(n, S) = \min \left( 1 + f(n - c, S), f(n, S \setminus\{c \})  \right)$$
 
-    **Correction**
+    **Correction** -->
 
 4.  Proposer un algorithme récursif pour résoudre le problème du rendu de
     monnaie.
 
-    **Correction**
+    <!-- **Correction**
 
     $Système$ : le jeu de pièces, $n$ le montant, $p$ le numéro d'une pièce
     dans le système.
@@ -439,7 +439,7 @@ qui retourne toujours la solution optimale.
 
     ```
 
-    **Correction**
+    **Correction** -->
 
 ---
 
@@ -507,7 +507,7 @@ Par exemple le _3_ est obtenu en faisant _1 + 2 = 3_ (ses voisins du dessus)
     | 6   	|   	  |   	  |   	|   	|   	|   	|   	|   	|
     | 7   	|   	  |   	  |   	|   	|   	|   	|   	|   	|
 
-    **Correction**
+    <!-- **Correction**
 
     | `n\k` | 0 	| 1 	| 2  	| 3  	| 4  	| 5  	| 6 	| 7 	|
     |-----	|---	|---	|----	|----	|----	|----	|---	|---	|
@@ -528,7 +528,7 @@ Par exemple le _3_ est obtenu en faisant _1 + 2 = 3_ (ses voisins du dessus)
 
     $\binom{6}{3} = \binom{5}{3} + \binom{5}{2} \Longleftrightarrow 20 = 10 + 10$
 
-    **Correction**
+    **Correction** -->
 
 ---
 
@@ -544,7 +544,7 @@ Voici les propriétés que nous allons utiliser :
 1. Donner une fonction récursive (en langage naturel ou en Python) qui
    calcule $\binom{n}{k}$
 
-    **Correction**
+    <!-- **Correction**
     Voici l'algorithme récursif qui correspond à ça :
 
     ```
@@ -552,18 +552,18 @@ Voici les propriétés que nous allons utiliser :
       si k = 0 ou si k = n, alors retourner 1
       sinon retourner c(n-1, k) + c(n-1, k-1)
     ```
-    **Correction**
+    **Correction** -->
 
 2.  Construire l'arbre des appels récursifs du calcul de $\binom{5}{3}$
 
     (prévoir de la place, le nombre total d'appels récursifs est $2\binom{n}{k} - 2$).
 
-    **Correction**
+    <!-- **Correction**
 
     Voici les appels récursifs de notre fonction simple pour calculer $\binom{5}{3}$
-    [appels récursifs](/uploads/docnsitale/algo/prog_dynamique/1_arbre_combinaison_recursion.png)
+    [appels récursifs](img/1_arbre_combinaison_recursion.png)
 
-    **Correction**
+    **Correction** -->
 
 
 4.  proposer un algorithme utilisant la programmation dynamique qui
@@ -572,7 +572,7 @@ Voici les propriétés que nous allons utiliser :
 5.  Est-il nécessaire de mémoriser _tout_ le tableau ?
 6.  Doit-on remplir entièrement chaque ligne ?
 
-    **Correction** Solution
+    <!-- **Correction** Solution
 
     1. algorithme
 
@@ -581,7 +581,7 @@ Voici les propriétés que nous allons utiliser :
         3. Temps: $T(n,k)=O(nk)$
 
     2. Seule l'avant dernière ligne doit être gardée en mémoire.
-    3. Non, on peut améliorer en ne calculant que les cases "en haut à gauche" de la case initiale. **Correction**
+    3. Non, on peut améliorer en ne calculant que les cases "en haut à gauche" de la case initiale. **Correction** -->
 
 ---
 
@@ -607,7 +607,7 @@ peut
 1.  énumérer tous les prix possibles pour une planche de longueur 4.
 2.  Quel est la solution optimale ?
 
-    **Correction**
+    <!-- **Correction**
     Solution
 
     * Aucune découpe: profit 9
@@ -619,13 +619,13 @@ peut
     * Découpe 2+1+1: profit 5 + 1 + 1 = 7
     * Découpe 1+1+1+1: profit 1 + 1 + 1 + 1 = 4.
     * Optimal: découpe 2+2, c’est-à-dire 2 morceaux de longueur 2.
-    **Correction**
+    **Correction** -->
 
 On note $r_n$ le profit maximal que l'on peut atteindre pour une planche de longueur $n$.
 
 3.  Proposer une relation de récurrence entre $r_n$ et les valeurs inférieures.
 
-    **Correction**
+    <!-- **Correction**
     Solution
 
     **recurrence 1**
@@ -647,14 +647,14 @@ On note $r_n$ le profit maximal que l'on peut atteindre pour une planche de long
     S'obtient en considérant en que ce que l'on obtient au final est un morceau de longueur $i$
     sur l'extrémité gauche, au prix $p_i$, et le reste, de longueur $n-i$ qui, dans une solution
     optimale, doit être un découpage optimal d'une planche de longueur $n-i$.
-    **Correction**
+    **Correction** -->
 
 
 
 4. Proposer une fonction récursive `coupe` qui calcule $r_n$ en fonction des
    paramètres $p$ (le tableau des prix) et $n$ (la longueur de la planche).
 
-    **Correction** Solution
+    <!-- **Correction** Solution
 
     ```
     fonction coupe(p, n):
@@ -664,15 +664,15 @@ On note $r_n$ le profit maximal que l'on peut atteindre pour une planche de long
         pour i allant de 1 à n
           q = max(q, p[i] + coupe(p, n-i))
         retourner q
-    ``` **Correction**
+    ``` **Correction** -->
 
 5.  Construire l'arbre des appels récursifs de `coupe(p, 4)`
 
-    **Correction**
+    <!-- **Correction**
     Solution
 
-    ![Dérouler le calcul de coupe(p, 4)](/uploads/docnsitale/algo/prog_dynamique/2_arbre_scierie_recursion.png)
-    **Correction**
+    ![Dérouler le calcul de coupe(p, 4)](img/2_arbre_scierie_recursion.png)
+    **Correction** -->
 
 6.  Modifier votre fonction précédente pour qu'elle utilise une solution
     mémoisée.
@@ -680,7 +680,7 @@ On note $r_n$ le profit maximal que l'on peut atteindre pour une planche de long
     1. de haut en bas
     2. de bas en haut
 
-    **Correction**
+    <!-- **Correction**
 
     1. On considère un tableau $r[0..n]$ dont tous les éléments sont initialement tels que
         $r[i] = - \infty$
@@ -733,4 +733,4 @@ On note $r_n$ le profit maximal que l'on peut atteindre pour une planche de long
       * Par exemple, pour $n=7$ on affiche qu'il faut découper en un morceau de longueur 1
         et un morceau de 6 (pour un profit de 18)
 
-    **Correction**
+    **Correction** -->
