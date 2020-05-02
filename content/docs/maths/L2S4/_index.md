@@ -6,11 +6,11 @@
   weight: 2
 ---
 
-_Note du 10 avril 2020_ :
+_Note du 2 mai 2020_ :
 
 * J'ai ajouté la correction relativement détaillée (plus que les suivants, en tout cas) des exercices 1 à 4.
 
-    Tous les exercices sont corrigés sauf le 22 et les deux derniers.
+    Tous les exercices sont corrigés sauf le 22.
 * J'ai ajouté les corrections transmises la semaine dernière (23, 25, 26).
 * Suite à une amélioration de la sécurité, le site est passé en HTTP**S** avec l'adresse **https://qkzk.xyz**
 
