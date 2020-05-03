@@ -36,7 +36,7 @@ Un texte est une suite finie de symboles.
 
 On dispose alors généralement d'un **index**
 
-.![index](uploads/docnsitale/algo/recherche_textuelleindex.jpg)
+.![index](/uploads/docnsitale/algo/recherche_textuelle/index.jpg)
 
 L'index peut-être vu comme un _dictionnaire_ : on repère la clé qui nous intéresse
 et sa valeur nous indique la position du motif.
