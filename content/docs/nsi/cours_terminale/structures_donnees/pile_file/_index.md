@@ -6,4 +6,5 @@ weight: 3
 
 # Les piles et les files
 
+* [Introduction](intro)
 * TP : html parser : [sur le site](tp_html_parser) et en [pdf](/uploads/docnsitale/pile_file/tp_html_parser/pile.pdf)
