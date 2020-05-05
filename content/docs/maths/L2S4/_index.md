@@ -39,4 +39,4 @@ exercices.
 
 ## IE1
 
-Voici la [correction](/uploads/maths/divers/2020-l2s4-ie1_v1_correction.tex.pdf) d'un des sujets d'interrogation écrite.
+Voici la [correction](/uploads/maths/divers/2020-l2s4-ie1_v1_correction.pdf) d'un des sujets d'interrogation écrite.
