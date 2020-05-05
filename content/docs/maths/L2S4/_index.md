@@ -36,3 +36,7 @@ exercices.
 * [exercice 23](/uploads/maths/divers/correction23.pdf). Attention il manque un signe $-$ lorsqu'on développe le premier déterminant. La réponse est donc $-14$
 * [exercice 25](/uploads/maths/divers/correction25.pdf)
 * [exercice 26](/uploads/maths/divers/correction26.pdf)
+
+## IE1
+
+Voici la [correction](/uploads/maths/divers/2020-l2s4-ie1_v1_correction.tex.pdf) d'un des sujets d'interrogation écrite.
