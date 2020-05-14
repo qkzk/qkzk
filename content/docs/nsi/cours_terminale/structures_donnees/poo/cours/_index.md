@@ -4,7 +4,8 @@ author: qkzk
 weight: 2
 ---
 
-### pdf : [pour impression](/uploads/docnsitale/poo/2_cours_print.pdf), [slides](/uploads/docnsitale/poo/2_cours_slides.pdf)
+
+### pdf : [pour impression](/uploads/docnsitale/poo/2_cours_print_better.pdf), [slides](/uploads/docnsitale/poo/2_cours_slides_better.pdf)
 
 # Introduction à la programmation objet
 
@@ -24,11 +25,11 @@ weight: 2
 * le module `Competitor.py` permet de manipuler des valeurs représentant les compétiteurs de la course. (...)
 * Les performances des compétiteurs vont être représentées par leur temps de course (...) Créer un module `Time.py` qui définit le type `Time`
 
-### Première, projet "Wator"
+### Première, "rpg texte"
 
 * expression d'un typage de données à représenter :
 
-    _Une correction possible qui utilise les dictionnaires pour modéliser des poissons._
+    _Une correction possible qui utilise les dictionnaires pour modéliser les combattants._
 
 ## définition d'un type `Competitor`
 
@@ -90,25 +91,31 @@ Time.compare(t, other_time)
 * Si `comp` est de type Competitor et `t` est de type `Time`,
     alors pourquoi devoir préfixer `to_string` par `Competitor` pour `comp`  et par `Time` pour `t` ?
 
----
+##
 
-~~~python
+```python
 # dans Competitor
 def set_performance(comp, time):
   comp['performance'] = time
 
-# dans wator
-def create_shark():
-  '''
-  create a shark data
-  :return: the created shark
-  '''
-  return {'char': 'S', 'gestation': 5, 'energy': 3}
->>> shark = Wator.create_shark()
->>> Competitor.set_performance(shark, None)
->>> shark
-{'char', 'S', 'gestation': 5, 'energy': 3, 'performance': None}
-~~~
+>>> tymp(comp)
+dict
+```
+
+##
+
+```python
+# dans le rpg
+def joueur(nom=None, vie=5, force=1):
+    return {"nom": nom,
+            "vie": vie,
+            "force": force}
+>>> robert = Joueur('Robert')
+>>> robert
+{'nom': 'Robert', 'vie': 5, 'force': 1}
+>>> type(robert)
+dict
+```
 
 Le type n'existe que "dans la tête" du programmeur, les données et les traitements sont séparés.
 
@@ -125,9 +132,9 @@ Approche de la modélisation du problème à résoudre en terme d'objets :
 ---
 
 * **421** : Dés/Groupe de 3 dés/Joueur/Partie
-* **wator** : Mer/Case/Poisson/Simulation
+* **combat rpg** : Combattant/Arme/Combat etc.
 * **chicon** : Compétiteur/Temps(performance)/Course(/Palmares)
-* **minimax** : Jeu/Situation/Joueur/Algorithme/Fonction évaluation
+* **messagerie** : Contact/Message etc.
 
 ## langage à objet
 
@@ -137,7 +144,7 @@ Approche de la modélisation du problème à résoudre en terme d'objets :
 * chaque objet a un **type**
 * chaque objet a sa propre mémoire, constituée d'autres objets
 * tous les objets d'un type donné peuvent avoir les mêmes messages
-* un programme est un regroupement d'objets qui interagissent par **envois de messages**
+* un programme est un regroupement d'objets qui interagissent par **envoi de messages**
 
 ## type
 
@@ -213,8 +220,6 @@ cf. _mytime.py_
 * constructeur : `__init__`
   * initialisation de l'état (attributs)
 
-  un seul constructeur possible en Python
-
 * une classe est un type (`type(), isinstance()`)
 * **self** : auto-référence = "l'objet dont on est en train de parler"\
   ie. celui que l'on construit ou celui qui invoque (utilise) la méthode\
@@ -231,6 +236,8 @@ cf. _mytime.py_
 
 ## méthodes
 
+
+
 * **méthodes d'objets** : invoquée par l'objet \
   = envoi de messages possibles
 
@@ -239,19 +246,11 @@ cf. _mytime.py_
     notation pointée : `t1.to_seconds()` -> `self` lié à `t1`
   * permet d'accéder aux attributs de l'objet ou d'invoquer une méthode sur cet objet. cf `compare`
 
-## méthodes
-
-* **méthodes d'objets** : invoquée par l'objet\
-  = envoi de messages possibles
-
-  * premier paramètre = `self` (cf `get_hours, __init__`)
-  * `self` est lié à l'objet utilisé pour invoquer la méthode\
-    notation pointée : `t1.to_seconds()` -> `self` lié à `t1`
-  * permet d'accéder aux attributs de l'objet ou d'invoquer une méthode sur cet objet. cf `compare`
+. . .
 
 * **méthode de classe** : méthode ne dépendant pas d'un objet : **statique** appelée
   via la classe : `Time.from_seconds()` (= fonction, pas OO)\
-  NB existence des décorateurs `@staticmethod`, `@classmethod`\
+  NB existence du décorateur : `@classmethod` qui permet de retourner une instance\
   les attributs de classe sont également possible `Time.BASE`
 
 ## méthodes spéciales
@@ -264,6 +263,37 @@ cf. _mytime.py_
 * `__str__` : `str(obj)` et `__len__` : `len(obj)`
 * `__getitem__` : `obj[i]`
 * `__iter__` : `for v in obj`
+
+## Exemple d'utilisation : la méthode `__add__`
+
+```python
+class Vecteur:
+  def __init__(self, x, y):
+    self.__x = x
+    self.__y = y
+
+  def x(self):
+    return self.__x
+
+  def y(self):
+    return self.__y
+
+  def __add__(self, autre):
+    return Vecteur(self.x() + autre.x(),
+                   self.y() + autre.y())
+```
+
+## Exemple d'utilisation  : la méthode `__add__` (suite)
+
+```python
+>>> u = Vecteur(1, 2)
+>>> v = Vecteur(3, 5)
+>>> w = u + v # utilise la méthdoe add !!!!
+>>> w.x()
+4
+>>> w.y()
+7
+```
 
 ## encapsulation
 
@@ -278,6 +308,8 @@ Les données (attributs) sont regroupées avec les traitements qui les manipulen
   * l'objet a la maîtrise de ses attributs _via ses méthodes_
   * seules les méthodes sont accessibles
 
+##
+
 ### règle d'or\
 
 **les attributs sont déclarés privés** = accessibles uniquement au sein de la
@@ -286,77 +318,8 @@ classe
   en Python, identifiant préfixé de `__`\
   on peut aussi définir des méthodes privées.
 
-## exemple
 
-On veut modéliser les nombres complexes.\
-Quelles sont les fonctionnalités attendues ? _besoin piloté par application_\
-càd que souhaite-t-on pouvoir faire avec une donnée de type `Complex` ?
-
-## exemple
-
-On veut modéliser les nombres complexes.\
-Quelles sont les fonctionnalités attendues ? _besoin piloté par application_\
-càd que souhaite-t-on pouvoir faire avec une donnée de type `Complex` ?
-
-* construire (_partie réelle et partie imaginaire / module et argument_)
-* accéder aux "données" :
-  * partie réelle, partie imaginaire, module, argument
-* obtenir (_calculer_) le conjugué
-* additionner deux complexes _pour en obtenir un nouveau_
-* avoir une représentation textuelle d'un complexe
-* etc. (_égalité, multiplication, ..._)
-
----
-
-On a donc besoin de **l'interface publique** suivante pour `Complex`
-
-~~~python
-class Complex(builtins.object)
- |  Complex(x, y)
- |
- |  Methods defined here:
- |
- |  __add__(self, other)
- |      return Complex résultat de self+other
- |
- |  __init__(self, x, y)
- |      create Complex number [ x+i.y ]
- |
- |  arg(self)
- |      return argument de ce Complex
- |
-~~~
-
----
-
-~~~python
- |  conjugue(self)
- |      return conjugue de ce Complex
- |
- |  from_module_arg(module, arg)
- |      build Complex number [ module.e^i(arg) ]
- |
- |  im(self)
- |      return partie imaginaire de ce Complex
- |
- |  module(self)
- |      return module de ce Complex (of this complex)
- |
- |  re(self)
- |      return  partie réelle de ce Complex
- |
-
-~~~
-
-## usage
-
-* Ces informations sont suffisantes pour utiliser le type `Complex` dans un module.\
-    _cf. main_complex.py_
-* Quelle est la représentation des données pour `Complex` ?
-    _cf. complex1.py et complex2.py_\
-    _pas d'impact sur main_complex.py_
-* Est-ce important ?
-    _cf. mytime2.py_
+##
 
 ### séparation de l'interface et de l'implémentation
 
@@ -366,10 +329,13 @@ class Complex(builtins.object)
 
 ## intérêt ?
 
-* la représentation des données utilisée n'a pas besoin d'être connue elle
+* la représentation des données utilisée n'a pas besoin d'être connue, elle
     pourra donc **évoluer** sans perturber l'existant "code client"
 * ce qui compte c'est ce que l'on peut faire, pas comment on le fait\
     _en partant du principe que c'est bien fait._
+
+## intérêt ? (suite)
+
 * possibilité d'ajouter du contrôle
   * accès en lecture seulement d'un attribut\
       `get_hours()` mais pas `set_hours()`
@@ -384,7 +350,7 @@ class Complex(builtins.object)
       ~~~
       classe `BankAccount`, accès au solde `get_balance()` contrôlé par code
 
----
+##
 
 * lorsque l'on fait l'analyse objet d'un problème, on cherche à déterminer les **services** que doivent rendre les objets\
   = les **méthodes**
@@ -392,9 +358,9 @@ class Complex(builtins.object)
 
   un attribut existe parce qu'il permet l'implémentation d'une méthode
 
-## exemple
+## exemple : les disques
 
-On doit représenter des disques.
+On doit représenter des **disques**.
 On a besoin de connaître le rayon, diamètre, aire, périmètre.
 
 * classe `Disc` + méthodes
@@ -406,27 +372,54 @@ On a besoin de connaître le rayon, diamètre, aire, périmètre.
 
 ---
 
-### implémentation avec "rayon"
+## implémentation avec "rayon"
 
-~~~python
-def radius(self):
-  return self.__radius
-def diameter(self):
-  return 2 * self.__radius
-def perimeter(self):
-  return 2 * math.pi*self.__radius
-~~~
+```python
+class Disque:
+  def __init__(self, rayon):
+    self.__rayon = rayon
+```
+. . .
+```python
 
-### implémentation avec "diamètre"
+  def rayon(self):
+    return self.__rayon
+  def diametre(self):
+    return 2 * self.__rayon
+  def perimeter(self):
+    return 2 * math.pi * self.__rayon
+```
 
-~~~python
-def radius(self):
-  return self.__diameter / 2
-def diameter(self):
-  return 2 * self.__diameter
-def perimeter(self):
-  return math.pi*self.__diameter
-~~~
+## implémentation avec "diamètre"
+
+```python
+class Disque:
+  def __init__(self, diametre):
+    self.__diametre = diametre
+```
+. . .
+```python
+
+  def rayon(self):
+    return self.__diametre / 2
+  def diametre(self):
+    return 2 * self.__diametre
+  def perimeter(self):
+    return math.pi * self.__diametre
+```
+
+## Qu'est ce qui change ?
+
+*   Pour le **développeur**, s'il défini ses disques avec le diamètre,
+    le constructeur et les méthodes changent.
+
+. . .
+
+*   Pour **l'utilisateur**, rien ne change. Qu'il utilise l'un ou l'autre,
+    il obtient le même résultat.
+
+    Inutile pour lui de savoir quelle formule on a employé.
+
 
 
 ## javascript
@@ -449,7 +442,12 @@ _cf. Time.js_
 ## Polymorphisme / héritage
 
 * **hors programme**, donc pas abordé ici
-* J'ai des sources si ça vous intéresse.
+* idée générale : un objet fils hérite des propriétés d'un objet parent :
+    *   _parent_ : rectangle : défini avec (`x, y, l, h`).
+        *   méthodes : aire, périmètre, contient un point ? etc.
+    *   _enfant_ : carré : défini avec (`x, y, c`)\
+        l'enfant hérite aussi des méthodes du parent !
 * permet de créer des objets répondant à des contraintes
   succeptibles _d'évoluer_...\
     donc de _maintenir_ du code.
+* J'ai des sources si ça vous intéresse.
