@@ -200,9 +200,3 @@ On clique sur **submit** et les tests sont validés.
 2. Comprendre la consigne (c'est mieux)
 2. Essayer jusqu'à réussir
 3. Soumettre
-
-# Lien d'invitation vers la classe
-
-## Lien d'invitation :
-
-**[https://repl.it/classroom/invite/9jALoq8](https://repl.it/classroom/invite/9jALoq8)**
