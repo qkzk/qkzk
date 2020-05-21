@@ -395,16 +395,17 @@ for i in range(11):
 
 
 **Exercice 4.1 ☆**
-1) Ecrire une fonction `carre()` qui retourne le carré d'un nombre :
 
+1.  Ecrire une fonction `carre()` qui retourne le carré d'un nombre :
 
+    ```python
     >>> print(carre(11.11111))
     123.4567654321
+    ```
 
+2. Avec une boucle `while` et la fonction `carre()`, écrire un script qui affiche le carré des nombres entiers de 1 à 100 :
 
-2) Avec une boucle `while` et la fonction `carre()`, écrire un script qui affiche le carré des nombres entiers de 1 à 100 :
-
-
+    ```python
     >>>
     1^2 = 1
     2^2 = 4
@@ -413,68 +414,53 @@ for i in range(11):
     99^2 = 9801
     100^2 = 10000
     Fin du programme
-
+    ```
 
 **Exercice 4.2 ☆**
-1) Ecrire une fonction qui retourne l'aire de la surface d'un disque de rayon R.
-Exemple :
 
+1.  Ecrire une fonction qui retourne l'aire de la surface d'un disque de rayon R.
 
+    Exemple :
+
+    ```python
     >>> print(airedisque(2.5))
     19.6349540849
+    ```
 
 
-2) Ajouter un paramètre qui précise l'unité de mesure :
+2. Ajouter un paramètre qui précise l'unité de mesure :
 
 
+    ```python
     >>> print(airedisque2(4.2, 'cm'))
     55.4176944093 cm²
+    ```
 
 
 **Exercice 4.3 ★**
-1) Ecrire une fonction qui retourne la factorielle d'un nombre entier N.
-On rappelle que :
-
-* factorielle de $N$ est noté $N!$
-* $N! = 1\times 2\times \ldots \times (N-1)\times N$
-* Par exemple : $3! = 1 \times 2 \times 3 = 6$
-* $1! = 1$
-* Par convention, $0!=1$
 
 
-Exemple :
+1.  Ecrire une fonction qui retourne la factorielle d'un nombre entier N.
+
+    On rappelle que :
+
+    * factorielle de $N$ est noté $N!$
+    * $N! = 1\times 2\times \ldots \times (N-1)\times N$
+    * Par exemple : $3! = 1 \times 2 \times 3 = 6$
+    * $1! = 1$
+    * Par convention, $0!=1$
 
 
+    Exemple :
+
+    ```python
     >>> print(factorielle(50))
     30414093201713378043612608166064768844377641568960512000000000000
+    ```
 
 
-2) Comparez avec le résultat de la fonction [`factorial()`](http://docs.python.org/3/library/math.html) du module `math`.
+2. Comparez avec le résultat de la fonction [`factorial()`](http://docs.python.org/3/library/math.html) du module `math`.
 
-**Exercice 4.4 ★**
-1) A l'aide de la fonction `randint()` du module `random`, écrire une fonction qui retourne un mot de passe de longueur N (chiffres, lettres minuscules ou majuscules).
-On donne :
-`chaine = '0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz'`
-
-
-    >>> print(password(10))
-    mHVeC5rs8P
-    >>> print(password(6))
-    PYthoN
-
-
-2) Reprendre la question 1) avec la fonction `choice()` du module `random`.
-Pour obtenir de l'aide sur cette fonction :
-
-
-    >>> import random
-    >>> help(random.choice)
-
-
-3) Quel est le nombre de combinaisons possibles ?
-4) Quelle durée faut-il pour casser le mot de passe avec un logiciel capable de générer 1 million de combinaisons par seconde ?
-
-Lien utile : [www.exhaustif.com/Generateur-de-mot-de-passe-en.html](http://www.exhaustif.com/Generateur-de-mot-de-passe-en.html)
 
 **Exercice 4.5 ★** Ecrire une fonction qui retourne une carte (au hasard) d'un jeu de Poker à 52 cartes.
 On utilisera la fonction `choice()` ou `randint()` du module `random`.
@@ -484,10 +470,45 @@ On donne :
 ListeCarte = ['2s','2h','2d','2c','3s','3h','3d','3c','4s','4h','4d','4c','5s','5h','5d','5c', '6s','6h','6d','6c','7s','7h','7d','7c','8s','8h','8d','8c','9s','9h','9d','9c', 'Ts','Th','Td','Tc','Js','Jh','Jd','Jc','Qs','Qh','Qd','Qc','Ks','Kh','Kd','Kc','As','Ah','Ad','Ac']
 ~~~
 
-    >>> print(tiragecarte())
-    7s
-    >>> print(tiragecarte())
-    Kd
+
+```python
+>>> print(tiragecarte())
+7s
+>>> print(tiragecarte())
+Kd
+```
+
+**Exercice 4.4 ★**
+
+1. A l'aide de la fonction `randint()` du module `random`, écrire une fonction qui retourne un mot de passe de longueur N (chiffres, lettres minuscules ou majuscules).
+    On donne :
+
+    ```python
+    chaine = '0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz'`
+    ```
+
+    ```python
+    >>> password(10)
+    'mHVeC5rs8P'
+    >>> password(6)
+    'PYthoN'
+    ```
+
+2.  Reprendre la question 1) avec la fonction `choice()` du module `random`.
+    Pour obtenir de l'aide sur cette fonction :
+
+    ```python
+    >>> import random
+    >>> help(random.choice)
+    ```
+
+3.  Quel est le nombre de combinaisons possibles ?
+4.  On suppose avoir un mot de passe de 10 caractères.
+
+    Quelle durée faut-il pour tester tous les mots de passes avec un logiciel capable de générer 1 million de combinaisons par seconde ?
+
+Lien utile : [www.exhaustif.com/Generateur-de-mot-de-passe-en.html](http://www.exhaustif.com/Generateur-de-mot-de-passe-en.html)
+
 
 
 ---
