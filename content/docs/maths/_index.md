@@ -16,6 +16,8 @@ mathématiques utilisés cette année
 
 ## [BTS Aéro 1](/docs/maths/bts_aero_1)
 
+## [BTS Aéro 2](/docs/maths/bts_aero_2)
+
 ## [L1S2](/docs/maths/l1s2)
 
 ## [L2S4](/docs/maths/l2s4)
