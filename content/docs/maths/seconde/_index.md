@@ -38,3 +38,8 @@ weight: 1
 |                        	| [16 echantillonnage](/uploads/maths/seconde/16_echantillonnage.pdf)                                                         	|    1    	|
 |                        	| _devoir commun ?_                                                                                                           	|    1    	|
 | **15 juin**            	| **Grandes Vacances**                                                                                                        	|         	|
+
+
+**Exercices**
+
+* [15 droites](/uploads/maths/seconde/15_exos_equation_droite_systeme_equations.pdf)
