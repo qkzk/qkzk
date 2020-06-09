@@ -6,7 +6,7 @@ weight: 3
 ---
 
 
-### les pdf [format imprimable](/uploads/docnsitale/algo/recherche_textuelle/cours_td_recherche_textuelle-Article.pdf) et [diaporama](/uploads/docnsitale/algo/recherche_textuelle/cours_td_recherche_textuelle-Beamer.pdf).
+### les pdf [format imprimable](/uploads/docnsitale/algo/recherche_textuelle/cours_td_recherche_textuelle-print.pdf) et [diaporama](/uploads/docnsitale/algo/recherche_textuelle/cours_td_recherche_textuelle-beamer.pdf).
 
 # Recherche textuelle
 
@@ -36,7 +36,7 @@ Un texte est une suite finie de symboles.
 
 On dispose alors généralement d'un **index**
 
-.![index](/uploads/docnsitale/algo/recherche_textuelle/index.jpg)
+.![index](index.jpg)
 
 L'index peut-être vu comme un _dictionnaire_ : on repère la clé qui nous intéresse
 et sa valeur nous indique la position du motif.
@@ -49,18 +49,15 @@ Lorsque le texte possède certaines propriétés
 
 * court
 
-. . .
 
 * modifiable
 
-. . .
 
 * non connu à l'avance
 
 
 Notez qu'un pdf de 1000 pages ne remplit aucun de ces critères
 
-. . .
 
 \bigskip
 \bigskip
@@ -205,30 +202,41 @@ ce qui donne :
 dernière occurrence (motif)
   m = longueur du motif
   créer un dictionnaire associant chaque lettre à m
-  pour i allant de 0 à m-1,
+  pour i allant de 0 à m-2,
       dictionnaire [ motif[i] ] = m - 1 - i
   fin du pour
   retourner le dictionnaire
 ~~~
 
+## dernière occurence : remarque importante
+
+
+Faîtes bien attention à la boucle:
+
+```
+    pour i allant de 0 à m-2
+```
+
+Si on va jusqu'au _dernier_ caractère du motif, il se verra attribuer la 
+distance 0 ... ce qui entrainera une boucle infinie dans la partie
+suivante !
+
 ## Boyer-Moore-Horspool
 
-* on commence avec `j` = taille du motif
+* on commence avec `j` = 0
 
-* on itère jusqu'à ce que `j = taille du texte`
+* on itère jusqu'à ce que `j = taille du texte - taille du motif`
 
   on parcourt le motif à partir de la fin, donc `i = taille du motif`.
 
   on recule sur `i` jusqu'à arriver à 0 ou jusqu'à ce que les caractères ne
   se correspondent plus.
 
-  * si `i = 0` alors
+  * si `i = -1` alors
 
-    le motif se termine en j
+    le motif commence en j et on augmente `j` de 1
 
-    et on augmente `j` de 1
-
-  * sinon alors
+  * sinon 
 
     on augmente `j` de la distance correspondant à cette position différente
     dans le texte.
@@ -239,18 +247,18 @@ dernière occurrence (motif)
 Algorithme Boyer-Moore-Horspool(x, t):
   '''
   x : motif, t : texte, m : longueur motif, n : celle du texte
-  d le tableau des dernières occurrences du motif
+  d : tableau des dernières occurrences du motif
   '''
-  tant que j <= n,
-    i = m
-    tant que i > 0 et que t[j - m + i - 1] = x[i - 1], faire :
+  tant que j <= n - m,
+    i = m - 1
+    tant que i >= 0 et t[j + i] = x[i]:
       i = i-1
     fin tant que
-    si i = 0 alors
-      j est une occurrence de fin de x
+    si i = -1 alors
+      j est une occurrence de x
       j = j + 1
     sinon
-      j = j + d[ t[j] ]
+      j = j + d[ t[j + i] ]
     fin du si
   fin du tant que
 ~~~
@@ -260,7 +268,8 @@ Algorithme Boyer-Moore-Horspool(x, t):
 * L'algorithme se termine bien.
 
   En effet, le tableau des dernières occurrences comporte forcement des
-  nombres strictement positifs.
+  nombres strictement positifs. (cf remarque le concernant)
+
   Dans le pire des cas, on augmente `j` de 1 à chaque tour de la boucle
   extérieure.
   La boucle intérieure voit `i` augmenter de 1 à chaque fois.
@@ -272,13 +281,17 @@ Algorithme Boyer-Moore-Horspool(x, t):
   * En effet, si `j` augmente de 1 à chaque tour, on réalise le même travail
     que l'algorithme naïf et on rencontre forcément toutes les occurrences.
 
+
   * Sinon, c'est que la distance issue du tableau des occurrences est supérieure
     à 1.
 
     Deux cas se présentent :
 
-    * `d = m` (autrement dit, la lettre n'est pas dans le motif.) Alors
+
+    * `d = m` (la lettre n'est pas dans le motif.) Alors
       il est impossible que le motif commence dans le texte avant `j+d`
+
+
     * `d < m` et cette fois, la redondance de la lettre dans le motif
       nous impose de la faire correspondre.
 
