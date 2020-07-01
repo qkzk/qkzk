@@ -22,5 +22,3 @@ Voici les documents pour les BTS Aéro 2
 
 
 
-Ne soyez pas étonnés devant la petitesse de cette liste, certains chapitres
-sont longs et l'examen porte sur le programme des deux années.
