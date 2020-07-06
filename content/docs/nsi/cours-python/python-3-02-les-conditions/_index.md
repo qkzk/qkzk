@@ -25,11 +25,11 @@ weight: 2
 
 
 
-~~~
-if expression:  			    # ne pas oublier la ponctuation ':'
-    bloc d'instructions		# attention à l'indentation
+```python
+if expression:                  # ne pas oublier la ponctuation ':'
+    bloc d instructions         # attention à l'indentation
 # suite du programme
-~~~
+```
 
 Si l'expression est vraie (True) alors le bloc d'instructions est exécuté.
 Si l'expression est fausse (False) on passe directement à la suite du programme.
@@ -42,7 +42,7 @@ Nous allons commencer par créer le script `Condition1.py` :
 
 Ouvrir Thonny et coller le code ci-dessous :
 
-~~~python
+```python
 # script Condition1.py
 
 chaine = input("Note sur 20 : ")
@@ -51,7 +51,7 @@ if note >= 10.0:
     # ce bloc est exécuté si l'expression (note >= 10.0) est vraie
     print("J'ai la moyenne")
 print("Fin du programme")
-~~~
+```
 
 File → Save As
 
@@ -67,7 +67,7 @@ Pensez aussi à partager vos travaux sur Google Drive...
 
 Pour exécuter le script menu Run > Run current script (ou touche F5) :
 
-~~~python
+```python
 >>>
 Note sur 20 : 16
 J'ai la moyenne
@@ -75,7 +75,7 @@ Fin du programme
 >>>
 Note sur 20 : 5
 Fin du programme
-~~~
+```
 
 
 
@@ -89,19 +89,19 @@ Une instruction `else` est toujours associée à une instruction `if`
 
 
 
-~~~
+```python
 if expression:
-    bloc d'instructions 1		# attention à l'indentation
-else:					# else est au même niveau que if
-    bloc d'instructions 2		# attention à l'indentation
+    bloc d instructions 1       # attention à l'indentation
+else:                           # else est au même niveau que if
+    bloc d instructions 2       # attention à l'indentation
 # suite du programme
-~~~
+```
 
-Si l'expression est vraie (True) alors le bloc d'instructions 1 est exécuté.
+Si l'expression est vraie (`True`) alors le bloc d'instructions 1 est exécuté.
 
-Si l'expression est fausse (False) alors c'est le bloc d'instructions 2 qui est exécuté.
+Si l'expression est fausse (`False`) alors c'est le bloc d'instructions 2 qui est exécuté.
 
-~~~python
+```python
 # script Condition2.py
 
 chaine = input("Note sur 20 : ")
@@ -113,27 +113,25 @@ else:
     # ce bloc est exécuté si l'expression (note >= 10.0) est fausse
     print("C'est en dessous de la moyenne")
 print("Fin du programme")
-~~~
+```
 
 
-~~~python
->>>
-Note sur 20 : 15
+```
+>>> Note sur 20 : 15
 J'ai la moyenne
 Fin du programme
->>>
-Note sur 20 : 8.5
+>>> Note sur 20 : 8.5
 C'est en dessous de la moyenne
 Fin du programme
->>>
-Note sur 20 : 56
+>>> Note sur 20 : 56
 J'ai la moyenne
 Fin du programme
-~~~
+```
 
-Pour traiter le cas des notes invalides (<0 ou >20), on peut imbriquer des instructions conditionnelles :
+Pour traiter le cas des notes invalides (<0 ou >20), on peut imbriquer des
+instructions conditionnelles :
 
-~~~python
+```python
 # script Condition3.py
 
 chaine = input("Note sur 20 : ")
@@ -150,10 +148,10 @@ else:
         # ce bloc est exécuté si l'expression (note >= 10.0) est fausse
         print("C'est en dessous de la moyenne")
 print("Fin du programme")
-~~~
+```
 
 
-~~~python
+```python
 >>>
 Note sur 20 : 56
 Note invalide !
@@ -162,11 +160,11 @@ Fin du programme
 Note sur 20 : 14.6
 J'ai la moyenne
 Fin du programme
-~~~
+```
 
 On ajoute encore un niveau d'imbrication pour traiter les cas particuliers 0 et 20 :
 
-~~~python
+```python
 # script Condition4.py
 
 chaine = input("Note sur 20 : ")
@@ -185,10 +183,10 @@ else:
             # ce bloc est exécuté si l'expression (note == 0.0) est vraie
             print("... lamentable !")
 print("Fin du programme")
-~~~
+```
 
 
-~~~python
+```python
 >>>
 Note sur 20 : 20
 J'ai la moyenne
@@ -198,7 +196,7 @@ Fin du programme
 Note sur 20 : 3
 C'est en dessous de la moyenne
 Fin du programme
-~~~
+```
 
 
 
@@ -212,17 +210,17 @@ Une instruction `elif` (contraction de else if) est toujours associée à une in
 
 
 
-~~~python
+```python
 if expression 1:
-    bloc d'instructions 1
+    bloc d instructions 1
 elif expression 2:
-    bloc d'instructions 2
+    bloc d instructions 2
 elif expression 3:
-    bloc d'instructions 3	# ici deux instructions elif, mais il n'y a pas de limitation
+    bloc d instructions 3   # ici deux instructions elif, mais il n'y a pas de limitation
 else:
-    bloc d'instructions 4
+    bloc d instructions 4
 # suite du programme
-~~~
+```
 
 Si l'expression 1 est vraie alors le bloc d'instructions 1 est exécuté, et on passe à la suite du programme.
 Si l'expression 1 est fausse alors on teste l'expression 2 :
@@ -254,7 +252,7 @@ L'instruction `elif` évite souvent l'utilisation de conditions imbriquées (et 
 
 
 
-~~~python
+```python
 # script Condition5.py
 # ce script fait la même chose que Condition4.py
 
@@ -272,10 +270,10 @@ elif note >= 10.0 and note < 20.0:	# ou bien : elif 10.0 <= note < 20.0:
 else:
     print("Note invalide !")
 print("Fin du programme")
-~~~
+```
 
 
-~~~python
+```python
 >>>
 Note sur 20 : 20
 J'ai la moyenne
@@ -289,21 +287,55 @@ Fin du programme
 Note sur 20 : 77
 Note invalide !
 Fin du programme
-~~~
+```
 
 
 
-### Exercices
+## Exercices
 
 
-**Exercice 2.1 ★** Le numéro de sécurité sociale est constitué de 13 chiffres auquel s'ajoute la clé de contrôle (2 chiffres).
+### Exercice 2.1
+
+Robert a un hygiène de vie très stricte. Ils se pèse tous les matins. 
+
+* S'il pèse moins de 100 kilos, durant la journée, il ne boit que de la bière.
+* S'il pèse entre 100 et 120 kilos, durant la journée, il ne boit que du vin.
+* Si son poids dépasse 120 kilos, durant la journée il ne boit que de l'eau.
+
+Quel athlète !
+
+Ecrire un script qui demande sa masse et affiche le régime qu'il doit suivre.
+
+_Exemples :_
+
+```
+Combien pèses-tu ? 140
+Eau
+Combien pèses-tu ? 95
+Bière
+Combien pèses-tu ? 105
+Vin
+```
+
+
+Attention, `input` retourne toujours _une chaîne de caractères_ du type `str`.\
+Pour en faire un entier (du type  `int`) :
+
+```python
+poids = int(input("Combien...")
+```
+
+Exemple :
+
+
+
+### Exercice 2.2 ★
+
+Le numéro de sécurité sociale est constitué de 13 chiffres auquel s'ajoute la clé de contrôle (2 chiffres).
 La clé de contrôle est calculée par la formule : 97 - (numéro de sécurité sociale modulo 97)
 
 Ecrire un script qui contrôle la validité d'un numéro de sécurité sociale.
-On pourra utiliser la fonction `int()`pour convertir le type `str` en type `int`.
-Exemple :
-
-~~~
+```
 >>>
 Entrer votre numéro de sécurité sociale (13 chiffres) --> 1891126108268
 Entrer votre clé de contrôle (2 chiffres) --------------> 91
@@ -313,13 +345,17 @@ Entrer votre numéro de sécurité sociale (13 chiffres) --> 2891126108268
 Entrer votre clé de contrôle (2 chiffres) --------------> 91
 Votre numéro de sécurité sociale est INVALIDE !
 >>>
-~~~
+```
 
 
-**Exercice 2.3 ★** Ecrire un script qui demande la note au bac et qui affiche la mention correspondante.
+
+
+### Exercice 2.3 ★
+
+Ecrire un script qui demande la note au bac et qui affiche la mention correspondante.
 Par exemple :
 
-~~~
+```
 >>>
 Note au bac (sur 20) : 13.5
 Bac avec mention Assez Bien
@@ -330,9 +366,11 @@ Bac avec mention Passable
 Note au bac (sur 20) : 4
 Recalé
 >>>
-~~~
+```
 
-**Exercice 2.4 ★** Ecrire un script qui calcule l'indice de masse corporelle (IMC) d'un adulte et qui en donne l'interprétation (corpulence normale, surpoids...).
+### Exercice 2.4 ★
+
+Ecrire un script qui calcule l'indice de masse corporelle (IMC) d'un adulte et qui en donne l'interprétation (corpulence normale, surpoids...).
 
 Calculer mon IMC. Il se calcule simplement en divisant le poids (en kg) par le carré de la taille (m).
 
@@ -426,7 +464,9 @@ Par exemple :
 
 ---
 
-**Exercice 2.5 ★★** - Niveau première en mathématiques - Ecrire un script qui résout l'équation du second degré : ax² + bx + c = 0
+### Exercice 2.5 ★★ - Niveau première en mathématiques
+
+Ecrire un script qui résout l'équation du second degré : $ax^2 + bx + c = 0$\
 Par exemple :
 
 
