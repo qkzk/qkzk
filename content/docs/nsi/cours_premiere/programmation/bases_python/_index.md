@@ -2,6 +2,7 @@
 author: qkzk
 title: " Les bases de Python"
 draft: false
+weight: 2
 
 ---
 
