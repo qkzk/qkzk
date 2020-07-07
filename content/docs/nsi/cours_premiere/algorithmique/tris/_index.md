@@ -1,5 +1,5 @@
 ---
-title: Tri par insertion et sélection
+title: "Tri : insertion, sélection"
 author:
  qkzk
 weight: 2
