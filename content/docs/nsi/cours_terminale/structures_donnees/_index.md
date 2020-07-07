@@ -1,8 +1,12 @@
 ---
-title: 'Structure de données'
+title: 'Structures de données'
 weight: 4
 ---
 
-1. la [programmation orientée objet](poo)
-2. les [listes](listes)
-3. les [piles et les files](pile_file)
+# Structures de données
+
+* La [programmation orientée objet](poo).
+* Les [arbres](arbres) binaires.
+* Les [listes](listes).
+* Les [piles et les files](pile_file).
+* Les [graphes](graphes).

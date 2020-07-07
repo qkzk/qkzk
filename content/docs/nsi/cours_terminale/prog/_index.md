@@ -5,4 +5,6 @@ weight: 3
 
 # Programmation
 
-1. La [calculabilité](calculabilite)
+* La [récursivité](recursivite).
+* Les [paradigmes](paradigmes) de programmation.
+* La [calculabilité](calculabilite) et le problème de l'arrêt.

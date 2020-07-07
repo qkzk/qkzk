@@ -3,8 +3,9 @@ title: Architecture
 weight: 2
 ---
 
+# Architecture
 
-* le [routage](routage)
-* les [processus](processus)
-* les [composants](composants) (TODO)
-* la [sécurisation](securisation) (TODO)
+* les protocoles de [routage](routage).
+* les [processus](processus) et ressources d'un système d'exploitation.
+* la [sécurisation](securisation) des communications.
+* les [composants](composants) intégrés d'un système sur puce. (TODO)
