@@ -78,12 +78,6 @@ Elle est déjà présente sur votre machine.
 
 ---
 
-## Délais
-
-Ce projet doit être terminé **début décembre**.
-J'attends de vous voir travailler pour fixer précisément le délai.
-Je vais rater beaucoup de séances alors prédire l'avenir est délicat mais cela
-me semble un délai raisonnable.
 
 ## Résultat attendu
 

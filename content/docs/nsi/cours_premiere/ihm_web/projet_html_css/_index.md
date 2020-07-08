@@ -42,7 +42,6 @@ Vous disposez de **trois fichiers** :
 * Il sera déposé dans votre drive :
 
     `NSI_Robert_DUCHMOL/ihm_web/margaret_hamilton/style.css`
-* Le retour est prévu _autour du vendredi 22 novembre_ (sera sans doute ajusté selon votre progression).
 
 ## Quelques précisions
 

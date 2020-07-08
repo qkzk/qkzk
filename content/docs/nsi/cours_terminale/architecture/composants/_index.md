@@ -16,3 +16,7 @@ consommation.
 **Commentaires :** Le circuit d’un téléphone peut être pris comme un exemple :
 microprocesseurs, mémoires locales, interfaces radio et filaires, gestion
 d’énergie, contrôleurs vidéo, accélérateur graphique, réseaux sur puce, etc.
+
+## Cours
+
+Le [cours](cours)
