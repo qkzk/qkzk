@@ -2,269 +2,608 @@
 title : cours POO
 author: qkzk
 weight: 2
+
 ---
 
+### pdf : [format imprimable](/uploads/docnsitale/poo/2_cours_clean.pdf), fichier [contact.py](/uploads/docnsitale/poo/contact.py)
 
-### pdf : [pour impression](/uploads/docnsitale/poo/2_cours_print_better.pdf), [slides](/uploads/docnsitale/poo/2_cours_slides_better.pdf)
 
 # Introduction à la programmation objet
 
-## Programmation modulaire
+Jusqu'ici les programmes que nous avons écrits utilisaient une approche
+procédurale :
 
-### Pourquoi la programmation modulaire ?
+* On définit les variables qui représentent ce qu'on souhaite modéliser
+* On crée les fonctions qui vont changer l'état de ces variables
+* L'exécution coordonnée de ces fonctions fait passer nos variables d'un état
+    à l'autre.
 
-* développement logiciel
-* modification et maintenance logicielle
-* ré-utilisabilité
-* création de nouveaux types de données
+Cette approche permet de résoudre tous les problèmes informatiques. On peut
+tout programmer de cette manière.
 
-## Mise en oeuvre
+Néanmoins elle présente un défaut majeur : il est difficile de dégager une
+structure à notre code.
 
-### Première, données en table, "course au chicon"
+Cela le rend peu lisible et difficile à entretenir.
 
-* le module `Competitor.py` permet de manipuler des valeurs représentant les compétiteurs de la course. (...)
-* Les performances des compétiteurs vont être représentées par leur temps de course (...) Créer un module `Time.py` qui définit le type `Time`
+Autre inconvénient, nos programmes ne sont pas réexploitables facilement.
 
-### Première, "rpg texte"
+Pour réutiliser une fonction déjà écrite, la seule approche efficace
+est, pour l'instant, d'en faire un copier-coller.
 
-* expression d'un typage de données à représenter :
+## Programmation objet : définir des _types_.
 
-    _Une correction possible qui utilise les dictionnaires pour modéliser les combattants._
+Les principes de la programmation objet vous sont familiers, vous les avez
+déjà rencontrés à chaque fois que vous avez crée une liste, un dictionnaire
+ou une fonction en Python.
 
-## définition d'un type `Competitor`
+Ils sont moins visibles lorsqu'on manipule des nombres directement mais,
+pourtant, les nombres en Python sont aussi des _objets_.
 
-~~~python
-def create(first_name, last_name, sex, birth_date, bib_num):
-  """ (...)
-  :return: a new record for this competitor
-  :rtype: Competitor
-  """
-  return {
-    'bib_num': bib_num,
-    'first_name': first_name
-  }
+### Qu'est-ce qu'un objet ?
 
-def get_firstname(comp):
-  """
-  :param comp: a competitor
-  :type comp: Competitor
-  :return: first name of competitor comp
-  (...)
-  """
-  return comp['first_name']
-~~~
+Un objet, c'est simplement "quelque chose" qui respecte des règles préétablies.
 
-## type `Competitor` : vraiment ?
+Par exemple : un nombre est un objet sur lequel je peux faire des comparaisons :
 
-~~~python
->>> import Competitor_chicon as Competitor
->>> comp = Competitor.create('Alice', 'L', 'F', '2019/12/24', 1)
->>> Competitor.get_firstname(comp)
-'Alice'
-~~~
-
-mais :
-
-~~~python
->>> type(comp) == Competitor
-False
->>> type(comp) == dict
+```python
+>>> a = 2
+>>> b = 3
+>>> a < b
 True
-~~~
-
-## vraiment ?
-
-~~~python
-import Competitor_chicon as Competitor
-import Time_chicon as Time
-...
-comp = Competitor.create(...)
-Competitor.get_birthdate(comp)
-Competitor.to_string(comp)
-Competitor.compare(comp, other_comp)
-
-t = Time.create(...)
-Time.to_string(t)
-Time.compare(t, other_time)
-~~~
-
-* Si `comp` est de type Competitor et `t` est de type `Time`,
-    alors pourquoi devoir préfixer `to_string` par `Competitor` pour `comp`  et par `Time` pour `t` ?
-
-##
-
-```python
-# dans Competitor
-def set_performance(comp, time):
-  comp['performance'] = time
-
->>> tymp(comp)
-dict
 ```
 
-##
+Des opérations :
 
 ```python
-# dans le rpg
-def joueur(nom=None, vie=5, force=1):
-    return {"nom": nom,
-            "vie": vie,
-            "force": force}
->>> robert = Joueur('Robert')
->>> robert
-{'nom': 'Robert', 'vie': 5, 'force': 1}
->>> type(robert)
-dict
+>>> a + b
+5
+```
+Une liste est un objet qui a une longueur, qui contient un nombre fini
+d'éléments auxquels je peux accéder, que je peux trier ou retourner :
+
+```python
+>>> ma_liste = [1, 3, 2]
+>>> len(ma_liste)
+3
+>>> ma_liste.append(4)
+>>> ma_liste
+[1, 3, 2, 4]
+>>> ma_liste.sort()
+>>> ma_liste
+[1, 2, 3, 4]
+>>> ma_liste.reverse()
+>>> ma_liste
+[4, 3, 2, 1]
 ```
 
-Le type n'existe que "dans la tête" du programmeur, les données et les traitements sont séparés.
+### Type d'un objet
 
-## Programmation Orientée Objet
+Python propose d'accéder au type d'un objet de deux manière :
 
-Approche de la modélisation du problème à résoudre en terme d'objets :
+1. En le consultant avec la fonction `type`
+2. En le vérifiant avec `isinstance`
 
-* on identifie : les "familles" d'objets du problème\
-  Un objet est une modélisation d'une entité du monde réel ou d'un concept
-* on en déduit
-  * les abstractions = les classes
-  * les fonctionnalités (= traitements/services) dont on a besoin pour chacune
+```python
+>>> type(ma_liste)
+<class 'list'>
+>>> isinstance(ma_liste, list)
+True
+```
+
+Cependant, quand nous créons un objet supposé représenter quelque chose
+du monde extérieur (réel : une voiture, un participant de la course au chicon)
+ou imaginaire (un Pokémon etc.), leur type n'est pas défini clairement 
+
+```python
+>>> competiteur = {"nom": "Duchmol", "prenom": "Robert", "age": 42}
+>>> pikachu = {"nom": "Pikachu", "cri": "Pika ! Pika !", "type1": "Electrique",
+               "type2": None, ...}
+```
+
+Certes, le programmeur pense ces objets là comme des compétiteurs ou des
+Pokémons, il peut même les dessiner à l'écran ou leur envoyer un email 
+automatiquement... mais en pratique :
+
+```python
+>>> type(competiteur)
+<class 'dict'>
+>>> type(pikachu)
+<class 'dict'>
+```
+En pratique, ce sont toujours des dictionnaires.
+
+On pourrait par exemple, créer des objets qui n'ont aucun sens :
+
+```python
+>>> pikachu["telephone"] = "0678901234"
+```
+
+Aussi, rien n'est fait pour aider à la collaboration sur ce projet "pokémon".
+
+Un nouveau développeur doit comprendre l'intégralité du code s'il veut utiliser
+certaines fonctions du programme.
+
+Il serait bon qu'on ait une _interface_ pour ces Pokémons.
+
+Elle nous permettrait :
+
+* d'accéder à leurs données (nom, points de vie, attaque etc.)
+* de modifier ce qui peut l'être (perdre de la vie, gagner de l'expérience)
+* d'exécuter leurs actions (attaquer, lancer une technique spéciale etc.)
+
+
+Elle nous empêcherait aussi de faire n'importe quoi avec ces objets !
+
+De la même manière qu'avec les `list` on a accès à certaines méthodes sans
+avoir à comprendre exactement ce qui est fait dans la machine.
+
+## Créer un nouveau type avec `class`
+
+De la même manière que le mot clé `def` permet de créer une fonction et de
+l'affecter à une variable, le mot clé `class` permet de créer un type
+(une classe) et de l'affecter à une variable.
+
+Une classe est un modèle qui permet de créer des objets de ce type.
+
+* Les objets de cette classe sont appelés _instances_.
+* Les variables propres à chaque éléments de cette classe sont appelés
+    _attributs_.
+* Les fonctions propres à chaque élément de cette classe sont appelées
+    _méthodes_.
+
+
+L'ensemble des méthodes accessibles à un utilisateur définit _l'interface_
+de la classe.
+
+## Exemple de classe : `Combattant`
+
+```{#numCode .python .numberLines}
+class Combattant:
+
+    def __init__(self, vie, attaque):
+        self.vie = vie
+        self.attaque = attaque
+        self.vivant = True
+
+    def perdre_vie(self, points):
+        self.vie = self.vie - points
+        if self.vie <= 0:
+            self.vivant = False
+            self.vie = 0
+
+    def attaquer(self, autre):
+        autre.perdre_vie(self.attaque)
+```
+
+### Commentaires sur le code de la classe.
+
+* Ligne 1. On utilise une majuscule pour un nom de classe.
+* Lignes 2 à 15. La définition de la classe se termine quand on revient à 
+    l'indentation de départ.
+* Ligne 3, ligne 8, ligne 15. définition d'une _méthode_
+* La variable `self` est toujours le premier paramètre d'une méthode.
+    Il désigne l'objet lui même.
+* Ligne 4, 5, 6 : des _attributs_.
+* Ligne 4 à 6, ligne 9 : _dans_ la classe on utilise `self.qqchose`
+    pour accéder à un attribut ou une méthode.
+* La méthode `__init__` est appelée "constructeur", c'est elle qui est exécutée
+    quand vous exécutez l'instruction `Combattant(10, 2)`.
+    Elle crée un objet du type `Combattant`
+
+**Attention !** Python n'impose pas le nom `self`... ce n'est qu'un _usage_.\
+Cependant, _je vous l'impose._ Si vous écrivez autre chose que `self` :
+
+1. personne ne comprendra,
+2. vous aurez 0 à l'exo.
+
+## Utilisation de la classe `Combattant`
+
+```python
+>>> guerrier = Combattant(10, 2)    # on crée une instance. Utilise '__init__' 
+>>> type(guerrier)                  # type d'une instance = nom de la classe
+<class 'Combattant'>
+>>> magicien = Combattant(5, 4)     # une autre instance
+>>> guerrier.vie                    # chaque instance a ses valeurs d'attributs
+10
+>>> guerrier.vivant
+True
+>>> magicien.vie                    # != guerrier.vie
+5
+>>> magicien.attaquer(guerrier)     # utilisation d'une méthode
+>>> guerrier.vie
+6
+>>> magicien.attaquer(guerrier)
+>>> guerrier.vie
+2
+>>> magicien.attaquer(guerrier)
+>>> guerrier.vie
+0
+```
+
+Dans la suite, nous introduirons peu à peu les bonnes pratiques.
+Par exemple, rien n'empêche de faire ceci :
+
+
+```python
+>>> guerrier.vivant
+False
+>>> guerrier.vivant = True
+>>> guerrier.attaque = 1000000000000000000000000
+>>> guerrier.attaque(magicien)
+```
+
+Ce qui ne semble pas très cohérent. On pourrait même écrire des choses
+absurdes :
+
+```python
+>>> guerrier.vie = "BONJOUR !"
+```
+
+ce qui va générer des erreurs par la suite.
+
+## Interface
+
+
+* Certaines méthodes sont internes à la classe, comme `__init__` : on n'exécute
+    pas `__init__` directement. On parle généralement de méthodes _privées_.
+* D'autres sont _publiques_ comme `list.reverse()` ou `Combattant.attaquer(...)`
+
+
+L'interface d'un objet est définie par les méthodes qu'il expose, celles
+qui sont publiques.
+
+Les attributs devraient tous être _privés_ et ne servir qu'aux méthodes.
+
+Aussi, lorsque nous faisons :
+
+```python
+>>> guerrier.vie
+5
+```
+
+On consulte un attribut directement et c'est une mauvaise pratique.
+
+## Encapsulation
+
+Le principe de l'encapsulation est de protéger les attributs et de n'exposer
+que l'interface de la classe.
+
+Python permet (plus ou moins) de protéger les attributs en leur donnant
+un nom qui commence par `__`.
+
+```python
+class Voiture:
+    def __init__(self, couleur):
+        self.__couleur = couleur
+```
+
+Lorsqu'on crée un attribut (ou une méthode) dont le nom commence par `__` il
+n'est plus accessible directement.
+
+### setter et getter 
+
+Si on veut consulter ou modifier la couleur de la voiture, il faut créer
+des méthodes qui le permettent :
+
+```python
+class Voiture:
+    def __init__(self, couleur):
+        self.__couleur = couleur
+
+    def get_couleur(self):
+        return self.__couleur
+
+    def set_couleur(self, couleur):
+        self.__couleur = couleur
+```
+
+Ici, cela peut sembler inutile mais on pourrait, dans la méthode
+`set_couleur` restreindre les choix de couleurs à ceux qui la marque propose.
+
+Ou vérifier que la nouvelle valeur d'un numéro de téléphone est valide, qu'un
+age est positif, qu'un compte bancaire bloqué n'est pas à découvert etc.
+
+\hrulefill coeur de la POO en NSI
+
+### encapsulation\
+
+Les données (attributs) sont regroupées avec les traitements qui les manipulent
+(méthodes)
+
+* l'encapsulation implique le **masquage des données**
+  * l'objet a la maîtrise de ses attributs _via ses méthodes_
+  * seules les méthodes sont accessibles
+
+
+### règle d'or\
+
+**les attributs sont déclarés privés** = accessibles uniquement au sein de la
+classe
+
+  en Python, identifiant préfixé de `__`\
+  on peut aussi définir des méthodes privées.
+
+
+
+### séparation de l'interface et de l'implémentation
+
+* **interface publique d'une classe**\
+  = ensemble des méthodes _publiques_ définies par la classe\
+  = ensemble des services que peuvent rendre les objets
+
+
+* la représentation des données utilisée n'a pas besoin d'être connue, elle
+    pourra donc **évoluer** sans perturber l'existant "code client"
+* ce qui compte c'est ce que l'on peut faire, pas comment on le fait\
+    _en partant du principe que c'est bien fait._
+
+
+* possibilité d'ajouter du contrôle
+  * accès en lecture seulement d'un attribut\
+      `get_hours()` mais pas `set_hours()`
+  * contrôle des valeurs
+      classe `Person` avec attribut `__age`
+
+      ```python
+      def set_age(self, new_age):
+        if new_age < 0:
+          new_age = 0
+        self.__age = new_age
+      ```
+      classe `BankAccount`, accès au solde `get_balance()` contrôlé par code
+
+
+* lorsque l'on fait l'analyse objet d'un problème, on cherche à déterminer les **services** que doivent rendre les objets\
+  = les **méthodes**
+* les attributs n'apparaissent que lorsque l'on se pose la question de la mise en oeuvre des méthodes, càd. de leur **implémentation**.
+
+  un attribut existe parce qu'il permet l'implémentation d'une méthode
+
+## exemple : les disques
+
+On doit représenter des **disques**.
+On a besoin de connaître le rayon, diamètre, aire, périmètre.
+
+* classe `Disc` + méthodes
+
+  `get_rayon(), get_diametre(), get_perimetre()`
+
+* attributs ?\
+  dépendent de choix d'implémentation...
 
 ---
 
-* **421** : Dés/Groupe de 3 dés/Joueur/Partie
-* **combat rpg** : Combattant/Arme/Combat etc.
-* **chicon** : Compétiteur/Temps(performance)/Course(/Palmares)
-* **messagerie** : Contact/Message etc.
+### implémentation avec "rayon"
 
-## langage à objet
+```python
+class Disque:
+  def __init__(self, rayon):
+    self.__rayon = rayon
 
-\hfill Alan Kay _SmallTalk_
+  def rayon(self):
+    return self.__rayon
 
-* tout est objet
-* chaque objet a un **type**
-* chaque objet a sa propre mémoire, constituée d'autres objets
-* tous les objets d'un type donné peuvent avoir les mêmes messages
-* un programme est un regroupement d'objets qui interagissent par **envoi de messages**
+  def diametre(self):
+    return 2 * self.__rayon
 
-## type
+  def perimetre(self):
+    return 2 * math.pi * self.__rayon
+```
 
-\begin{center}c'est quoi un \textbf{type} ?
+### implémentation avec "diamètre"
 
-booléen, entier, Competiteur, Temps
-\end{center}
+```python
+class Disque:
+  def __init__(self, diametre):
+    self.__diametre = diametre
 
-### type\
+  def rayon(self):
+    return self.__diametre / 2
 
-un **type** de données définit
+  def diametre(self):
+    return 2 * self.__diametre
 
-  * l'ensemble des valeurs possibles pour les données type
-  * les opérations applicables sur ces données
+  def perimetre(self):
+    return math.pi * self.__diametre
+```
 
-## classes
+## Qu'est ce qui change ?
 
-une **classe** est un type d'objet
-
-une classe définit
-
-* la liste des **méthodes** et les traitements associés\
-    -> le comportement des objets
-* la liste des **attributs** nécessaires à la réalisation des traitements\
-    -> l'**état** des objets
-
-  les méthodes portent les traitements (comportement, actions)
-  les attributs portent les données
-
-  classe = définition d'un modèle pour les objets de la classe\
-  classe = abstraction (on programme des définitions)
+*   Pour le **développeur**, s'il défini ses disques avec le diamètre,
+    le constructeur et les méthodes changent.
 
 
-## instance
+*   Pour **l'utilisateur**, rien ne change. Qu'il utilise l'un ou l'autre,
+    il obtient le même résultat.
 
-* une classe permet de **créer** des objets
-* ces objets sont les valeurs du type de cette classe
-
-### instance \
-
-on appelle **instance** un objet créé par une classe\
-tout objet est instance d'une classe\
-
-\begin{center} nécessité d'un \textbf{constructeur} dans une classe\\
-double rôle : construire l'objet et initialiser son état
-\end{center}
-
-## méthodes et attributs
-
-### méthode
-
-* une **méthode** est une fonction qui appartient à une classe
-
-    "_function member_"
+    Inutile pour lui de savoir quelle formule on a employé.
 
 
-    ne peut être utilisée (_appelée, invoquée_) que par les instances de la classe qui la définit
 
-### attribut
-
-* un **attribut** est une donnée qui appartient à un objet
-
-  "_data member_"
-
-  les attributs sont définis par la classe de l'objet
-
-# En Python
-
-## En Python
-
-cf. _mytime.py_
-
-* constructeur : `__init__`
-  * initialisation de l'état (attributs)
-
-* une classe est un type (`type(), isinstance()`)
-* **self** : auto-référence = "l'objet dont on est en train de parler"\
-  ie. celui que l'on construit ou celui qui invoque (utilise) la méthode\
-
-  -> permet d'accéder aux attributs de l'objet : (cf. `__init__, get_hours()`)
-
-  * `this` en javascript, java
-  * `self` n'est _pas_ imposé en Python mais **très** fortement recommandé
-  * `self` ne doit jamais être modifié
-
-## méthodes
-
-* **méthode d'objet** vs **méthode de classes**
-
-## méthodes
+## méthode d'objet _vs_ méthode de classes
 
 
+Attention cependant, il est toujours possibles de créer des attributs
+et des méthodes _pour la classe entière_ plutôt que pour un objet particulier.
 
 * **méthodes d'objets** : invoquée par l'objet \
   = envoi de messages possibles
 
-  * premier paramètre = `self` (cf `get_hours, __init__`)
+  * premier paramètre = `self` (cf `__init__, rouler`)
   * `self` est lié à l'objet utilisé pour invoquer la méthode\
-    notation pointée : `t1.to_seconds()` -> `self` lié à `t1`
-  * permet d'accéder aux attributs de l'objet ou d'invoquer une méthode sur cet objet. cf `compare`
+    notation pointée : `ferrari.rouler()` -> `self` lié à `ferrari`
+  * permet d'accéder aux attributs de l'objet ou d'invoquer une méthode sur cet
+    objet. cf `rouler`
 
-. . .
 
-* **méthode de classe** : méthode ne dépendant pas d'un objet : **statique** appelée
-  via la classe : `Time.from_seconds()` (= fonction, pas OO)\
-  NB existence du décorateur : `@classmethod` qui permet de retourner une instance\
-  les attributs de classe sont également possible `Time.BASE`
+* **méthode de classe** : méthode ne dépendant pas d'un objet mais **statique**
+    appelée via la classe :
+
+  On utilise alors un décorateur : `@classmethod` qui permet de retourner
+  une instance.
+
+  les attributs de classe sont également possibles.
+
+C'est une nuance importante, vous devez savoir que ça existe, je ne pense pas
+qu'on puisse exiger que vous sachiez créer ce genre de méthode en Python.
+
+### Exemple de méthode de classe
+
+Nous allons créer une classe dont les instances peuvent être définies de deux
+manières différentes :
+
+```python
+class Contact:
+    def __init__(self, nom, prenom, telephone):
+        self.__nom = nom
+        self.__prenom = prenom
+        self.__telephone = telephone
+
+    # ici les méthodes publiques
+
+    def get_prenom(self):
+        return self.__prenom
+
+    @classmethod
+    def depuis_dictionnaire(cls, dictionnaire):
+        nom = dictionnaire["nom"]
+        prenom = dictionnaire["prenom"]
+        telephone = dictionnaire["telephone"]
+        return cls(nom, prenom, telephone)
+```
+
+La méthode `depuis_dictionnaire` définit un second constructeur (ce n'est pas
+le seul usage mais le plus courant. Le premier paramètre est un nom de classe,
+identifié par `cls` il fait référence à la classe dans laquelle il est appelé. 
+Comme pour `self` ce n'est qu'un usage.)
+
+On peut maintenant créer des contacts :
+
+```python
+>>> robert = Contact("Duchmol", "Robert", "0678901234")   # directement
+>>> dict_martin = {"nom": "Martin", "prenom": "Patrick", "telephone": "0789012345"} 
+>>> martin = Contact.depuis_dictionnaire(dict_martin)     # avec la méthode de classe
+>>> type(martin)
+<class 'Contact>'
+>>> martin.get_prenom()
+"Patrick"
+```
+
+
+## Lister les méthodes et attributs
+
+Python propose la fonction `dir` qui permet de lister les méthodes et attributs
+définis pour un objet :
+
+```python
+>>> ma_liste = [1, 2, 3]
+>>> dir(ma_liste)
+['__add__', '__class__', '__contains__', '__delattr__', '__delitem__',
+'__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__',
+'__getitem__', '__gt__', '__hash__', '__iadd__', '__imul__', '__init__',
+'__init_subclass__', '__iter__', '__le__', '__len__', '__lt__', '__mul__',
+'__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__reversed__',
+'__rmul__', '__setattr__', '__setitem__', '__sizeof__', '__str__',
+'__subclasshook__', 'append', 'clear', 'copy', 'count', 'extend', 'index',
+'insert', 'pop', 'remove', 'reverse', 'sort']
+```
+
+Cela fonctionne aussi pour les objets que nous créons nous mêmes :
+
+```python
+>>> robert = Contact("Duchmol", "Robert", "0678901234")
+>>> dir(robert)
+['_Contact__nom', '_Contact__prenom', '_Contact__telephone', '__class__',
+'__delattr__', '__dict__', '__dir__', '__doc__', '__eq__', '__format__',
+'__ge__', '__getattribute__', '__gt__', '__hash__', '__init__',
+'__init_subclass__', '__le__', '__lt__', '__module__', '__ne__', '__new__',
+'__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__',
+'__str__', '__subclasshook__', '__weakref__', 'depuis_dictionnaire',
+'get_prenom', 'get_nom', 'get_telephone']
+```
+
+Remarquons que :
+
+* certaines méthodes ont un nom "normal" comme `append` ou `get_telephone`\
+    Ce sont les méthodes _publiques_.
+* d'autres ont un nom qui commence par `__` et se termine par `__`\
+    Ce sont les méthodes _spéciales_.
+* certains attributs ont un nom de la forme `_Contact__telephone`\
+    Ce sont les attributs et méthodes _privés_. Python a changé leur nom.
 
 ## méthodes spéciales
 
-* permet de définir des "opérateurs"
-  * `__add__ +, __mul__ *, __sub__ - `
-  * `__eq__ ==, __ne__ !=`
-  * `__lt__ <, __ge__ <=, __gt__ >, __ge__ >=`
-* `__repr__` : dans l'interpréteur : `>>> obj`
-* `__str__` : `str(obj)` et `__len__` : `len(obj)`
-* `__getitem__` : `obj[i]`
-* `__iter__` : `for v in obj`
+Lorsqu'on utilise une fonction courante de Python sur un objet, il appelle
+une méthode spéciale de cet objet :
 
-## Exemple d'utilisation : la méthode `__add__`
+```python
+>>> 1 + 1                   # appelle la méthode spéciale '__add__' des 'int'
+>>> ma_liste = [1, 2, 3]    # appelle la méthode spéciale '__init__' des 'list'
+>>> ma_liste[1]             # appelle la méthode spéciale '__getitem__' des 'list'
+2
+>>> ma_liste                # appelle la méthode spéciale '__repr__' des 'list'
+[1, 2, 3]
+```
+
+On peut implémenter nous mêmes ces méthodes spéciales. 
+
+### Quelques méthodes spéciales courantes :
+
+Elles permettent de définir des "opérateurs" et de donner des propriétés aux
+objets :
+
+| Méthode spéciale | Usage                         |
+|------------------|-------------------------------|
+| `__add__`        | `+`                           |
+| `__mul__`        | `*`                           |
+| `__sub__`        | `-`                           |
+| `__eq__`         | `==`                          |
+| `__ne__`         | `!=`                          |
+| `__lt__`         | `<`                           |
+| `__ge__`         | `<=`                          |
+| `__gt__`         | `>`                           |
+| `__ge__`         | `>=`                          |
+| `__repr__`       | dans l'interpréteur `>>> obj` |
+| `__str__`        | `str(obj), print(obj)`        |
+| `__getitem__`    | `obj[i]`                      |
+| `__iter__`       | `for v in obj`                |
+
+
+### Exemple d'implémentation d'une méthode `__repr__` :
+
+Pour l'instant lorsqu'on exécute :
+
+```python
+
+>>> martin
+<__main__.Contact object at 0x7fc027ddd040>
+```
+
+Pas génial ... On implémente maintenant une méthode `__repr__` :
+
+```python
+class Contact():
+
+    # le début du code de la classe
+    # ...
+    # ...
+
+    def __repr__(self):
+        return f'Contact("{self.get_nom()}", "{self.get_prenom()}", "{self.get_telephone()}")'
+```
+
+Et maintenant :
+
+```python
+>>> martin
+Contact("Martin", "Patrick", "0789012345")
+```
+
+C'est beaucoup plus pratique !
+
+
+### Exemple d'implémentation d'une méthode spéciale :  `__add__`
 
 ```python
 class Vecteur:
@@ -283,158 +622,17 @@ class Vecteur:
                    self.y() + autre.y())
 ```
 
-## Exemple d'utilisation  : la méthode `__add__` (suite)
+### Exemple d'utilisation de cette méthode spéciale
 
 ```python
->>> u = Vecteur(1, 2)
+>>> u = Vecteur(1, 2)       # instance de la classe Vecteur
 >>> v = Vecteur(3, 5)
->>> w = u + v # utilise la méthdoe add !!!!
->>> w.x()
-4
+>>> w = u + v               # utilise la méthode __add__ !!!!
+>>> w.x()                   # méthode
+4                           # 1 + 3 = 4
 >>> w.y()
-7
+7                           # 2 + 5 = 7
 ```
-
-## encapsulation
-
-\hrulefill coeur de la POO en NSI
-
-### encapsulation\
-
-Les données (attributs) sont regroupées avec les traitements qui les manipulent
-(méthodes)
-
-* l'encapsulation implique le **masquage des données**
-  * l'objet a la maîtrise de ses attributs _via ses méthodes_
-  * seules les méthodes sont accessibles
-
-##
-
-### règle d'or\
-
-**les attributs sont déclarés privés** = accessibles uniquement au sein de la
-classe
-
-  en Python, identifiant préfixé de `__`\
-  on peut aussi définir des méthodes privées.
-
-
-##
-
-### séparation de l'interface et de l'implémentation
-
-* **interface publique d'une classe**\
-  = ensemble des méthodes _publiques_ définies par la classe\
-  = ensemble des services que peuvent rendre les objets
-
-## intérêt ?
-
-* la représentation des données utilisée n'a pas besoin d'être connue, elle
-    pourra donc **évoluer** sans perturber l'existant "code client"
-* ce qui compte c'est ce que l'on peut faire, pas comment on le fait\
-    _en partant du principe que c'est bien fait._
-
-## intérêt ? (suite)
-
-* possibilité d'ajouter du contrôle
-  * accès en lecture seulement d'un attribut\
-      `get_hours()` mais pas `set_hours()`
-  * contrôle des valeurs
-      classe `Person` avec attribut `__age`
-
-      ~~~python
-      def set_age(self, new_age):
-        if new_age < 0:
-          new_age = 0
-        self.__age = new_age
-      ~~~
-      classe `BankAccount`, accès au solde `get_balance()` contrôlé par code
-
-##
-
-* lorsque l'on fait l'analyse objet d'un problème, on cherche à déterminer les **services** que doivent rendre les objets\
-  = les **méthodes**
-* les attributs n'apparaissent que lorsque l'on se pose la question de la mise en oeuvre des méthodes, càd. de leur **implémentation**.
-
-  un attribut existe parce qu'il permet l'implémentation d'une méthode
-
-## exemple : les disques
-
-On doit représenter des **disques**.
-On a besoin de connaître le rayon, diamètre, aire, périmètre.
-
-* classe `Disc` + méthodes
-
-  `get_radius(), get_diameter(), get_aera(), get_perimeter()`
-
-* attributs ?\
-  dépendent de choix d'implémentation...
-
----
-
-## implémentation avec "rayon"
-
-```python
-class Disque:
-  def __init__(self, rayon):
-    self.__rayon = rayon
-```
-. . .
-```python
-
-  def rayon(self):
-    return self.__rayon
-  def diametre(self):
-    return 2 * self.__rayon
-  def perimeter(self):
-    return 2 * math.pi * self.__rayon
-```
-
-## implémentation avec "diamètre"
-
-```python
-class Disque:
-  def __init__(self, diametre):
-    self.__diametre = diametre
-```
-. . .
-```python
-
-  def rayon(self):
-    return self.__diametre / 2
-  def diametre(self):
-    return 2 * self.__diametre
-  def perimeter(self):
-    return math.pi * self.__diametre
-```
-
-## Qu'est ce qui change ?
-
-*   Pour le **développeur**, s'il défini ses disques avec le diamètre,
-    le constructeur et les méthodes changent.
-
-. . .
-
-*   Pour **l'utilisateur**, rien ne change. Qu'il utilise l'un ou l'autre,
-    il obtient le même résultat.
-
-    Inutile pour lui de savoir quelle formule on a employé.
-
-
-
-## javascript
-
-_cf. Time.js_
-
-* similarités
-  * class
-  * constructor
-  * this
-* différences
-  * pas `this/self` en paramètres des méthodes
-  * mot-clé `static`
-  * pas de notion "privé"
-      mais : voir `getters/setters (get/set xxx)` dans version 2 de `Time2.js`
 
 
 # Polymorphisme / héritage
@@ -451,3 +649,9 @@ _cf. Time.js_
   succeptibles _d'évoluer_...\
     donc de _maintenir_ du code.
 * J'ai des sources si ça vous intéresse.
+
+En pratique... en Python, toutes les classes héritent de `object` qui
+est un format général de classe. 
+
+
+
