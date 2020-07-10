@@ -1,13 +1,13 @@
 ---
-title : cours POO
+title: NSI Terminale - Données
+subtitle : Introduction à la programmation objet
 author: qkzk
-weight: 2
+date: 2020/07/10
+theme: metropolis
+papersize: a4
+geometry: margin=2cm
 
 ---
-
-### pdf : [format imprimable](/uploads/docnsitale/poo/2_cours_clean.pdf), fichier [contact.py](/uploads/docnsitale/poo/contact.py)
-
-
 
 # Introduction à la programmation objet
 
