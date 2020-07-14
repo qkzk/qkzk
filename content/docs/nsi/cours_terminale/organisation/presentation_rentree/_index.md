@@ -19,16 +19,16 @@ Nous allons évoquer l'organisation de cette année en NSI :
 * les coefficients,
 * les épreuves.
 
-# Horaire
+## Horaire
 
 L'horaire en terminale est de 6h par semaine.
 
 Pour la rentrée 2020, nous devrions avoir tous les cours en salle info.
 
 
-# Programme
+## Programme
 
-## Contenus
+### Contenus
 
 * Algorithmique
     * diviser pour régner
@@ -54,7 +54,7 @@ Pour la rentrée 2020, nous devrions avoir tous les cours en salle info.
     * paradigme fonctionnel
     * calculabilité
 
-## Progression
+### Progression
 
 | **thème**       	| **chapitre**          	|
 |-----------------	|-----------------------	|
@@ -77,7 +77,7 @@ Pour la rentrée 2020, nous devrions avoir tous les cours en salle info.
 | architecture    	| composants            	|
 |                 	| projets               	|
 
-## Grands thèmes du programme de terminale
+### Grands thèmes du programme de terminale
 
 
 Rappelons d'abord que le programme du baccalauréat est _toujours_ et
@@ -118,7 +118,7 @@ Le programme se découpe en quatre parties inégales :
         communications (cryptographie), composants sur puce et systèmes
         embarqués, gestion des processus etc.
 
-## Types de séances en terminale
+### Types de séances en terminale
 
 Nous devrions disposer d'une salle info à chaque séance, cependant il nous
 faudra étudier longuement les algorithmes et les structures de donnée sur
@@ -129,7 +129,7 @@ convenablement...
 
 Nous n'utiliserons pas les postes à chaque séance.
 
-## Projets
+### Projets
 
 Une grande partie de notre temps sera consacrée à la réalisation de projets.
 
@@ -139,7 +139,7 @@ Une grande partie de notre temps sera consacrée à la réalisation de projets.
 Cela devrait ressembler à ceux proposés en fin d'année dernière,
 l'investissement régulier en plus...
 
-# Coefficients
+## Coefficients
 
 Chaque épreuve spécialité de terminale compte pour 16 points sur 60.
 
@@ -150,7 +150,7 @@ Les bulletins comptent pour 10 points.
 
 Source : [eduscol](https://cache.media.eduscol.education.fr/file/Bac2021/05/8/les_epreuves_du_nouveau_baccalaureat_general_infog_1086058.pdf)
 
-# Épreuves
+## Épreuves
 
 L'épreuve obligatoire de spécialité se déroule durant le troisième trimestre.
 
@@ -212,7 +212,7 @@ La note globale de l'épreuve est donnée sur 20 points.
     encore compléter un programme en ajoutant des assertions, etc._
 
 
-## Absence, dispense et aménagement de la partie pratique
+### Absence, dispense et aménagement de la partie pratique
 
 _Toute absence non justifiée d'un candidat scolaire le jour fixé pour
 l'évaluation de la partie pratique entraîne l'attribution de la note zéro pour
@@ -246,14 +246,14 @@ obtenue à la partie écrite de l'épreuve rapportée à 20 points._
 _Les candidats inscrits au Centre national d'enseignement à distance ne sont pas
 dispensés de l'épreuve pratique._
 
-## Épreuve de remplacement
+### Épreuve de remplacement
 
 _Il n'y a pas d'épreuve de remplacement pour la partie pratique : en cas
 d'absence justifiée, la note éventuellement obtenue au cours de l'année
 scolaire concernant l'évaluation des compétences expérimentales est reportée
 et prise en compte._
 
-## Épreuve orale de contrôle
+### Épreuve orale de contrôle
 
 **Durée : 20 minutes**
 
@@ -276,7 +276,7 @@ orales de cette épreuve._
 
 **Source: [education.gouv.fr](https://www.education.gouv.fr/bo/20/Special2/MENE2001797N.htm#:~:text=Nature%20de%20l'%C3%A9preuve,est%20donn%C3%A9e%20sur%2020%20points.)**
 
-## Grand oral
+### Grand oral
 
 Il se déroule en juin.
 

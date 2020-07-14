@@ -9,6 +9,8 @@ weight: 3
 
 ## Terminale NSI
 
+Les informations générales : [programme, progression, coefficients, épreuves](organisation/presentation_rentree)
+
 # Progression envisagée
 
 
@@ -46,7 +48,7 @@ site.
 * [Structure de données](structures_donnees)
 * [Bases de données](bdd)
 
-Tous les cours sont dispnibles dans au moins deux des trois formats suivants :
+Tous les cours sont disponibles dans au moins deux des trois formats suivants :
 
 1. en PDF "pour impression" au format A4 - c'est le format recommandé,
 2. en PDF "diaporama" essentiellement pour projeter au tableau,
