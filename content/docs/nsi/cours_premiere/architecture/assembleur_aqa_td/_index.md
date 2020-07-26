@@ -1,10 +1,12 @@
 ---
-title: Travaux dirigés assembleur AQA
-author: qkzk
-theme: metropolis
+title: "Assembleur AQA - Travaux dirigés"
+author: "qkzk"
+date: 2020/07/25
 weight: 16
-# mainfont: Noto Sans CJK JP
+
 ---
+
+## pdf [pour impression](/uploads/docsnsi/architecture/aqa/td_assembleur_aqa.pdf)
 
 # TD assembleur AQA
 
@@ -12,10 +14,10 @@ weight: 16
 Dans ce TD nous allons travailler avec l'assembleur AQA disponible
 [ici](http://www.peterhigginson.co.uk/AQA/).
 
-La documentation d'origine est [ici](http://www.peterhigginson.co.uk/AQA/info.html)
-et une traduction des commandes principales est disponible [ici](../doc)
+La documentation d'origine est [là](http://www.peterhigginson.co.uk/AQA/info.html)
+et une traduction des commandes principales est disponible [ici](TODO TRADUIRE)
 
-Après avoir réalisé les [premières questions](../assembleur_aqa_intro),
+Après avoir réalisé les [premières questions](TODO importer sur qkzk),
 répondre aux questions suivantes.
 
 ## Exercice 1 - quelques exemples
@@ -38,7 +40,7 @@ On souhaite écrire un programme qui réalise une **multiplication**.
 * En entrée (saisie clavier), 2 nombres entiers positifs
 * En sortie (affichage), leur produit.
 
-1. Comment, à l'aide d'addition, réaliser le produit $3 \times 4$ ?
+1. Comment, à l'aide d'additions, réaliser le produit $3 \times 4$ ?
 2. Ecrire un programme Python (ou un progammme en langage naturel) qui réalise
     ce cahier des charges.
 3. Ecrire le code assembleur AQA correspondant et le tester.
@@ -66,15 +68,15 @@ $0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233$ etc.
 Voici un programme Python qui affiche ligne par ligne les termes inférieurs à
 255 :
 
-~~~python
+```python
 x = 0
 y = 1
 while x < 255:
   print(x)
   z = y
   y = x + y
-  x = z
-~~~
+  x = y
+```
 
 1. Vérifiez que ce programme Python fonctionne.
 
@@ -82,196 +84,80 @@ while x < 255:
 
 2. Ecrire ce programme en assembleur.
 
-_Remarquez qu'on obtient les résultats en lignes, ce qui nous convient tout à_
+_Remarquez qu'on obtient les résultats en ligne, ce qui nous convient tout à_
 _à fait_
 
 
-## 5. Test de parité
+## Placements
 
-### Problème
+Nous allons réaliser la version simple de l'exercice du placement.
 
-On souhaite écrire un programme assembleur qui résolve le problème suivant :
+Robert dispose initialement d'un capital de 1000€ qu'il place en banque.
 
-on lui donne un nombre entier et il affiche "pair" ou "impair".
+Chaque mois il dépose 100€.
 
-### Solution naïve en Python
+1. Combien de mois seront nécessaire pour doubler la somme initiale ?
+2. Réaliser un programme en assembleur AQA afin de répondre à la question.
+    Il demande à l'utilisateur le capital initial puis le montant versé chaque
+    mois.
 
-En Python, c'est trivial : il suffit d'utiliser modulo. `n % 2` renvoie le
-reste de la division entière par 2. Si ce reste est nul, l'entier est pair.
-Sinon, l'entier est impair.
+    Ensuite une boucle tourne jusqu'à atteindre le double du capital intial
+    et on renvoie dans la sortie le nombre de tours nécessaires.
 
-Dans une fonction, on peut envisager ceci :
+## Retourner une liste de nombres
 
-~~~python
-def parite(entier):
-  '''
-  @param entier: (int)
-  @return: (str)
-  '''
-  if entier % 2 == 0:
-    return "pair"
-  else:
-    return "impair"
-~~~
+Voici le cahier des charges à respecter : 
 
-qui s'utilise comme ceci :
-
-~~~python
->>> parite(20)
-"pair"
->>> parite(21)
-"impair"
-~~~
-
-On le comprend bien :
-
-**Créer un test de parité équivaut à créer un opérateur "modulo 2"**
-
-C'est ce que nous allons faire.
-
-Mais comment faire quand on ne dispose que de très peu d'opérations comme
-dans l'assembleur AQA ?
-
-### Solution avec des soustractions
-
-Considérons l'algorithme suivant :
-
-~~~
-n un entier positif
-Tant que n > 0:
-    n prend la valeur n - 2
-Si n == 0:
-    renvoyer "pair"
-Si n < 0:
-    renvoyer "impair"
-~~~
-
-* Testons pour `n=3` :
-
-  `n` prend successivement les valeurs `3, 1 et -1` ensuite la boucle s'arrête.\
-  `-1` étant négatif, l'algorithme renvoie "impair". C'est juste.
-
-* Testons pour `n=4` :
-
-  `n` prend successivement les valeurs `4, 2, 0` et la boucle s'arrête.\
-  `n=0` et l'algorithme renvoie "pair". C'est juste encore une fois.
+* L'utilisateur saisit 3 valeurs.
+* On renvoie ensuite ces valeurs dans l'ordre contraire.
 
 
-### Programmer cet algorithme en AQA
+Exemple de saisies :
 
-Description des étapes du code assembleur.
+```
+3 5 8
+```
 
-On commence par demander une entrée, sous la forme d'un entier:
+Sortie correspondante :
 
-~~~
-   INP R0, 2
-~~~
+```
+8 5 3
+```
 
-Ensuite on crée un label "soustraction"
+## Division
 
-~~~
-soustraction:
-~~~
+L'assembleur AQA n'a pas d'implémentation de la division entière.
 
-On compare le registre 0 avec l'entier `1`. Si la comparaison  est égale, on saute au label "impair"
-On compare le registre 0 avec l'entier `0`. Si la comparaison  est égale, on saute au label "pair"
+Étant donnés deux entiers positifs $n$ et $q$, nous allons écrire un programme
+AQA qui calcule le quotient et le reste de la
+division entière $n = p \times q + r$ avec $r$ plus petit que $q$.
 
+Par exemple : $n=27$ et $q=6$ alors $p = 4$ et $r=3$ car $27 = 4\times 6 + 3$.
 
-Sinon, on soustrait 2 au registre 0 et on revient à "soustraction"
+Le principe est de réaliser des soustractions successives jusqu'à ce que
+le reste soit inférieur au quotient.
 
-* programmer cette partie
+À chaque étape on soustraie $n \leftarrow n - q$
 
-~~~
-SUB R0, R0, #2
-B soustraction
-~~~
-
-Après avoir écrit la boucle, il faut écrire ce que contiennent les labels "pair" et "impair"
-
-~~~
-impair:
-      MOV R1,#1
-      OUT R1,4
-      HALT
-~~~
-
-Ajouter ensuite le label "pair"
-
-<!--
-### Correction complète
-
-~~~
-  INP R0,2
-soustraction:
-  CMP R0,#1
-  BEQ impair
-  CMP R0,#0
-  BEQ pair
-  SUB R0, R0, #2
-  B soustraction
-impair:
-  MOV R1,#1
-  OUT R1,4
-  HALT
-pair:
-  MOV R1,#0
-  OUT R1,4
-  HALT
-~~~
--->
-
-### Complément : l'opérateur modulo
-
-L'opérateur modulo peut se programmer pour n'importe quel couple d'entier `a, b`
-de la même manière, par soustraction successives.
-
-Écrire un algorithme en langage naturel qui renvoie `a % b` et n'utilise
-que des soustraction.
-
-Programmez le dans l'assembleur AQA.
-
-Votre programme a deux entrées successives (`a` et `b`) et une sortie `a % b`
-
-<!--
-~~~
-  INP R0,2
-  INP R1,2
-soustraction:
-  CMP R0,R1
-  BLT sortie
-  SUB R0, R0, R1
-  B soustraction
-sortie:
-  OUT R0,4
-  HALT
-~~~
--->
+| Étape | $p$ | $n$ | $n < q$ |
+|-------|-----|-----|---------|
+| 0     | 0   | 27  | Faux    |
+| 1     | 1   | 21  | Faux    |
+| 2     | 2   | 15  | Faux    |
+| 3     | 3   | 9   | Faux    |
+| 4     | 4   | 3   | Vrai    |
 
 
-### Complément : la division entière
+Le programme renvoie alors $4$ et $3$.
 
-Améliorez votre algorithme pour qu'il renvoie le quotient et le reste de la
-division entière de `a` par `b`.
+1. Combien de registres sont nécessaires ?
+2. Écrire l'algorithme en langage naturel (ou en Python)
+3. Écrire un programme en assembleur AQA pour réaliser la division.
+4. Améliorer le programme en empêchant la saisie de valeurs négatives.
+    Le programme quitte immédiatement.\
+    On peut utiliser la table ascii pour afficher un message :
 
-Par exemple, pour les entiers `a=7` et `b=3` votre algorithme renvoie `2` et `1`
-
-car `7 = 2 * 3 + 1`
-
-
-<!--
-~~~
-  INP R0,2
-  INP R1,2
-  MOV R2,#0
-soustraction:
-  CMP R0,R1
-  BLT sortie
-  SUB R0, R0, R1
-  ADD R2, R2, #1
-  B soustraction
-sortie:
-  OUT R2,4
-  OUT R0,4
-  HALT
-~~~
--->
+    ```
+    MOV r3, #69 // E pour erreur
+    OUT r3, 7   // mode 7, un caractère
+    ```
