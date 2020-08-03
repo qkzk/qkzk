@@ -2,8 +2,8 @@
 title: Créer une clé Linux
 author: qkzk
 theme: metropolis
-weight: 2
-# mainfont: Noto Sans CJK JP
+weight: 5
+
 ---
 
 

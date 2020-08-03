@@ -2,7 +2,8 @@
 title: "Résumé des commandes bash"
 author: qkzk
 theme: metropolis
-weight: 3
+weight: 6
+
 ---
 
 ### pdf [pour impression](/uploads/docsnsi/architecture/linux/correction_linux_debian_intro.pdf)

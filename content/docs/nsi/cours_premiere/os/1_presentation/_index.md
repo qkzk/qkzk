@@ -1,38 +1,80 @@
 ---
-title: "Linux et UNIX"
-author:
-- qkzk
+title: "Première NSI - Système d'exploitation Linux - intro"
+author: qkzk
 weight: 1
+
 ---
-
-
-
 
 ### pdf [pour impression](/uploads/docsnsi/architecture/linux/linux_intro.pdf)
 
-# Linux
+## Système d'exploitation
+
+Le seul langage que la machine comprenne est le langage machine. Il se
+programme en _assembleur_ et ce n'est pas chose aisée. Il est donc nécessaire
+d'avoir un intermédiaire entre l'humain et la machine.
+
+C'est le rôle principal d'un système d'exploitation (Operating System) : il
+va traduire ce que nous voulons faire en langage machine afin que l'ordinateur
+comprenne et exécute l'action.
+
+Le système d'exploitation va donc :
+
+* fournir une interface entre l'humain et la machine;
+* gérer les ressources de l'ordinateur, à savoir sa mémoire, son processeur,
+    ses périphériques (écrans, imprimantes etc.) la gestion de l'énergie,...;
+* gérer les utilisateur ainsi que leurs droits d'accès à certains fichiers;
+* être indépendant du matériel (un même OS peut être exécuté sur des 
+    ordinateurs n'ayant pas les mêmes composants);
+* faire en sorte de rendre concret ce qui ne l'est pas (un fichier est par
+    essence abstrait mais nous le considérons bel et bien comme une entité
+    concrète.)
+
+Le système d'exploitation se sépare en deux grandes parties : 
+
+1. Le noyau ou kernel en anglais. Il gère les ressources de l’ordinateur et
+    permet aux différents composants - matériels et logiciels - de communiquer
+    entre eux. Le noyau n'est généralement pas accessible directement par
+    l'utilisateur.
+2. Les applications utilisent l'interface proposée par le noyau et sont
+    accessibles aux utilisateurs.
 
 ## Linux et les systèmes libres
 
 **Linux** est le noyau d'un système d'exploitation (OS) dont **debian** est une distribution.
 
-* C'est un système d'exploitation libre dont il existe de nombreuses variantes appelées _distributions_ fonctionnant elles-mêmes sur le noyau linux.
-* Linux désigné à la fois le _noyau (kernel)_ qui lance la machine et gère le bas niveau (proche du métal) et le système d'exploitation lui même (les applications).
-* Linux est un dérivé d'UNIX, système crée dans les années 70, codé en langage C (crée à cette occasion). Ces deux "logiciels" : C et UNIX constituent à la fois le langage et le système les plus importants de l'histoire informatique (la majorité des langages actuels dérivent du C et la majorité des machines professionnelles tournent sur un dérivé d'UNIX).
-* UNIX et ses dérivés sont présents partout : tous les smartphones fonctionnent sur un de ses dérivés (Linux pour android, bsd pour iOS) ainsi que les mac.
-* UNIX fonctionne sur n'importe quelle machine : une caméra IP, un super ordinateur (les 500 plus puissants utilisent tous linux), un chromecast, une switch etc.
-* Il existe des versions payantes de Linux (pour les professionnels), **debian** est un système d'exploitation gratuit et reconnu par les professionnels pour sa grande stabilité. Il n'est pas rare de rencontrer un serveur debian fonctionnant sans redémarrer depuis plusieurs années :
+* C'est un système d'exploitation libre dont il existe de nombreuses variantes
+    appelées _distributions_ fonctionnant elles-mêmes sur le noyau linux.
+* Linux désigné à la fois le _noyau (kernel)_ qui lance la machine et gère le
+    bas niveau (proche du métal) et le système d'exploitation lui même
+    (les applications).
+* Linux est un dérivé d'UNIX, système crée dans les années 70, codé en langage
+    C (crée à cette occasion). Ces deux "logiciels" : C et UNIX constituent à
+    la fois le langage et le système les plus importants de l'histoire
+    informatique (la majorité des langages actuels dérivent du C et la majorité
+    des machines professionnelles tournent sur un dérivé d'UNIX).
+* UNIX et ses dérivés sont présents partout : tous les smartphones fonctionnent
+    sur un de ses dérivés (Linux pour android, bsd pour iOS) ainsi que les mac.
+* UNIX fonctionne sur n'importe quelle machine : une caméra IP, un super
+    ordinateur (les 500 plus puissants utilisent tous linux), un chromecast,
+    une switch etc.
+* Il existe des versions payantes de Linux (pour les professionnels),
+    **debian** est un système d'exploitation gratuit et reconnu par les
+    professionnels pour sa grande stabilité. Il n'est pas rare de rencontrer un
+    serveur debian fonctionnant sans redémarrer depuis plusieurs années :
 
   Dernière coupure de courant chez moi ? Il y a 147 jours :
 
-  ~~~
+  ```
   $ uptime
   08:05:15 up 147 days, 23:35,  1 user,  load average: 0.52, 0.38, 0.37
-  ~~~
+  ```
+
 
 ## Usage courant de linux
 
-Hormis pour des logiciels très spécifiques, utiliser windows, linux ou OSX ne change rien. La grande majorité des logiciels existent sur toutes les plateformes hormis quelques exceptions notables :
+Hormis pour des logiciels très spécifiques, utiliser windows, linux ou OSX ne
+change rien. La grande majorité des logiciels existent sur toutes les
+plateformes hormis quelques exceptions notables :
 
 * Photoshop et la suite adobe : windows et osx. De nombreuses alternatives
 * les jeux vidéos : windows (**possible** de jouer sous linux ou osx mais demande du courage).
@@ -70,7 +112,7 @@ Dans un extrait de code on symbolise une commande shell par un `$` (souvent appe
 
 Dans un terminal on tape des commandes, elles sont exécutées par le shell. Celui de linux est souvent `bash`. `bash` est un langage de programmation interprété. Vous pouvez aussi créer des scripts bash (~scripts python moins faciles à écrire). `bash` est présent sous windows. `OSX` utilise `zsh`.
 
-~~~bash
+```bash
 $ pwd
 /home/quentin/travail
 $ ls
@@ -78,11 +120,21 @@ cours.pdf   notes.csv  devoir.pdf
 $ cd ..
 $ ls
 travail    personnel
-~~~
+```
 
 On navige avec `cd`, on affiche les contenus avec `ls`, on se repère avec `pwd`
 
 On peut accéder à un terminal physiquement (devant la machine) en lançant un programme ou à distance grâce au service réseau `ssh` (secured shell). C'est ainsi que sont administrées la majorité des machines 'professionnelles'.
+
+## Découverte du terminal
+
+Plusieurs possibilités :
+
+1. Utiliser une clé bootable comportant un système d'exploitation,
+2. Sous windows, installer le sous système linux et utiliser depuis Windows.
+3. Sous mac, il suffit d'ouvrir une console. Vous avez alors un système
+    légèrement différent mais comparable.
+4. Directement dans le navigateur. Par exemple [ici](https://bellard.org/jslinux/vm.html?url=buildroot-x86.cfg)
 
 ## Arborescence UNIX
 
@@ -92,12 +144,12 @@ UNIX VOIT SES PÉRIPHÉRIQUES ET SES PROCESSUS COMME DES FICHIERS.
 
 Par exemple :
 
-~~~bash
+```bash
 $ ls /
 bin   dev         lib    media  proc  run   sys  var
 boot  etc         lib64  mnt    root  sbin  tmp
 home  lost+found  opt    srv    usr
-~~~
+```
 
 * `/` le dossier racine de l'arborescence
 * Tous les dossiers qui se terminent par `bin` contiennent des exécutables en binaire.
@@ -125,20 +177,20 @@ L'affichage détaillé d'un fichier (`ls -lah`) montre les permissions de
 
 Exemple :
 
-~~~bash
+```bash
 -rwxr-xr-x 1 quentin quentin  324  2 déc.  21:45 deploy.sh
 -rw-r--r-- 1 quentin quentin 3,6M  5 déc.  08:32 inside.log
-~~~
+```
 
 **traduction**
 
-~~~
+```
 - : pas activé
 d : directory
 r : droit de lecture
 w : droit d'écritude
 x : droit d'exécution
-~~~
+```
 
 * `deploy.sh` : ce n'est pas un dossier, je peux lire et écrire dans le fichier, l'exécuter. Mon groupe ne peux pas écrire dedans, les autres non plus.
 
@@ -167,10 +219,10 @@ Chaque fois qu'on lance un programme, UNIX crée un processus.
 
 On accède aux processus avec `ps`
 
-~~~bash
+```bash
 $ ps -ef | grep Python
 quentin  26945 10317  0 08:32 pts/1    00:00:00 /usr/bin/python -O /usr/bin/ranger
-~~~
+```
 
 Affiche tous les processus, dans une table et filtre pour ne garder que ceux qui font référence à Python.
 
@@ -197,16 +249,16 @@ On peut, par exemple :
 
 Afficher l'état du réseau.
 
-~~~bash
+```bash
 $ ip a
 $ ifconfig
-~~~
+```
 
 Puis-je joindre une machine ?
 
-~~~bash
+```bash
 $ ping 192.168.1.1
 $ ping google.com
-~~~
+```
 
 CTRL+C pour arrêter

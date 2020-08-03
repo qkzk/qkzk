@@ -2,14 +2,11 @@
 title: "NSI première : Système d'exploitation"
 subtitle: TP Debian
 author: qkzk
-theme: metropolis
-weight: 2
-papersize: a4
-documentclass: article
-header-includes: \usepackage[margin=1.5cm]{geometry}
+weight: 4
+
 ---
 
-
+### pdf [pour impression](/uploads/docsnsi/architecture/linux/tp_debian.pdf)
 
 Linux : première partie {#linux--première-partie}
 =======================
