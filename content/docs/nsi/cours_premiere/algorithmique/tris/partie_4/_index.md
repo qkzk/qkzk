@@ -1,113 +1,88 @@
 ---
-title: Complexité
+title:
+- NSI 1ère - Algorithmique  - Tris 4
+author:
+- QK
 weight: 4
+
 ---
 
+### pdf : pour [impression](/uploads/docsnsi/algo/tris/tris_4.pdf)
 
-[article](/uploads/docsnsi/algo/tris/tris_4-Article.pdf) et [diapos](/uploads/docsnsi/algo/tris/tris_4-Beamer.pdf)
+### Plan
+
+TD programmer tri par insertion
+
+1. reprendre l'algorithme, le programmer en python
+2. programmer version qui compte les échanges
+3. mesure pratique des durées, comparaison avec tri rapide (à taper) et timsort
+4. si le temps faire prog tri à bulle
+5. montrer que tri rapide et timsort $O(n \log n)$
 
 
-# Quatrième partie : complexité
+# Tri par insertion, travaux dirigés.
 
-## Rappel : tri par insertion
+## 1. Programmer le tri par insertion
 
-~~~
-i = 1
-Tant que i < longueur(A)
+En partant de l'algorithme ci-dessous, écrire le programme Python
+correspondant.
+
+On prendra soin de créer une fonction pour réaliser les échanges.
+
+```
+Tri Insertion(tableau t, entier n)
+i = 0
+Tant que i < n
     j = i
-    Tant que j > 0 et A[j-1] > A[j]
-        echanger A[j] et A[j-1]
+    Tant que j > 0 et t[j-1] > t[j]
+        echanger t[j] et t[j-1]
         j = j - 1
     fin tant que
     i = i + 1
 fin tant que
-~~~
+```
 
-## Tri par insertion : meilleur cas, pire cas
+## 2. Seconde version : décompte des échanges.
 
+1. Quel est le pire des cas en terme de nombre d'échanges pour le tri par 
+    insertion ?
+1. Créer une fonction qui génère un tableau trié par ordre décroissant.
+1. Créer une seconde version du tri qui renvoie un entier : le nombre d'échanges
+    réalisés par le tri.
+1. Construire deux listes Python, une liste de tailles croissantes et une
+    liste du nombre d'échanges pour le tri par insertion d'un tableau trié
+    de manière décroissante.
+1. À l'aide de `pylab` représenter la courbe du nombre d'échanges en fonction
+    de la taille.
+1. Pour les tailles précédentes, construire la liste des durées écoulées.
+1. Toujours à l'aide de `pylab` représenter la durée en fonction de la taille.
 
-* _meilleur cas_ : liste déjà triée
-* _pire des cas_ : liste triée à l'envers.
+## 3. Complément : d'autres tris.
 
+### timsort.
 
-## petit TP : Mesurer la complexité du tri par insertion.
+timsort est le nom du tri utilisé par Python (méthode `sort` et fonction `sorted`)
 
+Lire la documentation du tri natif `help(list.sort)` et reprendre la figure
+précédente pour le tri natif.
 
-* Pour des listes de plus en plus grandes, on mesure les temps d'exécution
-* On trace une courbre présentant les résultats
-* Conjecture sur la complexité du tri par sélection
+On construira deux courbes : le tri natif seul et les deux tris ensemble.
 
+### Tri à bulle
 
-## Correction du TP : tri par sélection
+1. En partant de l'article wikipédia sur [le tri à bulle](https://fr.wikipedia.org/wiki/Tri_%C3%A0_bulles#Principe_et_pseudo-code)
+    programmer une fonction `tri_a_bulle` en python.
+2. Ajouter à vos courbes précédentes celle du tri à bulle.
 
-* Le tri par insertion est en $O(n^2)$
-* Pire des cas : la liste est triée par ordre contraire
+# projets complémentaires
 
+### Illustrer les tris.
 
-Quelques exemples de vitesses en fonction de la taille de la liste d'entrée
-pour le tri par insertion
+Construire une animation en python illustrant les tris. On pourra,
+par exemple, utiliser des bâtons de taille croissante
+et montrer leur position à des moments définis de l'algorithme.
 
-## Meilleur cas
-
-![meilleur cas](/uploads/docsnsi/algo/tris/insertion_complexite_best_case.png)
-
-## Cas random
-
-![random](/uploads/docsnsi/algo/tris/insertion_complexite_random.png)
-
-## Pire des cas
-
-![pire cas](/uploads/docsnsi/algo/tris/insertion_complexite_worst_case.png)
-
-
-# insertion : preuve de la complexité
-
-## Complexité : calcul à la main
-
-* Pour simpliflier, on ne compte que les échanges.
-* Dans ce cas, à chaque itération de la boucle intérieure, on parcourt toute la liste triée et on échange tous les couples d'éléments avant d'insérer.
-* Celle-ci contenant `i` éléments, le nombre d'échanges est :
-
-    $C = 1 + 2 + 3 + \cdots + n$
-* ...
+On peut utiliser des couleurs pour mettre en avant l'élément couramment
+trié.
 
 
-## Complexité : calcul à la main
-
-* Remarquons qu'on peut écrire $C$ à l'envers :
-$$C \quad =\quad 1 \quad + \quad 2 \quad+ \cdots + (n-1) + \quad n $$
-$$C \quad =\quad n \quad + (n-1) + \cdots + \quad 2 \quad + \quad 1 $$
-* On ajoute en colonne :
-$$2C \quad = (n+1) + (n+1) + \cdots + (n+1) + (n+1)$$
-$$2C = n(n+1)$$
-$$C = n(n+1)/2$$
-$C$ est toujours plus petit qu'un polynôme en $n^2$.
-
-On note : $C = O(n^2)$
-
-Le tri par insertion est de complexité **quadratique**
-
-
-## $O(n^2)$
-
-
-* Comme le tri par insertion, le tri par sélection est quadratique.
-* Le nombre "d'opérations" réalisées dans un tri par sélection ou par
-    insertion est de l'ordre du carré de la taille.
-* On dit que ce sont des algorithmes en $O(n^2)$
-
-
-
-# Comparaison à un autre tri
-
-## Tri par insertion vs Tri natif en Python
-
-.![insertion vs timsort](/uploads/docsnsi/algo/tris/insertion_vs_timsort.png){ width=400px }
-
-Le tri natif est-il à temps constant ????
-
-## Tri natif en Python seul
-
-.![timsort](/uploads/docsnsi/algo/tris/timsort.png){ width=400px }
-
-non... le tri natif (TimSort) est en $O(n\times log(n))$

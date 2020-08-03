@@ -1,9 +1,21 @@
 ---
-title: Trier introduction
+title:
+- NSI 1ère - Algorithmique  - Tris 1
+author:
+- QK
 weight: 1
+
 ---
 
-[article](/uploads/docsnsi/algo/tris/tris_1-Article.pdf) et [diapos](/uploads/docsnsi/algo/tris/tris_1-Beamer.pdf)
+### pdf : pour [impression](/uploads/docsnsi/algo/tris/tris_1.pdf)
+
+### Plan
+
+1. cours/td : activité boites,
+2. résumé des 2 algos, 
+3. faire tourner sur des ex sans indice,
+4. animation pgzero
+
 
 
 # Trier
@@ -15,13 +27,22 @@ Algorithme de **tri**
 Algorithme qui, partant d'une liste, renvoie une version ordonnée de la liste.
 $$[5,1,4,3,2] \rightarrow [1,2,3,4,5]$$
 
+Certains algorithme "ne renvoient rien"... c'est le _tableau de départ_ qui est
+modifié.
 
 ## Objectifs du programme
 
-| Contenus                          	| Capacités attendues                                                                                                            	| Commentaires                                                                                  	|
-|-----------------------------------	|--------------------------------------------------------------------------------------------------------------------------------	|-----------------------------------------------------------------------------------------------	|
-| Tris par insertion, par sélection 	| Écrire un algorithme de tri. <br>Décrire un invariant de boucle qui prouve la correction des tris par insertion, par sélection 	| La terminaison de ces algorithmes est à justifier.<br>On montre que leur coût est quadratique 	|
 
+**Contenus**
+Tris par insertion, par sélection
+
+**Capacités attendues**
+Écrire un algorithme de tri. Décrire un invariant de boucle qui prouve
+la correction des tris par insertion, par sélection
+
+**Commentaires**
+
+On montre que leur coût est quadratique 
 
 ## Trier : de nombreux algorithmes
 
@@ -32,7 +53,7 @@ Il existe de nombreux algorithmes de tri.
 * **Tri par sélection** -> 1ère
 * Tri à bulle
 * Tri rapide
-* **Tri fusion** -> Tale (?)
+* **Tri fusion** -> Terminale
 * Tri par tas
 * Tri par comparaison
 * Smoothsort
@@ -40,28 +61,37 @@ Il existe de nombreux algorithmes de tri.
 
 # Que va-t-on faire ?
 
-## 1ère partie
+1. Dégager les algorithmes "naturels" du tri par insertion et par sélection
+2. Étudier ces algorithmes (preuve et complexité)
+3. Les programmer en Python
+4. Comparer leur efficacité avec d'autres algorithmes de tris (timsort,
+    tri rapide, tri à bulle)
 
-### Introduction
+## Pourquoi étudier les algorithmes de tri ?
 
-1. Activité "à la main" : dégager les algorithmes les plus naturels
-2. Faire tourner les algorithmes en langage naturel, dans un tableau
+Trier est une opération fréquente, certains algorithmes (dichotomie par
+exemple) partent d'un tableau déjà trié.
 
-## seconde partie
 
-1. Les algorithmes formalisés
-2. Les faire tourner sur des tableaux de nombres
+Tous les langages "haut niveau" proposent une fonction native pour trier
+les tableaux. 
+En terminale on utilisera apprendra à faire des sélections sur des bases
+de données du type "quels sont les 5 films les plus vus au cinéma ?"
+ou bien "déterminer les 100 derniers inscrits à un jeu en ligne".
 
-## troisième partie
+Ces sélections nécessitent un tri (des films par nombre de spectateurs, des
+joueurs par date d'inscription).
 
-* prouver qu'ils sont corrects et se terminent (invariant, terminaison)
-* Étudier la complexité (~vitesse d'exécution en fonction de la taille)
+Notre objectif n'est pas _d'utiliser_ en pratique nos algorithmes
+mais de comprendre leur fonctionnement. 
 
-## quatrième partie
+Non seulement ils sont d'excellents candidats pour des questions à l'examen
+mais les principes mis en oeuvres sont utilisés dans nombreux algorithmes.
 
-* les programmer en Python
-* Comparer l'efficacité de différents tris
-* Compléments éventuels
+Tous les algorithmes de tri ne se valent pas. Au prix de transformations
+un peu plus élaborées on parvient à les rendre beaucoup plus rapides.
+
+Nous allons les étudier de plus en plus précisemment.
 
 # Première partie
 
@@ -71,11 +101,12 @@ Il existe de nombreux algorithmes de tri.
 
 \medskip
 
+On dispose de boites de poids différent,
+
 L'objectif est de décrire un algorithme "naturel" qui réponde au problème :
 
-* on dispose de boites de poids différent,
 * **comment les ranger par masse croissante ?**
-* Contrainte : **on ne peut les comparer qu'une à une.**
+* Contrainte : **on ne peut qu'effectuer des comparaisons par paire.**
 
 
 ## Activité à la main
@@ -99,10 +130,14 @@ Vous avez 25 minutes pour :
 
 1. Deux algorithmes "naturels" se dégagent
 2. Pas évident quand on ne dispose que d'une comparaison
-3. généralisable à tout ce qui peut se "comparer" (ex : mots par longueur, fichiers par taille etc.)
+3. généralisable à tout ce qui peut se "comparer" (ex : mots par longueur,
+    fichiers par taille etc.)
 
 
 # Tri par sélection
+
+Le tri par sélection est l'un des deux algorithmes de tris étudiés cette année.
+
 
 ## Tri par sélection
 
@@ -140,26 +175,29 @@ Fin Pour
 
 ## Le tri par insertion
 
+Le tri par insertion est le tri du joueur de cartes, il est très proche
+du tri par sélection, et dispose d'ailleurs de propriétés similaires.
+
+
 ### En français
 
 #### Version 1
-```
-    Je débute avec un alignement vide de boîtes triées
-    Tant qu'il y a des boîtes non triées :
-       Je choisis une boite
-	   Je l'insère dans l'alignement de telle sorte
-     qu'il reste trié
-    fin Tant
-```
 
-
-## Le tri par insertion
-
-### Il est important ici de présenter un algorithme d'insertion dans un alignement trié.
 
 ```
-Entree : Un alignement de boîtes trié, une boîte b
-Sortie : rien
+Je débute avec un alignement vide de boîtes triées
+Tant qu'il y a des boîtes non triées :
+   Je choisis une boite
+   Je l'insère dans l'alignement de telle sorte qu'il reste trié
+fin Tant
+```
+
+
+### Fonction : insérer un élément dans un alignement trié.
+
+```
+Entrees : Un alignement de boîtes trié, une boîte b
+Sortie : aucune
 Effet de bord: l'alignement reste trié
 
 Prends la boîte la plus à droite (la plus lourde)
@@ -188,3 +226,18 @@ Tri en _place_ : il n'utilise pas plus de mémoire
   (1, 2)                  (3, 4)                  (3)
   (1, 2, 3)               (4)                     (4)
   (1, 2, 3, 4)
+
+
+# Le tri par insertion
+
+
+## Exercice :
+
+Reprendre le tableau de nombres `[1, 3, 4, 2]` et donner les étapes :
+
+* au départ,
+* après chaque échange,
+* à la fin.
+
+
+# Présentation d'une animation réalisée avec Pygame zero.
