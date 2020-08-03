@@ -1,13 +1,17 @@
 ---
-title: algorithmes glouton
-author: qkzk
-weight: 10
+title: 'Les algorithmes glouton'
+author: 'qkzk'
+date: '2020/07/31'
+weight: 6
+
 ---
 
-# Les algorithmes glouton
 
-1. Travaux dirigés : sur le [site](td) et en [pdf](/uploads/docsnsi/algo/glouton/1_TD.pdf)
-2. Cours : sur le [site](cours) et en [pdf](/uploads/docsnsi/algo/glouton/2_cours.pdf)
-3. Travaux pratiques sur le [site](tp).
-4. Travaux pratiques sur [github](https://github.com/qkzk/data_colab/tree/master/TSP)
-5. Troisème travail pratique : les étagères, sur [github](https://github.com/qkzk/data_colab/tree/master/tp_etagere)
+# Données en table
+
+1. [Cours](1_cours)
+2. [Travaux dirigés](2_td)
+3. [Travaux pratiques](3_tp)
+4. [Cours](4_cours)
+5. [Travaux dirigés](5_td)
+6. [Travaux pratiques](6_tp)
