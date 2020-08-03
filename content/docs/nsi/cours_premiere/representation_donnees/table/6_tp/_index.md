@@ -6,7 +6,7 @@ weight: 6
 
 ---
 
-### pdf : [pour impression](/uploads/docsnsi/table_csv/6_td.pdf)
+### pdf : [pour impression](/uploads/docsnsi/table_csv/6_tp.pdf)
 
 # Exerice 1 : Fusion et tri de tables
 

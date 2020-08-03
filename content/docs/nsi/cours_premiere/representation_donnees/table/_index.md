@@ -10,8 +10,8 @@ weight: 10
 # Données en table
 
 1. [Cours](1_cours)
-2. [Cours](2_td)
-3. [Cours](3_tp)
+2. [Travaux dirigés](2_td)
+3. [Travaux pratiques](3_tp)
 4. [Cours](4_cours)
-5. [Cours](5_td)
-6. [Cours](6_td)
+5. [Travaux dirigés](5_td)
+6. [Travaux pratiques](6_tp)
