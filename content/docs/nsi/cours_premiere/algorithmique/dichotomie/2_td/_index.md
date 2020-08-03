@@ -1,8 +1,8 @@
 ---
-subtitle: "Travaux dirigés : Dichotomie"
+title: "Travaux dirigés : Dichotomie"
 author: qkzk
 date: 2020/07/25
-weight: 1
+weight: 2
 
 ---
 
