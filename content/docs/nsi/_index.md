@@ -30,32 +30,36 @@ Informatiques du baccalauréat général.
 
 ## Classe de première
 
+Durant l'année 2020-2021 nous aurons des séances en classe entière et des
+séances en demi groupe, sur postes.
 
 ### Matériel en NSI
 
-Durant l'année 2020-2021 nous aurons des séances en classe entière et des
-séances en demi groupe, sur postes.
 
 1. Un cahier d'exercices pour prendre des notes, écrire les algorithmes etc.
 2. Une partie dans le trieur ou un classeur pour ranger les polycopiés (cours,
     TD, résumés etc.)
-2. Des copies pour les DS ;
+2. Des copies pour les DS
 3. Une clé USB 3.0 (embout bleu) disposant de 16 go (7€). Elle servira à
-    installer un système d'exploitation Linux.
+    installer un système d'exploitation Linux. **Attention :**
     * Toutes les données présentes sur la clé seront perdues,
     * Vous ne pourrez plus stocker de données sur la clé.
 
 ### Programme
 
 
-Quatre notions transverses sont abordées régulièrement durant l'année. On les retrouve dans chacune des parties du programme :
+Quatre notions transverses sont abordées régulièrement durant l'année. On les
+retrouve dans chacune des parties du programme :
 
 
 
 * Les **données** et leur diversité : textes, images, sons, mesures, etc.
-* Les **algorithmes** qui spécifient de façon abstraite des traitements à effectuer sur ces données à partie d'opérations élémentaires
-* Les **langages** qui permettent de traduire les algorithmes abstraits en **programme**s exécutables
-* Les **machines** et leurs systèmes d'exploitation qui permettent d'exécuter des programmes. On y inclut les **objets connectés** et les **réseaux**.
+* Les **algorithmes** qui spécifient de façon abstraite des traitements à
+    effectuer sur ces données à partie d'opérations élémentaires
+* Les **langages** qui permettent de traduire les algorithmes abstraits en
+    **programme**s exécutables
+* Les **machines** et leurs systèmes d'exploitation qui permettent d'exécuter
+    des programmes. On y inclut les **objets connectés** et les **réseaux**.
 
 Le **programme** se découpe en 7 champs principaux :
 
