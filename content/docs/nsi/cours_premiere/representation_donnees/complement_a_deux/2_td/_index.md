@@ -1,7 +1,7 @@
 ---
-title: "Travaux dirigés"
+title: "Complément à deux - Travaux dirigés"
 author: "qkzk"
-weight: 1
+weight: 2
 
 ---
 

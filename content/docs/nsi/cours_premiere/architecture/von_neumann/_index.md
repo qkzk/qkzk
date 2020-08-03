@@ -14,7 +14,7 @@ Il propose en 1944 un modèle _d'architecture_ novateur qui sert toujours de bas
 
 ## Présentation du modèle de Von Neumann
 
-### ![Modèle original](img/modele-originel2.gif)
+### ![Modèle original](/uploads/docsnsi/architecture/img/modele-originel2.gif)
 
 * **Unité de commande** : contrôle la séquence d'instruction
 * **Unité arithmétique** : exécution de ces instruction
@@ -38,14 +38,14 @@ Il propose en 1944 un modèle _d'architecture_ novateur qui sert toujours de bas
 
 
 
-![Boulier](img/boulier3.jpg)
+![Boulier](/uploads/docsnsi/architecture/img/boulier3.jpg)
 
 ## Antiquité : naviguer
 
-![La machine d'Anticythère](img/anticythere_4.jpg)
+![La machine d'Anticythère](/uploads/docsnsi/architecture/img/anticythere_4.jpg)
 
 ## Antiquité : naviguer
-![Reconstituée](img/anticythere_5.png)
+![Reconstituée](/uploads/docsnsi/architecture/img/anticythere_5.png)
 
 ## Antiquité : naviguer
 
@@ -67,7 +67,7 @@ Elle démontre que :
 
 ##  La pascaline
 
-### ![La Pascaline](img/pascaline_2.jpg){ width=400px }
+### ![La Pascaline](/uploads/docsnsi/architecture/img/pascaline_2.jpg){ width=400px }
 
 ## Gottfried Wilhelm Leibniz
 
@@ -85,7 +85,7 @@ Néanmoins on n'utilisera réellement le binaire qu'après 1945.
 
 Les métiers Jacquard sont encore utilisés dans le médical pour réaliser des coudières, genouillères et prothèses d'artères. Et c'est produit en France.
 
-![Cartes perforées](img/cartes_perforees_2.jpg){ width=400px }
+![Cartes perforées](/uploads/docsnsi/architecture/img/cartes_perforees_2.jpg){ width=400px }
 
 ## Machine à calculer programmable
 
@@ -97,9 +97,9 @@ Trop complexe, trop coûteuse la machine de Babbage ne verra jamais le jour.
 
 ## Ada Lovelace
 
-![Nombres de Bernoulli](img/lovelace_bernoulli_2.jpg){ width=400px }
+![Nombres de Bernoulli](/uploads/docsnsi/architecture/img/lovelace_bernoulli_2.jpg){ width=400px }
 
-![Ada Lovelace](img/ada_lovelace_2.jpg){ width=400px }
+![Ada Lovelace](/uploads/docsnsi/architecture/img/ada_lovelace_2.jpg){ width=400px }
 
 ## Électricité
 
@@ -116,11 +116,11 @@ Citons Enigma, utilisée par les allemands, déchiffrée par Turing grâce à _l
 
 ## Enigma
 
-### ![Enigma](img/enigma_2.jpg){ width=400px }
+### ![Enigma](/uploads/docsnsi/architecture/img/enigma_2.jpg){ width=400px }
 
 ## La bombe
 
-### ![La Bombe](img/bombe_2.jpg){ width=400px }
+### ![La Bombe](/uploads/docsnsi/architecture/img/bombe_2.jpg){ width=400px }
 
 ## ENIAC
 
@@ -143,14 +143,14 @@ Les machines sont encore colossales !
 
 ## l'ENIAC : un monstre
 
-### ![l'Eniac](img/eniac_2.jpg){ width=400px }
+### ![l'Eniac](/uploads/docsnsi/architecture/img/eniac_2.jpg){ width=400px }
 
 
 # Le modèle de Von Neumann en détail
 
 ## Modèle de Von Neumann
 
-### ![Modèle original](img/modele-originel2.gif)
+### ![Modèle original](/uploads/docsnsi/architecture/img/modele-originel2.gif)
 
 * **Processeur** : composé de deux unités
 * **Unité de commande** : contrôle la séquence d'instruction
