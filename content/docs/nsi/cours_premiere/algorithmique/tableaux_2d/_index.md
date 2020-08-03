@@ -94,7 +94,8 @@ Le programme suivant génère une image rectangulaire comportant un dégradé
 du blanc au noir :
 
 
-$\;$![degradé](./degrade_bn.png)
+$\;$![degradé](/uploads/docsnsi/algo/degrade_bn.png)
+
 
 ```python
 from PIL import Image
@@ -118,7 +119,7 @@ def degrade_blanc_noir():
 2. On souhaite tourner l'image afin de produire un dégradé vertical.
     Adaptez la fonction.
 
-    $\;$![degradé vetical](./degrade_vertical.png)
+    $\;$![degradé vetical](/uploads/docsnsi/algo/degrade_vertical.png)
 
 
 
