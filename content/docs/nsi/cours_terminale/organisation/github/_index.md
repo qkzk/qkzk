@@ -2,7 +2,7 @@
 title: "Github"
 author: "qkzk"
 date: "2020/08/04"
-theme: metropolis
+weight: 100
 
 ---
 
