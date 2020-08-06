@@ -9,6 +9,7 @@ weight: 1
 
 1. le [tp](tp)
 2. le [cours](cours)
+3. le [résumé](resume)
 
 
 ## Programme
