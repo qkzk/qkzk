@@ -9,6 +9,7 @@ weight: 2
 ## Contenus
 
 * [introduction](intro)
+* [résumé](resume)
 
 ## Programme
 
