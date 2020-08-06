@@ -1,5 +1,5 @@
 ---
-title: 'Résumé'
+title: 'NSI Terminale Récursivité - résumé'
 author: 'qkzk'
 date: 2020/06/22
 weight: 100
