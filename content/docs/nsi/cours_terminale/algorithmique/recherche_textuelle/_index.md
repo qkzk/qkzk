@@ -8,6 +8,8 @@ weight: 3
 
 ### les pdf [format imprimable](/uploads/docnsitale/algo/recherche_textuelle/cours_td_recherche_textuelle-print.pdf) et [diaporama](/uploads/docnsitale/algo/recherche_textuelle/cours_td_recherche_textuelle-beamer.pdf).
 
+### Le [résumé](resume)
+
 # Recherche textuelle
 
 ## Pourquoi parler de recherche textuelle ?
