@@ -33,7 +33,7 @@ weight: 3
 
 Observer l'arborescence suivante :
 
-$\;$![tree](/uploads/docsnsi/architecture/linux/tree.jpg/tree.jpg)
+$\;$![tree](/uploads/docsnsi/architecture/linux/tree.jpg)
 
 1. Proposer une commande qui permette de se déplacer du répertoire HOME de 
     Alice à celui de Bob :
