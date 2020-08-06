@@ -8,6 +8,7 @@ weight: 2
 
 1. [processus, système de fichiers, shell](processus)
 2. [condition de compétition](race_condition)
+3. [résumé](resume)
 
 
 
