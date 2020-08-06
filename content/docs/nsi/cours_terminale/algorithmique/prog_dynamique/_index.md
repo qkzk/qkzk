@@ -7,3 +7,4 @@ weight: 2
 
 1. [Cours](cours)
 2. [td](td)
+3. [resumé](resume)
