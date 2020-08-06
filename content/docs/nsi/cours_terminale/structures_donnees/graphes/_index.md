@@ -17,6 +17,7 @@ Pour des raisons techniques vous devrez vous contenter des pdf.
 * [TD : les bases](/uploads/docnsitale/graphes/3_td_bases.pdf)
 * [TD : deux cas d'étude](/uploads/docnsitale/graphes/4_td_etude.pdf)
 * [cours : algorithmes sur les graphes](/uploads/docnsitale/graphes/6_cours_algos_graphes.pdf)
+* [resumé](/uploads/docnsitale/graphes/graphe_resume.pdf)
 
 Dans cette partie, il y a aussi un TP "classique" et deux TP sur colab.
 
