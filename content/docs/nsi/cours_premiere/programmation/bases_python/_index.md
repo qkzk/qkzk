@@ -8,6 +8,9 @@ weight: 2
 
 # Les bases de Python
 
+
+### pdf : pour [impression](/uploads/docsnsi/programmation/bases/python_complet.pdf)
+
 # 1. Bloc d'instruction
 
 En Python chaque ligne donne une **instruction**. Pour séparer certains blocs (
