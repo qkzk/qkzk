@@ -1,6 +1,5 @@
 ---
-title: NSI première - IHM sur le web
-subtitle: 'HTML et CSS : cours'
+title: 'HTML et CSS : cours'
 theme: metropolis
 weight: 3
 papersize: a4

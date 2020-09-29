@@ -42,51 +42,51 @@ liste en tant que structure de données.
 
 ## Obtenir une définition formelle
 
-Prenons une liste comme par exemple $`\ell_1 = [3, 1, 4]`$.  C'est une liste à trois éléments (ou de longueur trois) dont le premier est $`3`$, le deuxième $`1`$, et le dernier $`4`$.
+Prenons une liste comme par exemple $\ell_1 = [3, 1, 4]$.  C'est une liste à trois éléments (ou de longueur trois) dont le premier est $3$, le deuxième $1$, et le dernier $4$.
 
 Une façon de décrire cette liste consiste à dire que
 
-* la liste $`\ell_1`$ possède un premier élément $`3`$ qu'on nommera élément de *tête*,
-* et que vient après cet élément de tête la liste $`\ell_2 = [1, 4]`$ des éléments qui suivent,
+* la liste $\ell_1$ possède un premier élément $3$ qu'on nommera élément de *tête*,
+* et que vient après cet élément de tête la liste $\ell_2 = [1, 4]$ des éléments qui suivent,
   liste qu'on nommera *reste*.
 
 ##
 
-Ce qu'on vient de dire de la liste $`\ell_1`$ peut être répété pour la liste $`\ell_2`$ qui est donc constituée :
+Ce qu'on vient de dire de la liste $\ell_1$ peut être répété pour la liste $\ell_2$ qui est donc constituée :
 
-* d'un élément de *tête* : $`1`$,
-* et d'un *reste* : $`\ell_3 = [4]`$.
+* d'un élément de *tête* : $1$,
+* et d'un *reste* : $\ell_3 = [4]$.
 
-À nouveau on peut répéter le même discours pour la liste $`\ell_3`$ qui est donc constituée :
+À nouveau on peut répéter le même discours pour la liste $\ell_3$ qui est donc constituée :
 
-* d'un élément de *tête* : $`4`$,
-* et d'un *reste* : $`\ell_4 = []`$.
+* d'un élément de *tête* : $4$,
+* et d'un *reste* : $\ell_4 = []$.
 
-La liste $`\ell_4`$ étant vide, elle ne possède pas d'élément de tête, et ne peut donc pas être décomposée comme nous venons de le faire à trois reprises.
-
-
-##
-
-Si on convient d'utiliser la notation $`(x,\ell)`$ pour désigner le couple constitué de
-l'élément $`x`$ de tête, et du reste $`\ell`$ d'une liste, on peut alors écrire :
-
-
-$$`\ell_1 = (3, (1, (4, [\;])))`$$
+La liste $\ell_4$ étant vide, elle ne possède pas d'élément de tête, et ne peut donc pas être décomposée comme nous venons de le faire à trois reprises.
 
 
 ##
 
-Ce qui vient d'être fait pour la  liste $`\ell_1`$ peut être reproduit pour n'importe quelle liste.
+Si on convient d'utiliser la notation $(x,\ell)$ pour désigner le couple constitué de
+l'élément $x$ de tête, et du reste $\ell$ d'une liste, on peut alors écrire :
+
+
+$$\ell_1 = (3, (1, (4, [\;])))$$
+
+
+##
+
+Ce qui vient d'être fait pour la  liste $\ell_1$ peut être reproduit pour n'importe quelle liste.
 
 On peut conclure cette approche en donnant une définition abstraite et formelle
-des listes d'éléments appartenant tous à un ensemble $`E`$.
+des listes d'éléments appartenant tous à un ensemble $E$.
 
 
-   Une *liste* d'éléments d'un ensemble $`E`$ est
+   Une *liste* d'éléments d'un ensemble $E$ est
 
    * soit la liste vide
-   * soit un couple $`(x,\ell)`$ constitué d'un élément $`x\in E`$
-     et d'une liste $`\ell`$ d'éléments de $`E`$.
+   * soit un couple $(x,\ell)$ constitué d'un élément $x\in E$
+     et d'une liste $\ell$ d'éléments de $E$.
 
 Les listes peuvent donc être vues comme _des structures de données récursives_.
 
