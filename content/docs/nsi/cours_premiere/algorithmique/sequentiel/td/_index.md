@@ -7,6 +7,8 @@ weight: 1
 
 ---
 
+### pdf : [pour impression](/uploads/docsnsi/algo/sequentiel/td_parcours_sequentiel.pdf)
+
 # Se tester
 
 ## 1. Appartenance
