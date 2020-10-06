@@ -146,6 +146,14 @@ comme approfondissement.
 
 Les [sources](/uploads/docnsitale/dictionnaire/code/dictionnaire_hash.py)
 
+### 4. Le type `dict`
+
+Python propose le type `dict` qui implémante tout ce qu'on peut attendre
+d'une table de hachage. Il utilise la fonction native `hash` qui accepte
+en paramètre tout objet non mutable et renvoie un entier.
+
+[Ici](/uploads/docnsitale/dictionnaire/code/dict_python.py) un petit rappel de la syntaxe.
+
 # Compléments (hors programme) sur les fonctions de hachage
 
 ## 1. Fonction de hachage
