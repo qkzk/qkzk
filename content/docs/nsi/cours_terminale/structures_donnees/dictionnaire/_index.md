@@ -282,7 +282,7 @@ efficacement, le calcul inverse d'une donnée d'entrée ayant pour image une
 certaine valeur se révèle impossible sur le plan pratique. Pour cette raison,
 on dit d'une telle fonction qu'elle est à sens unique.
 
-![hash crypto](uploads/docnsitale/dictionnaire/img/hash_crypto.png)
+![hash crypto](/uploads/docnsitale/dictionnaire/img/hash_crypto.png)
 
 Une fonction de hachage cryptographique idéale possède les quatre propriétés suivantes :
 
