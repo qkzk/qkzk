@@ -5,7 +5,7 @@ weight: 1
 
 ---
 
-### pdf [présentation](/uploads/docsnsi/algo/dicho/dicho_exemple-Article.pdf) et [slides](/uploads/docsnsi/algo/dicho/dicho_exemple.pdf)
+### pdf [présentation](/uploads/docsnsi/algo/dicho/dicho_exemple-Article.pdf) et [slides](/uploads/docsnsi/algo/dicho/dicho_exemple-Beamer.pdf)
 
 # Recherche dichotomique dans un tableau
 
@@ -91,21 +91,20 @@ weight: 1
 
 ## L'algorithme
 
-~~~python
+```python
 rechercheDicho(liste, clé)
   bas = 0
   haut = longueur(liste) - 1
   Tant que (bas < haut) :
-    med = (bas + haut) // 2
-    si clé == liste[med]:
-      bas = med ;
-      haut = med
-    Sinon :
-      si clé > liste[med] {bas = med + 1}
+      med = (bas + haut) // 2
+      si clé == liste[med]:
+          bas = med
+          haut = med
+      sinon si clé > liste[med]: bas = med + 1
       sinon: haut = med - 1
   si cle == liste[bas]: renvoyer Vrai
   sinon: renvoyer Faux
-~~~
+```
 
 ## Même exemple, avec les variables
 
