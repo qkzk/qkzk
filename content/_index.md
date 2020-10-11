@@ -3,6 +3,7 @@ title: accueil
 author: qkzk
 date: 2016-07-01 12:14:12+00:00
 draft: false
+type: page
 weight: 1
 
 ---
