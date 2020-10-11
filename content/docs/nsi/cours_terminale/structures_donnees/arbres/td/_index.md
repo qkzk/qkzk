@@ -1,7 +1,8 @@
 ---
-title: "Travaux dirigés : arbres binaires"
+title: "Arbres - TD 1"
 date: novembre-décembre 2019
 weight: 1
+
 ---
 
 

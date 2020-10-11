@@ -1,6 +1,7 @@
 ---
-title: Arbres binaires, résumé
-weight: 2
+title: Arbres - résumé
+weight: 100
+
 ---
 
 ### pdf: [pour impression](/uploads/docnsitale/arbres/cours_resume_print.pdf)

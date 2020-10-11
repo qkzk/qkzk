@@ -1,8 +1,7 @@
 ---
-title: "Arbres : TD 2"
+title: "Arbres - TD 2"
 author: "qkzk"
-theme: metropolis
-weight: 100
+weight: 3
 
 ---
 
