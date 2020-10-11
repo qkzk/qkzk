@@ -4,7 +4,10 @@ weight: 7
 ---
 
 
-## pdf pour [impression](/uploads/docsnsi/donnees_qkzk_img/types_complexes-Article.pdf) et [diaporama](/uploads/docsnsi/donnees_qkzk_img/type_complexes-Beamer.pdf)
+## pdf 
+
+* cours pour [impression](/uploads/docsnsi/donnees_qkzk_img/types_complexes-Article.pdf) et [diaporama](/uploads/docsnsi/donnees_qkzk_img/type_complexes-Beamer.pdf)
+* TD pour [impression](/uploads/docsnsi/donnees_qkzk_img/td_types_construits.pdf)
 
 
 
