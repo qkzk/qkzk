@@ -10,6 +10,7 @@ weight: 1
 1. le [tp](tp)
 2. le [cours](cours)
 3. le [résumé](resume)
+4. un court énoncé de [TD](td)
 
 
 ## Programme
