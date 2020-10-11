@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+{{- partial "docs/shared" -}}
+<html lang="{{ .Site.Language.Lang }}">
+
+<head>
+    <meta http-equiv="refresh" content="0; URL=/docs" />
+  {{ partial "docs/html-head" . }}
+  {{ partial "docs/inject/head" . }}
+</head>
+{{ $content := `
+# qkzk
+
+## [Les documents](/docs)
+` }}
+<body>
+  <main class="flex justify-center">
+    <div class="book-home markdown">
+      {{ replace $content "&#96;" "`" | markdownify }}
+    </div>
+  </main>
+
+  {{ partial "docs/inject/body" . }}
+  {{ template "_internal/google_analytics_async.html" . }}
+</body>
+
+</html>
