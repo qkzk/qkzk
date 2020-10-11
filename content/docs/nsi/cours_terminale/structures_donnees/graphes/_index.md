@@ -17,6 +17,7 @@ Pour des raisons techniques vous devrez vous contenter des pdf.
 * [TD : les bases](/uploads/docnsitale/graphes/3_td_bases.pdf)
 * [TD : autres exercices basiques](/uploads/docnsitale/graphes/9_td_basique.pdf)
 * [TD : deux cas d'étude](/uploads/docnsitale/graphes/4_td_etude.pdf)
+* [TD : parcourir arbres et graphes](/uploads/docnsitale/graphes/10_td_algos.pdf)
 * [cours : algorithmes sur les graphes](/uploads/docnsitale/graphes/6_cours_algos_graphes.pdf)
 * [resumé](/uploads/docnsitale/graphes/graphe_resume.pdf)
 
