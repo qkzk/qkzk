@@ -7,9 +7,10 @@ weight: 1
 
 # Routage
 
-## Le cours
+## Les documents
 
-[ici](cours)
+* [cours](cours)
+* [td](td)
 
 ## Programme
 
