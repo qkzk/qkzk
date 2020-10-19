@@ -189,7 +189,7 @@ moderne) pour établir une connexion avec un serveur web :
 
 ~~~python
 >>> import requests # librairie qui gère les connexion HTTP
->>> reponse = requests.get("http://qkzk.xyz")
+>>> reponse = requests.get("https://qkzk.xyz")
 >>> # on établi une connexion avec mon site
 >>> reponse
 <Response [200]>
