@@ -257,3 +257,12 @@ successivement : `https://google.com` et `https://google.com/azeaze`
 4. Mesurez la longueur du contenu de la réponse dans les deux cas.
 
     Comment expliquer cette différence ?
+
+## À faire vous même 2
+
+En utilisant [httppie](https://httpie.org) qui s'installe sur votre clé avec
+`$ sudo apt install httpie` (si ça ne fonctionne pas, utiliser "run" sur leur site) :
+
+1. Faire une requête `GET` sur l'accueil de mon site
+2. Essayer une requête `POST` avec la clé "bonjour" et la valeur "NSI". Qu'obtient-on ?
+
