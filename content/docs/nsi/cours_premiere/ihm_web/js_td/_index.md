@@ -71,7 +71,7 @@ Voici quelques éléments de comparaison entre Python et Javascript :
 
 
     nom = "Duchmol"
-    prenom = "Robert"       # Deuxième prénom Aldo
+    prenom = "Raoul"       # Deuxième prénom Aldo
     taille_robert = 1.8
     masse_robert = 280
     imc_robert = calculer_imc(taille_robert, masse_robert)
@@ -136,7 +136,7 @@ remplacé.
     "Mes films préférés".
 3. On a oublié de remplir la liste des films préférés. En utilisant le même
     procédé, ajouter la liste des trois films préférés de
-    Robert (Rambo 1, Rambo 2, Rambo 3) :
+    Raoul (Rambo 1, Rambo 2, Rambo 3) :
 
     a. À la main directement dans le code html,
     b. Un par un en JavaScript
@@ -182,7 +182,7 @@ function myFunction() {
 
     1. Un paragraphe vide,
     2. Un bouton dont le clic déclenche l'appel à une fonction,
-    3. Cette fonction affiche la date de naissance de Robert : le premier
+    3. Cette fonction affiche la date de naissance de Raoul : le premier
         janvier 1964.
 2. Modifier la fonction précédente pour qu'elle efface tout le contenu de la
     page.
