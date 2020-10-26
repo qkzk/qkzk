@@ -1,7 +1,7 @@
 ---
 title: 'TD : JavaScript'
 author: qkzk
-weight: 3
+weight: 10
 
 ---
 

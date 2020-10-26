@@ -1,8 +1,9 @@
 ---
-title: Formulaire d'une page web
+title: "TP : Formulaire d'une page web"
 author: David Roche
 theme: metropolis
-weight: 7
+weight: 17
+
 ---
 
 pdf : [pour impression](/uploads/docsnsi/ihm_web/nsi_prem_flask_print.pdf)

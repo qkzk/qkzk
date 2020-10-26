@@ -1,8 +1,8 @@
 ---
-title: Modèle Client-Server
+title: "cours : Modèle Client-Server"
 author: David Roche
 theme: metropolis
-weight: 5
+weight: 4
 ---
 
 pdf : [pour impression](/uploads/docsnsi/ihm_web/nsi_prem_clsv_print.pdf)

@@ -1,8 +1,8 @@
 ---
-title: 'HTML et CSS : les bases'
+title: 'TP : HTML et CSS'
 author: David Roche
 theme: metropolis
-weight: 3
+weight: 12
 ---
 
 pdf : [pour impression](/uploads/docsnsi/ihm_web/nsi_prem_html_css_print.pdf)

@@ -1,8 +1,8 @@
 ---
-title: Utilisation de JavaScript
+title: "TP : JavaScript"
 author: David Roche
 theme: metropolis
-weight: 4
+weight: 14
 ---
 
 pdf : [pour impression](/uploads/docsnsi/ihm_web/nsi_prem_js_print.pdf)

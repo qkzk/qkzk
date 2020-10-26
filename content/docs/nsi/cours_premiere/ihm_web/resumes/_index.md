@@ -1,5 +1,5 @@
 ---
-title: Résumés du chapitre IHM sur le Web
+title: Résumés IHM sur le Web
 author: qkzk
 theme: metropolis
 weight: 100

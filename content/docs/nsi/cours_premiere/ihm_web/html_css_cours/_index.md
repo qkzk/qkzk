@@ -1,5 +1,5 @@
 ---
-title: 'HTML et CSS : cours'
+title: 'cours: HTML et CSS'
 theme: metropolis
 weight: 3
 papersize: a4

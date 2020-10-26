@@ -1,8 +1,9 @@
 ---
-title: Protocole HTTP
+title: "TP : Protocole HTTP"
 author: David Roche
 theme: metropolis
-weight: 6
+weight: 16
+
 ---
 
 pdf : [pour impression](/uploads/docsnsi/ihm_web/nsi_prem_http_print.pdf)

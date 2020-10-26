@@ -1,7 +1,7 @@
 ---
-  title: 'Mini projet CSS'
+  title: 'Projet : CSS'
   author: qkzk
-  weight: 3
+  weight: 23
 ---
 
 pdf : [pour impression](/uploads/docsnsi/ihm_web/nsi_prem_projet_css_print.pdf)
