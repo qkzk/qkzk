@@ -1,5 +1,5 @@
 ---
-title: "Structure imbriquées et compréhension"
+title: "Cours : tableaux 2D et compréhension"
 author: "qkzk"
 date: "2020/11/22"
 weight: 1
