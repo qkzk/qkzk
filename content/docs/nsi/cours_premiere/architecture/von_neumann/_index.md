@@ -16,8 +16,8 @@ Il propose en 1944 un modèle _d'architecture_ novateur qui sert toujours de bas
 
 ### ![Modèle original](/uploads/docsnsi/architecture/img/modele-originel2.gif)
 
-* **Unité de commande** : contrôle la séquence d'instruction
-* **Unité arithmétique** : exécution de ces instruction
+* **Unité de commande** : contrôle la séquence d'instructions
+* **Unité arithmétique** : exécution de ces instructions
 * **Processeur** : réalise les calculs
 * **Mémoire** : contient les données et **les programmes**
 * **Entrées** : clavier, cartes perforées, etc.
@@ -153,8 +153,8 @@ Les machines sont encore colossales !
 ### ![Modèle original](/uploads/docsnsi/architecture/img/modele-originel2.gif)
 
 * **Processeur** : composé de deux unités
-* **Unité de commande** : contrôle la séquence d'instruction
-* **Unité arithmétique** : exécution de ces instruction
+* **Unité de commande** : contrôle la séquence d'instructions
+* **Unité arithmétique** : exécution de ces instructions
 * **Mémoire** : contient les données et **les programmes**
 * **Entrées** : clavier, cartes perforées, etc.
 * **Sorties** : affichages, imprimantes, écran

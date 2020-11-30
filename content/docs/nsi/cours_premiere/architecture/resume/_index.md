@@ -5,13 +5,15 @@ theme: metropolis
 weight: 100000
 ---
 
+PDF : [pour impression](/uploads/docsnsi/architecture/resume/0_resume.pdf)
+
 ## Modèle de Von Neumann
 
 
 ### ![Modèle original](/uploads/docsnsi/architecture/img/modele-originel2.gif)
 
-* **Unité de commande** : contrôle la séquence d'instruction
-* **Unité arithmétique** : exécution de ces instruction
+* **Unité de commande** : contrôle la séquence d'instructions
+* **Unité arithmétique** : exécution de ces instructions
 * **Processeur** : réalise les calculs
 * **Mémoire** : contient les données et **les programmes**
 * **Entrées** : clavier, cartes perforées, etc.
