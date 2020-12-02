@@ -1,5 +1,5 @@
 ---
-title: '3. TP : importer, exporter, trier'
+title: '6. TP : fusion et tris. Mini projet "TP randonnée"'
 author: 'qkzk'
 date: '2020/07/31'
 weight: 6
@@ -8,7 +8,7 @@ weight: 6
 
 ### pdf : [pour impression](/uploads/docsnsi/table_csv/6_tp.pdf)
 
-# Exerice 1 : Fusion et tri de tables
+# Exercice 1 : Fusion et tri de tables
 
 Il est possible de fusionner 2 tableaux de données qui ont une colonne commune :
 
