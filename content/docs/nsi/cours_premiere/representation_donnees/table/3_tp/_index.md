@@ -21,8 +21,8 @@ weight: 3
 ## 1. Importer
 
 
-1. Exécuter le code suivant afin de télécharger le fichier csv
-    [utilisateurs](/uploads/docsnsi/table_csv/utilisateurs.csv).
+1. Téléchargez le fichier csv suivant : [utilisateurs](/uploads/docsnsi/table_csv/utilisateurs.csv).
+    Créer un script python dans votre dossier de travail et déplacez le fichier csv précédent dans le même dossier.
 2. Créer une fonction Python permettant d'importer le fichier dans une table.
     La table renvoyée est une liste de dictionnaires Python.
 
