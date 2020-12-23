@@ -19,4 +19,6 @@ d’énergie, contrôleurs vidéo, accélérateur graphique, réseaux sur puce, 
 
 ## Cours
 
-Le [cours](cours)
+* Le [cours](cours)
+* Le [TD](td)
+
