@@ -1,11 +1,14 @@
 ---
-subtitle: "TD - Composants et systèmes sur puce"
+title: "NSI - Terminale - Architecture"
+subtitle: "Composants et systèmes sur puce"
 author: "qkzk"
 date: "2020/12/23"
+theme: metropolis
+geometry: margin=1.5cm
 
 ---
 
-### PDF : [pour impression](/uploads/docnsitale/composants/td_soc.pdf)
+### pdf : [pour impression](/uploads/docnsitale/composants/td_soc.pdf)
 
 # Travaux dirigés
 
@@ -187,6 +190,21 @@ le concernant_
         mobiles qui se compilent avec le même code sur Android et sur iPhone.
         Citez-en un.
 
+## Votre smartphone
+
+Votre smartphone comporte aussi un SoC.
+
+1. * Sur android installez l'application [CPU-Z](https://play.google.com/store/apps/details?id=com.cpuid.cpu_z&hl=fr&gl=US)
+    * Sur iPhone, installez l'application [AIDA64](https://apps.apple.com/fr/app/aida64/id979579523) _pas testée malheureusement..._
+2. Déterminez les caractéristiques principales de votre téléphone :
+
+    * processeur,
+    * quantité de ram,
+    * révision du système d'exploitation et version du noyau (si disponible),
+    * capteurs physique (faire une petite liste en regroupant)
+    * résolution de l'écran, densité de pixels,
+    * Votre smartphone dispose d'un gyroscope électronique. À quoi sert-il ?
+    * capacité et voltage de la batterie. Selon l'application, dans quel état est-elle ?
 
 ***
 

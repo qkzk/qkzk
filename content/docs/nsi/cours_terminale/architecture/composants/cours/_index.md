@@ -1,10 +1,14 @@
 ---
-title: "Composants"
-weight: 1
+title: "Terminale NSI - Architecture"
+subtitle: "Composants et systèmes sur puce"
+author: "qkzk"
+date: "2020/07/08"
+theme: metropolis
+geometry: margin=1.5cm
 
 ---
 
-pdf : pour [impression](/uploads/docnsitale/composants/composants_socs.pdf)
+### pdf : [pour impression](/uploads/docnsitale/composants/composants_socs.pdf)
 
 # Composants et systèmes sur puce
 
@@ -40,8 +44,7 @@ tout programme est une suite d'opérations simples qui ont toutes la même forme
 3. le calcul de l'opération élémentaire est effectué
 4. le résultat de l'opération est stocké en mémoire
 
-![cpu_ram](/uploads/docnsitale/composants/cpu_ram.svg)
-
+$\;$![cpu_ram](cpu_ram.svg)
 
 ### Les microprocesseurs
 
@@ -168,3 +171,12 @@ Les avantages des systèmes sur puce sont nombreux :
     d'innovation.
 * L'**adaptation au besoin** est affinée : la spécificité de chaque système
     permet une efficacité optimale.
+
+Les inconvénients existent aussi :
+
+* en concentrant nombre de composants sur une seule puce, on rend la maintenance
+    beaucoup plus difficile. Il est quasi impossible de remplacer un SoC
+    soi-même. Généralement, une panne oblige à remplacer toute la carte mère,
+* les SoC sont complexes et nécessitent une grande technicité pour assembler
+    une machine. Contrairement aux PC où les composants sont interchangeables
+    et les améliorations possibles.
