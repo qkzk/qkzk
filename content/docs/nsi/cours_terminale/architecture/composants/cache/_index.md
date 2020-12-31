@@ -1,9 +1,9 @@
 ---
-title: "Mémoire cache"
+title: "complément : Mémoire cache"
 author: "Nicolas FRANCOIS"
 date: "2020/12/25"
 theme: metropolis
-geometry: margin=1.5cm
+weight: 100
 
 ---
 

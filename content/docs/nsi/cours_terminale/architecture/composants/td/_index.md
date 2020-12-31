@@ -1,10 +1,8 @@
 ---
-title: "NSI - Terminale - Architecture"
-subtitle: "Composants et systèmes sur puce"
+title: "TD"
 author: "qkzk"
 date: "2020/12/23"
-theme: metropolis
-geometry: margin=1.5cm
+weight: 10
 
 ---
 
