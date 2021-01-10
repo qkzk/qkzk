@@ -15,3 +15,4 @@ weight: 10
 4. [Cours](4_cours)
 5. [Travaux dirigés](5_td)
 6. [Travaux pratiques](6_tp)
+7. [Rappels](7_revisions_pays)
