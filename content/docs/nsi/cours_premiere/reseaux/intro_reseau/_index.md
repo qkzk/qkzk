@@ -2,9 +2,10 @@
 title: Introduction au réseau
 author: David Roche
 weight: 1
+
 ---
 
-### pdf : [pour impression](/uploads/docsnsi/reseau/nsi_prem_intro_reseau.pdf)
+### pdf : [ce document pour impression](/uploads/docsnsi/reseau/nsi_prem_intro_reseau.pdf) - [fiche de revision](/uploads/docsnsi/reseau/15_intro_reseau.pdf)
 
 
 Il est possible de faire communiquer deux ordinateurs en les reliant par

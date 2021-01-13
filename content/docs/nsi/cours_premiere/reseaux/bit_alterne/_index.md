@@ -5,7 +5,7 @@ weight: 4
 ---
 
 
-### pdf : [pour impression](/uploads/docsnsi/reseau/nsi_prem_bit_alt.pdf)
+### pdf : [ce document, pour impression](/uploads/docsnsi/reseau/nsi_prem_bit_alt.pdf) - [fiche de révision](/uploads/docsnsi/reseau/18_Protocole_du_bit_alterne.pdf)
 
 
 Nous avons vu que le protocole TCP propose un mécanisme d'accusé de

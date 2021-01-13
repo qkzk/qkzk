@@ -4,7 +4,7 @@ author: David Roche
 weight: 2
 ---
 
-### pdf : [pour impression](/uploads/docsnsi/reseau/nsi_prem_tcpip.pdf)
+### pdf : [ce document, pour impression](/uploads/docsnsi/reseau/nsi_prem_tcpip.pdf) - [fiche de révision](/uploads/docsnsi/reseau/16_protocoles_tcp_ip.pdf)
 
 Pour communiquer ensemble, 2 ordinateurs en réseau doivent utiliser des
 règles communes, l'ensemble de ces règles qui permettent à 2

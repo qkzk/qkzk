@@ -5,7 +5,7 @@ weight: 3
 ---
 
 
-### pdf : [pour impression](/uploads/docsnsi/reseau/nsi_prem_modele_tcpip.pdf)
+### pdf : [ce document, pour impression](/uploads/docsnsi/reseau/nsi_prem_modele_tcpip.pdf) - [fiche de révision](/uploads/docsnsi/reseau/17_modele_tcp_ip.pdf)
 
 
 
