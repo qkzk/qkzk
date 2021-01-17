@@ -89,7 +89,6 @@ Ces deux éléments prouvent que :
 
 ---
 
-# A EFFACER QUAND TOUT EST PRET
 
 ## Tri par sélection
 
@@ -103,46 +102,3 @@ tri_selection(tableau t, entier n)
         échanger t[i] et t[min]
     fin pour
 ```
-
-## Tri sélection à la main 1.
-
-```
-tableau = [1, 3, 4, 2]
-Boucle (i allant de 1 à 3)
-  i = 1
-  min = 1
-  Boucle (j allant de 2 à 4)
-    j = 2 t[min] = 1 < t[2] = 3. Pas d'échange
-    j = 3 t[min] = 1 < t[3] = 4. Pas d'échange
-    j = 4 t[min] = 1 < t[4] = 2. Pas d'échange
-  Fin boucle
-  rien à faire
-```
-
-
-## Tri sélection à la main 2.
-
-```
-  i = 2
-  min = 2
-  Boucle (j allant de 3 à 4)
-    j = 3 t[min] = 3 < t[3] = 4. Pas d'échange
-    j = 3 t[min] = 3 > t[4] = 2. On échange : min = 4
-  Fin boucle
-  min a changé, on échange dans le tableau :
-  tableau = [1, 2, 4, 3]
-```
-
-
-## Tri sélection à la main 3.
-
-```
-  i = 3
-  min = 3
-  Boucle (j allant de 4 à 4)
-    j = 4 t[min] = 4 > t[4] = 3. On échange : min = 4
-  Fin boucle
-  min a changé, on échange dans le tableau :
-  tableau = [1, 2, 3, 4]
-```
-
