@@ -8,6 +8,7 @@ weight: 1
 ---
 
 ### pdf : pour [impression](/uploads/docsnsi/algo/tris/tris_1.pdf)
+### animations (à regarder après avoir étudié le cours) [insertion](https://repl.it/@qkzk/animation-tri-insertion-pgzero) et [sélection](https://repl.it/@qkzk/animation-tri-selection-pgzero#main.py)
 
 ### Plan
 
