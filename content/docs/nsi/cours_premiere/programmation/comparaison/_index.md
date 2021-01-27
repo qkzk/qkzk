@@ -14,7 +14,7 @@ weight: 9
 
 # Exemples sur repl
 
-[ici](https://repl.it/repls/folder/Comparaisons%20de%20langages%2Fdiu_comparaison)
+[ici, pour moi](https://repl.it/repls/folder/Comparaisons%20de%20langages%2Fdiu_comparaison), en bas de la page pour vous.
 
 # Diversité et unité des langages de programmation
 
@@ -314,3 +314,25 @@ Pour l'exécuter on demande la preuve de `factorielle(5,Result).`, c'est-à-dire
 Result = 120
 ```
 Le moteur de résolution de Prolog répond, "*vrai pour l'instanciation Result=120*".
+
+## Liens repl pour exécuter les exemples directement dans le navigateur 
+
+### Langages impératifs :
+
+* [Python](https://repl.it/@konieczko/factpython)
+
+### Syntaxe "similaire" au C : `if condition { expression; }`
+
+* [JS oldschool](https://repl.it/@konieczko/factjsoldschool)
+* [JS ES6](https://repl.it/@konieczko/factjs)
+* [Java](https://repl.it/@konieczko/factjava)
+* [C](https://repl.it/@konieczko/factc)
+* [Golang](https://repl.it/@konieczko/factgo)
+* [rust](https://repl.it/@konieczko/factrust)
+
+# Langages fonctionnels
+
+* [Scheme](https://repl.it/@konieczko/factscheme)
+* [Haskell](https://repl.it/@konieczko/facthaskell)
+
+Malheureusement, Repl.it ne supporte pas encore Prolog...
