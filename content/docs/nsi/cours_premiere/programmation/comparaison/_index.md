@@ -315,9 +315,11 @@ Result = 120
 ```
 Le moteur de résolution de Prolog répond, "*vrai pour l'instanciation Result=120*".
 
-## Liens repl pour exécuter les exemples directement dans le navigateur 
+# Liens repl pour exécuter les exemples directement dans le navigateur 
 
-### Langages impératifs :
+## Langages impératifs :
+
+### Syntaxe particulière
 
 * [Python](https://repl.it/@konieczko/factpython)
 
@@ -330,7 +332,7 @@ Le moteur de résolution de Prolog répond, "*vrai pour l'instanciation Result=1
 * [Golang](https://repl.it/@konieczko/factgo)
 * [rust](https://repl.it/@konieczko/factrust)
 
-# Langages fonctionnels
+## Langages fonctionnels
 
 * [Scheme](https://repl.it/@konieczko/factscheme)
 * [Haskell](https://repl.it/@konieczko/facthaskell)
