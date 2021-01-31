@@ -23,6 +23,7 @@ weight: 2
 * [03 - Loi normale - cours](/uploads/maths/bts_aero_2/03-loi_normale_cours.pdf)
 * [03 - Loi normale - résumé et exos](/uploads/maths/bts_aero_2/03_loi_normale_exos_problemes.pdf)
 * [04 - Statistiques inférentielles - cours et exos](/uploads/maths/bts_aero_2/04-statistiques_inférentielles.pdf)
+* [04 - Statistiques inférentielles - diaporama](/uploads/maths/bts_aero_2/04-stats-infe-diapos.pdf)
 * [05 - Intégration par parties - cours](/uploads/maths/bts_aero_2/05-integration_par_parties.pdf)
 
 
