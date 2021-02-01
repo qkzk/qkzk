@@ -7,6 +7,8 @@ weight: 1
 
 ---
 
+### Mémento Python : [memento](https://perso.limsi.fr/pointal/_media/python:cours:mementopython3.pdf)
+
 # Découverte du Langage Python
 
 Les cours sont tous accessibles **DANS LES MENUS**, à partir de cette page.
