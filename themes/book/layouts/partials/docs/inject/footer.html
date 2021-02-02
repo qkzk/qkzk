@@ -1,15 +1,47 @@
+<link disabled id="dark-mode-theme" rel="stylesheet" href="{{ .Site.BaseURL }}dark.css">
 <div class="footer-qkzk">
   <h3 class="footer-title">
     NSI & ISN AU LYCÉE DES FLANDRES
   </h3>
   <p class="footer-text">
-    Tutoriels et activités des enseignements de NSI et d'ISN du Lycée des Flandres.
+    Tutoriels et activités des enseignements de NSI au Lycée des Flandres.
     <br>
     Retrouvez ici les projets proposés et les textes relatifs à l'examen
     <br>
-    RGPD. Aucune donnée n'est conservée. Il n'y a pas de base de donnée. Github impose deux cookies et je ne peux rien y faire. Si ça vous dérange, partez.
+    RGPD. Aucune donnée n'est conservée. Il n'y a pas de base de donnée. Github impose deux cookies et je ne peux rien y faire.
+  </p>
+  <p>
+  <a id="dark-mode-toggle" class="toggle_dark">Thème sombre</a>
   </p>
 
 </div>
 
 <script src="{{ "updatestyle.js" | relURL }}" charset="utf-8"></script>
+
+<script charset="utf-8">
+  var toggle = document.getElementById("dark-mode-toggle");
+  console.log(toggle);
+
+  var darkTheme = document.getElementById("dark-mode-theme");
+
+  toggle.addEventListener("click", () => {
+      if (toggle.className === "toggle_dark") {
+          setTheme("dark");
+      } else if (toggle.className === "toggle_light") {
+          setTheme("light");
+      }
+  });
+
+  function setTheme(mode) {
+      if (mode === "dark") {
+          darkTheme.disabled = false;
+          toggle.className = "toggle_light";
+          toggle.textContent = "Thème clair"
+      } else if (mode === "light") {
+          darkTheme.disabled = true;
+          toggle.className = "toggle_dark";
+          toggle.textContent = "Thème sombre"
+      }
+      console.log(mode);
+  }
+</script>
