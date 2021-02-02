@@ -1,4 +1,4 @@
-baseURL = "http://qkzk.xyz/"
+baseURL = "https://qkzk.xyz/"
 languageCode = "en-us"
 title = "qkzk"
 theme = "book"
