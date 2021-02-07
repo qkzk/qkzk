@@ -132,42 +132,43 @@ tables_
 
 # 4. Exemple de fonction effectuant une jointure
 
-* Voici une proposition de code
+Voici une proposition de code
 
-    ```{#numCode .python .numberLines}
-    from copy import deepcopy
-    def jointure(table1, table2, cle1, cle2=None):
-        if cle2 is None:
-            cle2 = cle1
-        new_table = []
-        for line1 in table1:
-            for line2 in table2:
-                if line1[cle1] == line2[cle2]:
-                    new_line = deepcopy(line1)
-                    for cle in line2:
-                        if cle != cle2:
-                            new_line[cle] = line2[cle]
-                    new_table.append(new_line)
-        return new_table
-    ```
 
-    * Ligne 3 : par défaut, les clés de jointure portent le même nom
-    * Ligne 5 : la future table créée, vide au départ
-    * Ligne 8 :  on ne considère que les lignes où les cellules de l'attribut
-        choisi sont identiques.
-    * Ligne 9 : on copie entièrement la ligne de `table1`
-    * Ligne 10 : on copie la ligne de `table2` sans répéter la cellule de 
-        jointure.
+```python
+from copy import deepcopy
+def jointure(table1, table2, cle1, cle2=None):
+    if cle2 is None:
+        cle2 = cle1
+    new_table = []
+    for line1 in table1:
+        for line2 in table2:
+            if line1[cle1] == line2[cle2]:
+                new_line = deepcopy(line1)
+                for cle in line2:
+                    if cle != cle2:
+                        new_line[cle] = line2[cle]
+                new_table.append(new_line)
+    return new_table
+```
 
-    **À noter :** _En terminale, vous découvrirez la gestion des bases de
-    données relationnelles, notamment à l'aide du langage SQL. Dans ce langage,
-    la jointure donnée en exemple s'écrira :_
+* Ligne 3 : par défaut, les clés de jointure portent le même nom
+* Ligne 5 : la future table créée, vide au départ
+* Ligne 8 :  on ne considère que les lignes où les cellules de l'attribut
+    choisi sont identiques.
+* Ligne 9 : on copie entièrement la ligne de `table1`
+* Ligne 10 : on copie la ligne de `table2` sans répéter la cellule de 
+    jointure.
 
-    ```sql
-    SELECT nom
-    FROM Table1 JOIN Table2
-    ON Table1.Nom = Table2.Nom
-    ```
+**À noter :** _En terminale, vous découvrirez la gestion des bases de
+données relationnelles, notamment à l'aide du langage SQL. Dans ce langage,
+la jointure donnée en exemple s'écrira :_
+
+```sql
+SELECT nom
+FROM Table1 JOIN Table2
+ON Table1.Nom = Table2.Nom
+```
 
 # 5. Domaine de valeur
 
