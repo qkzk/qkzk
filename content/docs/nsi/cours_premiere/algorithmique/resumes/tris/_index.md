@@ -7,8 +7,9 @@ author:
 - QK
 theme:
   metropolis
-weith:
+weigth:
   2
+
 ---
 
 ## Définition
@@ -38,22 +39,24 @@ En première : tri par **insertion** et tri par **sélection**.
 Python utilise **TimSort** qui est plus efficace et mieux implémenté que ce
 que nous ferons.
 
-~~~python
+```python
 >>> tableau = [4, 3, 1, 2]
->>> sorted(tableau) # renvoyer une version triée
+>>> sorted(tableau) # renvoie une copie triée
 [1, 2, 3, 4]
 >>> tableau # l'objet de départ N'EST PAS MODIFIÉ
 [4, 3, 1, 2]
->>> tableau.sort() # trier DANS l'objet, sans rien renvoyer
+>>> tableau.sort() # trie DANS l'objet, ne renvoie rien
 >>> tableau # l'objet de départ EST MODIFIE
 [1, 2, 3, 4]
-~~~
+```
 
 ## Tri par sélection
 
 ### Description
 
 On cherche à trier des boîtes. Tout ce qu'on peut faire c'est le comparer 1 à 1 et les échanger.
+
+### Pseudo code
 
 ```
 Je débute avec un alignement vide de boîtes triées
@@ -63,8 +66,7 @@ Tant qu'il y a des boîtes non triées :
 fin Tant que
 ```
 
-### Pseudo code
-
+Et pour la fonction `trouver la boite la plus légère` :
 
 ```
 Entrée : Des boîtes
@@ -82,7 +84,7 @@ Fin Pour
 
 ### Python
 
-~~~python
+```python
 def selection(tableau):
     '''
     tri par sélection d'un tableau.
@@ -98,7 +100,7 @@ def selection(tableau):
                 m = j
         tableau[m], tableau[i] = tableau[i], tableau[m]  # on echange
 
-~~~
+```
 
 
 
@@ -117,6 +119,7 @@ def selection(tableau):
 
 
 #### En français
+
 ```
     Je débute avec un alignement vide de boîtes triées
     Tant qu'il y a des boîtes non triées :
@@ -154,7 +157,7 @@ insère b à la droite de la boite courante
 
 ### Python
 
-~~~python
+```python
 def tri_insertion(tableau):
   '''
   tri par insertion d'un tableau.
@@ -162,14 +165,12 @@ def tri_insertion(tableau):
   @return: None
   @Effet de bord: modifie le tableau
   '''
-  i = 1
-  while i < len(tableau):
+  for i in range(1, len(tableau)):
     j = i
     while j > 0 and tableau[j-1] > tableau[j]:
       tableau[j-1], tableau[j] = tableau[j], tableau[j-1]
       j = j - 1
-    i = i + 1
-~~~
+```
 
 ## Propriétés communes des tris par insertion et sélection
 
@@ -185,7 +186,7 @@ Un _invariant de boucle_ est un propriété qui est vraie avant et après chaque
 
 Durant le tour n° `i` de la boucle extérieure :
 
-* les `i` premiers éléments de la boucle
+* les `i` premiers éléments du tableau sont triés.
 * le nombre d'élément à trier diminue de 1.
 
 Donc ces algorithmes _trient bien la liste_ et _ils s'arrêtent_.

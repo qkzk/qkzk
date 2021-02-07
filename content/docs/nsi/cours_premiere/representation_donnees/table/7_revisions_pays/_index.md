@@ -62,9 +62,9 @@ Voici un script Python permettant de travailler sur ce fichier :
 
 
 
-# Données en tables : rappels
 
- ```{#numCode .python .numberLines}
+
+```python
 import csv
 
 def charger(fichier: str, delimiter=';') -> list:
@@ -98,7 +98,7 @@ def project(table: list, liste_champs: list):
 def trier_critere(table: list, champ: str, reverse=False):
     '''renvoie une copie triée de la table selon un critère'''
     return sorted(table, key=lambda pays: pays[champ], reverse=reverse)
- ```
+```
 
 On exécute ce script en mode intéractif dans le dossier contenant le fichier
 `countries.csv`.
