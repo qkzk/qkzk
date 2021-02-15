@@ -35,6 +35,12 @@ pygmentscodefencesguesssyntax = true
     url = "/docs/ressources"
     weight = 3
 
+  [[menu.banner]]
+    identifier = "rust-python"
+    name = "rust-python"
+    url = "/python"
+    weight = 4
+
 [privacy]
   [privacy.disqus]
     disable = true
