@@ -33,3 +33,8 @@ sur des sujets inabordables.
 * [Sujet 17](/uploads/docsnsi/devoirs/Q17-SUJET.pdf) - [Corrigé 17](/uploads/docsnsi/devoirs/Q15-CORRIGE.pdf)
 * [Sujet 19](/uploads/docsnsi/devoirs/Q19-SUJET.pdf) - [Corrigé 19](/uploads/docsnsi/devoirs/Q15-CORRIGE.pdf)
 * [Sujet 20](/uploads/docsnsi/devoirs/Q20-SUJET.pdf) - [Corrigé 20](/uploads/docsnsi/devoirs/Q15-CORRIGE.pdf)
+
+# Exo type bac
+
+* [bac blanc 2020](/uploads/docsnsi/devoirs/exo_bb.pdf) et [corrige](/uploads/docsnsi/devoirs/exo_bb_corr.pdf)
+
