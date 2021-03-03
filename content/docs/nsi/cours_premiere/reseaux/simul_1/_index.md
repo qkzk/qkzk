@@ -57,3 +57,12 @@ Effectuez un "ipconfig" sur la machine "M1" afin de vérifier son
 adresse IP et de déterminer son adresse MAC (adresse physique)
 
 Effectuez un "ping" de la machine M2 vers la machine M4.
+
+#### À faire vous-même 2
+
+Visionner les vidéos "filius 2" à "filius 4" et reproduire les manipulations
+présentées.
+
+* [filius 2](https://www.youtube.com/watch?v=xyK6ThdQeR0)
+* [filius 3](https://www.youtube.com/watch?v=K3GGmiLwB6U)
+* [filius 4](https://www.youtube.com/watch?v=EZp_TLGVyv0)
