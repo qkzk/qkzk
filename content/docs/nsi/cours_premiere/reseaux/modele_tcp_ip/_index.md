@@ -107,7 +107,7 @@ appelle une couche :
 -   les trames Ethernet (ou Wifi) sont associées à la couche "Accès
     réseau"
 
-On présente souvent ces différentes couchent sur ce type de schéma :
+On présente souvent ces différentes couches sur ce type de schéma :
 
 ![](/uploads/docsnsi/reseau/img/nsi_prem_mod_tcpip_5.png)
 
