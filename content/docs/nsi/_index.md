@@ -6,6 +6,13 @@ draft: false
 weight: 1
 ---
 
+# Présentation de la NSI
+
+* [vidéo de présentation](https://www.youtube.com/watch?v=V_IIf5svHqQ)
+* Diaporama : [google slides](https://docs.google.com/presentation/d/1CBm63JEIcIvMcAVHODccfZmoJL3EJNBLYaGexLzu-UU/edit?usp=sharing) et [pdf](/uploads/docsnsi/pres_po/presentation_nsi_slides.pdf)
+
+
+
 # Numérique et sciences informatiques
 
 
