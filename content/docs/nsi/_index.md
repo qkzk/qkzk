@@ -4,9 +4,8 @@ author: qu3nt1n
 date: 2019-05-04 10:47:41+00:00
 draft: false
 weight: 1
+
 ---
-<iframe src="https://console.basthon.fr/?from=https://gist.githubusercontent.com/piotechno/8665247/raw/eee14ecd03de34b644d26a5c6fe8e7e9cbccc097/selection.py" width=100% height=600px></iframe>
-{{< gist spf13 7896402 >}}
 
 # Présentation de la NSI
 
