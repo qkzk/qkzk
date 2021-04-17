@@ -1,0 +1,31 @@
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  /* No cache busting here: should not change often and caching is not a real issue */
+  src: url(../font/open-sans/OpenSans-Regular.woff) format('woff');
+}
+
+@font-face {
+  font-family: 'Open Sans';
+  font-style: italic;
+  font-weight: 400;
+  /* No cache busting here: should not change often and caching is not a real issue */
+  src: url(../font/open-sans/OpenSans-Italic.woff) format('woff');
+}
+
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 600;
+  /* No cache busting here: should not change often and caching is not a real issue */
+  src: url(../font/open-sans/OpenSans-Bold.woff) format('woff');
+}
+
+@font-face {
+  font-family: 'Open Sans';
+  font-style: italic;
+  font-weight: 600;
+  /* No cache busting here: should not change often and caching is not a real issue */
+  src: url(../font/open-sans/OpenSans-BoldItalic.woff) format('woff');
+}
