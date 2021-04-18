@@ -1,0 +1,10 @@
+[class^="fa-"],
+[class*=" fa-"] {
+  display: inline-block;
+  width: 100%;
+}
+
+a i {
+  text-align: center;
+  font-size: 20px;
+}
