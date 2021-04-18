@@ -24,7 +24,7 @@ var toggler = document.getElementsByClassName("caret");
 
 // and we toggle their direct parent
 for (let i = 0; i < toggler.length; i++) {
-  toggler[i].addEventListener("click", function() {
+  toggler[i].addEventListener("click", function () {
     this.parentElement.querySelector(".nested").classList.toggle("active");
     this.classList.toggle("caret-down");
     // every 2 clicks the parent lost the class "caret", so we add it back here
@@ -35,7 +35,7 @@ for (let i = 0; i < toggler.length; i++) {
 
 window.onload = updateStyle
 
-function updateStyle(){
+function updateStyle() {
 
   // first we close every onpened caret and nest every active element
   var topNav = document.getElementById("myUL");
@@ -53,13 +53,13 @@ function updateStyle(){
   // previousNextLinks();
 }
 
-function styleMenuLinks(){
+function styleMenuLinks() {
 
   // open all parent details of active page
   // color all parent links
   let activeLinkNode = document.getElementsByClassName("active");
   let parentNode = activeLinkNode[0]
-  while (parentNode){
+  while (parentNode) {
     var nested = parentNode.querySelector(".nested")
     if (nested != null) {
       if (nested.contains(activeLinkNode[0])) {
@@ -67,14 +67,14 @@ function styleMenuLinks(){
         nested.classList.add("active");
       }
     }
-    if (parentNode.nodeName == "LI"){
+    if (parentNode.nodeName == "LI") {
       // open the SPAN
       var children = parentNode.children;
       // console.log(children);
       parentNode.setAttribute("class", "coucher");
-      for (var i = 0; i<children.length; i++){
+      for (var i = 0; i < children.length; i++) {
         // console.log(children[i].tagName);
-        if (children[i].tagName == "SPAN"){
+        if (children[i].tagName == "SPAN") {
           children[i].setAttribute("class", "caret-down");
           colorParentLinks(parentNode);
         }
@@ -92,7 +92,7 @@ function styleMenuLinks(){
 function nestChildren(element) {
   // close every opened caret, nest every active item
   var children = element.childNodes;
-  children.forEach(function(item){
+  children.forEach(function (item) {
     if (item.tagName == "UL") {
       item.removeAttribute("class", "active");
       item.setAttribute("class", "nested");
@@ -104,16 +104,16 @@ function nestChildren(element) {
   });
 }
 
-function colorParentLinks(parentNode){
+function colorParentLinks(parentNode) {
   // color the link of direct parents
 
   // color the links of parents
   let siblingsNodes = parentNode.childNodes;
   // console.log(siblingsNodes);
-  if (siblingsNodes.length > 0){
+  if (siblingsNodes.length > 0) {
     // console.log(siblingsNodes[1])
-    if (siblingsNodes[1]){
-      if (siblingsNodes[1].nodeName == "SPAN"){
+    if (siblingsNodes[1]) {
+      if (siblingsNodes[1].nodeName == "SPAN") {
         // console.log(siblingsNodes[1])
         let spanNode = siblingsNodes[1];
         spanNode.style.color = "#5555FF";
@@ -127,10 +127,10 @@ function colorParentLinks(parentNode){
   }
 }
 
-function setRandomBanner(){
+function setRandomBanner() {
   // banner img : change the banner
   let imgNumber = 5;
-  let nbr = Math.floor( imgNumber * Math.random() ) + 1;
+  let nbr = Math.floor(imgNumber * Math.random()) + 1;
   let imgName = '/banner/back' + nbr + '.jpg'
   document.getElementById("bannerImg").style.backgroundImage = 'url(' + imgName + ')';
   // console.log(imgName);
