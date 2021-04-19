@@ -1,7 +1,7 @@
 ---
-title: "Complément à deux - cours"
+title: "Complément à deux"
 author: "qkzk"
-weight: 4
+weight: 30
 date: 2020/07/25
 
 ---

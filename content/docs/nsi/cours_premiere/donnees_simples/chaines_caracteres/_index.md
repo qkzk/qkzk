@@ -1,7 +1,8 @@
 ---
 title:
 - Chaînes de caractères
-weight: 3
+weight: 6
+
 ---
 
 
@@ -149,12 +150,12 @@ On utilise les fonctions `chr` et `ord`
 
 ## -->
 
-~~~python
->>> chr(82)
-'R'
->>> ord('R')
-82
-~~~
+```python
+>>> chr(128520)
+'😈'
+>>> ord('😀')
+128512
+```
 
 ## Martine écrit en UTF-8
 

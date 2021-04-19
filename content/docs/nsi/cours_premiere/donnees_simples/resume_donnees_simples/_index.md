@@ -1,6 +1,7 @@
 ---
-title: "résumé : binaire, hexadécimal, booléen, complément à 2"
-weight: 13
+title: "résumé"
+weight: 100
+
 ---
 
 ## pdf pour [impression](/uploads/docsnsi/donnees_qkzk_img/binaire_hexa_booleen-Article.pdf)

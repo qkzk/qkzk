@@ -1,5 +1,5 @@
 ---
-title: "binaire, booléen, hexadécimal - cours"
+title: "binaire - cours"
 author: qkzk
 date: 2020/07/03
 weight: 1

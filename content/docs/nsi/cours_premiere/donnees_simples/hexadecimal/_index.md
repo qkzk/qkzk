@@ -1,7 +1,8 @@
 ---
 title:
-- Hexadécimal
-weight: 2
+- Hexadécimal : cours
+weight: 4
+
 ---
 
 ## pdf pour [impression](/uploads/docsnsi/donnees_qkzk_img/hexa_print.pdf) et [diaporama](/uploads/docsnsi/donnees_qkzk_img/hexa_slides.pdf)
