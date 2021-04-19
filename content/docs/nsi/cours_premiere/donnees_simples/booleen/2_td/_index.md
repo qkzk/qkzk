@@ -5,6 +5,8 @@ weight: 2
 
 ---
 
+### pdf : [pour impression](/uploads/docsnsi/booleens/booleen_cours.pdf)
+
 # Objectifs
 
 * Construire la table de vérité d'une expression booléenne relativement simple.
@@ -53,6 +55,18 @@ a != (b // 2)
 ```
 
 # Exercice 8
+
+insérer le minimum de parenthèses dans les expressions suivantes pour
+les égalités soient correctes
+
+```python
+2 + 3 * 5 + 4 == 21
+5 + 2 * 3 + 4 == 25
+4 + 5 * 2 + 3 == 29
+```
+
+
+# Exercice 9
 
 La clé de vérification utilisée en France pour les numéros de sécurité sociale
 est égal à 97 moins le résidu modulo 97 du nombre formé par les autres chiffres

@@ -5,6 +5,8 @@ weight: 1
 
 ---
 
+### pdf : [diaporama](/uploads/docsnsi/booleens/booleen_cours.pdf)
+
 # Booléen
 
 ## Booléen
