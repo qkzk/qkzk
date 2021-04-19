@@ -1,5 +1,5 @@
 ---
-title: "binaire : TD"
+title: "binaire - TD"
 author: qkzk
 weight: 2
 
