@@ -1,13 +1,11 @@
 ---
-title: "binaire - TD"
+title: "binaire : TD"
 author: qkzk
-date: 2020/07/03
 weight: 2
 
 ---
 
-### pdf: [pour impression](/uploads/docsnsi/donnees_qkzk_img/TD_binaire.pdf)
-
+### pdf : [pour impression](/uploads/docsnsi/donnees_qkzk_img/TD_binaire.pdf)
 
 ## 1. Nombres en binaires
 
@@ -20,39 +18,34 @@ weight: 2
     * `0b0101`
     * `0b00101`
 
+2. Comment savoir qu'un entier représenté en binaire est divisible par 2 ? Par 4 ?
+
 **Conversion décimal vers binaire.**
 
-2. En utilisant les division successives par 2, donner la représentation
+3. En utilisant les division successives par 2, donner la représentation
   binaire des nombres 14 et et 27.
 
-3. En utilisant les soustractions de puissances de 2, donner la représentation
+4. En utilisant les soustractions de puissances de 2, donner la représentation
   binaire des nombres 13 et 30.
 
-4. On considère des entiers représentés sur 1 octet. Quel est le plus grand
+5. On considère des entiers représentés sur 1 octet. Quel est le plus grand
     entier représentable ?
     Réaliser l'addition binaire entre $a = 0b1101 1001$ et $b = 0b1110 1100$.
 
     Qu'advient-il du premier bit lors de cette addition ?
+6. Quelle est la représentation binaire d'un nombre de la forme $2^k-1$ ?
+    De la forme $2^k$ ?
+7. En remarquant que $2~048=2^{11}$, donner la représentation binaire de $2021$.
 
+## 2. Capacité
 
+Parmi les additions suivantes, lesquelles vont provoquer un dépassement de
+capacité lorsque les nombres sont encodés sur 8 bits ?
 
-## 2. Booléens.
-
-1. On considère trois variable booléennes `a`, `b` et `c`.\
-    Construire les tables de vérité des expressions suivantes :
-    1. `a OU (NON b)`
-    2. `NON a et (b OU c)`
-    3. `(a et NON b) ou (NON a et b)`
-    4. `(a OU b) ET (a OU c)`
-1. On considère deux booléens `a` et `b`. 
-
-    1. Trouver une expression équivalente à
-      "`a ET b`" construite uniquement à partir des opérateurs `NON` et `OU`.
-
-    2. Construire la table de vérité de cette expression et comparer avec celle de
-        l'opérateur `ET`.
-
-
+* $1111~1011 + 1001~1111$
+* $1001~1011 + 0111~1011$
+* $0011~1011 + 1001~1001$
+* $1010~1011 + 0001~0100$
 
 ## 3. Masques de sous-réseau
 
@@ -87,11 +80,11 @@ Voici, par exemple, les portes ET et XOR :
 
 * porte `ET` :
 
-![porte ET](../img/porte-et.png){ width=150px }
+![porte ET](/uploads/docsnsi/donnees_qkzk_img/porte-et.png){ width=150px }
 
 * Porte `XOR` :
 
- ![porte XOR](../img/porte-xor.png){ width=150px }
+ ![porte XOR](/uploads/docsnsi/donnees_qkzk_img/porte-xor.png){ width=150px }
 
 _Rappel :_ tables de vérité des opérateurs `ET` et `XOR`:
 
@@ -127,7 +120,7 @@ du ET. Les portes peuvent être connectées entre elles pour réaliser des
 **circuits logiques** et on peut ainsi réaliser des calculs. Prenons l'exemple de ce circuit :
 
 
-![demi-additionneur](../img/demi-additionneur.png){width=300px}
+![demi-additionneur](.demi-additionneur.png){width=300px}
 
 Il est appelé *demi-additionneur* car il réalise l'addition de 2 bits
 (**A** et **B**), le résultats de cette somme est représentée par **S**
@@ -242,5 +235,4 @@ implémenter les changements de base.
         1. Proposer un moyen d'associer facilement un nombre à son chiffre.
         2. Utiliser l'algorithme des divisions successives pour écrire une fonction
             Python qui réalise la conversion dans une base quelconque.
-        
 
