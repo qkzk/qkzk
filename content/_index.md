@@ -11,7 +11,7 @@ weight: 1
 # Cours d'informatique au Lycée des Flandres
 
 
-Bienvenue sur le site consacré aux enseignements d'informatique que j'assure au Lycée des Flandres d'Hazebrouck : NSI, ISN et ICN.
+Bienvenue sur le site consacré aux enseignements que j'assure : spécialité NSI en lycée général et mathématiques.
 
 * Toutes les parties du sites sont accessibles depuis les menus situés à gauche.
 * Le contenu de chaque page s'affiche sur la droite.

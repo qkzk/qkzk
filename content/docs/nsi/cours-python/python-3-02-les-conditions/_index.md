@@ -325,7 +325,6 @@ Pour en faire un entier (du type  `int`) :
 poids = int(input("Combien...")
 ```
 
-Exemple :
 
 
 
