@@ -8,18 +8,15 @@ et algorithmes sur les graphes.
 
 ## Supports de cours
 
-Pour des raisons techniques vous devrez vous contenter des pdf.
 
-
-
-* [cours : introduction](/uploads/docnsitale/graphes/1_intro_print.pdf)
-* [cours : les bases](/uploads/docnsitale/graphes/2_cours_print.pdf)
-* [TD : les bases](/uploads/docnsitale/graphes/3_td_bases.pdf)
-* [TD : autres exercices basiques](/uploads/docnsitale/graphes/9_td_basique.pdf)
-* [TD : deux cas d'étude](/uploads/docnsitale/graphes/4_td_etude.pdf)
-* [TD : parcourir arbres et graphes](/uploads/docnsitale/graphes/10_td_algos.pdf)
-* [cours : algorithmes sur les graphes](/uploads/docnsitale/graphes/6_cours_algos_graphes.pdf)
-* [resumé](/uploads/docnsitale/graphes/graphe_resume.pdf)
+* [cours : introduction](intro)
+* [cours : La structure de données graphe](cours_sd)
+* [TD : les bases](td_1)
+* [TD : autres exercices basiques](td_2)
+* [TD : deux cas d'étude](td_3)
+* [TD : parcourir arbres et graphes](td_4)
+* [cours : algorithmes sur les graphes](cours_algo)
+* [resumé](resume)
 
 Dans cette partie, il y a aussi un TP "classique" et deux TP sur colab.
 
@@ -53,15 +50,3 @@ des exemples d’algorithme sur les graphes. L’exemple des graphes permet
 d’illustrer l’utilisation des classes en programmation.
 
 
----
-
-## Pourquoi seulement les pdf ?
-
-Dans chaque pdf de cette partie, les images de graphes sont généralement
-générées automatiquement à partir de leur description.
-
-À ma connaissance ce n'est pas possible sur mon site. La seule solution que j'ai
-trouvé est générer les images une par une pour les intégrer manuellement.
-
-C'est long et ça pose des soucis si je dois modifier un contenu.
-Pour l'instant, ce n'est pas prioritaire.
