@@ -10,6 +10,8 @@ weight: 3
 
 ### Le [résumé](resume)
 
+### [Animation des recherches présentées](http://fred.boissac.free.fr/AnimsJS/recherchetextuelle/index.html)
+
 # Recherche textuelle
 
 ## Pourquoi parler de recherche textuelle ?
