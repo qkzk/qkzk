@@ -198,7 +198,7 @@ Comprenez bien qu'un affichage ne sert qu'à l'utilisateur...
 >>> print("Hello", "Harry")
 Hello Harry
 >>> print("NSI", "number", 3 - 2)
-NSI number 
+NSI number 1
 ```
 
 Lors de l'affichage, ils sont d'abord évalués puis séparés par des espaces.
