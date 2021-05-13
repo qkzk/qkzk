@@ -311,3 +311,24 @@ est possible d'éviter en limitant leur quantité et les répétitions.
 * C'est assez pour qu'il rate sa cible.
 
 [Source](./img/http://ta.twi.tudelft.nl/nw/users/vuik/wi211/disasters.html)
+
+
+## Outils
+
+1. Obtenir la représentation interne d'un nombre à virgule flottante en Python :
+
+  ```python
+  import struct
+
+  def float_rep(num: float) -> str:
+      """
+      Renvoie les 64 bits de la représentation interne en précision double
+      s : signe     : 1 bit
+      e : exposant  : 11 bits
+      m : mantisse  : 52 bits
+      num = (-1)**s * 1,m * 2 ** (e - 1023)
+      """
+      return ''.join("{:08b}".format(elem) for elem in struct.pack('!d', num))
+  ```
+
+2. [floating point converter](https://www.exploringbinary.com/floating-point-converter/), un outil en ligne.
