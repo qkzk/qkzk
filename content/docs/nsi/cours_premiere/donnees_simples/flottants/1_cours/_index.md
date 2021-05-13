@@ -18,7 +18,7 @@ Comment le faire efficacement pour des nombres extrèmement proches de 0
 comme \
 `0,00000000000000000000000000000000000000000000000000000123` ou
 extrèmement grands comme\
-`8768678678687216381263816238612386,138716387168716871687138761278613` ?
+`87686786786872163812638162386123861387163871687168,78613` ?
 
 
 La réponse à ce premier problème est la notation scientifique : $2.3772 \times 10^{32}$
@@ -61,7 +61,7 @@ Les nombres sont alors appelés des *flottants* (*floats* en anglais)
 
 ## Notation positionnelle des décimaux
 
-Dans le système décimal on utilise les puissances de 10 avant et position des
+Dans le système décimal on utilise les puissances de 10 et la position des
 chiffres par rapport à la virgule indique la puissance correspondante :\
 Par exemple le nombre décimal 325,47 s'écrit
 
@@ -81,7 +81,7 @@ Par exemple : $4 + 2 + 1 + 1/2 + 1/8$ et s'écrit en dyadique :
 
 ```
 Position      4     2     1   virgule   1/2   1/4   1/8
-chiffres      1     1     0   .         1     0     1
+chiffres      1     1     1   .         1     0     1
 ```
 
 4 + 2 + 1 + 1/2 + 1/8 = 7.625
@@ -140,7 +140,7 @@ La machine procède de la même manière en base 2.
 ## Nombre dyadique
 
 Un **nombre dyadique** est s'écrit :
-$$\pm(\; 1,b1 \cdots bk\;)_2 \times 2^e$$
+$$\pm( 1,b1 \cdots bk)_2 \times 2^e$$
 
 où $b1,\ldots,bk$ sont des bits et $e$ est un entier relatif.
 
@@ -156,15 +156,27 @@ $6,25 = (110,01)_2 = (1,1001)_2  \times 2^2$
 
 ## Nombres à virgule flottante
 
-Dans cette norme, les nombres dyadiques sont codés sur 64 bits en réservant :
+La _norme IEE 754_ de 1985 est adoptée par la majorité des langages informatiques modernes.
 
-* 1 bit pour le signe ;
-* 11 bits pour l’exposant ;
-* 52 bits pour la mantisse.
+Dans cette norme (IEE 754, double précision), les nombres dyadiques sont codés sur 64 bits en réservant :
 
-\fbox{$s$}\fbox{ \qquad $e$ \qquad }\fbox{ \qquad\qquad\qquad $m$ \qquad\qquad\qquad  }
+* 1 bit pour le signe $S$,
+* 11 bits pour l’exposant $E$,
+* 52 bits pour la mantisse $M$.
 
-Ce sont _les nombres à virgule flottante_.
+La valeur du nombre est alors :
+
+$$(-1)^S \times M \times 2^{E - 1033}$$
+
+Ce qu'on peut résumer ainsi :
+
+| Norme                | Encodage | Signe | Exposant | Mantisse | Valeur                                  | Précision |
+|----------------------|----------|-------|----------|----------|-----------------------------------------|-----------|
+| **Double précision** | 64 bits  | 1 bit | 11 bits  | 52 bits  | $$(-1)^S \times M \times 2^{E - 1033}$$ | 53 bits   |
+
+
+Pour des questions techniques il est nécessaire d'y inclure d'autres objets comme `NaN` (_not a number_)
+et des infinis positifs et négatifs.
 
 ## Amplitude
 
