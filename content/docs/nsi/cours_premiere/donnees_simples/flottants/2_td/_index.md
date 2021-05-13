@@ -1,5 +1,5 @@
 ---
-title: "Première NSI - types et valeurs de base : flottants - td"
+title: 2 TD
 author: qkzk
 date: 2020/08/01
 weight: 2
@@ -11,26 +11,34 @@ weight: 2
 
 # 1. Écriture en base 2 des nombres à virgule
 
-1. Parmi les nombres à virgule binaires suivants, lesqules sont strictement 
-    supérieurs à $\dfrac{1}{2}$
+1. Parmi les nombres à virgule binaires suivants, lesquels sont strictement 
+    supérieurs à $\dfrac{1}{2}$ ?
 
-    a. $0,011111$
-    b. $0,100001$
-    c. $1,000001$
-    d. $0,11$
+    - a. $0,011111$
+    - b. $0,100001$
+    - c. $1,000001$
+    - d. $0,11$
 
-2. L'écriture binaire de $6.625_{10}$ est : `_`
+2. L'écriture binaire de $6.625_{10}$ est :
 
-    a. $110,101$
-    b. $0,101$
-    c. $110,101101...$
+    - a. $110,101$
+    - b. $0,101$
+    - c. $110,101101...$
 
-3. Parmi les nomres suivants, écrits en base 10, quels sont ceux qui ont une
+3. Parmi les nombres suivants, écrits en base 10, quels sont ceux qui ont une
     écriture infinie en base 2 ?
 
-    a. 1,25
-    b. 0,75
-    c. 1,7
+    - a. 1,25
+    - b. 0,75
+    - c. 1,7
+
+4. Convertir $101,110110_2$ du binaire vers le décimal.
+
+5. Convertir 1.6 du décimal vers le binaire.
+
+
+
+
 
 
 # 2. Représenter des nombres en virgule fixe
@@ -38,7 +46,7 @@ weight: 2
 Le microcontrôleur de l'antimissile _Patriot_ stocke la valeur $\dfrac{1}{10}$
 en ne conservant que 23 bits pour la partie décimale (codage en virgule fixe).
 
-Il calcule le temps écoulé depuis démarrage en multiples de 1/10^eme^ de
+Il calcule le temps écoulé depuis démarrage en multiples de un dixième de
 seconde.
 
 1. Écrire 1/10 en binaire, en conservant au moins 30 chiffres binaires après la
@@ -49,13 +57,14 @@ seconde.
 3. Quelle est l'erreur approximative commise sur la représentation de 1/10 ?
 4. Combien de signaux d'horloge le _Patriot_ reçoit-il en 100 h de 
     fonctionnement ?
-5. En tenant compte de l'erreur calculée à la question c., quel est le décalage
-    de l'horloge du _Patriot_ par rapport à l'heure réelle au bout de 100h.
-6. Sachant qu'un missile se déplace à une vitesse d'environ 1 676 m/s, à
-    quelle erreur de position en mètres correspond le décalage d'horloge d'un
-    _Patriot_ ayant fonctionné 100 h sans interruption ?
-7. Conclure, sachant que, pour atteindre sa cible un _Patriot_ doit 
-    l'approcher à moins de 500 m.
+5. En tenant compte de l'erreur calculée à la question 3., quel est le décalage
+    de l'horloge du _Patriot_ par rapport à l'heure réelle au bout de 100h ?
+6. Sachant qu'un missile se déplace à une vitesse d'environ 1 676 m/s et que
+    sa cible est située à 30km, à quelle erreur de position en mètres correspond
+    le décalage d'horloge d'un _Patriot_ ayant fonctionné 100 h sans
+    interruption ?
+7. Sachant que, pour atteindre sa cible un _Patriot_ doit l'approcher à moins
+    de 500 m, peut-on être certain qu'il l'atteigne ?
 
 
 # 3. Nombres à virgule flottante
@@ -64,17 +73,19 @@ seconde.
     nombre en décimal :
 
     a. à l'aide de la calculatrice,
+
     b. à la main. Commencer par écrire $1,10101_2$ comme un quotient d'entiers.
 
 2. On considère le décimal $x = 0.62890625$. Nous allons le convertir en
     dyadique.
 
-    a. $x$ s'écrit exactement comme la somme de puissances négatives de $2$.
+    - a. $x$ s'écrit exactement comme la somme de puissances négatives de $2$.
 
-        Décomposer $x$ sous la forme $x = \dfrac{1}{2^{p_1}} + \dfrac{1}{2^{p_2}} + \cdots + \dfrac{1}{2^{p_k}}$
+      Décomposer $x$ sous la forme $x = \dfrac{1}{2^{p_1}} + \dfrac{1}{2^{p_2}} + \cdots + \dfrac{1}{2^{p_k}}$
 
-    b. En déduire la _mantisse_ de la réprésentation dyadique de $x$.
-    c. Donner la représentation dyadique complète.
+    - b. En déduire la _mantisse_ de la réprésentation dyadique de $x$.
+
+    - c. Donner la représentation dyadique complète.
 
 3. On considère $x=23.2578125$.
 
@@ -82,16 +93,21 @@ seconde.
         Écrire la partie entière comme somme de puissance de 2 et la partie
         décimale comme somme de puissance de 1/2. Ce calcul est exact.
     b. En déduire la mantisse de la réprésentation dyadique de ce nombre.
+
     c. Déterminer la représentation dyadique complète.
 
 4. On considère $x=14.04688$. Ce nombre n'est pas représentable exactement
     en dyadique.
 
     a. Écrire $14$ comme la somme de puissances de 2.
+
     b. Encadrer la partie décimale de $x$ entre deux sommes de puissances de 
         $\dfrac{1}{2}$. On ira jusqu'à la puissance 6.
+
     c. Choisir, parmi les deux bornes, la meilleure approximation.
+
     d. Donner la mantisse de $x$ dans sa représentation dyadique.
+
     e. En déduire la représentation dyadique de $x$.
 
 

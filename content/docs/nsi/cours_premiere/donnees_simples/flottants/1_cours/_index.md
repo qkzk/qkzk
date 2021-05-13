@@ -1,6 +1,5 @@
 ---
-title:
-- NSI 1ère - Données - Flottants - cours
+title: 1 Cours
 author:
 - QK
 date: 2020/08/01
@@ -85,6 +84,52 @@ chiffres      1     1     1   .         1     0     1
 ```
 
 4 + 2 + 1 + 1/2 + 1/8 = 7.625
+
+## Décimal vers binaire pour les nombres à virgule
+
+On cherche à convertir 2.3 en binaire.
+
+1. On commence par la partie entière : `2 = 0b10`
+2. On multiplie le nombre précédent, sans sa partie entière, par 2.
+    Le premier chiffre sera 0 ou 1 et c'est le bit correspondant à cette position :
+
+    On répète jusqu'à atteindre un entier ou jusqu'à atteindre la précision souhaitée.
+
+| Opération      | Résultat | bit | position |
+|----------------|----------|-----|----------|
+| $0.3$          | $0.3$    | `0` | 0        |
+| $0.3 \times 2$ | $0.6$    | `0` | 1        |
+| $0.6 \times 2$ | $1.2$    | `1` | 2        |
+| $0.2 \times 2$ | $0.4$    | `0` | 3        |
+| $0.4 \times 2$ | $0.8$    | `0` | 4        |
+| $0.8 \times 2$ | $1.6$    | `1` | 5        |
+| $0.6 \times 2$ | $1.2$    | `1` | 6        |
+| $0.2 \times 2$ | $0.4$    | `0` | 7        |
+| $0.4 \times 2$ | $0.8$    | `0` | 8        |
+| $0.8 \times 2$ | $1.6$    | `1` | 9        |
+| $0.6 \times 2$ | $1.2$    | `1` | 10       |
+| $0.2 \times 2$ | $0.4$    | `0` | 11       |
+
+On peut s'arrêter ici, étant donné que la suite des bits va se répéter.
+
+$0.3 = 0.010011001100_2$ et $2.3 = 10.01001100110_2$
+
+
+Vérifions :
+
+```python
+>>> 2 + 1/4 + 1/32 + 1/64 + 1/512 + 1/1024
+2.2998046875
+```
+
+## Binaire vers décimal
+
+Dans l'autre sens c'est beaucoup plus facile, on compte les positions des bits
+et on ajoute, lorsque le bit est 1, la puissance de $\frac{1}{2}$ correspondante :
+
+$$x = 0,001001001_2 = \frac{1}{2^3} + \frac{1}{2^6} + \frac{1}{2^9} = 0.142578125$$
+
+
 
 ## Revenons sur 0,1 + 0,2
 
