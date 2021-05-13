@@ -53,7 +53,7 @@ False
 
 ## Nombres à virgule flottante
 
-Dans les machines, on utilise les **les nombres à virgule flottante**
+Dans les machines, on utilise **les nombres à virgule flottante**
 
 Les nombres sont alors appelés des *flottants* (*floats* en anglais)
 
