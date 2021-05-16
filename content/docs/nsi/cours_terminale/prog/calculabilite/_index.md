@@ -107,8 +107,8 @@ Cela reste impossible même si on se limite à ce que les arguments de arrêt so
 
 ## Complément
 
-La résolution du problème de l'arrêt par Alan Turing, en 1936 a eu de nombreuses conséquences
-en informatique et en mathématiques.
+La résolution du problème de l'arrêt par Alonzo Church et lan Turing, en 1936 a eu de nombreuses conséquences
+en informatique et en mathématiques. La résolution de ce problème a conduit Alan Turing à créer les machines de Turing, modèle mathématiques à l'origine des ordinateurs modernes...
 
 En particulier, il n'est pas possible d'écrire un assistant de programmation qui repère
 tous les problèmes qu'un code présente avant de l'avoir exécuté.
@@ -119,3 +119,7 @@ dans un programme.
 Ces outils existent dans beaucoup de langages modernes (python, java, Golang etc.) mais
 ne sont jamais parfaits, en effet, l'existance d'un ramasse miette parfait est équivalente
 au problème de l'arrêt.
+
+## Vidéo
+
+Voici une [vidéo](https://www.youtube.com/watch?v=a5MNIzu9Ia4) de l'université de Rennes qui expose la preuve précédente.
