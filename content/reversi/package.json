@@ -1,0 +1,15 @@
+{
+  "name": "reversi",
+  "collaborators": [
+    "qu3nt1n@gmail.com <qu3nt1n@gmail.com>"
+  ],
+  "version": "0.1.0",
+  "files": [
+    "reversi_bg.wasm",
+    "reversi.js",
+    "reversi.d.ts"
+  ],
+  "module": "reversi.js",
+  "types": "reversi.d.ts",
+  "sideEffects": false
+}

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="img/favicon.ico">
+    <link href="./style.css" rel="stylesheet">
+    <title>Reversi</title>
+  </head>
+  <body>
+      <div class="container">
+        <div id="top_row" class="row">
+          <div class="col four">				
+            <div id="button_newgame" class="btn btn-brown">New Game</div>
+          </div>
+          <div class="col four">				
+            <div id="button_switch"  class="btn btn-brown">Switch</div>
+          </div>
+          <div class="col four">				
+            <div id="button_unplay"  class="btn btn-brown">Unplay</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="table_game">
+        <table id="game" class="center"></table>
+      </div>
+
+      <div class="container">
+        <div id="bottom_row" class="row">
+          <div class="col six">				
+            <div id="btn_black"    class="btn btn-dark">Black</div>
+          </div>
+          <div class="col six">				
+            <div id="btn_white" class="btn btn-concrete">White</div>
+          </div>
+        </div>
+      </div>
+
+      <script type="module" src="./index.js"></script>
+      <script src="./jsboard.js"></script>
+  </body>
+</html>
