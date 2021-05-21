@@ -4,7 +4,7 @@ body{font-family:Open Sans; color:#555555; background-color: #7c7f5a;}
 .container { width: 100%; margin: 0 auto; }
 .container .row { float: left; clear: both; width: 100%; }
 .container .col { float: left; margin: 0 0 1.2em; padding-right: 1.2em; padding-left: 1.2em; }
-.container .col.one, .container .col.two, .container .col.three, .container .col.four, .container .col.five, .container .col.six, .container .col.seven, .container .col.eight, .container .col.nine, .container .col.ten, .container .col.eleven, .container .col.twelve { width: 100%; }
+.container .col.four, .container .col.six, { width: 100%; }
 
 
 @media screen and (min-width: 767px) {
@@ -31,7 +31,6 @@ GENERIC BUTTON STYLES
 .btn.btn-dark:hover{background-color:#202d3d;}
 .btn.btn-dark:active{top: 3px; outline: none; -webkit-box-shadow: none; box-shadow: none;}
 
-
 /*CONCRETE BUTTON STYLES*/		
 .btn.btn-concrete{background-color: #becacb; border-color: #becacb; -webkit-box-shadow: 0 3px 0 #defafb; box-shadow: 0 3px 0 #defafb; color: #080c0f;}
 .btn.btn-concrete:hover{background-color:#cedadb;}
@@ -56,7 +55,7 @@ Board
 table.center {
     margin-left:auto;
     margin-right:auto;
-  }
+}
 
 #game {
   width: 88%;

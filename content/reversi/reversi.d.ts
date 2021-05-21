@@ -1,51 +1,64 @@
 /* tslint:disable */
 /* eslint-disable */
 /**
+* Types of players : human or computer
 */
 export enum Player {
   Human,
   Computer,
 }
 /**
+* Holds a game shared through bindgem/
+* It uses a game and two players.
 */
 export class WasmGame {
   free(): void;
 /**
+* Rerturns a new wasmgame.
 * @returns {WasmGame}
 */
   static create_game(): WasmGame;
 /**
+* Reset the game without changing the players.
 */
   new_game(): void;
 /**
+* True iff the game is over.
 * @returns {boolean}
 */
   is_finished(): boolean;
 /**
+* binder for wasmgame. Returns a Js readable grid.
 * @returns {Array<any>}
 */
   grid(): Array<any>;
 /**
+* binder for wasmgame. Returns a Js readable array of playable moves.
 * @returns {Array<any>}
 */
   playables(): Array<any>;
 /**
+* Ask the game to play a move and returns `true` if the move was played.
 * @param {number} x
 * @param {number} y
 * @returns {boolean}
 */
   play(x: number, y: number): boolean;
 /**
+* Ask the game to reset the position untill the human can play.
 */
   unplay(): void;
 /**
+* Switch the players (human <> computer)
 */
   switch(): void;
 /**
+* `true` iff it's human's turn.
 * @returns {boolean}
 */
   is_human_turn(): boolean;
 /**
+* Result of the game.
 * -1 : not finished
 * 0  : draw
 * 1  : black
@@ -54,18 +67,24 @@ export class WasmGame {
 */
   winner(): number;
 /**
+* Returns a Js readable array with the counts of black and white.
 * @returns {Array<any>}
 */
   count(): Array<any>;
 /**
+* `true` iff black is the human player
 * @returns {boolean}
 */
   is_black_human(): boolean;
 /**
+* `true` iff white is the human player.
 * @returns {boolean}
 */
   is_white_human(): boolean;
 /**
+* Ask the computer to play a move. Returns an empty array if it wasn't
+* possible and the move in a Js readable array if a move was played.
+* log some info in browser console for easier debugging.
 * @param {number} depth
 * @returns {Array<any>}
 */

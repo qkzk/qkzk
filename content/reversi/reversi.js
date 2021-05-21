@@ -46,9 +46,12 @@ function takeObject(idx) {
     return ret;
 }
 /**
+* Types of players : human or computer
 */
 export const Player = Object.freeze({ Human:0,"0":"Human",Computer:1,"1":"Computer", });
 /**
+* Holds a game shared through bindgem/
+* It uses a game and two players.
 */
 export class WasmGame {
 
@@ -71,6 +74,7 @@ export class WasmGame {
         wasm.__wbg_wasmgame_free(ptr);
     }
     /**
+    * Rerturns a new wasmgame.
     * @returns {WasmGame}
     */
     static create_game() {
@@ -78,11 +82,13 @@ export class WasmGame {
         return WasmGame.__wrap(ret);
     }
     /**
+    * Reset the game without changing the players.
     */
     new_game() {
         wasm.wasmgame_new_game(this.ptr);
     }
     /**
+    * True iff the game is over.
     * @returns {boolean}
     */
     is_finished() {
@@ -90,6 +96,7 @@ export class WasmGame {
         return ret !== 0;
     }
     /**
+    * binder for wasmgame. Returns a Js readable grid.
     * @returns {Array<any>}
     */
     grid() {
@@ -97,6 +104,7 @@ export class WasmGame {
         return takeObject(ret);
     }
     /**
+    * binder for wasmgame. Returns a Js readable array of playable moves.
     * @returns {Array<any>}
     */
     playables() {
@@ -104,6 +112,7 @@ export class WasmGame {
         return takeObject(ret);
     }
     /**
+    * Ask the game to play a move and returns `true` if the move was played.
     * @param {number} x
     * @param {number} y
     * @returns {boolean}
@@ -113,16 +122,19 @@ export class WasmGame {
         return ret !== 0;
     }
     /**
+    * Ask the game to reset the position untill the human can play.
     */
     unplay() {
         wasm.wasmgame_unplay(this.ptr);
     }
     /**
+    * Switch the players (human <> computer)
     */
     switch() {
         wasm.wasmgame_switch(this.ptr);
     }
     /**
+    * `true` iff it's human's turn.
     * @returns {boolean}
     */
     is_human_turn() {
@@ -130,6 +142,7 @@ export class WasmGame {
         return ret !== 0;
     }
     /**
+    * Result of the game.
     * -1 : not finished
     * 0  : draw
     * 1  : black
@@ -141,6 +154,7 @@ export class WasmGame {
         return ret;
     }
     /**
+    * Returns a Js readable array with the counts of black and white.
     * @returns {Array<any>}
     */
     count() {
@@ -148,6 +162,7 @@ export class WasmGame {
         return takeObject(ret);
     }
     /**
+    * `true` iff black is the human player
     * @returns {boolean}
     */
     is_black_human() {
@@ -155,6 +170,7 @@ export class WasmGame {
         return ret !== 0;
     }
     /**
+    * `true` iff white is the human player.
     * @returns {boolean}
     */
     is_white_human() {
@@ -162,6 +178,9 @@ export class WasmGame {
         return ret !== 0;
     }
     /**
+    * Ask the computer to play a move. Returns an empty array if it wasn't
+    * possible and the move in a Js readable array if a move was played.
+    * log some info in browser console for easier debugging.
     * @param {number} depth
     * @returns {Array<any>}
     */

@@ -54,21 +54,23 @@ const reversi = () => {
   */
   const addPiece = (piece) => {
     if (game.is_human_turn()) {
-      let loc = b.cell(piece.parentNode).where();
-      let isMovePlayed = game.play(loc[0], loc[1]);
+      let humanPlayedMove = b.cell(piece.parentNode).where();
+      let isMovePlayed = game.play(humanPlayedMove[0], humanPlayedMove[1]);
       console.log("has your move have been played ?", isMovePlayed);
-      displayBoard(game, board);
+      if (!isMovePlayed) {
+        return;
+      }
+      displayRefresh(game, board, humanPlayedMove);
 
       // stupid hack to force the display of human move --before-- calling for a computer move
       // doesn't even work on mobile :(
       setTimeout(() => {
         while (!game.is_human_turn() && !game.is_finished()) {
-          game.ask_computer_to_play(difficulty);
-          displayBoard(game, board);
+          let computerPlayedMove = game.ask_computer_to_play(difficulty);
+          displayRefresh(game, board, computerPlayedMove);
         }
       }, 0);
     }
-    displayBoard(game, board);
   };
 
 
@@ -76,69 +78,75 @@ const reversi = () => {
   /*
     Attach the functions to their respective buttons above the board.
   */
-  const attachButton = (game) => {
+  const topButtonsSetup = (game) => {
     let btnNewgame =   document.getElementById("button_newgame");
     let btnSwitch  =   document.getElementById("button_switch");
     let btnUnplay  =   document.getElementById("button_unplay");
 
     btnNewgame.addEventListener("click", function() {
       game.new_game();
-      displayBoard(game, board);
-      if (!game.is_black_human()) {
-        let grid = game.ask_computer_to_play(difficulty);
-        console.log(grid);
-        displayBoard(game, board);
-      }
+      displayRefresh(game, board, []);
+      computerPlayIfHisTurn(game);
     });
 
     btnSwitch.addEventListener("click", function() {
       game.switch();
-      displayBoard(game, board);
-      if (!game.is_human_turn()) {
-          game.ask_computer_to_play(difficulty);
-      }
-      displayBoard(game, board);
+      displayRefresh(game, board, []);
+      computerPlayIfHisTurn(game);
     });
 
 
     btnUnplay.addEventListener("click", function() {
       game.unplay();
-      displayBoard(game, board);
+      displayRefresh(game, board, []);
     });
   };
+
+  const computerPlayIfHisTurn = (game) => {
+    if (!game.is_human_turn()) {
+        let computer_played_move = game.ask_computer_to_play(difficulty);
+        displayRefresh(game, board, computer_played_move);
+    }
+  }
 
   const changeDifficulty = () => {
       difficulty += 1;
       if (difficulty >= 11) {
           difficulty = 2;
       }
-      displayBoard(game, board);
+      displayRefresh(game, board, []);
   }
   /*
     refresh the Status Buttons below the board.
   */
-  const refreshStatus = (game) => {
+  const bottomButtonsRefresh = (game) => {
       let btnWhite = document.getElementById("btn_white");
       let btnBlack = document.getElementById("btn_black");
       let counts = game.count();
-      let whiteText;
-      let blackText;
       if (game.is_white_human()) {
-        whiteText = `Human - ${counts[1]}`;
-        blackText = `Computer (depth ${difficulty}) - ${counts[0]}`;
-        btnBlack.addEventListener("click", changeDifficulty);
-        btnWhite.addEventListener("click", () => {});
+        setWhiteHumanButtons(btnWhite, btnBlack, counts);
       } else {
-        whiteText = `Computer (depth ${difficulty}) - ${counts[1]}`;
-        blackText = `Human - ${counts[0]}`;
-        btnWhite.addEventListener("click", changeDifficulty);
-        btnBlack.addEventListener("click", () => {});
+        setBlackHumanButtons(btnWhite, btnBlack, counts);
       }
-      btnWhite.innerText = whiteText;
-      btnBlack.innerText = blackText;
-
   };
 
+  const setWhiteHumanButtons = (btnWhite, btnBlack, counts) => {
+      let whiteText = `Human - ${counts[1]}`;
+      let blackText = `Computer (depth ${difficulty}) - ${counts[0]}`;
+      btnBlack.addEventListener("click", changeDifficulty);
+      btnWhite.addEventListener("click", () => {});
+      btnWhite.innerText = whiteText;
+      btnBlack.innerText = blackText;
+  };
+
+  const setBlackHumanButtons = (btnWhite, btnBlack, counts) => {
+      let whiteText = `Computer (depth ${difficulty}) - ${counts[1]}`;
+      let blackText = `Human - ${counts[0]}`;
+      btnWhite.addEventListener("click", changeDifficulty);
+      btnBlack.addEventListener("click", () => {});
+      btnWhite.innerText = whiteText;
+      btnBlack.innerText = blackText;
+  };
 
   /*
     Display the valid moves
@@ -154,18 +162,24 @@ const reversi = () => {
   };
 
   /*
-    Display the boards and refresh the status buttons.
+    Display the board and refresh the status buttons.
   */
-  const displayBoard = (game, board) => {
+  const displayRefresh = (game, board, lastMove) => {
     let grid = game.grid();
-    showGrid(grid, board);
-    refreshStatus(game);
+    displayBoard(grid, board);
+    bottomButtonsRefresh(game);
     if (game.is_human_turn()) {
         displayValidMoves(board);
     }
+    if (lastMove.length === 2)  {
+        board[lastMove[0]][lastMove[1]]["piece"].classList.add("last_move");
+    }
   };
 
-  const showGrid = (grid, board) => {
+  /*
+    Display the board
+  */
+  const displayBoard = (grid, board) => {
       grid.forEach((cell, index) => {
       let i = index % 8;
       let j = (index / 8 | 0);
@@ -189,8 +203,8 @@ const reversi = () => {
   var difficulty = 7;
   var game = WasmGame.create_game();
   var board = initBoard();
-  attachButton(game);
-  displayBoard(game, board);
+  topButtonsSetup(game);
+  displayRefresh(game, board, []);
 };
 
 
