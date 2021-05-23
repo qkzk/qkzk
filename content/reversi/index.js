@@ -3,7 +3,7 @@ import init, { WasmGame } from "./reversi.js";
 /*
   create board
 */
-var b = jsboard.board({
+var board_matrix = jsboard.board({
     attach:"game",
     size:"8x8",
     style:"checkerboard",
@@ -37,24 +37,13 @@ const initBoard = () => {
 */
 const reversi = () => {
 
-  /*
-    Empty the whole board
-  */
-  const emptyBoard = (board) => {
-    board.forEach(ligne => {
-      ligne.forEach(element => {
-        b.cell(element["pos"]).place(element["piece"]);
-        element["piece"].addEventListener("click", function() { addPiece(this); });
-      });
-    });
-  }
 
   /*
     Called when the player press a cell in the game.
   */
   const addPiece = (piece) => {
     if (game.is_human_turn()) {
-      let humanPlayedMove = b.cell(piece.parentNode).where();
+      let humanPlayedMove = board_matrix.cell(piece.parentNode).where();
       let isMovePlayed = game.play(humanPlayedMove[0], humanPlayedMove[1]);
       console.log("has your move have been played ?", isMovePlayed);
       if (!isMovePlayed) {
@@ -103,12 +92,15 @@ const reversi = () => {
   };
 
   const computerPlayIfHisTurn = (game) => {
-    if (!game.is_human_turn()) {
-        let computer_played_move = game.ask_computer_to_play(difficulty);
+      let computer_played_move = game.ask_computer_to_play(difficulty);
+      if (computer_played_move.length != 0) {
         displayRefresh(game, board, computer_played_move);
-    }
+      }
   }
 
+  /*
+    Incremenant the difficulty up to 11 then set it back to 2.
+  */
   const changeDifficulty = () => {
       difficulty += 1;
       if (difficulty >= 11) {
@@ -116,6 +108,7 @@ const reversi = () => {
       }
       displayRefresh(game, board, []);
   }
+
   /*
     refresh the Status Buttons below the board.
   */
@@ -130,6 +123,9 @@ const reversi = () => {
       }
   };
 
+  /*
+    Set the buttons for white and black when the whites are played by human.
+  */
   const setWhiteHumanButtons = (btnWhite, btnBlack, counts) => {
       let whiteText = `Human - ${counts[1]}`;
       let blackText = `Computer (depth ${difficulty}) - ${counts[0]}`;
@@ -139,6 +135,9 @@ const reversi = () => {
       btnBlack.innerText = blackText;
   };
 
+  /*
+    Set the buttons for white and black when the blacks are played by human.
+  */
   const setBlackHumanButtons = (btnWhite, btnBlack, counts) => {
       let whiteText = `Computer (depth ${difficulty}) - ${counts[1]}`;
       let blackText = `Human - ${counts[0]}`;
@@ -150,6 +149,7 @@ const reversi = () => {
 
   /*
     Display the valid moves
+    The moves are sent by pair in a flat array of coordinates : [x1, y1, x2, y2, ...]
   */
   const displayValidMoves = (board) => {
     let valid_moves = game.playables();
@@ -181,22 +181,46 @@ const reversi = () => {
   */
   const displayBoard = (grid, board) => {
       grid.forEach((cell, index) => {
-      let i = index % 8;
-      let j = (index / 8 | 0);
-      switch (cell) {
-        case 1:
-          board[i][j]["piece"] = black.clone();
-          break;
-        case 2:
-          board[i][j]["piece"] = white.clone();
-          break;
-        default:
-          board[i][j]["piece"] = empty.clone();
-      }
-      b.cell(board[i][j]["pos"]).place(board[i][j]["piece"]);
-      board[i][j]["piece"].addEventListener("click", function() {addPiece(this); });
-    });
+        attachPieceAndCallbackToCell(board, cell, index);
+      });
+  };
 
+  /*
+    Attach a piece to the cell, depending of his value.
+    Attach a click event on every cell.
+  */
+  const attachPieceAndCallbackToCell = (board, cell, index) => {
+    let i = index % 8;
+    let j = (index / 8 | 0);
+    insertPieceIntoCell(cell, board, i, j);
+    insertCallbackIntoPiece(board, i, j);
+  };
+
+  /*
+    Insert the correct piece (black, white, empty) into the cell.
+  */
+  const insertPieceIntoCell = (cell, board, i, j) => {
+    switch (cell) {
+      case 1:
+        board[i][j]["piece"] = black.clone();
+        break;
+      case 2:
+        board[i][j]["piece"] = white.clone();
+        break;
+      default:
+        board[i][j]["piece"] = empty.clone();
+    }
+  };
+
+  /*
+    Insert the correct callback into the cell
+  */
+  const insertCallbackIntoPiece = (board, i, j) => {
+    let piece = board[i][j]["piece"];
+    board_matrix.cell(board[i][j]["pos"]).place(piece);
+    board[i][j]["piece"].addEventListener("click", function() {
+      addPiece(piece);
+    });
   };
 
   // runs the game
@@ -217,56 +241,11 @@ const runWasm = async () => {
 };
 
 /*
-  send a move to the game and returns true iff the move has been played
+  send a move to the game and returns true iff the move has been played.
 */
 const sendMove = (game, x, y) => {
     let played = game.play(x, y);
     return played
 };
-
-
-
-// Testing
-const testGame = () => {
-  console.log(WasmGame);
-  let game = WasmGame.create_game()
-  console.log(game);
-  console.log(turn);
-  let grid = game.grid();
-  console.log(grid);
-  let playables_x = game.playables_x();
-  let playables_y = game.playables_y();
-  console.log(playables_x, playables_y);
-  let played = sendMove(game, 2, 3);
-  console.log("move 2, 3 played ?", played);
-  grid = game.grid();
-  console.log(grid);
-  console.log("ask the computer to play...");
-  grid = game.ask_computer_to_play();
-  console.log(grid);
-  console.log("is the game finished ?", game.is_finished());
-  console.log("new game !");
-}
-
-const play_computer_game = () => {
-  let game =  WasmGame.create_game()
-  console.log(game);
-  let grid = game.grid();
-  let counter = 0;
-  while (true) {
-    counter += 1;
-    console.log("move nb", counter);
-    console.log("new move");
-    grid = game.ask_computer_to_play(difficulty);
-    console.log(game.is_finished());
-    console.log(grid);
-    console.log("loop done");
-    if (game.is_finished()) { break; }
-  }
-  console.log("game finished");
-  console.log(game.winner());
-  console.log("black, white", game.count());
-}
-
 
 runWasm();
