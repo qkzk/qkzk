@@ -1,10 +1,17 @@
 ---
-title: "Booléens : TD"
-weight: 2
+title: "NSI - Première"
+subtitle: "Booléens : TD"
+author: "qkzk"
+date: "2021/04/19"
+theme: metropolis
+header-includes: |
+    \usepackage{tcolorbox}
+    \newtcolorbox{myquote}{colback=teal!10!white, colframe=teal!55!black}
+    \renewenvironment{Shaded}{\begin{myquote}}{\end{myquote}}
+papersize: a4
+geometry: margin=1.5cm
 
 ---
-
-### pdf : [pour impression](/uploads/docsnsi/donnees_qkzk_img/booleen_td.pdf)
 
 # Objectifs
 
@@ -98,11 +105,11 @@ portes ET et XOR :
 
 * porte ET
 
-![porte ET](/uploads/docsnsi/donnees_qkzk_img/porte-et.png)
+![porte ET](./img/porte-et.png){ width=150px }
 
 * Porte XOR
 
-![porte XOR](/uploads/docsnsi/donnees_qkzk_img/porte-xor.png)
+![porte XOR](./img/porte-xor.png){ width=150px }
 
 1. Rappeler les tables de vérité de ces deux portes.
 
@@ -138,7 +145,7 @@ Les portes peuvent être connectées entre elles pour réaliser des
 **circuits logiques** et on peut ainsi réaliser des calculs.
 
 
-![demi-additionneur](/uploads/docsnsi/donnees_qkzk_img/demi-additionneur.png)
+![demi-additionneur](./img/demi-additionneur.png){width=300px}
 
 Il est appelé *demi-additionneur* car il réalise l'addition de 2 bits
 ($A$ et $B$), le résultats de cette somme est représentée par $S$
