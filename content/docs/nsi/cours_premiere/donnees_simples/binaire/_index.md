@@ -2,7 +2,7 @@
 title: "Binaire"
 author: qkzk
 date: 2020/07/03
-weight: 3
+weight: 1
 
 ---
 
