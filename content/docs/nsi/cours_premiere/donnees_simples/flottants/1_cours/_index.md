@@ -1,5 +1,5 @@
 ---
-title: 1 Cours
+title: "Flottants : Cours"
 author:
 - QK
 date: 2020/08/01

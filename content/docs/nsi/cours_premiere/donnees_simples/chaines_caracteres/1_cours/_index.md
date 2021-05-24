@@ -1,6 +1,5 @@
 ---
-title:
-- Cours
+title: "Chaines : Cours"
 weight: 1
 
 ---
