@@ -1,12 +1,19 @@
 ---
-title: '1. cours : introduction'
+title: 'Traitement des données en tables'
+subtile: '1. cours : introduction'
 author: 'qkzk'
-date: '2020/07/31'
-weight: 1
+date: '2021/05/25'
+theme: "metropolis"
+geometry: "margin=1.5cm"
+header-includes: |
+    \usepackage{tcolorbox}
+    \newtcolorbox{myquote}{colback=teal!10!white, colframe=teal!55!black}
+    \renewenvironment{Shaded}{\begin{myquote}}{\end{myquote}}
 
 ---
 
-### pdf : [pour impression](/uploads/docsnsi/table_csv/1_cours.pdf)
+### pdf : [pour impression](./1_cours.pdf)
+
 
 **En bref :** _Le format CSV est couramment utilisé pour échanger des données
 habituellement traitées à l'aide de tableurs ou de logiciels de bases
@@ -18,6 +25,7 @@ des données en utilisant ce format._
 De quoi parle-t-on ?
 
 Par "données en table" on entend ce type d'information :
+
 
 
 * correctement importé dans un tableur
@@ -190,94 +198,6 @@ Le fichier CSV correspondant est :
             return [dict(ligne) for ligne in lecteur]
     ```
 
-## Importer les données en Python sans utiliser le module CSV
-
-
-Vous rencontrerez vraisemblablement des variantes de la méthode précédente.
-Nous allons en présenter rapidement plusieurs. Elles ne sont _pas à connaître
-mais à comprendre_.
-
-
-
-### Créer un tableau doublement indexé
-
-Voyons d'abord comment réaliser chacune des étapes (c'est un attendu) puis
-comment le faire à l'aide des outils proposés.
-
-```{.python .numberLines}
-CHAMPS = ["nom", "moyenne", "moyenne_brute"]
-
-def lire_fichier_csv(filename, delimiter=','):
-  res = []
-  with open(filename) as f:
-    f.readline() # on zappe la première ligne...
-    l = f.readline()
-    while l != '':
-      args = l.replace('"', '').strip().split(delimiter)
-      try:
-        enregistrement = []
-        for i in range(len(args)):
-          enregistrement[i] = args[i]
-        res.append(enregistrement)
-      except ValueError:
-        pass
-      l = f.readline()
-    return res
-
-liste_csv = lire_fichier_csv('2nde-14-liste.csv', delimiter=';')
-```
-
-
-#### Commentaires détaillés sur la fonction `lire_fichier_csv`
-
-* ligne 4 : on crée la liste des enregistrements
-* ligne 5 : on ouvre le fichier et on le stocke dans une variable temporaire `f`
-* ligne 6 : `f.readline()` : lire une ligne et avancer à la suivante
-* ligne 7 : on a zappé la première ligne et on lit la seconde
-* ligne 5 : tant qu'on a des lignes non vides
-* ligne 9 : on nettoie la ligne : virer les ", les espaces de début et de fin et on sépare la ligne tous les 'delimiter'
-* ligne 10 : on essaye de créer l'enregistrement
-* ligne 11 : c'est une liste python
-* ligne 13 : on l'ajoute à la liste des enregistrements
-* ligne 16 : si jamais la ligne est imparfaite, on la zappe
-* ligne 17 :  on avance à la ligne suivante
-
-#### Qu'obtient-on ?
-
-Un tableau doublement indexé. Les descripteurs sont enregistrés dans `CHAMPS`.
-Ils ne sont pas utilisés dans la fonction d'import.
-
-
-### Variante : vers un tableau de dictionnaire.
-
-**Exercice :** adapter la première fonction d'import pour qu'elle retourne
-un tableau de dictionnaires.
-
-**Réponse :**
-
-
-```{.python .numberLines}
-CHAMPS = ["nom", "moyenne", "moyenne_brute"]
-
-def lire_fichier_csv(filename, delimiter=',', champs=CHAMPS):
-  res = []
-  with open(filename) as f:
-    f.readline() # on zappe la première ligne...
-    l = f.readline()
-    while l != '':
-      args = l.replace('"', '').strip().split(delimiter)
-      try:
-        enregistrement = {} # on crée un dictionnaire
-        for i in range(len(args)):
-          enregistrement[champs[i]] = args[i] # les clés sont les éléments de CHAMPS
-        res.append(enregistrement)
-      except ValueError:
-        pass
-      l = f.readline()
-    return res
-
-liste_csv = lire_fichier_csv('2nde-14-liste.csv', delimiter=';')
-```
 
 
 
@@ -288,19 +208,18 @@ liste_csv = lire_fichier_csv('2nde-14-liste.csv', delimiter=';')
     l'ordre des colonnes sous forme d'une liste d'attributs.
 
     ```python
-    def vers_csv(nom: str, ordre: list) -> None:
-        with open(nom + '.csv', 'w') as fichier:
-            dic = csv.DictWriter(fichier, fieldnames=ordre)
+    def vers_csv(nom_fichier, ordre):
+        with open(nom_fichier, 'w') as contenu:
+            writer = csv.DictWriter(contenu, fieldnames=ordre)
             table = eval(nom)
-            dic.writeheader()  # pour la 1ere lire, celle des attributs
+            writer.writeheader()  # pour la 1ere lire, celle des attributs
             for ligne in table:
-                dic.writerow(ligne)  # ajoute les lignes de la table
-    return None
+                writer.writerow(ligne)  # ajoute les lignes de la table
     ```
 * Pour exporter la table `Table1` on utilise :
 
     ```python
-    >>> vers_csv('Table1', ['Nom', 'Anglais', 'Info', 'Maths'])
+    >>> vers_csv('Table1.csv', ['Nom', 'Anglais', 'Info', 'Maths'])
     ```
 
     Python crée alors un fichier `Table1.csv` au format CSV :
@@ -312,7 +231,101 @@ liste_csv = lire_fichier_csv('2nde-14-liste.csv', delimiter=';')
     Max,19,13,14
     ```
 
-# 7. Les autres formats de données en table
+# 6. Sélectionner et projeter
+
+On est régulièrement amené à récupérer une partie des données.
+
+* lorsqu'on souhaite accéder à un ou plusieurs enregistrements vérifiant un critère,
+  on réalise une _sélection_.
+* lorsqu'on souhaite accéder à toutes les données d'une colonne on réalise une
+  _projection_.
+
+## Exemple de sélection.
+
+Supposons qu'on dispose d'une table enregistrée dans une liste de dictionnaires :
+
+
+```python
+Table1 = [
+    {'Nom': 'Joe','Anglais': '17', 'Info': '18', 'Maths': '16'},
+    {'Nom': 'Zoé','Anglais': '15', 'Info': '17', 'Maths': '19'},
+    {'Nom': 'Max','Anglais': '19', 'Info': '13', 'Maths': '14'},
+    {'Nom': 'Bob','Anglais': '12', 'Info': '16', 'Maths': '10'}
+]
+```
+
+On souhaite extraire la liste des enregistrements des élèves ayant eu au moins 16
+en maths.
+
+On peut le faire "à la main" :
+
+```python
+au_moins_16_en_maths = []
+for enregistrement in Table1:
+    if enregistrement['Maths'] >= 16:
+        au_moins_16_en_maths.append(enregistrement)
+```
+
+Le résultat est _encore une table_ :
+
+```python
+Table1 = [
+    {'Nom': 'Joe','Anglais': '17', 'Info': '18', 'Maths': '16'},
+    {'Nom': 'Zoé','Anglais': '15', 'Info': '17', 'Maths': '19'}
+]
+```
+
+On peut le faire avec une liste par compréhension :
+
+```python
+au_moins_16_en_maths = [enre for enre in Table1 if enre['Maths'] >= 16]
+```
+
+Le résultat est identique.
+
+## Exemple de projection
+
+Cette fois, on souhaite récupérer toutes les valeurs pour un champ donné,
+par exemple toutes les notes de mathématiques.
+
+L'approche est similaire, on crée une liste, on parcourt la table et
+on ajoute à la liste tous les éléments qui nous intéressent :
+
+* à la main :
+
+    ```python
+    notes_maths = []
+    for enregistrement in Table1:
+        notes_maths.append(enregistrement['Maths'])
+    ```
+
+* par compréhension :
+
+    ```python
+    notes_maths = [enre['Maths'] for enre in Table1]
+    ```
+
+Dans les deux cas le résultat est la liste `[16, 19, 14, 10]`
+
+### Exercices
+
+1. Adapter la sélection afin de récupérer tous les enregistrements
+    des élèves dont le nom comporte un "o"
+2. Projeter afin de construire la liste des noms puis celle des paires de notes
+  d'info et de maths :
+
+    ```python
+    [(18, 16), (17, 19), (13, 14), (16, 10)]
+    ```
+
+
+
+
+
+
+# 7. _Compléments_
+
+_Cette partie est donnée pour votre culture mais n'est pas à apprendre_.
 
 
 Le format CSV n'est pas le seul utilisé pour enregistrer des données.
@@ -412,107 +425,93 @@ Mais aussi :
 * Utilisé par des machines pour communiquer via une API : JSON
 * Pour stocker des configurations de programme : Yaml, INI, format propriétaire
 
-# Manipuler les données
-
-**En bref :** _Une fois que l'on dispose des données en table, on a accès à
-toute la palette de commandes du langage de programmation utilisé.
-On peut donc créer des outils de manipulation des tables, comme la recherche
-et le tri._
 
 
-## 1. Sélection de lignes vérifiant un critère
-
-* On cherche à créer une nouvelle table en extrayant d'une
-    table les lignes satisfaisant une condtion donnée
-    sous la forme d'une **fonction booléenne**.
-
-    **Mot clé :** _Les opérateurs booléens habituels
-    sont `<, >, <=, >=, ==, !=, in, not, and, or, is,...`_
-
-* Cas d'un critère _simple_. Si le critère est simple à exprimer, par exemple
-    "sélectionner l'enregistrement de Joe", on peut réaliser la sélection à la
-    main :
-
-    _Exemple :_ Reprenons le tableau de la première partie.
-
-    ```python
-    >>> [ligne for ligne in table if ligne["Nom"] == "Joe"]
-    [{'Nom' : 'Joe', 'Anglais': '17', 'Info': '18', 'Maths': '16'}]
-    ```
-
-* Cas d'un critère plus complexe. On crée la fonction
-    `select` ci-dessous qui prend en paramètre une table (`table`, une liste
-    de dictionnaires) et un critère de sélection (`critere)` sous forme d'une
-    chaîne de caractères contenant un test booléen prenant une ligne en 
-    argument. La fonction renvoie une liste construite par compréhension avec
-    un filtre qui ne contient que les lignes de la table qui satisfont le
-    critère donné en argument.
-
-    ```python
-    def select(table: list, critere: str) -> list:
-        def test(ligne):
-            return eval(critere)
-        return [ligne for ligne in table if test(ligne)]
-    ```
-
-    _Exemple :_ Reprenons le tableau de la première partie.
+## Importer les données en Python sans utiliser le module CSV
 
 
-    |   | A   | B       | C    | D     |
-    |---|-----|---------|------|-------|
-    | 1 | Nom | Anglais | Info | Maths |
-    | 2 | Joe | 17      | 18   | 16    |
-    | 3 | Zoé | 15      | 17   | 19    |
-    | 4 | Max | 19      | 13   | 14    |
+Vous rencontrerez vraisemblablement des variantes de la méthode précédente.
+Nous allons en présenter rapidement plusieurs. Elles ne sont _pas à connaître
+mais à comprendre_.
 
-    Pour sélectionner les élèves ayant plus de 16 en maths, on utilise la
-    fonction `eval` qui permet d'évaluer l'expression contenue dans la cellule
-    `ligne["Maths"]` sous forme d'une chaîne de caractères en un entier.
 
-    ```python
-    >>> select(Table1, "eval(ligne['Maths']) > 16")
-    ```
 
-    Et on obtient bien uniquement la ligne satisfaisant le critère :
+### Créer un tableau doublement indexé
 
-    ```python
-    [{'Nom' : 'Zoé', 'Anglais': '15', 'Info': '17', 'Maths': '19'}]
-    ```
+Voyons d'abord comment réaliser chacune des étapes (c'est un attendu) puis
+comment le faire à l'aide des outils proposés.
 
-    L'avantage de cette seconde méthode est d'obtenir une fonction `select`
-    qui permet de filtrer les données pour n'importe quel critère.
+```python
+CHAMPS = ["nom", "moyenne", "moyenne_brute"]
 
-# 2. Sélection de colonnes
+def lire_fichier_csv(filename, delimiter=','):
+  res = []
+  with open(filename) as f:
+    f.readline() # on zappe la première ligne...
+    l = f.readline()
+    while l != '':
+      args = l.replace('"', '').strip().split(delimiter)
+      try:
+        enregistrement = []
+        for i in range(len(args)):
+          enregistrement[i] = args[i]
+        res.append(enregistrement)
+      except ValueError:
+        pass
+      l = f.readline()
+    return res
 
-* Pour sélectionner un ou plusieurs attributs (colonnes) d'une table (cette
-    opération s'appelle "projection" dans le langage des bases de données), on
-    va créer une nouvelle table  qui ne contiendra que ces attributs :
+liste_csv = lire_fichier_csv('2nde-14-liste.csv', delimiter=';')
+```
 
-    ```python
-    def projection(table, liste_attributs):
-        return [{cle:ligne[cle] for cle in ligne if cle in liste_attributs}
-                for ligne in table]
-    ```
 
-* Dans notre exemple, on veut ne retenir que les notes d'info et le nom
-    des élèves. Pour obtenir la table attendue, on entre :
+#### Commentaires détaillés sur la fonction `lire_fichier_csv`
 
-    ```python
-    >>> projection(Table1, ['Nom', 'Info'])
-    ```
+* ligne 4 : on crée la liste des enregistrements
+* ligne 5 : on ouvre le fichier et on le stocke dans une variable temporaire `f`
+* ligne 6 : `f.readline()` : lire une ligne et avancer à la suivante
+* ligne 7 : on a zappé la première ligne et on lit la seconde
+* ligne 5 : tant qu'on a des lignes non vides
+* ligne 9 : on nettoie la ligne : virer les ", les espaces de début et de fin et on sépare la ligne tous les 'delimiter'
+* ligne 10 : on essaye de créer l'enregistrement
+* ligne 11 : c'est une liste python
+* ligne 13 : on l'ajoute à la liste des enregistrements
+* ligne 16 : si jamais la ligne est imparfaite, on la zappe
+* ligne 17 :  on avance à la ligne suivante
 
-    On obtient :
+#### Qu'obtient-on ?
 
-    ```python
-    [{'Nom': 'Joe', 'Info': '18'},
-     {'Nom': 'Zoé', 'Info': '17'},
-     {'Nom': 'Max', 'Info': '13'}]
-    ```
+Un tableau doublement indexé. Les descripteurs sont enregistrés dans `CHAMPS`.
+Ils ne sont pas utilisés dans la fonction d'import.
 
-    qui modélise le tableau :
 
-    | Nom | Info |
-    |-----|------|
-    | Joe | 18   |
-    | Zoé | 17   |
-    | Max | 13   |
+### Variante : vers un tableau de dictionnaire.
+
+**Exercice :** adapter la première fonction d'import pour qu'elle retourne
+un tableau de dictionnaires.
+
+**Réponse :**
+
+
+```python
+CHAMPS = ["nom", "moyenne", "moyenne_brute"]
+
+def lire_fichier_csv(filename, delimiter=',', champs=CHAMPS):
+  res = []
+  with open(filename) as f:
+    f.readline() # on zappe la première ligne...
+    l = f.readline()
+    while l != '':
+      args = l.replace('"', '').strip().split(delimiter)
+      try:
+        enregistrement = {} # on crée un dictionnaire
+        for i in range(len(args)):
+          enregistrement[champs[i]] = args[i] # les clés sont les éléments de CHAMPS
+        res.append(enregistrement)
+      except ValueError:
+        pass
+      l = f.readline()
+    return res
+
+liste_csv = lire_fichier_csv('2nde-14-liste.csv', delimiter=';')
+```
