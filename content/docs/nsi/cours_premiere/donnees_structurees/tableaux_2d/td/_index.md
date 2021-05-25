@@ -1,13 +1,13 @@
 ---
-subtitle: "Travaux dirigés : tableaux à deux dimensions"
+subtitle: "TD : tableaux à deux dimensions"
 author: "qkzk"
-date: "2020/07/06"
-weight: 3
+date: "2021/05/23"
+weight: 1
 
 ---
 
 
-### PDF [pour impression](/uploads/docsnsi/algo/tableaux_2d/td_2d_comprehension.pdf)
+### PDF [pour impression](/uploads/docsnsi/algo/tableaux_2d/td_tableaux_2d.pdf)
 
 # Tableaux à deux dimensions
 
@@ -41,7 +41,104 @@ fin du pour
     colonnes ?
 3. Traduire cet algorithme dans une fonction python `cumul_grille`
 
-## 2. Élément extrême
+## 2. Parcourir un tableau à deux dimensions.
+
+  On considère un tableau à deux dimensions enregistré dans `grille` :
+
+  ```python
+  grille = [[4, 5, 2, 1, 3],
+            [5, 1, 3],
+            [7, 8, 1, 2],
+            [0, 1, 2, 5]]
+  ```
+
+  Remarquons d'abord que les sous listes sont de taille différente.
+
+  1. Proposer un algorithme permettant de compter les éléments de la grille.
+  2. Traduire cet algorithme en Python.
+  3. Adapter votre algorithme pour calculer aussi la somme de tous les éléments en
+    une seul parcours.
+  4. Traduire cette modification dans votre programme Python.
+  5. Écrire une fonction `moyenne_grille` qui prend en paramètre une grille comme
+    la précédente et renvoie la valeur moyenne des éléments qu'elle contient.
+
+
+## 3. D'une liste plate à une double liste et inversement.
+
+On considère un tableau à deux dimensions comme celui ci-dessous :
+
+|   |   |   |
+|---|---|---|
+| 2 | 3 | 5 |
+| 5 | 2 | 7 |
+| 4 | 3 | 1 |
+| 6 | 2 | 9 |
+
+1. a) Construire un tableau à une dimension comportant chaque élément du tableau.
+    Les lignes sont simplement mises bout à bout.
+
+    b) Combien d'éléments comporte cette liste ?
+
+    c) On souhaite accéder à l'élément 7 du tableau ci-dessus dans la liste.
+
+        7 est situé à la deuxième ligne, troisième colonne du tableau ci-dessus.
+
+        **On compte les éléments dans le tableau à 2 dimensions à partir de l'indice 0**.
+
+        * Son numéro de ligne est `no_ligne = 1`
+        * son numéro de colonne est `no_colonne = 2`
+        * chaque ligne comporte `len_ligne = 3` éléments
+
+        Son indice dans la liste à une dimension est donc.
+
+        `indice = len_ligne * no_ligne + no_colonne` qui vaut `1 * 3 + 2 = 5`
+
+        Calculer l'indice dans la liste des éléments 6 et 9.
+
+2. Nous allons transformer cette liste en une liste à deux dimensions.
+
+    L'algorithme est le suivant :
+
+    ```
+    len_ligne   : un entier,
+    liste_plate : une liste à 1 dimension
+    liste_2d    : une liste vide
+    Pour i allant de 0 à longueur de la liste - 1:
+        si i % len_ligne == 0:
+          si i != 0:
+            ajouter ligne à liste_2d
+          créer une liste vide : ligne
+        ajouter à ligne l'élément d'indice i de liste_plate
+    ajouter ligne à liste_2d
+    ```
+
+    Le résultat final est une liste à deux dimensions comme celle-ci :
+
+    ```python
+    [[2, 3, 5],
+     [5, 2, 7],
+     [4, 3, 1],
+     [6, 2, 9]]
+    ```
+
+    Écrire cet algorithme en Python.
+
+
+3. Dans l'autre sens.
+
+    On part cette fois d'une liste à deux dimensions comme :
+
+    ```python
+    liste_2d = [[3, 5, 1], [4, 7, 9], [6, 2, 3], [1, 2, 1]]
+    ```
+
+    a. Écrire un algorithme permettant d'enregistrer tous les nombres
+        dans une liste à une dimension.
+
+    b. Écrire le programme Python correspondant.
+
+
+## 4. Élément extrême
 
 On a relevé dans un tableau  appelé `temperatures` les températures à midi
 de chaque jour de la semaine. 
@@ -87,14 +184,14 @@ syntax error: 'return' outside a function
 
 
 
-## 3. Modifier un tableau de pixels
+## 5. Modifier un tableau de pixels
 
 
 Le programme suivant génère une image rectangulaire comportant un dégradé
 du blanc au noir :
 
 
-$\;$![degradé](/uploads/docsnsi/algo/degrade_bn.png)
+![degradé](/uploads/docsnsi/algo/degrade_bn.png)
 
 
 ```python
@@ -119,11 +216,11 @@ def degrade_blanc_noir():
 2. On souhaite tourner l'image afin de produire un dégradé vertical.
     Adaptez la fonction.
 
-    $\;$![degradé vetical](/uploads/docsnsi/algo/degrade_vertical.png)
+    ![degradé vetical](/uploads/docsnsi/algo/degrade_vertical.png)
 
 
 
-## 4. Matrice enregistrée en ligne
+## 6. Matrice enregistrée en ligne
 
 
 On a enregistré le nombre de naissances dans une petite maternité pour chaque
@@ -197,7 +294,7 @@ for i in range(3):
 
 # Listes par compréhension
 
-## 5. Lire des listes par compréhension
+## 7. Lire des listes par compréhension
 
 Décrire les listes suivantes :
 
@@ -231,7 +328,7 @@ Décrire les listes suivantes :
 
 # Itérer sur un Dictionnaire
 
-## 7. Les développeurs
+## 8. Les développeurs
 
 On considère le statut des membres d'une équipe de développeurs :
 
@@ -252,7 +349,7 @@ par son nom. Ses paramètres d'entrée sont des chaînes de caractères.
 3. Comment récupérer la liste des prénoms de l'équipe de développeurs ?
 
 
-## 8. Les monstres du jeu
+## 9. Les monstres du jeu
 
 On a enregistré dans un dictionnaires les caractéristiques des monstres qui
 figurent dans un jeu :
