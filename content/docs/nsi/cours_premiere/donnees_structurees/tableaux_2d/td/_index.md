@@ -1,8 +1,8 @@
 ---
-subtitle: "TD : tableaux à deux dimensions"
+subtitle: "TD : tableaux 2D"
 author: "qkzk"
 date: "2021/05/23"
-weight: 1
+weight: 3
 
 ---
 

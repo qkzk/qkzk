@@ -1,5 +1,5 @@
 ---
-title: "Cours : tableaux 2D et compréhension"
+title: "Cours : tableaux 2D"
 author: "qkzk"
 date: "2020/11/22"
 weight: 1
