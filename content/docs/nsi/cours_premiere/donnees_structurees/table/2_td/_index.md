@@ -8,7 +8,152 @@ weight: 2
 
 ### pdf : [pour impression](/uploads/docsnsi/table_csv/2_td.pdf)
 
-# 1. Importer une table
+# 1. Reconnaître un fichier csv
+
+```
+nom       prenom      date_naissance
+Dupont    Pierre      17/05/1987
+Dupond    Catherine   18/07/1981
+Haddock   Archibald   23/04/1998
+```
+
+1. Quels sont les descripteurs de ce tableau ?
+
+```
+Nom,Pays,Temps
+Camille Muffat,France,241.45
+FranckyVincent,France,222,30
+Geronomo,Apache, France,212.12
+```
+
+2. Rectifiez les erreurs dans le fichier csv ci-dessus.
+
+### QCM
+
+1. Qu'est-ce que le format de fichier CSV ?
+
+    A. un format de fichier mis au point par Microsoft pour Excel
+
+    B. un format de fichier pour décrire une base de données
+
+    C. un format de fichier où les données sont séparées par un caractère tel qu'une virgule
+
+    D. un format de fichier décrivant une page Web
+
+2. Laquelle de ces affirmations est vraie ?
+
+    A. on ne peut accéder au contenu d'un fichier CSV que par l'intermédiaire d'un programme Python
+
+    B. CSV est un format de chiffrement des données
+
+    C. le format CSV a été conçu pour asssurer la confidentialité d'une partie du code d'un programme
+
+    D. les fichiers CSV sont composés de données séparées par des caractères comme des virgules
+
+3. Dans la plupart des fichiers CSV, que contient la première ligne ?
+
+    A. des notes concernant la table de données
+
+    B. les sources des données
+
+    C. les descripteurs des champs de la table de données
+
+    D. l'auteur de la table de données
+
+
+# 1. Sélection et projections depuis une table donnée
+
+On considère la table suivante :
+
+```python
+repertoire = [
+    {"nom": "Ducobu", "prenom": "Raoul", "tel": "0612345678"},
+    {"nom": "Dreoul", "prenom": "Raymond", "tel": "0734567812"},
+    {"nom": "Martin", "prenom": "Jacqueline", "tel": "0612341234"},
+    {"nom": "Mersin", "prenom": "Tania", "tel": "0788990011"},
+]
+```
+
+1. Donner la valeur de la liste construite dans chacune des sélections suivantes :
+
+  a. $\,$
+
+      ```python
+      liste = []
+      for enregistrement in repertoire:
+          if enregistrement["nom"] == "Ducobu":
+              liste.append(enregistrement)
+      ```
+
+  b. $\;$
+
+      ```python
+      liste = [enre for enre in repertoire if "12" in enre["tel"]]
+      ```
+
+2. Construire l'enregistrement des personnes dont le nom comporte un "r".
+
+3. Donner le résultat de la projection suivante :
+
+
+    ```python
+    proj = [enregistrement["prenom"] for enregistrement in repertoire]
+    ```
+
+4. Constuire la projection des téléphones du répertoire.
+
+
+
+# 2. Importer et manipuler une table
+
+
+On dispose du fichier « info.csv » donné ci-dessous :
+
+```
+nom, prenom, naissance, deces
+lovelace, ada, 1815, 1852
+von neumann, john, 1903, 1957
+turing, alan, 1912, 1954
+mccarthy, john, 1927, 2011
+floyd, robert, 1935, 2001
+```
+
+Le programme ci-dessous nous permet de créer un tableau à partir de ce fichier.
+
+```python
+file = open("info.csv", "r")
+firstLine = file.readline()	    # chargement de la ligne d’entête
+tableau = [line.split(',') for line in file]  # chargement des données
+```
+
+Détaillons ce programme :
+
+1. On charge le fichier dans la variable `file`
+2. on lit la première ligne, et on avance ainsi d'une ligne dans le fichier.
+3. On crée un tableau à deux dimensions. Chaque ligne du tableau correspond
+ à une ligne de valeurs du fichier. La première ligne est 
+ `["lovelace", "ada", "1815", "1852"]`.
+
+  Techniquement : `line` est un `str` et la méthode `.split(',')` va séparer
+  cette chaîne en une liste de `str` autour de chaque virgule.
+
+ Remarquons que tous les éléments des enregistrements sont des `str` !
+
+## Questions
+
+1. Combien d'éléments comporte la liste `tableau` ?
+2. Évaluez `tableau[2]`.
+3. Évaluez `tableau[1][3]`
+4. Comment accéder à l'année de décès de John McCarthy ?
+5. Modifier l'année de naissance de Robert Floyd qui est né en 1936.
+6. Réaliser la sélection des informaticiens décédés avant 1952 :
+
+    a. Directement en repérant les lignes intéressantes,
+    b. À l'aide d'une boucle et d'un test adaptable à un fichier beaucoup
+      plus rempli. On prendra garde au _type_ des données dans `tableau` !
+
+
+# 3. Importer une table
 
 On considère le fichier csv `films.csv` dont voici un extrait.
 
@@ -23,7 +168,7 @@ réponse ainsi que la valeur de celle-ci lorsque l'information est connue.
 3. Combien de champs différents comporte cette table ?
 3. Quelles sont les différents champs ?
 
-# 2. Exporter une table, sélections, projections
+# 4. Exporter une table, sélections, projections
 
 Les joueurs d'échecs sont classés selon les résultats de leurs parties.
 Chaque partie permet de gagner ou perdre des points élo et les joueurs
