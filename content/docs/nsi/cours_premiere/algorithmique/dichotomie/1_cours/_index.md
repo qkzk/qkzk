@@ -1,5 +1,5 @@
 ---
-title: Dichotomie
+title: "Cours : dichotomie"
 author: qkzk
 weight: 1
 

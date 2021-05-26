@@ -1,7 +1,5 @@
 ---
-title: "Travaux dirigés : Dichotomie"
-author: qkzk
-date: 2020/07/25
+title: "TD : dichotomie"
 weight: 2
 
 ---
@@ -10,7 +8,19 @@ weight: 2
 
 # Recherche dichotomique dans un tableau trié.
 
-## 1. Faire tourner à la main
+## 1. Recherche dichotomique
+
+1. Peut-on appliquer la recherche dichotomique au tableau `[-4, 1, 3, 0, 5, 8]`
+  pour rechercher le nombre 2 ? Justifier.
+1. Combien d'itérations vont être nécessaires à la recherche dichotomique vue
+  en cours pour trouver `15` dans le tableau `[1, 2, 15, 17, 30]` ?
+
+  Même question pour trouver l'élément `2`.
+2. Même question pour `[-4, -2, 0, 2, 10, 15, 18]` et les éléments `15` puis `2`.
+3. Quand on multiplie par 2 la taille du tableau, de combien augmente le nombre
+  d'itération d'une recherche dichotomique ?
+
+## 2. Faire tourner à la main
 
 On rappelle l'algorithme de recherche dichotomique dans un tableau trié.
 
@@ -66,7 +76,7 @@ fonction appartient(tableau, element)
     c. Expliquer le problème.
 
 
-## 2. Programmer
+## 3. Programmer
 
 
 1. Traduire en Python l'algorithme proposé dans l'exercice 1. On n'oubliera
@@ -90,7 +100,33 @@ fonction appartient(tableau, element)
            indice([1, 5, 17, 17, 19], 3) == 4
     ```
 
-## 3. Résoudre numériquement une équation
+## 4. Dichotomie et présence d'ex aequo
+
+La fonction `bisect_left(t, v)` de Python (`from bisect import bisect_left`) est
+une variante de la recherche dichotomique vue en cours qui renvoie systématiquement
+le premier indice `i` de `t` tel que `t[i] >= v` (alors que la recherche dichotomique 
+renvoie un indice quelconque `i` tel que `t[i] == v` et -1 s'il n'en existe pas).
+La complexité de `bisect_left` est logarithmique.
+
+Soit `t` le tableau `[1, 3, 7, 9]`
+
+1. Quel sera le résultat de `bisect_left(t, 5)` ?
+2. Même question avec le tableau `t = [1, 1, 3, 3, 3, 7, 9]` et l'instruction `bisect_left(t, 3)`.
+2. On enregistre dans la variable `indice` le résultat de l'instruction précédente.
+    Quel sera la valeur de `t` après l'instruction : `t.insert(indice, 5)` ?
+3. De manière générale, on considère un tableau `t` et les deux instructions suivantes :
+
+    ```python
+    indice = bisect_left(t, valeur)
+    t.insert(indice, valeur)
+    ```
+
+    Que peut-on dire de l'état de `t` après ces instructions ?
+
+3. Quel-est le rôle de la fonction `bisect_left` ?
+
+
+## 4. Résoudre numériquement une équation
 
 _Les méthodes numériques permettent de calculer de manière effective des
 solutions numériques à divers problèmes, souvent liés à la physique. Nous
@@ -107,7 +143,7 @@ Cette méthode peut être utilisée dans les cas où une solution analytique n'e
 pas connue.
 
 Dans toute la suite, on supposera que $f$ est une fonction continue.\
-On admet que s'il existe $a < b$ tels que $f(a) \times f(b) < 0$ alors, il
+On admet que s'il existe $a \textless b$ tels que $f(a) \times f(b) \textless 0$ alors, il
 existe $c \in [a;b]$ tel que $f(c) = 0$.
 
 1. L'algorithme de recherche de solution par la méthode dichotomique consiste,
