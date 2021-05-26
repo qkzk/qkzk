@@ -5,6 +5,8 @@ weight: 10
 
 ---
 
+### pdf : [pour impression](./TD_IHM_2_js.pdf)
+
 # HTML
 
 ![HTML 5](https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/240px-HTML5_logo_and_wordmark.svg.png)
@@ -71,7 +73,7 @@ Voici quelques éléments de comparaison entre Python et Javascript :
 
 
     nom = "Duchmol"
-    prenom = "Raoul"       # Deuxième prénom Aldo
+    prenom = "Robert"       # Deuxième prénom Aldo
     taille_robert = 1.8
     masse_robert = 280
     imc_robert = calculer_imc(taille_robert, masse_robert)
@@ -136,10 +138,12 @@ remplacé.
     "Mes films préférés".
 3. On a oublié de remplir la liste des films préférés. En utilisant le même
     procédé, ajouter la liste des trois films préférés de
-    Raoul (Rambo 1, Rambo 2, Rambo 3) :
+    Robert (Rambo 1, Rambo 2, Rambo 3) :
 
     a. À la main directement dans le code html,
+
     b. Un par un en JavaScript
+
     c. À l'aide d'une boucle `for`.
 
 
@@ -162,7 +166,8 @@ Voici un exemple tiré de w3Schools :
 
 <p>The onclick event is used to trigger a function when an element is clicked on.</p>
 
-<p>Click the button to trigger a function that will output "Hello World" in a p element with id="demo".</p>
+<p>Click the button to trigger a function that will output "Hello World"
+   in a p element with id="demo".</p>
 
 <button onclick="myFunction()">Click me</button>
 
@@ -182,7 +187,9 @@ function myFunction() {
 
     1. Un paragraphe vide,
     2. Un bouton dont le clic déclenche l'appel à une fonction,
-    3. Cette fonction affiche la date de naissance de Raoul : le premier
+    3. Cette fonction affiche la date de naissance de Robert : le premier
         janvier 1964.
 2. Modifier la fonction précédente pour qu'elle efface tout le contenu de la
     page.
+
+    _On pourra ajouter une `id` à l'élément `<body>`_
