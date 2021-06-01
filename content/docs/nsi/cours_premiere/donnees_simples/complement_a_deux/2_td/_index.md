@@ -7,7 +7,24 @@ weight: 2
 
 ### pdf : [pour impression](/uploads/docsnsi/donnees_qkzk_img/complement_a_2_TD.pdf)
 
-# 1. Tailles minimales et maximales
+
+# V/F
+
+1. Tous les entiers relatifs admettent une unique représentation en complément à deux.
+2. En complément à deux sur un octet, on peut représenter des nombres de -128 à 127.
+3. L'addition en complément à deux sur un octet de 100 et 110 donne un résultat conforme.
+
+# 1. Additions d'entiers relatifs
+
+1. Donner la représentation binaire de 27 et 33. 
+2. Donner la représentation en binaire signé sur un octet de -27 et 33.
+3. Vérifier que l'addition des deux représentation précédentes ne donne
+  pas la représentation de 6.
+4. Recommencer en utilisant le complément à deux sur un octet et vérifier
+  que cette fois le résultat est conforme.
+
+
+# 2. Tailles minimales et maximales
 
 1. On encode des entiers sur 2 octets.
 
@@ -22,7 +39,7 @@ weight: 2
 
     b. Quels sont les plus petits et plus grands entiers qu'on puisse encoder ?
 
-# 2. Complément à deux sur un octet.
+# 3. Complément à deux sur un octet.
 
 On encode les entiers en complément à 2 sur un octet.\
 Compléter le tableau suivant :
@@ -48,7 +65,7 @@ premier + second, second + troisième, troisième + quatrième.
 
 Vérifier les résultats obtenus.
 
-# 3. Complément à deux, un programme
+# 4. Complément à deux, un programme
 
 Dans cet exercice nous allons écrire une fonction qui réalise le complément
 à deux en Python.
