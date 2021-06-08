@@ -1,5 +1,5 @@
 ---
-title: 'Les algorithmes gloutons - 1. cours'
+title: '1. cours'
 author: qkzk
 date : 2020/08/01
 weight: 1

@@ -7,7 +7,7 @@ weight: 6
 ---
 
 
-# Données en table
+# Les algorithmes glouton
 
 1. [Cours](1_cours)
 2. [Travaux dirigés](2_td)

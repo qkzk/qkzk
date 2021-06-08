@@ -1,5 +1,5 @@
 ---
-title: 'Les algorithmes gloutons - 5. TD'
+title: '5. TD'
 author: qkzk
 date : 2020/08/01
 weight: 5

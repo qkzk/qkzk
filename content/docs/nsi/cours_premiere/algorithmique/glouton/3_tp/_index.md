@@ -1,5 +1,5 @@
 ---
-subtitle: 'Algorithme Glouton. 3. TP : Problème des étagères'
+title: '3. TP : Étagères'
 author: qkzk
 date: 2020/03/07
 weight: 3

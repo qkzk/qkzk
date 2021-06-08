@@ -1,8 +1,8 @@
 ---
-subtitle: 'Les algorithmes gloutons - 2. travaux dirigés'
+title: '2. TD'
 author: qkzk
 date: 2020/08/01
-weight: 1
+weight: 2
 
 ---
 
