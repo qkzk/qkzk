@@ -1,8 +1,9 @@
 ---
-title: 'Récursivité'
+title: 'Cours'
 author: 'qkzk'
-date: 2019/12/25
+date: 2021/06/14
 weight: 1
+
 ---
 
 ### pdf : [pour impression](/uploads/docnsitale/recursivite/pdf/1_cours_print.pdf), diapo [avec anim](/uploads/docnsitale/recursivite/pdf/1_cours_slides_animes.pdf), diapo [sans anim](content/uploads/docnsitale/recursivite/pdf/1_cours_slides.pdf)
@@ -14,11 +15,11 @@ weight: 1
 * Larousse :
   * [récursivité](https://www.larousse.fr/dictionnaires/francais/r%c3%a9cursivit%c3%a9/67271) :
 
-	> *Propriété que possède une règle ou un élément constituant de pouvoir se répéter de manière théoriquement indéfinie. (C'est une propriété essentielle des règles d'une grammaire générative, celle qui permet d'engendrer un nombre infini de phrases.)*
-	>
-	> *Qualité d'un programme informatique récursif.*
-	>
-	> *Théorie destinée à fournir un cadre rigoureux à l'étude des notions intuitives de calculabilité et de décidabilité effectives. (Church a montré [1936] que la récursivité est l'équivalent mathématique de la calculabilité effective : la fonction récursive est une fonction rigoureusement calculable.)*
+  > *Propriété que possède une règle ou un élément constituant de pouvoir se répéter de manière théoriquement indéfinie. (C'est une propriété essentielle des règles d'une grammaire générative, celle qui permet d'engendrer un nombre infini de phrases.)*
+  >
+  > *Qualité d'un programme informatique récursif.*
+  >
+  > *Théorie destinée à fournir un cadre rigoureux à l'étude des notions intuitives de calculabilité et de décidabilité effectives. (Church a montré [1936] que la récursivité est l'équivalent mathématique de la calculabilité effective : la fonction récursive est une fonction rigoureusement calculable.)*
   * [récursif](https://www.larousse.fr/dictionnaires/francais/r%C3%A9cursif_r%C3%A9cursive/67268) :
 
     > *Se dit d'une règle ou d'un élément doués de récursivité.*
@@ -53,7 +54,7 @@ derivee(f) =
     sinon si …
 ```
 
-2. Production de fractales : le [flocon de Von Koch](./img/Koch_anime.gif)
+2. Production de fractales :
 
 On dispose de la primitive *tracer(l)* qui permet de tracer un segment de longueur *l*.
 
@@ -75,20 +76,23 @@ Le processus de tracé d'un segment de von koch de taille *l*  à l'ordre *n* es
 
 
 
-Le [flocon](./img/flocon_vonkoch.gif) est obtenu en traçant 3 segments de von koch séparés par des rotations à droite de 120°.
+Le [flocon](/uploads/docnsitale/recursivite/img/flocon_vonkoch.gif) est obtenu en traçant 3 segments de von koch séparés par des rotations à droite de 120°.
 
-[<img src="./img/vonkoch.jpg" alt="flocon von koch"/>](./img/flocon_vonkoch.gif)
+![flocon](/uploads/docnsitale/recursivite/img/flocon_vonkoch.gif)
 
 *NB* Se réalise très bien avec la tortue (module `turtle`), *tracer(l)* = `forward(l)` et les fonctions `right`et `left` permettent les rotations
 
 ### Images
 
-* *Print gallery* M.C.Escher   ([mise en abime](./img/escher-mise-en-abime.gif))
-	<img src="img/escher_print_gallery.jpg" alt="Pr Gallery d'Escher"/> <!--<img src="img/escher-mise-en-abime.gif" alt="mise en abime print gzallery escher"/>-->
-* *La vache qui rit*  ([mise en abime](./img/vache-qui-rit-mise-en-abime.gif))
-	<img src="img/vache-qui-rit.png" alt="logo la vache qui rit"/> <!--<img src="img/vache-qui-rit-mise-en-abime.gif" alt="mise en abime logo vache qui rit"/>-->
+* *Print gallery* M.C.Escher  
+  
+  ![mise en abime](/uploads/docnsitale/recursivite/img/escher-mise-en-abime.gif)
+* *La vache qui rit*  
+  
+  ![mise en abime](/uploads/docnsitale/recursivite/img/vache-qui-rit-mise-en-abime.gif))
 * *Pochette Ummagumma* de Pink Floyd
-	<img src="img/pinkfloyd-ummagumma-recursivite.jpg" alt="pochette ummagumma Pink Floyd"/>
+
+  ![pink floyd](/uploads/docnsitale/recursivite/img/pinkfloyd-ummagumma-recursivite.jpg)
 
 ### Sigles
 * VISA : *VISA* International Service Association
@@ -114,12 +118,21 @@ complement     ::=    adjectif
 ### Algorithme récursif
 
 Le *tri rapide* : cf. [reference sur site U. Lille](https://gitlab-fil.univ-lille.fr/diu-eil-lil/portail/blob/master/bloc2/tri-sans-ordi-correction/readme.md#le-tri-rapide) :
-"*appliquer la même méthode pour les boîtes de ...*"
 
 ### Structures récursives
 
+Certaines structures de données sont naturellement récursives.
+
 *listes*, *arbres*
 
+Une _liste_ est une structure de données.
+
+* Elle peut être vide.
+* Lorsqu'elle n'est pas vide, elle contient deux objets : un _élément_ et un _pointeur_ vers **une autre liste.**
+
+  ![liste](https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/Singly-linked-list.svg/408px-Singly-linked-list.svg.png)
+
+  _plus de détails plus bas !_
 
 ## Algorithmes récursifs
 
@@ -128,9 +141,9 @@ Le *tri rapide* : cf. [reference sur site U. Lille](https://gitlab-fil.univ-lill
 > Dans un algorithme récursif, on nomme **appel récursif** toute étape de l’algorithme résolvant le même problème sur une autre donnée.
 
 ### Exemple
-Ne faisons pas dans l'originalité :
+Ne faisons pas dans l'originalité, la _factorielle_ :
 
- **n! = n x (n-1)! si n > 1** et **0! = 1**
+ $$n! = n \times (n-1)! \text{ si } n > 1 \text{ et } 0! = 1$$
 
 Principe :
 
@@ -158,42 +171,55 @@ def fact(n):
 120
 ```
 
-### Déroulement de l'exécution
+## Déroulement de l'exécution
+
 Mise en évidence :
 
  * avec le debugger de Thonny
 
  * avec [PythonTutor](http://pythontutor.com/live.html#code=def%20fact%28n%29%3A%20%20%20%20%0A%20%20%20%20if%20n%20%3C%3D%201%3A%0A%20%20%20%20%20%20%20%20return%201%0A%20%20%20%20else%3A%0A%20%20%20%20%20%20%20%20return%20n%20*%20fact%28n-1%29%0A%20%20%20%20%20%20%20%20%0Aresult%20%3D%20fact%285%29&cumulative=true&curInstr=0&heapPrimitives=false&mode=display&origin=opt-live.js&py=3&rawInputLstJSON=%5B%5D&textReferences=false)
 
-  * utilisation d'un décorateur (défini dans `src/recursivite_decorators.py`, fourni).
-
-```python
-from recursivite_decorators import *
-
-@trace
-def fact(n):
-    ...
-```
-
 On observe la construction de la pile des appels successifs de la fonction.
 Chaque appel possède son propre environnement, donc ses propres variables.
 
 La pile est nécessaire pour mémoriser les valeurs propre à chaque appel.
+
 
 ```python
 def fact(n):
     if n <= 1:
         result = 1
     else:
-	next_value = n-1
+  next_value = n-1
         result = n * fact(next_value)
     return result
->>> fact(5)
-120
+
+fact(5)         # s'évalue à 120
 ```
 
 Dans [PythonTutor](http://pythontutor.com/live.html#code=def%20fact%28n%29%3A%0A%20%20%20%20if%20n%20%3C%3D%201%3A%0A%20%20%20%20%20%20%20%20result%20%3D%201%0A%20%20%20%20else%3A%0A%20%20%20%20%20%20%20%20next_value%20%3D%20n-1%0A%20%20%20%20%20%20%20%20result%20%3D%20n%20*%20fact%28next_value%29%0A%20%20%20%20return%20result%0Afact%285%29&cumulative=true&curInstr=0&heapPrimitives=false&mode=display&origin=opt-live.js&py=3&rawInputLstJSON=%5B%5D&textReferences=false)
 
+### Déroulement des appels récusifs
+
+Lorsqu'on appelle une fonction récusive :
+
+* **Python entre dans la fonction et crée un appel initial.**
+* Il calcule tout ce qu'il peut jusqu'à rencontrer l'appel récursif...
+* Python entre dans la fonction et crée un appel
+* Il calcule tout ce qu'il peut jusqu'à rencontrer l'appel récursif...
+* Python entre dans la fonction et crée un appel
+* ...
+* **Lorsqu'on arrive au cas de base, Python renvoie la valeur à l'appel dont il est issu**
+* L'appel reçoit la valeur, termine son calcul et renvoie la valeur à l'appel dont il est issu
+* L'appel reçoit la valeur, termine son calcul et renvoie la valeur à l'appel dont il est issu
+* ...
+* **L'appel initial reçoit la valeur, termine son calcul et renvoie la valeur à l'appel initial.**
+
+Seules les premières et dernières étapes sont _visibles_.
+
+
+
+### Taille de la pile des appels récusifs
 
 **Attention** En Python la taille de la pile des appels récursifs est limitée. Si la récursivité est trop profonde et que l'on atteint cette limite, on déclenche une `RecursionError`.
 
@@ -221,7 +247,11 @@ et modifiée par
 ```
 
 
-### Eléments Caractéristiques
+# Eléments Caractéristiques
+
+_cours, à noter_
+
+Un programme récursif est constitué de deux parties :
 
 1. **il faut au moins une situation qui ne consiste pas en un appel récursif**
 
@@ -242,11 +272,11 @@ Cette situation est appelée **situation de terminaison** ou **situation d'arrê
 
 La preuve de terminaison d'un algorithme récursif se fait en identifiant la construction d'une suite strictement décroissante d'entiers positifs ou nuls.
 
-Dans le cas de factorielle, il s'agit simplement de la suite des valeurs du paramètre.
+_Remarque:_ Dans le cas de factorielle, il s'agit simplement de la suite des valeurs du paramètre.
 
 
 
-**Mauvaise conception récursive**
+### Mauvaise conception récursive
 
 Respecter la première règle ne suffit pas :
 
@@ -258,7 +288,9 @@ def fact(n):
         return fact(n+1)/(n+1)
 ```
 
-### Un autre exemple
+_Ce programme ne termine pas_
+
+## Un autre exemple
 Il faut trouver un énoncé récursif de résolution du problème, c'est-à-dire un énoncé qui fasse référence au problème lui-même.
 
 
@@ -269,25 +301,33 @@ Il faut trouver un énoncé récursif de résolution du problème, c'est-à-dire
 *Si *c* est le premier caractère de *s*, on ajoute 1 au **nombre d'occurrences** de *c* dans les autres caractères de *s*. Sinon, il s'agit du **nombre d'occurrences** de *c* dans les autres caractères de *s*.*
 
 ```python
-def occurrences(c,s):
-    if s == "":
+def occurrences(char, string):
+    if string == "":
        return 0
-    elif c == s[0]:
-    	 return 1 + occurrences(c,s[1:])
+    elif char == s[0]:
+       return 1 + occurrences(char, string[1:])
     else:
-         return occurrences(c,s[1:])
+         return occurrences(char, string[1:])
 ```
 
 La terminaison se vérifie en considérant la suite des longueurs des chaînes passées en paramètre.
 
 
 
-### Récursivité terminale
+## Récursivité terminale (_tail recursion_)
 
 Un algorithme récursif simple est terminal lorsque l'appel récursif est le dernier calcul effectué pour obtenir le résultat. Il n'y a pas de "calcul en attente". L'avantage est qu'il n'y a rien à mémoriser dans la pile.
 
 
-Ce n'est pas le cas des deux exemples précédents `fact` et `occurrences`.
+_Remarques_: 
+
+* Ce n'est pas le cas des deux exemples précédents `fact` et `occurrences`.
+* Certains langages  tirent partie de la récursion terminale pour accélérer un programme : C, Scheme...
+* Certains langages le font parfois : Rust, JavaScript...
+* D'autres ne le font pas du tout : **Python**
+
+Hormis pour la lisibilité du code (et c'est important), il n'y a aucune amélioration de l'exécution d'un programme Python lorsqu'on écrit un programme récursif
+avec une récursivité terminale.
 
 **Exemple d'algorithme récursif terminal**
 
@@ -296,13 +336,13 @@ Prédicat de présence d'un caractère dans une chaîne :
 *Un caractère *c* **est présent** dans une chaîne *s* non vide, s'il est le premier caractère de *s* ou s'il **est présent** dans les autres caractères de *s*. Il n'est pas présent dans la chaîne vide.*
 
 ```python
-def est_present(c,s):
-    if s == '':
+def est_present(char, string):
+    if string == '':
         return False
-    elif c == s[0]:
+    elif char == s[0]:
         return True
     else:
-        return est_present(c,s[1:])
+        return est_present(char, string[1:])
 ```
 
 Voir le comportement avec [PythonTutor](http://pythontutor.com/live.html#code=def%20est_present%28c,s%29%3A%20%20%20%20%0A%20%20%20%20if%20s%20%3D%3D%20''%3A%0A%20%20%20%20%20%20%20%20return%20False%0A%20%20%20%20elif%20c%20%3D%3D%20s%5B0%5D%3A%0A%20%20%20%20%20%20%20%20return%20True%0A%20%20%20%20else%3A%0A%20%20%20%20%20%20%20%20return%20est_present%28c,s%5B1%3A%5D%29%0Aest_present%28'c',%20'abracadabra'%29%20%20%20%20%20%20%20%20&cumulative=true&curInstr=26&heapPrimitives=false&mode=display&origin=opt-live.js&py=3&rawInputLstJSON=%5B%5D&textReferences=false), le debugger de Thonny ou le décorateur `@trace`.
@@ -368,12 +408,12 @@ Autre exemple avec le [tri rapide](https://gitlab-fil.univ-lille.fr/diu-eil-lil/
 
 (ou un exemple où la récursivité, bien que naturelle, n'est pas adaptée)
 
-Dans une séance précédente on a utilisé comme exemple les coefficients binomiaux avec pour formule de calcul : *C(n,p) = n! / p!(n-p)!*
+Pour calculer les coefficients binomiaux on peut utiliser une formule directe : $\binom{n}{p} = \dfrac{n!}{p!(n-p)!}$
 
 Mais vous connaissez aussi la relation de récurrence :
 
-- *C(n,p) = 1* si *n=p* ou *p=0*
-- *C(n,p) = C(n-1,p) + C(n-1,p-1)* pour *n > p > 0*
+* $\binom{n}{p} = 1$ si $n=p$ ou $n=0$
+* $\binom{n}{p} = \binom{n-1}{p} + \binom{n - 1}{ p - 1}$ si $n > p > 0$
 
 Ce qui donnerait en Python
 
@@ -381,39 +421,24 @@ Ce qui donnerait en Python
 def C(n,p):
     if p == 0:
         return 1
-    elif n==p:
+    elif n == p:
         return 1
     else:
-        return C(n-1,p-1)+ C(n-1,p)
+        return C(n-1, p-1) + C(n-1, p)
 ```
-
-Examinez la trace produite an ajoutant le décorateur `@trace`...
 
 On peut observer l'explosion combinatoire du nombre d'appels récursifs et les redondances des calculs.
 
-Ce nombre d'appels peut-être mis en évidence en utilisant un autre décorateur fourni : `@count`. Celui-ci ajoute à la fonction qu'il décore
-une propriété `counter` qui représent un compteur du nombre d'appels de cette fonction. On peut l'utiliser ainsi :
+![binomial](/uploads/docnsitale/recursivite/img/binomial.jpg)
 
-~~~python
-@count
-def C(n,p):
-    ...
-
->>> C.counter = 0  # on (ré)initialise le compteur pour la fonction C
->>> C(10,3)
-  ...
-120
->>> C.counter # accès au nombre d'appels de C
->>> # depuis la dernière remise à 0 de counter
-239
-~~~
-
+Certains coefficients binomiaux sont calculés _plusieurs fois_, sans réutiliser les résultats précédents.
 
 Dans un tel cas, si on veut utiliser efficacement la récursivité, il faudraitt la coupler à un mécanisme de **memoïsation** ([Wikipedia](https://fr.wikipedia.org/wiki/M%C3%A9mo%C3%AFsation)) qui permet d'éviter de refaire plusieurs fois le même calcul.
 
+C'est ce que nous ferons plus tard en _programmation dynamique_.
 
 
-### Structures récursives
+## Structures récursives
 
 Les listes Python sont des listes à "base de tableau". D'ailleurs le programme de NSI parle explicitement de tableaux et
 mentionne "*Python identifie listes et tableaux*". En fait les listes de Python sont des **tableaux
@@ -433,9 +458,9 @@ Dans le cas d'une liste non vide *(t,R)* :
 
 On parle pour de telles structures de **listes chaînées**, qui se distingue donc des listes par tableaux.
 
-<img src="img/liste_chainee.jpg" alt="liste chainee"/>
+![liste](https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/Singly-linked-list.svg/408px-Singly-linked-list.svg.png)
 
-Les listes chainées sont par exemple beaucoup plus efficaces que les listes par tableaux lorsqu'il s'agit de supprimer un élément de la liste, ou d'en insérer un.
+Les listes chainées sont beaucoup plus efficaces que les tableaux lorsqu'il s'agit de supprimer un élément, ou d'en insérer un.
 
 
 Avec cette définition des listes, la définition d'une constante pour la liste vide (`[]`) et de primitives permettant
@@ -470,7 +495,6 @@ def nb_occurrences(valeur, liste):
 
 *NB* Le langage Lisp se basait sur cette structure de données (Lisp = List Processing).
 
-Sera approfondi et revu dans le bloc 5 avec la structure d'arbre qui est une autre structure récursive.
 
 ## Quelques erreurs "classiques"
 

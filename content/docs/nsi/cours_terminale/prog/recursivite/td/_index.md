@@ -26,8 +26,9 @@ def odd(n):
        return not even(n)
 ```
 
-Que pensez-vous des expressions calculées par chacune des deux fonctions
-dans les deux cas de base et récursif ?
+1. Que pensez-vous des expressions calculées par chacune des deux fonctions
+  dans les deux cas de base et récursif ?
+2. Illustrer graphiquement une série d'appel récursif afin d'exposer le problème.
 
 
 ## Encore la fonction `even`
@@ -41,7 +42,10 @@ def even(n):
     else:
        return even(n - 2)
 ```
-Que pensez-vous de cette fonction ?
+
+1. Cette fonction termine-t-elle toujours ? Proposer un exemple pour lequel elle
+  termine et un pour lequel elle ne termine pas.
+2. Rectifier la fonction.
 
 # Algorithmes simples
 
@@ -114,6 +118,8 @@ Que pensez-vous de cette fonction ?
 
     On supposera que la somme d'une liste vide est 0.
 
+    Adapter cet algorithme afin de mesurer la longueur d'une liste.
+
 3.  Retourner une chaîne de caractères.
 
     Proposez une fonction `retourner` paramétrée par une chaîne de
@@ -163,6 +169,9 @@ Que pensez-vous de cette fonction ?
 
     Pour simplifier on peut supposer ici que les couleurs sont définies
     par des valeurs globales `BLACK`, `WHITE` et `RED`.
+
+    * Cet algorithme est utilisé dans Paint pour colorier une surface fermée (icône pot de peinture)
+    * Connaissez vous un jeu où cet algorithme soit utilisé ?
 
 
 2.  **Permutations des caractères**
