@@ -34,6 +34,27 @@ puis gère leur exécution.
 
 Chaque processus possède en mémoire les instructions à exécuter et ses données.
 
+## Commutation de contexte
+
+La commutation de contexte consite à remplacer un processus P1 travaillant
+sur le processeur par un autre processus P2. Le système d'exploitation
+doit alors :
+
+1. Sauvegarder l'état d'un processus P1 (registres CPU) quelque part en mémoire,
+  par exemple sur sa pile d'exécution,
+2. retrouver le contexte de P2 (par exemple depuis sa pile),
+3. restaurer le contexte de P2 sur le processeur,
+4. reprendre l'exécution de P2 juste après sa dernière instruction.
+
+## Coopératif vs préemptif
+
+L'ordonnanceur peut fonctionner selon deux modes :
+
+* **collaboratif** : les programmes doivent alors prévoir de passer eux-mêmes
+  la main aux autres,
+* **préemptif** : l'ordonnanceur peut à tout moment couper un processus
+  dans son travail et le remplacer par un autre (avec la commutation de contexte).
+
 ## L'ordonnancement
 
 Le système d'exploitation doit permettre à toutes les applications et tous 
@@ -66,7 +87,7 @@ L'ordonnanceur permet :
 Plusieurs algorithmes d'ordonnancement sont possibles, parmi les plus répandus
 nous pouvons citer :
 
-* le **tourniquet** : la ressource est affectée à chaque processus à tour
+* le **tourniquet** (_round robin_) : la ressource est affectée à chaque processus à tour
     de rôle. Pour l'exécuation simultanée des processus, c'est la rapidité
     de ce tour qui va donner l'impression à chaque utilisateur que son processus
     est seul à utiliser le processeur. Cette méthode ancienne a les avantages
@@ -100,7 +121,8 @@ nous pouvons citer :
 * La mise en place d'un système de **priorités** : l'ordre d'affectation
     de la ressource sera alors fonction de la priorité de la tâche. Cette
     méthode est très équitable, mais définition du niveau de priorité de la
-    tâche doit être objective.
+    tâche doit être objective. Sous UNIX cette notion porte le nom de
+    _niceness_.
 
 * La gestion du **premier entré, premier sorti** (FIFO : _First In, First Out_).
     L'exemple le plus évident de cet algorithme est la file d'impression des
@@ -120,9 +142,9 @@ nous pouvons citer :
     | P3. instruction 2           |
     | P3. instruction 3           |
 
-* L'algorithme du "**plus court d'abord**" : très efficace pour satisfaire
-    au mieux les utilisateurs, mais il n'est pas toujours simple d'évaluer
-    le temps d'exécution d'une tâche avant son début.
+* L'algorithme du "**plus court d'abord**" (_shorted job first_): très efficace
+    pour satisfaire au mieux les utilisateurs, mais il n'est pas toujours simple
+    d'évaluer le temps d'exécution d'une tâche avant son début.
 
     Plutôt que de mesurer les temps d'exécution, on peut se limiter au _nombre_
     d'instructions à réaliser :
@@ -173,3 +195,16 @@ Les systèmes informatiques temps réel sont aujourd'hui présents dans de nombr
 * l'aéronautique au travers des systèmes de pilotage embarqués (avions, satellites) ;
 * l’automobile avec le contrôle de plus en plus complet des paramètres moteur, de la trajectoire, du freinage, etc.
 
+# Interruption
+
+En plus de la gestion des tâches, l'ordonnanceur doit souvent prendre en compte les
+interruptions qui peuvent être de trois types :
+
+* **logicielle** : un événement extérieur au programme se produit (timer, signal envoyé
+  par l'OS) ou le programme souhaite faire un appel système (_syscall_).
+* **interne** processeur : gestion d'erreurs (division par zéro, faute de mémoire) aussi
+  appelée "exception" ou "trap" en anglais.
+* **matérielle** : communication avec le matériel via des IRQ (Interrupt ReQuest) pour 
+  gérer les entrées/sorties de manière plus efficace que la scrutation active (_polling_).
+
+![irq](./img/irq.png)
