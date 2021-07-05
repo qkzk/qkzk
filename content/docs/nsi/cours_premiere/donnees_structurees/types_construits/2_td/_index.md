@@ -277,45 +277,55 @@ Par exemple, Bulbizarre est un Pokémon qui mesure 70 cm et pèse 7 kg.
 1. Parmi les extraits de programme suivants, lesquels permettent de construire
     la liste des cinq premiers nombres impairs ?
 
-    a. ```python
-    impairs = [1, 3, 5, 7, 9]
-    ```
+    a. $\;$
 
-    b. ```python
-    impairs = []
-    for n in range(5):
-            impairs.append(2 * n + 1)
-    ```
+      ```python
+      impairs = [1, 3, 5, 7, 9]
+      ```
 
-    c. ```python
-    impairs = [2 * n + 1 for n in  range(5)]
-    ```
+    b. $\;$
 
-    d. ```python
-    impairs = [n for n in range(1, 11, 2)]
-    ```
+      ```python
+      impairs = []
+      for n in range(5):
+              impairs.append(2 * n + 1)
+      ```
 
-    e. ```python
-    impairs = []
-    n = 0
-    while len(impairs) != 5:
-        if n % 2 == 1:
-            impairs.append(n)
-        n = n + 1
-    ```
+    c. $\;$
+
+      ```python
+      impairs = [2 * n + 1 for n in  range(5)]
+      ```
+
+    d. $\;$
+
+      ```python
+      impairs = [n for n in range(1, 11, 2)]
+      ```
+
+    e. $\;$
+
+      ```python
+      impairs = []
+      n = 0
+      while len(impairs) != 5:
+          if n % 2 == 1:
+              impairs.append(n)
+          n = n + 1
+      ```
 
 2. Donner plusieurs programmes permettant de construire la liste des
     25 premiers nombres pairs.
 
-3. 
+3. $\;$
     a. Quelle est la valeur de `couples` à la fin de l'exécution du programme
         suivant ?
 
-        ```python
-        lettres = ["a", "b", "c"]
-        nombres = [1, 5]
-        couples = [(c, n) for c in lettres for n in nombres]
-        ```
+      ```python
+      lettres = ["a", "b", "c"]
+      nombres = [1, 5]
+      couples = [(c, n) for c in lettres for n in nombres]
+      ```
     b. Proposer un programme qui permet de construire `couples` en utilisant
         des boucles bornées.
 
@@ -354,22 +364,25 @@ carre4 = [
     d. Quelle instruction permet de récupérer la valeur `3` de `carre4` ?
 2.  a. On propose le code suivant :
 
-        ```python
-        def somme_ligne(carre, n):
-            """
-            carre un tableau carré de nombres
-            n est un nombre entier
-            """
-            somme = 0
-            for nombre in carre[n]:
-                somme = somme + nombre
-            return somme
-        ```
+      ```python
+      def somme_ligne(carre, n):
+          """
+          carre un tableau carré de nombres
+          n est un nombre entier
+          """
+          somme = 0
+          for nombre in carre[n]:
+              somme = somme + nombre
+          return somme
+      ```
 
-        Que vaut `somme_ligne(carre4, 2)` ?
-        À quoi sert cette fonction ?
+      Que vaut `somme_ligne(carre4, 2)` ?
+
+      À quoi sert cette fonction ?
+
     b. Écrire le code d'une fonction qui prend un carré en paramètre et qui
         vérifie que les sommes de nombres de chaque ligne sont égales.
+
     c. Proposer le code d'une fonction d'une fonction qui prend un carré
         en paramètre ainsi que le numéro d'une colonne, et qui renvoie la somme
         des nombres de cette colonne.
@@ -465,18 +478,26 @@ assert plus_grand_nombre(zoo_beauval) == 'écureuil'
 ```
 
 1.  a. Quel type de boucle peut-on envisager pour le code de cette fonction ?
-        i. ```python
-        for cle in dico.keys()
-        ```
-        ii. ```python
-        for valeur in dico.values()
-        ```
 
-        iii. ```python
-        for (cle, valeur) in dico.items()
-        ```
+      i. $\hspace{1cm}$
 
-        iv. aucune boucle.
+      ```python
+      for cle in dico.keys()
+      ```
+
+      ii. $\hspace{1cm}$ 
+
+      ```python
+      for valeur in dico.values()
+      ```
+
+      iii.  $\hspace{1cm}$
+
+      ```python
+      for (cle, valeur) in dico.items()
+      ```
+
+      iv. aucune boucle.
 
     b. Écrire le code de cette fonction.
 2. On souhaite se doter d'une fonction `nombre_total` qui prend un zoo en
@@ -490,18 +511,24 @@ assert plus_grand_nombre(zoo_beauval) == 'écureuil'
 
     a. Quel type de boucle peut-on envisager pour le code de cette fonction ?
 
-        i. ```python
-        for cle in dico.keys()
-        ```
-        ii. ```python
-        for valeur in dico.values()
-        ```
+      i.  $\hspace{1cm}$
 
-        iii. ```python
-        for (cle, valeur) in dico.items()
-        ```
+      ```python
+      for cle in dico.keys()
+      ```
+      ii. $\hspace{1cm}$
 
-        iv. aucune boucle.
+      ```python
+      for valeur in dico.values()
+      ```
+
+      iii. $\hspace{1cm}$ 
+
+      ```python
+      for (cle, valeur) in dico.items()
+      ```
+
+      iv. aucune boucle.
 
     b. Écrire le code de cette fonction.
 3. On souhaite se doter d'une fonction `nombre` qui prend un zoo en paramètre
@@ -515,18 +542,24 @@ assert plus_grand_nombre(zoo_beauval) == 'écureuil'
 
     a. Quel type de boucle peut-on envisager pour le code de cette fonction ?
 
-        i. ```python
-        for cle in dico.keys()
-        ```
-        ii. ```python
-        for valeur in dico.values()
-        ```
+      i. $\hspace{1cm}$
 
-        iii. ```python
-        for (cle, valeur) in dico.items()
-        ```
+      ```python
+      for cle in dico.keys()
+      ```
+      ii. $\hspace{1cm}$ 
 
-        iv. aucune boucle.
+      ```python
+      for valeur in dico.values()
+      ```
+
+      iii. $\hspace{1cm}$ 
+
+      ```python
+      for (cle, valeur) in dico.items()
+      ```
+
+      iv. aucune boucle.
 
     b. Écrire le code de cette fonction.
 
@@ -552,25 +585,25 @@ notes_de_lea = [12, 14, 3, 16, 17, 2, 13, 19]
     données ?
 4. On propose le code suivant :
 
-```python
-def fonction(liste_de_notes):
-    """
-    `liste_de_notes` est une liste de nombres qui modélise les notes d'un
-    élève
-    Cette fonction renvoie ???
-    """
-    compteur1 = 0
-    compteur2 = 0
-    for note un liste_de_notes:
-        if note >= 10:
-            compteur1 = compteur1 + 1
-        else:
-            compteur2 = compteur2 + 1
-    return (compteur1, compteur2)
+    ```python
+    def fonction(liste_de_notes):
+        """
+        `liste_de_notes` est une liste de nombres qui modélise les notes d'un
+        élève
+        Cette fonction renvoie ???
+        """
+        compteur1 = 0
+        compteur2 = 0
+        for note un liste_de_notes:
+            if note >= 10:
+                compteur1 = compteur1 + 1
+            else:
+                compteur2 = compteur2 + 1
+        return (compteur1, compteur2)
 
-notes_de_lea = [12, 14, 3, 16, 17, 2, 13, 19]
-assert fonction(notes_de_lea) == ???
-```
+    notes_de_lea = [12, 14, 3, 16, 17, 2, 13, 19]
+    assert fonction(notes_de_lea) == ???
+    ```
 
 1. Quel est le type de retour de cette fonction ?
 2. Recopier et compléter la dernière de ce code.
@@ -601,16 +634,16 @@ notes_de_la_classe = [('Enzo', 3), ('Emma', 16), ('Lucas', 14), ('Manon', 13)]
     b. On donne le code mélangé de cette fonction. À vous de le remettre dans
         l'ordre.
 
-        ```python
-                    note_max = note
-            note_max = None
-        def nom_du_genie(les_notes):
-            return genie
-                    genie = nom
-            genie = None
-                if note_max == None or note > note_max:
-            for (nom, note) in les_notes:
-        ```
+      ```python
+                  note_max = note
+          note_max = None
+      def nom_du_genie(les_notes):
+          return genie
+                  genie = nom
+          genie = None
+              if note_max == None or note > note_max:
+          for (nom, note) in les_notes:
+      ```
     c. Que vaut l'expression `nom_du_genie([])` ?
 
 ### Partie 3 : Une modélisation plus complète.
@@ -619,10 +652,10 @@ Dans cette partie, on souhaite modéliser dans une même structrure de données
 les notes des élèves d'une classe en précisant le nom de la matière concernée
 par la note. On propose la modélisation suivante :
 
-```python
-notes = {'Enzo': ('Math', 3), 'Emma': ('Math', 16),
-         'Lucas': ('NSI', 14), 'Manon': ('NSI', 13)}
-```
+  ```python
+  notes = {'Enzo': ('Math', 3), 'Emma': ('Math', 16),
+           'Lucas': ('NSI', 14), 'Manon': ('NSI', 13)}
+  ```
 
 1. Quel est le type de `notes` ?
 2. Que vaut l'expression `notes[2]` ?
@@ -648,7 +681,8 @@ notes = {'Enzo': ('Math', 3), 'Emma': ('Math', 16),
     les noms des matières et les valeurs les notes obtenues par les élèves
     dans chaque matiere.
 
-    _Exemple_ :\
+    _Exemple_ :
+
     ```python
     >>> notes = {'Emma': ('Math', 16), 'Lucas': ('NSI', 14), 
                  'Manon': ('NSI', 13)}
