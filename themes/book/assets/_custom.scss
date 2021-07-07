@@ -63,7 +63,7 @@ ul, #myUL {
 
 /* Rotate the caret/arrow icon when clicked on (using JavaScript) */
 .caret-down::before {
-  content: "-";
+  content: "–";
   display: table-cell;
   font-size: 150%;
   font-weight: bold;

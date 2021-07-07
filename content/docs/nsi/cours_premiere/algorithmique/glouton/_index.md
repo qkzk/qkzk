@@ -1,5 +1,5 @@
 ---
-title: 'Les algorithmes glouton'
+title: 'Gloutons'
 author: 'qkzk'
 date: '2020/07/31'
 weight: 6
