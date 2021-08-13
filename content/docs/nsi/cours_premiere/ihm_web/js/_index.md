@@ -1,25 +1,15 @@
 ---
 title: "TP : JavaScript"
-author: David Roche
+author: qkzk
 theme: metropolis
 weight: 14
----
-
-pdf : [pour impression](/uploads/docsnsi/ihm_web/nsi_prem_js_print.pdf)
-
-
-# Utilisation de JavaScript
-
-Nous avons déjà pu nous familiariser avec le couple HTML-CSS, en fait,
-le couple est plutôt un trio, car aujourd'hui un développeur web ne
-peut pas faire l'impasse sur le JavaScript .
-
-Notre but ici n'est pas d'apprendre un nouveau langage de
-programmation, mais juste d'étudier quelques exemples d'utilisation du
-JavaScript, notamment dans le cas des interactions entre un utilisateur
-et une page web.
 
 ---
+
+### pdf [pour impression](./nsi_prem_js_intro.pdf)
+
+# JavaScript
+
 
 Avant d'entrer dans le vif du sujet, un petit historique :
 
@@ -57,445 +47,303 @@ Avant d'entrer dans le vif du sujet, un petit historique :
   Python. En 2019, presque tous les éléments "dynamiques" d'une page web moderne
   sont programmés en JavaScript.
 
----
 
+# Inclure un script JS dans une page web
 
-Commençons par mettre en place notre environnement de travail :
+Un script JavaScript est chargé et exécuté dans une balise `<script> </script>`.
 
-## À faire vous-même 1
+Il peut être soit inclu entre les balises soit chargé depuis un fichier extérieur.
 
-Dans votre répertoire de travail, créez 3 fichiers : `index.html`,
-`style.css` et `script.js`
+Considérons l'exemple suivant :
 
----
-
-## À faire vous-même 2
-
-Après avoir ouvert le fichier index.html à l'aide d'un éditeur de
-texte (sublime text, atom), saisissez le code ci-dessous :
-
-~~~html
-<!doctype html>
-<html lang="fr">
-<head>
-    <meta charset="utf-8">
-    <title>Le trio</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <h1>Le trio : HTML, CSS et JavaScript</h1>
-    <p>Voici une page web qui ne fait pas grand-chose</p>
-</body>
-<script src="script.js"></script>
+```html
+<html>
+  <head>
+    <title>Exemple JS</title>
+  </head>
+  <body>
+    <h1 id="titre">Titre</h1>
+    <p id="para">Paragraphe</p>
+  </body>
 </html>
-~~~
+```
 
----
+[jsfiddle](https://jsfiddle.net/fkgr03tc/)
 
-Rien de très nouveau dans ce code, à part le
+On insère maintenant une balise script à la dernière ligne du body :
 
-~~~html
-<script src="script.js"></script>
-~~~
+Exercice : écrire le rendu de cette page.
 
-qui permet d'exécuter le programme JavaScript contenu dans le fichier
-"script.js"
-
-## À faire vous-même 3
-
-Après avoir ouvert le fichier style.css à l'aide d'un éditeur de
-texte, saisissez le code ci-dessous :
-
-~~~css
-h1{
-    text-align: center;
-}
-~~~
-
-## À faire vous-même 4
-
-Après avoir ouvert le fichier script.js à l'aide d'un éditeur de
-texte, saisissez le code ci-dessous :
-
-~~~javascript
-alert("Le JavaScript fonctionne !");
-~~~
-
----
-
-## À faire vous-même 5
-
-Afin d'afficher la page web que nous venons de créer dans un navigateur
-web, cliquez sur le fichier "index.html"
-
----
-
-Comme vous pouvez le constater, la page web s'affiche bien, mais nous
-avons en plus une fenêtre (souvent qualifiée de surgissante ou pop-up en
-anglais) qui apparait. L'apparition de cette fenêtre est bien
-évidemment due à l'instruction "alert" présente dans le JavaScript.
-
-Le but ici n'étant pas d'apprendre à programmer en JavaScript, nous
-nous contenterons pour le moment de cette simple instruction "alert".
-Evidemment JavaScript permet de faire bien plus de choses. En effet on
-retrouve en JavaScript les grands classiques des langages de
-programmation : variable, condition, boucle, fonction,...Si vous voulez
-en apprendre plus sur la programmation en JavaScript, je vous invite à
-consulter [le site
-openclassrooms](https://openclassrooms.com/fr/courses/2984401-apprenez-a-coder-avec-javascript)
-ou la partie dédiée à [l'ISN](/docs/isn/isn-travaux-pratiques/4-programmation/).
-
-Dans l'exemple ci-dessus, l'instruction "alert" est exécutée dès
-l'ouverture de la page web, il est tout à fait possible de lier
-l'exécution de certaines instructions JavaScript à l'action d'un
-utilisateur (par exemple un clic sur un bouton).
-
-## À faire vous-même 6
-
-Modifiez le code HTML comme suit :
-
-~~~html
-<!doctype html>
-<html lang="fr">
-<head>
-    <meta charset="utf-8">
-    <title>Le trio</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <h1>Le trio : HTML, CSS et JavaScript</h1>
-    <p>Voici une page web qui ne fait pas grand chose</p>
-    <button onclick="maFonction()">Cliquer ici</button>
-</body>
-<script src="script.js"></script>
+```html
+<html>
+  <head>
+    <title>Exemple JS</title>
+  </head>
+  <body>
+    <h1 id="titre">Titre</h1>
+    <p id="para">Paragraphe</p>
+    <script>
+      document.getElementById("titre").innerHTML = "Nouveau titre";
+    </script>
+  </body>
 </html>
-~~~
+```
 
-Modifiez le code JavaScript comme suit :
+[jsfiddle](https://jsfiddle.net/0ovfgLyd/)
 
-~~~javascript
-function maFonction() {
-    alert("Le JavaScript fonctionne !");
-}
-~~~
+Que fait-elle ?
 
-Testez cette nouvelle page en cliquant sur le fichier index.html
+* `document` désigne l'ensemble du document, de la page web.
+* `getElementById("titre")` est un _sélecteur_ qui va récupérer la première balise
+  dont l'id est `"titre"`.
+* `.innerHTML = "Nouveau titre"` va remplacer le contenu html de la balise sélectionnée
+  par "Nouveau titre".
 
----
+Ainsi JS permet de changer le contenu d'une balise. 
 
-Comme vous pouvez le constater, l'instruction "alert" n'est plus
-exécutée à l'ouverture de la page web, mais uniquement dans le cas où
-l'utilisateur clique sur le bouton.
+Il existe de nombreuses méthodes permettant de faire ce genre de choses.
 
-On a associé au bouton un événement "onclick", en cas de clic sur la
-souris, la fonction JavaScript "maFonction()" est exécutée. Si on
-s'intéresse au code JavaScript, on retrouve bien une fonction
-"maFonction()" ("function maFonction(){...}" en JavaScript est
-équivalent à un "def maFonction() :" en Python). Entre l'accolade
-ouvrante et l'accolade fermante (qui délimite la fonction), on retrouve
-uniquement notre instruction "alert". À l'ouverture de la page web
-cette instruction "alert" n'est pas exécutée, car elle se trouve dans
-une fonction. Le clic sur le bouton entraine l'exécution de la fonction
-"maFonction()" et donc de l'instruction "alert".
+# Modifier le style
 
-Il est évidemment possible de faire des choses bien plus complexes que
-l'affichage d'un simple pop-up avec JavaScript. Il est possible de
-modifier le style d'une balise, de modifier la classe (CSS) d'une
-balise ou encore de modifier le contenu d'une balise, voici quelques
-exemples :
+Une fois qu'on a récupéré un _élément html_, on peut lui attribuer du style,
+par exemple :
 
-## À faire vous-même 7
+```javascript
+var element = document.getElementById("titre");
+element.style.color = "red";
+```
 
-Modifiez le code HTML comme suit :
+Exercice : lire attentivement et écrire le CSS équivalent à ce script.
 
-~~~html
-<!doctype html>
-<html lang="fr">
-<head>
-    <meta charset="utf-8">
-    <title>Le trio</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <h1>Le trio : HTML, CSS et JavaScript</h1>
-    <p id="monPara">Voici une page web qui ne fait pas grand chose</p>
-    <button onclick="maFonction()">Cliquer ici</button>
-</body>
-<script src="script.js"></script>
+# Éléments de syntaxe
+
+* Commentaire
+
+  ```javascript
+  // ceci es un commentaire
+  ```
+
+* Variable
+
+  ```
+  a = 1; // une variable globale
+  var b = 2; // une variable locale
+  let c = 3; // une variable dont la portée est limitée au bloc courant
+  ```
+
+* conditions
+
+  ```javascript
+  if (condition) {
+      inscrution;
+    }
+  ```
+
+* boucles
+
+  ```javascript
+  for (let i = 0; i < 10; i++) {
+      // corps de la boucle
+  }
+
+  ```
+
+  Pour `i` entre 0 et 9 et progressant de 1.
+
+  Équivalent à :
+
+  ```python
+  for i in range(10):
+    blablabla
+  ```
+
+* Afficher un message dans la console de développeur
+
+  ```javascript
+  var prenom = "Nina";
+  console.log("bonjour", prenom);
+  ```
+
+  Va afficher "bonjour nina" dans la console.
+
+Exercice. Afficher "J'ai fait 10 pompes !", "J'ai fait 20 pompes", etc. 
+jusque "J'ai fait 200 pompes !" dans la console.
+
+# Modifier les attributs html
+
+Considérons ce contenu html
+
+```html
+<html>
+  <body>
+    <p class="monPara">bonjour</p>
+  </body>
 </html>
-~~~
+```
+Insérons maintenant un script JS à la fin du body et le fichier css suivant :
 
-Modifiez le code JavaScript comme suit :
-
-~~~javascript
-function maFonction() {
-    document.querySelector("#monPara").style.color="red";
-}
-~~~
-
-Testez cette nouvelle page en cliquant sur le fichier index.html
-
----
-
-## DevTools
-
-Dans Chrome, vous pouvez presser F12 pour ouvrir la fenêtre de
-développement (F12 pour la refermer).
-
-C'est un outil très puissant qui permet de comprendre, de tester, d'analyser
-le code d'une page web.
-
-Parmi les éléments les plus importants on trouve :
-
-* L'onglet **Element**, où vous trouvez le code html de la page devant vous.
-  * On peut modifier localement le style ou le contenu.
-      C'est dans cet onglet qu'on essaie les styles CSS. Rien n'est sauvegardé
-      (il faut transcrire les essais dans le fichier source) mais c'est rapide.
-  * On peut examiner en détail tous les éléments de style appliqués à une balise
-   avec le sous menu "computed"
-* L'onglet **Console**, où s'affichent les erreurs et les messages obtenus par
-  l'instruction : `console.log( ..quelque chose.. )`. Cette console est
-  similaire à celle de Python.
-  L'équivalent javascript de `print(abc)` est `console.log(abc);`
-* L'onglet **Sources**, qui vous présente les fichiers sources utilisés par la
-    page. On peut débugguer le code JavaScript depuis les sources. C'est ici
-    qu'on comprend les erreurs et résout les problèmes.
-
-Faîtes un peu le tour, votre page ne risque rien. Ne modifiez par les options de
-`DevTools`, elles sont sauvegardées dans Chrome.
-
-Un dernier mot d'historique, `devTools` est une copie de `FireBug`, crée en 2005
-et qui est considéré comme un changement fondatemental dans l'approche du
-développement web.
-
----
-
-Revenons à votre page.
-
-Dans l'exemple ci-dessous, nous avons déjà ajouté un id ("monPara") à
-la balise "p" dans notre code HTML. Dans le code JavaScript, la ligne
-
-~~~javascript
-document.querySelector("#monPara").style.color="red";
-~~~
-
-permet de modifier le style de la balise ayant pour id "monPara" : la
-couleur du texte devient rouge. Comme cette modification du style se
-trouve dans la fonction "maFonction()", cette modification sera
-effective uniquement si l'utilisateur appuie sur le bouton.
-
-Il est possible de travailler plus "proprement" en utilisant les
-classes CSS :
-
-## À faire vous-même 8
-
-Modifiez le code HTML comme suit :
-
-~~~html
-<!doctype html>
-<html lang="fr">
-<head>
-    <meta charset="utf-8">
-    <title>Le trio</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <h1>Le trio : HTML, CSS et JavaScript</h1>
-    <p id="monPara">Voici une page web qui ne fait pas grand-chose</p>
-    <button onclick="foncRouge()">Rouge</button>
-    <button onclick="foncVert()">Vert</button>
-</body>
-<script src="script.js"></script>
-</html>
-~~~
-
-Modifiez le code JavaScript comme suit :
-
-~~~javascript
-function foncRouge() {
-    document.querySelector("#monPara").classList.remove("vert");
-    document.querySelector("#monPara").classList.add("rouge");
-}
-function foncVert() {
-    document.querySelector("#monPara").classList.remove("rouge");
-    document.querySelector("#monPara").classList.add("vert");
-}
-~~~
-
-Modifiez le code CSS comme suit :
-
-~~~css
-h1{
-    text-align: center;
-}
+```css
 .rouge {
-    color:red;
-    font-size:20px;
+  color: red;
 }
 .vert {
-    color:green;
-    font-size:30px;
+  color: green;
 }
-~~~
+```
 
 
-Après avoir analysé le code ci-dessus, testez cette nouvelle page en
-cliquant sur le fichier index.html
 
----
-
-Dans l'exemple ci-dessus, nous avons maintenant 2 boutons, un clic sur
-le bouton "vert", permet d'exécuter la fonction "foncVert()", un
-clic sur le bouton "rouge", permet d'exécuter la fonction
-"foncRouge()", jusque là, rien de vraiment nouveau. La fonction
-JavaScript "foncVert()" permet de modifier la classe CSS de la balise
-ayant pour id "monPara". Dans un premier temps, la ligne
-
-~~~javascript
-document.querySelector("#monPara").classList.remove("rouge");
-~~~
-
-permet de supprimer l'association entre la balise d'id "monPara" et
-la classe CSS "rouge" (si cette association n'existe pas, cette ligne
-n'a aucun effet). Dans un deuxième temps, on associe la classe CSS
-"vert" avec la balise d'id "monPara" avec la ligne
-
-
-~~~javascript
-document.querySelector("#monPara").classList.add("vert");
-~~~
-
-Le principe est identique avec la fonction "`foncRouge()`".
-
-Il est également possible de modifier le contenu d'une balise HTML :
-
-## À faire vous-même 9
-
-Modifiez le code HTML comme suit :
-
-~~~html
-<!doctype html>
-<html lang="fr">
-<head>
-    <meta charset="utf-8">
-    <title>Le trio</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <h1>Le trio : HTML, CSS et JavaScript</h1>
-    <p id="monPara">Voici une page web qui ne fait pas grand chose</p>
-    <button onclick="modifMessage()">Cliquez ici</button>
-</body>
-<script src="script.js"></script>
-</html>
-~~~
-
-Modifiez le code JavaScript comme suit :
-
-~~~javascript
-function modifMessage() {
-    document.querySelector("#monPara").innerHTML = "Bravo, vous avez cliqué sur le bouton !"
-}
-~~~
-
-Après avoir analysé le code ci-dessus, testez cette nouvelle page en
-cliquant sur le fichier index.html
-
-**En détail, analyse du code de la fonction :**
-
-* `document` permet de selectionner toute la page html.
-* `document.querySelector(...)` va chercher dans la page un élément portant
-  l'attribut entre les parenthèses
-* `document.querySelector("#monPara")` va trouver l'élément portant l'id `#monPara`
-* `document.querySelector("#monPara").innerHTML` désigne le _contenu_ compris
-  entre les balises.
-* `document.querySelector("#monPara").innerHTML = "Bravo, vous avez cliqué sur le bouton !"`
-  On écrase ce contenu et le remplace par "Bravo...". Le code HTML de la page
-  est modifié.
-* Les " . " qui séparent les éléments font référence à de la programmation
-    **"objet"**.
-
-    Python aussi est langage "objet" est on rencontre aussi cette notation,
-    par exemple : "`[1, 2].append(3)`"
-
-
----
-
-Le contenu de la balise ayant pour id "monPara" est modifié grâce à la
-ligne
-
-~~~javascript
-document.querySelector("#monPara").innerHTML = "Bravo, vous avez cliqué sur le bouton !"
-~~~
-
-Il existe d'autres événements que "onclick", par exemple, il est
-possible de détecter le "survol" par le curseur de la souris d'un
-élément HTML.
-
-## À faire vous-même 10
-
-Modifiez le code HTML comme suit :
-
-~~~html
-<!doctype html>
-<html lang="fr">
-    <head>
-        <meta charset="utf-8">
-        <title>Le trio</title>
-        <link rel="stylesheet" href="style.css">
-    </head>
-    <body>
-        <h1>Le trio : HTML, CSS et JavaScript</h1>
-        <div onmouseover="foncEntre()" onmouseout="foncQuitte()"  id="maDiv"><p>Survolez-moi</p></div>
-    </body>
-    <script src="script.js"></script>
+```html
 <html>
-~~~
+  <head>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <p id="monPara">bonjour</p>
+    <p class="rouge">rouge</p>
+    <p class="vert">vert</p>
+    <script>
+      var monPara = document.getElementById("monPara");
+    </script>
+  </body>
+</html>
+```
 
-Modifiez le code JavaScript comme suit :
+[jsfiddle](https://jsfiddle.net/wcnfjmbo/)
 
-~~~javascript
-function foncEntre(){
-    document.querySelector("#maDiv").classList.remove("blanc");
-    document.querySelector("#maDiv").classList.add("rouge");
-}
-function foncQuitte() {
-    document.querySelector("#maDiv").classList.remove("rouge");
-    document.querySelector("#maDiv").classList.add("blanc");
-}
-~~~
+Exercice : écrire le rendu de cette page. _Clic Clac c'est le son du 4 Couleurs..._
 
-Modifiez le code CSS comme suit :
+Maintenant nous allons ajouter à l'élément sélectionné dans le script :
 
-~~~css
-h1{
-    text-align: center;
-}
-p{
-    text-align : center;
-}
-#maDiv{
-    width : 200px;
-    height : 100px;
-    margin : 0 auto;
-    border : 2px solid black;
-}
-.rouge {
-    background-color:red;
-}
-.blanc {
-    background-color : white;
-}
-~~~
 
-Après avoir analysé le code ci-dessus, testez cette nouvelle page en
-cliquant sur le fichier index.html
+```html
+<html>
+  <head>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <p id="monPara">bonjour</p>
+    <p class="rouge">rouge</p>
+    <p class="vert">vert</p>
+    <script>
+      var monPara = document.getElementById("monPara");
+      monPara.classList.add("rouge");
+    </script>
+  </body>
+</html>
+```
 
----
+[jsfiddle](https://jsfiddle.net/4rj9pvmt/)
 
-"onemouseover" correspond bien au survol par le curseur de la souris
-d'un élément HTML. L'événement "onemouseout" est lui déclenché quand
-le curseur de la souris quitte un élément HTML donné.
+
+Et javascript va ajouter la classe `"rouge"` et son style à notre paragraphe.
+
+# Intéractivité
+
+Ajoutons maintenant des boutons...
+
+
+```html
+<html>
+  <head>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <p id="monPara">bonjour</p>
+    <p class="rouge">rouge</p>
+    <p class="vert">vert</p>
+    <button onclick="foncRouge()">Rouge</button>
+    <button onclick="foncVert()">Vert</button>
+    <script>
+      var monPara = document.getElementById("monPara");
+      monPara.classList.add("rouge");
+    </script>
+  </body>
+</html>
+```
+
+[jsfiddle](https://jsfiddle.net/vn8uptjq/)
+
+
+Que font-ils ? Rien.
+
+Ou plutôt, lorsqu'on clique dessus, JS déclanche un événément "onclick"
+qui à son tour, _tente_ d'exécuter une fonction `foncRouge` ou `foncVert` mais
+celles-ci n'étant pas définies... il ne se passe rien.
+
+Définissons les !
+
+
+```html
+<html>
+  <head>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <p id="monPara">bonjour</p>
+    <p class="rouge">rouge</p>
+    <p class="vert">vert</p>
+    <button onclick="foncRouge()">Rouge</button>
+    <button onclick="foncVert()">Vert</button>
+    <script>
+      var monPara = document.getElementById("monPara");
+      monPara.classList.add("rouge");
+
+      function foncRouge() {
+          monPara.classList.remove("vert");
+          monPara.classList.add("rouge");
+      }
+      function foncVert() {
+          monPara.classList.remove("rouge");
+          monPara.classList.add("vert");
+      }
+    </script>
+  </body>
+</html>
+```
+
+[jsfiddle](https://jsfiddle.net/28fLbc6h/)
+
+Remarquons d'abord la syntaxe des fonctions (il en existe d'autres) :
+
+```javascript
+function maFonction() {
+    inscrutions;
+  }
+```
+
+Que font ces fonctions :
+
+* la première retire la classe `"vert"` et ajoute la classe `"rouge"`
+* la seconde fait le contraire.
+
+Résumons, lorsqu'on appuie sur le bouton "rouge", on colorie le paragraphe "monPara"
+en rouge, et lorsqu'on appuie sur le bouton "vert"... Je vous laisse deviner.
+
+Exercice : Modifier les fonctions afin de changer aussi le contenu du paragraphe
+lorsqu'on clique sur les boutons.
+
+# Programmation _événementielle_
+
+Python utilise la programmation _séquentielle_ où les lignes sont exécutées les
+une après les autres. L'exécution d'une fonction est donc prédite par
+le contenu du programme.
+
+Le programme sera principalement défini par ses réactions aux différents
+événements qui peuvent se produire, c'est-à-dire des changements d'état de
+variable, par exemple l'incrémentation d'une liste, un déplacement ou un click
+de souris, une saisie au clavier...
+
+Un autre exemple d'événement :
+
+* `onmouseover` : lorsque la souris passe sur un élément
+* `onmouseout` : lorsque la souris quitte un élément
+
+
+Exercice : remplacer les boutons `rouge` et `vert` afin que le texte du paragraphe
+soit toujours vert, sauf quand la souris le survole auquel cas il devient rouge.
+
+[jsfiddle](https://jsfiddle.net/3wdxbs4y/)
 
 Il existe beaucoup d'autres événements que nous n'aborderons pas ici.
 Si vous voulez en savoir plus, vous pouvez consulter [ce
@@ -506,6 +354,3 @@ seront affichés par un navigateur web, mais pas seulement : il est aussi
 possible de mettre en place dans le code HTML des événements. Un
 événement donné pourra déclencher l'exécution d'instructions
 JavaScript.
-:::
-
----

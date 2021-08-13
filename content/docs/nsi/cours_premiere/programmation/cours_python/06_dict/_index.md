@@ -111,12 +111,29 @@ Il existe différentes méthodes mais la plus courante est d'utiliser `del`
 Pour effacer la ville dans le dictionnaire précédent :
 
 ```python
->>> ville in  personne
+>>> "ville" in personne
 True
 >>> del personne["ville"]
->>> ville in  personne
+>>> "ville" in personne
 False
 ```
+
+### Exercice 1
+
+On considère la ville suivante :
+
+| clé                 | valeur    |
+|---------------------|-----------|
+| nom                 | Montreal  |
+| pays                | Canada    |
+| province            | Quebec    |
+| pop                 | 1.825.208 |
+| superficie (km$^2$) | 315       |
+
+1. Créer un `dict` affecté à la variable `ville` contenant les données ci-dessus.
+2. Modifier la superficie, qui est fausse, en 365 km$^2$.
+3. Ajouter la densité qui est de 4992 habitants au kilomètre carré.
+4. Supprimer la clé "pop" pour qu'elle devienne "population".
 
 ## Itérer
 
@@ -153,7 +170,7 @@ Autre manière, plus explicite, utilisant `dict.keys()`
 "email"
 ```
 
-### itérer sur les _valeurs seulement_,
+### itérer sur les _valeurs seulement_, avec la méthode `.values()`
 
 On utilise cette fois `dict.values()`
 
@@ -167,7 +184,7 @@ On utilise cette fois `dict.values()`
 "rd"
 ```
 
-### itérer sur les _clés et les valeurs_.
+### itérer sur les _clés et les valeurs_ avec la méthode `.items()`
 
 C'est la méthode la plus courante, on récupère un tuple contenant la clé
 et la valeur. On peut le détupler dans une syntaxe courte :
@@ -182,6 +199,8 @@ et la valeur. On peut le détupler dans une syntaxe courte :
 "email"     : "rd@example.fr"
 ```
 
+Le `\t` ajoute une tabulation qui permet d'aligner les éléments.
+
 ## Exemples
 
 Considérons la liste de mot suivants :
@@ -192,8 +211,9 @@ mots = ["person", "woman", "man", "camera", "tv"]
 
 Nous allons créer un dictionnaire enregitrant chaque mot et sa longueur.
 
-Pourquoi ? Pour vous montrer, il ne sert à rien, on peut utiliser `len` lorsqu'on
-en a besoin.
+Pourquoi ? Pour vous montrer, il ne sert à rien.
+
+On peut utiliser `len` lorsqu'on en a besoin.
 
 ```python
 mots = ["person", "woman", "man", "camera", "tv"]
@@ -236,13 +256,13 @@ Plus utile est la méthode `get`
 >>> d = {1: "a", 2: "b"}
 >>> d.get(1)
 "a"
->>> d.get(3)
+>>> d.get(3) # la clé n'existe pas, par défaut on obtient None
 >>> d.get(3, "PAS PRESENT !!!!")
 "PAS PRESENT !!!!"
 ```
 
 Lorsqu'on appelle `d.get(cle)`, python renvoie la valeur associée à la clé
-_si_ celle-ci est présente... et sinon il ne renvoie rien.
+_si_ celle-ci est présente... et sinon il renvoie `None`.
 
 On peut préciser une valeur par défaut, comme dans `d.get(3, "PAS PRESENT !!!!")`
 
@@ -254,7 +274,7 @@ pas avec précision les valeurs contenues.
 
 # Exercices
 
-## Exercice 1
+## Exercice 2
 
 On considère les données suivantes, enregistrées dans le dictionnaire `d` :
 
@@ -279,7 +299,7 @@ repertoire =  {"Patrick" : "0612345678",
 4. Ajouter "Raoul" dont le numéro est "0789898989"
 5. Supprimer "Marie" du repertoire.
 
-## Exercice 2
+## Exercice 3
 
 1. Créer à la main en une seule instruction le dictionnaire correspondant au 
     tableau suivant :
@@ -289,35 +309,35 @@ repertoire =  {"Patrick" : "0612345678",
   | 1      | 1     |
   | 2      | 4     |
   | 3      | 9     |
-  | 4      | 16     |
-  | 5      | 25     |
-  | 6      | 36     |
-  | 7      | 49     |
+  | 4      | 16    |
+  | 5      | 25    |
+  | 6      | 36    |
+  | 7      | 49    |
 
 2. Créer le même dictionnaire en partant d'un dictionnaire _vide_ et en ajoutant
     les nombres et leur carré instruction par instruction.
 
 3. Recommencer en utilisant une boucle.
 
-## Exercice 3
+## Exercice 4
 
 En utilisant le dictionnaire précédent, produire l'affichage suivant :
 Votre programme doit faire 2 lignes, pas plus.
 
 ```
-1 		 1
-2 		 4
-3 		 9
-4 		 16
-5 		 25
-6 		 36
-7 		 49
+1      1
+2      4
+3      9
+4      16
+5      25
+6      36
+7      49
 ```
 
 _Remarque_ : lorsqu'on affiche la chaîne de caractères "\t" on obtient une
 tabulation.
 
-## Exercice 4
+## Exercice 5
 
 Convertir les deux listes suivantes en un dictionnaire en utilisant une seule
 boucle.
@@ -329,7 +349,7 @@ values = [10, 20, 30]
 {'Ten': 10, 'Twenty': 20, 'Thirty': 30}
 ```
 
-## Exercice 5 - données enfouies
+## Exercice 6 - données enfouies
 
 
 ```python
@@ -339,8 +359,8 @@ sampleDict = {
       "student":{ 
          "name":"Mike",
          "marks":{ 
-            "physics":70,
-            "history":80
+            "physics": 70,
+            "history": 80
          }
       }
    }
@@ -349,7 +369,7 @@ sampleDict = {
 
 Comment accéder à la valeur correspondant à `"history"` ?
 
-### Exercice 6 
+### Exercice 7 
 
 Changez la clé `"city"` en `"location"` dans le dictionnaire suivant :
 
@@ -373,31 +393,34 @@ sortie voulue :
   "location": "New york"
 }
 ```
-### Exercice 7
+### Exercice 8
 
 
-Changez le salaire de Brad en 8500 depuis le dictionnaire suivant :
+1. Changez le salaire de Brad en 8500 depuis le dictionnaire suivant :
 
-```python
-sampleDict = {
-     'emp1': {'name': 'Jhon', 'salary': 7500},
-     'emp2': {'name': 'Emma', 'salary': 8000},
-     'emp3': {'name': 'Brad', 'salary': 6500}
-}
-```
+  ```python
+  sampleDict = {
+       'emp1': {'name': 'Jhon', 'salary': 7500},
+       'emp2': {'name': 'Emma', 'salary': 8000},
+       'emp3': {'name': 'Brad', 'salary': 6500}
+  }
+  ```
 
-Sortie attendue
+  Sortie attendue
 
 
-```python
-sampleDict = {
-     'emp1': {'name': 'Jhon', 'salary': 7500},
-     'emp2': {'name': 'Emma', 'salary': 8000},
-     'emp3': {'name': 'Brad', 'salary': 8500}
-}
-```
+  ```python
+  sampleDict = {
+       'emp1': {'name': 'Jhon', 'salary': 7500},
+       'emp2': {'name': 'Emma', 'salary': 8000},
+       'emp3': {'name': 'Brad', 'salary': 8500}
+  }
+  ```
 
-## Exercice 8 - Compter les lettres d'une chaîne de caractère
+2. À l'aide d'une boucle calculer le cumul des salaires.
+3. À l'aide d'une boucle créer la liste des noms des employés.
+
+## Exercice 9 - Compter les lettres d'une chaîne de caractère
 
 Nous allons apprendre à compter les lettres d'une chaîne de caractère.
 
@@ -436,5 +459,5 @@ Pour chaque lettre de la chaîne :
   `Counter`.
 
 
-
+Et c'est à vous...
 

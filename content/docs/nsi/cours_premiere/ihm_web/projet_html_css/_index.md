@@ -2,9 +2,11 @@
   title: 'Projet : CSS'
   author: qkzk
   weight: 23
+
 ---
 
-pdf : [pour impression](/uploads/docsnsi/ihm_web/nsi_prem_projet_css_print.pdf)
+
+pdf : [pour impression](./nsi_prem_projet_css.pdf)
 
 # Mini projet CSS
 
@@ -42,6 +44,7 @@ Vous disposez de **trois fichiers** :
 * Il sera déposé dans votre drive :
 
     `NSI_Robert_DUCHMOL/ihm_web/margaret_hamilton/style.css`
+* Le retour est prévu _autour du vendredi 3 décembre_.
 
 ## Quelques précisions
 
@@ -54,13 +57,13 @@ Démarche :
 
 2. Modifier le fichier `style.css` pour cela :
 
-  * Ouvrir le fichier HTML dans google _chrome_,
-  * ouvrir les outils de développeur (F12) de chrome,
-  * tester des modifications de style dans chrome,
-  * copier ces modifications dans  le fichier `style.css` une fois satisfait,
-  * enregistrer le fichier et rafraîchir la page web (Maj + F5 pour forcer
-    le rafraîchissement du style),
-  * recommencer
+    * Ouvrir le fichier HTML dans google _chrome_,
+    * ouvrir les outils de développeur (F12) de chrome,
+    * tester des modifications de style dans chrome,
+    * copier ces modifications dans  le fichier `style.css` une fois satisfait,
+    * enregistrer le fichier et rafraîchir la page web (Maj + F5 pour forcer
+      le rafraîchissement du style),
+    * recommencer
 
 Sauvegarder régulièrement, créez des versions, testez...
 

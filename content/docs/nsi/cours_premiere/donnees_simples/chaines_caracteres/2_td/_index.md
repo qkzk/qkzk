@@ -315,3 +315,57 @@ les bits `0xxxxxxx`
       à quel symbole il correspond.
 
 
+## Exercice 5 - base64
+
+1. Reprendre les caractéristiques de l'encodage base64 vues en cours
+2. Encoder les mots :
+
+    ```
+    wok
+    tir
+    666
+    ```
+
+    un texte composé de caractères ASCII est-il toujours lisible après
+    encodage en base64 ?
+
+3. Encoder les mots :
+
+    ```
+    rave
+    12345
+    ```
+  
+4. Décoder depuis base64 les mots :
+
+    ```
+    YXpl
+    bnNp
+    bnNpIHN1cGVy
+    ZnJhbmNlOTg=
+    ```
+
+    Ces deux chaînes encodent-elles des phrases de la même longueur ? Justifier.
+
+5. Depuis Python
+
+    La calculatrice numworks ne permet pas de tester l'encodage base64
+    mais Python installé sur votre téléphone ou une version en ligne permettent
+    de tester l'encodage et le décodage base64
+
+    Pour encoder un texte :
+
+    ```
+    >>> import base64
+    >>> base64.b64encode(b"salut")
+    b'c2FsdXQ='
+    >>> base64.b64decode(b'SGkh')
+    b'Hi!'
+    ```
+
+    Vérifier vos réponses aux questions 1 et 2 avec Python (sur mobile ou en ligne
+    si nécessaire).
+
+
+  
+

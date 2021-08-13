@@ -20,16 +20,17 @@ Mais avant ça :
 
 # L'indentation
 
-_indenter_ le code c'est le décaler de quelques espaces (généralement 4, parfois 2) depuis la gauche.
+_indenter_ le code c'est le décaler de quelques espaces (généralement 4,
+parfois 2) depuis la gauche.
 
 En python la structure d'un programme est _imposée_ par l'indentation.
-Ne pas respecter l'indentation conduit à des erreurs du type `IndentationError` qu'il est généralement
-simple de repérer.
+Ne pas respecter l'indentation conduit à des erreurs du type `IndentationError`
+qu'il est généralement simple de repérer.
 
 ```python
 code sans indentation
 
-		code mal indenté # provoquera une erreur
+    code mal indenté # provoquera une erreur
 ```
 
 ## Strucure d'un bloc de code
@@ -39,11 +40,11 @@ Tous les blocs de code ont la même syntaxe :
 
 ```python
 mot_cle expression:
-		expression 1
-		expression 2
+    expression 1
+    expression 2
 
 fin du bloc
-```	
+``` 
 
 # Conditions `if, elif, else`
 
@@ -59,14 +60,14 @@ Si j'ai plus de 10 de moyenne au bac, je suis diplômé :
 
 ```python
 moyenne = 3
-if moyenne >= 10: 							# ne pas oublier les :
-		print("je suis diplomé")  			# attention à l'indentation
+if moyenne >= 10:               # ne pas oublier les :
+    print("je suis diplomé")        # attention à l'indentation
 
 #  suite du programme
 ```
 
-Lorsqu'on exécute ce code, il ne se passe rien. La condition `moyenne >= 10` n'est pas respectée et
-la ligne `print("je suis displomé")` n'est jamais atteinte.
+Lorsqu'on exécute ce code, il ne se passe rien. La condition `moyenne >= 10`
+n'est pas respectée et la ligne `print("je suis displomé")` n'est jamais atteinte.
 
 Ajoutons une ligne pour mieux comprendre le déroulé des instructions :
 
@@ -74,27 +75,27 @@ Ajoutons une ligne pour mieux comprendre le déroulé des instructions :
 ```python
 moyenne = 3
 if moyenne >= 10:
-		print("je suis diplômé")
+    print("je suis diplômé")
 
 print("le programme arrive ici dans tous les cas")
 ```
 
-Exécutez ce programme, il vous affichera "le code arrive ici dans tous les cas" parce que cette ligne
-n'est pas indentée. Elle est donc en dehors du bloc `if`.
+Exécutez ce programme, il vous affichera "le code arrive ici dans tous les cas"
+parce que cette ligne n'est pas indentée. Elle est donc en dehors du bloc `if`.
 
 
-On peut toujours compléter un bloc `if` à l'aide d'un second bloc `else`, pour sinon, qui ne sera exécuté
-que si la condition du `if` est fausse :
+On peut toujours compléter un bloc `if` à l'aide d'un second bloc `else`, 
+(_sinon_), qui ne sera exécuté que si la condition du `if` est fausse :
 
 
 ```python
 moyenne = 3
 if moyenne >= 10:
-		print("je suis diplome")
+    print("je suis diplomé")
 else:
-		print("j'ai raté le diplome")
+    print("j'ai raté le diplome")
 
-print(le programme arrive ici dans tous les cas)
+print("le programme arrive ici dans tous les cas")
 
 ```
 
@@ -107,22 +108,22 @@ Reprenez cet exemple en changeant la valeur de la moyenne afin d'exécuter le if
 
 Remarquez que cette fois, le bloc `else` n'est plus exécuté.
 
-C'est l'un ou  l'autre.
+C'est l'un ou l'autre.
 
 ## `elif`
 
-Entre `if` et `else` on peut insérer autant de bloc `elif condition` que l'on souhaite.
+Entre `if` et `else` on peut insérer autant de bloc `elif condition:` que l'on souhaite.
 
 Par exemple :
 
 ```python
 moyenne = 3
 if moyenne >= 10:
-		print("je suis diplome")
+    print("je suis diplome")
 elif moyenne >= 8:
-		print("je vais à l'oral de rattrapage")
+    print("je vais à l'oral de rattrapage")
 else:
-		print("j'ai raté le diplome")
+    print("j'ai raté le diplome")
 print("le programme arrive ici dans tous les cas")
 ```
 
@@ -133,48 +134,48 @@ réalise qu'un des blocs `if, elif, else` est exécuté. Jamais deux.
 
 1. Que vaut la valeur finale de la variable `b` ?
 
-	```python
-	a = 7
-	b = 12
-	if a > 5:
-			b = b - 4
-	if b >= 10:
-			b = b + 1
-	```
+  ```python
+  a = 7
+  b = 12
+  if a > 5:
+      b = b - 4
+  if b >= 10:
+      b = b + 1
+  ```
 
 2. Que vaut la valeur finale de la variable `b` ?
 
-	```python
-	a = 7
-	b = 12
-	if a > 5:
-			b = b - 4
-	elif b >= 10:
-			b = b + 1
-	```
+  ```python
+  a = 7
+  b = 12
+  if a > 5:
+      b = b - 4
+  elif b >= 10:
+      b = b + 1
+  ```
 
 3. Que vaut la valeur finale de la variable `b` ?
 
-	```python
-	a = 7
-	b = 12
-	if a > 5:
-			b = b - 4
-	else:
-			b = b + 1
-	```
+  ```python
+  a = 7
+  b = 12
+  if a > 5:
+      b = b - 4
+  else:
+      b = b + 1
+  ```
 
 4. Que vaut la valeur finale de la variable `a` ?
 
-```python
-a = 10
-if a < 5:
-		a = 20
-elif a < 100:
-		a = 500
-else:
-		a = 0
-```
+  ```python
+  a = 10
+  if a < 5:
+      a = 20
+  elif a < 100:
+      a = 500
+  else:
+      a = 0
+  ```
 
 ## Exercice 1
 
@@ -183,35 +184,35 @@ S'ils sont invalides, rectifiez les.
 
 1. Code 1 :
 
-	```python
-	a = 10
-	if a == 5:
-	a = 2
-	```
+  ```python
+  a = 10
+  if a == 5:
+  a = 2
+  ```
 2. Code 2 :
 
-	```python
-	a = 10
-	elif a == 5:
-		a = 2
-	```
+  ```python
+  a = 10
+  elif a == 5:
+    a = 2
+  ```
 
 3. Code 3 :
 
-	```python
-	a = 10
-	if a = 5:
-		a == 2
-	```
+  ```python
+  a = 10
+  if a = 5:
+    a == 2
+  ```
 4. Code 4 : 
 
-	```python
-	a = 10
-	if a == 5:
-	a = 2
-	```
+  ```python
+  a = 10
+  if a == 5:
+  a = 2
+  ```
 
-## Exercice 1
+## Exercice 2
 
 Complétez le programme "moyenne" afin d'afficher la mention obtenue par le candidat :
 
@@ -219,7 +220,7 @@ Complétez le programme "moyenne" afin d'afficher la mention obtenue par le cand
 * Bien (>= 14 de moyenne),
 * Assez Bien (>= 12 de moyenne),
 
-## Exercice 2
+## Exercice 3
 
 Un client de boite de nuit est décrit par trois variables : son genre ("Masculin" ou "Féminin"),
 sa tenue ("Bien sapé", "Mal sapé") et son portefeuille ("Épais", "Mince").
@@ -227,14 +228,14 @@ sa tenue ("Bien sapé", "Mal sapé") et son portefeuille ("Épais", "Mince").
 1. Écrire un programme qui affiche si le client peut entrer en respectant les conditions suivantes :
 
 
-	* Un client pauvre mais bien sapé peut entrer.
-	* Les clientes entrent toujours,
-	* Un client pauvre et mal sapé n'entre pas.
+  * Un client pauvre mais bien sapé peut entrer.
+  * Les clientes entrent toujours,
+  * Un client pauvre et mal sapé n'entre pas.
 
 2. Testez le dans tous les cas.
 3. Si ce n'est pas déjà fait, écrire ce programme à l'aide d'un bloc `if` et d'une bloc `else`
 
-## Exercice 3
+## Exercice 4
 
 Jean-Raoul a un hygiène de vie très stricte. Ils se pèse tous les matins. 
 
@@ -265,7 +266,18 @@ Pour en faire un entier (du type  `int`) :
 poids = int(input("Combien...")
 ```
 
-_Exemple :_
+## Exercice 4
+
+L'impôt sur le revenu de Groland est assez simple à calculer :
+
+* un particulier qui gagne moins de 20.000€ de revenus par an doit verser 50% en impôt,
+* entre 50.000 et 100.000€ on doit verser 30% aux impôts,
+* au dela de 100.000€ de revenus, on doit verser 1€ d'impôt symbolique.
+
+Ecrire un script qui demande à un utilisateur le montant de ses revenus annuels
+et affiche le montant des impots qu'il doit verser.
+
+_je précise aux plus naïfs que Groland n'existe pas..._
 
 
 
@@ -294,9 +306,9 @@ Par exemple :
 
 # Boucles
 
-Une _boucle_ est un morceau de code qui est répété plusieurs fois.
+Une _boucle_ est un bloc de code qui est répété plusieurs fois.
 
-On distingue deux types de boucles, les boucles _bornées_ et les boucles _non bornées_.
+On distingue deux types de boucles, les boucles _bornées_ (`for`) et les boucles _non bornées_ (`while`).
 
 Lorsqu'on sait à l'avance combien de fois on souhaite répéter un bloc on emploie une boucle bornée sinon 
 une boucle non bornée.
@@ -307,7 +319,7 @@ En Python la boucle bornée s'écrit ainsi :
 
 ```python
 for variable in collection:
-		bloc_de_la_boucle
+    bloc_de_la_boucle
 
 fin_de_la_boucle
 ```
@@ -325,8 +337,8 @@ Afficher toutes les lettres d'un mot :
 
 ```python
 mot = "bonjour"
-for lettre un mot:
-	print(lettre)
+for lettre in mot:
+  print(lettre)
 
 print("fini !")
 ```
@@ -345,7 +357,7 @@ r
 fini !
 ```
 
-On réalise bien que `lettre` pris pour valeur successives les caractères
+On réalise bien que `lettre` a pri pour valeurs successives les caractères
 composant `mot` : `"b"`, `"o"` etc.
 
 ## La fonction `range`
@@ -358,7 +370,7 @@ C'est une fonction avancée que nous allons étudier pas à pas :
 
 ```python
 for nombre in range(10):
-		print(nombre)
+    print(nombre)
 
 print("j'ai affiché les entiers de 0 à 9")
 ```
@@ -388,7 +400,7 @@ print("Allez les bleus !")
 print("Allez les bleus !")
 print("Allez les bleus !")
 print("Allez les bleus !")
-... # encore 17 lignes identiques...
+... # encore 16 lignes identiques...
 ```
 
 ou en deux lignes :
@@ -396,7 +408,7 @@ ou en deux lignes :
 
 ```python
 for k in range(20):
-		print("Allez les bleus !")
+    print("Allez les bleus !")
 ```
 
 C'est beaucoup plus lisible et on sait immédiatement combien de fois l'instruction sera répétée.
@@ -420,7 +432,7 @@ On veut parcourir les entiers jusque 100 inclus, il faudra utiliser `range(101)`
 ```python
 somme = 0
 for entier in range(101):
-		somme = somme + entier
+    somme = somme + entier
 ```
 
 Vous apprendrez cette année en mathématiques à calculer ces sommes directement avec une
@@ -449,6 +461,8 @@ Collection des entiers pairs entre 100 et 199 : (100, 102, 104, ..., 198) : `ran
 
 1. Calculer la somme des entiers impairs entre 1000 et 10000.
 2. Calculer la somme des entiers divisibles par 3 entre 1000 et 10000.
+3. Calculer la somme des entiers qui se terminent par 7 entre 654 et 1 million.
+4. Compter le nombre d'entiers se terminant par deux zéros plus petits qu'un milliard à l'aide d'une boucle.
 
 ## Combiner des blocs
 
@@ -465,10 +479,10 @@ nombre = 5
 couleur = "bleu"
 
 if nombre > 10:
-		couleur = "rouge"
+    couleur = "rouge"
 
 for lettre in couleur:
-		print(lettre)
+    print(lettre)
 ```
 
 et
@@ -479,60 +493,60 @@ nombre = 5
 couleur = "bleu"
 
 if nombre > 10:
-		couleur = "rouge"
+    couleur = "rouge"
 
-		for lettre in couleur:
-				print(lettre)
+    for lettre in couleur:
+        print(lettre)
 ```
 
 1. Dans le premier cas, la structure `for` est au niveau 0 d'indentation, elle sera exécutée
-  	dans tous les cas.
+    dans tous les cas.
 
-	Il affiche ligne par ligne les lettres du mot "bleu".
+  Il affiche ligne par ligne les lettres du mot "bleu".
 
 2. Dans le second cas, la structure `for` est _dans le if_, elle ne sera exécutée que si la
-  	condition est vraie.
+    condition est vraie.
 
-	La condition est fausse et le bloc `if` n'est pas exécuté donc il ne se passe rien.
+  La condition est fausse et le bloc `if` n'est pas exécuté donc il ne se passe rien.
 
 ## Exercice 7
 
 1. La variable `lettre` est du type `str` et est de longueur égale à 1.
 
-	Proposer un booléen qui soit vrai si `lettre` est une voyelle (pensez à `in` !)
+  Proposer un booléen qui soit vrai si `lettre` est une voyelle (pensez à `in` !)
 
-	On va négliger les accents dans cet exercice.
+  On va négliger les accents dans cet exercice.
 
 2. En utilisant `for` et une condition bien placée, comptez les voyelles dans un mot.
 
-	Testez avec les mots "table", "exercice", "bonjour"
+  Testez avec les mots "table", "exercice", "bonjour"
 
 ## Exercice 8 - table de multiplication
 
 1. `nombre = 5`. En une ligne supplémentaire écrire :
 
-	`4 * 5 = 20`
+  `4 * 5 = 20`
 
-	Le nombre 20 doit être obtenu par opération.
+  Le nombre 20 doit être obtenu par opération.
 
 2. Utiliser ce principe pour écrire la table de 4.
 
-	```
-	4 * 0 = 0
-	4 * 1 = 4
-	4 * 2 = 8
-	4 * 3 = 12
-	4 * 4 = 16
-	4 * 5 = 20
-	4 * 6 = 24
-	4 * 7 = 28
-	4 * 8 = 32
-	4 * 9 = 36
-	4 * 10 = 40
-	```
+  ```
+  4 * 0 = 0
+  4 * 1 = 4
+  4 * 2 = 8
+  4 * 3 = 12
+  4 * 4 = 16
+  4 * 5 = 20
+  4 * 6 = 24
+  4 * 7 = 28
+  4 * 8 = 32
+  4 * 9 = 36
+  4 * 10 = 40
+  ```
 
 3. En utilisant deux boucles l'une dans l'autre (on dit qu'elles sont imbriquées), afficher
-	les tables de multiplications des entiers de 0 à 10 inclu.
+  les tables de multiplications des entiers de 0 à 10 inclu.
 
 # Boucles non bornées : `while`
 
@@ -542,7 +556,7 @@ if nombre > 10:
 ```python
 
 while condition:
-		bloc_repete_tant_que_condition_est_vrai
+    bloc_repete_tant_que_condition_est_vrai
 
 bloc_execute_apres
 ```
@@ -551,6 +565,44 @@ On emploie `while` lorsqu'on ne sait pas à l'avance combien de fois il sera né
 de répéter un bloc d'instruction.
 
 Par exemple : "tant que je n'ai pas bon à l'exercice, je recommence".
+
+Autre exemple, le casino :
+
+Jean-Martin a 10€, il joue aux machines à sous (un vrai pigeon). Chaque mise
+lui coûte 1€ et il a une chance sur 1000 de gagner 10€ (quand je vous disais)...
+
+Le programme suivant simule cette situation dramatique :
+
+```python
+import random                     # fonctions simulant le hasard
+
+capital = 10
+while capital > 0:
+    capital = capital - 1         # il mise 1 €
+    if random.random() < 0.001:   # une chance sur mille
+        capital = capital + 10    # il récupère 10 €
+        print("waouh...")
+    else:
+        print("encore perdu...")
+
+print("Jean-Martin a perdu tout son argent.")
+```
+
+Le prof de maths qui sommeille en moi vous signale que :
+
+1. Ce programme termine toujours.
+2. L'issue est toujours la même : Jean-Martin perd tout son argent.
+3. Le seul moyen de gagner régulièrement aux jeux d'argent est de les organiser.
+  Ce privilège est reservé à l'État.
+
+
+## Exercice 9
+
+Modifier le programme précédent :
+
+1. Créer une variable `compteur` valant 0 avant la boucle,
+2. Augmenter `compteur` de 1 à chaque tour de la boucle,
+3. Affichez la valeur de `compteur` une fois la boucle terminée.
 
 ## Boucle infinie
 
@@ -565,8 +617,8 @@ entre deux affichages :
 from time import sleep
 
 while True:
-	print("NSI")
-	sleep(1)
+  print("NSI")
+  sleep(1)
 ```
 
 * On importe la fonction `sleep` qui va mettre l'exécution en pause une seconde avec `sleep(1)`
@@ -585,9 +637,9 @@ On peut résumer un jeu vidéo à ce schéma :
 
 ```python
 while True:
-	lire_les_actions_du_joueur()
-	mettre_le_jeu_a_jour()
-	afficher_le_jeu_a_lecran()
+  lire_les_actions_du_joueur()
+  mettre_le_jeu_a_jour()
+  afficher_le_jeu_a_l_ecran()
 ```
 
 ## L'instruction `break`
@@ -626,52 +678,52 @@ print("A bientôt")
     Voulez-vous quitter le programme (o/n) ? o
     A bientôt
 
-## Exercice 9
+## Exercice 10
 
 1. Se documenter sur la fonction `randint` du module `random`
 
-	```python
-	import random
-	help(random.randint)
-	```
+  ```python
+  import random
+  help(random.randint)
+  ```
 2. Écrire une boucle qui affiche 10 nombres aléatoires entre 1 et 100
 
 3. La fonction `input(message)` affiche un message à l'écran pour l'utilisateur,
-	celui-ci saisit au clavier une valeur et cette valeur est renvoyée par `input`.
+  celui-ci saisit au clavier une valeur et cette valeur est renvoyée par `input`.
 
-	`input` renvoie toujours une chaîne de caractère.
+  `input` renvoie toujours une chaîne de caractère.
 
-	Pour convertir une chaîne de caractère en un entier on peut utiliser :
+  Pour convertir une chaîne de caractère en un entier on peut utiliser :
 
-	```python
-	nombre = int(input("votre nombre : "))
-	```
+  ```python
+  nombre = int(input("votre nombre : "))
+  ```
 
-	Si l'utilisateur tape une valeur pouvant être transformée en entier comme "123",
-	`nombre` vaudra 123.
+  Si l'utilisateur tape une valeur pouvant être transformée en entier comme "123",
+  `nombre` vaudra 123.
 
-	Si l'utilsateur tape une valeur _ne pouvant pas être transformée en entier_ comme "Marcel",
-	Python va générer une erreur.
+  Si l'utilsateur tape une valeur _ne pouvant pas être transformée en entier_ comme "Marcel",
+  Python va générer une erreur.
 
-	Écrire le script du jeu du plus ou moins suivant :
+  Écrire le script du jeu du plus ou moins suivant :
 
-	```
-	>>>
-	Le jeu consiste à deviner un nombre entre 1 et 100 :
+  ```
+  >>>
+  Le jeu consiste à deviner un nombre entre 1 et 100 :
 
-	--->   50
-	trop petit !
-	--->   75
-	trop petit !
-	--->   87
-	trop grand !
-	--->   81
-	trop petit !
-	--->   84
-	trop petit !
-	--->   85
-	Gagné !
-	```
+  --->   50
+  trop petit !
+  --->   75
+  trop petit !
+  --->   87
+  trop grand !
+  --->   81
+  trop petit !
+  --->   84
+  trop petit !
+  --->   85
+  Gagné !
+  ```
 
 4. Améliorer le jeu pour indiquer combien de coups ont été necessaires pour gagner.
 

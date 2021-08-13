@@ -24,8 +24,7 @@ On a déjà rencontré plusieurs fonctions, en particulier `len`. Cette fonction
 renvoie (on dit parfois _retourne_) le nombre d'éléments d'une collection.
 
 * la définition de la fonction `len` est faite par le programme Python lui même,
-  nous n'avons
-  pas à nous en charger.
+  nous n'avons pas à nous en charger.
 * l'appel de la fonction se fait ainsi : `len(objet)`
 
 Par exemple :
@@ -109,6 +108,11 @@ print(any, any, any, ...) -> None
 
 Le fait qu'elle affiche quelque chose dans la console est _un effet de bord_.
 
+## Exercice 0
+
+Relire les deux lignes précédentes jusqu'à ce que vous les connaissiez par coeur.
+
+
 # Appeler une fonction
 
 Appeler une fonction consiste à l'introduire dans une instruction en respectant
@@ -147,6 +151,9 @@ modifier autant de fois lorsqu'on voudra l'adapter).
 Cela permet aussi de le tester indépendamment et donc de s'assurer qu'il fait
 ce qu'on attend de lui.
 
+ce point peut sembler secondaire, pourquoi devrait-on "tester" le code. C'est
+en fait fondamental.
+
 Imaginons devoir manipuler des températures. Il existe deux unités de mesure
 couramment employée : les degrés celcius et les Fahrenheit.
 
@@ -166,9 +173,9 @@ Bien sûr on pourrait faire :
 387.4
 ```
 
-et convertir température à l'aide de la formule. Même avec un copier-coller
+et convertir la température à l'aide de la formule. Même avec un copier-coller
 cette approche est pénible... et dangereuse. Avez-vous repéré l'erreur dans 
-les formules précédentes ?
+les lignes précédentes ?
 
 ## Définition d'une fonction : syntaxe
 
@@ -265,7 +272,7 @@ import random
 
 def lancer_un_de():
     '''Renvoie un entier aléatoire entre 1 et 6'''
-    valeur = random.randin(1, 6)
+    valeur = random.randint(1, 6)
     return valeur
 ```
 
@@ -386,6 +393,19 @@ précédent.
 5. `longueur` simule le comportement de `len` pour les chaînes de caracètres.
 
     C'est évident mais je le précise, vous n'avez pas le droit d'utiliser `len` !
+6. `factorielle` renvoie le produit des entiers jusqu'au paramètre `n`, un entier
+  plus grand que 0. 
+
+    ```python
+    >>> factorielle(5)
+    120
+    ```
+
+    Complément: Modifier la fonction pour respecter la définition mathématique:
+      `factorielle(0) == 1`
+7. `plus_grand_des_deux` prend deux paramètres entiers et renvoie le plus grand
+  des deux.
+
 
 ## Exercice 5 : simplifier le code d'une fonction
 

@@ -1,12 +1,13 @@
 ---
-title: "5 - listes et tuples"
+title: "5 - Listes et tuples"
 author: "qkzk"
 date: "2021/04/22"
 weight: 5
 
 ---
 
-### pdf: [pour impression](./listes_tuples.pdf)
+### pdf [pour impression](./listes_tuples.pdf)
+
 
 # Les listes et les tuples
 
@@ -22,11 +23,11 @@ En terminale on étudiera précisémment les types abstraits liste et tableau.
 
 ## Le type `list`
 
-Une liste est une structure de données _indexées_ (numérotés) à partir de 0.
+Une `list` est une structure de données _indexées_ (numérotés) à partir de 0.
 
-Le premier élément d'une liste porte donc l'indice 0.
+Le premier élément d'une `list` porte donc l'indice 0.
 
-On crée une liste avec la syntaxe `[ ]` et les élément sont inclus dans les
+On crée une  `list` avec la syntaxe `[ ]` et les élément sont inclus dans les
 crochets.
 
 ```python
@@ -51,9 +52,42 @@ False
 True
 ```
 
+### Longueur d'une `list`
+
+Comme les `str`, les `list` ont une longueur à laquelle on peut accéder avec
+`len`
+
+```python
+>>> tab = [3, 2, 4]
+>>> len(tab)
+3
+```
+
+### Exercice 0
+
+1. Créer une `list` vide affectée à la variable `vide`.
+2. Vérifier que sa longueur est nulle.
+3. Vérifier qu'elle ne contient pas les entiers entre 1 et 10 à l'aide d'une
+  boucle.
+4. Créer à la main le tableau des entiers pairs de 0 à 10. 
+5. Mesurer sa longueur.
+6. Vérifier, toujours à l'aide d'une boucle quels sont les entiers inférieurs
+  à 10 qu'il contient.
+
+### Type des objets dans les `list`
+
+Contrairement à beaucoup de langages, Python n'impose pas que les éléments
+d'une `list` soient tous du même type.
+
+Ainsi le code suivant est parfaitement valide.
+
+```python
+>>> l = [3, "bonjour", 2.32, True]
+```
+
 ### `range` et `list`
 
-Lorsqu'on crée un `range`, le type n'est pas une liste mais un _générateur_.
+Lorsqu'on crée un `range`, le type n'est pas une `list` mais un _générateur_.
 
 Pour les plus curieux, cela signifie que les objets ne sont pas crées
 immédiatement, mais de manière _paresseuse_ lorsqu'on en a besoin.
@@ -78,16 +112,18 @@ range(2, 20, 3)
 ```
 
 
+
+
 ## Mutabilité des `list`
 
 Les `list` sont des objets _mutables_, cela signifie qu'ils contiennent
 des éléments qu'on peut **modifier** au besoin.
 
-On peut ajouter des valeurs, supprimer des valeurs, modifier des valeurs.
+On peut ajouter, supprimer, modifier des valeurs.
 
 ### Modifier un élément dans une liste
 
-On modifie un élément existant avec la notation `ma_liste[incide] = valeur`
+On **modifie** un élément existant avec la notation `ma_liste[incide] = valeur`
 
 ```python
 >>> ma_liste = ["a", "b", "c"]
@@ -95,6 +131,17 @@ On modifie un élément existant avec la notation `ma_liste[incide] = valeur`
 >>> ma_liste
 ["z", "b", "c"]
 ```
+
+Attention : lorsque `indice` est supérieur ou égal à la taille de la `list` cela
+engendre une érreur `IndexError`.
+
+```python
+>>> ma_liste[4] = "d"
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+IndexError: list assignment index out of range
+```
+
 
 ### Ajouter des valeurs
 
@@ -132,7 +179,17 @@ True
 
 _Attention_ : cela ne signifie pas que ce sont les mêmes objets en mémoire...
 
+Lorsque ce sont les mêmes objets en mémoire on dit qu'elles sont _identiques_.
+
 ### Exercice 1
+
+1. Créer les `list` : `[4, 3, 2, 1]` et `[1, 2, 3, 4]` et affectez les à des variables
+2. Vérifier qu'elles contiennent les mêmes éléments.
+3. Sont-elles pour autant égales ?
+
+**Dans une `list`, l'ordre des éléments compte**
+
+### Exercice 2
 
 Pour chaque question on créera la liste de deux manières :
 
@@ -153,6 +210,8 @@ Pour chaque question on créera la liste de deux manières :
 1. Créer la liste des carrés des 10 premiers entiers (de 0 à 9).
 2. Créer la liste des prenoms de vos 4 voisins les plus proches.
 3. Créer la liste des entiers entre 0 et 100 qui se terminent par 7.
+4. Créer la liste de vos cinq séries ou films préférés (remplacez par
+  jeux-vidéos si vous préférez).
 
 ### Concaténer des listes
 
@@ -194,7 +253,7 @@ On retire une valeur avec le mot clé `del` ou la méthode `remove`.
 Les deux manières précédentes de retirer des objets utilisent des effets
 de bord et ne renvoient rien.
 
-Il existe une autre méthode `pop` qui, contrairement à `append`, retire
+Il existe une autre méthode, `pop` qui, contrairement à `append`, retire
 le dernier élément et le renvoie.
 
 ```python
@@ -212,7 +271,7 @@ Traceback (most recent call last):
 IndexError: pop from empty list
 ```
 
-## Exercice 2
+### Exercice 3
 
 Les amis de JP.
 
@@ -253,9 +312,6 @@ _Comme on peut le voir il n'est pas évident d'associer un nom à un age. La
 structure `list` n'est clairement pas la plus adaptée à ce travail...
 Nous verrons les `dict` qui permettent de faire ça beaucoup plus aisément_
 
-### Que peut-on mettre dans une `list` ?
-
-Tout ce qu'on veut. Les objets peuvent ne pas être du même type !
 
 ### Copier une liste
 
@@ -263,7 +319,7 @@ Lorsqu'on souhaite _faire une copie_ d'une liste il faut être très prudent.
 
 ```python
 >>> l1 = ["Pierre", "Paul", "Jacques"]
->>> l2 = l1                                 # l1 et l2 ont les mêmes valeurs
+>>> l2 = l1         # l1 et l2 pointent vers le même objet
 ```
 
 Ce n'est pas **UNE COPIE** mais la même liste !!!
@@ -300,8 +356,8 @@ En pratique, on crée un tuple avec la notation `(1, 2, 3)`, des parenthèses
 plutôt que des crochets.
 
 Les tuples ne sont pas mutables, on ne peut rien leur ajouter, retirer, modifier.
-
 Pour modifier un tuple, on en crée une copie et voila.
+
 L'intérêt des tuples est qu'ils sont plus rapides. Lorsqu'on n'a pas besoin
 de modifier les éléments qu'ils contiennent, on privilégie les tuples.
 
@@ -322,7 +378,7 @@ Par exemple :
 ```
 
 C'est commode mais source d'erreurs. Il faut s'assurer d'avoir à gauche
-du signe `=` autant de variables (séparées par des virgules) qu'il n'y en a
+du signe `=` autant de variables (séparées par des virgules) qu'il y en a
 à droite.
 
 ### Fonction renvoyant un tuple
@@ -366,27 +422,27 @@ mercredi
 jeudi
 ```
 
-### Exercice 3
+### Exercice 4
 
 Écrire un programme python qui créé une liste `mois` qui comprend les mois
 de l'année, puis à l’aide de parcours successifs de la liste effectuer
 les actions suivantes :
 
-1. Afficher la liste `mois`
+1. Afficher un à un les éléments de la liste `mois`
 2. Afficher la valeur de `mois[4]`
 3. Echanger les valeurs de la première et de la dernière case de cette liste
 4. Afficher 12 fois la valeur du dernier élément de la liste
 5. Peut-on réaliser toutes ces étapes avec un tuple ?
 
-### Exercice 4
+### Exercice 5
 
-1. Créer la liste des cubes des entiers entre 1 et 20. On utilisera un range.
+1. Créer la liste des cubes des entiers entre 1 et 20. On utilisera un `range`.
 2. Comment savoir à l'aide de votre liste si $245$ est le cube d'un entier ?
 3. Ajouter le cube de 0 à sa place.
 4. Retirer $11^3$ de la liste en utilisant `remove`.
 5. Retirer $8^3$ de la liste en utilisant `del` (comptez soigneusement avant sa position).
 6. À l'aide d'une boucle `while`, retirer un par un les cubes de la liste en
-  partant de la fin et les afficher. À la fin de votre boucle, la liste des vide.
+  partant de la fin et les afficher. À la fin de votre boucle, la liste est vide.
 
     Voici ce qu'on doit voir :
 
@@ -400,7 +456,7 @@ les actions suivantes :
     0
     ```
 
-## Fonctions `list` et mutabilité
+## Fonctions, `list` et mutabilité
 
 On aborde ici une particularité de Python qu'il faut garder en tête lorsqu'on
 manipule des listes.
@@ -435,7 +491,7 @@ des listes.
 
 Visualisez le comportement dans [Python Tutor](http://pythontutor.com/visualize.html#code=def%20ajoute_un_trois%28liste%3A%20list%29%20-%3E%20None%3A%0A%20%20%20%20'''ajoute%20l'%C3%A9l%C3%A9ment%203%20%C3%A0%20la%20fin%20de%20la%20liste'''%0A%20%20%20%20liste.append%283%29%0A%0Ama_liste%20%3D%20%5B%5D%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%23%20ici%20la%20liste%20est%20vide%0A%0Aajoute_un_trois%28ma_liste%29%20%20%20%20%20%20%20%23%20ma_liste%20%3D%3D%20%5B3%5D%0A%0Aajoute_un_trois%28ma_liste%29%20%20%20%20%20%20%20%23%20ma_liste%20%3D%3D%20%5B3,%203%5D%0A%0Aajoute_un_trois%28ma_liste%29%20%20%20%20%20%20%20%23%20ma_liste%20%3D%3D%20%5B3,%203,%203%5D%0A%0Aajoute_un_trois%28ma_liste%29%20%20%20%20%20%20%20%23%20ma_liste%20%3D%3D%20%5B3,%203,%203,%203%5D%0A%0Aajoute_un_trois%28ma_liste%29%20%20%20%20%20%20%20%23%20ma_liste%20%3D%3D%20%5B3,%203,%203,%203,%203%5D%0A&cumulative=false&curInstr=0&heapPrimitives=nevernest&mode=display&origin=opt-frontend.js&py=3&rawInputLstJSON=%5B%5D&textReferences=false)
 
-## Exercice 5
+### Exercice 6
 
 
 Échanger deux variables.
@@ -461,11 +517,15 @@ y = z
     y = x
     ```
 
+    Vérifiez l'état des variables `x` et `y`.
 
-2. Créer une fonction `echange_tete_queue` qui prend un paramètres du type `list`
+2. Modifier l'exemple précédent pour partir de `x = 2, y= 3` et arriver au contraire.
+
+
+3. Créer une fonction `echange_tete_queue` qui prend un paramètres du type `list`
   et échange le premier et le dernier élément de la liste.
 
-3. Créer une fonction `renverser` qui prend une liste et renvoie _une copie_
+4. Créer une fonction `renverser` qui prend une liste et renvoie _une copie_
   de celle-ci mais dans l'ordre contraire.
 
     ```python
@@ -475,7 +535,7 @@ y = z
     >>> l1
     >>> [1, 2, 3]
     ```
-4. Faire la même chose mais en modifiant la liste de départ. Cette fois
+5. Faire la même chose mais en modifiant la liste de départ. Cette fois
   `renverser` ne renvoie rien.
 
     ```python

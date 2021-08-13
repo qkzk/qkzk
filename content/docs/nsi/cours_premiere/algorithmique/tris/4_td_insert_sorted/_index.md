@@ -70,8 +70,13 @@ et `False` sinon.
 
 ## Exercice 5 - Top k
 
-On dispose d'un tableau contenant les 1000 villes les populations des 1000
+On dispose d'un tableau contenant les populations des 1000
 principales villes de France dans le désordre.
+
+```python
+top1000 = [249712, 345681, 254010, 153020, ..., 128763]
+```
+
 
 1. Créer en une ligne de code la liste des 100 premières populations, dans
   l'ordre décroissant.

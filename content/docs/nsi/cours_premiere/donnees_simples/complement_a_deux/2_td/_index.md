@@ -5,8 +5,7 @@ weight: 2
 
 ---
 
-### pdf : [pour impression](/uploads/docsnsi/donnees_qkzk_img/complement_a_2_TD.pdf)
-
+### pdf : [pour impression](./complement_a_2_TD.pdf)
 
 # V/F
 
@@ -42,28 +41,27 @@ weight: 2
 # 3. Complément à deux sur un octet.
 
 On encode les entiers en complément à 2 sur un octet.\
-Compléter le tableau suivant :
+1. Compléter le tableau suivant :
+    _Lorsque c'est impossible, écrire une croix_
 
-_Lorsque c'est impossible, écrire une croix_
+  | Entier | Complément à 2 sur un octet |
+  |--------|:---------------------------:|
+  | 1      |                             |
+  | 127    |                             |
+  |        | `1111 1111`                 |
+  | -12    |                             |
+  | -93    |                             |
+  | 101    |                             |
+  | -139   |                             |
+  |        | `0101 1100`                 |
+  |        | `1101 0011`                 |
 
-| Entier | Complément à 2 sur un octet |
-|--------|-----------------------------|
-| 1      |                             |
-| 127    |                             |
-|        | `1111 1111`                 |
-| -12    |                             |
-| -93    |                             |
-| 101    |                             |
-| -139   |                             |
-|        | `0101 1100`                 |
-|        | `1101 0011`                 |
+2. Réaliser les additions des éléments du tableau en complément à 2, deux lignes
+    à la fois :
 
-Réaliser les additions des éléments du tableau en complément à 2, deux lignes
-à la fois :
+    premier + second, second + troisième, troisième + quatrième.
 
-premier + second, second + troisième, troisième + quatrième.
-
-Vérifier les résultats obtenus.
+3. Vérifier les résultats obtenus.
 
 # 4. Complément à deux, un programme
 

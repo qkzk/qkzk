@@ -3,10 +3,10 @@ title: "cours : Modèle Client-Server"
 author: David Roche
 theme: metropolis
 weight: 4
+
 ---
 
-pdf : [pour impression](/uploads/docsnsi/ihm_web/nsi_prem_clsv_print.pdf)
-
+pdf : [pour impression](./nsi_prem_clsv_print.pdf)
 
 # Modèle Client-Server
 
@@ -59,7 +59,7 @@ conçues pour fonctionner 24h sur 24h. Ils peuvent aussi avoir une grosse
 capacité de stockage afin de stocker un grand nombre de ressources
 (vidéos, sons,...). Une seule machine peut servir de nombreuses applications.
 
-![serveur](/uploads/docsnsi/ihm_web/img/serveur.jpg)
+![serveur](img/serveur.jpg)
 
 _Un serveur_
 
@@ -77,7 +77,7 @@ utilisateurs en permanence. Ces entreprises possèdent d'immenses salles
 contenant chacune des centaines ou des milliers de serveurs (ces
 serveurs sont rangés dans des armoires appelées "baie serveur").
 
-![salle-serveur](/uploads/docsnsi/ihm_web/img/salle-serveur.jpg)
+![salle-serveur](img/salle-serveur.jpg)
 
 _salle serveur_
 

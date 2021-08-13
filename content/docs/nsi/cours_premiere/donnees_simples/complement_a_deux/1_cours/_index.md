@@ -6,7 +6,8 @@ date: 2020/07/25
 
 ---
 
-### pdf [pour impression](/uploads/docsnsi/donnees_qkzk_img/complement_a_2_eleves.pdf), [diaporama](/uploads/docsnsi/donnees_qkzk_img/complement_a_2_beamer.pdf)
+### pdf [pour impression](./complement_a_2_eleves.pdf)
+
 
 # Le complément à deux : comment coder les entiers négatifs dans une machine ?
 
@@ -108,7 +109,7 @@ Vérifions que $27 + (-9) = 18$
 
 ... mais `0b 1010 0100 = -36` en binaire signé...
 
-Échec total ! **Le binaire signé ne permet pas de réaliser les additions habitulles**
+Échec total ! **Le binaire signé ne permet pas de réaliser les additions habituelles**
 
 ## Exercice 1
 
@@ -217,7 +218,7 @@ Compléter :
 
 $|n| = 108$ = `0b0110 1100`
 
-Changer conserver les 0 à droite jusqu'au premier 1 inclus, changer tous les
+Conserver les 0 à droite jusqu'au premier 1 inclus, changer tous les
 bits à gauche.
 
 $n = -108$ = `  0b1001 0100`
@@ -252,9 +253,9 @@ On vérifie immédiatement que `18 = 0b10010`
 
 ## Complément à deux vers décimal
 
-### Si l'entier est positif (son premier bit est 0)...
+### Si l'entier est positif (son premier bit est 0)
 
-On fait comme d'habitude !
+On fait comme d'habitude.
 
 **Exemple :** `0b 0001 1011`
 
@@ -262,7 +263,7 @@ $1 \times 1 + 1\times 2 + 1\times 8 + 1\times 16 = 27$
 
 ## Du complément à deux vers le décimal
 
-### Si l'entier est négatif (si premier bit est 1)
+### Si l'entier est négatif (son premier bit est 1)
 
 1. Échanger tous les bits $0 \leftrightarrow 1$,
 2. Ajouter 1,
@@ -376,4 +377,3 @@ Dans Python les entiers ont une **taille arbitraire**, il ne peut afficher nativ
 
 Pour obtenir le complément à 2, il faut le programmer.
 
-Pour ceux que ça intéresse j'ai un TP Colab qui montre différentes manières d'afficher le complément à deux dans Python.

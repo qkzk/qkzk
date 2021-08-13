@@ -7,7 +7,8 @@ weight: 1
 
 ---
 
-### pdf : [pour impression](/uploads/docsnsi/algo/sequentiel/parcours_sequentiel_print.pdf), [diaporama](/uploads/docsnsi/algo/sequentiel/parcours_sequentiel_slides.pdf)
+### pdf : [pour impression](./parcours_sequentiel.pdf)
+
 
 # Algorithmes sur les tableaux
 
@@ -56,8 +57,8 @@ Et cette approche pose un problème majeur : **ces instructions n'existent pas d
 
 ## Objectifs
 
-* Nous allons étudiers de simples algorithmes qui utilisent le caractère séquentiel d'un tableau.\
-* Systématiquement, nos algorithme vont commencer par une boucle qui parcourt les éléments du tableau.\
+* Nous allons étudier de simples algorithmes qui utilisent le caractère séquentiel d'un tableau.\
+* Systématiquement, nos algorithme vont utiliser une boucle qui parcourt les éléments du tableau.\
 * À chaque fois il faudra adapter ce que nous faisons dans la boucle à notre contexte.
 
 
@@ -164,7 +165,7 @@ Rappelons qu'il existe deux types de boucles :
 
 ## for
 
-1. **boucles avec `for`** qui parcoure directement un objet _itérable_ (`list`, `tuple`, `dict`, etc.).
+1. **boucles avec `for`** qui parcourt directement un objet _itérable_ (`list`, `tuple`, `dict`, etc.).
 
     ```python
     for joueur in tableau:
@@ -233,18 +234,18 @@ T = [2, 5, -4, 12]
 
 **A-t-on 9 dans le tableau ?**
 
-| élément          	| 2    	| 5    	| -4   	| 12   	|
-|------------------	|------	|------	|------	|------	|
-| `élément == 9 ?` 	| Faux 	| Faux 	| Faux 	| Faux 	|
+| élément           | 2     | 5     | -4    | 12    |
+|------------------ |------ |------ |------ |------ |
+| `élément == 9 ?`  | Faux  | Faux  | Faux  | Faux  |
 
 Le parcours de la boucle se termine et l'algorithme retourne Faux.
 
 
 **A-t-on -4 dans le tableau ?**
 
-| élément          	| 2    	| 5    	| -4   	| 12   	|
-|------------------	|------	|------	|------	|------	|
-| `élément == 9 ?` 	| Faux 	| Faux 	| Vrai 	| x 	  |
+| élément           | 2     | 5     | -4    | 12    |
+|------------------ |------ |------ |------ |------ |
+| `élément == 9 ?`  | Faux  | Faux  | Vrai  | x     |
 
 L'algorithme retourne Vrai. La dernière case du tableau n'est jamais visitée !
 
@@ -265,9 +266,9 @@ Dans notre cas, on a, grosso modo, autant d'opérations qu'il y a d'éléments d
 
 Le coût est _proportionnel à la taille du tableau_. On dit qu'il est _linéaire_.
 
-On note : le parcours séquentiel est un algorithme en $O(n)$
+On note : **le parcours séquentiel est un algorithme en $O(n)$**
 
-$n$ ici désigne la taille du tableau.
+$n$ désigne la taille du tableau.
 
 ## En Python :
 
@@ -282,13 +283,12 @@ def recherche_sequentielle(tableau, x):
 
 ## Le mot de la fin
 
-Parcours séquentiel : seule manière de répondre à
+Sans information supplémentaire, le parcours séquentiel est la seule manière de répondre à
 
 **`x` figure-t-il  dans le tableau T ?**
 
-SAUF si on a des informations particulières sur le tableau !
-
-Si le tableau est **trié** alors il existe des algorithmes plus rapides.
+Si on a des informations particulières sur le tableau, par exemple s'il est **trié**
+alors il existe des algorithmes plus rapides.
 
 Nous en étudierons un important : **la recherche dichotomique**.
 
@@ -301,14 +301,14 @@ Nous en étudierons un important : **la recherche dichotomique**.
 Le principe est simple.
 
 * Si on n'a qu'un élément, `maximum` est cet élément.
-* Sinon... on les compare et, à chaque fois qu'une valeur `e` est supérieure à `maximum`, on l'affecte à `maximum`.
+* Sinon, on parcourt les éléments et à chaque fois qu'une valeur `e` est supérieure à `maximum`, on l'affecte à `maximum`.
 * On retourne `maximum`
 
 Pour le tableau `T = [2, 5, 9, 7]` cela donne :
 
-| élément `e` 	| 2 	| 5 	| 9 	| 7 	|
-|-------------	|---	|---	|---	|---	|
-| `maximum`   	| 2 	| 5 	| 9 	| 9 	|
+| élément `e`   | 2   | 5   | 9   | 7   |
+|-------------  |---  |---  |---  |---  |
+| `maximum`     | 2   | 5   | 9   | 9   |
 
 Le maximum vaut 9.
 
@@ -318,9 +318,9 @@ Le maximum vaut 9.
 ```
 fonction maximum(tableau T, nombre x) ---> nombre:
   On affecte à max la valeur de l'élément d'indice 0 du tableau.
-  Pour chaque élément e du tableau:
-    si e > max:
-      max = e
+  Pour chaque élément elt du tableau:
+    si elt > max:
+      max = elt
   retourner max
 ```
 
@@ -348,7 +348,7 @@ def maximum(tableau):
 
 ## Moyenne des éléments d'un tableau
 
-**Contexte :** On calcule la moyenne d'un tableau de nombres
+**Contexte :** Calculer la moyenne d'un tableau de nombres
 
 Le principe repose sur **le cumul d'une valeur**.
 
@@ -358,10 +358,10 @@ Le principe repose sur **le cumul d'une valeur**.
 
 Pour le tableau `T = [2, 5, 9, 8]` cela donne :
 
-| élément `e` 	| 2 	| 5 	| 9 	| 8 	|
-|-------------	|---	|---	|---	|---	|
-| `nb_elements`	| 1 	| 2 	| 3 	| 4 	|
-| `somme  `   	| 2 	| 7 	| 16 	| 24 	|
+| élément `e`   | 2   | 5   | 9   | 8   |
+|-------------  |---  |---  |---  |---  |
+| `nb_elements` | 1   | 2   | 3   | 4   |
+| `somme  `     | 2   | 7   | 16  | 24  |
 
 Le somme vaut 24 et il y a 4 éléments : la moyenne est `24/4 = 6`
 
@@ -423,8 +423,9 @@ Comment faire ?
 def retourner(tableau):
   tab_retourne = []
   for element in tableau:
-    tab_retourne = [element] + tableau_retourne
-    # variante : tab_retourne.insert(0, element)
+    tab_retourne.insert(0, element)
+    # variante :
+    # tab_retourne = [element] + tableau_retourne
   return tab_retourne
 ```
 
@@ -510,7 +511,7 @@ for ligne in tableau:
 
 ```
 
-Si vous devez apprendre 1 phrase de cette partie c'est celle là.
+Si vous devez retenir 1 phrase de cette partie c'est celle là.
 
 
 
@@ -523,7 +524,7 @@ Si vous devez apprendre 1 phrase de cette partie c'est celle là.
 
   Le coût est proportionnel à ce produit.
 
-* Donc : chaque fois qu'on imbrique une boucle, on multiplie de le nombre d'étapes.
+* Donc : chaque fois qu'on imbrique une boucle, on multiplie le nombre d'étapes.
 
   Si j'ai 4 boucles **imbriquées** avec respectivement 3, 5, 10 et 4 éléments à
 visiter,
@@ -548,7 +549,7 @@ visiter,
 
   ```
 
-  cette syntaxe est fausse... La première boucle ne fait rien !
+  cette syntaxe est fausse...
 
 ## erreurs fréquentes : pire
 
@@ -636,19 +637,19 @@ mat = [[3, 9, 1, 2],
 Calculons la somme de cette matrice à la main :
 
 
-| ligne 0 	| élément `e` 	| 3  	| 9  	| 1  	| 2  	|
-|---------	|-------------	|----	|----	|----	|----	|
-|         	| `effectif`   	| 1  	| 2  	| 3  	| 4  	|
-|         	| `somme`     	| 3  	| 12 	| 13 	| 15 	|
+| ligne 0   | élément `e`   | 3   | 9   | 1   | 2   |
+|---------  |-------------  |---- |---- |---- |---- |
+|           | `effectif`    | 1   | 2   | 3   | 4   |
+|           | `somme`       | 3   | 12  | 13  | 15  |
 
 
 On ne réinitialise pas `effectif` et `somme` entre les lignes !
 
 
-| ligne 1 	| élément `e` 	| 4  	| 5  	| 0  	| 1  	|
-|---------	|-------------	|----	|----	|----	|----	|
-|          	| `effectif`  	| 5  	| 6  	| 7  	| 8  	|
-|          	| `somme`     	| 19 	| 24 	| 24 	| 25 	|
+| ligne 1   | élément `e`   | 4   | 5   | 0   | 1   |
+|---------  |-------------  |---- |---- |---- |---- |
+|           | `effectif`    | 5   | 6   | 7   | 8   |
+|           | `somme`       | 19  | 24  | 24  | 25  |
 
 ## En Python
 
@@ -663,14 +664,14 @@ for ligne in mat:
 
 ```
 
-retourne `25`
+La valeur finale de `somme` est `25`
 
 
 ## D'autres représentations des matrices
 
-On a vu (on on verra !) dans le TP sur les tableaux à 2 dimensions qu'il était
-parfois nécessaire de connaître la position d'une cellule dans la matrice, par
-exemple, pour construire un dégradé de pixels.
+il est parfois nécessaire de connaître la position d'une cellule dans la matrice.
+
+Nous allons créer une image, enregistrée dans un tableau 2D, présentant un dégradé
 
 Dans l'exemple suivant, non seulement nous parcourons le tableau à l'aide
 d'indices, mais en plus les éléments de la matrice sont atteints autrement.
@@ -694,4 +695,4 @@ display(img) # afficher dans colab
 ```
 ## dégradé obtenu
 
-![Degradé rouge -> noir](/uploads/docsnsi/algo/sequentiel/degrade.jpg)
+![Degradé rouge -> noir](degrade.jpg)

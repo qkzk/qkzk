@@ -5,10 +5,7 @@ weight: 1
 ---
 
 
-## pdf 
-
-* cours pour [impression](/uploads/docsnsi/donnees_qkzk_img/types_complexes-Article.pdf) et [diaporama](/uploads/docsnsi/donnees_qkzk_img/type_complexes-Beamer.pdf)
-
+## pdf [pour impression](./types_complexes.pdf)
 
 
 # Types construits
@@ -50,10 +47,10 @@ def oppose_vecteur(x, y):
 
 et cela donne :
 
-~~~python
+```python
 >>> oppose_vecteur(1, 3)
 (-1, -3)
-~~~
+```
 
 # Tableaux
 
@@ -64,7 +61,7 @@ Un **tableau** est une collection _mutable_ d'objets.
 Contrairement aux tuples, on peut en changer le contenu. On peut aussi ajouter
 ou retirer des éléments à un tableau.
 
-En python, tous les tableaux ont le type `List`
+En python, tous les tableaux ont le type `list`
 
 Pourquoi cette distinction ? Pour éviter les confusions ultérieures !
 
@@ -195,36 +192,36 @@ Pour les :
 
 La syntaxe est la même et `element` désigne l'objet contenu dans `objet_construit`
 
-~~~python
+```python
 >>> chaine = "aZe"
 >>> for lettre in chaine:
 ...   print(lettre)
 a
 Z
 e
-~~~
+```
 
 ##
 
-~~~python
+```python
 >>> tuple = (6, 4, 2)
 >>> for t in tuple:
 ...   t ** 2
 36
 16
 4
-~~~
+```
 
 ##
 
-~~~python
+```python
 >>> liste = [a-1 for a in range(3)]
 >>> for x in liste:
 ...    x + 2
 1
 2
 3
-~~~
+```
 
 ## Cas particulier propres aux dictionnaires
 
@@ -242,25 +239,25 @@ tel = {
 }
 ```
 
-~~~python
+```python
 >>> for personne in tel:
 ...  tel[personne]
 "0320666666"
 "0320123456"
 "0320987654"
-~~~
+```
 
 ## Itération avec `.keys()`
 
 `keys()` : collection des clés (les noms dans l'exemple plus haut.)
 
-~~~python
+```python
 >>> for personne in tel.keys():
 ...  tel[personne]
 "0320666666"
 "0320123456"
 "0320987654"
-~~~
+```
 
 C'est identique à l'itération normale !
 
@@ -268,15 +265,15 @@ C'est identique à l'itération normale !
 
 `items()` : collection des TUPLES (clé, valeur)
 
-~~~python
+```python
 >>> for personne, tel in tel.items():
 ...  print("le numéro de ", personne, " est ", tel)
-~~~
-~~~
+```
+```
 Le numéro de Marcel est 0320666666
 Le numéro de Robert est 0320123456
 Le numéro de Amandine est 0320987654
-~~~
+```
 
 ## Itération avec `.values()`
 

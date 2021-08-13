@@ -1,4 +1,5 @@
 ---
+---
 title: "Booléens : TD"
 weight: 2
 
@@ -98,11 +99,11 @@ portes ET et XOR :
 
 * porte ET
 
-![porte ET](/uploads/docsnsi/donnees_qkzk_img/porte-et.png)
+![porte ET](./img/porte-et.png){ width=150px }
 
 * Porte XOR
 
-![porte XOR](/uploads/docsnsi/donnees_qkzk_img/porte-xor.png)
+![porte XOR](./img/porte-xor.png){ width=150px }
 
 1. Rappeler les tables de vérité de ces deux portes.
 
@@ -117,7 +118,7 @@ portes ET et XOR :
       Dans quel cas aura-t-on une retenue à écrire ? Quelle opération booléenne sur les bits
       permet d'obtenir ce résultat ?
 
-## Portes logiques
+# Portes logiques
 
 
 Les opérations logiques évoquées ci-dessus sont mises en oeuvre en
@@ -127,7 +128,7 @@ Les circuits électroniques calculent des fonctions logiques de l'algèbre de B
 
 Pour chacun des opérateurs logiques évoquées ci-dessus (et d'autres) il existe donc des portes logiques appelés *porte ET*, *porte NON*, etc. Les valeurs *vrai *et *faux* sont représentées par deux niveaux de tension, *haut* et *bas*.
 
-## Demi additionneur
+## Exercice 11 - Demi additionneur
 
 Un circuit de type *porte ET* dispose donc de deux entrées et une sortie.
 
@@ -138,7 +139,7 @@ Les portes peuvent être connectées entre elles pour réaliser des
 **circuits logiques** et on peut ainsi réaliser des calculs.
 
 
-![demi-additionneur](/uploads/docsnsi/donnees_qkzk_img/demi-additionneur.png)
+![demi-additionneur](./img/demi-additionneur.png){width=300px}
 
 Il est appelé *demi-additionneur* car il réalise l'addition de 2 bits
 ($A$ et $B$), le résultats de cette somme est représentée par $S$
@@ -147,3 +148,69 @@ et la retenue éventuelle par $R$.
 
 Construisez les tables de vérité de $S$ et $R$ et comparez à celle de l'addition
 de deux bits $A$ et $B$.
+
+# Retrouver une expression booléenne
+
+## Exercice 12
+
+On considère la table de vérité de l'expression `Z` ci-dessous
+
+| `x` | `Z(x)` |
+|-----|--------|
+| 0   | 0      |
+| 1   | 0      |
+
+Exprimer `Z` à l'aide des fonctions booléennes et, ou, non.
+
+## Exercice 13
+
+On considère la table de vérité de l'expression `U` ci-dessous
+
+| `x` | `U(x)` |
+|-----|--------|
+| 0   | 1      |
+| 1   | 1      |
+
+Exprimer `U` à l'aide des fonctions booléennes et, ou, non.
+
+# Programmer une table de vérité
+
+Partons d'un exemple avec l'expression booléenne `Non (a ET Non b)`
+
+On souhaite vérifier si cette expression peut s'écrire sous la forme `Non a OU b`.
+
+Plusieurs approches sont possibles :
+
+* démonstrations mathématique,
+* table de vérité,
+* utiliser un programme qui teste tous les cas.
+
+Les deux derniers points sont équivalents d'un point de vue logique mais dans
+le second on fait faire les calculs à une machine.
+
+
+**Démarche :**
+
+1. on crée une fonction pour chaque expression booléenne
+2. on crée une fonction qui prend ces expressions booléennes et teste chaque
+  valeur possible des variables.
+
+```python
+def exp1(a, b):
+  return not (a and not b)
+
+def exp2(a, b):
+  return not a or b
+
+def tester_egalite_2_variables(f, g):
+  for a in (True, False):
+    for b in (True, False):
+      if f(a, b) != g(a, b):
+        return False
+  return True
+```
+
+On considère deux fonctions booléennes à trois entrées (`a, b, c`),
+écrire un programme python permettant de tester leur égalité.
+
+

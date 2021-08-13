@@ -1,13 +1,12 @@
 ---
 title: "TP : Protocole HTTP"
-author: David Roche
+author: qkzk
 theme: metropolis
 weight: 16
 
 ---
 
-pdf : [pour impression](/uploads/docsnsi/ihm_web/nsi_prem_http_print.pdf)
-
+pdf : [pour impression](./nsi_prem_http_print.pdf)
 
 # Protocole HTTP
 
@@ -77,7 +76,7 @@ Détaillons 4 de ces méthodes :
 Une fois la requête reçue, le serveur va renvoyer une réponse, voici un
 exemple de réponse du serveur :
 
-~~~html
+```python
 HTTP/1.1 200 OK
 Date: Thu, 15 feb 2019 12:02:32 GMT
 Server: Apache/2.0.54 (Debian GNU/Linux) DAV/2 SVN/1.1.4
@@ -95,7 +94,7 @@ Content-Type: text/html; charset=ISO-8859-1
     <p>Ceci est un <strong>paragraphe</strong>. Avez-vous bien compris ?</p>
   </body>
 </html>
-~~~
+```
 
 Nous n'allons pas détailler cette réponse, voici quelques explications
 sur les éléments qui nous seront indispensables par la suite :
@@ -188,7 +187,7 @@ seulement l'assurance de l'origine. Vous ne transmettez aucune donnée au site.
 Il est parfaitement possible d'utiliser Python (ou n'importe quel langage
 moderne) pour établir une connexion avec un serveur web :
 
-~~~python
+```python
 >>> import requests # librairie qui gère les connexion HTTP
 >>> reponse = requests.get("https://qkzk.xyz")
 >>> # on établi une connexion avec mon site
@@ -202,7 +201,7 @@ moderne) pour établir une connexion avec un serveur web :
 'Cache-Control': 'max-age=600', 'Content-Encoding': 'gzip',
 # réponse tronquée
 }
-~~~
+```
 
 * On peut voir que la connexion est bien établie entre mon client
     (Python lui même) et le serveur (Github.com) qui héberge mon site.
@@ -213,7 +212,7 @@ moderne) pour établir une connexion avec un serveur web :
 
 Le contenu de la réponse
 
-~~~python
+```python
 >>> reponse.content
 b'<!DOCTYPE html>
 <html lang="en">
@@ -224,12 +223,12 @@ b'<!DOCTYPE html>
 <title>accueil| qkzk</title> ...'
 # tronqué. La suite est le contenu complet de la page d'accueil du site...
 </body></html>'
-~~~
+```
 
 Il est possible d'examiner la requête transmise par _le client_ lui même au
 serveur :
 
-~~~python
+```python
 >>> reponse.request
 <PreparedRequest [GET]>
 >>> reponse.request.headers
@@ -237,18 +236,18 @@ serveur :
 'Accept-Encoding': 'gzip, deflate',
 'Accept': '*/*',
 'Connection': 'keep-alive'}
-~~~
+```
 C'est la requête qui a été transmise quand on a tapé :
 
-~~~python
+```python
 >>> reponse = requests.get("http://qkzk.xyz")
-~~~
+```
 
 On a bien transmis une requête GET au serveur, avec toutes les informations
 voulues. C'est bien Python qui a transmis cette requête.
 
 
-## À faire vous même
+## Exercice 1
 
 1. En utilisant Thonny reproduire les commandes présentées ci-dessus pour joindre
 successivement : `https://google.com` et `https://google.com/azeaze`
@@ -259,11 +258,190 @@ successivement : `https://google.com` et `https://google.com/azeaze`
 
     Comment expliquer cette différence ?
 
-## À faire vous même 2
+# Éxaminer une requête depuis une machine
 
-En utilisant [httppie](https://httpie.org) qui s'installe sur votre clé avec
-`$ sudo apt install httpie` (si ça ne fonctionne pas, utiliser "run" sur leur site) :
+Différentes approches permettent d'exécuter et d'examiner des requêtes.
+En voici une qui devrait fonctionner sur un ordinateur et un téléphone.
 
-1. Faire une requête `GET` sur l'accueil de mon site
-2. Essayer une requête `POST` avec la clé "bonjour" et la valeur "NSI". Qu'obtient-on ?
+1. Rendez-vous sur le site [httpie](https://httpie.io) et cliquez sur **Try online**.
+2. Vous aboutissez devant un _prompt_. Appuyez sur **enter**.
+3. Vous pouvez maintenant saisir une requête et examiner son contenu ainsi que
+  sa réponse.
+4. Une requête `http -v PUT pie.dev/put API-Key:foo hello=world` est préremplie, exécutez la.
+
+Examinons cette requête.
+
+1. On exécute la commande unix "`http`", c'est celle fournie par le site httpie.
+  On peut installer cette commande sur les PC (linux / windows) et les Macs.
+
+  Par ailleurs, ce prompt permet d'exécuter des commandes Unix classiques (`ls`, `mkdir` etc.)
+
+2. L'option `-v` pour "verbose", _verbeux_ affiche un contenu détaillé
+3. La méthode HTTP `PUT` a été décrite plus haut, relisez la.
+4. L'adresse est `pie.dev/put`
+5. Les informations fournies sont les paires : `API-Key:foo` et `hello=world`
+
+    On a transmis :
+
+    * une clé d'API (Application Programming Interface) : `"foo"` permettant de s'identifier
+    * un couple clé valeur `hello`, `world`
+6. Voici le résultat obtenu :
+
+    ```html
+    ~ $ http -v PUT pie.dev/put API-Key:foo hello=world
+    PUT /put HTTP/1.1
+    API-Key: foo
+    Accept: application/json, */*;q=0.5
+    Accept-Encoding: gzip, deflate
+    Connection: keep-alive
+    Content-Length: 18
+    Content-Type: application/json
+    Host: pie.dev
+    User-Agent: HTTPie/2.4.0
+
+    {
+        "hello": "world"
+    }
+
+
+    HTTP/1.1 200 OK
+    CF-Cache-Status: DYNAMIC
+    CF-RAY: 675d5bda2e85e6cc-EWR
+    Connection: keep-alive
+    Content-Encoding: gzip
+    Content-Type: application/json
+    Date: Wed, 28 Jul 2021 10:17:37 GMT
+    NEL: {"report_to":"cf-nel","max_age":604800}
+    Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=By3uhsityZzSSDvUeNsGeV6ynezLsCwDAARh0fHKHQa43zCmEOLRUuEDSOPBJG8fWBbPpIqmGynSneEL5UrIwHxIo%2Bn5o6f%2BmWyJxp1P6SFoHSjFUOoVmsTJ"}],"group":"cf-nel","max_age":604800}
+    Server: cloudflare
+    Transfer-Encoding: chunked
+    access-control-allow-credentials: true
+    access-control-allow-origin: *
+    alt-svc: h3-27=":443"; ma=86400, h3-28=":443"; ma=86400, h3-29=":443"; ma=86400, h3=":443"; ma=86400
+    ```
+
+
+## Exercice 2
+
+Toujours depuis httpie :
+
+1. exécuter une requête `GET` vers mon site, avec l'option `-v`
+2. Donner :
+
+    * l'hôte de la requête,
+    * l'User-Agent de la requête,
+    * le code de la réponse,
+    * la longueur du contenu de la réponse,
+    * le type de contenu de la réponse,
+    * la date de dérnière modification de la réponse,
+    * le serveur de la réponse
+
+# Requête GET et POST
+
+En théorie, une requête GET permet d'**accéder** à un contenu, sans le modifier,
+et une requête POST d'**envoyer** un nouveau contenu.
+
+Ainsi, presque toutes les requêtes effectuées sur internet sont des requêtes
+GET.
+
+## Transmettre une information via une requête GET
+
+Lorsqu'on transmet des informations via une requête GET, celles-ci sont transmises
+dans l'URL directement, sous la forme de paire "clé:valeur" :
+
+`https://httpbin.org/get?cle1=valeur1??cle2=valeur2`
+
+Par exemple avec httpie :
+
+```bash
+$ http -v GET https://httpbin.org/get?cle1=valeur1??cle2=valeur2
+```
+
+Ainsi, on a transmis deux informations : `cle1: valeur1` et `cle2: valeur2`
+
+Remarquez la syntaxe : `?` après l'adresse, `cle=valeur` et `??` pour séparer les
+paires.
+
+## Transmettre une information via une requête POST
+
+Cette fois, on transmet l'information dans l'entête, généralement via
+le champ `form` (_formulaire_).
+
+Ainsi, lorsque vous vous identifiez ou remplissez un formulaire, vos informations
+sont _généralement_ transmises via une requête `POST`.
+
+Les informations ne sont pas visibles directement mais elles ne sont pas chiffrées
+pour autant. Simplement, le navigateur ne les affiche pas dans la page.
+
+Considérons l'exemple suivant :
+
+```bash
+$ http -v POST https://httpbin.org/post hello=world bonjour=salut
+```
+
+## Exercice 3
+
+1. Exécuter cette requête sur httpie
+2. La requête a-t-elle été exécutée correctement ? Comment le sait-on ?
+3. Le serveur transmet-il ce qu'il a reçu en retour ? Dans quel champ ?
+4. La réponse de ce serveur est-elle un contenu html ?
+
+# Publier sur un microblog
+
+_Cette partie nécessite qu'un serveur dont je ne suis pas l'administrateur
+fonctionne toujours à cette date. Espérons que ce soit bien le cas !_
+
+Nous allons publier quelques messages sur le [blog](https://liris-ktbs01.insa-lyon.fr:8000/blogephem/) de mon collègue.
+
+Les champs acceptés sont `title` et `body`.
+
+Lorsque le post est accepté, la réponse contient l'url permettant de consulter le message.
+
+```bash
+~ $ http -v POST https://liris-ktbs01.insa-lyon.fr:8000/blogephem/ title=bjour body=super
+POST /blogephem/ HTTP/1.1
+Accept: application/json, */*;q=0.5
+Accept-Encoding: gzip, deflate
+Connection: keep-alive
+Content-Length: 35
+Content-Type: application/json
+Host: liris-ktbs01.insa-lyon.fr:8000
+User-Agent: HTTPie/2.4.0
+
+{
+    "body": "super",
+    "title": "bjour"
+}
+
+
+HTTP/1.1 201 Created
+Connection: Keep-Alive
+Content-Encoding: gzip
+Content-Length: 78
+Content-Type: text/plain
+Date: Wed, 28 Jul 2021 11:21:37 GMT
+Keep-Alive: timeout=5, max=100
+Server: Apache/2.2.22 (Debian)
+Vary: Accept-Encoding
+location: https://liris-ktbs01.insa-lyon.fr:8000/blogephem/kewotepo
+
+https://liris-ktbs01.insa-lyon.fr:8000/blogephem/kewotepo
+```
+
+Ici, le code de la réponse est 201. Il indique qu'une information a été crée
+dans la base.
+
+## Exercice 4
+
+1. Publier un message sur le microblog. Par exemple, dîtes vous bonjour !
+2. Modifier légèrement :
+
+    * l'url
+    * le champ `title` vers `titre`
+    * le champ `body` vers `contenu`
+
+    Qu'obtient-t-on dans chacun des cas ?
+
+3. Peut-on publier un message sans `title` ? sans `body` ? 
+
 

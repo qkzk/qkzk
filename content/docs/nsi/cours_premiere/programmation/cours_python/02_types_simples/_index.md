@@ -9,8 +9,7 @@ weight: 3
 
 # Les types
 
-En Python chacun des objets qu'on manipule et donc chacune des variables
-qu'on écrit a un type.
+En Python chacun des objets qu'on manipule un type.
 
 On accède au type d'une expression avec la fonction `type` qui s'emploie ainsi :
 
@@ -19,8 +18,7 @@ On accède au type d'une expression avec la fonction `type` qui s'emploie ainsi 
 <class: 'int'>
 ```
 
-Le type d'une variable permet de définir ce qu'il est possible de faire
-avec cette variable.
+Le type d'une expression permet de définir ce qu'il est possible de faire.
 
 Par exemple, on peut ajouter deux entiers, on peut mesurer la longueur
 d'une chaîne de caractère, mais on ne peut pas mesurer la longueur
@@ -49,9 +47,22 @@ mais attention à la division :
 * La division entière par l'opération `//`
 
 Lorsque `a` et `b` sont du type entier, les opérations : `+, -, *, //, %, **`
-sont définies et le résultat sera un entier.
+sont définies et le résultat est un entier.
 
-La division de `a / b` donnera toujours un flottant.
+La division de `a / b` donne toujours un flottant.
+
+## Exercice 1
+
+1. Créer un script python. Affecter à `total` le nombre 134.
+
+C'est le nombre de gateaux achetés par Jérome.
+Il les distribue équitablement à chacun de ses 19 invités.
+Il décide de s'attribuer le reste.
+
+2. Affecter à `diviseur` le nombre de gateaux reçus par chacun.
+3. Affecter à `reste` le nombre de gateaux restant.
+4. Vérifier avec `isinstance` que les valeurs de ces trois variables sont
+  des entiers.
 
 ## Les nombres à virgule flottante : le type `float`
 
@@ -63,7 +74,7 @@ l'emporte généralement sur les entiers.
 
 Plus précisément, cela signifie que `1 + 2.3` sera du type flottant.
 
-## Exercice 1
+## Exercice 2
 
 
 1. Sans importer la librairie `math`, comment calculer la racine carré d'un nombre ?
@@ -116,7 +127,7 @@ On quitte l'aide avec la touche 'Q'.
 L'aide donne une information utile, pour mesurer les angles, il faut utiliser
 les radians.
 
-## Exercice 2
+## Exercice 3
 
 1. Utilisez la fonction `math.radians` pour mesurer le cosinus de 45°.
 
@@ -152,13 +163,41 @@ Les opérations courantes sur les booléens sont `not` qui renvoie le contraire,
 ```python
 >>> not True
 False
->>> (True and not False) or (False and True)
-True
 ```
 
 ## Exercice 3
 
-1. Vérifier à la main le résultat précédent.
+Vérifier à l'aide de Python les opérations courantes sur les booléens dans
+tous les cas possibles :
+
+```python
+>>> not True
+>>> not False
+>>> True and True
+>>> True and False
+>>> False and True
+>>> False and False
+>>> True or True
+>>> True or False
+>>> False or True
+>>> False or False
+```
+
+# Expression booléenne
+
+Lorsqu'on écrit une expression comportant des booléens, il faut prendre
+garde à l'ordre des opérations. On emploie généralement des parenthèses pour
+lever le doute.
+
+```python
+>>> (True and not False) or (False and not True)
+True
+```
+
+## Exercice 4
+
+1. Vérifier à la main le résultat précédent. 
+2. Reprendre le résultat en modifiant les parenthèses afin d'obtenir le résultat `False`.
 2. Pour accéder à l'attraction "Autopia" du parc Disneyland, un enfant
     doit être agé de 6 ans au moins, mesurer 81 cm au moins s'il est accompagné
     ou mesurer 1m30 au moins s'il n'est pas accompagné.
@@ -172,7 +211,8 @@ True
     Proposer une expression booléenne qui permette de savoir si un enfant
     peut entrer dans le parc.
 
-    Tester **tous** les cas.
+    Combien de situations différentes peut-on créer ?
+    Testez les toutes.
 
 On considère un triangle $ABC$ de longueurs respectives $x$, $y$ et $z$.
 
@@ -188,7 +228,7 @@ On considère un triangle $ABC$ de longueurs respectives $x$, $y$ et $z$.
 
 ## Définition
 
-Une chaîne de caractère est une succession de caractères, symboles afficheables
+Une chaîne de caractère est une succession de caractères, symboles affichables
 à l'écran.
 
 ```python
@@ -220,7 +260,7 @@ des apostrophes :
 
 Remarquez que cette fois Python utilise des `"` dans la valeur !
 
-## Exerice 4
+## Exerice 5
 
 1. Créer une variable contenant la phrase : 
 
@@ -275,9 +315,9 @@ True
 `a in b` est vrai si `a` est une sous-chaîne de `b`.
 
 
-## Exercice 5
+## Exercice 6
 
-1. Testez la concaténation avec les phrases de l'exercice précédent.
+1. Concaténer les chaînes suivantes : `"L'ami "` et `'Raymond dit "belette"'`
     Que se passe-t-il lors de l'affichage ?
 2. _La disparition_ de Georges Perec est un roman célèbre. En voici un extrait :
 
@@ -297,7 +337,7 @@ True
 Python permet de _formater_ les chaînes de caractères, c'est à dire d'y
 insérer une variable en lui donnant une représentation précise.
 
-Il existe de nombreuses technique mais nous allons nous contenter des "f-strings" :
+Il existe de nombreuses techniques. Commençons par les "f-strings" :
 
 ```python
 >>> prenom = "Marcel"
@@ -315,12 +355,41 @@ Si on oublie le `f`, Python ne fait rien :
 "Je suis {prenom} et j'ai {age} ans"
 ```
 
-## Exercice 5
+## Exercice 7
 
 En utilisant les variables `nom`, `prenom`, `age` et `phrase` (une f-string)
 écrire une phrase similaire à :
 
-> Je m'appelle Raoul Ducobu et j'ai 65 ans.
+> Je m'appelle Raoul Ducobu et j'ai 13 ans.
+
+
+### La méthode `.format` du type `str` 
+
+Un exemple :
+
+```python
+>>> "Le {} du {} est le {}".format("petit", "chat", "chaton")
+'Le petit du chat est le chaton'
+```
+
+Python remplace chaque paire de `{}` par la valeur respective du paramètre
+de la méthode `format`
+
+## Exercice 8
+
+Utiliser la méthode `format` pour écrire les phrases suivantes :
+
+```python
+>>> chaine = "La {} de la {} est {}"
+>>> chaine.format(...)
+'La capitale de la France est Paris'
+>>> chaine.format(...)
+'La préfecture de la Bourgnogne-Franche-compté est Dijon'
+>>> chaine.format(...)
+'La première phrase de la Marseillaise est Allons enfants de la Patrie'
+```
+
+
 
 ## Accéder à un caractère particulier
 
@@ -360,7 +429,7 @@ notation précédente en :
 'l'
 ```
 
-## Exercice 6
+## Exercice 9
 
 1. Saisissez vos noms et prénoms dans des variables et créez une variable
     avec vos initiales. `Paul Quesnoy -> PQ`
@@ -373,8 +442,7 @@ notation précédente en :
 Les chaînes caractères _ne sont pas mutables_.
 
 C'est une notion fondamentale que vous devez vous efforcer de retenir.
-Elle n'a guère d'importance pour l'instant mais sera source de nombreuses
-erreurs ultérieures si vous ne la comprenez pas.
+Elle sera source de nombreuses erreurs ultérieures si vous ne la comprenez pas.
 
 Cela signifie qu'on ne peut pas changer le contenu d'une chaîne de caractère.
 
@@ -393,11 +461,11 @@ et les `tuple` ne le sont pas.
 
 ## Caractères spéciaux
 
-Certains caractères ne sont pas afficheables directement à l'écran,
+Certains caractères ne sont pas affichables directement à l'écran,
 d'autres ont des significations particulières.
 
 Par exemple un `\n` dans une chaîne de caractère signifie qu'il sera
-remplacé par un retour à la ligne lors d'un afficheage.
+remplacé par un retour à la ligne lors d'un affichage.
 
 ```python
 >>> phrase = "j'ai faim\nje mange"
@@ -455,15 +523,37 @@ Comme on peut le voir :
     mises en majuscule.
 
 
-## Exercice 7
+## Exercice 10
 
 1. Vérifiez qu'après l'exécution de la méthode `upper`, l'objet n'a pas changé.
 1. Documentez vous sur les méthodes `count`, `lower` et `replace` des
     chaînes de caractères. Que font-elles ?
-2. Testez les. Combien de "a" sont présents dans l'extrait de la disparition ?
+2. Testez les. Combien de "a" sont présents dans cet extrait de la disparition ?
 
 
-
+> Un jour, il imagina tout un roman : il y aurait, dans un pays lointain, un garçon, un bambin au nom d'Aignan. Il aurait cinq ans. Il vivrait dans un palais où tout irait à l'abandon. Un jour, sa nounou lui disait:
+> 
+> - Jadis, tu avais ici vingt-cinq cousins. Alors nous vivions dans la paix. Mais, un à un, ils ont tous disparu, l'on n'a jamais su pourquoi. Aujourd'hui, tu dois partir à ton tour, sinon nous allons tous à la mort.
+> 
+> Alors Aignan fuyait. Suivant la tradition du plus pur Bildungsroman, la narration s'ouvrait par un court fabliau moral : au sortir d'un layon, un Sphinx assaillait Aignan.
+> 
+> - Voilà, dit l'hallucinant animal, un parfait sandwich pour mon fricot ; ça faisait un laps qu'on n'avait plus vu un gnard aussi dodu sous nos climats.
+> 
+> - Holà, Sphinx, holà ! fit Aignan qui connaissait Lacan mot à mot, un instant voyons, tu dois d'abord accomplir ton fatum.
+> 
+> - Mon fatum, fit, surpris, l'animal, à quoi bon ? Tu fais du chichi. Nul n'a jamais su la solution.
+> 
+> Il ajouta, pris d'un soupçon subit :
+> 
+> - La saurais-tu, par hasard ?
+> 
+> - Qui sait ? dit Aignan, -souriant d'un air coquin.
+> 
+> - Tu as un air fanfaron qui nous plaît tout a fait, vilain avorton, poursuivit l'insinuant Sphinx. Soyons donc fair-play, ton ambition adoucira ta mort ; voici mon oral ultimatum : Il saisit un luth, prit son inspiration, puis, s'accompagnant, chanta : Y a-t-il un animal
+> 
+> Qui ait un corps fait d'un rond pas tout à fait clos
+> 
+> Finissant par un trait plutôt droit ?
 
 
 

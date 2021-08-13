@@ -49,19 +49,19 @@ CSS séparé.
 
 Voici quelques éléments de comparaison entre Python et Javascript :
 
-| Instruction           | Python                    | JavaScript                |
-|-----------------------|---------------------------|---------------------------|
-| Exécuté par           | le programme Python       | le navigateur (généralement) |
-| Code contenu dans     | un fichier .py            | une balise script d'une page html |
-| Créer une variable    | `a = 2`                   | `var a = 2;`              |
-| Fin d'instruction     | retour à la ligne         | point virugle `;`         |
-| indentation           | définit la structure      | optionnelle               |
-| fonction              | `def f(x): ...`           | `function f(x) { expr }`   |
-| condition             | `if condition: expression`| `if (condition) { expr }` |
-| boucle for            | `for i in range(10): ...` | `for (var i=0; i<10; i++) { expr }` |
-| boucle while          | `while condition: expr`   | `while (condition) { expr }` |
-| commentaire           | `# un commentaire`        | `// un commentaire`       |
-| écrire dans la console | `print( expr1, expr2 )`  | `console.log( expr1, expr2 );` |
+| Instruction            | Python                     | JavaScript                          |
+|------------------------|----------------------------|-------------------------------------|
+| Exécuté par            | le programme Python        | le navigateur (généralement)        |
+| Code contenu dans      | un fichier .py             | une balise script d'une page html   |
+| Créer une variable     | `a = 2`                    | `var a = 2;`                        |
+| Fin d'instruction      | retour à la ligne          | point virugle `;`                   |
+| indentation            | définit la structure       | optionnelle                         |
+| fonction               | `def f(x): ...`            | `function f(x) { expr }`            |
+| condition              | `if condition: expression` | `if (condition) { expr }`           |
+| boucle for             | `for i in range(10): ...`  | `for (var i=0; i<10; i++) { expr }` |
+| boucle while           | `while condition: expr`    | `while (condition) { expr }`        |
+| commentaire            | `# un commentaire`         | `// un commentaire`                 |
+| écrire dans la console | `print( expr1, expr2 )`    | `console.log( expr1, expr2 );`      |
 
 
 1. Voici un script Python. Le traduire en JavaScript.

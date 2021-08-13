@@ -13,7 +13,7 @@ Une _exception_ est une erreur provoquée par Python.
 C'est un mécanisme universel en programmation et il existe un moyen d'_attraper_
 ces exceptions afin d'éviter que le programme ne plante.
 
-# Principe des exception
+# Principe des exceptions
 
 Lorsque Python rencontre une instruction impossible il provoque une erreur.
 Plus précisément on dit qu'il lève une exception.
@@ -83,6 +83,41 @@ division impossible
 cette ligne sera toujours atteinte
 ```
 
+
+## Exercice 1
+
+En utilisant une boucle et un bloc `try...except` produire l'affichage suivant :
+
+```
+0.1
+0.1111111111111111
+0.125
+0.14285714285714285
+0.16666666666666666
+0.2
+0.25
+0.3333333333333333
+0.5
+1.0
+impossible
+-1.0
+-0.5
+-0.3333333333333333
+-0.25
+-0.2
+-0.16666666666666666
+-0.14285714285714285
+-0.125
+-0.1111111111111111
+-0.1
+```
+
+_ces nombres sont les inverses des entiers de 10 à -10_
+
+
+## Différentes exceptions
+
+
 Lorsqu'aucune exception n'est précisée dans le bloc `except`, Python attrape
 toutes les erreurs. Ça va plus vite à écrire mais c'est une très mauvaise
 pratique.
@@ -108,6 +143,21 @@ impossible
 0
 ```
 
+## Exercice 2
+
+1. Quelle est l'exception levée par le programme suivant ?
+
+  ```python
+  d = {"jean": 82, "ginette": 74, "olivier": 45, "manon": 14}
+  for n in ["paul", "jean", "olivier"]:
+    print(d[n])
+  ```
+
+2. Modifier le programme pour que la boucle se termine et qu'on affiche l'age
+  de toutes les personnes enregistrées dans le dictionnaire.
+
+
+
 # Compléments
 
 
@@ -128,7 +178,125 @@ finally:
 ```
 
 
-Cela peut s'avérer partique pour être certain que certaines instructions sont
+Cela peut s'avérer pratique pour être certain que certaines instructions sont
 exécutées même si le programme plante. Par exemple pour se deconnecter proprement
 ou fermer un fichier etc.
+
+# Le mot clé `assert`
+
+Ce mot clé s'utilise de la façon suivante :
+
+```python
+assert predicat_vrai, "message d'erreur affiché si le prédicat est faux"
+```
+
+Par exemple :
+
+```python
+assert 2 + 2 == 4, "2 + 2 n'est pas égal à 4 !!!"
+```
+
+Ce programme n'affiche rien, justement parce que le booléen `2 + 2 == 4` est évalué
+à `True`.
+
+Modifions légèrement :
+
+```python
+assert 2 + 2 == 5, "2 + 2 n'est pas égal à 5 !!!"
+```
+
+Cette fois, le booléen `2 + 2 == 5` est évalué à `False` et l'exécution
+provoque une erreur `AssertionError`. et on voit le message d'erreur
+"2 + 2 n'est pas égal à 5 !!!" apparaître.
+
+## Usage pour tester une fonction
+
+Vous rencontrerez régulièrement des exercices où vous devez écrire le code
+d'une fonction pour lesquels le comportement est attendu.
+
+Des tests sont proposés afin de s'assurer que la fonction fait ce qu'on
+attend d'elle.
+
+Ce principe de développement (écrire les tests avant le code) est très courant,
+il s'appelle "Test Driven Developpement", _développement guidé par les tests_.
+
+Considérons un exemple :
+
+```python
+def carre(x):
+  """renvoie le carré de x"""
+
+assert carre(2) == 4
+assert carre(0) == 0
+assert carre(1) == 1
+assert carre(-1) == 1
+assert carre(100) == 10000
+assert carre(-5) == 25
+```
+
+Lorsqu'on exécute ce script, il lève une erreur. Afin d'éviter cette erreur,
+on propose le code suivant :
+
+```python
+def carre(x):
+  """renvoie le carré de x"""
+  return x * x
+```
+
+et maintenant les tests passent tous.
+
+## Exercice 2
+
+1. Écrire le code d'une fonction `premier_element` qui renvoie :
+
+    * le premier élément d'une liste non vide,
+    * `None` si la liste est vide.
+
+2. Écrire 5 tests avec `assert` vous assurant de vérifier les différentes
+    situations.
+
+## Usage pour valider des valeurs
+
+Lors du développement d'un programme complexe, on découpe les étapes afin
+de les rendre les plus simples et lisibles.
+
+Il arrive donc régulièrement qu'une partie dépende des autres.
+
+Afin de s'assurer qu'une erreur ne puisse se propager trop loin et provoque
+des erreurs incompréhensibles, on peut vérifier avec `assert` que les données
+reçues sont valides.
+
+Par exemple, imaginons devoir extraire la première lettre d'une chaîne
+de caractères... C'est sans difficulté, sauf si l'objet reçu n'est pas une chaîne.
+
+Il suffit de faire `ma_chaine[0]` et on obtient la première lettre. Parfait.
+
+Est-on certain d'obtenir un résultat cohérent quelle que soit le type passé
+en paramètre ?
+
+* Si `ma_chaine` est du type `str`, tout va bien.
+* Si `ma_chaine` est du type `int`, on va rencontrer une erreur. Tout va bien.
+* Si `ma_chaine` est du type `list`, on aura un résultat surprenant... C'est mauvais.
+
+
+Comment obtenir une erreur _lisible_ dans tous les cas ?
+
+En utilisant `assert`, par exemple.
+
+```python
+def extrait_initiale(mot: str) -> str:
+    """Renvoie la première lettre de `mot`"""
+    assert isinstance(mot, str), "mot n'est pas du bon type"
+    return mot[0]
+```
+
+Ainsi, on aura toujours une erreur lisible si les données reçues par 
+`extrait_initiale` ne sont pas du bon type.
+
+# `SyntaxError` et `IndentationError`
+
+Ces erreurs sont provoquées lorsque Python ne parvient pas à lire la ligne
+considérées... Il n'est pas possible de les capturer.
+
+La seule solution est de les rectifier.
 

@@ -2,10 +2,11 @@
 title: "Projet : Serveur méteo"
 author: qkzk
 weight: 28
+
 ---
 
 
-pdf : [pour impression](/uploads/docsnsi/ihm_web/nsi_prem_projet_flask_print.pdf)
+pdf : [pour impression](./nsi_prem_projet_flask_print.pdf)
 
 # Serveur méteo
 
@@ -78,6 +79,12 @@ Elle est déjà présente sur votre machine.
 
 ---
 
+## Délais
+
+Ce projet doit être terminé **début décembre**.
+J'attends de vous voir travailler pour fixer précisément le délai.
+Je vais rater beaucoup de séances alors prédire l'avenir est délicat mais cela
+me semble un délai raisonnable.
 
 ## Résultat attendu
 
@@ -91,6 +98,15 @@ Le projet final est constitué des fichiers suivants :
     ├── index.html
     └── resultats.html
 ~~~
+
+<!-- ~~~
+.
+|-- readme.md
+|-- serveur.py
++-- templates
+    |-- index.html
+    +-- resultats.html
+~~~ -->
 
 * `readme.md` est votre compte rendu (!). Vous le rédigerez
   en [markdown](https://openclassrooms.com/fr/courses/1304236-redigez-en-markdown).
@@ -150,7 +166,7 @@ Le serveur web (Python + Flask)
 
 Et le site Openweathermap
 
-* ![Le client, le serveur flask et openweathermap](/uploads/docsnsi/ihm_web/img/meteo_flask/meteo_flask(9).svg)
+* ![Le client, le serveur flask et openweathermap](img/meteo_flask/meteo_flask(9).svg)
 
 
 
@@ -158,42 +174,42 @@ Et le site Openweathermap
 
 Quand on exécute le script Python du serveur il attend qu'un client se connecte...
 
-* ![Le serveur se lance et sert une page *index.html*](/uploads/docsnsi/ihm_web/img/meteo_flask/meteo_flask(8).svg)
+* ![Le serveur se lance et sert une page *index.html*](img/meteo_flask/meteo_flask(8).svg)
 
 
 ## Le client se connecte sur le site
 
 L'utilisateur a tapé l'adresse du site dans sa barre d'adresse...
 
-* ![Le client se connecte sur le site](/uploads/docsnsi/ihm_web/img/meteo_flask/meteo_flask(7).svg)
+* ![Le client se connecte sur le site](img/meteo_flask/meteo_flask(7).svg)
 
 
 ## Le serveur web renvoie alors une page html
 
 La page html est un formulaire à remplir (ville ?) avec un bouton _submit_
 
-* ![première requête : *index.html*, réponse du serveur](/uploads/docsnsi/ihm_web/img/meteo_flask/meteo_flask(6).svg)
+* ![première requête : *index.html*, réponse du serveur](img/meteo_flask/meteo_flask(6).svg)
 
 
 ## Formulaire rempli, _submit_
 
 L'utilisateur a rempli son formulaire avec _Lille_ et cliqué sur submit
 
-* ![l'utilisateur remplit le formulaire (_Lille_) sur le client, clique *submit*](/uploads/docsnsi/ihm_web/img/meteo_flask/meteo_flask(4).svg)
+* ![l'utilisateur remplit le formulaire (_Lille_) sur le client, clique *submit*](img/meteo_flask/meteo_flask(4).svg)
 
 
 ## Le serveur reçoit et traite la requête
 
 Le serveur Python récupère les données du formulaire et appelle une fonction...
 
-* ![la requête est envoyée au serveur web, qui la traite...](/uploads/docsnsi/ihm_web/img/meteo_flask/meteo_flask(3).svg)
+* ![la requête est envoyée au serveur web, qui la traite...](img/meteo_flask/meteo_flask(3).svg)
 
 
 ## Le serveur envoie à son tour une requête à OWM...
 
 La requête est transmise à OWM via une URL (string...) qu'on formate
 
-* ![le serveur envoie une requête à OMW avec leur API (_...weather lille..._)](/uploads/docsnsi/ihm_web/img/meteo_flask/meteo_flask(2).svg)
+* ![le serveur envoie une requête à OMW avec leur API (_...weather lille..._)](img/meteo_flask/meteo_flask(2).svg)
 
 
 ## OWM lit traite la requête et renvoie la météo dans un JSON
@@ -201,7 +217,7 @@ La requête est transmise à OWM via une URL (string...) qu'on formate
 JSON (Javascript Object Notation) est le format le plus populaire pour échanger des données sur le web.
 Les données ressemblent à un dictionnaire Python. Python manipule sans difficulté les JSON.
 
-* ![OWM lit la requête et répond avec un JSON contenant la météo (*...temp 12.3...*)](/uploads/docsnsi/ihm_web/img/meteo_flask/meteo_flask(1).svg)
+* ![OWM lit la requête et répond avec un JSON contenant la météo (*...temp 12.3...*)](img/meteo_flask/meteo_flask(1).svg)
 
 
 ## Le serveur traite la réponse et injecte la météo dans une page _resultat.html_
@@ -212,4 +228,4 @@ Qui l'affiche dans le navigateur.
 
 L'utilisateur lit la météo de Lille : **il fait 12.3°C** !
 
-* ![Le serveur traite la réponse JSON et sert une page au client (*`<p>12.3°C</p>`*)](/uploads/docsnsi/ihm_web/img/meteo_flask/meteo_flask.svg)
+* ![Le serveur traite la réponse JSON et sert une page au client (*`<p>12.3°C</p>`*)](img/meteo_flask/meteo_flask.svg)
