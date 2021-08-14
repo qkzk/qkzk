@@ -1,8 +1,8 @@
 ---
 author: qkzk
-title: " Les bases de Python"
+title: "Résumé"
 draft: false
-weight: 2
+weight: 100
 
 ---
 

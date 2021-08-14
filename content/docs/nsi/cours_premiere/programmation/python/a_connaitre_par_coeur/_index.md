@@ -1,8 +1,8 @@
 ---
 author: qkzk
 draft: false
-title: Python 3 - A connaitre
-weight: -2
+title: "Fiche : À retenir"
+weight: 200
 
 ---
 

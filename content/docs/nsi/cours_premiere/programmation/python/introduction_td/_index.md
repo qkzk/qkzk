@@ -1,6 +1,6 @@
 ---
-title: "Travaux dirigés : introduction à Python"
-weight: 3
+title: "Introduction : TD"
+weight: 2
 date: 2020/07/25
 
 ---

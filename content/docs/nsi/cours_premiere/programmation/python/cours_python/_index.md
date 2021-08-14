@@ -2,7 +2,7 @@
 title: "Cours Python"
 author: "qkzk"
 date: "2021/04/27"
-weight: 1
+weight: 3
 
 ---
 

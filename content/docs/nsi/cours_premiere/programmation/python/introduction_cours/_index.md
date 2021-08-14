@@ -1,5 +1,5 @@
 ---
-title: Présentation de Python
+title: "Introduction : cours"
 weight: 1
 author: qkzk
 ---

@@ -1,6 +1,6 @@
 ---
 title:
-  "Diversité et unité des langages de programmation"
+  "Diversité des langages"
 author:
   "DIU"
 date:
