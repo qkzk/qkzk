@@ -8,6 +8,8 @@ weight: 1
 
 # Seconde
 
+[rentrée](./presentation_rentree.pdf)
+
 ## Progression et liens vers les cours.
 
 **Attention :** ces cours sont généralement publiés durant l'été qui précède la rentrée et sont susceptibles d'évoluer durant l'année.
