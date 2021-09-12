@@ -1,5 +1,4 @@
 ---
----
 title: "Booléens : TD"
 weight: 2
 
@@ -99,11 +98,12 @@ portes ET et XOR :
 
 * porte ET
 
-![porte ET](./img/porte-et.png){ width=150px }
+![porte ET](/uploads/docsnsi/donnees_qkzk_img/porte-et.png)
+
 
 * Porte XOR
 
-![porte XOR](./img/porte-xor.png){ width=150px }
+![porte XOR](/uploads/docsnsi/donnees_qkzk_img/porte-xor.png)
 
 1. Rappeler les tables de vérité de ces deux portes.
 
@@ -139,7 +139,7 @@ Les portes peuvent être connectées entre elles pour réaliser des
 **circuits logiques** et on peut ainsi réaliser des calculs.
 
 
-![demi-additionneur](./img/demi-additionneur.png){width=300px}
+![demi-additionneur](/uploads/docsnsi/donnees_qkzk_img/demi-additionneur.png)
 
 Il est appelé *demi-additionneur* car il réalise l'addition de 2 bits
 ($A$ et $B$), le résultats de cette somme est représentée par $S$
