@@ -728,4 +728,49 @@ print("A bientôt")
 4. Améliorer le jeu pour indiquer combien de coups ont été necessaires pour gagner.
 
 
+## Exercice 11 - Intérêts
+
+Lorsqu'on place un capital avec intérêt, on perçoit à intervalle régulier un montant qui vient
+s'ajouter à ce capital.
+
+Il existe deux manières de calculer les intérêts :
+
+* intérêts **simples** : le montant des intérêts est fixe dans le temps, généralement proportionnel au montant
+  du capital initial
+* intérêts **composés** : les intérêts sont recalculés après chaque période et sont généralement proportionnels
+  au capital courant, après versement des intérêts de la précédente période.
+
+Considérons 100€ de capital initial, placés avec 10% d'intérêts :
+
+* Intérêts simples
+
+  Les intérêts sont constants et valent 10€
+
+  | Capital initial | Fin 1ère période | Fin 2nde période | Fin 3eme période |
+  |-----------------|------------------|------------------|------------------|
+  | 100             | 110              | 120              | 130              |
+
+* Intérêts composés
+
+  Les intérêts sont variables et valent 10% du dernier capital
+
+  | Capital initial | Fin 1ere période | Fin 2nde période | Fin 3eme période |
+  |-----------------|------------------|------------------|------------------|
+  | 100             | 110              | 121              | 133.1            |
+
+
+_Questions_
+
+1. On place 50000 avec intérêts simples de 5% par période. À l'aide d'une boucle, calculez le montant du capital après 10 périodes.
+2. Proposez une formule explicite donnant ce montant, retrouvez votre résultat en posant un calcul à la main.
+3. Posez une équation vous donnant le nombre de période avant de doubler le capital en fonction du taux d'intérêt.
+3. Même montant initial et même taux d'intérêt mais cette fois composé. Calculez le montant du capital après 10 périodes.
+4. À l'aide d'une boucle, déterminez le nombre de période pour doubler le capital.
+
+Corsons un peu le contexte. Cette fois on ajoute aussi un dépôt régulier de 2000€. À chaque période l'épargnant
+ajoute 2000€ à son capital. Selon le système d'intérêt, ils seront pris en compte ou non dans les intérêts
+suivants.
+
+5. Calculez à l'aide d'une boucle le montant après 10 périodes pour les deux systèmes d'intérêts
+6. Calculez à l'aide d'une boucle le nombre de période pour doubler le capital dans les deux systèmes d'intérêts.
 
