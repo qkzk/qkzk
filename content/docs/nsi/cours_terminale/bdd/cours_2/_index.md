@@ -151,6 +151,9 @@ pandoc -t beamer --slide-level 2 -V "aspectratio=1610" -s cours_sql2.md -o cours
 ![Association reservation](/uploads/docnsitale/bdd/fig/resa_avec.png "Association reservation")
 
 
+## Complément sur les cardinalités
+
+[http://tony3d3.free.fr/files/Les-Cardinalites.pdf](http://tony3d3.free.fr/files/Les-Cardinalites.pdf)
 
 
 ## Modèle Relationnel
