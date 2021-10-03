@@ -544,7 +544,7 @@ Pour chaque fonction produite on attend :
 ```
 
 Rappels aux grands géomètres que vous êtes : l'aire d'un disque de rayon $R$
-est donnée par : $$\mathcal{A} = 2 \pi R$$
+est donnée par : $$\mathcal{A} = \pi R^2$$
 
 ## Exercice 7
 
