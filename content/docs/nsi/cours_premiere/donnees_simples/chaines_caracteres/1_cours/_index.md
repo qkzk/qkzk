@@ -5,7 +5,7 @@ weight: 1
 ---
 
 
-## pdf [./chaines.pdf]
+## [pdf](./chaines.pdf)
 
 
 # Représentation d’un texte en machine
@@ -28,13 +28,13 @@ Idée d'ASCII (1961) : uniformiser les nombreux encodages incompatibles entre eu
 
 ## La table ASCII complète
 
-![La table ASCII](./img/ascii_table.png)
+![La table ASCII](/uploads/docsnsi/donnees_qkzk_img/ascii_table.png)
 
 ## Remarques sur la table précédente
 
 * Tout élément de la table est codé sur 7 bits, 1 octet par caractère suffit ($2^8 = 256$)
 * Les chiffres commencent à $30_{16}$, les majuscules à $41_{16}$ et les minuscules à $61_{16}$
-* Pour obtenir la notation binaire, on part de l'hexa.\newline
+* Pour obtenir la notation binaire, on part de l'hexa.\
   Premier chiffre : 3 bits, second chiffre 4 bits
     $$A \rightarrow 41_{16} \rightarrow 4\times 16 + 1 \rightarrow 0100~0001$$
     $$s \rightarrow 73_{16} \rightarrow 7\times 16 + 3 \rightarrow 0111~0011$$
@@ -45,6 +45,9 @@ Idée d'ASCII (1961) : uniformiser les nombreux encodages incompatibles entre eu
           @ABCDEFGHIJKLMNOPQRSTUVWXYZ[\]^_
           `abcdefghijklmnopqrstuvwxyz{|}~
 ``` 
+
+**Question :** Expliquer la phrase suivante : "_Pour changer la casse d'un caractère,
+il suffit de changer 1 bit dans sa représentation ASCII._"
 
 ## Python et la table ascii
 
@@ -65,8 +68,9 @@ L'encodage iso-8859-1, dit iso-Latin-1 est apparu en 1986 et correspond à l'Eur
 D'autres versions pour les caractères iso-Latin-2 de l'Europe de l'est etc.
 
 * Reprend la table ascii et ajoute les accents au coût d'un octet supplémentaire.
-* Encore incomplet : œ et Œ n'y sont pas !\newline
-_Ce qui a contribué à leur disparition de nombreux documents écrits dans les années 90..._
+* Encore incomplet : œ et Œ n'y sont pas !
+  _Ce qui a contribué à leur disparition de nombreux documents écrits dans les années 90..._
+
 * Windows (Windows-1252) et Mac (MacRoman) ont leurs versions\newline
 Échange de documents et développement de logiciels **plus que pénibles.**
 
@@ -87,7 +91,7 @@ UTF-8 est utilisé par 90,5% des sites web en 2017 et dans la majorité des syst
 
 Les machines des années 1980 étant fournies avec leur propre encodage, une somme d'argent en dollars se voyait attribuer le symbole monétaire \$ aux USA et le symbole £ au royaume uni (symbole monétaire de la livre sterling).
 
-Mais 1\$ $\neq$ 1£ et les confusions étaient fréquentes.
+Mais entre dollars (\$) et livres (£) et les confusions étaient fréquentes.
 
 On a ensuite, peu à peu, étendu ce projet à tous les symboles existant.
 
@@ -160,7 +164,7 @@ On utilise les fonctions `chr` et `ord`
 
 ## Martine écrit en UTF-8
 
-### ![martine](./img/martine.jpg){height=50%}
+### ![martine](/uploads/docsnsi/donnees_qkzk_img/martine.jpg)
 
 **WHAT ?**
 
@@ -168,8 +172,8 @@ On utilise les fonctions `chr` et `ord`
   En mémoire elle occupe 2 octets (elle n'est pas dans la table ascii)
 * Ces deux octets ont été _décodés_ en **iso-latin1** (1 octet par caractère).
 
-<!-- cours LLG
-https://www.youtube.com/watch?v=PZRI1IfStY0 -->
+
+---
 
 # Complément : base64
 
