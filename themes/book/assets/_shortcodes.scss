@@ -97,3 +97,19 @@ a.book-btn {
   margin-bottom: $padding-8;
   cursor: pointer;
 }
+
+$hint-colors: (
+  info: #6bf,
+  warning: #fd6,
+  danger: #f66,
+) !default;
+
+// {{< hint >}}
+  .book-hint {
+    @each $name, $color in $hint-colors {
+      &.#{$name} {
+        border-color: $color;
+        background-color: rgba($color, 0.1);
+      }
+    }
+  }

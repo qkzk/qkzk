@@ -2,7 +2,7 @@
 title: "Hugo"
 author: "qkzk"
 date: "2021/06/26"
-weight: 100
+weight: 1
 
 ---
 
