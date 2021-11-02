@@ -1,5 +1,6 @@
 ---
 title: "résumé"
+bookCollapseSection: true
 weight: 100
 
 ---

@@ -1,5 +1,6 @@
 ---
 title: "TD : Complexité"
+bookCollapseSection: true
 weight: 6
 
 ---

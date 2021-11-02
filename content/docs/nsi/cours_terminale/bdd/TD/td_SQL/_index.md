@@ -1,5 +1,6 @@
 ---
 title: "TD : langage SQL"
+bookCollapseSection: true
 author: "qkzk"
 
 ---

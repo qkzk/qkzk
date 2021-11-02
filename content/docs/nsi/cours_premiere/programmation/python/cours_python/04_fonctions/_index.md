@@ -1,5 +1,6 @@
 ---
 title: "4 - Fonctions"
+bookCollapseSection: true
 author: "qkzk"
 date: ""
 weight: 5

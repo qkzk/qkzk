@@ -1,5 +1,6 @@
 ---
 title: "Hexa : Cours"
+bookCollapseSection: true
 weight: 1
 
 ---

@@ -3,6 +3,7 @@ author: qu3nt1n
 date: 2016-09-25 20:07:36+00:00
 draft: false
 title: 'devoir : vacances de Toussaint - Construct 2'
+bookCollapseSection: true
 weight: 100
 
 ---

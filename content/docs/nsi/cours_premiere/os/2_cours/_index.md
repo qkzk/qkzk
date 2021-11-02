@@ -1,5 +1,6 @@
 ---
 title: "Première NSI - Système d'exploitation Linux - cours"
+bookCollapseSection: true
 author: qkzk
 weight: 2
 

@@ -1,5 +1,6 @@
 ---
 title: 1 - Introduction
+bookCollapseSection: true
 author: qkzk
 theme: Hannover
 weight: 1

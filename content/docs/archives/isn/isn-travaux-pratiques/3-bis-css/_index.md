@@ -3,6 +3,7 @@ author: qu3nt1n
 date: 2016-07-02 07:58:27+00:00
 draft: false
 title: 3.bis CSS
+bookCollapseSection: true
 weight: 4
 
 ---

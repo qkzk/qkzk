@@ -1,5 +1,6 @@
 ---
 title: '6. TP : fusion et tris. Mini projet "TP randonnée"'
+bookCollapseSection: true
 author: 'qkzk'
 date: '2020/07/31'
 weight: 6

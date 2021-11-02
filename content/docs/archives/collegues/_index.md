@@ -1,5 +1,6 @@
 ---
 title: collègues
+bookCollapseSection: true
 draft: false
 author: qu3nt1n
 date: 2017-07-11 14:33:04+00:00

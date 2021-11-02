@@ -1,5 +1,6 @@
 ---
 title: 'Traitement des données en tables'
+bookCollapseSection: true
 subtile: '1. cours : introduction'
 author: 'qkzk'
 date: '2021/05/25'

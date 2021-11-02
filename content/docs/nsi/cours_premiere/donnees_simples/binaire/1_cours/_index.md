@@ -1,5 +1,6 @@
 ---
 title: "binaire - cours"
+bookCollapseSection: true
 author: qkzk
 date: 2020/07/03
 weight: 1

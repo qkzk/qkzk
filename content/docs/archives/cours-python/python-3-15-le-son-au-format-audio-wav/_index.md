@@ -3,6 +3,7 @@ author: qu3nt1n
 date: 2019-05-05 07:08:58+00:00
 draft: false
 title: Python 3 - 15 Le son au format audio WAV
+bookCollapseSection: true
 weight: 15
 
 ---

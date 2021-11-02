@@ -3,6 +3,7 @@ author: qu3nt1n
 date: 2019-05-05 07:23:34+00:00
 draft: false
 title: Python 3 - 12 Créer un programme exécutable avec Py2exe
+bookCollapseSection: true
 weight: 12
 
 ---

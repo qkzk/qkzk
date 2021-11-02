@@ -1,5 +1,6 @@
 ---
 title: "Données simples"
+bookCollapseSection: true
 draft: false
 weight: 3
 

@@ -3,6 +3,7 @@ author: qu3nt1n
 date: 2017-06-15 15:59:34+00:00
 draft: false
 title: '4.ter Algorithmie : deux problèmes classiques'
+bookCollapseSection: true
 weight: 7
 ---
 

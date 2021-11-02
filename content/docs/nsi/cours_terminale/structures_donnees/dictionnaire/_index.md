@@ -1,5 +1,6 @@
 ---
 title: "Dictionnaire"
+bookCollapseSection: true
 author: "qkzk"
 date: "2020/10/06"
 weight: 1

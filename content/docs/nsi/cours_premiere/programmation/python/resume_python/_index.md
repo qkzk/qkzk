@@ -1,6 +1,7 @@
 ---
 author: qkzk
 title: "Résumé"
+bookCollapseSection: true
 draft: false
 weight: 100
 

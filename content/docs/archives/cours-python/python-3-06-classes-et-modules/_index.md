@@ -3,6 +3,7 @@ author: qu3nt1n
 date: 2019-05-05 06:51:32+00:00
 draft: false
 title: Python 3 - 06 Classes et modules
+bookCollapseSection: true
 weight: 6
 
 ---

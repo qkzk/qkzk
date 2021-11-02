@@ -1,5 +1,6 @@
 ---
 title: 'TP : HTML et CSS'
+bookCollapseSection: true
 author: David Roche
 theme: metropolis
 weight: 12

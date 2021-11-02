@@ -1,5 +1,6 @@
 ---
 title: "Rappels"
+bookCollapseSection: true
 weight: 1
 
 ---

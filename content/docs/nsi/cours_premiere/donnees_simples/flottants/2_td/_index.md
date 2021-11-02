@@ -1,5 +1,6 @@
 ---
 title: "Flottants : TD"
+bookCollapseSection: true
 author: qkzk
 date: 2020/08/01
 weight: 2

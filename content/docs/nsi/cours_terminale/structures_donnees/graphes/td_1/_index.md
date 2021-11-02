@@ -1,5 +1,6 @@
 ---
 title: TD 1
+bookCollapseSection: true
 weight: 10
 
 ---

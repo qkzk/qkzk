@@ -1,5 +1,6 @@
 ---
 title: "Projet : Serveur méteo"
+bookCollapseSection: true
 author: qkzk
 weight: 28
 

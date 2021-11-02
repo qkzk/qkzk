@@ -1,5 +1,6 @@
 ---
 title: "Outils pour développer"
+bookCollapseSection: true
 author: "qkzk"
 date: "2021/08/14"
 theme: "metropolis"

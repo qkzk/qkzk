@@ -1,5 +1,6 @@
 ---
 title: 'cours: HTML et CSS'
+bookCollapseSection: true
 theme: metropolis
 weight: 3
 papersize: a4

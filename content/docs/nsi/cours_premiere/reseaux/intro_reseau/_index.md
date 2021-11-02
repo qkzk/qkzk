@@ -1,5 +1,6 @@
 ---
 title: Introduction au réseau
+bookCollapseSection: true
 author: David Roche
 weight: 1
 

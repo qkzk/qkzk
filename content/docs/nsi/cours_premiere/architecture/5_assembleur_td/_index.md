@@ -1,5 +1,6 @@
 ---
 title: "Assembleur Exercices"
+bookCollapseSection: true
 weight: 5
 
 ---

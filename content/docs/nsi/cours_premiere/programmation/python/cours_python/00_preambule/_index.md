@@ -1,5 +1,6 @@
 ---
 title: "0 - préambule"
+bookCollapseSection: true
 author: "qkzk"
 weight: 1
 

@@ -3,6 +3,7 @@ author: qu3nt1n
 date: 2018-12-25 22:20:33+00:00
 draft: false
 title: Bowling elastique
+bookCollapseSection: true
 weight: 2
 ---
 

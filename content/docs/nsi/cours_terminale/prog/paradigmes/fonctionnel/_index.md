@@ -1,5 +1,6 @@
 ---
 title: Paradigmes
+bookCollapseSection: true
 author: Florian Kauder
 weight: 2
 ---

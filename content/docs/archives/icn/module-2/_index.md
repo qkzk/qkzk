@@ -3,6 +3,7 @@ author: qu3nt1n
 date: 2016-07-01 12:40:21+00:00
 draft: false
 title: 'module 2 : web'
+bookCollapseSection: true
 weight: -8
 
 ---

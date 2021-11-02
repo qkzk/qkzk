@@ -1,5 +1,6 @@
 ---
 title: "Flottants : Cours"
+bookCollapseSection: true
 author:
 - QK
 date: 2020/08/01

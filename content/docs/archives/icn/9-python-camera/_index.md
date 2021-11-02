@@ -3,6 +3,7 @@ author: qu3nt1n
 date: 2017-04-09 08:25:59+00:00
 draft: false
 title: '09. Computer vision : manipulation en live du flux d''une camera'
+bookCollapseSection: true
 weight: 9
 
 ---

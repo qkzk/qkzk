@@ -3,6 +3,7 @@ author: qu3nt1n
 date: 2017-04-09 16:54:56+00:00
 draft: false
 title: '10. Un jeu complet en pygame : dodger'
+bookCollapseSection: true
 weight: 10
 
 ---

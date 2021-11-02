@@ -1,5 +1,6 @@
 ---
 title: "Arbres"
+bookCollapseSection: true
 weight: 2
 ---
 

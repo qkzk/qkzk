@@ -1,5 +1,6 @@
 ---
 title: "IHM sur le Web"
+bookCollapseSection: true
 draft: false
 weight: 6
 ---

@@ -1,9 +1,11 @@
 ---
-  title: L2S4
-  author: qu3nt1n
-  date: 2019-05-04 10:47:41+00:00
-  draft: false
-  weight: 2
+title: L2S4
+bookCollapseSection: true
+author: qu3nt1n
+date: 2019-05-04 10:47:41+00:00
+draft: false
+weight: 2
+
 ---
 
 _Note du 2 mai 2020_ :

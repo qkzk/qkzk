@@ -1,5 +1,6 @@
 ---
 title: REPL.it
+bookCollapseSection: true
 author: qkzk
 weight: 7
 ---

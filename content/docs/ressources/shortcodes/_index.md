@@ -1,9 +1,10 @@
 ---
-  title: Shortcodes
-  author: qkzk
-  date: "2021/11/01"
-  draft: false
-  weight: 3
+title: Shortcodes
+bookCollapseSection: true
+author: qkzk
+date: "2021/11/01"
+draft: false
+weight: 3
 
 ---
 

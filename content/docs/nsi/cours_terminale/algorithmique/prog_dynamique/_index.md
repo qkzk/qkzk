@@ -1,5 +1,6 @@
 ---
 title: Programmation dynamique.
+bookCollapseSection: true
 author: qkzk
 date: 2020/04/30
 weight: 2

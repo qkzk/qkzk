@@ -1,5 +1,6 @@
 ---
 title: Tester ses programmes
+bookCollapseSection: true
 author:
 - qkzk
 weight: 5

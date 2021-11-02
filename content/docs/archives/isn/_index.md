@@ -1,5 +1,6 @@
 ---
 title: isn
+bookCollapseSection: true
 author: qu3nt1n
 date: 2016-07-01 12:19:26+00:00
 draft: false

@@ -1,5 +1,6 @@
 ---
 title: 'Structures de données'
+bookCollapseSection: true
 weight: 4
 ---
 

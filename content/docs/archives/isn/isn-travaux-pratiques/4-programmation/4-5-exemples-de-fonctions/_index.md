@@ -3,6 +3,7 @@ author: qu3nt1n
 date: 2016-07-02 09:32:07+00:00
 draft: false
 title: 4.05 Exemples de Fonctions
+bookCollapseSection: true
 weight: 5
 ---
 

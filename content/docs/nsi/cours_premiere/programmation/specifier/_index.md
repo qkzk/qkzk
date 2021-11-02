@@ -1,5 +1,6 @@
 ---
 title: Spécifier programmes
+bookCollapseSection: true
 weight: 4
 ---
 

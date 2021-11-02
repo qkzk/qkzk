@@ -3,6 +3,7 @@ author: qu3nt1n
 date: 2019-05-05 06:47:14+00:00
 draft: false
 title: Python 3 - 05 Gestion des exceptions
+bookCollapseSection: true
 weight: 5
 
 ---

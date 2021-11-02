@@ -1,5 +1,6 @@
 ---
 title: "TD - tri sélection"
+bookCollapseSection: true
 weight: 2
 
 ---

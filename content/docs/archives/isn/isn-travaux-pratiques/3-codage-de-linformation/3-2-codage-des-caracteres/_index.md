@@ -3,6 +3,7 @@ author: qu3nt1n
 date: 2016-07-01 23:33:50+00:00
 draft: false
 title: 3.2 Codage des caractères
+bookCollapseSection: true
 weight: 2
 ---
 

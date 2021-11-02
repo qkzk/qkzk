@@ -1,5 +1,6 @@
 ---
 title: Conception
+bookCollapseSection: true
 lang: fr
 weight: 100
 ---

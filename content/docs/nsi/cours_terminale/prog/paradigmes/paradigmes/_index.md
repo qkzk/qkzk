@@ -1,5 +1,6 @@
 ---
 title: Paradigmes de programmation
+bookCollapseSection: true
 weight: 1
 ---
 

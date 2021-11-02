@@ -1,5 +1,6 @@
 ---
 title: race condition
+bookCollapseSection: true
 author: qkzk
 waight: 2
 ---

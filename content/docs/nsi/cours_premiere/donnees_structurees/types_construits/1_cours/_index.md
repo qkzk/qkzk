@@ -1,5 +1,6 @@
 ---
 title: "Types construits : cours"
+bookCollapseSection: true
 weight: 1
 
 ---

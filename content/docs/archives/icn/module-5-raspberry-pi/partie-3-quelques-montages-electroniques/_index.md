@@ -3,6 +3,7 @@ author: qu3nt1n
 date: 2017-06-20 09:50:56+00:00
 draft: false
 title: partie 3 - Quelques montages électroniques simples
+bookCollapseSection: true
 
 
 ---

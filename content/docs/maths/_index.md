@@ -1,9 +1,10 @@
 ---
-title: 'mathématiques'
+title: 'maths'
+bookCollapseSection: true
 author: qu3nt1n
 date: 2019-08-02 08:47:43+00:00
 draft: false
-weight: 7
+weight: 2
 
 ---
 

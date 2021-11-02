@@ -1,5 +1,6 @@
 ---
 title: "Listes"
+bookCollapseSection: true
 weight: 2
 ---
 

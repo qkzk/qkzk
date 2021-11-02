@@ -1,5 +1,6 @@
 ---
 title: Simulation CPU assembleur AQA
+bookCollapseSection: true
 author: David Roche
 theme: metropolis
 weight: 6

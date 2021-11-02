@@ -1,5 +1,6 @@
 ---
 title: "3 - Structures de contrôle"
+bookCollapseSection: true
 author: "qkzk"
 weight: 4
 

@@ -1,5 +1,6 @@
 ---
 title: "2. TD - kNN"
+bookCollapseSection: true
 weight: 2
 
 ---

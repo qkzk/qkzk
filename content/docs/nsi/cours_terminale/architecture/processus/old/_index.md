@@ -1,5 +1,6 @@
 ---
 title: "Anciens cours"
+bookCollapseSection: true
 weight: 200
 ---
 # Processus

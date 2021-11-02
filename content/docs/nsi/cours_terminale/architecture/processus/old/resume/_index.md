@@ -1,5 +1,6 @@
 ---
 title: "processus - résumé"
+bookCollapseSection: true
 author: qkzk
 date: 2020/06/27
 weight: 100

@@ -1,5 +1,6 @@
 ---
 title: "Assembleur AQA - Travaux dirigés"
+bookCollapseSection: true
 author: "qkzk"
 date: 2020/07/25
 weight: 7

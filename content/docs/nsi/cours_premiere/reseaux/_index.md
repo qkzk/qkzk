@@ -1,8 +1,7 @@
 ---
-title:
-  Réseaux
-author:
-  qkzk
+title: Réseaux
+bookCollapseSection: true
+author: qkzk
 weight: 8
 
 ---

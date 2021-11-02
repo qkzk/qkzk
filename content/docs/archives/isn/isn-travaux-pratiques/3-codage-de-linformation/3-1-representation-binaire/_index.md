@@ -3,6 +3,7 @@ author: qu3nt1n
 date: 2016-07-01 22:54:37+00:00
 draft: false
 title: 3.1 Représentation binaire
+bookCollapseSection: true
 weight: 1
 
 ---

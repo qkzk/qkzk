@@ -1,5 +1,6 @@
 ---
 title: "Chiffrement asymétrique"
+bookCollapseSection: true
 author: Frédéric Bayart
 weight: 2
 ---

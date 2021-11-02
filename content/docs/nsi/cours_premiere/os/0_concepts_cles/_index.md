@@ -1,5 +1,6 @@
 ---
 title: "Architecture - OS : trois concepts clés"
+bookCollapseSection: true
 weight: 1
 
 ---

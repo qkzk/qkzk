@@ -1,5 +1,6 @@
 ---
 title: "Chaînes de caractères"
+bookCollapseSection: true
 author: qkzk
 date: 2021/05/23
 weight: 4

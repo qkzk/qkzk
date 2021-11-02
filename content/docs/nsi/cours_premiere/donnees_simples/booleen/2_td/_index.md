@@ -1,5 +1,6 @@
 ---
 title: "Booléens : TD"
+bookCollapseSection: true
 weight: 2
 
 ---

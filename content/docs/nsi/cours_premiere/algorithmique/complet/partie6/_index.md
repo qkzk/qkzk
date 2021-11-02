@@ -1,5 +1,6 @@
 ---
 title: 6 - Compléments
+bookCollapseSection: true
 author: qkzk
 theme: Hannover
 weight: 6

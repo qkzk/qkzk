@@ -3,6 +3,7 @@ author: qu3nt1n
 date: 2019-05-05 05:28:24+00:00
 draft: false
 title: Python 3 - 00 préambule
+bookCollapseSection: true
 weight: -1
 ---
 

@@ -3,6 +3,7 @@ author: qu3nt1n
 date: 2016-07-02 08:08:27+00:00
 draft: false
 title: 3b.2 CSS intro
+bookCollapseSection: true
 weight: 2
 ---
 

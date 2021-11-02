@@ -1,5 +1,6 @@
 ---
 title: "2 - Types simples"
+bookCollapseSection: true
 author: "qkzk"
 weight: 3
 

@@ -3,6 +3,7 @@ author: qu3nt1n
 date: 2017-06-15 17:05:59+00:00
 draft: false
 title: '4.ter - 2 : parcourir un graphe'
+bookCollapseSection: true
 weight: 2
 
 ---

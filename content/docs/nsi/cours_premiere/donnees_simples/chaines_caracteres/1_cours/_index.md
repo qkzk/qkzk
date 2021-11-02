@@ -1,5 +1,6 @@
 ---
 title: "Chaines : Cours"
+bookCollapseSection: true
 weight: 1
 
 ---

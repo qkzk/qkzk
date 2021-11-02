@@ -3,6 +3,7 @@ author: qu3nt1n
 date: 2016-07-02 08:40:29+00:00
 draft: false
 title: 4.02 Javascript, les variables
+bookCollapseSection: true
 weight: 2
 ---
 

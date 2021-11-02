@@ -1,5 +1,6 @@
 ---
 title: "TP : Protocole HTTP"
+bookCollapseSection: true
 author: qkzk
 theme: metropolis
 weight: 16

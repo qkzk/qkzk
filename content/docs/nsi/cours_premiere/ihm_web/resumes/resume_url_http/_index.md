@@ -1,5 +1,6 @@
 ---
 title: URL et HTTP
+bookCollapseSection: true
 author: QK
 theme: metropolis
 weight: 3

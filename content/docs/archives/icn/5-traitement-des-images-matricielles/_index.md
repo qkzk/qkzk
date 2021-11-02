@@ -3,6 +3,7 @@ author: qu3nt1n
 date: 2016-07-04 14:18:48+00:00
 draft: false
 title: 05. Traitement des images matricielles
+bookCollapseSection: true
 weight: 5
 ---
 

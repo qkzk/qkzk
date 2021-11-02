@@ -3,6 +3,7 @@ author: qu3nt1n
 date: 2016-07-02 13:59:56+00:00
 draft: false
 title: Tetris
+bookCollapseSection: true
 
 
 ---

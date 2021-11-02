@@ -1,5 +1,6 @@
 ---
 title: "TP : JavaScript"
+bookCollapseSection: true
 author: qkzk
 theme: metropolis
 weight: 14

@@ -1,5 +1,6 @@
 ---
 title: 5 - Tuples, dictionnaires
+bookCollapseSection: true
 author: qkzk
 theme: Hannover
 weight: 5

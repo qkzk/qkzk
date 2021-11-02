@@ -3,6 +3,7 @@ author: qu3nt1n
 date: 2016-07-02 10:05:25+00:00
 draft: false
 title: 4.07 Fonctions et environnement
+bookCollapseSection: true
 weight: 7
 ---
 

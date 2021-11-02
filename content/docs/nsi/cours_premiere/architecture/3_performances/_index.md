@@ -1,5 +1,6 @@
 ---
 title: Evolution des performances
+bookCollapseSection: true
 author: qkzk
 theme: metropolis
 weight: 3

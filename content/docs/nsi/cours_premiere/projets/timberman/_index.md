@@ -1,5 +1,6 @@
 ---
 title: "pygame Timberman"
+bookCollapseSection: true
 draft: false
 ---
 

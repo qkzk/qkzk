@@ -1,5 +1,6 @@
 ---
 title: "Insertion et sorted"
+bookCollapseSection: true
 weight: 3
 
 ---

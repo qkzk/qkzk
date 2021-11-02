@@ -3,6 +3,7 @@ author: qu3nt1n
 date: 2016-07-01 12:26:13+00:00
 draft: false
 title: 'Projets : contraintes, documents officiels, conseils'
+bookCollapseSection: true
 weight: 2
 ---
 

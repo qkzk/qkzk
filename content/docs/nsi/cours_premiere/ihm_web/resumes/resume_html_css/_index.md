@@ -1,5 +1,6 @@
 ---
 title: 'Résumé HTML - CSS'
+bookCollapseSection: true
 author: qkzk
 theme: metropolis
 weight: 2

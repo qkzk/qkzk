@@ -1,5 +1,6 @@
 ---
 title: "TD : modèle relationnel"
+bookCollapseSection: true
 author: "qkzk"
 date: "2020/10/09"
 theme: metropolis

@@ -3,6 +3,7 @@ author: qu3nt1n
 date: 2016-07-02 09:26:42+00:00
 draft: false
 title: 4.04 Fonctions
+bookCollapseSection: true
 weight: 4
 ---
 

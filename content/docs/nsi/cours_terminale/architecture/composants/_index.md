@@ -1,5 +1,6 @@
 ---
 title: Composants
+bookCollapseSection: true
 weight: 100
 ---
 

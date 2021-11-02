@@ -3,6 +3,7 @@ author: qu3nt1n
 date: 2016-07-02 11:40:10+00:00
 draft: false
 title: 6. Architecture
+bookCollapseSection: true
 weight: 8
 
 ---

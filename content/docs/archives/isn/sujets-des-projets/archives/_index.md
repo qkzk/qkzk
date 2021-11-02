@@ -3,6 +3,7 @@ author: qu3nt1n
 date: 2016-07-02 13:34:30+00:00
 draft: false
 title: Archives
+bookCollapseSection: true
 weight: 1000
 ---
 

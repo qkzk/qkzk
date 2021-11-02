@@ -1,5 +1,6 @@
 ---
 title: "Données Structurées"
+bookCollapseSection: true
 draft: false
 weight: 4
 

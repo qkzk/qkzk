@@ -1,5 +1,6 @@
 ---
 title: "5. Travaux dirigés"
+bookCollapseSection: true
 author: "qkzk"
 date: ""
 weight: 5

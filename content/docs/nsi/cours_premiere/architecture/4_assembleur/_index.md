@@ -1,5 +1,6 @@
 ---
 title: Initiation assembleur
+bookCollapseSection: true
 weight: 4
 
 ---

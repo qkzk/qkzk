@@ -1,5 +1,6 @@
 ---
 title: "Ordonnancement"
+bookCollapseSection: true
 author: "qkzk"
 weight: 4
 

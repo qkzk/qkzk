@@ -1,5 +1,6 @@
 ---
 title: "Amazon Flex"
+bookCollapseSection: true
 author: "qkzk"
 date: "2021/07/29"
 theme: "metropolis"

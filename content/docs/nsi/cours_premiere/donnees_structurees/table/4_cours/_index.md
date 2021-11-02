@@ -1,5 +1,6 @@
 ---
 title: '4. Cours : trier, fusionner'
+bookCollapseSection: true
 author: 'qkzk'
 date: '2020/07/31'
 weight: 4

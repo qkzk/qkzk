@@ -1,5 +1,6 @@
 ---
 title: "Organisation"
+bookCollapseSection: true
 author: "qkzk"
 weight: 1000
 

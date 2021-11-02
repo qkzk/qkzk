@@ -3,6 +3,7 @@ author: qu3nt1n
 date: 2016-07-02 09:12:00+00:00
 draft: false
 title: 4.03 Types de données
+bookCollapseSection: true
 weight: 3
 ---
 

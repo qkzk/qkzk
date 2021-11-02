@@ -1,5 +1,6 @@
 ---
 title: "binaire - TD"
+bookCollapseSection: true
 author: qkzk
 weight: 2
 

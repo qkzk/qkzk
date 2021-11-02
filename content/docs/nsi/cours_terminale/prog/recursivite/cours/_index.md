@@ -1,5 +1,6 @@
 ---
 title: 'Cours'
+bookCollapseSection: true
 author: 'qkzk'
 date: 2021/06/14
 weight: 1

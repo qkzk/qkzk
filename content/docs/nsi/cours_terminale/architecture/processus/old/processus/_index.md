@@ -1,5 +1,6 @@
 ---
 title: processus, système de fichiers, shell
+bookCollapseSection: true
 author: qkzk
 weight: 1
 ---

@@ -3,6 +3,7 @@ author: qu3nt1n
 date: 2017-04-09 09:25:22+00:00
 draft: false
 title: '11. Pygame et la camera : introduction du module'
+bookCollapseSection: true
 
 weight: 11
 ---

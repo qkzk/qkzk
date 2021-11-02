@@ -1,5 +1,6 @@
 ---
 title: "Cours : dichotomie"
+bookCollapseSection: true
 author: qkzk
 weight: 1
 

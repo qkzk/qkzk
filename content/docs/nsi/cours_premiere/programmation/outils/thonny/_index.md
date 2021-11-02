@@ -1,5 +1,6 @@
 ---
 title: Thonny
+bookCollapseSection: true
 author: "DIU EIL"
 weight: 6
 ---

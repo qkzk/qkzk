@@ -3,6 +3,7 @@ author: qu3nt1n
 date: 2019-05-05 07:03:44+00:00
 draft: false
 title: Python 3 - 08 Lecture et écriture dans un fichier
+bookCollapseSection: true
 weight: 8
 
 ---

@@ -12,34 +12,12 @@ pygmentscodefencesguesssyntax = true
 
 [params]
   author = "qkzk"
-  description = "Informatique au Lycée des Flandres"
+  description = "Informatique et mathématiques"
   minify = "true"
+  BookTheme = 'light'
 
 
 [menu]
-  [[menu.banner]]
-    identifier = "nsi"
-    name = "nsi"
-    url = "/docs/nsi"
-    weight = 1
-
-  [[menu.banner]]
-    identifier = "maths"
-    name = "maths"
-    url = "/docs/maths"
-    weight = 2
-
-  [[menu.banner]]
-    identifier = "ressources"
-    name = "ressources"
-    url = "/docs/ressources"
-    weight = 3
-
-  [[menu.banner]]
-    identifier = "rust-python"
-    name = "rust-python"
-    url = "/python"
-    weight = 4
 
 [privacy]
   [privacy.disqus]

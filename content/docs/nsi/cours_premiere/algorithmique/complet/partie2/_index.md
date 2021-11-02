@@ -1,5 +1,6 @@
 ---
 title: 2 - Données
+bookCollapseSection: true
 author: qkzk
 theme: Hannover
 weight: 2

@@ -1,5 +1,6 @@
 ---
 title: "Travaux dirigés"
+bookCollapseSection: true
 weight: 120
 
 ---

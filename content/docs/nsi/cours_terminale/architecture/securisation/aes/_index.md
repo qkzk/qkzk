@@ -1,5 +1,6 @@
 ---
 title: "AES"
+bookCollapseSection: true
 author: "qkzk"
 weight: 100
 

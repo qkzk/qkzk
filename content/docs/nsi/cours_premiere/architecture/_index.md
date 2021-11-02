@@ -1,5 +1,6 @@
 ---
 title: Architecture
+bookCollapseSection: true
 author: qkzk
 theme: metropolis
 weight: 5

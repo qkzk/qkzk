@@ -1,5 +1,6 @@
 ---
 title: "Complément à deux - Travaux dirigés"
+bookCollapseSection: true
 author: "qkzk"
 weight: 2
 

@@ -3,6 +3,7 @@ author: qu3nt1n
 date: 2019-05-05 07:19:47+00:00
 draft: false
 title: Python 3 - 11 Débogage
+bookCollapseSection: true
 weight: 11
 
 ---

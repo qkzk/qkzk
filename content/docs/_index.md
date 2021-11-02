@@ -1,5 +1,6 @@
 ---
 title: 'qkzk'
+bookCollapseSection: true
 draft: false
 weight: 1
 

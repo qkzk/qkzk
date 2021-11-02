@@ -1,5 +1,6 @@
 ---
 title: ressources
+bookCollapseSection: true
 author: qkzk
 date: 2017-06-22 08:47:43+00:00
 draft: false
@@ -130,6 +131,14 @@ Vous trouverez bien sûr de nombreuses références en français, mais je n'en r
 * [kite](https://www.youtube.com/channel/UCxVRDu9ujwOrmDxu72V3ujQ/playlists) est un outil de complétion automatique pour Python à intégrer dans un éditeur avancé (sublim, atom, vscode, vim). Ils proposent de nombreuses vidéos de qualité.
 
 ---
+
+# D'autres trucs
+
+* [Rust Python](/python) est une version de python écrite en Rust et compilée en web assembly.
+  Pour faire simple, c'est Python dans le navigateur écrit dans un langage rapide et sûr.
+  Je n'en suis pas un contributeur.
+* [Reversi](/reversi) est une version du jeu reversi / othello écrite en Rust, compilée en web assembly.
+  Il tourne assez vite et me bat sans difficulté :) Ça, par contre, c'est de moi.
 
 # About
 

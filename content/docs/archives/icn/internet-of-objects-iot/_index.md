@@ -3,6 +3,7 @@ author: qu3nt1n
 date: 2017-01-19 17:33:18+00:00
 draft: false
 title: 'Internet of Objects : IoT'
+bookCollapseSection: true
 weight: 101
 
 ---

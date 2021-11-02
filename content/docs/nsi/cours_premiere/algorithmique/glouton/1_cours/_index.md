@@ -1,5 +1,6 @@
 ---
 title: '1. cours'
+bookCollapseSection: true
 author: qkzk
 date : 2020/08/01
 weight: 1

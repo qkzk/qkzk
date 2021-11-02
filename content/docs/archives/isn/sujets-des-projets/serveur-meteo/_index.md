@@ -2,6 +2,7 @@
 author: qkzk
 draft: false
 title: Serveur méteo
+bookCollapseSection: true
 weight: 9
 ---
 

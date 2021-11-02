@@ -1,5 +1,6 @@
 ---
 title: "Cours : tableaux 2D"
+bookCollapseSection: true
 author: "qkzk"
 date: "2020/11/22"
 weight: 1

@@ -3,6 +3,7 @@ author: qu3nt1n
 date: 2017-06-15 16:10:46+00:00
 draft: false
 title: '4.ter - 1 : Les tris'
+bookCollapseSection: true
 weight: 1
 ---
 

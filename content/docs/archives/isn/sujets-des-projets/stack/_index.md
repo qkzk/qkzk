@@ -3,6 +3,7 @@ author: qu3nt1n
 date: 2017-06-14 12:13:40+00:00
 draft: false
 title: Stack
+bookCollapseSection: true
 weight: 12
 ---
 

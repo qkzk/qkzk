@@ -3,6 +3,7 @@ author: qu3nt1n
 date: 2016-07-07 09:09:18+00:00
 draft: false
 title: 06. Création d'images vectorielles
+bookCollapseSection: true
 weight: 6
 
 ---

@@ -3,6 +3,7 @@ author: qu3nt1n
 date: 2016-07-02 00:05:21+00:00
 draft: false
 title: 3.4 Structure des pages HTML
+bookCollapseSection: true
 weight: 4
 ---
 

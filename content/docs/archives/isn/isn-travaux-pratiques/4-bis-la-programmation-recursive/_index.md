@@ -3,6 +3,7 @@ author: qu3nt1n
 date: 2016-07-02 11:07:28+00:00
 draft: false
 title: '4.bis : La programmation récursive'
+bookCollapseSection: true
 weight: 6
 ---
 

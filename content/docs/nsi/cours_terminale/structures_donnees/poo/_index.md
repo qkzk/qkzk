@@ -1,5 +1,6 @@
 ---
 title: "Programmation Orientée Objet"
+bookCollapseSection: true
 weight: 1
 ---
 

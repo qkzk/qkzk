@@ -1,5 +1,6 @@
 ---
 title: 4 - Tableaux
+bookCollapseSection: true
 author: qkzk
 theme: Hannover
 weight: 4

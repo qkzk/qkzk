@@ -3,6 +3,7 @@ author: qu3nt1n
 date: 2016-07-02 13:55:50+00:00
 draft: false
 title: Pendu
+bookCollapseSection: true
 
 
 ---

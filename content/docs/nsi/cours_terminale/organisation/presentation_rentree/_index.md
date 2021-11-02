@@ -1,5 +1,6 @@
 ---
 title: "généralités"
+bookCollapseSection: true
 author: "qkzk"
 weight: 1
 

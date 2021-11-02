@@ -1,5 +1,6 @@
 ---
 title: "7. Rappels - les pays"
+bookCollapseSection: true
 weight: 1000
 
 ---

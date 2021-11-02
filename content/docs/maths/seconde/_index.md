@@ -1,5 +1,6 @@
 ---
 title: seconde
+bookCollapseSection: true
 author: qu3nt1n
 date: "2021/06/25"
 draft: false

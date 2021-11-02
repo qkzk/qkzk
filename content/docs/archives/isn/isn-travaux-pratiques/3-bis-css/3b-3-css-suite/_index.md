@@ -3,6 +3,7 @@ author: qu3nt1n
 date: 2016-07-02 08:15:25+00:00
 draft: false
 title: 3b.3 CSS suite
+bookCollapseSection: true
 weight: 3
 ---
 

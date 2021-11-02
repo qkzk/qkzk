@@ -1,5 +1,6 @@
 ---
 title: "Complément à deux"
+bookCollapseSection: true
 author: "qkzk"
 weight: 30
 date: 2020/07/25

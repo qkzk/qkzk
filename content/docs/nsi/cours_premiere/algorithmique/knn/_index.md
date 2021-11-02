@@ -1,5 +1,6 @@
 ---
 title: k plus proches voisins
+bookCollapseSection: true
 author: qkzk
 weight: 12
 

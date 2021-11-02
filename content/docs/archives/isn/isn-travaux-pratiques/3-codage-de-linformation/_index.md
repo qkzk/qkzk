@@ -3,6 +3,7 @@ author: qu3nt1n
 date: 2016-07-01 23:59:42+00:00
 draft: false
 title: 3. Codage de l'information
+bookCollapseSection: true
 weight: 3
 ---
 

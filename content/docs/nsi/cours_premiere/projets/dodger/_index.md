@@ -1,5 +1,6 @@
 ---
 title: "pgzero Dodger"
+bookCollapseSection: true
 draft: false
 ---
 

@@ -1,5 +1,6 @@
 ---
 title: Récursivité
+bookCollapseSection: true
 weight: 1
 ---
 

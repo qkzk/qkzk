@@ -3,6 +3,7 @@ author: qu3nt1n
 date: 2019-05-05 06:41:30+00:00
 draft: false
 title: Python 3 - 04 Les fonctions
+bookCollapseSection: true
 weight: 4
 
 ---

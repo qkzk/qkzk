@@ -1,5 +1,6 @@
 ---
 title: "Projets"
+bookCollapseSection: true
 draft: false
 weight: 20
 ---

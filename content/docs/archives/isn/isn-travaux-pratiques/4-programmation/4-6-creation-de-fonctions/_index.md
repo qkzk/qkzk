@@ -3,6 +3,7 @@ author: qu3nt1n
 date: 2016-07-02 09:37:25+00:00
 draft: false
 title: 4.06 Création de fonctions
+bookCollapseSection: true
 weight: 6
 ---
 

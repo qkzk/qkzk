@@ -1,5 +1,6 @@
 ---
 title: "Types construits : TD"
+bookCollapseSection: true
 date: "2021/05/25"
 weight: 2
 

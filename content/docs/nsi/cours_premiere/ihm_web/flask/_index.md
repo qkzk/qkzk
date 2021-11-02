@@ -1,5 +1,6 @@
 ---
 title: "TP : Formulaire d'une page web"
+bookCollapseSection: true
 author: David Roche
 theme: metropolis
 weight: 17

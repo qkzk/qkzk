@@ -1,5 +1,6 @@
 ---
 title: Introduction
+bookCollapseSection: true
 weight: 1
 
 ---

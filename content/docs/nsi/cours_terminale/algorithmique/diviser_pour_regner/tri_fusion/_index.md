@@ -1,5 +1,6 @@
 ---
 title: Tri fusion
+bookCollapseSection: true
 date: 2020/04/26
 author: qkzk
 weight: 1

@@ -2,6 +2,7 @@
 author: qkzk
 draft: false
 title: "Fiche : À retenir"
+bookCollapseSection: true
 weight: 200
 
 ---

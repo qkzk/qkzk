@@ -1,5 +1,6 @@
 ---
 title: "complément : Mémoire cache"
+bookCollapseSection: true
 author: "Nicolas FRANCOIS"
 date: "2020/12/25"
 theme: metropolis

@@ -3,6 +3,7 @@ author: qu3nt1n
 date: 2016-07-01 12:34:25+00:00
 draft: false
 title: 4.12 Tutoriel pong en javascript
+bookCollapseSection: true
 weight: 12
 
 ---

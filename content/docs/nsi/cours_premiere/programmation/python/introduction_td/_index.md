@@ -1,5 +1,6 @@
 ---
 title: "Introduction : TD"
+bookCollapseSection: true
 weight: 2
 date: 2020/07/25
 

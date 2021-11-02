@@ -3,6 +3,7 @@ author: qu3nt1n
 date: 2018-08-18 09:35:52+00:00
 draft: false
 title: Othello / Reversi
+bookCollapseSection: true
 weight: 6
 ---
 

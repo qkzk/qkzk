@@ -3,6 +3,7 @@ author: qu3nt1n
 date: 2016-07-01 14:38:32+00:00
 draft: false
 title: 04. Images, couleurs
+bookCollapseSection: true
 weight: 4
 
 ---

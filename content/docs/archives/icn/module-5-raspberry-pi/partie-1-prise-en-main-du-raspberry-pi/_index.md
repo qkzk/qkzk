@@ -3,6 +3,7 @@ author: qu3nt1n
 date: 2017-06-20 13:41:39+00:00
 draft: false
 title: partie 1 - Prise en main du raspberry pi
+bookCollapseSection: true
 
 
 ---

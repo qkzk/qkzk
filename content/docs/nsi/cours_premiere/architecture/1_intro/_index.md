@@ -1,5 +1,6 @@
 ---
 title: Modèle de Von Neumann
+bookCollapseSection: true
 author: qkzk
 theme: metropolis
 weight: 1

@@ -1,5 +1,6 @@
 ---
 title: 'TD : JavaScript'
+bookCollapseSection: true
 author: qkzk
 weight: 10
 

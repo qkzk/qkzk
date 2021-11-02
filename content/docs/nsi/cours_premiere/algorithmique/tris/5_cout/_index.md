@@ -1,5 +1,6 @@
 ---
 title: "Complexité et correction"
+bookCollapseSection: true
 weight: 5
 
 ---

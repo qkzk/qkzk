@@ -3,6 +3,7 @@ author: qu3nt1n
 date: 2019-05-05 07:29:33+00:00
 draft: false
 title: Python 3 - 13 Jeux vidéo avec le module Pygame
+bookCollapseSection: true
 weight: 13
 
 ---

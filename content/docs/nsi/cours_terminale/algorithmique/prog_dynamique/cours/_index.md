@@ -1,5 +1,6 @@
 ---
 title: Programmation Dynamique - cours
+bookCollapseSection: true
 author: qkzk
 date: 2020/04/29
 weight: 1

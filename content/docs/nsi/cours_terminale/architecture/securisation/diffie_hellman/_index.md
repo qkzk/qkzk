@@ -1,5 +1,6 @@
 ---
 title: "Diffie-Hellman"
+bookCollapseSection: true
 author: Frédéric Bayart
 weight: 3
 ---

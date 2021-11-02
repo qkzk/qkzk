@@ -1,141 +1,49 @@
 /* To be overridden by theme user */
-// @import "variables";
-/* Remove default bullets */
 
-
-/*
-NEW NAVIGATION MENUS
-FINALLY WORKS ON FIREFOX !
-*/
-ul, #myUL {
-  list-style-type: disc;
-}
-
-/* Remove margins and padding from the parent ul */
-#myUL {
-  margin: 0;
-  padding: 0;
-}
-
-/* Style the caret/arrow */
-.caret {
-  cursor: pointer;
-  width: auto;
-  display: table;
-  -webkit-user-select: none; /* Safari 3.1+ */
-  -moz-user-select: none; /* Firefox 2+ */
-  -ms-user-select: none; /* IE 10+ */
-  user-select: none; /* Prevent text selection */
-}
-
-.caret-down {
-  width: auto;
-  display: table-row;
-  -webkit-user-select: none; /* Safari 3.1+ */
-  -moz-user-select: none; /* Firefox 2+ */
-  -ms-user-select: none; /* IE 10+ */
-  user-select: none; /* Prevent text selection */
-}
-
-/* Create the caret/arrow with a unicode, and style it */
-.caret::before {
-  content: "+";
-  display: table-cell;
-  font-size: 150%;
-  font-weight: bold;
-  padding: 0px 0px 0px 0px;
-  vertical-align: super;
-}
-
-.caret a, .caret-down a {
-  margin: 10px 0px 0px 20px;
-}
-
-.bookkkk {
-  margin: -10px 0px 0px 0px;
-  list-style-type: none;
-}
-
-.coucher {
-  margin: -10px 0px 0px 0px;
-  list-style-type: none;
-}
-
-/* Rotate the caret/arrow icon when clicked on (using JavaScript) */
-.caret-down::before {
-  content: "–";
-  display: table-cell;
-  font-size: 150%;
-  font-weight: bold;
-  margin: -10px 0px 0px 0px;
-  vertical-align: super;
-}
-
-.caret-down {
-  margin: -200px 0px 0px 0px;
-}
-
-/* Hide the nested list */
-.nested {
-  display: none;
-}
-
-/* Show the nested list when the user clicks on the caret/arrow (with JavaScript) */
-.active {
-  display: block;
-}
-
-/*
-END NEW MENUS
-*/
-
-html {
-  height: 100vh
-}
-.white-back {
-  background-color: $body-background;
-  margin: 21px;
-  padding: 40px;
-  min-height: 96vh;
-}
-.container {
-  background-color: #FFF;
-}
 
 /*
 BANNER AND HEADER
 */
-.banner {
-  display: block;
-  width:95%;
+.banner-img-title {
+  width:100%;
+  text-align: left;
   max-width: $container-max-width;
-  margin:7px auto;
   color: #000;
-  height: 120px;
 }
+
 .title-link{
-  font-weight: bold;
-  color: #000;
-  margin-bottom: 0px;
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 0px;
+    margin: 0 auto;
+    padding: 0;
+    color: black;
 }
+
 #bannerTitle{
-  padding-left: 0px;
-  float: left;
+    padding: 0;
+    float: left;
+    margin: 0 auto;
+    width: 100%;
+    /* color: #fff; */
 }
+
 .slogan{
   clear:both;
   float: left;
   font-size: 16px;
   color: #666;
 }
+
+#bannerSubtitle {
+    color: black;
+    text-align: center;
+}
+
 .menu-banner{
   float: right;
 }
-#bannerImg {
-  height: 200px;
-  background-size: cover;
-  margin-bottom: 13vh;
-}
+
 
 /*
 back to top
@@ -149,50 +57,9 @@ back to top
   font-size: 2em;
 }
 
-
-
-/*
-BOOK PAGES AND TOCS
-*/
-.book-page {
-  padding-top: 0;
+.book-menu .book-menu-content {
+    background: #FFF;
 }
-.nav-link{
-  color: #000;
-  font-size: 20px;
-  padding-right: 20px;
-}
-.book-menu nav, .book-toc nav {
-  position:sticky;
-  top: 0;
-  margin: 0;
-  padding: 0;
-}
-
-.book-toc h1, .book-brand {
-  font-weight: bold;
-  margin-top: 0;
-  margin-bottom: 5vh;
-}
-.book-brand {
-
-}
-.menu-nav {
-  line-height: normal;
-  margin-left: 20px;
-}
-.book-toc ul li a {
-  font-size: $font-size-14;
-  color: #000;
-}
-.book-menu summary, .book-menu li{
-  // margin-bottom: 0.4em;
-}
-
-a.nav-link {
-  color: #000;
-}
-
 
 /*
 FOOTER
@@ -206,12 +73,21 @@ FOOTER
   padding-top: 1.5em;
 }
 
-/*
-RESPONSIVE DESIGN
-*/
+.white-back {
+  background-color: #FFF;
+  min-height: 96vh;
+}
+.container {
+  background-color: #FFF;
+}
 
 // @media screen and (min-width: 768px){
-@media screen and (min-width: $sm-breakpoint){
+@media screen and (min-width: 768){
+  .white-back {
+    margin: 10px;
+    padding: 10px;
+  }
+
   .book-toc, .book-menu {
     border-top: 4px solid #1a1a1a;
     margin-bottom: 20px;
@@ -219,35 +95,122 @@ RESPONSIVE DESIGN
     padding-top: 20px;
     padding-left: 0;
   }
+  .book-menu .book-menu-content {
+      top: 30px;
+  }
+  .book-toc .book-toc-content {
+      top: 30px;
+  }
   .content-desktop {
     display: none;
+  }
+  .banner {
+      margin: 0px auto;
+      display: none;
+    }
+
+
+  #bannerTitle {
+    display: none;
+    padding-left: 0px;
+    padding-top: 0px;
+    margin-left: 0px;
+    height: 0px;
+    color: black;
+  }
+  #bannerImg {
+    height: 0px;
+    background-size: 0px;
+    margin-bottom: 0vh;
+    display: none;
+  }
+  #bannerSubtitle {
+    margin-top: 1em;
+    color: black;
+  }
+  .title-link {
+    height: 0px;
+    color: black;
+  }
+    
+  .white-back{
+    padding: 0px;
+    margin: 0px;
+    margin-top: 1em;
+  }
+  .banner-img-title { 
+      height: 0px;
+      text-align: center;
   }
 }
 
 // mobile
 // @media screen and (max-width: 768px) {
-@media screen and (max-width: $sm-breakpoint) {
+@media screen and (max-width: 768) {
+  .white-back {
+    margin: 10px;
+    padding: 10px;
+  }
+
+  .book-menu .book-menu-content {
+      top: 30px;
+  }
+
+  .book-toc .book-toc-content {
+      top: 30px;
+  }
+
   .white-back{
     padding: 0;
     margin: 0;
     margin-top: 1em;
   }
+
   .content-desktop {
     display: none;
   }
+
   body{
     background-image: none;
   }
-  summary, details li {
-    // font-size: 4vw;
-  }
+
+
   #bannerTitle{
-    padding-left: 2vh;
+    width: 100%;
+    margin-left: auto;
+    color: black;
   }
+
+  #bannerImg {
+    height: 0px;
+    background-size: 0px;
+    margin-bottom: 0vh;
+    display: none;
+  }
+
+  #bannerSubtitle {
+    margin-top: 1em;
+    color: black;
+  }
+
+  .title-link {
+    height: 0px;
+    color: black;
+  }
+
+  .banner-img-title { 
+      height: 0px;
+      text-align: left;
+  }
+
 }
 
 // @media (min-width: 1200px) {
-@media (min-width: $md-breakpoint) {
+@media (min-width: 1200px) {
+  .white-back {
+    margin: 20px;
+    padding: 30px;
+  }
   body {
     background-image: url("/back_qkzk.jpg");
     background-repeat: repeat;
@@ -255,25 +218,37 @@ RESPONSIVE DESIGN
     background-attachment: scroll;
     min-height: 100vh
   }
+  .book-menu .book-menu-content {
+      top: 280px;
+  }
+  .book-toc .book-toc-content {
+      top: 270px;
+  }
   .content-desktop {
       display: flex;
   }
+  #bannerTitle{
+    display: block;
+    padding-left: 20px;
+    padding-top: 10px;
+    margin-left: 20px;
+    color: white;
+  }
+  #bannerImg {
+    height: 200px;
+    background-size: cover;
+    margin-bottom: 0vh;
+    display: block;
+  }
+  #bannerSubtitle {
+    margin-top: 1em;
+    color: white;
+  }
+  .title-link {
+    height: 30px;
+    color: white;
+  }
+  .banner-img-title { 
+      height: 100%;
+  }
 }
-
-// btn navigation
-
-.right {
-  float: right;
-}
-.left {
-  float: left;
-}
-.center {
-  margin: auto;
-  width: 50%;
-}
-#link_next, #link_previous {
-  display: none;
-}
-
-

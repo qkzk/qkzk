@@ -1,5 +1,6 @@
 ---
 title: "Arbres - TD 2"
+bookCollapseSection: true
 author: "qkzk"
 weight: 3
 

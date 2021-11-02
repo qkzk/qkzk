@@ -3,6 +3,7 @@ author: qu3nt1n
 date: 2016-07-09 09:56:01+00:00
 draft: false
 title: 'module 5 : raspberry pi'
+bookCollapseSection: true
 weight: -4
 
 ---

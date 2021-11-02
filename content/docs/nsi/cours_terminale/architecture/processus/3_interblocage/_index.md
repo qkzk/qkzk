@@ -1,5 +1,6 @@
 ---
 title: Interblocage
+bookCollapseSection: true
 weight: 3
 
 ---

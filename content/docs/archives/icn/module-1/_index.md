@@ -3,6 +3,7 @@ author: qu3nt1n
 date: 2016-07-01 12:31:26+00:00
 draft: false
 title: 'module 1 : échanger'
+bookCollapseSection: true
 weight: -10
 ---
 

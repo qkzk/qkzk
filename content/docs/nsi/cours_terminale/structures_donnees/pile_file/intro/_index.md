@@ -1,5 +1,6 @@
 ---
 title: Les files et les piles
+bookCollapseSection: true
 author: qkzk
 weight: 1
 ---

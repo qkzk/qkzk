@@ -3,6 +3,7 @@ author: qu3nt1n
 date: 2016-07-02 10:49:32+00:00
 draft: false
 title: 4.11 Un diaporama
+bookCollapseSection: true
 weight: 11
 
 ---

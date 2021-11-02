@@ -1,5 +1,6 @@
 ---
 title: "cours : Modèle Client-Server"
+bookCollapseSection: true
 author: David Roche
 theme: metropolis
 weight: 4

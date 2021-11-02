@@ -3,6 +3,7 @@ author: qu3nt1n
 date: 2016-07-02 13:54:25+00:00
 draft: false
 title: Calcul mental
+bookCollapseSection: true
 
 
 ---

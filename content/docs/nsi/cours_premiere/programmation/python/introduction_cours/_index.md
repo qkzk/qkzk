@@ -1,5 +1,6 @@
 ---
 title: "Introduction : cours"
+bookCollapseSection: true
 weight: 1
 author: qkzk
 ---

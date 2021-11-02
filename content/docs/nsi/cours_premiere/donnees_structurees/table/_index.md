@@ -1,5 +1,6 @@
 ---
 title: 'Données en tables, fichiers csv'
+bookCollapseSection: true
 author: 'qkzk'
 date: '2020/07/31'
 weight: 10

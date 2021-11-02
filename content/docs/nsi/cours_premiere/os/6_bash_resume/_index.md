@@ -1,5 +1,6 @@
 ---
 title: "Résumé des commandes bash"
+bookCollapseSection: true
 author: qkzk
 theme: metropolis
 weight: 6

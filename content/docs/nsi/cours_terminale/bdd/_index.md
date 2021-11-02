@@ -1,5 +1,6 @@
 ---
 title: 'Bases de données'
+bookCollapseSection: true
 weight: 5
 ---
 

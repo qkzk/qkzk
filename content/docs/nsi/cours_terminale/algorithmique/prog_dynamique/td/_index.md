@@ -1,5 +1,6 @@
 ---
 title: "Programmation Dynamique - Travaux dirigés"
+bookCollapseSection: true
 author: qkzk
 date: 2020/04/29
 weight: 2

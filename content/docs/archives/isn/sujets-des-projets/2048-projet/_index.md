@@ -3,6 +3,7 @@ author: qu3nt1n
 date: 2017-06-14 11:22:58+00:00
 draft: false
 title: 2048 - projet
+bookCollapseSection: true
 weight: 1
 ---
 

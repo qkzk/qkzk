@@ -1,5 +1,6 @@
 ---
 title: Algorithmique
+bookCollapseSection: true
 weight: 1
 ---
 

@@ -1,5 +1,6 @@
 ---
 title: "TD : dichotomie"
+bookCollapseSection: true
 weight: 2
 
 ---

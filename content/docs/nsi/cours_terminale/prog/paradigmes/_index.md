@@ -1,5 +1,6 @@
 ---
 title: "Paradigmes de programmation"
+bookCollapseSection: true
 author: qkzk
 weight: 10
 ---

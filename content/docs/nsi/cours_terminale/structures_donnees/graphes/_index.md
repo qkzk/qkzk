@@ -1,5 +1,6 @@
 ---
 title: "Graphes"
+bookCollapseSection: true
 weight: 5
 ---
 

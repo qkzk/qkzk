@@ -1,5 +1,6 @@
 ---
 title: "Réseaux TCP/IP"
+bookCollapseSection: true
 author: "qkzk"
 date: ""
 theme: "metropolis"

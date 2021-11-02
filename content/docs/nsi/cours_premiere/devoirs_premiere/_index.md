@@ -1,5 +1,6 @@
 ---
 title: Devoirs de première
+bookCollapseSection: true
 author: qkzk
 theme: metropolis
 weight: 100

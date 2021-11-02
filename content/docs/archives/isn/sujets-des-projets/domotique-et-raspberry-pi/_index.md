@@ -3,6 +3,7 @@ author: qu3nt1n
 date: 2017-06-14 12:55:50+00:00
 draft: false
 title: Domotique et raspberry pi
+bookCollapseSection: true
 weight: 3
 ---
 

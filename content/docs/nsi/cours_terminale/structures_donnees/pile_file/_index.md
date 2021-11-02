@@ -1,5 +1,6 @@
 ---
 title: Pile, File
+bookCollapseSection: true
 author: qkzk
 weight: 3
 ---

@@ -1,5 +1,6 @@
 ---
 title: Algorithmes
+bookCollapseSection: true
 weight: 20
 
 ---

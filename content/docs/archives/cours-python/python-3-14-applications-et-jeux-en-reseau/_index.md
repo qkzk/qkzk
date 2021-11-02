@@ -3,6 +3,7 @@ author: qu3nt1n
 date: 2019-05-05 07:36:15+00:00
 draft: false
 title: Python 3 - 14 Applications et jeux en réseau
+bookCollapseSection: true
 weight: 14
 
 ---

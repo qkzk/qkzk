@@ -1,5 +1,6 @@
 ---
 title: Créer une clé Linux
+bookCollapseSection: true
 author: qkzk
 theme: metropolis
 weight: 5

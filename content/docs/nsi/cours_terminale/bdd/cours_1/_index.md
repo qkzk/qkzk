@@ -1,5 +1,6 @@
 ---
 title: "introduction"
+bookCollapseSection: true
 author: qkzk
 weight: 10
 ---

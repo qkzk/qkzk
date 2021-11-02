@@ -1,7 +1,4 @@
-{{ $tocLevels := default (default 6 .Site.Params.BookToC) .Params.BookToC }}
-{{ if and $tocLevels .Page.TableOfContents }}
-  <aside class="book-toc level-{{$tocLevels}} fixed">
-    <h1>Table des matières</h1>
-    {{ .Page.TableOfContents }}
-  </aside>
-{{ end }}
+{{ partial "docs/inject/toc-before" . }}
+<h1>Table des matières</h1>
+{{ .TableOfContents }}
+{{ partial "docs/inject/toc-after" . }}

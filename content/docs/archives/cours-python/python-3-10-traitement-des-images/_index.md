@@ -3,6 +3,7 @@ author: qu3nt1n
 date: 2019-05-05 07:14:05+00:00
 draft: false
 title: Python 3 - 10 Traitement des images
+bookCollapseSection: true
 weight: 10
 
 ---

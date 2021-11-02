@@ -3,6 +3,7 @@ author: qu3nt1n
 date: 2016-07-02 10:37:38+00:00
 draft: false
 title: 4.10 Structure conditionnelle
+bookCollapseSection: true
 weight: 10
 ---
 

@@ -1,5 +1,6 @@
 ---
 title: Simulation réseau
+bookCollapseSection: true
 author: David Roche
 weight: 5
 ---

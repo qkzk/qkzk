@@ -1,5 +1,6 @@
 ---
 title: Le modèle TCP/IP
+bookCollapseSection: true
 author: David Roche
 weight: 3
 ---

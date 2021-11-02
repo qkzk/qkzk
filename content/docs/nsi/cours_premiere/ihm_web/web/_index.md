@@ -1,5 +1,6 @@
 ---
 title: "cours: Le web"
+bookCollapseSection: true
 author: David Roche
 theme: metropolis
 weight: 1

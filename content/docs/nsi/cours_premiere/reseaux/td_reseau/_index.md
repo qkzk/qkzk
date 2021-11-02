@@ -1,5 +1,6 @@
 ---
 title: "Réseau - TD"
+bookCollapseSection: true
 author: "qkzk"
 date: "2021/06/08"
 theme: "metropolis"

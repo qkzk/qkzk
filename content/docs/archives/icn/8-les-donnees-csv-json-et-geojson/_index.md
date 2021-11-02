@@ -3,6 +3,7 @@ author: qu3nt1n
 date: 2016-07-09 07:04:36+00:00
 draft: false
 title: 08. Les données CSV, JSON et GeoJSON
+bookCollapseSection: true
 weight: 8
 
 ---

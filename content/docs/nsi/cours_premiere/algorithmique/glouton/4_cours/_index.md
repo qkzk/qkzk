@@ -1,5 +1,6 @@
 ---
 title: '4. Cours'
+bookCollapseSection: true
 author: qkzk
 date : 2020/08/01
 weight: 4

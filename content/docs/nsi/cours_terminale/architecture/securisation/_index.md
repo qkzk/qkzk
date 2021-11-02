@@ -1,5 +1,6 @@
 ---
 title: Sécurisation
+bookCollapseSection: true
 weight: 10
 ---
 

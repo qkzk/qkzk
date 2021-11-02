@@ -3,6 +3,7 @@ author: qu3nt1n
 date: 2016-07-02 08:01:25+00:00
 draft: false
 title: 3b.1 Séparation contenu / forme
+bookCollapseSection: true
 weight: 1
 ---
 

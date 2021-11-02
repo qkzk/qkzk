@@ -1,5 +1,6 @@
 ---
 title: "Structures de données linéaires : travaux dirigés"
+bookCollapseSection: true
 author: "qkzk"
 weight: 100
 

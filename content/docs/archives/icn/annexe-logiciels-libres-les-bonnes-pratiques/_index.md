@@ -3,6 +3,7 @@ author: qu3nt1n
 date: 2016-07-08 14:09:56+00:00
 draft: false
 title: 'Annexe : Logiciels libres, les bonnes pratiques'
+bookCollapseSection: true
 weight: 12
 
 ---

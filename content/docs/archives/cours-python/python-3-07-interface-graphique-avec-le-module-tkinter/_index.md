@@ -3,6 +3,7 @@ author: qu3nt1n
 date: 2019-05-05 06:59:04+00:00
 draft: false
 title: Python 3 - 07 Interface graphique avec le module Tkinter
+bookCollapseSection: true
 weight: 7
 
 ---

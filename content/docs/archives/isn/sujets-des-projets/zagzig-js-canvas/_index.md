@@ -3,6 +3,7 @@ author: qu3nt1n
 date: 2016-07-01 13:20:51+00:00
 draft: false
 title: Zagzig (js, canvas)
+bookCollapseSection: true
 weight: 14
 ---
 

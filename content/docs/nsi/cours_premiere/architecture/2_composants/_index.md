@@ -1,5 +1,6 @@
 ---
 title: Composants d'un processeur
+bookCollapseSection: true
 author: qkzk
 theme: metropolis
 weight: 2

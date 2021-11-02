@@ -1,5 +1,6 @@
 ---
 title: "1 - expressions"
+bookCollapseSection: true
 author: "qkzk"
 date: "2021/04/19"
 weight: 2

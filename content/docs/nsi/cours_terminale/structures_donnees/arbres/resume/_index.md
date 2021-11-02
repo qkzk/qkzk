@@ -1,5 +1,6 @@
 ---
 title: Arbres - résumé
+bookCollapseSection: true
 weight: 100
 
 ---

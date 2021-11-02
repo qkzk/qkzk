@@ -3,6 +3,7 @@ author: qu3nt1n
 date: 2017-01-04 07:06:55+00:00
 draft: false
 title: 'devoir : Vacances de Noël - Revue de projet'
+bookCollapseSection: true
 weight: 100
 
 ---

@@ -3,6 +3,7 @@ author: qu3nt1n
 date: 2017-07-02 13:26:54+00:00
 draft: false
 title: Sandpiles
+bookCollapseSection: true
 weight: 9
 ---
 

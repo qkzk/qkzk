@@ -3,6 +3,7 @@ author: qu3nt1n
 date: 2016-07-01 13:01:10+00:00
 draft: false
 title: RogueLike
+bookCollapseSection: true
 weight: 8
 ---
 

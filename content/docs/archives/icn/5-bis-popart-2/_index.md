@@ -3,6 +3,7 @@ author: qu3nt1n
 date: 2018-03-01 12:39:17+00:00
 draft: false
 title: 05. bis - popart
+bookCollapseSection: true
 weight: 5
 
 ---

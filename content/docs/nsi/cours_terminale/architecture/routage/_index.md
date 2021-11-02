@@ -1,5 +1,6 @@
 ---
 title: Routage
+bookCollapseSection: true
 weight: 1
 ---
 

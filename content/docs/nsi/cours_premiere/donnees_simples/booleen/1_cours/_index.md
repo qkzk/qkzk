@@ -1,5 +1,6 @@
 ---
 title: "Booléens : cours"
+bookCollapseSection: true
 author: "qkzk"
 weight: 1
 

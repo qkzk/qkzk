@@ -3,6 +3,7 @@ author: qu3nt1n
 date: 2016-07-02 13:44:45+00:00
 draft: false
 title: Raspberry Pi (version 2015)
+bookCollapseSection: true
 
 
 ---

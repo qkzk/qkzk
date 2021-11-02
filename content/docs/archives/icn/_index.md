@@ -1,5 +1,6 @@
 ---
 title: icn
+bookCollapseSection: true
 author: qu3nt1n
 date: 2016-07-01 12:29:30+00:00
 draft: false

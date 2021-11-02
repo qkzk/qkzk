@@ -1,5 +1,6 @@
 ---
 title: "TD - tri insertion"
+bookCollapseSection: true
 weight: 4
 
 ---

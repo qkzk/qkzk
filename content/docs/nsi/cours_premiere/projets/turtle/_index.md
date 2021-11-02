@@ -1,5 +1,6 @@
 ---
 title: "le module Turtle"
+bookCollapseSection: true
 weight: -2
 
 ---

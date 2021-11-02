@@ -1,5 +1,6 @@
 ---
 title: Système d'exploitation
+bookCollapseSection: true
 author: qkzk
 theme: metropolis
 weight: 4

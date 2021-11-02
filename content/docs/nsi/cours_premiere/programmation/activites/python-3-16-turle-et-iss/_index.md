@@ -2,6 +2,7 @@
 author: qu3nt1n
 draft: false
 title: Python 3 - 16 Turtle
+bookCollapseSection: true
 weight: 16
 
 ---

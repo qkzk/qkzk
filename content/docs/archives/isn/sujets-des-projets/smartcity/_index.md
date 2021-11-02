@@ -3,6 +3,7 @@ author: qu3nt1n
 date: 2019-07-01 13:01:10+00:00
 draft: false
 title: Smart City
+bookCollapseSection: true
 weight: 9
 ---
 

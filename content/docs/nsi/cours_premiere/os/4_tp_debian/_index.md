@@ -1,5 +1,6 @@
 ---
 title: "NSI première : Système d'exploitation"
+bookCollapseSection: true
 subtitle: TP Debian
 author: qkzk
 weight: 4

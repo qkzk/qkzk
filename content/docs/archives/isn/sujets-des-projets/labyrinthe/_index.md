@@ -3,6 +3,7 @@ author: qu3nt1n
 date: 2016-07-02 13:51:57+00:00
 draft: false
 title: Labyrinthe
+bookCollapseSection: true
 weight: 4.1
 ---
 

@@ -1,5 +1,6 @@
 ---
 title: "Programmation"
+bookCollapseSection: true
 weight: 3
 ---
 

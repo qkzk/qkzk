@@ -1,5 +1,6 @@
 ---
 title: "Introduction : selection"
+bookCollapseSection: true
 weight: 1
 
 ---

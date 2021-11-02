@@ -1,5 +1,6 @@
 ---
 title: "presse"
+bookCollapseSection: true
 weigth: 200
 
 

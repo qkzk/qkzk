@@ -1,8 +1,7 @@
 ---
-title:
-  "Résumé"
-author:
-  qkzk
+title: "Résumé"
+bookCollapseSection: true
+author: qkzk
 weight: 8
 ---
 

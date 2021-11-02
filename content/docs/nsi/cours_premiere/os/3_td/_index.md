@@ -1,5 +1,6 @@
 ---
 title: "Première NSI - Système d'exploitation Linux - TD"
+bookCollapseSection: true
 author: qkzk
 weight: 3
 

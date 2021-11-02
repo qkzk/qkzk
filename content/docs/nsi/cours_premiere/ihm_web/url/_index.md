@@ -1,5 +1,6 @@
 ---
 title: "cours: Les URL"
+bookCollapseSection: true
 author: David Roche
 theme: metropolis
 weight: 2

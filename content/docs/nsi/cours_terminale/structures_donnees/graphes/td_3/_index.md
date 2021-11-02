@@ -1,5 +1,6 @@
 ---
 title: "TD 3"
+bookCollapseSection: true
 weight: 12
 
 ---

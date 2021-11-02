@@ -3,6 +3,7 @@ author: qu3nt1n
 date: 2016-07-02 11:33:20+00:00
 draft: false
 title: 5. Dessiner une palette de couleurs
+bookCollapseSection: true
 weight: 7
 ---
 

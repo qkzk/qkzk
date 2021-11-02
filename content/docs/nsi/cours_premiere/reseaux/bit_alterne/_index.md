@@ -1,5 +1,6 @@
 ---
 title: Protocole du bit alterné
+bookCollapseSection: true
 author: David Roche
 weight: 4
 ---

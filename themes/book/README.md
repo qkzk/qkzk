@@ -1,36 +1,44 @@
 # Hugo Book Theme
 
-[![Build Status](https://travis-ci.org/alex-shpak/hugo-book.svg?branch=master)](https://travis-ci.org/alex-shpak/hugo-book)
-[![Hugo](https://img.shields.io/badge/hugo-0.48-blue.svg)](https://gohugo.io)
+[![Hugo](https://img.shields.io/badge/hugo-0.68-blue.svg)](https://gohugo.io)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+![Build with Hugo](https://github.com/alex-shpak/hugo-book/workflows/Build%20with%20Hugo/badge.svg)
 
 ### [Hugo](https://gohugo.io) documentation theme as simple as plain book
 
 ![Screenshot](https://github.com/alex-shpak/hugo-book/blob/master/images/screenshot.png)
 
 - [Features](#features)
+- [Requirements](#requirements)
 - [Installation](#installation)
 - [Menu](#menu)
+- [Blog](#blog)
 - [Configuration](#configuration)
 - [Shortcodes](#shortcodes)
+- [Versioning](#versioning)
 - [Contributing](#contributing)
 
 ## Features
 
 - Clean simple design
-- Mobile friendly
+- Light and Mobile-Friendly
+- Multi-language support
 - Customisable
-- Designed to not interfere with other layouts
 - Zero initial configuration
 - Handy shortcodes
+- Comments support
+- Simple blog and taxonomy
+- Primary features work without JavaScript
+- Dark Mode
 
 ## Requirements
 
-- Hugo 0.48 or higher
+- Hugo 0.68 or higher
 - Hugo extended version, read more [here](https://gohugo.io/news/0.48-relnotes/)
 
 ## Installation
 
+### Install as git submodule
 Navigate to your hugo project root and run:
 
 ```
@@ -43,9 +51,33 @@ Then run hugo (or set `theme = "book"`/`theme: book` in configuration file)
 hugo server --minify --theme book
 ```
 
+### Install as hugo module
+
+You can also add this theme as a Hugo module instead of a git submodule.
+
+Start with initializing hugo modules, if not done yet:
+```
+hugo mod init github.com/repo/path
+```
+
+Navigate to your hugo project root and add [module] section to your `config.toml`:
+
+```toml
+[module]
+[[module.imports]]
+path = 'github.com/alex-shpak/hugo-book'
+```
+
+Then, to load/update the theme module and run hugo:
+
+```sh
+hugo mod get -u
+hugo server --minify
+```
+
 ### Creating site from scratch
 
-Below is example how to create new site from scratch
+Below is an example on how to create a new site from scratch:
 
 ```sh
 hugo new site mydocs; cd mydocs
@@ -62,13 +94,13 @@ hugo server --minify --theme book
 
 ### File tree menu (default)
 
-By default theme will render pages from `content/docs` section as menu in a tree structure.  
-You can set `title` and `weight` in front matter of pages to adjust order and titles in menu.
+By default, the theme will render pages from the `content/docs` section as a menu in a tree structure.  
+You can set `title` and `weight` in the front matter of pages to adjust the order and titles in the menu.
 
-### Leaf bundle menu
+### Leaf bundle menu (Deprecated)
 
-You can also use leaf bundle and content of it's `index.md` as menu.  
-Given you have this file structure
+You can also use leaf bundle and the content of its `index.md` file as menu.  
+Given you have the following file structure:
 
 ```
 ├── content
@@ -80,20 +112,20 @@ Given you have this file structure
 │       └── post-two.md
 ```
 
-Create file `content/docs/menu/index.md` with content
+Create a file `content/menu/index.md` with the content:
 
 ```md
 +++
 headless = true
 +++
 
-- [Book Example](/docs/)
-  - [Page One](/docs/page-one)
-  - [Page Two](/docs/page-two)
-- [Blog](/posts)
+- [Book Example]({{< relref "/docs/" >}})
+  - [Page One]({{< relref "/docs/page-one" >}})
+  - [Page Two]({{< relref "/docs/page-two" >}})
+- [Blog]({{< relref "/posts" >}})
 ```
 
-And Enable it by settings `BookMenuBundle: /menu` in Site configuration
+And Enable it by setting `BookMenuBundle: /menu` in Site configuration.
 
 - [Example menu](https://github.com/alex-shpak/hugo-book/blob/master/exampleSite/content/menu/index.md)
 - [Example config file](https://github.com/alex-shpak/hugo-book/blob/master/exampleSite/config.yaml)
@@ -101,16 +133,25 @@ And Enable it by settings `BookMenuBundle: /menu` in Site configuration
 
 ## Blog
 
-Simple blog supported for section `posts`
+A simple blog is supported in the section `posts`.  
+A blog is not the primary usecase of this theme, so it has only minimal features.
 
 ## Configuration
 
 ### Site Configuration
 
-There are few configuration options you can add to your `config.toml` file.  
-You can also see `yaml` example [here](https://github.com/alex-shpak/hugo-book/blob/master/exampleSite/config.yaml).
+There are a few configuration options that you can add to your `config.toml` file.  
+You can also see the `yaml` example [here](https://github.com/alex-shpak/hugo-book/blob/master/exampleSite/config.yaml).
 
 ```toml
+# (Optional) Set Google Analytics if you use it to track your website.
+# Always put it on the top of the configuration file, otherwise it won't work
+googleAnalytics = "UA-XXXXXXXXX-X"
+
+# (Optional) If you provide a Disqus shortname, comments will be enabled on
+# all pages.
+disqusShortname = "my-site"
+
 # (Optional) Set this to true if you use capital letters in file names
 disablePathToLower = true
 
@@ -123,44 +164,77 @@ enableGitInfo = true
 disableKinds = ['taxonomy', 'taxonomyTerm']
 
 [params]
-# (Optional, default 6) Set how many table of contents levels to be showed on page.
-# Use false to hide ToC, note that 0 will default to 6 (https://gohugo.io/functions/default/)
-# You can also specify this parameter per page in front matter
-BookToC = 3
+  # (Optional, default light) Sets color theme: light, dark or auto.
+  # Theme 'auto' switches between dark and light modes based on browser/os preferences
+  BookTheme = 'light'
 
-# (Optional, default none) Set leaf bundle to render as side menu
-# When not specified file structure and weights will be used
-BookMenuBundle = '/menu'
+  # (Optional, default true) Controls table of contents visibility on right side of pages.
+  # Start and end levels can be controlled with markup.tableOfContents setting.
+  # You can also specify this parameter per page in front matter.
+  BookToC = true
 
-# (Optional, default docs) Specify section of content to render as menu
-# You can also set value to "*" to render all sections to menu
-BookSection = 'docs'
+  # (Optional, default none) Set the path to a logo for the book. If the logo is
+  # /static/logo.png then the path would be 'logo.png'
+  BookLogo = 'logo.png'
 
-# (Optional) This value is duplicate of $link-color for making active link highlight in menu bundle mode
-# BookMenuBundleActiveLinkColor = '\#004ed0'
+  # (Optional, default none) Set leaf bundle to render as side menu
+  # When not specified file structure and weights will be used
+  BookMenuBundle = '/menu'
 
-# (Optional, default false) Include JS scripts in pages. Disabled by default.
-# - Keep side menu on same scroll position during navigation
-BookEnableJS = true
+  # (Optional, default docs) Specify section of content to render as menu
+  # You can also set value to "*" to render all sections to menu
+  BookSection = 'docs'
 
-# Set source repository location.
-# Used for 'Last Modified' and 'Edit this page' links.
-BookRepo = 'https://github.com/alex-shpak/hugo-book'
+  # Set source repository location.
+  # Used for 'Last Modified' and 'Edit this page' links.
+  BookRepo = 'https://github.com/alex-shpak/hugo-book'
 
-# Enable 'Edit this page' links for 'doc' page type.
-# Disabled by default. Uncomment to enable. Requires 'BookRepo' param.
-# Path must point to 'content' directory of repo.
-BookEditPath = 'edit/master/exampleSite/content'
+  # Specifies commit portion of the link to the page's last modified commit hash for 'doc' page
+  # type.
+  # Required if 'BookRepo' param is set.
+  # Value used to construct a URL consisting of BookRepo/BookCommitPath/<commit-hash>
+  # Github uses 'commit', Bitbucket uses 'commits'
+  BookCommitPath = 'commit'
 
-# (Optional, default January 2, 2006) Configure the date format used on the pages
-# - In git information
-# - In blog posts
-BookDateFormat = 'Jan 2, 2006'
+  # Enable 'Edit this page' links for 'doc' page type.
+  # Disabled by default. Uncomment to enable. Requires 'BookRepo' param.
+  # Path must point to the site directory.
+  BookEditPath = 'edit/master/exampleSite'
+
+  # (Optional, default January 2, 2006) Configure the date format used on the pages
+  # - In git information
+  # - In blog posts
+  BookDateFormat = 'Jan 2, 2006'
+
+  # (Optional, default true) Enables search function with flexsearch,
+  # Index is built on fly, therefore it might slowdown your website.
+  # Configuration for indexing can be adjusted in i18n folder per language.
+  BookSearch = true
+
+  # (Optional, default true) Enables comments template on pages
+  # By default partials/docs/comments.html includes Disqus template
+  # See https://gohugo.io/content-management/comments/#configure-disqus
+  # Can be overwritten by same param in page frontmatter
+  BookComments = true
+
+  # /!\ This is an experimental feature, might be removed or changed at any time
+  # (Optional, experimental, default false) Enables portable links and link checks in markdown pages.
+  # Portable links meant to work with text editors and let you write markdown without {{< relref >}} shortcode
+  # Theme will print warning if page referenced in markdown does not exists.
+  BookPortableLinks = true
+
+  # /!\ This is an experimental feature, might be removed or changed at any time
+  # (Optional, experimental, default false) Enables service worker that caches visited pages and resources for offline use.
+  BookServiceWorker = true
 ```
+
+### Multi-Language Support
+
+Theme supports Hugo's [multilingual mode](https://gohugo.io/content-management/multilingual/), just follow configuration guide there. You can also tweak search indexing configuration per language in `i18n` folder.
 
 ### Page Configuration
 
-You can specify additional params per page in front matter
+You can specify additional params in the front matter of individual pages:
 
 ```toml
 # Set type to 'docs' if you want to render page outside of configured section or if you render section other than 'docs'
@@ -169,97 +243,101 @@ type = 'docs'
 # Set page weight to re-arrange items in file-tree menu (if BookMenuBundle not set)
 weight = 10
 
-# (Optional) Set to mark page as flat section in file-tree menu (if BookMenuBundle not set)
-bookFlatSection = true
+# (Optional) Set to 'true' to mark page as flat section in file-tree menu (if BookMenuBundle not set)
+bookFlatSection = false
+
+# (Optional) Set to hide nested sections or pages at that level. Works only with file-tree menu mode
+bookCollapseSection = true
 
 # (Optional) Set true to hide page or section from side menu (if BookMenuBundle not set)
-bookHidden = true
+bookHidden = false
 
-# (Optional) Set how many levels of ToC to show. use 'false' to hide ToC completely
-bookToC = 3
+# (Optional) Set 'false' to hide ToC from page
+bookToC = true
+
+# (Optional) If you have enabled BookComments for the site, you can disable it for specific pages.
+bookComments = true
+
+# (Optional) Set to 'false' to exclude page from search index.
+bookSearchExclude = true
 ```
 
 ### Partials
 
-There are few empty partials you can override in `layouts/partials/`
+There are layout partials available for you to easily override components of the theme in `layouts/partials/`.
 
-| Partial                                         | Placement                              |
-| ----------------------------------------------- | -------------------------------------- |
-| `layouts/partials/docs/inject/head.html`        | Before closing `<head>` tag            |
-| `layouts/partials/docs/inject/body.html`        | Before closing `<body>` tag            |
-| `layouts/partials/docs/inject/footer.html`      | After page content                     |
-| `layouts/partials/docs/inject/menu-before.html` | At the beginning of `<nav>` menu block |
-| `layouts/partials/docs/inject/menu-after.html`  | At the end of `<nav>` menu block       |
+In addition to this, there are several empty partials you can override to easily add/inject code.
+
+| Empty Partial                                      | Placement                                   |
+| -------------------------------------------------- | ------------------------------------------- |
+| `layouts/partials/docs/inject/head.html`           | Before closing `<head>` tag                 |
+| `layouts/partials/docs/inject/body.html`           | Before closing `<body>` tag                 |
+| `layouts/partials/docs/inject/footer.html`         | After page footer content                   |
+| `layouts/partials/docs/inject/menu-before.html`    | At the beginning of `<nav>` menu block      |
+| `layouts/partials/docs/inject/menu-after.html`     | At the end of `<nav>` menu block            |
+| `layouts/partials/docs/inject/content-before.html` | Before page content                         |
+| `layouts/partials/docs/inject/content-after.html`  | After page content                          |
+| `layouts/partials/docs/inject/toc-before.html`     | At the beginning of table of contents block |
+| `layouts/partials/docs/inject/toc-after.html`      | At the end of table of contents block       |
 
 ### Extra Customisation
 
-| File                  | Description                                                                           |
-| --------------------- | ------------------------------------------------------------------------------------- |
-| `static/favicon.png`  | Override default favicon                                                              |
-| `assets/_custom.scss` | Customise or override scss styles                                                     |
-| `assets/_fonts.scss`  | Replace default font with custom fonts (e.g. local files or remote like google fonts) |
+| File                     | Description                                                                           |
+| ------------------------ | ------------------------------------------------------------------------------------- |
+| `static/favicon.png`     | Override default favicon                                                              |
+| `assets/_custom.scss`    | Customise or override scss styles                                                     |
+| `assets/_variables.scss` | Override default SCSS variables                                                       |
+| `assets/_fonts.scss`     | Replace default font with custom fonts (e.g. local files or remote like google fonts) |
+| `assets/mermaid.json`    | Replace Mermaid initialization config                                                 |
+
+### Plugins
+
+There are a few features implemented as plugable `scss` styles. Usually these are features that don't make it to the core but can still be useful.
+
+| Plugin                            | Description                                                 |
+| --------------------------------- | ----------------------------------------------------------- |
+| `assets/plugins/_numbered.scss`   | Makes headings in markdown numbered, e.g. `1.1`, `1.2`      |
+| `assets/plugins/_scrollbars.scss` | Overrides scrollbar styles to look similar across platforms |
+
+To enable plugins, add `@import "plugins/{name}";` to `assets/_custom.scss` in your website root.
+
+### Hugo Internal Templates
+
+There are a few hugo templates inserted in `<head>`
+
+- [Google Analytics](https://gohugo.io/templates/internal/#google-analytics)
+- [Open Graph](https://gohugo.io/templates/internal/#open-graph)
+
+To disable Open Graph inclusion you can create your own empty file `\layouts\_internal\opengraph.html`.
+In fact almost empty not quite empty because an empty file looks like absent for HUGO. For example:
+```
+<!-- -->
+```
 
 ## Shortcodes
 
-### Expand
+- [Buttons](https://hugo-book-demo.netlify.app/docs/shortcodes/buttons/)
+- [Columns](https://hugo-book-demo.netlify.app/docs/shortcodes/columns/)
+- [Details](https://hugo-book-demo.netlify.app/docs/shortcodes/details/)
+- [Hints](https://hugo-book-demo.netlify.app/docs/shortcodes/hints/)
+- [KaTeX](https://hugo-book-demo.netlify.app/docs/shortcodes/katex/)
+- [Mermaid](https://hugo-book-demo.netlify.app/docs/shortcodes/mermaid/)
+- [Tabs](https://hugo-book-demo.netlify.app/docs/shortcodes/tabs/)
 
-Provides clickable panel that show extra hidden content.
+By default, Goldmark trims unsafe outputs which might prevent some shortcodes from rendering. It is recommended to set `markup.goldmark.renderer.unsafe=true` if you encounter problems.
 
-```
-{{< expand >}}
-## Markdown content
-{{< /expand >}}
-```
-
-### Tabs
-
-Useful if you want to show alternative information per platform or setting.
-
-```
-{{< tabs "uniqueid" >}}
-{{< tab "MacOS" >}} # MacOS Content {{< /tab >}}
-{{< tab "Linux" >}} # Linux Content {{< /tab >}}
-{{< tab "Windows" >}} # Windows Content {{< /tab >}}
-{{< /tabs >}}
+```toml
+[markup.goldmark.renderer]
+  unsafe = true
 ```
 
-### Multi column text
+If you are using `config.yaml` or `config.json`, consult the [configuration markup](https://gohugo.io/getting-started/configuration-markup/)
 
-Organize text in 2 or more columns to use space efficiently.
+## Versioning
 
-```html
-{{< columns >}} <!-- begin columns block -->
+This theme follows a simple incremental versioning. e.g. `v1`, `v2` and so on. There might be breaking changes between versions.
 
-# Left Content Lorem markdownum insigne...
-
-<---> <!-- magic sparator, between columns -->
-
-# Mid Content Lorem markdownum insigne...
-
-<---> <!-- magic sparator, between columns -->
-
-# Right Content Lorem markdownum insigne...
-{{< /columns >}}
-```
-
-### Mermaid Chat
-
-Render various charts with [mermaidjs](https://mermaidjs.github.io/)
-
-```
-{{< mermaid >}}
-sequenceDiagram
-    Alice->>Bob: Hello Bob, how are you?
-    alt is sick
-        Bob->>Alice: Not so good :(
-    else is well
-        Bob->>Alice: Feeling fresh like a daisy
-    end
-    opt Extra response
-        Bob->>Alice: Thanks for asking
-    end
-{{< /mermaid >}}
-```
+If you want lower maintenance, use one of the released versions. If you want to live on the bleeding edge of changes, you can use the `master` branch and update your website when needed.
 
 ## Contributing
 
@@ -268,8 +346,9 @@ sequenceDiagram
 Contributions are welcome and I will review and consider pull requests.  
 Primary goals are:
 
-- Keep it simple
-- Keep minimal (or zero) default configuration
-- Avoid interference with user-defined layouts
+- Keep it simple.
+- Keep minimal (or zero) default configuration.
+- Avoid interference with user-defined layouts.
+- Avoid using JS if it can be solved by CSS.
 
-Feel free to open issue if you missing some configuration or customisation option.
+Feel free to open issues if you find missing configuration or customisation options.

@@ -1,5 +1,6 @@
 ---
 title: Résumés
+bookCollapseSection: true
 theme:
 - Metropolis
 author: qkzk

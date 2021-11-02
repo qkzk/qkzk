@@ -1,5 +1,6 @@
 ---
 title: '6. TP : TSP'
+bookCollapseSection: true
 author: qkzk
 date : 2020/08/01
 weight: 6

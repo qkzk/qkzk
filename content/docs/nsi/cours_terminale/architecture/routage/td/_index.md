@@ -1,5 +1,6 @@
 ---
 title: "Routage TD"
+bookCollapseSection: true
 weight: 100
 
 ---
