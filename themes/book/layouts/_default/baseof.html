@@ -6,65 +6,64 @@
 </head>
 <body dir="{{ .Site.Language.LanguageDirection | default "ltr" }}">
 
-  <div class="white-back">
+    <div class="white-back">
     
-     <div class="container flex content-desktop ">
-        <div class="banner-img-title" >
-          <div>
-            <a id="bannerTitle" href="/">
-              <h1 class="title-link">
-                {{ .Site.Title}}
-              </h1>
-              <div id="bannerSubtitle" >{{ $.Site.Params.description}}</div>
-            </a>
-          </div>
-          <a id="bannerImg"  href="/"></a>
-        </div>
-    </div>
-
-    <input type="checkbox" class="hidden toggle" id="menu-control" />
-    <input type="checkbox" class="hidden toggle" id="toc-control" />
-
-
-    <main class="container flex">
-      <aside class="book-menu">
-        <div class="book-menu-content">
-          {{ template "menu" . }} <!-- Left menu Content -->
-        </div>
-      </aside>
-
-      <div class="book-page">
-        <header class="book-header">
-          {{ template "header" . }} <!-- Mobile layout header -->
-        </header>
-
-        {{ partial "docs/inject/content-before" . }}
-        {{ template "main" . }} <!-- Page Content -->
-        
-        <div class="backtotop">
-          <a href="#" class="center" title="top" accesskey="t" id="link_top">↑</a>
+        <div class="container flex content-desktop ">
+            <div id="bannerImgTitle" >
+                <div id="bannerTitleSubtitle">
+                    <a id="bannerTitle" href="/">
+                        <h1 id="siteTitle">
+                            {{ .Site.Title}}
+                        </h1>
+                    </a>
+                </div>
+                <a id="bannerImg"  href="/"> </a>
+            </div>
         </div>
 
-        {{ partial "docs/inject/content-after" . }}
+        <input type="checkbox" class="hidden toggle" id="menu-control" />
+        <input type="checkbox" class="hidden toggle" id="toc-control" />
 
-        <footer class="book-footer">
-          {{ template "footer" . }} <!-- Footer under page content -->
-          {{ partial "docs/inject/footer" . }}
-        </footer>
 
-        {{ template "comments" . }} <!-- Comments block -->
+        <main class="container flex">
+            <aside class="book-menu">
+                <div class="book-menu-content">
+                      {{ template "menu" . }} <!-- Left menu Content -->
+                </div>
+            </aside>
 
-        <label for="menu-control" class="hidden book-menu-overlay"></label>
-      </div>
+            <div class="book-page">
+                <header class="book-header">
+                    {{ template "header" . }} <!-- Mobile layout header -->
+                </header>
 
-      {{ if default true (default .Site.Params.BookToC .Params.BookToC) }}
-      <aside class="book-toc">
-        <div class="book-toc-content">
-          {{ template "toc" . }} <!-- Table of Contents -->
-        </div>
-      </aside>
-      {{ end }}
-    </main>
+                {{ partial "docs/inject/content-before" . }}
+                {{ template "main" . }} <!-- Page Content -->
+
+                <div class="backtotop">
+                     <a href="#" class="center" title="top" accesskey="t" id="link_top">↑</a>
+                </div>
+
+                {{ partial "docs/inject/content-after" . }}
+
+                <footer class="book-footer">
+                    {{ template "footer" . }} <!-- Footer under page content -->
+                    {{ partial "docs/inject/footer" . }}
+                </footer>
+
+                {{ template "comments" . }} <!-- Comments block -->
+
+                <label for="menu-control" class="hidden book-menu-overlay"></label>
+            </div>
+
+            {{ if default true (default .Site.Params.BookToC .Params.BookToC) }}
+            <aside class="book-toc">
+                <div class="book-toc-content">
+                    {{ template "toc" . }} <!-- Table of Contents -->
+                </div>
+            </aside>
+          {{ end }}
+        </main>
 
     {{ partial "docs/inject/body" . }}
   </div>

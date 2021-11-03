@@ -1,49 +1,53 @@
 /* To be overridden by theme user */
 
-
 /*
 BANNER AND HEADER
 */
-.banner-img-title {
-  width:100%;
+#bannerImgTitle {
+  width: 100%;
   text-align: left;
   max-width: $container-max-width;
-  color: #000;
 }
 
-.title-link{
-    text-align: center;
-    font-weight: bold;
-    margin-bottom: 0px;
-    margin: 0 auto;
-    padding: 0;
-    color: black;
+#bannerTitle {
+  padding: 0;
+  float: left;
+  margin: 0 auto;
+  width: 100%;
+  color: black;
 }
 
-#bannerTitle{
-    padding: 0;
-    float: left;
-    margin: 0 auto;
-    width: 100%;
-    /* color: #fff; */
+#bannerTitleSubtitle {
 }
 
-.slogan{
-  clear:both;
+#siteTitle {
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 0px;
+  margin-left: 0 auto;
+  margin-right: 0 auto;
+  padding: 0;
+}
+
+#bannerSubtitle {
+  text-align: center;
+}
+
+#bannerImg {
+  display: block;
+  margin-top: 60px;
+}
+
+.slogan {
+  clear: both;
   float: left;
   font-size: 16px;
   color: #666;
 }
 
-#bannerSubtitle {
-    color: black;
-    text-align: center;
-}
-
-.menu-banner{
+.menu-banner {
   float: right;
 }
-
 
 /*
 back to top
@@ -52,13 +56,14 @@ back to top
 .backtotop {
   padding-top: 4em;
   padding-bottom: 0;
-  // margin: 0;
-  text-align: center!important;
+  text-align: center !important;
   font-size: 2em;
 }
 
 .book-menu .book-menu-content {
-    background: #FFF;
+  background: #fff;
+  margin-top: 50px;
+  padding-top: 0px;
 }
 
 /*
@@ -68,27 +73,28 @@ FOOTER
 .footer-qkzk {
   margin-top: 5em;
 }
-.footer-title{
+.footer-title {
   border-top: 4px solid #1a1a1a;
   padding-top: 1.5em;
 }
 
 .white-back {
-  background-color: #FFF;
+  background-color: #fff;
   min-height: 96vh;
 }
 .container {
-  background-color: #FFF;
+  background-color: #fff;
 }
 
 // @media screen and (min-width: 768px){
-@media screen and (min-width: 768){
+@media screen and (min-width: 768) {
   .white-back {
     margin: 10px;
     padding: 10px;
   }
 
-  .book-toc, .book-menu {
+  .book-toc,
+  .book-menu {
     border-top: 4px solid #1a1a1a;
     margin-bottom: 20px;
     padding-bottom: 20px;
@@ -96,25 +102,24 @@ FOOTER
     padding-left: 0;
   }
   .book-menu .book-menu-content {
-      top: 30px;
+    top: 30px;
   }
   .book-toc .book-toc-content {
-      top: 30px;
+    top: 30px;
   }
   .content-desktop {
     display: none;
   }
   .banner {
-      margin: 0px auto;
-      display: none;
-    }
-
+    margin: 0px auto;
+    display: none;
+  }
 
   #bannerTitle {
     display: none;
+    margin-left: 0px;
     padding-left: 0px;
     padding-top: 0px;
-    margin-left: 0px;
     height: 0px;
     color: black;
   }
@@ -125,22 +130,21 @@ FOOTER
     display: none;
   }
   #bannerSubtitle {
-    margin-top: 1em;
-    color: black;
+    margin-top: 20px;
   }
-  .title-link {
+  #siteTitle {
+    margin-top: 50px;
     height: 0px;
-    color: black;
   }
-    
-  .white-back{
+
+  .white-back {
     padding: 0px;
     margin: 0px;
     margin-top: 1em;
   }
-  .banner-img-title { 
-      height: 0px;
-      text-align: center;
+  #bannerImgTitle {
+    height: 0px;
+    text-align: center;
   }
 }
 
@@ -153,14 +157,14 @@ FOOTER
   }
 
   .book-menu .book-menu-content {
-      top: 30px;
+    top: 30px;
   }
 
   .book-toc .book-toc-content {
-      top: 30px;
+    top: 30px;
   }
 
-  .white-back{
+  .white-back {
     padding: 0;
     margin: 0;
     margin-top: 1em;
@@ -170,12 +174,11 @@ FOOTER
     display: none;
   }
 
-  body{
+  body {
     background-image: none;
   }
 
-
-  #bannerTitle{
+  #bannerTitle {
     width: 100%;
     margin-left: auto;
     color: black;
@@ -190,21 +193,20 @@ FOOTER
 
   #bannerSubtitle {
     margin-top: 1em;
-    color: black;
   }
 
-  .title-link {
+  #siteTitle {
+    margin-top: 50px;
     height: 0px;
-    color: black;
   }
 
-  .banner-img-title { 
-      height: 0px;
-      text-align: left;
+  #bannerImgTitle {
+    height: 0px;
+    text-align: left;
   }
-
 }
 
+// wide screens
 // @media (min-width: 1200px) {
 @media (min-width: 1200px) {
   .white-back {
@@ -216,23 +218,22 @@ FOOTER
     background-repeat: repeat;
     background-position: top left;
     background-attachment: scroll;
-    min-height: 100vh
+    min-height: 100vh;
   }
   .book-menu .book-menu-content {
-      top: 280px;
+    top: 280px;
   }
   .book-toc .book-toc-content {
-      top: 270px;
+    top: 270px;
   }
   .content-desktop {
-      display: flex;
+    display: flex;
   }
-  #bannerTitle{
+  #bannerTitle {
     display: block;
     padding-left: 20px;
     padding-top: 10px;
     margin-left: 20px;
-    color: white;
   }
   #bannerImg {
     height: 200px;
@@ -242,13 +243,12 @@ FOOTER
   }
   #bannerSubtitle {
     margin-top: 1em;
-    color: white;
   }
-  .title-link {
+  #siteTitle {
+    margin-top: 0px;
     height: 30px;
-    color: white;
   }
-  .banner-img-title { 
-      height: 100%;
+  #bannerImgTitle {
+    height: 100%;
   }
 }

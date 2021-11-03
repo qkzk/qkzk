@@ -19,15 +19,14 @@ It works... untill it breaks :)
 window.onload = updateStyle
 
 function updateStyle() {
-  setRandomBanner();
+    setRandomBanner();
 }
 
 
 function setRandomBanner() {
-  // banner img : change the banner
-  let imgNumber = 5;
-  let nbr = Math.floor(imgNumber * Math.random()) + 1;
-  let imgName = '/banner/back' + nbr + '.jpg'
-  document.getElementById("bannerImg").style.backgroundImage = 'url(' + imgName + ')';
-  // console.log(imgName);
+    // banner img : change the banner
+    let imgNumber = 5;
+    let nbr = Math.floor(imgNumber * Math.random()) + 1;
+    let imgName = '/banner/back' + nbr + '.jpg'
+    document.getElementById("bannerImg").style.backgroundImage = 'url(' + imgName + ')';
 }
