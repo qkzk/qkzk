@@ -17,9 +17,6 @@ BANNER AND HEADER
   color: black;
 }
 
-#bannerTitleSubtitle {
-}
-
 #siteTitle {
   text-align: center;
   font-weight: bold;
@@ -27,15 +24,6 @@ BANNER AND HEADER
   margin-left: 0 auto;
   margin-right: 0 auto;
   padding: 0;
-}
-
-#bannerSubtitle {
-  text-align: center;
-}
-
-#bannerImg {
-  display: block;
-  margin-top: 60px;
 }
 
 .slogan {
@@ -64,6 +52,7 @@ back to top
   background: #fff;
   margin-top: 50px;
   padding-top: 0px;
+  margin-bottom: 0px;
 }
 
 /*
@@ -73,6 +62,7 @@ FOOTER
 .footer-qkzk {
   margin-top: 5em;
 }
+
 .footer-title {
   border-top: 4px solid #1a1a1a;
   padding-top: 1.5em;
@@ -82,15 +72,17 @@ FOOTER
   background-color: #fff;
   min-height: 96vh;
 }
+
 .container {
   background-color: #fff;
 }
 
-// @media screen and (min-width: 768px){
+// small desktop / tablets
 @media screen and (min-width: 768) {
   .white-back {
-    margin: 10px;
-    padding: 10px;
+    padding: 0px;
+    margin: 0px;
+    margin-top: 1em;
   }
 
   .book-toc,
@@ -101,15 +93,20 @@ FOOTER
     padding-top: 20px;
     padding-left: 0;
   }
+
   .book-menu .book-menu-content {
     top: 30px;
+    margin-bottom: 0px;
   }
+
   .book-toc .book-toc-content {
     top: 30px;
   }
+
   .content-desktop {
     display: none;
   }
+
   .banner {
     margin: 0px auto;
     display: none;
@@ -123,25 +120,12 @@ FOOTER
     height: 0px;
     color: black;
   }
-  #bannerImg {
-    height: 0px;
-    background-size: 0px;
-    margin-bottom: 0vh;
-    display: none;
-  }
-  #bannerSubtitle {
-    margin-top: 20px;
-  }
+
   #siteTitle {
     margin-top: 50px;
     height: 0px;
   }
 
-  .white-back {
-    padding: 0px;
-    margin: 0px;
-    margin-top: 1em;
-  }
   #bannerImgTitle {
     height: 0px;
     text-align: center;
@@ -149,25 +133,19 @@ FOOTER
 }
 
 // mobile
-// @media screen and (max-width: 768px) {
-@media screen and (max-width: 768) {
+@media screen and (max-width: 768px) {
   .white-back {
-    margin: 10px;
-    padding: 10px;
+    padding: 0px;
+    margin: 0px;
   }
 
   .book-menu .book-menu-content {
     top: 30px;
+    margin-bottom: 0px;
   }
 
   .book-toc .book-toc-content {
     top: 30px;
-  }
-
-  .white-back {
-    padding: 0;
-    margin: 0;
-    margin-top: 1em;
   }
 
   .content-desktop {
@@ -184,17 +162,6 @@ FOOTER
     color: black;
   }
 
-  #bannerImg {
-    height: 0px;
-    background-size: 0px;
-    margin-bottom: 0vh;
-    display: none;
-  }
-
-  #bannerSubtitle {
-    margin-top: 1em;
-  }
-
   #siteTitle {
     margin-top: 50px;
     height: 0px;
@@ -207,12 +174,12 @@ FOOTER
 }
 
 // wide screens
-// @media (min-width: 1200px) {
 @media (min-width: 1200px) {
   .white-back {
     margin: 20px;
     padding: 30px;
   }
+
   body {
     background-image: url("/back_qkzk.jpg");
     background-repeat: repeat;
@@ -220,34 +187,39 @@ FOOTER
     background-attachment: scroll;
     min-height: 100vh;
   }
+
   .book-menu .book-menu-content {
-    top: 280px;
+    top: 30px;
+    margin-bottom: 50px;
   }
+
   .book-toc .book-toc-content {
-    top: 270px;
+    top: 30px;
   }
+
   .content-desktop {
     display: flex;
   }
+
   #bannerTitle {
     display: block;
     padding-left: 20px;
     padding-top: 10px;
     margin-left: 20px;
   }
+
   #bannerImg {
-    height: 200px;
+    height: 0px;
     background-size: cover;
     margin-bottom: 0vh;
-    display: block;
+    display: none;
   }
-  #bannerSubtitle {
-    margin-top: 1em;
-  }
+
   #siteTitle {
     margin-top: 0px;
     height: 30px;
   }
+
   #bannerImgTitle {
     height: 100%;
   }
