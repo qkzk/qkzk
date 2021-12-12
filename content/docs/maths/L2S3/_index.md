@@ -18,3 +18,5 @@ bookCollapseSection: true
     - [pdf rédigé durant la vidéo](./L2S3_Correction_2021.pdf) 
     - [vidéo](https://www.youtube.com/watch?v=iANVWiG9ubA)
 * [Exercices supplémentaires](./exercices_supplementaires.pdf) et corrections en pdf ([manuscrit](./L2S3_Correction_exos_supplémentaires.pdf), [rédigé](./exercices_supplementaires_correction.pdf))
+
+* Correction des dernières interrogations écrites. [Ch4](./2022-ie2_v3_corr.pdf), [Ch3](./2022-ie2_corr.pdf)
