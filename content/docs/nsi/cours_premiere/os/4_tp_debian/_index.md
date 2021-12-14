@@ -1,7 +1,6 @@
 ---
-title: "NSI première : Système d'exploitation"
+title: "NSI première : TP debian"
 bookCollapseSection: true
-subtitle: TP Debian
 author: qkzk
 weight: 4
 
@@ -18,11 +17,12 @@ Linux : première partie {#linux--première-partie}
     en décrivant les actions des commandes listées. Chaque commande qui
     y figure est présentée dans le TP.
 
+    Ouvrez un fichier dans un éditeur de texte et remplissez le au fur et à mesure.
+
 *Exemple* :
 
 -   `ls` : liste les fichiers du dossier courant
--   `ls -lah` : affiche aussi les fichiers cachés, avec les détails les
-    détails et les taille dans un format lisible
+-   `cd` : change le dossier courant
 
 Faîtes le au fur et à mesure sans quoi vous perdrez le fil.
 
@@ -37,8 +37,8 @@ Introduction à Linux avec la clé USB Débian "Corsair"
 
 -   C'est un système d'exploitation libre dont il existe de nombreuses
     variantes fonctionnant elles-mêmes sur le noyau linux (ubuntu,
-    centOS, archlinux, manjaro (que j'utilise)).
--   Linux est un dérivé d'UNIX, système crée dans les années 60, codé
+    centOS, archlinux, manjaro ).
+-   Linux est un dérivé d'UNIX, système crée dans les années 70, codé
     en langage C (crée à cette occasion). Ces deux "logiciels" : C et
     UNIX constituent à la fois le langage le plus important de
     l'histoire informatique (la majorité des langages actuels dérivent
@@ -72,11 +72,11 @@ Introduction à Linux avec la clé USB Débian "Corsair"
 
 **Usage courant de Linux**
 
-Ce TP vise à vous présenter l'envers du décors. C'est une formation
+Ce TP vise à vous présenter l'envers du décor. C'est une formation
 d'informatique, pas une initiation à l'usage courant de Linux. Dans la
 vie de tous les jours, avoir un PC qui fonctionne sous Linux ne change
 presque rien... Tous les logiciels "modernes" ou presque sont
-présents et la seule difficulté vient d'essayer de jouer aux
+présents et la seule "difficulté" vient d'essayer de jouer aux
 jeux-vidéos.
 
 Maintenant c'est parti.
@@ -89,8 +89,11 @@ Pour accéder au système vous avez :
 1.  Éteint le PC.
 2.  Branché la clé USB, idéalement sur un port USB 3.0
 3.  Relancé le PC
-4.  **OUVERT LE BIOS** (F2, DEL, F10 etc. C'est affiché sur l'écran de
+4.  **CHEZ VOUS OUVERT LE BIOS** (F2, DEL, F10 etc. C'est affiché sur l'écran de
     démarrage)
+    
+    **EN SALLE 213** Il suffit _normalement_ d'appuyer sur F12 et de choisir "USB KEY (non UEFI)"
+    Le "non UEFI" est important.
 5.  Changé la priorité de démarrage pour booter sur une clé USB. Le
     second choix doit être le disque dur local.
 6.  Enregistré ce réglage et redémarré.
@@ -100,10 +103,11 @@ Pour accéder au système vous avez :
 Après ce TP. {#après-ce-tp}
 ------------
 
+Chez vous seulement, en 213 il n'y a rien à faire.
+
 1.  Éteindre le PC,
 2.  Retourner dans le BIOS
-3.  **Changer l'ordre de démarrage : booter sur le disque dur en
-    premier**
+3.  **Changer l'ordre de démarrage : booter sur le disque dur en premier**
 4.  Enregistrer, redémarrer. Il doit booter sur l'ancien système.
 
 Accéder à une machine
@@ -135,8 +139,6 @@ navigateur Chrome et d'y acccéder par ce même navigateur sur le client.
 
 Bref, les solutions ne manquent pas.
 
-Nous allons étudier SSH dans ce tutoriel / TP
-
 ### Interface graphique (GUI) / Interface en ligne de commande (CLI) {#interface-graphique-gui--interface-en-ligne-de-commande-cli}
 
 -   L'interface **graphique**, notée GUI (Graphical User Interface) est
@@ -144,8 +146,13 @@ Nous allons étudier SSH dans ce tutoriel / TP
     clic...
 -   L'interface **en ligne de commande**, notée CLI (Command Line
     Interface) parfois appelée shell, terminal ou tty est l'interace
-    courante d'un serveur distant : on tape des commandes,
-    l'ordinateur évalue la réponse, l'affiche et on recommence
+    courante d'un serveur distant : 
+
+    * on tape des commandes (READ),
+    * l'ordinateur évalue la réponse (EVAL), 
+    * l'affiche (PRINT) 
+    * recommence (LOOP)
+
     (principe du REPL déjà évoqué).
 
 Contrairement à ce qu'on pourrait croire, la plus puissante et pratique
@@ -157,10 +164,9 @@ Accès local et graphique
 
 **Dans un premier temps nous allons travailler en mode "graphique".**
 
-Vous devriez vite réaliser que ça ne change pas grand chose. On est un
-peu dérouté au début et on s'habitue rapidement.
+Vous devriez vite réaliser que ça ne change pas grand chose. 
 
-------------------------------------------------------------------------
+---
 
 Nous allons faire un passage en revue des éléments importants d'un
 système UNIX.
@@ -170,7 +176,7 @@ Résumons :
 -   La machine : Raspberry pi ou votre ordinateur habituel
 -   Son système d'exploitation : Raspbian ou Debian.
 
-Debian est un OS, basé sur LINUX. Linux n'est que le noyau (le coeur)
+Debian est un OS, basé sur LINUX. Linux n'est que le noyau (kernel)
 du système. Il vérifie les principes d'UNIX.
 
 Debian ajoute de nombreux logiciels et outils et forme un système
@@ -223,9 +229,7 @@ On y trouve différents dossiers :
     bin  boot  dev  etc  home  lib   man  media  mnt
     opt  proc  root  run  sbin  srv  sys   usr  var
 
-Ce sont les mêmes dossiers dans tous les systèmes UNIX (un serveur de la
-nasa, votre iPhone, cette machine, une machine de 1976, un refrigérateur
-connecté, un ChromeCast etc.).
+Ce sont les mêmes dossiers dans tous les systèmes UNIX 
 
 ------------------------------------------------------------------------
 
@@ -371,7 +375,7 @@ permissions.
 Qui est le propriétaire ? Quel est le groupe d'utilisateurs à qui ce
 fichier appartient ?
 
-On distingue ensuite trois accès possibles : **Lire, Écrire, Exéctuer**
+On distingue ensuite trois accès possibles : **Lire, Écrire, Exécuter**
 
 -   Qui peut lire ce fichier ?
 -   Qui peut le modifier ?
@@ -409,8 +413,7 @@ Vérifier sur le fichier lui même.
 Terminal
 --------
 
-Nous allons maintenant découvrir le terminal. On rencontre souvent le
-mot console pour désigner un terminal.
+Nous allons maintenant découvrir le terminal. 
 
 Le terminal est l'outil le plus puissant d'UNIX et l'objectif de ce
 premier TP est de vous familiariser à son emploi.
@@ -441,7 +444,7 @@ Commençons par les deux plus importantes.
 ### Obtenir de l'aide avec \--help et man
 
 Le shell, n'est pas crée pour un enfant de 4 ans comme l'interface de
-windows. Il suppose déjà une certains familiarité avec l'informatique.
+windows. Il suppose déjà une certaine familiarité avec l'informatique.
 
 En particulier, tout est décrit en détail, il ne faut pas avoir peur de
 lire ni de se tromper (en étant prudent). Il faut TOUJOURS lire les
@@ -572,9 +575,9 @@ Créer les dossiers
 
     /home/user/essai
     /home/user/bonjour
-    /home/user/bonjour/albert
+    /home/user/bonjour/raymond
 
-Dans le dossier `albert` créer le fichier `recette.txt`. Créer ensuite
+Dans le dossier `raymond` créer le fichier `recette.txt`. Créer ensuite
 les fichiers `telephone.txt` et `adresse.txt` avec la commande
 `touch telephone.txt` etc.
 
@@ -605,7 +608,7 @@ Le symbole `^` désigne la touche CTRL ou CMD sous mac. Donc CTRL + X
 permet de quitter `nano`.
 
 Vous allez donc éditer votre recette avec
-`$ nano /home/user/bonjour/albert/recette.txt`
+`$ nano /home/user/bonjour/raymond/recette.txt`
 
 **Utiliser l'autocomplétion (tab) pour éviter de taper les noms
 complets.**
@@ -619,10 +622,9 @@ Dans nano il n'y a que 2 raccourcis à connaitre :
     en anglais), ctrl + X, non : n'enregistre pas.
 
 Vous apprendrez les autres si nécessaire (Je sais aussi rechercher du
-texte avec ctrl + w, le reste m'est inutile, je ne développe pas dans
-un terminal)
+texte avec ctrl + w, le reste m'est inutile.
 
-Ajouter votre recette préférée et enregistrez la.
+Ajoutez votre recette préférée et enregistrez la.
 
 ------------------------------------------------------------------------
 
@@ -665,22 +667,22 @@ Pour effacer un fichier, on utilse `rm` (remove)
 -   Ainsi que deux heures durant lesquelles vous viendrez refaire des
     clés usb :)
 
-Si vous êtes dans le dossier /albert,
+Si vous êtes dans le dossier /raymond,
 
     $ rm recette.txt
 
 va effacer votre fichier. Sinon, il faut spécifier l'adresse complète :
 
-    $ rm /home/pi/bonjour/albert/recette.txt
+    $ rm /home/pi/bonjour/raymond/recette.txt
 
 Pour effacer tous les éléments d'un dossier courant, on peut utiliser
 un "joker" : `*` (=n'importe quoi)
 
-Par exemple, depuis /albert, `$ rm *.txt` efface tous les fichiers qui
+Par exemple, depuis /raymond, `$ rm *.txt` efface tous les fichiers qui
 se terminent par .txt
 
 Pour effacer un dossier on peut utiliser `rm -rf nom_du_dossier`. Par
-exemple ..../albert et tout ce qu'il contient :
+exemple ..../raymond et tout ce qu'il contient :
 
 -   L'option `r` de `rm` : récursive, pour parcourir récursivement
     jusqu'à épuisement
@@ -689,7 +691,7 @@ exemple ..../albert et tout ce qu'il contient :
 Donc `rm -rf /home/user/bonjour` efface tous les dossiers et leurs
 contenus à partir de `bonjour`, inclu.
 
-    $ rm -rf /home/pi/bonjour/albert
+    $ rm -rf /home/pi/bonjour/raymond
 
 On peut aussi utiliser **rmdir** pour effacer des dossiers mais personne
 ne s'en sert.
@@ -783,8 +785,7 @@ et font apparaître le mot `root` quelque part.
     Enregistrer et quitter (Ctrl + x, oui)
 3.  Exécuter `python boucle.py` et votre programme tourne indéfiniment.
     Pour l'arrêter c'est facile : ctrl + c
-4.  Imaginons maintenant **que vous n'ayez pas la main sur le programme
-    !** Il tourne en arrière plan et ne pouvez faire ctrl + c...
+4.  Imaginons maintenant **que vous n'ayez pas la main sur le programme !** Il tourne en arrière plan et ne pouvez faire ctrl + c...
 
 Relancer la boucle infinie et ouvrir un deuxième terminal.
 
@@ -848,8 +849,7 @@ Relancer la boucle infinie et ouvrir un deuxième terminal.
 Installer des programmes, des paquets, des librairies python
 ------------------------------------------------------------
 
-Les distributions linux comportent généralement un **gestionnaire de
-paquets.**
+Les distributions linux comportent généralement un **gestionnaire de paquets.**
 
 C'est une suite de programme qui permet d'installer, desinstaller,
 configurer des programmes automatiquement.
@@ -1114,7 +1114,7 @@ Et inversement, quels seront les droits du fichier après cette commande
 $ chmod 745 bonjour.txt
 ```
 
-### Accès distant en mode texte avec ssh
+# Accès distant en mode texte avec ssh
 
 **Remarque avant de se lancer**
 
