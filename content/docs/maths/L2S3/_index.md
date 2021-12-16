@@ -3,7 +3,7 @@ title: "L2S3"
 author: "qkzk"
 date: "2021/12/05"
 theme: "metropolis"
-weigth: 1
+weigth: 3
 bookCollapseSection: true
 
 ---
