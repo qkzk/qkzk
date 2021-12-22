@@ -1,9 +1,8 @@
 ---
-title:
-- Parcours séquentiel
-author:
-- qkzk
+title: "Parcours séquentiel"
+author: "qkzk"
 weight: 1
+bookCollapseSection: true
 
 ---
 

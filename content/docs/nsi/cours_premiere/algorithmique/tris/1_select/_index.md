@@ -1,5 +1,5 @@
 ---
-title: "Introduction : selection"
+title: "Intro - selection"
 bookCollapseSection: true
 weight: 1
 

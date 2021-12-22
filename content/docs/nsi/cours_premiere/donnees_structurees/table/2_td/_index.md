@@ -7,7 +7,7 @@ weight: 2
 
 ---
 
-### pdf : [pour impression](/uploads/docsnsi/table_csv/2_td.pdf)
+### pdf : [pour impression](./2_td.pdf)
 
 # 1. Reconnaître un fichier csv
 
@@ -77,20 +77,20 @@ repertoire = [
 
 1. Donner la valeur de la liste construite dans chacune des sélections suivantes :
 
-  a. $\,$
+    a. Première sélection :
 
-      ```python
-      liste = []
-      for enregistrement in repertoire:
-          if enregistrement["nom"] == "Ducobu":
-              liste.append(enregistrement)
-      ```
+    ```python
+    liste = []
+    for enregistrement in repertoire:
+      if enregistrement["nom"] == "Ducobu":
+          liste.append(enregistrement)
+    ```
 
-  b. $\;$
+    b. Seconde sélection :
 
-      ```python
-      liste = [enre for enre in repertoire if "12" in enre["tel"]]
-      ```
+    ```python
+    liste = [enre for enre in repertoire if "12" in enre["tel"]]
+    ```
 
 2. Construire l'enregistrement des personnes dont le nom comporte un "r".
 

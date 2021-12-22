@@ -1,5 +1,5 @@
 ---
-title: "Insertion et sorted"
+title: "Insertion, sorted"
 bookCollapseSection: true
 weight: 3
 
@@ -82,7 +82,7 @@ tableau qu'elles reçoivent en paramètre.
 
 Comme tous les langages modernes, Python propose des outils pour trier des tableaux.
 Il utilise pour cela un autre algorithme appelé Timsort, qu'on retrouve
-dans Java, Javascript et Android.
+dans Java, Javascript, Swift et Rust.
 
 ### Trier en place avec la méthode `sort`
 
@@ -140,7 +140,7 @@ décoissant.
 
 ```python
 mots = [3, 4, 2, 1]
-sorted(mots, revers=True)
+sorted(mots, reverse=True)
 [4, 3, 2, 1]
 ```
 

@@ -1,5 +1,5 @@
 ---
-title: "TD - tri insertion"
+title: "TD - insertion"
 bookCollapseSection: true
 weight: 4
 

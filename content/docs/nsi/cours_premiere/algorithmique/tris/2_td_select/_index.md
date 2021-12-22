@@ -38,25 +38,12 @@ weight: 2
 On dispose d'un tableau de nombres, on souhaite vérifier s'il est trié par ordre
 croissant.
 
+Par exemple : `1, 2, 3, 5, 4, 6, 7` n'est pas trié mais `1, 2, 3, 4, 5, 6, 7` est trié.
 
-```
-Fonction est_triee(t: tableau de nombres)
-    n: longueur du tableau
-    est_trié = vrai
+1. Proposer un algorithme permettant de vérifier qu'un tableau de nombres est trié.
+    Quelle devrait en être sa signature ?
 
-    Pour i allant de 0 à longueur - 2 faire
-
-      si t[i] > t[i + 1] alors
-          est_trie = faux
-    renvoyer est_trie
-```
-
-1. Quelle est la signature de cette fonction ? Préciser le type de sa variable
-  de retour.
-2. Traduire cette fonction en Python.
-3. La programmer et vérifier sur quelques exemples sa validité.
-4. La boucle de la fonction parcourt toujours l'intégralité du tableau.
-
-    a. Proposer un exemple pour lequel il n'est pas nécessaire de parcourir
-        tout le tableau pour savoir qu'il n'est pas trié.
-    b. Proposer une amélioration du coût de la fonction.
+2. Combien de comparaisons sont nécessaire pour s'assurer qu'un tableau est trié ?
+3. Traduire cette fonction en Python
+4. Si ce n'est pas déjà fait, améliorer l'algorithme en quittant dès qu'on
+   repère deux éléments non triés dans le tableau.

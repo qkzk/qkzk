@@ -1,5 +1,5 @@
 ---
-title: "Tri : insertion, sélection"
+title: "Tris"
 bookCollapseSection: true
 author:
  qkzk

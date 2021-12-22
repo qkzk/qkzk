@@ -1,7 +1,8 @@
 ---
 title: 'Traitement des données en tables'
 bookCollapseSection: true
-subtile: '1. cours : introduction'
+title: '1. Cours : introduction'
+weight: 1
 author: 'qkzk'
 date: '2021/05/25'
 theme: "metropolis"
@@ -104,7 +105,7 @@ Dans le premier cas on accède aux données comme dans un tableau 2D :
 
     ```python
     >>> contacts[0]
-    ['Nom': 'Duchmol', 'Prénom', 'Robert', 'email': 'robert@email.com']
+    ['Duchmol', 'Robert', 'robert@email.com']
     ```
 
 * quel est le prénom du second contact ?
@@ -114,7 +115,7 @@ Dans le premier cas on accède aux données comme dans un tableau 2D :
     'Franky'
     ```
 
-Dans le second cas, on accède toujours aux enregistrements par leur indice
+Avec une liste de dictionnaires, on accède toujours aux enregistrements par leur indice
 mais on accède aux valeurs _par leur clés_.
 
 
