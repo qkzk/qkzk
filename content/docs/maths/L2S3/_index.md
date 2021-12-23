@@ -20,3 +20,5 @@ bookCollapseSection: true
 * [Exercices supplémentaires](./exercices_supplementaires.pdf) et corrections en pdf ([manuscrit](./L2S3_Correction_exos_supplémentaires.pdf), [rédigé](./exercices_supplementaires_correction.pdf))
 
 * Correction des dernières interrogations écrites. [Ch4](./2022-ie2_v3_corr.pdf), [Ch3](./2022-ie2_corr.pdf)
+
+* [Notes de td](./l2s3_notes_td.pdf)
