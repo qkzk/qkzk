@@ -216,6 +216,58 @@ Une colonne par valeur et une colonne pour l'expression :
 | 1   | 1   | 1   |            1           |
 
 
+# Propriétés mathématiques de l'algèbre de Boole
+
+Il existe de nombreuses notations utilisées pour décrire l'algèbre de Boole,
+nous utiliserons les notations de Python.
+
+## Définition
+
+On considère l'ensemble `{0, 1}` ou  `{False, True}` muni de trois opérations :
+
+la **négation** `not`, le **et logique** `and`, le **ou logique** `or`.
+
+Elles sont définies par les tables de vérité présentées plus haut.
+
+## Complémentarité
+
+* `not(not(a)) = a`
+* `a or (not a) = 1`
+* `a and (not a) = 0`
+
+## Associativité
+
+* `a or (b or c) = (a or b) or c`
+* `a and (b and c) = (a and b) and c`
+
+## Distributivité
+
+* `a or (b and c) = (a and b) or (a and c)`
+* `a and (b or c) = (a or b) and (a or c)`
+
+## Autres tables de vérité
+
+Toutes les opérations binaires peuvent être définies à l'aide des trois opérateurs présentés plus haut.
+
+Par exemple : `a xor b = (a and not b) or (not a and b)`
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
