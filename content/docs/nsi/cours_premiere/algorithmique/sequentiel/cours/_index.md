@@ -696,3 +696,78 @@ display(img) # afficher dans colab
 ## dégradé obtenu
 
 ![Degradé rouge -> noir](degrade.jpg)
+
+
+# Variants et invariants
+
+* Un _invariant de boucle_ est un propriété qui est vraie avant et après chaque tour d’une boucle.
+* On appelle _variant de boucle "tant que"_ toute quantité qui décroit strictement à chaque tour de la boucle.
+    Dans une boucle non bornée (`tant que`), un variant permet de prouver que la boucle se termine.
+
+    Dans une boucle bornée (`for`), il n'est pas nécessaire de donner un variant, la boucle se termine toujours.
+    
+
+## Exemples
+
+### Exponentiation rapide
+
+```python
+def puissance(a: int, n: int) -> int:
+    """Renvoie le nombre a exposant n. """
+
+    p = 1
+
+    while n > 0:
+        if n % 2 == 0:
+            a = a * a
+            n = n // 2
+        else:
+            p = p * a
+            n = n - 1
+    return p
+```
+
+1. Appliquer la fonction pour calculer `puissance(3, i)` pour `i` entre 0 et 4 inclus.
+2. Démontrer que cette fonction termine toujours en explicitant un _variant_.
+
+### Somme des entiers
+
+On considère l'algorithme suivant :
+
+```
+somme( tableau )
+
+    s = 0
+    pour chaque element x de tableau, faire
+        s = s + x
+
+    renvoyer s
+```
+
+Proposer un invariant de boucle
+
+### Division euclidienne par soustraction
+
+
+```
+diviser(a, b)
+    r = a
+    q = 0
+
+    Tant que r >= b, faire
+        r = r - b
+        q = q + 1
+
+renvoyer q, r
+```
+
+1. Faire tourner l'algorithme à la main pour `a = 7, b = 2`
+2. Quelle relation vérifient `a, b, q, r` dans nos exemples ?
+3. Pourquoi ne peut-on pas toujours s'arrêter après le premier tour ?
+4. Quelle propriété supplémentaire doit vérifier `r` ?
+5. Proposer un variant et un invariant de boucle. 
+    
+
+### Exemples en python
+
+[variant_invariant.py](./variant_invariant.py)
