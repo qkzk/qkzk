@@ -290,3 +290,5 @@ C>* 192.168.1.0/24 is directly connected, eth0
 R>* 192.168.2.0/24 [120/2] via 100.0.0.2, eth1, 00:08:11
 R1(Zebra)>
 ~~~
+
+Construire le graphe de ce réseau en indiquant les différentes adresses et vitesses de lien.
