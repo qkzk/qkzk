@@ -251,6 +251,11 @@ Dessiner le plan du réseau depuis cette table de routage
 
 ## Exemple 2 correction
 
+Voici _une_ version possible du réseau. Avec les informations de la table, il n'est pas possible de 
+savoir exactement à quel routeur est rattaché `192.168.2.0`.
+
+Il pourrait être raccordé à R4 ou R5.
+
 ![table de routage : solution](/uploads/docnsitale/routage/img/table_routage_solution.png)
 
 ## Exemple 2 - routage
