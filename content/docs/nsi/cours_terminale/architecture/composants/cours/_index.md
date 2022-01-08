@@ -1,8 +1,8 @@
 ---
-subtitle: "cours : Composants et systèmes sur puce"
+title: "Cours"
 author: "qkzk"
 date: "2020/07/08"
-geometry: margin=1.5cm
+bookCollapseSection: true
 weight: 1
 
 ---
@@ -43,7 +43,7 @@ tout programme est une suite d'opérations simples qui ont toutes la même forme
 3. le calcul de l'opération élémentaire est effectué
 4. le résultat de l'opération est stocké en mémoire
 
-$\;$![cpu_ram](cpu_ram.svg)
+![cpu_ram](/uploads/docnsitale/composants/cpu_ram.svg)
 
 ### Les microprocesseurs
 

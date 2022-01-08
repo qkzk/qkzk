@@ -2,6 +2,7 @@
 title: Composants
 bookCollapseSection: true
 weight: 100
+
 ---
 
 
@@ -21,5 +22,5 @@ d’énergie, contrôleurs vidéo, accélérateur graphique, réseaux sur puce, 
 ## Cours
 
 * Le [cours](cours)
-* Le [TD](td)
+* Le [TP](tp)
 * Un [complément](cache) hors programme sur la mémoire cache

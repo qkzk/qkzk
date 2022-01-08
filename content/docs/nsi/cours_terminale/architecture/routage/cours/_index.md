@@ -4,18 +4,15 @@ bookCollapseSection: true
 author: qkzk
 date: 2020/03/17
 weight: 1
+
 ---
 
 
-
-### pdf : [pour impression](/uploads/docnsitale/routage/routage_print.pdf), [diaporama](/uploads/docnsitale/routage/routage_slides.pdf),
-<!--
-  Compile with :
-
-  pandoc -t beamer --slide-level 2 --filter graphpandoc.py -o routage_slides.pdf routage.md -->
+* [pour impression](/uploads/docnsitale/routage/routage_print.pdf)
+* [diaporama](/uploads/docnsitale/routage/routage_slides.pdf)
 
 
-### ATTENTION les graphiques ne seront pas rendus correctement !!! Je vous conseille d'utiliser les pdf ci-dessus.
+
 
 # Protocoles de routage de l'information
 
@@ -59,16 +56,16 @@ l'**acheminement du trafic** entre ces réseaux.
 
 Elle se compose de 5 éléments :
 
-* \color{red}{Le réseau que l'on souhaite atteindre}\color{black}
-* Le net masque du réseau à atteindre\color{black}
-* \color{blue}Le chemin à emprunter (le routeur suivant qui permet de rejoindre
-    la destination et par quelle interface l'atteindre)\color{black}
-* \color{teal}Sa distance administrative = niveau de
+* <span style="color:red;">Le réseau que l'on souhaite atteindre</span>
+* Le net masque du réseau à atteindre
+* <span style="color:blue;">Le chemin à emprunter (le routeur suivant qui permet de rejoindre
+    la destination et par quelle interface l'atteindre)</span>
+* <span style="color:teal;">Sa distance administrative = niveau de
     confiance (minimiser),
-    (1: statique, 110: ospf, 120: RIP…)\color{black}
-* \color{olive}Le protocole utilisé : S pour statique, O pour OSPF, R pour RIP...\color{black}
+    (1: statique, 110: ospf, 120: RIP…)</span>
+* <span style="color:olive;">Le protocole utilisé : S pour statique, O pour OSPF, R pour RIP...</span>
 
-\color{olive}R    \color{red}192.168.1.0/24 \color{teal}[120/1] via \color{blue}10.1.1.2, 00:00:13, FastEthernet0/0\color{black}
+<span style="color:olive;">R    </span> <span style="color:red;">192.168.1.0/24 </span> <span style="color:teal;">[120/1] via </span> <span style="color:blue;">10.1.1.2, 00:00:13, FastEthernet0/0</span> <span style="color:black;">
 
 Et si la route n'existe pas, on attribue une route par défaut.
 
@@ -231,34 +228,15 @@ proche, et l'algorithme _SPF_ est exécuté à nouveau sur chaque routeur.
 
 ## Exemple 1
 
-```{.graph .center caption="Deux routes possibles"}
-
-graph G {
-
-bgcolor="#ffffff00"
-node [shape=circle]
-rankdir=LR;
-ranksep=0.5;
-
-
-S -- A [label = "100Mbits/s" color=red fontcolor=red];
-A -- D [label = "100Mbits/s" color=red fontcolor=red];
-S -- D [label = "10Mbits/s" color=red fontcolor=red]
-
-
-}
-
-```
+![ex1](./ex1.svg)
 
 On cherche à joindre $D$ depuis $S$.
 
-. . .
 
 * **RIP** métrique : nombre de sauts.
     * $S \rightarrow D$ : 1 saut $\leftarrow$ _route choisie_
     * $S \rightarrow A \rightarrow D$ : 2 sauts.
 
-. . .
 
 * **OSPF** métrique : vitesse du lien.
   * $S \rightarrow D$ : 10 Mbit / s
@@ -279,18 +257,15 @@ Dessiner le plan du réseau depuis cette table de routage
 
 1. Depuis $PC_1$ joindre $PC_2$ : quelle route sera employée ?
 
-. . .
 
 * Le protocole est **RIP** (R et [120/1] dans la table). On doit compter les sauts.
 * Le chemin retenu est alors $$PC_1 \rightarrow R_1 \rightarrow R_3 \rightarrow R_5 \rightarrow PC_2$$
 
-. . .
 
 2. On modifie la configuration des routeurs pour qu'ils utilisent **OSPF**. Même trajet.
 
     "FastEthernet0" signifie 100Mbits/s et "Serial" est en 10Mbit/s
 
-. . .
 
 * Le protocole étant devenu **OSPF** on s'intéresse à la vitesse des liens.
 * Le chemin retenu est alors $$PC_1 \rightarrow R_1 \rightarrow R_2 \rightarrow R_3 \rightarrow R_4 \rightarrow R_5 \rightarrow PC_2$$

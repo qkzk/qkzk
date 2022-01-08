@@ -2,9 +2,11 @@
 btitle: "HTTPS"
 author: qkzk
 weight: 4
+bookCollapseSection: true
+
 ---
 
-### pdf : pour [impression](/uploads/docnsitale/securisation/https.pdf)
+### [pour impression](/uploads/docnsitale/securisation/https.pdf)
 
 # Principe
 

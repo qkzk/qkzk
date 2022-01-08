@@ -4,9 +4,10 @@ bookCollapseSection: true
 author: qkzk
 date: 2020/04/27
 weight: 1
+
 ---
 
-### pdf : pour [impression](/uploads/docnsitale/securisation/introduction_print.pdf)
+### [pour impression](/uploads/docnsitale/securisation/introduction_print.pdf)
 
 # Sécurisation des communications
 

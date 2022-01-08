@@ -7,7 +7,7 @@ weight: 100
 
 ---
 
-### pdf: [pour impression](/uploads/docnsitale/securisation/securisation_resume.pdf)
+### [pour impression](/uploads/docnsitale/securisation/securisation_resume.pdf)
 
 # Sécurisation des communications
 

@@ -3,14 +3,15 @@ title: "Chiffrement asymétrique"
 bookCollapseSection: true
 author: Frédéric Bayart
 weight: 2
+
 ---
 
-### pdf : pour [impression](/uploads/docnsitale/securisation/asymetrique.pdf)
+### [pour impression](/uploads/docnsitale/securisation/asymetrique.pdf)
 
 La cryptographie à clé publique - Principe de fonctionnement
 ============================================================
 
-![](/uploads/docnsitale/securisation/sousmarin.jpg){width=60%}
+![](/uploads/docnsitale/securisation/sousmarin.jpg)
 
   Dans les années 1970, la cryptographie
 n'est plus seulement l'apanage des militaires. Les banques notamment,

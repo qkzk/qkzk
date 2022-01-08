@@ -1,5 +1,5 @@
 ---
-title: "TD"
+title: "TP"
 bookCollapseSection: true
 author: "qkzk"
 date: "2020/12/23"
@@ -9,7 +9,7 @@ weight: 10
 
 ### pdf : [pour impression](/uploads/docnsitale/composants/td_soc.pdf)
 
-# Travaux dirigés
+# Travaux pratiques
 
 Dans ce TP nous allons mener une petite étude comparative de différentes
 machines utilisant des systèmes sur puce.
