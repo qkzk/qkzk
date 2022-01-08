@@ -1,5 +1,5 @@
 ---
-title: Cours Terminale
+title: Terminale
 bookCollapseSection: true
 author: qu3nt1n
 date: 2019-05-04 11:17:30+00:00
