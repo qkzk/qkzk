@@ -9,6 +9,20 @@ weight: 1
 
 ### pdf : [pour impression](/uploads/docnsitale/composants/composants_socs.pdf)
 
+
+# Cours introductif
+
+[Cours introductif](./cours_tp_system_on_chip.pdf) écrit par David Sallé.
+
+## Vidéos du cours
+
+* [Transistors NPN PNP](http://www.youtube.com/watch?v=Uqvk7x6nmfg&t=1m17s)
+* [Portes logiques](https://www.youtube.com/watch?v=L_EFljkLz_M&t=1m4s)
+* [Calculateurs](https://www.youtube.com/watch?v=L_EFljkLz_M&t=5m02s)
+* [SoC](https://www.youtube.com/watch?v=NKfW8ijmRQ4)
+
+    Activer les soustitres traduits automatiquement. Le narrateur s'exprime assez clairement pour que la traduction soit de qualité.
+
 # Composants et systèmes sur puce
 
 
