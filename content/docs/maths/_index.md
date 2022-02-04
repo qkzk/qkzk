@@ -15,7 +15,7 @@ mathématiques utilisés cette année
 
 ## [Seconde](/docs/maths/seconde/)
 
-## [L1S2](/docs/maths/l1s2)
+## [L1S1](/docs/maths/l1s1)
 
 ## [L2S3](/docs/maths/l2s3)
 
