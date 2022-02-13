@@ -131,3 +131,38 @@ modélisé par une liste de malles.
 
 4. Proposez une implémentation en Python de l'algorithme des lutins. Écrire
     au moins un test. On ne demande pas la documentation dans cette question.
+
+## Compléments de Gilles Lassus
+
+[Notebook sur Github](https://github.com/glassus/nsi/blob/master/Premiere/Theme05_Algorithmique/06_Algorithmes_gloutons.ipynb)
+
+## Remplir un rectangle avec des carrés
+(d'après S.Tummarello et E.Buonocore)
+
+On considère un rectangle de dimension 11 sur 13 (figure 0). On veut remplir ce rectangle avec le minimum de carrés.
+
+![Exemple 1](https://raw.githubusercontent.com/glassus/nsi/52b8e9a235795d39cf28b8644bcad47b9c7d290b/Premiere/Theme05_Algorithmique/data/remplissage_carres2.png)
+
+Un algorithme glouton va chercher à positionner d'abord le plus grand carré possible (figure 1).
+
+C'est une stratégie efficace (8 carrés nécessaires), mais qui n'est pas optimale : la figure 2 présente un pavage avec seulement 6 carrés.
+
+Est-ce qu'un algorithme glouton va toujours passer à côté de la solution optimale ? Non ! Il arrive aussi qu'il donne la solution optimale. Changeons le rectangle initial en un rectangle de 10 sur 15 :
+
+![Exemple 2](https://raw.githubusercontent.com/glassus/nsi/52b8e9a235795d39cf28b8644bcad47b9c7d290b/Premiere/Theme05_Algorithmique/data/remplissage_carres3.png)
+
+Dans cette situation, l'algorithme glouton nous amène à la solution optimale.
+
+### Conclusion :
+Un algorithme glouton est une méthode rapide et souvent efficace, mais qui ne garantit pas l'optimalité de la solution trouvée.
+
+La succession de meilleurs choix LOCAUX va nous amener à une bonne solution GLOBALE, mais ne nous garantit pas d'arriver à la solution optimale.
+
+## Consigne
+
+Proposer un algorithme glouton permettant de remplir un rectangle.
+
+L'objectif est de créer une fonction `remplir_glouton` qui prend deux paramètres entiers `largeur` et `hauteur`
+et renvoie une liste de tuples : `[(abs_1, ord_1, largeur_1), (abs_2, ord_2, largeur_2), ...]` 
+donnant les positions de chaque rectangle.
+
