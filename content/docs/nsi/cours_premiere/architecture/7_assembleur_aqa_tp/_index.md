@@ -16,10 +16,7 @@ Dans ce TD nous allons travailler avec l'assembleur AQA disponible
 [ici](http://www.peterhigginson.co.uk/AQA/).
 
 La documentation d'origine est [là](http://www.peterhigginson.co.uk/AQA/info.html)
-et une traduction des commandes principales est disponible [ici](TODO TRADUIRE)
-
-Après avoir réalisé les [premières questions](TODO importer sur qkzk),
-répondre aux questions suivantes.
+et une traduction des commandes principales est disponible [ici](.../8_doc_AQA)
 
 ## Exercice 1 - quelques exemples
 

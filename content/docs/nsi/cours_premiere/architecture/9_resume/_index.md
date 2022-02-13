@@ -1,5 +1,5 @@
 ---
-title: Modèle de Von Neumann - Résumé
+title: Résumé Von Neumann
 bookCollapseSection: true
 author: qkzk
 theme: metropolis
@@ -11,7 +11,7 @@ geometry: margin=1.5cm
 ## Modèle de Von Neumann
 
 
-### ![Modèle original](img/modele-originel2.gif)
+### ![Modèle original](./../img/modele-originel2.gif)
 
 * **Unité de commande** : contrôle la séquence d'instructions
 * **Unité arithmétique** : exécution de ces instructions
@@ -68,7 +68,7 @@ en 5V (parfois 12V, parfois 3.3V, plus rarement autre chose).
 
 ### Le transistor
 
-![transistor](img/transistor.png)
+![transistor](./../img/transistor.png)
 
 C'est un interrupteur contrôlable. Il dispose de 3 broches (2 entrées, 1 sortie.)
 
