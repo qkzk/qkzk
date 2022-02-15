@@ -1,15 +1,15 @@
 ---
-title: "Réseaux TCP/IP"
-bookCollapseSection: true
+title: "Cours"
 author: "qkzk"
-date: ""
+date: "2022/02/15"
 theme: "metropolis"
 geometry: "margin=1.5cm"
-weight: 1
+weight: 2
+bookCollapseSection: true
 
 ---
 
-### pdf [pour impression](./reseau_cours.pdf)
+### [pdf](./reseau_cours.pdf)
 
 # Réseau
 
@@ -459,6 +459,28 @@ CLI (command line interface = la console).
 
 Il existe de nombreuses commandes UNIX permettant de configurer et vérifier
 le bon fonctionnement d'un réseau. Nous allons présenter les plus courantes.
+
+## Comment reproduire ces commandes ?
+
+Nous allons présenter des commandes UNIX et ou Windows.
+
+* Si vous disposez d'une machine sous Linux raccordée à un réseau, elle _devrait_
+  être équippée des logiciels nécessaires.
+* Sous windows, toutes les machines disposent de `ping` et `ipconfig`. Généralement elles disposent aussi de `tracert`.
+* En ligne vous pouvez utiliser la machine virtuelle crée par [Fabrice Bellard](https://bellard.org/jslinux/)
+
+
+Attention ! Dans un réseau particulier, comme celui du lycée, il se peut que 
+les commandes soient bloquées...
+
+| Commande                            | Unix               | Windows    |
+|-------------------------------------|--------------------|------------|
+| Vérifier la connexion à une machine | `ping`             | `ping`     |
+| Configurer le réseau de la machine  | `ip` ou `ifconfig` | `ipconfig` |
+| Connâitre la route empruntée        | `traceroute`       | `tracert`  |
+
+## Consulter et manipuler le réseau depuis la ligne de commande
+
 
 ## `ip a` et `ifconfig` ou `ipconfig` sous windows.
 

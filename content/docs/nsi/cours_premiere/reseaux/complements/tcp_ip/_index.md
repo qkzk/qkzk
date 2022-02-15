@@ -2,7 +2,8 @@
 title: Protocoles TCP et IP
 bookCollapseSection: true
 author: David Roche
-weight: 2
+weight: 12
+
 ---
 
 ### pdf : [ce document, pour impression](/uploads/docsnsi/reseau/nsi_prem_tcpip.pdf) - [fiche de révision](/uploads/docsnsi/reseau/16_protocoles_tcp_ip.pdf)

@@ -1,34 +1,38 @@
 ---
-title: Simulation réseau
+title: "TP: Simulation 1"
+author: "David Roche"
+date: "2022/02/15"
+theme: "metropolis"
+weight: 21
 bookCollapseSection: true
-author: David Roche
-weight: 5
+
 ---
 
-### pdf : [pour impression](/uploads/docsnsi/reseau/nsi_prem_simReseau1.pdf)
+### [pdf](./tp_reseau_1.pdf)
+
 
 Après la théorie, passons maintenant à la pratique. Il est un peu
-difficile de mettre en place un réseau pour effectuer quelques tests. À
-la place, nous allons utiliser un simulateur de réseau. Il existe
-différents types de simulateurs : du plus simple au plus
-"professionnel". Nous allons utiliser un simulateur relativement
-simple à prendre en main, mais suffisamment performant :
-[Filius](http://www.lernsoftware-filius.de/Herunterladen) (la page web
-est en allemand, mais le logiciel est disponible en anglais).
+difficile de mettre en place un réseau pour effectuer quelques tests. 
+
+À la place, nous allons utiliser un simulateur de réseau. Il existe différents
+types de simulateurs : du plus simple au plus "professionnel". Nous allons
+utiliser un simulateur relativement simple à prendre en main et déjà installé
+sur vos postes : [Filius](http://www.lernsoftware-filius.de/Herunterladen) (la page
+web est en allemand, mais le logiciel est disponible en anglais). 
 
 Avant de visionner une petite vidéo qui devrait vous aider à prendre en
 main Filius, quelques petites indications
 
 Nous allons utiliser deux commandes dans la vidéo :
 
--   "ipconfig" qui permet de connaitre la configuration réseau de la
+-   `ipconfig` qui permet de connaitre la configuration réseau de la
     machine (adresse IP, adresse MAC\...) sur laquelle est exécutée
     cette commande ("ipconfig" est une véritable commande sous Windows
     de Microsoft, sous les systèmes de type Unix (Linux ou macOS par
-    exemple), la commande équivalente est "ifconfig")
--   "ping" qui permet d'envoyer des paquets de données d'une machine
+    exemple), la commande équivalente est `ifconfig`)
+-   `ping` qui permet d'envoyer des paquets de données d'une machine
     A vers une machine B. Si la commande est exécutée sur la machine A,
-    le "ping" devra être suivi par l'adresse IP de la machine B (par
+    le `ping` devra être suivi par l'adresse IP de la machine B (par
     exemple, si l'adresse IP de B est "192.168.0.2", on aura "ping
     192.168.0.2")
 

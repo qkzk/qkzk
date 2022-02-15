@@ -1,11 +1,10 @@
 ---
-title: "Réseau - TD"
-bookCollapseSection: true
+title: "TD: Réseau"
 author: "qkzk"
 date: "2021/06/08"
 theme: "metropolis"
-geometry: "margin=1.5cm"
-weight: 100
+weight: 11
+bookCollapseSection: true
 
 ---
 
