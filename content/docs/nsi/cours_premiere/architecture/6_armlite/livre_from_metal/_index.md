@@ -1282,7 +1282,7 @@ l'utilisateur, par exemple, `loop` : comme indiqué ci-dessous :
 //R1 - utilisé pour écrire des messages
 //R2 - numéro à supprimer
   MOV R0, #15
-loop : STR R0, .WriteUnsignedNum
+loop: STR R0, .WriteUnsignedNum
   MOV R1, #msg1
   STR R1, .WriteString
   MOV R1, #msg2
@@ -1291,8 +1291,8 @@ loop : STR R0, .WriteUnsignedNum
   SUB R0, R0, R2
   B loop
   HALT
-msg1 : .ASCIZ "restant\n"
-msg2 : .ASCIZ "Combien voulez-vous supprimer (1-3) ?\n"
+msg1: .ASCIZ "restant\n"
+msg2: .ASCIZ "Combien voulez-vous supprimer (1-3) ?\n"
 ```
 
 Notez également que le fait de spécifier l'emplacement vers lequel se brancher

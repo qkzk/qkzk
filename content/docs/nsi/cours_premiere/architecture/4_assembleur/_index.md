@@ -69,45 +69,82 @@ de 2 parties :
   "prendre la valeur située à l'adresse mémoire 487 et la placer
   dans la registre R2"
 
+### Registre & Mémoire
+
+Un "mot" est un entier binaire sur $n$ bits. $n$ est une puissance de 2 correspondant à la classe du processeur.
+
+Donc, un processeur 8 bits utilisera des mots de 8 bits (des octets) et un processeur 32 bits, des mots de 32 bits (4 octets).
+
+L'assembleur dispose généralement de deux type de mémoires :
+
+* Les registres : très petits, peu nombreux (8, 13, 17 rarement plus). Ils permettent de stocker un "mot",
+* La mémoire vive (généralement abrégée en "Mémoire") : c'est la RAM, elle est plus vaste, moins rapide et chaque emplacement dispose d'une adresse numérique.
+
+* Les opérations courantes se font depuis un registre vers un registre.
+* On _lit_ depuis la mémoire vers un registre, 
+* on _écrit_ depuis un registre vers la mémoire.
+* On _déplace_ vers un registre (soit une valeur littérale, soit la valeur d'un autre registre).
+
 ## Rupture de séquence
 
 ### Séquence d'instruction
 
-* Les instructions de rupture de séquence
 
-  les instructions machines sont situées en mémoire vive
-  Au cours de l'exécution, le CPU passe d'une instruction à une autre
+les instructions machines sont situées en mémoire vive
+Au cours de l'exécution, le CPU passe d'une instruction à une autre
 
-  * l'instruction n°1 située à l'adresse mémoire 343,
-  * l'instruction n°2 située à l'adresse mémoire 344 etc.
+* l'instruction n°1 située à l'adresse mémoire 343,
+* l'instruction n°2 située à l'adresse mémoire 344 etc.
+
+Ce déroulé se poursuit jusqu'à :
+
+* rencontrer un bug,
+* rencontrer `HALT`,
+* rencontrer une rupture de séquence,
 
 ## Rupture de séquence
 
 ### Rupture de séquence
 
-Rupture de séquence (ou _saut, branchement_):
-interrompre l'ordre initial sous certaines conditions
-en passant à une instruction située une adresse mémoire donnée
+Rupture de séquence (ou _saut, branchement_) :
 
-Si la valeur contenue dans le registre R1 est >0,
+> interrompre l'ordre initial sous certaines conditions
+> en passant à une instruction située une adresse mémoire donnée
 
-alors la prochaine instruction à exécuter est l'adresse mémoire 4521
+Par exemple, :
 
-sinon, la prochaine instruction à exécuter est à l'adresse mémoire 355.
+> Si la valeur contenue dans le registre R1 est >0,\
+> alors la prochaine instruction à exécuter est l'adresse mémoire 4521,\
+> sinon, la prochaine instruction à exécuter est à l'adresse mémoire 355.
+
+### Sauts conditionnels ou inconditionnels
+
+* Un saut _inconditionnel_ se déroulera toujours. On passe de tel emplacement à tel emplacement.
+* Un saut _inconditionnel_ doit suivre une comparaison. Selon le résultat de cette comparaison on sautera ou on passera à l'emplacement suivant.
 
 ## Programme en langage machine
 
-Suite très très longue de "1" et de "0" !
+Suite très très longue de "1" et de "0".
 
-Extrêmement difficile :  on remplace les codes binaires par des symboles mnémoniques.
+Extrêmement difficile :  on remplace les codes binaires par des symboles _mnémoniques_.
 
-`11100010100000100001000001111101` --> `ADD R1,R2,\#125`
+`11100010100000100001000001111101 <--> ADD R1,R2,#125`
+
+En fait :
+
+
+| Inscrution | Operande 1 | Operande 2 | Operande 3 |
+|------------|------------|------------|------------|
+| 11100010   | 10000010   | 00010000   | 01111101   |
+| `ADD`      | `R1`       | `R2`       | `#125`     |
+
 
 ### Assembler :
 
-Transformer ces codes mnémoniques en langage machine.
+> Transformer ces codes mnémoniques en langage machine.\
+> `ADD R1,R2,#125` ---> `11100010100000100001000001111101`
 
-`ADD R1,R2,\#125` ---> `11100010100000100001000001111101`
+"Programmer en assembleur" revient donc à écrire du code en "mnemonique" pour un processeur particulier.
 
 Encore aujourd'hui, programmer en assembleur est une activité courante.
 
@@ -201,20 +238,24 @@ x = 4
 y = 8
 if x == 10:
     y = 9
-else :
+else:
     x = x+1
 z = 6
 ~~~
 
 ## Python --> assembleur
 
-       MOV R0, #4       |    else: 
-       STR R0, 30       |       LDR R0, 30
-       MOV R0, #8       |       ADD R0, R0, #1
-       STR R0, 75       |       STR R0, 30
-       LDR R0, 30       |    endif:
-       CMP R0, #10      |       MOV R0, #6
-       BNE else         |       STR R0, 23
-       MOV R0, #9       |       HALT
-       STR R0, 75       |
-       B endif          |
+       MOV R0, #4       
+       MOV R1, #8       
+       CMP R0, #10      
+       BNE else         
+       MOV R1, #9       
+       B endif          
+    else: 
+       ADD R0, R0, #1
+       B endif
+    endif:
+       MOV R0, #6
+       HALT
+
+
