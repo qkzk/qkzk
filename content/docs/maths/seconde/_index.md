@@ -31,7 +31,7 @@ weight: 1
 | **Lundi 3 janvier**        | [08 calcul litteral](/uploads/maths/seconde/08_calcul_litteral.pdf)                                                           | 3         |
 | _5 semaines_               | [09 vecteurs 2](/uploads/maths/seconde/09_vecteurs_2.pdf)                                                                     | 2         |
 | **Samedi 21 février**      | **Hiver**                                                                                                                     |           |
-| **Lundi 9 mars**           | _Décimaux_                                                                                                                    | 1         |
+| **Lundi 9 mars**           | [09 trois quart - décimaux](/uploads/maths/seconde/09_trois_quart_decimaux.pdf)                                               | 1         |
 | _6 semaines_               | [10 probabilites](/uploads/maths/seconde/10_probabilites.pdf)                                                                 | 2         |
 |                            | [11 carre cube](/uploads/maths/seconde/11_carre.pdf)                                                                          | 2         |
 |                            | [12 configurations](/uploads/maths/seconde/12_configurations.pdf)                                                             | 2         |
