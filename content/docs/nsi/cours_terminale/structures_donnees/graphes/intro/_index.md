@@ -22,12 +22,12 @@ applications sont innombrables :
 *   le réseau routier d'un pays et le réseau de transport d'une ville forment
     un graphe :
 
-    ![islande](img/islande.jpg){width=40%} ![londres](img/londres.jpg){width=40%}\
+    ![islande](img/islande.jpg) ![londres](img/londres.jpg)
 *   internet peut être pensé comme un graphe,
 
 *   les réseaux sociaux présentent naturellement des graphes entre les personnes,
 
-    ![réseau social](img/reseau_social.jpg){width=40%}\
+    ![réseau social](img/reseau_social.jpg)
 
 
 # Utilisation des graphes en informatique
@@ -38,37 +38,37 @@ Parmi les problèmes fréquents faisant apparaître des graphes on rencontre :
 
     *   Comment résoudre un taquin ?
 
-    ![exemple de taquin](https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/15-puzzle.svg/200px-15-puzzle.svg.png){width=40%}\
+    ![exemple de taquin](https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/15-puzzle.svg/200px-15-puzzle.svg.png)
 
 1.  L'exploration de graphe.
 
     *   Recherche d'une meilleure route dans un réseau.
 
-        ![routeurs](img/routeurs.jpg){width=40%}\
+        ![routeurs](img/routeurs.jpg)
 
     *   Recherche d'un trajet entre des villes sur une carte\
         Quelle est la meilleure route reliant 1 à 5 ?
 
-        ![tsp](img/tsp.png){width=40%}\
+        ![tsp](img/tsp.png)
 
 3.  La recherche de cycles dans un graphe.
 
     *   Comment trouver la sortie sans tourner en rond ?
 
-        ![maze](img/maze.png){width=40%}\
+        ![maze](img/maze.png)
 
     *   Existe-t-il un moyen de toujours gagner à Snake ?
 
-        ![snake](img/snake_hamilton.png){width=40%}\
+        ![snake](img/snake_hamilton.png)
 
 
 0.  Les algorithmes peuvent être vus comme des graphes :
 
-    ![algorithme](img/temp.png){width=40%}\
+    ![algorithme](img/temp.png)
 
 1.  Mais aussi la manière d'enregistrer les données :
 
-    ![uml](img/uml.png){width=40%}\
+    ![uml](img/uml.png)
 
 ## Distinction mathématique, informatique
 

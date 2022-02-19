@@ -30,8 +30,8 @@ sommet : _vertice_ et arête : _edge_. D'où les noms des ensembles.
 
 Dans le graphe ci-dessus
 
-* Les sommets sont : $V = \{1, 2, 3, 4, 5, 6\}$
-* Les arrêtes sont : $E = \{ \{1, 2\}, \{1, 5\}, \{2, 3\}, \{2, 5\}, \{3, 4\}, \{3, 5\}, \{4, 5\}, \{5, 6\}\}$
+* Les sommets sont : $V = \lbrace 1, 2, 3, 4, 5, 6\rbrace $
+* Les arrêtes sont : $E = \lbrace  \lbrace 1, 2\rbrace , \lbrace 1, 5\rbrace , \lbrace 2, 3\rbrace , \lbrace 2, 5\rbrace , \lbrace 3, 4\rbrace , \lbrace 3, 5\rbrace , \lbrace 4, 5\rbrace , \lbrace 5, 6\rbrace $
 
 ## Définition : Graphe orienté
 
@@ -55,14 +55,14 @@ l'autre sens.
 ## Définition : Graphe pondéré
 
 Dans certains cas, toutes les arêtes ne se valent pas.
-(Un trajet Lille-Paris ne "coûte" pas autant qu'un "Paris-Lyon".)
+(Un trajet "Lille-Paris" ne _coûte_ pas autant qu'un "Paris-Lyon".)
 
 Dans ce cas on attribue aux arrêtes un _poids_, souvent noté _w_ (pour _weight_).
 
-![graphe pondéré](../intro/img/graphe_oriente.png){width=40%}\
+![graphe pondéré](../intro/img/graphe_oriente.png)
 
 
-Ici l'_arête_ $(E, b)$ a un _poids_ de 10.
+Ici l'_arête_ $(E, b)$ a un _poids_ de $10$.
 
 Et le _trajet_ $(E, b, d, S)$ pèse $10+2+6 = 18$
 
@@ -109,8 +109,8 @@ La méthode la plus simple et la plus courante pour décrire les arêtes est d'e
 donner une _collection_. En mathématiques un ensemble, en informatique,
 n'importe quelle structure sur laquelle itérer.
 
-Par exemple : $G = (V, E)$ avec $V = \{1, 2, 3, 4\}$
-et $E = \{(1, 2), (2, 3), (3, 4), (2, 4)\}$
+Par exemple : $G = (V, E)$ avec $V = \lbrace 1, 2, 3, 4\rbrace $
+et $E = \lbrace (1, 2), (2, 3), (3, 4), (2, 4)\rbrace $
 
 
 ![graph_001.svg](graph_001.svg)
@@ -146,14 +146,12 @@ _Cette définition, simplifiée, ne s'applique qu'aux graphes simples_
 
 Dans l'exemple du graphe ci-dessus, cela donne :
 
-$$
-\begin{pmatrix}
-  0 & 1 & 0 & 0\\
-  1 & 0 & 1 & 1\\
-  0 & 1 & 0 & 1\\
+$$\begin{pmatrix}
+  0 & 1 & 0 & 0\\\
+  1 & 0 & 1 & 1\\\
+  0 & 1 & 0 & 1\\\
   0 & 1 & 1 & 0
-\end{pmatrix}
-$$
+\end{pmatrix}$$
 
 Comment remplir la première ligne ?
 
@@ -162,7 +160,7 @@ Comment remplir la première ligne ?
 * 1 n'est pas relié à 3, le troisième nombre est 0.
 * 1 n'est pas relié à 4, le quatrième nombre est 0.
 
-On obtient bien la première ligne : $0\quad 1\quad 0\quad 0$.
+On obtient bien la première ligne : $(0\quad 1\quad 0\quad 0)$.
 
 Lorsque les sommets sont numérotés, il est naturel de choisir l'ordre
 correspondant, mais lorsque les sommets portent des noms ("Lille", "Paris",
@@ -175,11 +173,11 @@ Partant d'une matrice d'adjacence comme
 
 $$
 \begin{pmatrix}
-  0 & 1 & 1 & 1 & 0\\
-  1 & 0 & 1 & 1 & 1\\
-  1 & 1 & 0 & 1 & 0\\
-  1 & 1 & 1 & 0 & 1\\
-  0 & 1 & 0 & 1 & 0\\
+  0 & 1 & 1 & 1 & 0\\\
+  1 & 0 & 1 & 1 & 1\\\
+  1 & 1 & 0 & 1 & 0\\\
+  1 & 1 & 1 & 0 & 1\\\
+  0 & 1 & 0 & 1 & 0\\\
 \end{pmatrix}
 $$
 
@@ -188,7 +186,7 @@ Il existe un _unique_ graphe qu'elle représente :
 ![graph_002.svg](graph_002.svg)
 
 
-_Remarque_ : attention cependant, si on change l'ordre des sommets on obtient
+_Remarque_ : si on change l'ordre des sommets on obtient
 une autre matrice d'adjacence ! La matrice d'adjacence est unique
 _à l'ordre près des sommets._
 
@@ -215,9 +213,9 @@ Lorsque les graphes sont **orientés** on doit tenir compte de l'ordre.
 
 $$
 \begin{pmatrix}
-  0 & 1 & 1 & 0\\
-  0 & 0 & 0 & 1\\
-  1 & 0 & 1 & 0\\
+  0 & 1 & 1 & 0\\\
+  0 & 0 & 0 & 1\\\
+  1 & 0 & 1 & 0\\\
   0 & 0 & 1 & 0
 \end{pmatrix}
 $$
@@ -247,17 +245,17 @@ Exemple :
 Pour le graphe précédent dont la matrice $A$ est :
 
 $$A = \begin{pmatrix}
-        0 & 1 & 1 & 0\\
-        0 & 0 & 0 & 1\\
-        1 & 0 & 1 & 0\\
+        0 & 1 & 1 & 0\\\
+        0 & 0 & 0 & 1\\\
+        1 & 0 & 1 & 0\\\
         0 & 0 & 1 & 0
       \end{pmatrix}
 $$
 
 On a $A^3 = \begin{pmatrix}
-1 & 1 & 3 & 0 \\
-0 & 0 & 1 & 0 \\
-2 & 1 & 3 & 1 \\
+1 & 1 & 3 & 0 \\\
+0 & 0 & 1 & 0 \\\
+2 & 1 & 3 & 1 \\\
 1 & 1 & 2 & 0
 \end{pmatrix}$ aussi :
 
@@ -268,6 +266,58 @@ etc.
 
 Malheureusement, les opérations sur les matrices ne sont pas au programme de NSI
 et nous n'aurons pas l'occasion d'approfondir le sujet.
+
+## Apparté : opérations matricielles
+
+### La somme
+
+> La **somme** de deux matrices de mêmes dimension est effectuée coefficient par coefficient.
+
+Exemple : si $A = 
+\begin{pmatrix}
+    1 & 2\\\
+    2 & -3
+\end{pmatrix}, 
+B = \begin{pmatrix}
+    3 & 1\\\
+    -2 & -4
+\end{pmatrix}
+$
+alors $A + B =
+\begin{pmatrix}
+    4 & 3\\\
+    0 & -7
+\end{pmatrix}
+$
+
+> Le **produit par un scalaire** est aussi défini coefficient par coefficient, comme pour les vecteurs.
+
+### Le produit de deux matrices
+
+> Le produit de deux matrices $A_{n, p}$ et $B_{q, r}$ est défini si $p = q$. Autrement dit,
+> le nombre de colonnes de la première doit correspondre au nombre de lignes de la seconde.
+
+> Il est obtenu en faisant le produit scalaire de la ligne de gauche par la colonne de droite.
+
+Si $C = A \times B$ alors, $\forall (i, j) \in  \lbrace 1, n\rbrace \times \lbrace 1, r\rbrace$
+$$C_{i, j} = \sum_{k = 1}^{p} A_{i, k} \times B_{k, j}$$
+
+Par exemple, pour les matrices données plus haut :
+
+$C = 
+\begin{pmatrix} 
+    -1 & -7\\\
+    12 & 14
+\end{pmatrix}$
+
+Par exemple, $C_{1, 2} = 1\times 1 + 2 \times -4 = -7$
+
+### Structures mathématiques
+
+* L'addition des matrices admet un **élément neutre**, la matrice nulle, noté $O_{n, p}$, une matrice remplie de 0.
+* Le produit des matrices **carrées** admét un **élément neutre**, la matrice identité, notée $I_n$ une matrice dont la diagonale est remplie de 1 et le reste de 0.
+
+* Le produit matriciel est **contre-intuitif** : il n'est pas commutatif (généralement $AB \neq BA$), le théorème du produit nul est faux (il existe $A\neq O, B\neq O$ tels que $AB = O$)
 
 # Structure de donnée graphe
 
