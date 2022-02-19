@@ -1,7 +1,7 @@
 ---
-title:
-- Hexadécimal
+title: Hexadécimal
 weight: 4
+bookCollapseSection: true
 
 ---
 

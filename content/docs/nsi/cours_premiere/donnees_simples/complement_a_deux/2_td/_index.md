@@ -1,5 +1,5 @@
 ---
-title: "Complément à deux - Travaux dirigés"
+title: "Travaux dirigés"
 bookCollapseSection: true
 author: "qkzk"
 weight: 2
@@ -8,13 +8,13 @@ weight: 2
 
 ### pdf : [pour impression](./complement_a_2_TD.pdf)
 
-# V/F
+## 0. V/F
 
 1. Tous les entiers relatifs admettent une unique représentation en complément à deux.
 2. En complément à deux sur un octet, on peut représenter des nombres de -128 à 127.
 3. L'addition en complément à deux sur un octet de 100 et 110 donne un résultat conforme.
 
-# 1. Additions d'entiers relatifs
+## 1. Additions d'entiers relatifs
 
 1. Donner la représentation binaire de 27 et 33. 
 2. Donner la représentation en binaire signé sur un octet de -27 et 33.
@@ -24,7 +24,7 @@ weight: 2
   que cette fois le résultat est conforme.
 
 
-# 2. Tailles minimales et maximales
+## 2. Tailles minimales et maximales
 
 1. On encode des entiers sur 2 octets.
 
@@ -39,9 +39,9 @@ weight: 2
 
     b. Quels sont les plus petits et plus grands entiers qu'on puisse encoder ?
 
-# 3. Complément à deux sur un octet.
+## 3. Complément à deux sur un octet.
 
-On encode les entiers en complément à 2 sur un octet.\
+On encode les entiers en complément à 2 sur un octet.
 1. Compléter le tableau suivant :
     _Lorsque c'est impossible, écrire une croix_
 
@@ -64,7 +64,7 @@ On encode les entiers en complément à 2 sur un octet.\
 
 3. Vérifier les résultats obtenus.
 
-# 4. Complément à deux, un programme
+## 4. Complément à deux, un programme
 
 Dans cet exercice nous allons écrire une fonction qui réalise le complément
 à deux en Python.

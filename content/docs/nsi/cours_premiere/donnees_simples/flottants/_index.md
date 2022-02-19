@@ -1,7 +1,7 @@
 ---
-title:
-- Flottants
+title:  Flottants
 weight: 20
+bookCollapseSection: true
 
 ---
 
