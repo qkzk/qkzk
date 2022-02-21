@@ -259,8 +259,8 @@ On a $A^3 = \begin{pmatrix}
 1 & 1 & 2 & 0
 \end{pmatrix}$ aussi :
 
-* Il n'existe aucun chemin de longueur exactement trois reliant 1 à 1,
-* il existe exactement un chemin de longueur 3 reliant 1 à 3 : $(1, 2, 4, 3)$.
+* Il existe 1 chemin de longueur 3 reliant 1 à 1,
+* il existe 3 chemins de longueur 3 reliant 1 à 3$.
 
 etc.
 
