@@ -7,7 +7,7 @@ weight: 1
 
 ---
 
-### PDF : [pour impression](./1_intro-Article.pdf), [diapos](./1_intro-Beamer.pdf)
+PDF : [pour impression](./1_intro-Article.pdf), [diapos](./1_intro-Beamer.pdf)
 
 # Architecture des machines : le modèle de Von Neumann
 
@@ -20,8 +20,8 @@ Il propose en 1944 un modèle _d'architecture_ novateur qui sert toujours de bas
 
 ### ![Modèle original](../img/modele-originel2.gif)
 
-* **Unité de commande** : contrôle la séquence d'instruction
-* **Unité arithmétique** : exécution de ces instruction
+* **Unité de commande** : contrôle la séquence d'instructions
+* **Unité arithmétique** : exécution de ces instructions
 * **Processeur** : réalise les calculs
 * **Mémoire** : contient les données et **les programmes**
 * **Entrées** : clavier, cartes perforées, etc.
