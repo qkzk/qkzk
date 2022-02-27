@@ -1,11 +1,10 @@
 ---
 title: Initiation assembleur
-bookCollapseSection: true
 weight: 4
 
 ---
 
-### PDF : [pour impression](./4_assembleur-Article.pdf) [diapos](./4_assembleur-Beamer.pdf)
+**PDF : [pour impression](./4_assembleur-Article.pdf), [diapos](./4_assembleur-Beamer.pdf)**
 
 
 # Initiation à l'assembleur

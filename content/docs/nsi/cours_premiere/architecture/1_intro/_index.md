@@ -1,31 +1,32 @@
 ---
 title: Modèle de Von Neumann
-bookCollapseSection: true
 author: qkzk
 theme: metropolis
 weight: 1
+geometry: margin=1.5cm
 
 ---
 
-PDF : [pour impression](./1_intro-Article.pdf), [diapos](./1_intro-Beamer.pdf)
+**pdf : [diapos](./1_intro-Beamer.pdf), [impression](./1_intro-Article.pdf)**
 
 # Architecture des machines : le modèle de Von Neumann
 
 ## Un esprit universel
-**John Von Neumann** : ingénierie, logique, mathématiques... Participa au projet Manhattan (première bombe atomique) et à l'ENIAC
+**John Von Neumann** : mathématicien, informaticien, ingénieur... Participa au projet Manhattan (première bombe atomique) et à l'ENIAC
 
-Il propose en 1944 un modèle _d'architecture_ novateur qui sert toujours de base à nos architectures actuelles.
+En 1944, il propose un modèle _d'architecture_ novateur qui sert toujours de base à l'architecture des ordinateurs actuels.
 
 ## Présentation du modèle de Von Neumann
 
+
 ### ![Modèle original](../img/modele-originel2.gif)
 
+* **Processeur** : composé de deux unités
 * **Unité de commande** : contrôle la séquence d'instructions
-* **Unité arithmétique** : exécution de ces instructions
-* **Processeur** : réalise les calculs
+* **Unité arithmétique** : exécute les instructions
 * **Mémoire** : contient les données et **les programmes**
 * **Entrées** : clavier, cartes perforées, etc.
-* **Sorties** : affichages, imprimantes, écran
+* **Sorties** : affichage, imprimante, écran
 
 ## Avant d'entrer dans le détail, bref historique
 
@@ -85,9 +86,7 @@ Néanmoins on n'utilisera réellement le binaire qu'après 1945.
 
 **Joseph Marie Jacquard** (1752-1834) améliore des principes déjà existants pour concevoir une machine à tisser utilisant les cartes perforées de **Jean-Baptiste Falcon.**
 
-### ON S'EN FOUT C'EST VIEUX !
-
-Les métiers Jacquard sont encore utilisés dans le médical pour réaliser des coudières, genouillères et prothèses d'artères. Et c'est produit en France.
+Les métiers Jacquard sont encore utilisés dans le médical pour réaliser des coudières, genouillères et prothèses d'artères.
 
 ![Cartes perforées](../img/cartes_perforees_2.jpg){ width=400px }
 
@@ -136,14 +135,13 @@ Les machines sont encore colossales !
 
 * Calcul d'une trajectoire d'une table de tir. Comparatif :
 
-~~~
-      Moyen                         Temps
-      Homme à la main               2,6 j
-      Avec une machine à calculer    12 h
-      Model 5 (concurrent ENIAC)     40 min
-      ENIAC                           3 s
-      PC ~2000                       30 µs
-~~~
+| Méthode                     | Durée  |
+|-----------------------------|--------|
+| Homme à la main             | 2,6 j  |
+| Avec une machine à calculer | 12 h   |
+| Model 5 (concurrent ENIAC)  | 40 min |
+| ENIAC                       | 3 s    |
+| PC ~2000                    | 30 µs  |
 
 ## l'ENIAC : un monstre
 
@@ -154,14 +152,15 @@ Les machines sont encore colossales !
 
 ## Modèle de Von Neumann
 
+
 ### ![Modèle original](../img/modele-originel2.gif)
 
 * **Processeur** : composé de deux unités
-* **Unité de commande** : contrôle la séquence d'instruction
-* **Unité arithmétique** : exécution de ces instruction
+* **Unité de commande** : contrôle la séquence d'instructions
+* **Unité arithmétique** : exécute les instructions
 * **Mémoire** : contient les données et **les programmes**
 * **Entrées** : clavier, cartes perforées, etc.
-* **Sorties** : affichages, imprimantes, écran
+* **Sorties** : affichage, imprimante, écran
 
 ## Principe général
 
@@ -169,12 +168,11 @@ L'ordinateur effectue des instructions en séquence.
 
 Chaque instruction se découpe en trois parties :
 
-* fetch (récupérer)
-* read (lire)
-* execute (exécuter)
+* fetch (_récupérer_)
+* read (_lire_)
+* execute (_exécuter_)
 
-Tout ce qu'un processeur sait faire, c'est ça. Mais il peut le faire 4 milliards
-de fois par seconde.
+C'est tout ce que fait un procésseur... mais il le fait 4 milliards de fois par seconde.
 
 ## Unité de commande
 

@@ -1,6 +1,5 @@
 ---
 title: Harvard vs Von Neumann
-bookCollapseSection: true
 author: qkzk
 theme: metropolis
 weight: 100
