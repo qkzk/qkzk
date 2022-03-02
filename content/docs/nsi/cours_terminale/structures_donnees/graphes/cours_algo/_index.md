@@ -1,11 +1,13 @@
 ---
-title: Algorithmes
-bookCollapseSection: true
-weight: 20
+title: Parcours, chemins, cycles
+date: 2020/05/02
+author: qkzk
+theme:
+- metropolis
+geometry: margin=1.5cm
+weight: 15
 
 ---
-
-### pdf : [pour impression](/uploads/docnsitale/graphes/6_cours_algos_graphes.pdf)
 
 # Algorithmes sur les graphes
 
@@ -55,7 +57,6 @@ lors d'un parcours, on cherche à visiter _chaque sommet_, pas chaque arête.
 
 ![graph_000.svg](graph_000.svg)
 
-
 Considérons le graphe précédent.
 
 **Parcours en largeur d'abord :**
@@ -85,6 +86,9 @@ et à mesure.
 
 ### Algorithme : parcours en largeur dans un graphe simple
 
+_Les versions du parcours présentées ci-dessous utilisent des **drapeaux** qui n'ont rien d'indispensables.
+Les drapeaux sont faciles à généraliser à la recherche de la présence d'un cycle._
+
 ```
 source                              (un noeud du graphe)
 file     : [Source]                 (une file)
@@ -104,9 +108,10 @@ Changer le drapeau de la source à 0.
 
 Tant que la file n'est pas vide faire :
     courant = défiler()
-    Pour chaque voisin de courant qui n'a pas déjà été visité,
-        l'ajouter à la file.
-        Changer leurs drapeaux à 0.
+    Pour chaque voisin de courant,
+        Si son drapeau est -1,
+            l'ajouter à la file.
+            Changer son drapeau à 0.
     visiter courant. # c'est ici qu'on fera généralement un travail.
 ```
 
@@ -172,9 +177,10 @@ Changer le drapeau de la source à 0.
 
 Tant que la pile n'est pas vide faire :
     courant = dépiler()
-    Pour chaque voisin de courant qui n'a pas déjà été visité,
-        l'ajouter à la pile.
-        Changer leurs drapeaux à 0.
+    Pour chaque voisin de courant
+        si son drapeau est -1,
+            l'ajouter à la pile.
+            Changer son drapeau à 0.
     visiter courant. # c'est ici qu'on fera généralement un travail.
 ```
 
@@ -231,7 +237,6 @@ une destination depuis une source.
 
 ![graph_001.svg](graph_001.svg)
 
-
 Dans l'exemple ci-dessus on souhaite se rendre de la **source 0** à
 la **destination 4**.
 
@@ -271,7 +276,7 @@ Fonction Parcours en profondeur(source, destination)
 
           Si courant == destination, on arrête la boucle.
 
-  On retourne à la fin le dictionnaire des visites
+  On retourne à la fin le dictionnaire des prédécesseurs
 ```
 
 ---
@@ -298,8 +303,11 @@ Fonction créer un chemin (prédécesseurs, source, destination)
   On retourne chemin
 ```
 
-_Remarque_ La source est forcement dans le dictionnaire des prédécesseurs,
-donc la boucle s'arrête toujours.
+_Remarques_ 
+
+* La source est forcement dans le dictionnaire des prédécesseurs,
+    donc la boucle s'arrête toujours.
+* La construction finale du chemin peut être grandement optimisée
 
 ---
 
@@ -338,7 +346,6 @@ C'est un chemin qui revient sur lui même.
 Par exemple le graphe ci-dessous contient un cycle `[0, 1, 2]` :
 
 ![graph_002.svg](graph_002.svg)
-
 
 
 Si on enlève simplement l'arête entre (1, 2) on obtient un graphe qui n'a
