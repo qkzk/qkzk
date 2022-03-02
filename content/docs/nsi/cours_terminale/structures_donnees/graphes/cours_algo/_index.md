@@ -9,6 +9,8 @@ weight: 15
 
 ---
 
+**pdf [pour impression](/uploads/docnsitale/graphes/6_cours_algos_graphes.pdf)**
+
 # Algorithmes sur les graphes
 
 Nous allons présenter différents algorithmes sur les graphes :
