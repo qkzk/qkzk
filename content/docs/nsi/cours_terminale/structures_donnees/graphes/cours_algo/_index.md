@@ -353,7 +353,7 @@ Par exemple le graphe ci-dessous contient un cycle `[0, 1, 2]` :
 Si on enlève simplement l'arête entre (1, 2) on obtient un graphe qui n'a
 plus de cycle :
 
-![graphe sans cycle](img/sans_cycle.png){width=40%}\
+![graphe sans cycle](sans_cycle.png)
 
 
 On souhaite créer une fonction qui réponde "Vrai" pour le premier graphe (il
