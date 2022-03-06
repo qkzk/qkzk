@@ -17,3 +17,11 @@ Cela devrait largement couvrir les exercices traités durant la séance.
 * [Vidéo](https://www.youtube.com/watch?v=88MOds6iHIA)
 * [tableau blanc](./L2S4_Seance_2.pdf)
 * [Corrections tapées](./seance_2_corrections.pdf)
+
+# Séance 5 (12 mars 2022)
+
+Enregistrement vidéo, corrections tapées et manuscrites des exercices 24(1), 25, 26, 29 et 31.
+
+* [Vidéo](https://www.youtube.com/watch?v=BkWjkKkhiRk)
+* [Tableau blanc](./L2S4_seance5_2022.pdf)
+* [Corrections tapées](./seance_5_corrections.pdf)
