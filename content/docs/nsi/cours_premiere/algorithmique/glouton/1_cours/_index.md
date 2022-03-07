@@ -18,7 +18,7 @@ couramment utilisés pour les résoudre._
 * On veut programmer une caisse automatique pour qu'elle rende la monnaie
     de façon optimale, c'est-à-dire avec le **nombre minimal** de pièces et
     billets.
-* La valeur des pièes et billets à disposition sont : 1, 2, 5, 10, 50, 100 et
+* La valeur des pièes et billets à disposition sont : 1, 2, 20, 5, 10, 50, 100 et
     200 euros. On dispose d'autant d'exemplaires qu'on le souhaite de chaque
     pièce et billet.
 
