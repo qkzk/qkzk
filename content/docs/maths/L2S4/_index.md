@@ -25,3 +25,26 @@ Enregistrement vidéo, corrections tapées et manuscrites des exercices 24(1), 2
 * [Vidéo](https://www.youtube.com/watch?v=BkWjkKkhiRk)
 * [Tableau blanc](./L2S4_seance5_2022.pdf)
 * [Corrections tapées](./seance_5_corrections.pdf)
+
+# Séance de révision (vendredi 29 avril 2022, 15h)
+
+Nous allons réaliser une séance de révision en distanciel le **vendredi 29 avril 2022 à 15h**.
+
+J'enregistrerai cette séance afin de la partager à tous ensuite ici.
+
+Nous allons utiliser Zoom, que vous devriez tous connaître.
+
+* [Lien de la visio](https://univ-lille-fr.zoom.us/j/99226128553?pwd%3Dajd2Q1hUSm02UzFvbjZTd2IyVG5vdz09) 
+* **Code : 209002**
+* N'ayant pas organisé de visio depuis un an, je ne sais pas si vous devrez vous connecter. Si c'est le cas, utilisez vos identifiants @univ-lille-fr
+* Afin de créer cette visio, j'ai crée un "cours" dans moodle [à cette adresse](https://moodle.univ-lille.fr/course/view.php?id=33904) que vous pouvez rejoindre anonymement avec le code : **7hwwy6**
+
+## Sujet de l'an dernier : 
+
+* [page 1](./exam_2021_1.jpeg) 
+* [page 2](./exam_2021_2.jpeg)
+
+Si zoom pose trop de problème, je ferai un live sur youtube, depuis [ce channel](https://www.youtube.com/channel/UCktDNsB-vB9pA6QXluZbJvQ). Cela limitera les échanges mais ça devrait marcher sur toutes les plateformes sans problème.
+
+Si c'est le cas, je l'indiquerai ici le moment venu.
+
