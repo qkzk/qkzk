@@ -48,3 +48,7 @@ Si zoom pose trop de problème, je ferai un live sur youtube, depuis [ce channel
 
 Si c'est le cas, je l'indiquerai ici le moment venu.
 
+
+# Compléments et documents
+
+* Correction des exercices traités en TD. Une grande partie des exercices du polycopiés sont corrigés dans [ce document](./corrections.pdf).
