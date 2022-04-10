@@ -43,6 +43,8 @@ Nous allons utiliser Zoom, que vous devriez tous connaître.
 
 * [page 1](./exam_2021_1.jpeg) 
 * [page 2](./exam_2021_2.jpeg)
+* [correction vidéo](https://www.youtube.com/watch?v=aLrM9NmafFo)
+* [tableau blanc](./L2S4_correction_2021.pdf)
 
 Si zoom pose trop de problème, je ferai un live sur youtube, depuis [ce channel](https://www.youtube.com/channel/UCktDNsB-vB9pA6QXluZbJvQ). Cela limitera les échanges mais ça devrait marcher sur toutes les plateformes sans problème.
 
