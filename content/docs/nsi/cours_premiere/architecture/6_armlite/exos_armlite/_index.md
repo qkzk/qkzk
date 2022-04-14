@@ -267,6 +267,72 @@ Diviser(a: entier, b: entier)
 1. Traduire ce programme en assembleur.
 2. Vérifier qu'il renvoie le résultat correct pour les divisions de $7$ par $2$ et de $21$ par $4$
 
+## Ecrit 10 - Maximum d'une collection
+
+Dans cette partie, plus délicate, on va s'intéresser à _l'adressage indirect._
+
+Ce principe permet de réaliser des opérations sur les adresses. L'objectif est d'utiliser un tableau
+de données enregistré en mémoire.
+
+### Enregister les données.
+
+1. On aligne d'abord la mémoire à une adresse spécifiée, assez grande pour pouvoir enregistrer le code avant.
+2. On spécifie la taille totale des données, en nombre de mots,
+3. On donne un nom à l'adresse de départ de la collection, ensuite on écrit les valeurs de cette collection.
+
+### Le programme lui même
+
+Dans le code, on va d'abord charger l'adresse du premier élément.
+Pour accéder au suivant, on se déplace de la taille d'un mot (4 octets) dans la mémoire.
+Et ainsi de suite.
+
+### Un exemple
+
+Le code suivant présente un parcours séquentiel afin de déterminer un maximum. C'est le plus simple que je parvienne à écrire, il y a sûrement mieux !
+
+```java
+  1|      MOV R1, #tableau  // adresse du début du tableau
+  2|      LDR R2, longueur  // taille du tableau
+  3|      LSL R2, R2, #2    // multiplier par 2**2 pour compter les octets (1 mot = 4 octets)
+  4|      MOV R3, #0        // compteur de boucle
+  5|      LDR R4, tableau   // maximum
+  6|boucle:
+  7|      LDR R5, [R1+R3]   // charger la valeur courante
+  8|      ADD R3, R3, #4    // incrémenter le compteur de boucle
+  9|      CMP R5, R4        // comparer la valeur courante au max
+ 10|      BGT nouveaumax    // on a un nouveau max ! 
+ 11|      B continuer       // doit-on continuer la boucle ?
+ 12|nouveaumax:
+ 13|      MOV R4, R5        // sauvegarder le nouveau max
+ 14|      B continuer       // doit on continuer la boucle ?
+ 15|continuer:
+ 16|      CMP R3, R2        // comparer l'indice de boucle au nombre d'éléments
+ 17|      BGT fin           // on dépasse, on s'arrête
+ 18|      B boucle          // on ne dépasse pas, encore un tour
+ 19|fin:
+ 20|      HALT
+ 21|      .ALIGN 0x00100
+ 22|longueur: 5             // taille du tableau
+ 23|tableau: 10             // 1er élément
+ 24|      11
+ 25|      5
+ 26|      8
+ 27|      4
+```
+
+L'étape importante est en trois temps :
+
+* d'abord ligne 1, on charge une _adresse_,
+* ensuite ligne 3 on mesure le nombre d'octets, vu qu'on doit donner une adresse dans cette unité,
+* enfin ligne 7 `[R1+R3]` va nous donner la position du nombre courant.
+
+1. Faire tourner ce programme à la main
+2. Que changer pour un tableau de 20 éléments ?
+3. L'adapter proprement pour déterminer :
+
+    a. le minimum des éléments,
+    b. la somme des éléments.
+
 # Exercices de programmation
 
 Tous ces exercices doivent se traiter dans le [simulateur ARMLite](https://peterhigginson.co.uk/ARMlite/)
