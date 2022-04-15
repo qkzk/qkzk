@@ -35,7 +35,7 @@ J'enregistrerai cette séance afin de la partager à tous ensuite ici.
 Nous allons utiliser Zoom, que vous devriez tous connaître.
 
 * [Lien de la visio](https://univ-lille-fr.zoom.us/j/99226128553?pwd%3Dajd2Q1hUSm02UzFvbjZTd2IyVG5vdz09) 
-* **Code : 209002**
+* **Code : 209002** à saisir directement dans l'accueil de Moodle.
 * N'ayant pas organisé de visio depuis un an, je ne sais pas si vous devrez vous connecter. Si c'est le cas, utilisez vos identifiants @univ-lille-fr
 * Afin de créer cette visio, j'ai crée un "cours" dans moodle [à cette adresse](https://moodle.univ-lille.fr/course/view.php?id=33904) que vous pouvez rejoindre anonymement avec le code : **7hwwy6**
 
