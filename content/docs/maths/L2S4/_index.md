@@ -54,3 +54,5 @@ Si c'est le cas, je l'indiquerai ici le moment venu.
 # Compléments et documents
 
 * Correction des exercices traités en TD. Une grande partie des exercices du polycopiés sont corrigés dans [ce document](./corrections.pdf).
+
+* Correction de l'IE2. [Vidéo](https://www.youtube.com/watch?v=0XL6-bXYWzU), [tableau blanc](./L2S4_correction_IE2.pdf), [pdf](./2022-l2s4-ie2_corr.pdf)
