@@ -1,12 +1,12 @@
 ---
-title: Programmation Dynamique - cours
-bookCollapseSection: true
+title: Cours
 author: qkzk
 date: 2020/04/29
 weight: 1
+
 ---
 
-### pdf: [pour impression](/uploads/docnsitale/algo/prog_dynamique/1_cours_prog_dynamique_print.pdf)
+[pdf](./1_cours_prog_dynamique_print.pdf)
 
 # Programmation dynamique
 
@@ -22,8 +22,8 @@ Voici un contexte dans lequel elle s'applique :
 **Programmation dynamique :**
 
 
-> La programmation dynamique est désigne une classe d'algorithmes qui résolvent un
-> problème complexe en le divisant en sous-problèmes et conservent les résultats des
+> La programmation dynamique désigne une classe d'algorithmes qui résolvent un
+> problème complexe en le divisant en sous-problèmes et en conservant les résultats des
 > sous-problèmes pour éviter de calculer à nouveau les mêmes résultats.
 >
 > Deux propriétés principales d’un problème suggèrent qu'il peut être résolu
@@ -47,7 +47,7 @@ Fibonnacci.
 > * $F_{n + 2} = F_{n + 1} + F_{n}$ pour tout $n \in \mathbb{N}$
 
 
-On veut simplement calculer le n^ième^ terme de la suite de Fibonnacci.
+On veut simplement calculer le énième terme de la suite de Fibonnacci.
 
 Pour calculer $F_4$ quels sont les termes dont on a besoin ?
 
@@ -73,7 +73,7 @@ immédiatement à faire plusieurs fois le même calcul.
 
 On peut s'en convaincre en regardant l'arbre des appels récursifs pour $F_5$
 
-![Fib 5](/uploads/docnsitale/algo/prog_dynamique/img/fib_5.jpg)\
+![Fib 5](img/fib_5.jpg)\
 
 * En jaune : les deux fois où l'on appelle $F_3$
 * En noir : les trois fois où l'on appelle $F_2$
@@ -198,7 +198,7 @@ n'est pas suffisant.
 ## Approche du bas vers le haut
 
 Contrairement à la méthode diviser pour régner, la programmation dynamique
-privilégie une approche du haut vers le bas.
+privilégie une approche du bas vers le haut.
 
 Dans l'exemple de Fibonacci, ça change tout !
 

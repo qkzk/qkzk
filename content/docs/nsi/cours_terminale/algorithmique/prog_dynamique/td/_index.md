@@ -1,12 +1,12 @@
 ---
-title: "Programmation Dynamique - Travaux dirigés"
-bookCollapseSection: true
+title: "Travaux dirigés"
 author: qkzk
 date: 2020/04/29
 weight: 2
+
 ---
 
-### pdf: [pour impression](/uploads/docnsitale/algo/prog_dynamique/2_td_prog_dynamique.pdf)
+[pdf](./2_td_prog_dynamique.pdf)
 
 ## Introduction
 
@@ -39,7 +39,7 @@ les sommets 2 et 5 ne sont pas reliés.
 > Déterminer la valeur maximale de la somme des chemins traversant une pyramide
 > de nombre.
 >
-> Dans le premier exemple, le chemin `1 - 8 - 2 - 5` à pour somme 16, qui est maximale.
+> Dans le premier exemple, le chemin `3 - 4 - 7 - 5` à pour somme 21, qui est maximale.
 
 
 
