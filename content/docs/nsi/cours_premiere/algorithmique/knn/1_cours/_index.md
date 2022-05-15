@@ -6,6 +6,7 @@ weight: 1
 
 ### pdf : [pour impression](./1_intro.pdf)
 
+
 Nous allons étudier un algorithme d'apprentissage automatique (_machine learning_)
 dont l'objectif est de classifier des objets.
 
@@ -84,10 +85,10 @@ pour lesquelles on connait déjà la classe.
 
 ## Exemple
 
-On considère deux espères, les crocodiles et les alligators.
+On considère deux espèces, les _crocodiles_ et les _alligators_.
 
 On a des raisons de supposer qu'on peut les distinguer en mesurant la
-largeur de leur gueule et leur longueur.
+largeur de leur gueule et la longueur de leur corps.
 
 | gueule  | longueur | classe    |
 |---------|----------|-----------|
@@ -101,9 +102,9 @@ largeur de leur gueule et leur longueur.
 | 0.49    | 4.9      | crocodile |
 | 0.46    | 4.08     | crocodile |
 
-On ajoute un nouvel animal dont on connait les caractéristiques :
+On ajoute un nouvel animal dont on connait les caractéristiques **mais pas l'espèce** :
 
-> `N : gueule = 0.19, longueur = 2.91`
+> `Nouveau : gueule = 0.19, longueur = 2.91`
 
 > **À quelle espèce appartient-il ?**
 
@@ -140,6 +141,8 @@ de notre nouvel animal :
 
 ## Complexité
 
+Intéressons-nous à la complexité de cet algorithme. Le résultat sera décevant !
+
 * Afin de calculer les distances, un parcourt du tableau suffit : $O(n)$
 * Mais... on décide de converver les $k$ plus proches... on pourrait être tenté
   de trier et la complexité deviendrait $O(n\log(n))$ ou pire, $O(n^2)$
@@ -151,7 +154,7 @@ de notre nouvel animal :
 
   Ainsi la complexité devient $O(k \times n)$, mais $k$ étant constant : $O(n)$.
 
-L'algorithme de $k$ plus proches voisins, bien implanté, est _linéaire._
+L'algorithme de $k$ plus proches voisins, bien implanté, est _linéaire en la taille des données._
 
 ## Choix d'une distance et pré-traitement des données
 
@@ -161,10 +164,10 @@ la distance _usuelle_, vue en seconde n'en est qu'une parmi d'autre.
 Selon le type de donnée, on peut amené à changer la distance employée.
 
 C'est en particulier le cas lorsqu'on utilise avec des données _qualitatives_
-(couleur des yeux).
+(couleur des yeux, plat favori etc.).
 
 Par ailleurs, ainsi qu'on peut le remarquer dans l'exemple précédent, les données
-ne sont pas toutes du même ordre de grandeur. Cela engendre un problème,
+ne sont pas toutes du même ordre de grandeur. Cela engendre un problème :
 les données les plus _grandes_ vont peser plus lourdement dans le calcul de distance.
 
 Afin de pallier cette difficulté on _normalise_ les données, c'est à dire
@@ -191,3 +194,6 @@ déterminant les autres vidéos dont elle est le plus proche.
 
 On utilise plusieurs labels différents ("intérêt chez les moins de 18",
 "nombre de scènes d'action" etc.) et on détermine les plus représentatifs.
+
+Bien sûr, d'autres traitements sont effectués afin d'accélérer le procédé sans perdre
+trop de précision sur les recommandations.
