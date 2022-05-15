@@ -56,7 +56,7 @@ On dispose des données d’apprentissage suivantes :
 
 Ces données sont placées dans un repère ($L$ en abscisse, $H$ en ordonnée).
 
-![](./img/fruit-color.png){width=40%}
+![](./img/fruit-color.png)
 
 L’objectif ici est d’étudier l’influence des voisins sur la propriété de couleur d’un fruit.
 
