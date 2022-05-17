@@ -8,20 +8,31 @@ geometry: margin=1.5cm
 
 ---
 
-**pdf : [impression](./0_resume-Article.pdf)**
+**pdf : [impression](./0_resume.pdf)**
 
 ## Modèle de Von Neumann
 
 
 ### ![Modèle original](../img/modele-originel2.gif)
 
-* **Processeur** : composé de deux parties :
+* **Processeur** : composé de deux unités
 * **Unité de commande** : contrôle la séquence d'instructions
-* **Unité arithmétique** : exécute ces instructions
-* **Mémoire** : contient les données et **les programmes**
+* **Unité arithmétique** : exécute les instructions
+* **Mémoire** : contient les données et **les programmes**. 
+    mémoire _volatile_ (qui s'efface après redémarrage, mais rapide)
+    et de _masse_ (stockage)
 * **Entrées** : clavier, cartes perforées, etc.
-* **Sorties** : affichages, imprimantes, écran
+* **Sorties** : affichage, imprimante, écran
 
+### Apport de von Neumann
+
+
+Dans ce modèle il est le premier à utiliser **une seule mémoire pour enregistrer les programmes et leurs données**.
+
+Il reprend d'autres concepts comme la séparation entre la mémoire et le processeur.
+
+En traitant les _instructions_ de la même manière que les _autres données_, il permet de concevoir des programmes
+qui créeent d'autres programmes. Cette idée est à l'origine des _compilateurs_ et des _interpréteurs_.
 
 ### Cycle
 

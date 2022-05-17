@@ -24,7 +24,9 @@ En 1944, il propose un modèle _d'architecture_ novateur qui sert toujours de ba
 * **Processeur** : composé de deux unités
 * **Unité de commande** : contrôle la séquence d'instructions
 * **Unité arithmétique** : exécute les instructions
-* **Mémoire** : contient les données et **les programmes**
+* **Mémoire** : contient les données et **les programmes**. 
+    mémoire _volatile_ (qui s'efface après redémarrage, mais rapide)
+    et de _masse_ (stockage)
 * **Entrées** : clavier, cartes perforées, etc.
 * **Sorties** : affichage, imprimante, écran
 
@@ -158,7 +160,9 @@ Les machines sont encore colossales !
 * **Processeur** : composé de deux unités
 * **Unité de commande** : contrôle la séquence d'instructions
 * **Unité arithmétique** : exécute les instructions
-* **Mémoire** : contient les données et **les programmes**
+* **Mémoire** : contient les données et **les programmes**. 
+    mémoire _volatile_ (qui s'efface après redémarrage, mais rapide)
+    et de _masse_ (stockage)
 * **Entrées** : clavier, cartes perforées, etc.
 * **Sorties** : affichage, imprimante, écran
 
@@ -195,3 +199,14 @@ Dans la mémoire on trouve à la fois les programmes et les données.
 ## Entrées et sorties
 
 L'interface du processeur. Sur un processeur moderne ce sont les broches.
+
+## L'apport de von Neumann
+
+John von Neumann élabore son modèle pour concevoir l'EDVAC, en juin 1945.
+
+Dans ce modèle il est le premier à utiliser **une seule mémoire pour enregistrer les programmes et leurs données**.
+
+Il reprend d'autres concepts comme la séparation entre la mémoire et le processeur.
+
+En traitant les _instructions_ de la même manière que les _autres données_, il permet de concevoir des programmes
+qui créeent d'autres programmes. Cette idée est à l'origine des _compilateurs_ et des _interpréteurs_.
