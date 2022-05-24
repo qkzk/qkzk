@@ -10,165 +10,38 @@
 {{ end }}
 </h2>
 <main>
-    <label for='commands_{{ .Ordinal | safeJS }}'>Commande SQL</label>
-    <br>
-
-    <textarea id="commands_{{ .Ordinal | safeJS }}">
+    <div id="ide_{{ .Ordinal | safeJS }}">
+        <label for='commands_{{ .Ordinal | safeJS }}'>Commande SQL</label>
+        <br>
+        <textarea id="commands_{{ .Ordinal | safeJS }}" class="commands">
 {{ if gt (len .Inner) 1 }}{{ .Inner }}{{ end }}
-    </textarea>
-
-    <button id="execute_{{ .Ordinal | safeJS}}" class="execute btn-sql">Exécuter</button>
-
-    <div id="error_{{ .Ordinal | safeJS }}" class="error"></div>
-
-    <pre id="output_{{ .Ordinal | safeJS }}" class="output">Résultat</pre>
+        </textarea>
+        <button id="execute" class="execute btn-sql">Exécuter</button>
+        <div id="error" class="error"></div>
+        <pre id="output_{{ .Ordinal | safeJS }}" class="output">Résultat</pre>
+    </div>
 </main>
 
-
 <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.58.1/mode/sql/sql.min.js"></script>
-<script type="text/javascript">
-    var worker_{{ .Ordinal | safeJS }} = new Worker("{{ .Site.BaseURL }}js/worker.sql-wasm.js");
-    var execBtn_{{ .Ordinal | safeJS }} = document.getElementById("execute_{{ .Ordinal | safeJS }}");
-    var outputElm_{{ .Ordinal | safeJS }} = document.getElementById('output_{{ .Ordinal | safeJS }}');
-    var errorElm_{{ .Ordinal | safeJS }} = document.getElementById('error_{{ .Ordinal | safeJS }}');
-    var commandsElm_{{ .Ordinal | safeJS }} = document.getElementById('commands_{{ .Ordinal | safeJS }}');
-    var dbFileElm_{{ .Ordinal | safeJS }} = document.getElementById('dbfile_{{ .Ordinal | safeJS }}');
-    var savedbElm_{{ .Ordinal | safeJS }} = document.getElementById('savedb_{{ .Ordinal | safeJS }}');
-
-    // Start the worker in which sql.js will run
-    worker_{{ .Ordinal | safeJS }}.onerror = function (e) {
-            console.log(e);
-            errorElm_{{ .Ordinal | safeJS }}.style.height = '2em';
-            errorElm_{{ .Ordinal | safeJS }}.textContent = e.message;
-        };
-
-    // Open a database
-    worker_{{ .Ordinal | safeJS }}.postMessage({ action: 'open' });
-
-    function error_{{ .Ordinal | safeJS }}(e) {
-        console.log(e);
-        errorElm_{{ .Ordinal | safeJS }}.style.height = '2em';
-        errorElm_{{ .Ordinal | safeJS }}.textContent = e.message;
-    }
-
-    function print_{{ .Ordinal | safeJS }}(text) {
-        outputElm_{{ .Ordinal | safeJS }}.innerHTML = text.replace(/\n/g, '<br>');
-    }
-
-    function noerror_{{ .Ordinal | safeJS }}() {
-        errorElm_{{ .Ordinal | safeJS }}.style.height = '0';
-    }
-
-    // Execute the commands when the button is clicked
-    function execEditorContents_{{ .Ordinal | safeJS }}() {
-        noerror_{{ .Ordinal | safeJS }}()
-        execute_{{ .Ordinal | safeJS }}(editor_{{ .Ordinal | safeJS }}.getValue() + ';');
-    }
-
-    // Performance measurement functions
-    var tictime;
-    if (!window.performance || !performance.now) { window.performance = { now: Date.now } }
-    function tic() { tictime = performance.now() }
-    function toc(msg) {
-        var dt = performance.now() - tictime;
-        console.log((msg || 'toc') + ": " + dt + "ms");
-    }
-
-    function execute_{{ .Ordinal | safeJS }}(commands) {
-        tic();
-        worker_{{ .Ordinal | safeJS }}.onmessage = function(event) {
-            var results = event.data.results;
-            toc("Executing SQL");
-            if (!results) {
-                error_{{ .Ordinal | safeJS }}({ message: event.data.error });
-                return;
-            }
-
-            tic();
-            outputElm_{{ .Ordinal | safeJS }}.innerHTML = "";
-            for (var i = 0; i < results.length; i++) {
-                outputElm_{{ .Ordinal | safeJS }}.appendChild(tableCreate(results[i].columns, results[i].values));
-            }
-            toc("Displaying results");
-        }
-        worker_{{ .Ordinal | safeJS }}.postMessage({ action: 'exec', sql: commands });
-        outputElm_{{ .Ordinal | safeJS }}.textContent = "Fetching results...";
-    }
-
-    // Create an HTML table
-    var tableCreate = function() {
-        function valconcat(vals, tagName) {
-            if (vals.length === 0) return '';
-            var open = '<' + tagName + '>', close = '</' + tagName + '>';
-            return open + vals.join(close + open) + close;
-        }
-        return function(columns, values) {
-            var tbl = document.createElement('table');
-            var html = '<thead>' + valconcat(columns, 'th') + '</thead>';
-            var rows = values.map(function(v) { return valconcat(v, 'td'); });
-            html += '<tbody>' + valconcat(rows, 'tr') + '</tbody>';
-            tbl.innerHTML = html;
-            return tbl;
-        }
-    }();
-
-    execBtn_{{ .Ordinal | safeJS }}.addEventListener(
-            "click", 
-            execEditorContents_{{ .Ordinal | safeJS }}, 
-            true
-        );
-
-    // Add syntax highlihjting to the textarea
-    var editor_{{ .Ordinal | safeJS }} = CodeMirror.fromTextArea(commandsElm_{{ .Ordinal | safeJS }}, {
-        mode: 'text/x-mysql',
-        viewportMargin: Infinity,
-        indentWithTabs: true,
-        smartIndent: true,
-        lineNumbers: false,
-        matchBrackets: true,
-        autofocus: true,
-        extraKeys: {
-            "Ctrl-Enter": execEditorContents_{{ .Ordinal | safeJS }},
-        }
-    });
-
-
+<script type="text/javascript" src="{{ .Site.BaseURL }}js/sql_ide.js"></script>
+<script>
     {{ if .Get `dbfile` }}
-    async function load_db_file_{{ .Ordinal | safeJS }}(filepath) {
-        console.log("loading :", filepath);
-        worker_{{ .Ordinal | safeJS }}.postMessage({ action: 'open' });
-
-        const u = new URL(filepath);
-        fetch(u).then(res => res.arrayBuffer()).then(buf => {
-            try {
-                worker_{{ .Ordinal | safeJS }}.postMessage({ action: 'open', 'buffer': buf }, [buf]);
-            } catch (exception) {
-                worker_{{ .Ordinal | safeJS }}.postMessage({ action: 'open', 'buffer': buf });
-            }
-        });
-    }
-    const dbfile_{{ .Ordinal | safeJS }} = "{{ .Site.BaseURL }}" + "/" + "{{ .Page.File.Dir }}" + "{{ .Get `dbfile` }}";
-    console.log("file from markdown:", dbfile_{{ .Ordinal | safeJS }});
-    load_db_file_{{ .Ordinal | safeJS }}(dbfile_{{ .Ordinal | safeJS }});
+        var dbfile = "{{ .Site.BaseURL }}" + "/" + "{{ .Page.File.Dir }}" + "{{ .Get `dbfile` }}";
+        console.log("dbfile", dbfile);
+    {{ else }}
+        var dbfile = null;
     {{ end }}
-
 
     {{ if .Get `init` }}
-    async function load_commands_file_{{ .Ordinal | safeJS }}(filepath) {
-        const u = new URL(filepath);
-        fetch(u).then(res => res.text()).then(text => {
-            try {
-                execute_{{ .Ordinal | safeJS }}(text);
-            } catch (exception) {
-                console.log(exception);
-                console.log("commands failed");
-            }
-        });
-    }
-
-    console.log("commands:", {{ .Get `init` }});
-    const init_{{ .Ordinal | safeJS }} = "{{ .Site.BaseURL }}" + "/" + "{{ .Page.File.Dir }}" + "{{ .Get `init` }}";
-    console.log("init:", init_{{ .Ordinal | safeJS }});
-    load_commands_file_{{ .Ordinal | safeJS }}(init_{{ .Ordinal | safeJS }});
+        var init_file = "{{ .Site.BaseURL }}" + "/" + "{{ .Page.File.Dir }}" + "{{ .Get `init` }}";
+    {{ else }}
+        var init_file = null;
     {{ end }}
+
+    var worker_url = "{{ .Site.BaseURL }}js/worker.sql-wasm.js";
+
+    onElementLoaded("div#ide_{{ .Ordinal | safeJS }}").then(() => {
+        const ide = document.querySelector("div#ide_{{ .Ordinal | safeJS }}");
+        load(ide, worker_url, dbfile, init_file);
+    }).catch(() => { });
 </script>
