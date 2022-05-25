@@ -1,8 +1,26 @@
 ---
 title: "Editeur SQL"
-weight: 100
+weight: 1000
 
 ---
+
+Cette partie présente différentes manières d'intégrer une BDD dynamique dans une page web.
+
+Il n'y a pas grand chose à faire, simplement s'assurer qu'on obtient des réponses et qu'elles sont cohérentes.
+
+
+Lorsque la page est chargée par le navigateur, celui-ci crée en mémoire une base de donnée par bloc respectif.
+Celles sont indépendantes et sont réinitialisées à chaque chargement. Pensez à écrire vos requêtes à l'extérieur avant de recharger.
+Plusieurs requêtes peuvent être exécutées dans une seule fenêtre d'édition :
+
+```
+SELECT * FROM employees;
+SELECT id, name FROM employees;
+```
+
+Va afficher deux tables.
+
+Ainsi, on peut modifier la BDD et afficher le résultat immédiatement.
 
 # Sql dans le navigateur
 

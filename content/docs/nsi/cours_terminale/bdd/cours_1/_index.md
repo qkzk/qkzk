@@ -2,14 +2,15 @@
 title: "introduction"
 bookCollapseSection: true
 author: qkzk
-weight: 10
+weight: 2
+
 ---
 
 
 
 
 
-### pdf : [pour impression](/uploads/docnsitale/bdd/cours_sql1_print.pdf), [diapo](/uploads/docnsitale/bdd/cours_sql1_slides.pdf)
+pdf : [pour impression](/uploads/docnsitale/bdd/cours_sql1_print.pdf), [diapo](/uploads/docnsitale/bdd/cours_sql1_slides.pdf)
 
 <!-- à compiler par
 pandoc -t beamer --slide-level 2 -V "aspectratio=1610" -s cours_sql1.md -o cours_sql1_slides.pdf
@@ -19,8 +20,10 @@ pandoc -t beamer --slide-level 2 -V "aspectratio=1610" -s cours_sql1.md -o cours
 
 ## Principe
 
-Une _base de donnée_ est un concept qui permet de stocker efficacement une immense
-quantité d'information. Elles permettent de croiser facilement les informations
+Une _base de donnée_ permet de stocker efficacement une immense
+quantité d'information. 
+
+Les BDD permettent de croiser facilement les informations
 et d'en extraire le contenu.
 
 Les bases de données _relationnelles_ sont apparues dans les années 60 et sont
@@ -52,9 +55,9 @@ l'organisation répond à une logique systématique.
 
 * **BDD** : ensemble des tables.
 * **Table** (parfois **relation**) : c'est l'ensemble des **enregistrements** qui existent sur les données
-* **Colonne** (parfois **Champs** ou **attributs**) : "departement", "code" etc. : les différents champs à rempir
-* **Ligne**  (parfois **Enregistrement** ou **relations**) : "1", "2" etc. les données elles-mêmes.
-* **Cellules** (parfois **cases**) : la valeur elle même.
+* **Colonne** (parfois **champs** ou **attributs**) : "departement", "code" etc. : les différents champs à rempir
+* **Ligne**  (parfois **Enregistrement** ou **Relations**) : "1", "2" etc. les données elles-mêmes.
+* **Cellules** (parfois **Cases**) : la valeur elle même.
 
 ## BDD relationnelle
 
@@ -86,15 +89,16 @@ Par exemple, pour un compte bancaire :
 Chaque fois qu'on enregistre quelque chose dans la base de donnée
 il faut s'assurer que la donnée n'est pas _déjà_ présente.
 
-On résout ce problème avec la notion de "clé"
+On résout ce problème avec la notion de "clé".
 
-### Clé primaire = Primary Key (PK)
+### Clé primaire (_Primary Key_) (PK)
+
 * Identifie de manière unique une ligne
 * Ne doit pas être `NULL` (vide)
 * Peut être composée d'une ou plusieurs colonnes
 * Ajout d'une colonne dédiée si besoin
 
-### Clé étrangère = Foreign Key (FK)
+### Clé étrangère (_Foreign Key_) (FK)
 * Référence une ou plusieurs colonnes d'une autre table (représentant
 une clé primaire)
 * Les colonnes référencées doivent pré-exister dans la table référencée
@@ -205,14 +209,12 @@ Ainsi, le numéro de sécu est à la fois :
   * Modification de données : `UPDATE`
   * Suppression de données : `DELETE`
 
-##
 
 * Définition des données
   * Manipule les structures de données de la base
   * Création de tables et autres structures : `CREATE`
   * ...
 
-##
 
 * Contrôle des données et des transactions
   * Gestion des autorisations d'accès aux données par les différents utilisateurs
@@ -221,13 +223,12 @@ Ainsi, le numéro de sécu est à la fois :
 
 
 
-## Description de SQL
 
 ### SGBDR = Système de Gestion de Bases de Données Relationnelle
 * Logiciel permettant de manipuler le contenu des bases de données relationnelles
 * Garantit la qualité, la pérennité et la confidentialité des informations
-* Exemple : [SQLite](https://sqlite.org/) est un SGBDR dont le code
-source est dans le domaine public ![logo SQLite](/uploads/docnsitale/bdd/fig/SQLite370.svg.png)
+* Exemple : [SQLite](https://sqlite.org/) ![logo SQLite](/uploads/docnsitale/bdd/fig/SQLite370.svg.png) est un SGBDR dont le code
+source est dans le domaine public 
 
 ### C'est un langage déclaratif
 * Décrit le résultat voulu sans décrire la manière de l'obtenir
@@ -252,16 +253,19 @@ parfois commodes.
 
 ## SQLite
 
-Nous utiliserons SQLite qui est implémenté :
+Nous utiliserons SQLite qui est programmé en C et qu'on peut utiliser depuis
 
 * en Python (`import sqlite3`)
 * sous windows / linux / osx (DB Browser, `$ sqlitebrowser`)
 * ainsi [qu'en ligne](https://inloop.github.io/sqlite-viewer/).
+* ou même sur mon site [Editeur](https://qkzk.xyz/docs/nsi/cours_terminale/bdd/sqljs/) et [TP commande](https://qkzk/docs/nsi/cours_terminale/bdd/tp_commandes/).
 
 mais aussi
 
 * iOS,
 * Android etc.
+
+À noter, toutes les applications mobiles qui enregistrent _localement_ beaucoup de données utilisent SQLite. Ce n'est pas le seul moyen d'enregistrer quelque chose sur le téléphone : fichiers, "local storage = dictionnaire" etc.
 
 ## Extraction des données d'une table
 
@@ -272,19 +276,59 @@ SELECT noms_colonnes_séparés_par_virgules
 
 Sélectionne toutes les lignes d'une table
 
-##
 
-### Précisions sur les colonnes affichées
-
-* `*` pour toutes les colonnes
+### `*` pour toutes les colonnes
 
 ```sql
 SELECT *
     FROM nom_table;
 ```
-##
 
-* `DISTINCT` pour sélectionner une seule occurrence de chaque valeur de la colonne en question
+Avant de se lancer, une petite parenthèse :
+
+### Les cellules de code exécutables. 
+
+Cette page présente des cellules comme celle ci-dessous, exécutables.
+
+Durant tout ce cours, on utilisera les mêmes données issues de deux tables.
+
+Intéressons nous d'abord à la table `employees`.
+
+Voici le code qui a permis de la créer puis de la remplir :
+
+```sql
+
+DROP TABLE IF EXISTS employees;
+CREATE TABLE employees( id integer,
+                        name text,
+                        designation text,     
+                        manager integer,
+                        hired_on date,     
+                        salary integer,
+                        commission float,    
+                        dept integer);
+
+INSERT INTO employees VALUES (1,'JOHNSON','ADMIN',6,'1990-12-17',18000,NULL,4);
+INSERT INTO employees VALUES (2,'HARDING','MANAGER',9,'1998-02-02',52000,300,3);
+INSERT INTO employees VALUES (3,'TAFT','SALES I',2,'1996-01-02',25000,500,3);
+INSERT INTO employees VALUES (4,'HOOVER','SALES I',2,'1990-04-02',27000,NULL,3);
+INSERT INTO employees VALUES (5,'LINCOLN','TECH',6,'1994-06-23',22500,1400,4);
+INSERT INTO employees VALUES (6,'GARFIELD','MANAGER',9,'1993-05-01',54000,NULL,4);
+INSERT INTO employees VALUES (7,'POLK','TECH',6,'1997-09-22',25000,NULL,4);
+```
+
+* La première ligne efface la table si elle existe déjà.
+* Ensuite on la crée avec tous ses attributs (et généralement des contraintes, pas ici.)
+* Ensuite on insère un par un les enregistrements.
+
+Voilà le résultat :
+
+{{< sql title="Séléctionner toute une table" init="init.sql">}}
+SELECT * FROM employees;
+{{< /sql >}}
+
+
+### `DISTINCT` pour sélectionner une seule occurrence de chaque valeur de la colonne en question
 
 ```sql
 SELECT DISTINCT nom_colonne
@@ -298,7 +342,14 @@ SELECT DISTINCT categorie, genre
     FROM evolution;
 ```
 
-## Extraction des données d'une table
+
+{{< sql title="avec et sans DISTINCT" init="init.sql">}}
+SELECT manager FROM employees;
+
+SELECT DISTINCT manager FROM employees;
+{{< /sql >}}
+
+### Sélectionne uniquement les lignes qui respectent la clause du `WHERE`
 
 ```sql
 SELECT noms_colonnes_séparés_par_virgules
@@ -306,9 +357,12 @@ SELECT noms_colonnes_séparés_par_virgules
     WHERE nom_colonne op_comp valeur op_bool nom_colonne op_comp valeur;
 ```
 
-Sélectionne uniquement les lignes qui respectent la clause du `WHERE`
+{{< sql title="WHERE" init="init.sql">}}
+SELECT name, salary, commission FROM employees
+WHERE salary > 50000;
+{{< /sql >}}
 
-##
+
 
 ### La clause porte sur les valeurs des colonnes
 
@@ -329,6 +383,12 @@ SELECT code, categorie, effectif
 	WHERE categorie="Agriculteurs Exploitants" OR categorie="Ouvriers";
 ```
 
+
+{{< sql title="WHERE, opération booléennes" init="init.sql">}}
+SELECT name, salary, commission FROM employees
+WHERE salary > 20000 AND commission > 0;
+{{< /sql >}}
+
 ## Extraction des données d'une table
 
 ```sql
@@ -336,6 +396,8 @@ SELECT abrev.nom_colonne AS nom_affiché
     FROM nom_table AS abrev
     ORDER BY nom_colonne [DESC];
 ```
+
+
 
 Change l'affichage et le nommage des données
 
@@ -348,6 +410,12 @@ dans le résultat.
 préciser de quelle table provient une colonne dont le nom est utilisé
 par plusieurs tables. Cette abréviation **doit** être utilisée dans le
 reste de la requête.
+
+{{< sql title="avec et sans AS" init="init.sql">}}
+SELECT name, manager FROM employees;
+SELECT name AS superman, manager AS superpower FROM employees;
+{{< /sql >}}
+
 
 ### `ORDER BY`
 
@@ -362,6 +430,12 @@ SELECT FONCTION(nom_colonne)
     FROM nom_table;
 ```
 
+
+{{< sql title="ORDER BY" init="init.sql">}}
+SELECT name, manager FROM employees
+ORDER BY salary ASC;
+{{< /sql >}}
+
 Applique une fonction sur les valeurs d'une colonne
 
 * `COUNT` : compte le nombre de lignes sélectionnées.
@@ -375,7 +449,7 @@ parmi les lignes sélectionnées
 
 
 <!-- new slide -->
-##
+### Aggrétats
 
 Exemple :
 
@@ -404,6 +478,17 @@ pour chaque ville.
 
 ![résultats avg sans GROUP BY](/uploads/docnsitale/bdd/fig/avg.png "sans agrégat") ![résultats avg avec GROUP BY](/uploads/docnsitale/bdd/fig/avg_group_by.png "avec agrégat")
 
+{{< sql title="AVERAGE" init="init.sql">}}
+SELECT AVG(salary) FROM employees;
+
+SELECT manager, AVG(salary) AS salary FROM employees
+GROUP BY manager;
+
+SELECT dept, AVG(salary) AS salary FROM employees
+GROUP BY dept;
+{{< /sql >}}
+
+
 ## Extraction des données de deux tables
 
 ### Produit cartésien
@@ -414,21 +499,59 @@ associations possibles entre les lignes des deux tables
 
 ![](/uploads/docnsitale/bdd/fig/produit_cartesien.png)
 
-## Extraction des données de deux tables
+{{< sql title="Produit cartésien" init="init_2_tables.sql">}}
+SELECT * FROM department;
+
+SELECT * FROM department, employees
+{{< /sql >}}
+
+Une autre manière d'écrire la même chose, parfois commode, `CROSS JOIN` :
+
+`CROSS`, comme la croix du produit... $2 \times 3 = 6$
+
+{{< sql title="Produit cartésien avec CROSS" init="init_2_tables.sql">}}
+SELECT * FROM department;
+
+SELECT * FROM department
+CROSS JOIN employees
+{{< /sql >}}
 
 ### `JOIN ON`
-* Génère uniquement les associations entre les lignes qui sont liées
+
+Génère uniquement les associations entre les lignes qui sont liées
 par des clés primaires et étrangères identiques.
-  * Nb_total_lignes = Nb_lignes_table_clé_étrangère = NB_lignes_evolution
-* À utiliser pour associer deux tables
+
+Permet d'associer deux tables qui sont en relation.
+
+**C'est la notion la plus importante et la plus délicate du chapitre.**
 
 ![](/uploads/docnsitale/bdd/fig/join_on.png)
 
+Dans l'exemple du code, `employees.dept` est un clé étrangère faisant référence à `departement.id`
+
+On fait donc une jointure sur cette clé :
+
+{{< sql title="Jointure" init="init_2_tables.sql">}}
+
+SELECT * FROM department
+JOIN employees ON employees.dept=department.id;
+{{< /sql >}}
+
+
+Qu'on peut affiner un peu, par exemple :
+
+{{< sql title="Jointure mieux présentée" init="init_2_tables.sql">}}
+
+SELECT e.name AS name, d.name AS dept FROM department AS d
+JOIN employees AS e ON e.dept=d.id
+ORDER BY d.id;
+{{< /sql >}}
+
 ## Modification des données
 
-### Syntaxe
+### Ajouter avec `INSERT`
 
-* `INSERT` : ajoute une nouvelle ligne de données dans une table
+`INSERT` : ajoute une nouvelle ligne de données dans une table
 
 ```sql
 INSERT INTO nom_table VALUES (liste_valeurs_dans_ordre_colonnes_table);
@@ -436,27 +559,90 @@ INSERT INTO nom_table (liste_nom_colonnes_à_remplir)
     VALUES (liste_des_valeurs_à_insérer_dans_ordre_liste_colonnes);
 ```
 
-##
 
-* `UPDATE` : met à jour la ou les lignes qui respectent la clause du `WHERE`
+{{< sql title="Insertion avant, après" init="init_2_tables.sql">}}
+SELECT * FROM department;
+INSERT INTO department VALUES (5,"Comms");
+SELECT * FROM department;
+{{< /sql >}}
+
+
+Depuis une base vide, les données sont insérées de la même manière...
+
+{{< sql title="vide" init="empty.sql">}}
+DROP TABLE IF EXISTS department;
+CREATE TABLE department(
+    id integer,
+    name text,
+	PRIMARY KEY("id")
+);
+
+
+  INSERT INTO department VALUES (1,"Sales");
+  INSERT INTO department VALUES (2,"Admin");
+  INSERT INTO department VALUES (3,"IT");
+  INSERT INTO department VALUES (4,"Foreign");
+
+  SELECT * FROM department;
+{{< /sql >}}
+
+### Aparté hors programme
+
+Il exite une autre manière d'insérer des données, très utilisée en pratique :
+
+```sql
+INSERT INTO table
+SELECT ( requete de selection )
+```
+
+Cela permet d'insérer des données en faisant référence à une autre table.
+C'est parfois indispensable, en particulier quand une table sert de pont entre deux tables :
+
+Par exemple pour des commande d'une client à un vendeur, on utilise trois tables :
+
+* client: les clients et leurs données statiques,
+* vendeur: les vendeurs idem,
+* commande: chaque commande avec une clé étrangère vers client et un autre vers vendeur.
+
+Pour insérer une commande du client A au vendeur B valant x€, il faudrait connaître les 
+identifiants du client et du vendeur.
+
+On utilise alors `INSERT INTO commande SELECT (...)`
+
+Ceci est largement hors programme et franchement mal documenté sur internet.
+
+### Mettre à jour avec `UPDATE`
+
+`UPDATE` : met à jour la ou les lignes qui respectent la clause du `WHERE`
 
 ```sql
 UPDATE nom_table SET nom_colonne1=valeur1, nom_colonne2=valeur2
     WHERE nom_colonne op_comp valeur op_bool nom_colonne op_comp valeur;
 ```
 
-##
+
+{{< sql title="UPDATE" init="init_2_tables.sql">}}
+SELECT * FROM department;
+UPDATE department SET name="Foreign Affair" WHERE name="Foreign";
+SELECT * FROM department;
+{{< /sql >}}
+
+### Effacer avec `DELETE`
 
 
-* `DELETE` : efface la ou les lignes d'une table qui respectent la clause du `WHERE`
+`DELETE` : efface la ou les lignes d'une table qui respectent la clause du `WHERE`
 
 ```sql
 DELETE FROM nom_table WHERE nom_colonne op_comp valeur op_bool nom_colonne op_comp valeur;
 ```
 
-## Modification des données
+{{< sql title="DELETE" init="init_2_tables.sql">}}
+SELECT * FROM department;
+DELETE FROM department WHERE name="Foreign";
+SELECT * FROM department;
+{{< /sql >}}
 
-### Respect de l'intégrité des données
+## Respect de l'intégrité des données
 
 * Une clé primaire doit être unique et non NULL
   * On ne peut pas insérer une ligne avec une clé primaire qui existe déjà.

@@ -3,7 +3,7 @@ title: "BDD : travaux dirigés"
 bookCollapseSection: true
 author: "qkzk"
 date: ""
-weight: 100
+weight: 50
 
 ---
 
