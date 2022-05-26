@@ -2,7 +2,7 @@
 title: "résumé - partie 1"
 bookCollapseSection: true
 author: qkzk
-weight: 1
+weight: 10
 
 ---
 
@@ -191,6 +191,23 @@ SELECT AVG(effectif) AS Moy_employes
 	WHERE categorie="Employés";
 ```
 
+## Modification des données
+
+```sql
+INSERT INTO nom_table (liste_nom_colonnes_à_remplir)
+    VALUES (liste_des_valeurs_à_insérer_dans_ordre_liste_colonnes);
+```
+
+```sql
+UPDATE nom_table SET nom_colonne1=valeur1, nom_colonne2=valeur2
+    WHERE nom_colonne op_comp valeur op_bool nom_colonne op_comp valeur;
+```
+
+```sql
+DELETE FROM nom_table 
+WHERE nom_colonne op_comp valeur op_bool nom_colonne op_comp valeur;
+```
+
 
 ## Extraction des données de deux tables
 
@@ -209,23 +226,6 @@ par des clés primaires et étrangères identiques.
 
 
 
-## Modification des données
-
-```sql
-INSERT INTO nom_table (liste_nom_colonnes_à_remplir)
-    VALUES (liste_des_valeurs_à_insérer_dans_ordre_liste_colonnes);
-```
-
-```sql
-UPDATE nom_table SET nom_colonne1=valeur1, nom_colonne2=valeur2
-    WHERE nom_colonne op_comp valeur op_bool nom_colonne op_comp valeur;
-```
-
-```sql
-DELETE FROM nom_table WHERE nom_colonne op_comp valeur op_bool nom_colonne op_comp valeur;
-```
-
-## Modification des données
 
 ### Respect de l'intégrité des données
 
