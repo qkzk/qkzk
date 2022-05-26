@@ -1,5 +1,5 @@
 ---
-title: "résumé - partie 1"
+title: "Résumé"
 bookCollapseSection: true
 author: qkzk
 weight: 10

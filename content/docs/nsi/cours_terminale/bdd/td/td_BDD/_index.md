@@ -1,13 +1,14 @@
 ---
-title: "TD : modèle relationnel"
+title: "Modèle relationnel"
 bookCollapseSection: true
 author: "qkzk"
 date: "2020/10/09"
 theme: metropolis
+weight: 2
 
 ---
 
-### PDF[pour impression](/uploads/docnsitale/bdd/BDD_TD.pdf)
+**pdf [pour impression](/uploads/docnsitale/bdd/BDD_TD.pdf)**
 
 **Compétence** : _Savoir analyser un modèle Entités/Associations_
 

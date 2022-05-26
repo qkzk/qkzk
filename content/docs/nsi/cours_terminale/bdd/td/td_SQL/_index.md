@@ -1,11 +1,12 @@
 ---
-title: "TD : langage SQL"
+title: "Langage SQL"
 bookCollapseSection: true
 author: "qkzk"
+weight: 1
 
 ---
 
-### PDF[pour impression](/uploads/docnsitale/bdd/SQL_TD.pdf)
+**pdf [pour impression](/uploads/docnsitale/bdd/SQL_TD.pdf)**
 
 Pour tous les exercices qui suivent on utilisera la base de données ci-dessous.
 

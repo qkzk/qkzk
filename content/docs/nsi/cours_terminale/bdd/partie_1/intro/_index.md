@@ -1,5 +1,5 @@
 ---
-title: "introduction"
+title: "Introduction"
 bookCollapseSection: true
 author: qkzk
 weight: 1

@@ -13,7 +13,7 @@ Lorsque la page est chargée par le navigateur, celui-ci crée en mémoire une b
 Celles sont indépendantes et sont réinitialisées à chaque chargement. Pensez à écrire vos requêtes à l'extérieur avant de recharger.
 Plusieurs requêtes peuvent être exécutées dans une seule fenêtre d'édition :
 
-```
+```sql
 SELECT * FROM employees;
 SELECT id, name FROM employees;
 ```
