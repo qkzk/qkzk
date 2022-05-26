@@ -13,6 +13,9 @@ Certaines questions sont "papier" et doivent être traitées à l'extérieur.
 
 Chaque chargement de la page réinitialise vos requêtes, pensez à sauvegarder vos requêtes au fur et à mesure.
 
+{{< hint danger >}}
+Ce TP couvre le programme... et le dépasse largement !
+{{< /hint >}}
 
 # Première partie : Jean-Pierre Combani, un aventurier moderne.
 
@@ -33,11 +36,13 @@ Voici leurs objectifs :
 
 ## Modèle relationnel
 
+{{< hint danger >}}
 Décrire un modèle relationnel permettant de réaliser cet objectif.
+{{< /hint >}}
 
 On n'oubliera pas les clés primaires et étrangères.
 
-On peut rédondre par un diagramme complet ou un schéma relationnel.
+On peut répondre par un diagramme complet ou un schéma relationnel.
 
 ## Conformité du modèle
 
@@ -75,22 +80,27 @@ CREATE TABLE "commande" (
 );
 ```
 
+{{< hint danger >}}
 1. Ce modèle est-il conforme à celui que vous avez retenu ? S'il y a des différences expliquez les.
-2. Depuis que l'informaticien a déménagé en Patagonie, la base de donnée n'est plus enretenue.
+{{< /hint >}}
+Depuis que l'informaticien a déménagé en Patagonie, la base de donnée n'est plus enretenue.
 
-    Cinq ventes ont été réalisées par le nouveau vendeur, Jean-Pierre Combani.
-    Elles concernent de nouveaux clients. Elles sont résumées dans le tableau ci-dessous.
+Cinq ventes ont été réalisées par le nouveau vendeur, Jean-Pierre Combani.
+Elles concernent de nouveaux clients. Elles sont résumées dans le tableau ci-dessous.
 
-    Dans quel ordre saisir les éléments dans la base ? Justifier. **On ne demande pas encore d'écrire de requêtes, seulement l'ordre.**
 
-    | Client           | Vendeur             | Date       | Paiment | Montant |
-    |------------------|---------------------|------------|---------|--------:|
-    | Durpet Micheline | Combani Jean-Pierre | 2022/04/19 | Espèce  |   1234€ |
-    | Siterne Frank    | Combani Jean-Pierre | 2022/04/21 | Chèque  |   3495€ |
-    | Siterne Frank    | Combani Jean-Pierre | 2022/05/02 | Espèce  |    625€ |
-    | Morteau Chaïna   | Combani Jean-Pierre | 2022/05/12 | Espèce  |   2455€ |
-    | Siterne Frank    | Combani Jean-Pierre | 2022/05/18 | Espèce  |     75€ |
+| Client           | Vendeur             | Date       | Paiment | Montant |
+|------------------|---------------------|------------|---------|--------:|
+| Durpet Micheline | Combani Jean-Pierre | 2022/04/19 | Espèce  |   1234€ |
+| Siterne Frank    | Combani Jean-Pierre | 2022/04/21 | Chèque  |   3495€ |
+| Siterne Frank    | Combani Jean-Pierre | 2022/05/02 | Espèce  |    625€ |
+| Morteau Chaïna   | Combani Jean-Pierre | 2022/05/12 | Espèce  |   2455€ |
+| Siterne Frank    | Combani Jean-Pierre | 2022/05/18 | Espèce  |     75€ |
 
+
+{{< hint danger >}}
+2.    Dans quel ordre saisir les éléments dans la base ? Justifier. **On ne demande pas encore d'écrire de requêtes, seulement l'ordre.**
+{{< /hint >}}
 
 ## Sélections simple
 

@@ -7,34 +7,35 @@ BookDateFormat = '2-1-2006'
 
 # pygmentsstyle = "b2"
 pygmentsstyle = "manni"
+# pygmentsstyle = "murphy"
 pygmentscodefences = true
 pygmentscodefencesguesssyntax = true
 
 [params]
-  author = "qkzk"
-  description = "Informatique et mathématiques"
-  minify = "true"
-  BookTheme = 'light'
+author = "qkzk"
+description = "Informatique et mathématiques"
+minify = "true"
+BookTheme = 'light'
 
 
 [menu]
 
 [privacy]
-  [privacy.disqus]
-    disable = true
-  [privacy.googleAnalytics]
-    disable = true
-  [privacy.instagram]
-    disable = true
-  [privacy.twitter]
-    disable = true
-  [privacy.vimeo]
-    disable = true
-  [privacy.youtube]
-    disable = true
+[privacy.disqus]
+disable = true
+[privacy.googleAnalytics]
+disable = true
+[privacy.instagram]
+disable = true
+[privacy.twitter]
+disable = true
+[privacy.vimeo]
+disable = true
+[privacy.youtube]
+disable = true
 
 [permalinks]
-  docs = "/"
+docs = "/"
 
 [markup.goldmark.renderer]
-  unsafe= true
+unsafe = true

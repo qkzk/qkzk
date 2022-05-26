@@ -101,10 +101,12 @@ function load(ide, worker_url, dbfile, init_file) {
         lineNumbers: false,
         matchBrackets: true,
         autofocus: true,
+        theme: "xq-light",
         extraKeys: {
             "Ctrl-Enter": execEditorContent,
         }
     });
+    console.log(editor);
 
 
     // Closure which is executed if there's a given dbfile

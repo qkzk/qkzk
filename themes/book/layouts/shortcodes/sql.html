@@ -1,4 +1,5 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.58.1/codemirror.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.58.1/theme/xq-light.css">
 <link rel="stylesheet" href="{{ .Site.BaseURL }}css/sql_editor.css">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.58.1/codemirror.js"></script>
 
@@ -26,22 +27,25 @@
 <script type="text/javascript" src="{{ .Site.BaseURL }}js/sql_ide.js"></script>
 <script>
     {{ if .Get `dbfile` }}
-        var dbfile = "{{ .Site.BaseURL }}" + "/" + "{{ .Page.File.Dir }}" + "{{ .Get `dbfile` }}";
+        var dbfile = "{{ .Site.BaseURL }}" + "{{ .Page.File.Dir }}" + "{{ .Get `dbfile` }}";
+        dbfile = dbfile.toLowerCase();
         console.log("dbfile", dbfile);
     {{ else }}
         var dbfile = null;
     {{ end }}
 
     {{ if .Get `init` }}
-        var init_file = "{{ .Site.BaseURL }}" + "/" + "{{ .Page.File.Dir }}" + "{{ .Get `init` }}";
+        var initfile = "{{ .Site.BaseURL }}"  + "{{ .Page.File.Dir }}" + "{{ .Get `init` }}";
+        initfile = initfile.toLowerCase();
+        console.log("initfile", initfile);
     {{ else }}
-        var init_file = null;
+        var initfile = null;
     {{ end }}
 
     var worker_url = "{{ .Site.BaseURL }}js/worker.sql-wasm.js";
 
     onElementLoaded("div#ide_{{ .Ordinal | safeJS }}").then(() => {
         const ide = document.querySelector("div#ide_{{ .Ordinal | safeJS }}");
-        load(ide, worker_url, dbfile, init_file);
+        load(ide, worker_url, dbfile, initfile);
     }).catch(() => { });
 </script>

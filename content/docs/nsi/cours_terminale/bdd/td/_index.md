@@ -1,9 +1,9 @@
 ---
-title: "BDD : travaux dirigés"
+title: "Travaux dirigés"
 bookCollapseSection: true
 author: "qkzk"
 date: ""
-weight: 50
+weight: 10
 
 ---
 

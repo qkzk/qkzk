@@ -1,11 +1,12 @@
 ---
-title: Conception
+title: "Cours - partie 2"
 bookCollapseSection: true
 lang: fr
-weight: 100
+weight: 2
+
 ---
 
-
+# Concevoir une base de donnée
 
 ### pdf : [pour impression](/uploads/docnsitale/bdd/cours_sql2_print.pdf), [diapo](/uploads/docnsitale/bdd/cours_sql2_slides.pdf)
 
