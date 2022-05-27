@@ -20,3 +20,5 @@ Bienvenue sur le site consacré aux enseignements que j'assure : spécialité NS
 
 
 ---
+
+<script src="https://qkzk.xyz/coi-serviceworker.min.js"></script>
