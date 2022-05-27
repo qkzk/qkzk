@@ -1,6 +1,7 @@
 .execute,
 .reset,
-.download {
+.download,
+.stop {
   margin-top: 5px;
   width: 10%;
   min-width: 100px;
