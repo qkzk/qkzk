@@ -106,7 +106,6 @@ function load(ide, worker_url, dbfile, init_file) {
             "Ctrl-Enter": execEditorContent,
         }
     });
-    console.log(editor);
 
 
     // Closure which is executed if there's a given dbfile

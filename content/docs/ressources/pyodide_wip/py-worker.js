@@ -2,7 +2,10 @@ const pyodideWorker = new Worker("./build/webworker.js");
 
 const callbacks = {};
 
+console.log(pyodideWorker);
+
 pyodideWorker.onmessage = (event) => {
+    console.log("event", event);
     const { id, ...data } = event.data;
     const onSuccess = callbacks[id];
     delete callbacks[id];
