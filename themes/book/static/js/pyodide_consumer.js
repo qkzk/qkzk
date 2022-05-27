@@ -1,10 +1,14 @@
-async function execute(ide, url, initfile) {
+async function init_worker(ide, url, initfile) {
 
     const textarea_elm = ide.querySelector('textarea.commands');
     const output_elm = ide.querySelector('pre.python_output');
     const python_error_elm = ide.querySelector('pre.python_error');
     const worker_error_elm = ide.querySelector('pre.worker_error');
-    const btn_elm = ide.querySelector('button.execute');
+    const btn_execute = ide.querySelector('button.execute');
+    const btn_reset = ide.querySelector('button.reset');
+    const btn_download = ide.querySelector('button.download');
+
+    const initial_editor_value = textarea_elm.value;
 
 
     // Add syntax highlihjting to the textarea
@@ -15,14 +19,17 @@ async function execute(ide, url, initfile) {
             singleLineStringErrors: false
         },
         viewportMargin: Infinity,
-        indentWithTabs: true,
+        indentWithTabs: false,
         smartIndent: true,
         lineNumbers: true,
         matchBrackets: true,
+        indentUnit: 4,
         autofocus: true,
-        theme: "xq-light",
+        theme: "idea",
         extraKeys: {
             "Ctrl-Enter": read_run_code,
+             "Tab": (cm) => cm.execCommand("indentMore"),
+             "Shift-Tab": (cm) => cm.execCommand("indentLess"),
         }
     });
 
@@ -136,7 +143,37 @@ async function execute(ide, url, initfile) {
         }
     }
 
-    btn_elm.addEventListener("click", read_run_code, true);
+    // Download editor content
+    function download_editor() {
+        const content = editor.getValue();
+        download("script.py", content);
+    }
+
+    // Reset editor content
+    function reset_editor() {
+        editor.setValue(initial_editor_value);
+    }
+
+    btn_execute.addEventListener("click", read_run_code, true);
+    btn_reset.addEventListener("click", reset_editor, true);
+    btn_download.addEventListener("click", download_editor, true);
+}
+
+/*
+* Download a text content to a file.
+* Creates an <a> element with download action, clicks it and removes it.
+*/
+function download(filename, text) {
+  var element = document.createElement('a');
+  element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(text));
+  element.setAttribute('download', filename);
+
+  element.style.display = 'none';
+  document.body.appendChild(element);
+
+  element.click();
+
+  document.body.removeChild(element);
 }
 
 /* 
@@ -178,5 +215,9 @@ function onElementLoaded(elementToObserve, parentStaticElement) {
         }
     });
 }
-export { execute, onElementLoaded };
+export { init_worker, onElementLoaded };
 
+
+// test interruption from server.
+// doesn't work locally
+console.log("sharebuffer", new SharedArrayBuffer(1))

@@ -4,9 +4,9 @@ weight: 10000
 
 ---
 
-{{< pyodide title="IDE 1" init="init1.py" >}}None
-{{< /pyodide >}}
+{{< python title="IDE 1" init="init1.py" >}}None
+{{< /python >}}
 
 
-{{< pyodide title="IDE 2" >}}False
-{{< /pyodide >}}
+{{< python >}}False
+{{< /python >}}

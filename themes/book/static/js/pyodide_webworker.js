@@ -34,13 +34,14 @@ self.onmessage = async (event) => {
 };
 
 /*
-*   Prevents error :
+*   Prevents error and replace js format by python format.
+*   Some JS objects are proxied before being sent back, we need to stringify them.
 *   pyodide Failed to execute 'postMessage' on 'DedicatedWorkerGlobalScope': [object Object] could not be cloned.
-*   and converts true, false, undefined, Infinity, NaN to
+*   converts true, false, undefined, Infinity, NaN to
 *   their Python's equivalent : True, False, None, inf, nan
+*   This is quite disapointing...
 */
 function prepareResults(results) {
-    console.log(results);
     if (pyodide.isPyProxy(results)) {
         let temp = results.toString();
         results.destroy();
