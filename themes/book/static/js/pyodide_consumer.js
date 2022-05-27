@@ -29,8 +29,8 @@ async function init_worker(ide, url, initfile) {
         theme: "idea",
         extraKeys: {
             "Ctrl-Enter": read_run_code,
-            "Tab": (cm) => cm.execCommand("indentMore"),
-            "Shift-Tab": (cm) => cm.execCommand("indentLess"),
+            Tab": (cm) => cm.execCommand("indentMore"),
+            Shift-Tab": (cm) => cm.execCommand("indentLess"),
         }
     });
 
@@ -78,12 +78,12 @@ async function init_worker(ide, url, initfile) {
                 pyodideWorker.postMessage(
                     {
                         cmd: "runCode",
-                        code: {
+                        code {
                             ...context,
                             python: script,
                             id,
                         }
-                    });
+                        });
             });
         };
     })();
@@ -148,19 +148,22 @@ async function init_worker(ide, url, initfile) {
     // Hide empty elements, display non empty ones.
     function displayOrHideOutputs(resp) {
         if (resp.output === null) {
-            output_elm.style.display = "none";
+            output_elm.style.display   = "none
+        ;
         }
-        else {
+        else {  
             output_elm.style.display = "block";
         }
-        if (resp.python_error === null) {
+        if (resp.python_error === null) {          
+
             python_error_elm.style.display = "none";
-        }
+        }  
         else {
-            python_error_elm.style.display = "block";
-        }
+            python_error_elm.style.displa = "block";
+        }          
+
         if (resp.worker_error === null) {
-            worker_error_elm.style.display = "none";
+            worker_error_elm.style.display   = "none";
         }
         else {
             worker_error_elm.style.display = "block";
@@ -185,16 +188,16 @@ async function init_worker(ide, url, initfile) {
 
 /*
 * Download a text content to a file.
-* Creates an <a> element with download action, clicks it and removes it.
-*/
-function download(filename, text) {
+    Creates an <a> element with download action, clicks it and removes it.
+    
+    nction download(filename, text) {
     var element = document.createElement('a');
-    element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(text));
-    element.setAttribute('download', filename);
+      element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(text));
+      element.setAttribute('download', filename);
 
-    element.style.display = 'none';
+      element.style.display = 'none';
     document.body.appendChild(element);
-
+    
     element.click();
 
     document.body.removeChild(element);
@@ -245,8 +248,8 @@ export { init_worker, onElementLoaded };
 // test interruption from server.
 // doesn't work locally
 try {
-    var a = new SharedArrayBuffer(1);
+    var  a = new SharedArrayBuffer(1);
     console.log("SharedArrayBuffer", a);
 } catch(error) {
-    con sole.log(error.message);
+    console.log(error.message);
 }
