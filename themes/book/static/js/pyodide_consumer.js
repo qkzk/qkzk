@@ -29,8 +29,8 @@ async function init_worker(ide, url, initfile) {
         theme: "idea",
         extraKeys: {
             "Ctrl-Enter": read_run_code,
-            Tab": (cm) => cm.execCommand("indentMore"),
-            Shift-Tab": (cm) => cm.execCommand("indentLess"),
+            "Tab": (cm) => cm.execCommand("indentMore"),
+            "Shift-Tab": (cm) => cm.execCommand("indentLess"),
         }
     });
 
@@ -78,7 +78,7 @@ async function init_worker(ide, url, initfile) {
                 pyodideWorker.postMessage(
                     {
                         cmd: "runCode",
-                        code {
+                        code: {
                             ...context,
                             python: script,
                             id,
@@ -148,8 +148,7 @@ async function init_worker(ide, url, initfile) {
     // Hide empty elements, display non empty ones.
     function displayOrHideOutputs(resp) {
         if (resp.output === null) {
-            output_elm.style.display   = "none
-        ;
+            output_elm.style.display   = "none";
         }
         else {  
             output_elm.style.display = "block";
