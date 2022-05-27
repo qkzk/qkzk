@@ -3,13 +3,13 @@
 <link rel="stylesheet" href="{{ .Site.BaseURL }}css/sql_editor.css">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.58.1/codemirror.js"></script>
 
-<h2>
+<h3>
 {{ if .Get `title` }}
     {{ .Get `title` }}
 {{ else }}
     SQL
 {{ end }}
-</h2>
+</h3>
 <main>
     <div id="ide_{{ .Ordinal | safeJS }}">
         <label for='commands_{{ .Ordinal | safeJS }}'>Commande SQL</label>

@@ -1,0 +1,57 @@
+.execute,
+.reset,
+.download {
+  margin-top: 5px;
+  width: 10%;
+  min-width: 100px;
+}
+
+.CodeMirror {
+  border: 1px solid #222;
+  height: auto;
+  font-size: 12px;
+}
+
+pre.CodeMirror-line {
+  font-size: 1em;
+}
+
+.CodeMirror-scroll {
+  overflow-y: hidden;
+  overflow-x: auto;
+}
+
+.python_error,
+.worker_error,
+.python_output {
+  font-size: 12px;
+  transition: 0.5s;
+  overflow: hidden;
+  margin: 15px;
+}
+
+.python_error {
+  color: red;
+}
+
+.worker_error {
+  color: blue;
+}
+
+table {
+  width: auto;
+  margin: auto;
+  border: 1px solid black;
+  border-collapse: collapse;
+  margin-bottom: 10px;
+  font-size: 0.8rem;
+}
+
+th,
+td {
+  border: 1px solid #777;
+}
+
+label {
+  font-size: 1rem;
+}
