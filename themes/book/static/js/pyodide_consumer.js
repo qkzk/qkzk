@@ -29,8 +29,8 @@ async function init_worker(ide, url, initfile) {
         theme: "idea",
         extraKeys: {
             "Ctrl-Enter": read_run_code,
-             "Tab": (cm) => cm.execCommand("indentMore"),
-             "Shift-Tab": (cm) => cm.execCommand("indentLess"),
+            "Tab": (cm) => cm.execCommand("indentMore"),
+            "Shift-Tab": (cm) => cm.execCommand("indentLess"),
         }
     });
 
@@ -76,14 +76,14 @@ async function init_worker(ide, url, initfile) {
                 callbacks[id] = onSuccess;
                 interruptBuffer[0] = 0;
                 pyodideWorker.postMessage(
-                    { 
-                        cmd: "runCode", 
-                        code : {
+                    {
+                        cmd: "runCode",
+                        code: {
                             ...context,
                             python: script,
                             id,
                         }
-                });
+                    });
             });
         };
     })();
@@ -147,20 +147,23 @@ async function init_worker(ide, url, initfile) {
 
     // Hide empty elements, display non empty ones.
     function displayOrHideOutputs(resp) {
-        if (resp.output === null) { 
-            output_elm.style.display="none"; }
-        else {
-            output_elm.style.display="block";
+        if (resp.output === null) {
+            output_elm.style.display = "none";
         }
-        if (resp.python_error === null) { 
-            python_error_elm.style.display="none"; }
         else {
-            python_error_elm.style.display="block";
+            output_elm.style.display = "block";
         }
-        if (resp.worker_error === null) { 
-            worker_error_elm.style.display="none"; }
+        if (resp.python_error === null) {
+            python_error_elm.style.display = "none";
+        }
         else {
-            worker_error_elm.style.display="block";
+            python_error_elm.style.display = "block";
+        }
+        if (resp.worker_error === null) {
+            worker_error_elm.style.display = "none";
+        }
+        else {
+            worker_error_elm.style.display = "block";
         }
     }
 
@@ -185,16 +188,16 @@ async function init_worker(ide, url, initfile) {
 * Creates an <a> element with download action, clicks it and removes it.
 */
 function download(filename, text) {
-  var element = document.createElement('a');
-  element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(text));
-  element.setAttribute('download', filename);
+    var element = document.createElement('a');
+    element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(text));
+    element.setAttribute('download', filename);
 
-  element.style.display = 'none';
-  document.body.appendChild(element);
+    element.style.display = 'none';
+    document.body.appendChild(element);
 
-  element.click();
+    element.click();
 
-  document.body.removeChild(element);
+    document.body.removeChild(element);
 }
 
 /* 
@@ -244,7 +247,6 @@ export { init_worker, onElementLoaded };
 try {
     var a = new SharedArrayBuffer(1);
     console.log("SharedArrayBuffer", a);
-    delete a;
 } catch(error) {
-    console.log(error.message);
+    con sole.log(error.message);
 }
