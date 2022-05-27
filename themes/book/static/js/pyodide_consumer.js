@@ -220,4 +220,9 @@ export { init_worker, onElementLoaded };
 
 // test interruption from server.
 // doesn't work locally
-console.log("sharebuffer", new SharedArrayBuffer(1))
+try {
+    var a = new SharedArrayBuffer(1);
+    console.log("SharedArrayBuffer", a);
+} catch(error) {
+    console.log(error.message);
+}
