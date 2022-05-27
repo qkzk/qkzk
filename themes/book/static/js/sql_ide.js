@@ -3,7 +3,7 @@ function load(ide, worker_url, dbfile, init_file) {
     var worker = new Worker(worker_url);
 
     // Selects the DOM elements relative to the given element.
-    var execBtn = ide.querySelector('button.execute');
+    var execBtn = ide.querySelector('a.execute');
     var outputElm = ide.querySelector('pre.output');
     var errorElm = ide.querySelector('div.error');
     var commandsElm = ide.querySelector('textarea.commands');

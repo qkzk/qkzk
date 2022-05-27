@@ -4,10 +4,10 @@ async function init_worker(ide, url, initfile) {
     const output_elm = ide.querySelector('pre.python_output');
     const python_error_elm = ide.querySelector('pre.python_error');
     const worker_error_elm = ide.querySelector('pre.worker_error');
-    const btn_execute = ide.querySelector('button.execute');
-    const btn_reset = ide.querySelector('button.reset');
-    const btn_download = ide.querySelector('button.download');
-    const btn_stop = ide.querySelector('button.stop');
+    const btn_execute = ide.querySelector('a.execute');
+    const btn_reset = ide.querySelector('a.reset');
+    const btn_download = ide.querySelector('a.download');
+    const btn_stop = ide.querySelector('a.stop');
 
     const initial_editor_value = textarea_elm.value;
 

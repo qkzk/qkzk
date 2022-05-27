@@ -17,7 +17,7 @@
         <textarea id="commands_{{ .Ordinal | safeJS }}" class="commands">
 {{ if gt (len .Inner) 1 }}{{ .Inner }}{{ end }}
         </textarea>
-        <button id="execute" class="execute btn-sql">Exécuter</button>
+        <a id="execute" class="execute btn-sql book-btn" title="Ctrl+Enter">Exécuter</a>
         <div id="error" class="error"></div>
         <pre id="output_{{ .Ordinal | safeJS }}" class="output">Résultat</pre>
     </div>

@@ -1,10 +1,5 @@
-.execute,
-.reset,
-.download,
-.stop {
+a.book-btn {
   margin-top: 5px;
-  width: 10%;
-  min-width: 100px;
 }
 
 .CodeMirror {
