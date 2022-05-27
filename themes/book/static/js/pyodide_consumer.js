@@ -28,9 +28,12 @@ async function init_worker(ide, url, initfile) {
         autofocus: true,
         theme: "idea",
         extraKeys: {
-            "Ctrl-Enter": read_run_code,
             "Tab": (cm) => cm.execCommand("indentMore"),
             "Shift-Tab": (cm) => cm.execCommand("indentLess"),
+            "Ctrl-Enter": read_run_code,
+            "Ctrl-R": reset_editor,
+            "Ctrl-S": download_editor,
+            "Ctrl-D": interrupt_execution,
         }
     });
 
@@ -53,7 +56,7 @@ async function init_worker(ide, url, initfile) {
 
     let interruptBuffer = new Uint8Array(new SharedArrayBuffer(1));
     pyodideWorker.postMessage({ cmd: "setInterruptBuffer", interruptBuffer });
-    function interruptExecution() {
+    function interrupt_execution() {
         // 2 stands for SIGINT.
         interruptBuffer[0] = 2;
     }
@@ -180,7 +183,7 @@ async function init_worker(ide, url, initfile) {
     btn_execute.addEventListener("click", read_run_code, true);
     btn_reset.addEventListener("click", reset_editor, true);
     btn_download.addEventListener("click", download_editor, true);
-    btn_stop.addEventListener("click", interruptExecution, true);
+    btn_stop.addEventListener("click", interrupt_execution, true);
 }
 
 /*

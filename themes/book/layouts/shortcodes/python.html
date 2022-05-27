@@ -15,10 +15,10 @@
         <textarea id="commands_{{ .Ordinal | safeJS }}" class="commands">
 {{ if gt (len .Inner) 1 }}{{ .Inner }}{{ end }}
         </textarea>
-        <button class="execute">Run</button>
-        <button class="reset">Reset</button>
-        <button class="download">Download</button>
-        <button class="stop">Stop</button>
+        <button class="execute" title="Ctrl+Enter">Run</button>
+        <button class="reset" title="Ctrl+R">Reset</button>
+        <button class="download" title="Ctrl+S">Download</button>
+        <button class="stop" title="Ctrl+D">Stop</button>
         <pre id="output_{{ .Ordinal | safeJS }}" class="python_output" style="display: none;">Résultat</pre>
         <pre class="python_error" style="display: none;"></pre>
         <pre class="worker_error" style="display: none;"></pre>

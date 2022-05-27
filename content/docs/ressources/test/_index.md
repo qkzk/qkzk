@@ -45,6 +45,8 @@ SELECT * FROM table
 WHERE age > 18;
 ```
 
+Du code en ligne `self.pyodide = await load();`
+
 ### Tableau
 
 | a | b |
@@ -57,6 +59,11 @@ WHERE age > 18;
 
 ### Images
 
+Depuis l'extérieur :
+
 ![exterieure](https://camo.githubusercontent.com/c72cf22e6229121a8160076f887e287cc4a7d08ef6837f2351a60cb7fd89bdba/68747470733a2f2f692e696d6775722e636f6d2f485679576536542e6a706567)
+
+
+Depuis mon site :
 
 ![locale](/uploads/docnsitale/arbres/fig/expression-tree.svg)
