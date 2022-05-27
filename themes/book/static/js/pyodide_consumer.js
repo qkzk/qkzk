@@ -57,8 +57,6 @@ async function init_worker(ide, url, initfile) {
         // 2 stands for SIGINT.
         interruptBuffer[0] = 2;
     }
-    // imagine that interruptButton is a button we want to trigger an interrupt.
-    btn_stop.addEventListener("click", interruptExecution);
 
     async function runCode(code) {
         // Clear interruptBuffer in case it was accidentally left set after previous code completed.
@@ -131,7 +129,7 @@ async function init_worker(ide, url, initfile) {
 
         var editor_code = await editor.getValue();
         var script = init_content + editor_code;
-        let resp = await run_code(script)
+        let resp = await run_code(script);
 
         fillOutput(resp);
         displayOrHideOutputs(resp);
@@ -154,11 +152,10 @@ async function init_worker(ide, url, initfile) {
             output_elm.style.display = "block";
         }
         if (resp.python_error === null) {          
-
             python_error_elm.style.display = "none";
         }  
         else {
-            python_error_elm.style.displa = "block";
+            python_error_elm.style.display = "block";
         }          
 
         if (resp.worker_error === null) {
@@ -183,13 +180,15 @@ async function init_worker(ide, url, initfile) {
     btn_execute.addEventListener("click", read_run_code, true);
     btn_reset.addEventListener("click", reset_editor, true);
     btn_download.addEventListener("click", download_editor, true);
+    btn_stop.addEventListener("click", interruptExecution, true);
 }
 
 /*
 * Download a text content to a file.
-    Creates an <a> element with download action, clicks it and removes it.
+*    Creates an <a> element with download action, clicks it and removes it.
+*/
     
-    nction download(filename, text) {
+function download(filename, text) {
     var element = document.createElement('a');
       element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(text));
       element.setAttribute('download', filename);

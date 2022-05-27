@@ -40,16 +40,6 @@ self.onmessage = async (event) => {
     }
 };
 
-// self.addEventListener("message", (msg) => {
-//   if (msg.data.cmd === "setInterruptBuffer") {
-//     pyodide.setInterruptBuffer(msg.data.interruptBuffer);
-//     return;
-//   }
-//   if (msg.data.cmd === "runCode") {
-//     pyodide.runPython(msg.data.code);
-//     return;
-//   }
-// });
 
 /*
 *   Prevents error and replace js format by python format.
