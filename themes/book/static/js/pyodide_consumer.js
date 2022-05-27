@@ -1,6 +1,6 @@
 async function execute(ide, url, initfile) {
 
-    var textarea_elm = ide.querySelector('textarea.commands');
+    const textarea_elm = ide.querySelector('textarea.commands');
     const output_elm = ide.querySelector('pre.python_output');
     const python_error_elm = ide.querySelector('pre.python_error');
     const worker_error_elm = ide.querySelector('pre.worker_error');
@@ -29,14 +29,21 @@ async function execute(ide, url, initfile) {
     const pyodideWorker = new Worker(url);
     const callbacks = {};
 
-    pyodideWorker.onmessage = (event) => {
-        console.log("consumer got message", event);
+    /*
+    * Called when the worker post a response.
+    * Use the given callback from the response.
+    */
+    function onMessage(event) {
         const { id, ...data } = event.data;
         const onSuccess = callbacks[id];
         delete callbacks[id];
         onSuccess(data);
-    };
+    }
 
+    // Attach the onMessage function to Worker method
+    pyodideWorker.onmessage = onMessage;
+
+    // Allow async execution in the worker
     const asyncRun = (() => {
         let id = 0; // identify a Promise
         return (script, context) => {
@@ -54,28 +61,23 @@ async function execute(ide, url, initfile) {
     })();
 
 
-    async function run_code(init_content) {
-        var editor_code = await editor.getValue();
-        var script = init_content + editor_code;
-
-
+    /*
+    *   Run a script, fill an object with the worker response.
+    */
+    async function run_code(script) {
         var output = null;
         var python_error = null;
         var worker_error = null;
 
-
         try {
             const { results, error } = await asyncRun(script, "");
             if (results) {
-                console.log("pyodide return: ", results);
                 output = results;
             } else if (error) {
-                console.log("pyodide python error: ", error);
                 python_error = error;
             }
         } catch (e) {
             worker_error = `pyodide worker error at ${e.filename}, Line: ${e.lineno}, ${e.message}`
-            console.log(worker_error);
         }
 
         return {
@@ -85,6 +87,12 @@ async function execute(ide, url, initfile) {
         }
     }
 
+    /*
+    * read code from the editor and the init file content.
+    * run it through the worker
+    * fill the output elements in the document
+    * Hide empty elements from the document
+    */
     async function read_run_code() {
         var init_content;
         if (initfile !== null) {
@@ -93,12 +101,24 @@ async function execute(ide, url, initfile) {
             init_content = "";
         }
 
-        let script = init_content + "\n" + await editor.getValue();
-        let resp = await run_code(init_content)
+        var editor_code = await editor.getValue();
+        var script = init_content + editor_code;
+        let resp = await run_code(script)
 
+        fillOutput(resp);
+        displayOrHideOutputs(resp);
+
+    }
+
+    // Replaces output elements innerText with worker response
+    function fillOutput(resp) {
         output_elm.innerText = resp.output;
         python_error_elm.innerText = resp.python_error;
         worker_error_elm.innerText = resp.worker_error;
+    }
+
+    // Hide empty elements, display non empty ones.
+    function displayOrHideOutputs(resp) {
         if (resp.output === null) { 
             output_elm.style.display="none"; }
         else {
@@ -119,6 +139,9 @@ async function execute(ide, url, initfile) {
     btn_elm.addEventListener("click", read_run_code, true);
 }
 
+/* 
+* Load the init file content. Returns it as a string.
+*/
 async function load_init_file(filepath) {
     const u = new URL(filepath);
     return await fetch(u).then(res => res.text()).then(text => text);

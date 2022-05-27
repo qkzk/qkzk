@@ -5,14 +5,12 @@
 // and `.wasm` files as well:
 importScripts("https://cdn.jsdelivr.net/pyodide/v0.20.0/full/pyodide.js");
 
-// var paragraph = document.getElementById("print");
-
 async function loadPyodideAndPackages() {
     self.pyodide = await loadPyodide({
-        // stdout: (text) => {paragraph.textContent += text;},
     });
     // await self.pyodide.loadPackage(["numpy", "pytz"]);
 }
+
 let pyodideReadyPromise = loadPyodideAndPackages();
 
 self.onmessage = async (event) => {
@@ -20,7 +18,6 @@ self.onmessage = async (event) => {
     await pyodideReadyPromise;
     // Don't bother yet with this line, suppose our API is built in such a way:
     const { id, python, ...context } = event.data;
-    console.log("onmessage, python:", python);
     // The worker copies the context in its own "memory" (an object mapping name to values)
     for (const key of Object.keys(context)) {
         self[key] = context[key];
@@ -39,25 +36,25 @@ self.onmessage = async (event) => {
 /*
 *   Prevents error :
 *   pyodide Failed to execute 'postMessage' on 'DedicatedWorkerGlobalScope': [object Object] could not be cloned.
-*   and converts true, false, undefined to
-*   their Python's equivalent : True, False, None
+*   and converts true, false, undefined, Infinity, NaN to
+*   their Python's equivalent : True, False, None, inf, nan
 */
 function prepareResults(results) {
-    console.log("results", results, typeof results);
-    if (pyodide.isPyProxy(results)) { 
+    console.log(results);
+    if (pyodide.isPyProxy(results)) {
         let temp = results.toString();
-        console.log("catched proxy results", temp);
         results.destroy();
         results = temp;
     } else if (results === false) {
-        console.log("catched false", results);
         results = "False";
     } else if (results === true) {
-        console.log("catched false", results);
         results = "True";
     } else if (typeof results === 'undefined') {
-        console.log("catched undefined", results);
         results = "None";
+    } else if (results === Infinity) {
+        results = "inf";
+    } else if (typeof results === 'number' && isNaN(results)) {
+        results = "nan";
     }
     return results
 }

@@ -18,12 +18,11 @@
         <pre id="output_{{ .Ordinal | safeJS }}" class="python_output" style="display: none;">Résultat</pre>
         <pre class="python_error" style="display: none;"></pre>
         <pre class="worker_error" style="display: none;"></pre>
-        <pre id="print"></pre>
     </div>
 </main>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.63.3/mode/python/python.min.js"></script>
 <script type="module">
-    import { onElementLoaded, execute } from "{{ .Site.BaseURL }}js/consumer.js";
+    import { onElementLoaded, execute } from "{{ .Site.BaseURL }}js/pyodide_consumer.js";
 
     const url = "{{ .Site.BaseURL }}js/pyodide_webworker.js";
 
