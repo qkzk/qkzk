@@ -41,11 +41,11 @@ hiérarchiquement.
 
 * En biologie :
 
-    . ![biologie](https://runestone.academy/runestone/books/published/pythonds/_images/biology.png)
+    . ![biologie](/docs/nsi/cours_terminale/structures_donnees/arbres/td/img/0.png)
 
 * Les dossiers d'un ordinateur
 
-    . ![dossiers UNIX](https://runestone.academy/runestone/books/published/pythonds/_images/directory.png)
+    . ![dossiers UNIX](/docs/nsi/cours_terminale/structures_donnees/arbres/td/img/1.png)
 
 * Les balises d'une page web forment un arbre (appelé DOM) :
 
@@ -68,7 +68,7 @@ hiérarchiquement.
     </html>
     ```
 
-    . ![structure d'une page web](https://runestone.academy/runestone/books/published/pythonds/_images/htmltree.png)
+    . ![structure d'une page web](/docs/nsi/cours_terminale/structures_donnees/arbres/td/img/2.png)
 
 
 [^arbre-informatique]: Le terme d'arbre recouvre plusieurs notions

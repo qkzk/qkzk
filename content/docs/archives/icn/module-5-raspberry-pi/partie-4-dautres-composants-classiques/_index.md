@@ -258,7 +258,7 @@ Les branchements sont les suivants :
 
  Le Pin 1 de la sonde va vers l’alim 3,3V du Raspberry
  Le Pin 2 va vers un pin du Raspberry Pi (le pin 4 dans mon exemple).
- Le Pin 3 … ne sert à rien ![:)](http://www.manuel-esteban.com/wp-includes/images/smilies/icon_smile.gif)
+ Le Pin 3 … ne sert à rien ![:)](/docs/archives/icn/module-5-raspberry-pi/partie-4-dautres-composants-classiques/img/0.gif)
 
  Le Pin 4 va vers le Ground du Raspberry Pi
  Une resistance (de 4700 ohm à 10K Ohm) se branche entre le pin 2 et l’alim (à connecter en premier, avant la sortie vers le pin 4 du raspberry pi).

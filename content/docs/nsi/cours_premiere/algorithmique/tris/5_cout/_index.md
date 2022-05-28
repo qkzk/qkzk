@@ -214,7 +214,7 @@ La preuve est exactement la même et le résultat similaire :
   approche et alors le meilleur coût qu'on puisse obtenir est $O(n \log n)$
   ce qui est beaucoup mieux que $O(n^2)$
 
-    ![couts](https://i.stack.imgur.com/PB0M1.gif)
+    ![couts](/docs/nsi/cours_premiere/algorithmique/tris/5_cout/img/0.gif)
 
 * Lorsqu'on a beaucoup d'informations sur les objets à trier, on peut aller
   plus vite. C'est en particulier le cas lorsqu'on trie des entiers de taille

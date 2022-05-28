@@ -51,7 +51,7 @@ fin du bloc
 
 Une condition décrit un bloc de code qui n'est exécuté que si le test est vérifié.
 
-$~$![Condition](https://qkzk.xyz/uploads/uploads/2017/04/python_if.png)
+$~$![Condition](/docs/nsi/cours_premiere/programmation/python/cours_python/03_structure_controle/img/0.png)
 
 Par exemple :
 

@@ -66,7 +66,7 @@ for i in range(4):
 turtle.done()
 ```
 
-Résultat : ![carré](https://media.geeksforgeeks.org/wp-content/uploads/20201007233918/out.png)
+Résultat : ![carré](/docs/nsi/cours_premiere/projets/turtle/img/0.png)
 
 On répète 4 fois la même séquence consistant à : avancer de 50 pixels, tourner
 de 90 dans le sens des aiguilles d'une montre.
@@ -85,7 +85,7 @@ for i in range(50):
 turtle.done()
 ```
 
-Résultat : ![Étoile](https://media.geeksforgeeks.org/wp-content/uploads/20201007234135/starrs.png)
+Résultat : ![Étoile](/docs/nsi/cours_premiere/projets/turtle/img/1.png)
 
 ### Hexagone
 
@@ -104,7 +104,7 @@ for i in range(num_sides):
 turtle.done()
 ```
 
-Résultat : ![hexagone](https://media.geeksforgeeks.org/wp-content/uploads/20201007234311/polly.png)
+Résultat : ![hexagone](/docs/nsi/cours_premiere/projets/turtle/img/2.png)
 
 ## Quelques figures plus spectaculaires
 

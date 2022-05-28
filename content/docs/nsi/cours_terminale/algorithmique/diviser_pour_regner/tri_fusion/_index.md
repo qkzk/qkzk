@@ -77,7 +77,7 @@ fusionner (`tableau`, `gauche`, `droite`):
 
 ## En une seule image
 
-![exemple](https://upload.wikimedia.org/wikipedia/commons/6/60/Mergesort_algorithm_diagram.png)\
+![exemple](/docs/nsi/cours_terminale/algorithmique/diviser_pour_regner/tri_fusion/img/0.png)\
 
 ## Algorithme : tri_fusion
 

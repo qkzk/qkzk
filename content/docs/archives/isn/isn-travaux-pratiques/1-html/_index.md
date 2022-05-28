@@ -268,7 +268,7 @@ Consultez la [page suivante](http://qkzk.free.fr/wp-content/uploads/2016/07/lien
 est le suivant :
 
 
-![logo de wikimedia](http://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/Commons-logo.svg/89px-Commons-logo.svg.png)
+![logo de wikimedia](/docs/archives/isn/isn-travaux-pratiques/1-html/img/0.svg.png)
 
 
 

@@ -453,7 +453,7 @@ des erreurs. Nous leur donnons donc un drapeau et les effaçons après avec
 `listCleanup`.
 
 
-![flow de space invaders](https://rpi-magazines.s3-eu-west-1.amazonaws.com/magpi/legacy-assets/2018/10/Space-Invaders-Flow.jpg)
+![flow de space invaders](/docs/nsi/cours_premiere/projets/space_invaders/img/0.jpg)
 
 ## Nettoyer le désordre
 
@@ -566,7 +566,7 @@ on devrait afficher un message adapté.
 La version suivante (pas encore traduite, disponible en anglais ici) ajoutera
 les niveaux, les vies, les sons, les aliens bonus et un tableau des scores.
 
-![Game Over pour l'instant](https://rpi-magazines.s3-eu-west-1.amazonaws.com/magpi/legacy-assets/2018/10/Coding-Space-Invaders.jpg)
+![Game Over pour l'instant](/docs/nsi/cours_premiere/projets/space_invaders/img/1.jpg)
 
 **Ci-dessous le code complet à cette étape.**
 

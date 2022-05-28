@@ -96,7 +96,7 @@ C'est un ancien format. Il est Lossless (aucune perte d'information en sauvegard
 
 Bon pour : Rien. Il n'y a rien que le BMP fasse mieux que les autres.
 
-![BMP vs GIF](http://i.stack.imgur.com/J1EEX.png)
+![BMP vs GIF](/docs/archives/icn/4-images-couleurs/img/0.png)
 
 
 
@@ -113,7 +113,7 @@ Les images GIF peuvent aussi être animées et être transparente.
 
 Bon pour : les logos, les dessins avec des lignes et des formes géométriques simples. N'est réellement employé que pour de petites images sur les sites web.
 
-![GIF vs JPEG](http://i.stack.imgur.com/F7VtM.png)
+![GIF vs JPEG](/docs/archives/icn/4-images-couleurs/img/1.png)
 
 
 
@@ -128,7 +128,7 @@ Les images JPEGs furent crées pour comprimer les photographies le plus possible
 
 Bon pour : Photographie. Aussi les dégradés (gradients).
 
-![JPEG vs GIF](http://i.stack.imgur.com/aNqf7.png)
+![JPEG vs GIF](/docs/archives/icn/4-images-couleurs/img/2.png)
 
 
 
@@ -143,7 +143,7 @@ PNG est un format plus récent, et PNG-8 (la version indexée de PNG) succède p
 
 Bon pour : Ce que le PNG-8 fait mieux que les GIF est d'intégrer la transparence Alpha.
 
-![PNG-8 vs GIF](http://i.stack.imgur.com/B09oZ.png)
+![PNG-8 vs GIF](/docs/archives/icn/4-images-couleurs/img/3.png)
 
 
 **Remarque importante :** Photoshop ne gère pas encore la transparence Alpha pour les fichiers PNG-8. On peut contourner ce problème en utilisant un logiciel externe pour transformer l'image.
@@ -189,11 +189,11 @@ C'est un format en pleine expansion (en particulier depuis la démocratisation d
 
 Par exemple :
 
-[![PNG vs SVG](http://i.stack.imgur.com/Cnaf5.png)
-](http://i.stack.imgur.com/Cnaf5.png)
+[![PNG vs SVG](/docs/archives/icn/4-images-couleurs/img/4.png)
+](/docs/archives/icn/4-images-couleurs/img/4.png)
 
-[![SVG vs PNG](http://i.stack.imgur.com/UydAT.png)
-](http://i.stack.imgur.com/UydAT.png)
+[![SVG vs PNG](/docs/archives/icn/4-images-couleurs/img/5.png)
+](/docs/archives/icn/4-images-couleurs/img/5.png)
 
 SVG est donc idéal pour les logos et les icônes qui doivent garder leur précision à toutes les tailles et sur tous les écrans.
 

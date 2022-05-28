@@ -231,7 +231,7 @@ def even(n):
 
 5.  **Les tours de Hanoï**
 
-    ![Hanoï](https://upload.wikimedia.org/wikipedia/commons/thumb/0/07/Tower_of_Hanoi.jpeg/300px-Tower_of_Hanoi.jpeg)
+    ![Hanoï](/docs/nsi/cours_terminale/prog/recursivite/td/img/0.jpeg)
 
     Il s'agit d'un exemple très classique d'algorithme récursif.
 
@@ -242,7 +242,7 @@ def even(n):
     >  - on ne peut déplacer plus d'un disque à la fois ;
     >  - on ne peut placer un disque que sur un autre disque plus grand que lui ou sur un emplacement vide.
 
-    ![Hanoï animation](https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/Tower_of_Hanoi_4.gif/300px-Tower_of_Hanoi_4.gif)
+    ![Hanoï animation](/docs/nsi/cours_terminale/prog/recursivite/td/img/1.gif)
 
     Pour ceux qui souhaitent [s'entrainer](http://towersofhanoi.info/Play.aspx).
 

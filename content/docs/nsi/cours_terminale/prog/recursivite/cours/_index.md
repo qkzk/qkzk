@@ -131,7 +131,7 @@ Une _liste_ est une structure de données.
 * Elle peut être vide.
 * Lorsqu'elle n'est pas vide, elle contient deux objets : un _élément_ et un _pointeur_ vers **une autre liste.**
 
-  ![liste](https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/Singly-linked-list.svg/408px-Singly-linked-list.svg.png)
+  ![liste](/docs/nsi/cours_terminale/prog/recursivite/cours/img/0.svg.png)
 
   _plus de détails plus bas !_
 
@@ -459,7 +459,7 @@ Dans le cas d'une liste non vide *(t,R)* :
 
 On parle pour de telles structures de **listes chaînées**, qui se distingue donc des listes par tableaux.
 
-![liste](https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/Singly-linked-list.svg/408px-Singly-linked-list.svg.png)
+![liste](/docs/nsi/cours_terminale/prog/recursivite/cours/img/0.svg.png)
 
 Les listes chainées sont beaucoup plus efficaces que les tableaux lorsqu'il s'agit de supprimer un élément, ou d'en insérer un.
 

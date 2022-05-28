@@ -206,22 +206,22 @@ Physiquement, qu'est-ce qu'un SoC ?
 Voici un raspberry Pi (vous l'étudierez plus en détail en TD)
 
 
-$~$ ![raspberry pi](https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Raspberry-Pi-2-Bare-BR.jpg/1200px-Raspberry-Pi-2-Bare-BR.jpg)
+$~$ ![raspberry pi](/docs/nsi/cours_terminale/architecture/composants/cours/img/0.jpg)
 
 Et un agrandissement de son SoC
 
-$~$ ![raspberry soc](https://cdn.futura-sciences.com/buildsv6/images/largeoriginal/4/a/5/4a5a3a301f_73649_soc.jpg)
+$~$ ![raspberry soc](./img/4a5a3a301f_73649_soc.jpg)
 
 Pour se faire une idée des dimensions :
 
-$~$ ![SoC](https://pixees.fr/informatiquelycee/n_site/img/nsi_term_soc_2.png)
+$~$ ![SoC](/docs/nsi/cours_terminale/architecture/composants/cours/img/2.png)
 
 Il n'est pas simple de trouver un schéma de circuit compréhensible et utile
 d'un raspberry pi.
 
 Voici ce qui s'approche le plus du modèle de Von Neumann (cf [première](/docs/nsi/cours_premiere/architecture/von_neumann/)).
 
-$~$ ![schéma rpi](https://upload.wikimedia.org/wikipedia/commons/1/12/Raspberrypi_block_function_v01.svg)
+$~$ ![schéma rpi](/docs/nsi/cours_terminale/architecture/composants/cours/img/3.svg)
 
 Comme on peut le voir, le CPU est regroupé en un seul bloc, comportant aussi un GPU.
 
@@ -230,13 +230,13 @@ large et le bus USB.
 
 Physiquement, ça se traduit comme ça :
 
-$~$ ![raspberry rôle](https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/RaspberryPi_Model_4B.svg/2000px-RaspberryPi_Model_4B.svg.png)
+$~$ ![raspberry rôle](/docs/nsi/cours_terminale/architecture/composants/cours/img/4.svg.png)
 
 Et on remarque (entre autres) que le SoC utilisé ne comporte pas de RAM...
 
 ### Un schéma de circuit un peu plus détaillé
 
-$~$ ![circuit](https://pixees.fr/informatiquelycee/n_site/img/nsi_term_soc_4.jpg)
+$~$ ![circuit](/docs/nsi/cours_terminale/architecture/composants/cours/img/5.jpg)
 
 Vous pouvez remarquer que l'on retrouve bien sur ce schéma un CPU et de la
 mémoire (on a différents types de mémoires, mais ce sujet ne sera pas abordé

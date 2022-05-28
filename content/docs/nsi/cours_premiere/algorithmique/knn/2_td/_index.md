@@ -36,7 +36,7 @@ En utilisant la distance euclidienne, quels sont les deux plus proches voisins d
 Dans le quadrillage ci-dessous 14 points sont dessinés, dont 7 de la classe C1, avec des ronds noirs $\bullet$, et 7 de la classe C2, avec des losanges $\lozenge$. On introduit un nouveau point A, dont on cherche la classe à l'aide d'un algorithme des k plus proches voisins pour la distance géométrique habituelle, en faisant varier la valeur de k parmi 1, 3 et 5. Quelle est la bonne réponse (sous la forme d'un triplet de classes pour le triplet (1,3,5) des valeurs de k) ?
 
 
-$~~~~~~$![knn](https://github.com/qkzk/data_colab/raw/master/img/214_knn.png)
+$~~~~~~$![knn](/docs/nsi/cours_premiere/algorithmique/knn/2_td/img/0.png)
 
 ## 4. Couleur d'un fruit
 

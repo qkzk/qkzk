@@ -22,7 +22,7 @@ interfaces graphiques (GUI).
 Elle est conçue pour permettre aux débutants de créer rapidement et
 facilement des interfaces graphiques pour leurs programmes.
 
-![guizero](https://lawsie.github.io/guizero/images/have-a-go.png)
+![guizero](/docs/nsi/cours_premiere/programmation/outils/libraries_faciles/gui_zero/img/0.png)
 
 ~~~python
 from guizero import App, Text, PushButton
@@ -59,11 +59,11 @@ Il suffit de télécharger et de dézipper un fichier pour [installer guizero](#
 1. Rendez-vous sur le [dépot guizero](https://github.com/lawsie/guizero)
 2. Cliquez sur l'icone verte "Clone or download" et ensuite "download zip"
 
-    ![easy install](https://lawsie.github.io/guizero/images/download-zip.png)
+    ![easy install](/docs/nsi/cours_premiere/programmation/outils/libraries_faciles/gui_zero/img/1.png)
 3. Ouvrez le fichier zip.
 4. Ouvrez le dossier `guizero-master` et copiez le dossier `guizero` dans votre dossier principal
 
-    ![zip](https://lawsie.github.io/guizero/images/copy-guizero-annotated.png)
+    ![zip](/docs/nsi/cours_premiere/programmation/outils/libraries_faciles/gui_zero/img/2.png)
 5. Et voilà ! Quand vous créez vos scripts assurez-vous de les enregistrer dans votre dossier principal.
 
 ## Installation avec pip
@@ -79,4 +79,4 @@ Il suffit de télécharger et de dézipper un fichier pour [installer guizero](#
 
     `pip3 install --proxy http://ip.proxy:port guizero`
 
-    ![pip](https://lawsie.github.io/guizero/images/windows_pip_install.gif)
+    ![pip](/docs/nsi/cours_premiere/programmation/outils/libraries_faciles/gui_zero/img/3.gif)

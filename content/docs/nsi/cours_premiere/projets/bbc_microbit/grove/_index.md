@@ -40,7 +40,7 @@ que d'élèves).
 
 # Utiliser le module grove
 
-![kit grove](https://www.cgenial.org/uploads/media/picture/b43a944268598f9e3569714d0bc10ed985d09662-img-2441.jpg)
+![kit grove](/docs/nsi/cours_premiere/projets/bbc_microbit/grove/img/0.jpg)
 
 ## Principe
 
@@ -48,7 +48,7 @@ Le kit Grove, développé par Seeed Studio est constité de une carte d'extensio
 dans laquelle on insère le BBC Micro:bit et de différents éléments qui se
 raccordent tous de la même manière.
 
-![carte d'extension](https://www.cgenial.org/uploads/media/picture/4d410dbb1982eda2db3a61d2c040f4e69d3d92f3-332a4950.JPG)
+![carte d'extension](/docs/nsi/cours_premiere/projets/bbc_microbit/grove/img/1.JPG)
 ![modules](./img/seed_pack.jpg)
 
 ## Branchements

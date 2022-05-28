@@ -62,7 +62,7 @@ une grille de quatre lignes et quatre colonnes.
 Lorsque le taquin contient les carreaux dans l'ordre avec la case en bas à droite,
 on dit qu'il est résolu (voir Figure).
 
-![exmple de taquin](https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/15-puzzle.svg/200px-15-puzzle.svg.png)
+![exmple de taquin](/docs/nsi/cours_terminale/structures_donnees/graphes/td_3/img/0.svg.png)
 
 Étant donné un taquin dans un état mélangé, le but est d'arriver au
 taquin résolu en faisant glisser les carreaux en Haut, en Bas, à Gauche

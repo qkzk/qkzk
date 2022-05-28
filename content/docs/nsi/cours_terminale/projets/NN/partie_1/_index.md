@@ -134,7 +134,7 @@ besoin de calculer sa dérivée pour ajuster les poids.
 
 On utilisera donc $\phi(x) = \dfrac{1}{1+e^{-x}}$, la fonction _sigmoid_ :
 
-![La fonction sigmoid](https://miro.medium.com/max/640/1*sK6hjHszCwTE8GqtKNe1Yg.png)
+![La fonction sigmoid](./img/sigmoid.png)
 
 On peut vérifier qu'elle est bien définie sur $]-\infty;+\infty[$, strictement
 croissante et à image dans $]-1;1[$.
@@ -412,7 +412,7 @@ faible pour des valeurs élevées. Elle est forte autour de 0.
 la réponse. Multiplier par la pente de la fonction sigmoid nous assure que ce
 sera le cas.
 
-![pente de sigmoid](https://iamtrask.github.io/img/sigmoid-deriv-2.png)
+![pente de sigmoid](/docs/nsi/cours_terminale/projets/NN/partie_1/img/1.png)
 
 * Pour une valeur élevée (abscisse du point vert), la pente est faible.
 * Pour des valeurs faibles (abscisse du point violet), la pente est forte.

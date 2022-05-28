@@ -11,7 +11,7 @@ L'objectif de ce mini projet est de mettre en pratique vos connaissances
 sur les outils de base de Python (affectation, condition, boucles, fonctions,
 listes) pour terminer une version très simple du jeu [_timberman_](http://www.jeux.fr/jeu/timberman).
 
-![timberman](https://www.journaldugeek.com/files/2014/07/timberman.gif)
+![timberman](./img/timberman.jpg)
 
 Nous allons négliger tout l'aspect graphique pour nous concentrer sur les
 dernières étapes : les fonctions qui font évoluer le jeu.
