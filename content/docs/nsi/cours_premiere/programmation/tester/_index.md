@@ -99,6 +99,11 @@ Traceback (most recent call last):
 AssertionError
 ```
 
+{{< python title="Assert" >}}
+assert 1 + 1 == 2, "message si ça échoue"
+assert "1" + "1" == "2", "Concaténation..."
+{{< /python >}}
+
 C'est le moyen le plus efficace et rapide de tester un programme ou une fonction.
 
 Il ne faut pas intégrer les assertions à la fonction elle même. Il est préférable de les intégrer à des fonctions de tests indépendantes du programme.
@@ -107,27 +112,55 @@ Il ne faut pas intégrer les assertions à la fonction elle même. Il est préf�
 
 Reprenons notre fonction Fibonacci
 
+
+{{< expand "Code Fibonacci" "..." >}}
 ```python
 def fibonacci(n):
-  '''
-  Liste des termes de la suite de Fibonacci
+    """
+    Liste des termes de la suite de Fibonacci
     de l'indice 0 à l'indice n inclus
 
-  @param n: (int) l'indice maximal voulu
-  @return: (list) la liste des termes
-  '''
-  if type(n) != int or n < 0:
-    return None
-  x = 1
-  y = 1
-  suite_fibonacci = [x]
-  indice = 0
-  while indice < n:
-    x, y = y, x + y
-    suite_fibonacci.append(x)
-    indice += 1
-  return suite_fibonacci
+    @param n: (int) l'indice maximal voulu
+    @return: (list) la liste des termes
+    """
+    if type(n) != int or n < 0:
+        return None
+    x = 1
+    y = 1
+    suite_fibonacci = [x]
+
+    for indice in range(n):
+        x, y = y, x + y
+        suite_fibonacci.append(x)
+
+    return suite_fibonacci
 ```
+{{< /expand >}}
+
+{{< python title="Fibonacci" >}}def fibonacci(n):
+    """
+    Liste des termes de la suite de Fibonacci
+    de l'indice 0 à l'indice n inclus
+
+    @param n: (int) l'indice maximal voulu
+    @return: (list) la liste des termes
+    """
+    if type(n) != int or n < 0:
+        return None
+    x = 1
+    y = 1
+    suite_fibonacci = [x]
+
+    for indice in range(n):
+        x, y = y, x + y
+        suite_fibonacci.append(x)
+
+    return suite_fibonacci
+
+fibonacci(15)
+{{< /python >}}
+
+
 
 ##
 
@@ -139,14 +172,15 @@ On peut tester plusieurs choses :
 * La propriété de Fibonacci : $u_n + u_{n + 1} = u_{n + 2}$
 * La sortie dans les cas impossibles : paramètre négatif, paramètre non entier
 
-```python
 
+{{< expand "Test Fibonacci" "..." >}}
+```python
 def tester_fibonacci():
     '''
     Teste certaines propriétés de la fonction Fibonacci
 
     return: None
-    CU: lève une exception AssertionError si la fonction est mal programmée
+    CU: lève une exception AssertionError si un test échoue
     '''
     fib_10 = fibonacci(10)
 
@@ -160,17 +194,50 @@ def tester_fibonacci():
 
     # ses éléments sont entiers
     for terme in fib_10:
-        assert type(terme) == int
+        assert isinstance(terme, int)
 
     # La propriété de récurrence
     assert fib_10[-3] + fib_10[-2] == fib_10[-1]
 
     # Valeur de retour dans les cas impossibles
-    assert fibonacci(-1) == None
-    assert fibonacci('a') == None
-    assert fibonacci(3.14) == None
+    assert fibonacci(-1) is None
+    assert fibonacci('a') is None
+    assert fibonacci(3.14) is None
 ```
+{{< /expand  >}}
 
+{{< python title="Tester Fibonacci" init="fib.py">}}
+def tester_fibonacci():
+    '''
+    Teste certaines propriétés de la fonction Fibonacci
+
+    return: None
+    CU: lève une exception AssertionError si un test échoue
+    '''
+    fib_10 = fibonacci(10)
+
+    # longueur de la liste
+    assert len(fib_10) == 11
+
+    # différents résultats
+    assert fibonacci(0) == [1]
+    assert fibonacci(1) == [1, 1]
+    assert fibonacci(5) == [1, 1, 2, 3, 5, 8]
+
+    # ses éléments sont entiers
+    for terme in fib_10:
+        assert isinstance(terme, int)
+
+    # La propriété de récurrence
+    assert fib_10[-3] + fib_10[-2] == fib_10[-1]
+
+    # Valeur de retour dans les cas impossibles
+    assert fibonacci(-1) is None
+    assert fibonacci('a') is None
+    assert fibonacci(3.14) is None
+
+tester_fibonacci()
+{{< /python >}}
 
 # Doctest
 
@@ -182,13 +249,11 @@ Pour les fonctions qui réalisent des calculs cela est pratique.
 
 ## Un exemple :
 
+{{< expand "Exemple de doctest" "..." >}}
 ```python
-def multiply(a, b):
+def multiply(a: int, b: int) -> int:
     """
     Calcule produit de a et b
-    @param a: (number, str, list) premier facteur
-    @param b: (number, str, list) second facteur
-    @return: (number, str, list) le produit
 
     >>> multiply(4, 3)
     12
@@ -201,7 +266,23 @@ if __name__ == '__main__':
   import doctest
   doctest.testmod() # s'il ne se passe rien, les test sont justes
 ```
+{{< /expand >}}
 
+{{< python title="Exemple de doctest" >}}
+def multiply(a: int, b: int) -> int:
+    """
+    Calcule produit de a et b
+
+    >>> multiply(4, 3)
+    12
+    >>> multiply('a', 3)
+    'aaa'
+    """
+    return a * b
+
+import doctest
+doctest.testmod() # s'il ne se passe rien, les test sont justes
+{{< /python >}}
 
 Quand on exécute le programme, il ne se passe rien.
 

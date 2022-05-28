@@ -116,17 +116,17 @@ Fichier [factorielle-old.js](/uploads/docsnsi/comparaison_langage/factorielle-ol
 ```javascript
 var factorielle = function(n) {
     if ( n === 0)
-	return 1;
+        return 1;
     else if ( n === 0)
-	return 1;
+        return 1;
     else {
-	var result = 1;
-	var i = 0;
-	while (i < n) {
-	    i = i + 1;
-	    result = result * i;
-	}
-	return result;
+        var result = 1;
+        var i = 0;
+        while (i < n) {
+            i = i + 1;
+            result = result * i;
+        }
+        return result;
     }
 }
 ```
@@ -138,23 +138,40 @@ Le langage javascript a évolué fortement  (et dans le bon sens) ces dernières
 Fichier [factorielle.js](/uploads/docsnsi/comparaison_langage/factorielle.js).
 
 ```javascript
-const factorielle =
-          n => {
-                  if ( n === 0)
-                    return 1;
-                  else if ( n === 1)
-                    return 1;
-                  else {
-                    let result = 1;
-                    let i = 0;
-                    while (i < n) {
-                      i = i + 1;
-                      result = result * i;
-                    }
-                    return result;
-                  }
-              }
+const factorielle = n => {
+    if ( n === 0)
+        return 1;
+    else if ( n === 1)
+        return 1;
+    else {
+        let result = 1;
+        let i = 0;
+        while (i < n) {
+            i = i + 1;
+            result = result * i;
+        }
+    return result;
+    }
+  }
 ```
+
+<script>
+const factorielle = n => {
+    if ( n === 0)
+        return 1;
+    else if ( n === 1)
+        return 1;
+    else {
+        let result = 1;
+        let i = 0;
+        while (i < n) {
+            i = i + 1;
+            result = result * i;
+        }
+    return result;
+    }
+  }
+</script>
 
 Dans les deux cas on peut utiliser la console javascript fournie avec firefox par exemple (`Ctrl+Shift+K` dans le navigateur, outil également présent dans Chrome après touche `F12`). Il faut évaluer cette définition puis l'expression :
 
@@ -207,7 +224,7 @@ $ javac Math.java
 $ java Math 5
 120
 ```
-*NB* L'usage de `static` pour la méthode `factorielle`n'est pas caractéristique des méthodes en Java, mais il est légitime et pertinent ici car le résultat de `factorielle` ne dépend que de son paramètre et d'aucun objet particulier.
+*NB.* L'usage de `static` pour la méthode `factorielle` n'est pas caractéristique des méthodes en Java, mais il est légitime et pertinent ici car le résultat de `factorielle` ne dépend que de son paramètre et d'aucun objet particulier.
 
 ## C
 Fichier [factorielle.c](/uploads/docsnsi/comparaison_langage/factorielle.c).
