@@ -28,7 +28,7 @@ pre.CodeMirror-line {
   overflow: auto;
 }
 
-table {
+table.sql {
   width: auto;
   margin: auto;
   border: 1px solid black;
@@ -37,8 +37,8 @@ table {
   font-size: 0.8rem;
 }
 
-th,
-td {
+th.sql,
+td.sql {
   border: 1px solid #777;
 }
 

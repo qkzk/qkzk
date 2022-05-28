@@ -11,7 +11,7 @@
 {{ end }}
 
 <main>
-    <div id="ide_{{ .Ordinal | safeJS }}">
+    <div id="python_ide_{{ .Ordinal | safeJS }}">
         <textarea id="commands_{{ .Ordinal | safeJS }}" class="commands">
 {{ if gt (len .Inner) 1 }}{{ .Inner }}{{ end }}
         </textarea>
@@ -41,8 +41,8 @@
     }
 
 
-    onElementLoaded("div#ide_{{ .Ordinal | safeJS }}").then(() => {
-        const ide = document.querySelector("div#ide_{{ .Ordinal | safeJS }}");
+    onElementLoaded("div#python_ide_{{ .Ordinal | safeJS }}").then(() => {
+        const ide = document.querySelector("div#python_ide_{{ .Ordinal | safeJS }}");
         start_worker(ide);
     }).catch(() => { });
 </script>

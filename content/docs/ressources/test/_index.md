@@ -16,6 +16,7 @@ weight: 10000
 
 ## Test everything
 
+
 ### LaTex
 
 Inline math : $\int_1^2 x^2dx = \dfrac{3}{2}$
