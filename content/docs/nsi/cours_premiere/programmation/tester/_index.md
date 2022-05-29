@@ -6,14 +6,14 @@ author:
 weight: 5
 ---
 
-### pdf : [pour impression](/uploads/docsnsi/programmation/tester/tester_ses_programmes_print.pdf)
+pdf : [pour impression](/uploads/docsnsi/programmation/tester/tester_ses_programmes_print.pdf)
 
-# Tester ses programmes
+## Tester ses programmes
 
 De toute évidence, le code qu'on écrit n'a aucune assurance de fonctionner si on ne le teste pas...
 
 
-## Pourquoi doit-on tester ?
+### Pourquoi doit-on tester ?
 
 Imaginons la situation courante du développeur :
 
@@ -23,14 +23,14 @@ Imaginons la situation courante du développeur :
 
 Comment espérer comprendre l'intégralité du programme ?
 
-## Solution
+### Solution
 
 * On crée deux environnements :
   * **Production** : le programme qui est utilisé par les clients
   * **Développement** : le code sur lequel on travaille
 * Objectif : ne déployer en production que le code le plus sûr possible
 
-## Démarche
+### Démarche
 
 Pour chaque modification du code en **développement** :
 
@@ -39,12 +39,12 @@ Pour chaque modification du code en **développement** :
 * S'il est validé par le superviseur, alors il passe en **production**
 
 
-## Mais peut-on TOUT tester ?
+### Mais peut-on TOUT tester ?
 
 Non, malheureusement.
 
 
-## Infinité de tests
+### Infinité de tests
 
 Imaginons une simple fonction qui encode les mots de passe :
 
@@ -56,7 +56,7 @@ Comment s'assurer que deux mots de passes différents sont encodés différemmen
 
 Il faudrait une infinité de tests. C'est impossible.
 
-# Alors comment faire ?
+## Alors comment faire ?
 
 Il faut essayer de tester tous les cas intéressants, couvrant toutes les situations possibles.
 Certains développeurs sont spécialisés dans ce domaine. Ils cherchent les cas
@@ -64,11 +64,11 @@ limites susceptibles de provoquer des erreurs.
 
 C'est le seul moyen de les éviter sur le produit.
 
-# Les tests en pratique
+## Les tests en pratique
 
 Python (et tous les langages modernes) propose de nombreuses méthodes
 
-# Écrire les tests soi même
+## Écrire les tests soi même
 
 Le moyen le plus simple consiste à écrire un jeu de test après `if __name__="__main__":`
 
@@ -86,7 +86,7 @@ Selon les contextes (devoir, projet, développement en cours...) on peut les lai
 
 Il est préférable de les remplacer par de vrais tests...
 
-# Assert
+## Assert
 
 Python intègre un mot clef `assert` qui va lever une exception `AssertionError` si la condition qui suit est fausse:
 
@@ -108,7 +108,7 @@ C'est le moyen le plus efficace et rapide de tester un programme ou une fonction
 
 Il ne faut pas intégrer les assertions à la fonction elle même. Il est préférable de les intégrer à des fonctions de tests indépendantes du programme.
 
-## Un exemple
+### Un exemple
 
 Reprenons notre fonction Fibonacci
 
@@ -162,7 +162,6 @@ fibonacci(15)
 
 
 
-##
 
 On peut tester plusieurs choses :
 
@@ -239,7 +238,7 @@ def tester_fibonacci():
 tester_fibonacci()
 {{< /python >}}
 
-# Doctest
+## Doctest
 
 Python permet grâce au module `doctest` d'intégrer les tests à la documentation.
 
@@ -247,7 +246,7 @@ Il est parfois délicat de tester certaines fonctions, en particulier les affich
 
 Pour les fonctions qui réalisent des calculs cela est pratique.
 
-## Un exemple :
+### Un exemple :
 
 {{< expand "Exemple de doctest" "..." >}}
 ```python
@@ -286,7 +285,7 @@ doctest.testmod() # s'il ne se passe rien, les test sont justes
 
 Quand on exécute le programme, il ne se passe rien.
 
-## Un exemple qui échoue :
+### Un exemple qui échoue :
 
 ```python
 def Fonction_mal_testee():
@@ -324,7 +323,7 @@ Got:
 ```
 
 
-# Unitest, tesmod
+## Unitest, tesmod
 
 Il existe une librairie dédiée aux tests : `Unitest` et qui permet de tester
 toutes les propriétés possibles d'un objet.
@@ -335,3 +334,32 @@ l'utiliserons pas.
 
 Voici sa [documentation](https://docs.python.org/fr/3.7/library/unittest.html)
 et un [guide détaillé](http://sametmax.com/un-gros-guide-bien-gras-sur-les-tests-unitaires-en-python-partie-2/).
+
+## Exercice : réaliser et tester
+
+Écrire une fonction qui vérifie la spécification suivante :
+
+```
+fonction pop_min
+
+entrée          : un tableau d'entiers non vide
+sortie          : le plus petit élément du tableau
+effet de bord   : retire cet élément du tableau
+```
+
+
+{{< python title="pop_min">}}
+def pop_min(tab: list) -> int:
+    """
+    Renvoie et retire le plus élément de `tab`
+    """
+    pass
+
+def test():
+    tab = [1, 2, 3]
+    assert pop_min(tab) == 1
+    assert len(tab) == 2
+
+
+test()
+{{< /python >}}
