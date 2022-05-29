@@ -1,4 +1,4 @@
-async function init_worker(ide, url, initfile) {
+async function init_worker(ide, initfile) {
 
     const textarea_elm = ide.querySelector('textarea.commands');
     const output_elm = ide.querySelector('pre.python_output');
@@ -33,63 +33,46 @@ async function init_worker(ide, url, initfile) {
             "Ctrl-Enter": read_run_code,
             "Ctrl-R": reset_editor,
             "Ctrl-S": download_editor,
-            "Ctrl-D": interrupt_execution,
+            // "Ctrl-D": interrupt_execution,
         }
     });
 
 
-    const pyodideWorker = new Worker(url);
-    window.pyodide = pyodideWorker;
-    const callbacks = {};
-
-    /*
-    * Called when the worker post a response.
-    * Use the given callback from the response.
-    */
-    function onMessage(event) {
-        const { id, ...data } = event.data;
-        const onSuccess = callbacks[id];
-        delete callbacks[id];
-        onSuccess(data);
+    
+    async function loadPyodideAndPackages() {
+        self.pyodide = await loadPyodide({
+        });
+        console.log(self.pyodide);
+        // await self.pyodide.loadPackage(["numpy", "pytz"]);
     }
 
-    // Attach the onMessage function to Worker method
-    pyodideWorker.onmessage = onMessage;
+    let pyodideReadyPromise = loadPyodideAndPackages();
 
-    let interruptBuffer = new Uint8Array(new SharedArrayBuffer(1));
-    pyodideWorker.postMessage({ cmd: "setInterruptBuffer", interruptBuffer });
-    function interrupt_execution() {
-        // 2 stands for SIGINT.
-        interruptBuffer[0] = 2;
+    async function run_python(python) {
+        try {
+            await pyodideReadyPromise;
+        } catch (error) {
+            console.log("pyodideReadyPromise error\n", error);
+        }
+
+        try {
+            await self.pyodide.loadPackagesFromImports(python);
+            let results = await self.pyodide.runPythonAsync(python);
+            results = prepareResults(results);
+            return { results: results };
+        } catch (error) {
+            return { error: error.message };
+        }
     }
 
-    async function runCode(code) {
-        // Clear interruptBuffer in case it was accidentally left set after previous code completed.
-        interruptBuffer[0] = 0;
-        pyodideWorker.postMessage({ cmd: "runCode", code });
-    }
 
-    // Allow async execution in the worker
-    const asyncRun = (() => {
-        let id = 0; // identify a Promise
-        return (script, context) => {
-            // the id could be generated more carefully
-            id = (id + 1) % Number.MAX_SAFE_INTEGER;
-            return new Promise((onSuccess) => {
-                callbacks[id] = onSuccess;
-                interruptBuffer[0] = 0;
-                pyodideWorker.postMessage(
-                    {
-                        cmd: "runCode",
-                        code: {
-                            ...context,
-                            python: script,
-                            id,
-                        }
-                    });
-            });
-        };
-    })();
+    // let interruptBuffer = new Uint8Array(new SharedArrayBuffer(1));
+    // pyodideWorker.postMessage({ cmd: "setInterruptBuffer", interruptBuffer });
+    // function interrupt_execution() {
+    //     // 2 stands for SIGINT.
+    //     interruptBuffer[0] = 2;
+    // }
+
 
 
     /*
@@ -101,7 +84,7 @@ async function init_worker(ide, url, initfile) {
         var worker_error = null;
 
         try {
-            const { results, error } = await asyncRun(script, "");
+            const { results, error } = await run_python(script);
             if (results) {
                 output = results;
             } else if (error) {
@@ -118,44 +101,26 @@ async function init_worker(ide, url, initfile) {
         }
     }
 
-/*
-* Aucune de ces tentatives n'est satisfaisante
-* J'arrive à écrire dans un fichier, mais alors pas à interrompre...
-* Et quand j'écris dans le fichier, il faut le fermer, ce qui devient la dernière
-* instruction, évaluée à None, ce que j'obtiens comme réponse.
-* En définitive, `runPythonAsync` ne semble pas fait pour ça.
-*/ 
+    /*
+    * Aucune de ces tentatives n'est satisfaisante
+    * J'arrive à écrire dans un fichier, mais alors pas à interrompre...
+    * Et quand j'écris dans le fichier, il faut le fermer, ce qui devient la dernière
+    * instruction, évaluée à None, ce que j'obtiens comme réponse.
+    * En définitive, `runPythonAsync` ne semble pas fait pour ça.
+    */
     const start_script = `
 import io
 import sys
+import js
 old_stdout = sys.stdout
 new_stdout = io.StringIO()
 sys.stdout = new_stdout
+print(js)
 `
 
     const end_script = `   
 new_stdout.getvalue()
 `
-//
-//     const redirect_stdout = `
-// import sys
-//
-// orig_stdout = sys.stdout
-// f = open('/out.txt', 'w', encoding="utf-8")
-// sys.stdout = f
-// `
-//
-//
-//     const close_file = `
-// f.close()
-// `
-//
-//     const contexted_script = `
-// from contextlib import redirect_stdout
-//
-// with open('/out.txt', 'w') as f:
-//     with redirect_stdout(f):
-// `
 
     /*
     * read code from the editor and the init file content.
@@ -173,11 +138,6 @@ new_stdout.getvalue()
 
         var editor_code = await editor.getValue();
         var script = start_script + init_content + editor_code + end_script;
-        // var script = redirect_stdout + init_content + editor_code + close_file;
-//         var script = redirect_stdout + init_content + editor_code + `
-// f.close()
-// `;
-        // var script = contexted_script + init_content + editor_code;
         // var script = init_content + editor_code;
         let resp = await run_code(script);
 
@@ -298,6 +258,24 @@ function onElementLoaded(elementToObserve, parentStaticElement) {
 export { init_worker, onElementLoaded };
 
 
+function prepareResults(results) {
+    if (pyodide.isPyProxy(results)) {
+        let temp = results.toString();
+        results.destroy();
+        results = temp;
+    } else if (results === false) {
+        results = "False";
+    } else if (results === true) {
+        results = "True";
+    } else if (typeof results === 'undefined') {
+        results = "None";
+    } else if (results === Infinity) {
+        results = "inf";
+    } else if (typeof results === 'number' && isNaN(results)) {
+        results = "nan";
+    }
+    return results
+}
 // test interruption from server.
 // doesn't work locally
 try {

@@ -1,16 +1,19 @@
 ---
-title: "Python shortcodes"
+title: "Python worker"
 weight: 10000
 
 ---
 
 ## Pyodide shortcodes
 
-{{< python title="IDE 1" init="init1.py" >}}None
+{{< python title="IDE 1" init="init1.py" >}}for i in range(10 ** 6):
+    print(i)
+"Finished..."
 {{< /python >}}
 
 
-{{< python >}}False
+{{< python >}}print("Hello World!")
+False
 {{< /python >}}
 
 
