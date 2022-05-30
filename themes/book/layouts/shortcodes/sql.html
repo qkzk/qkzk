@@ -1,7 +1,9 @@
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.58.1/codemirror.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.58.1/theme/idea.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.63.3/codemirror.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.63.3/theme/idea.css">
 <link rel="stylesheet" href="{{ .Site.BaseURL }}css/sql_editor.css">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.58.1/codemirror.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.63.3/codemirror.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.63.3/mode/sql/sql.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.63.3/addon/comment/comment.js"></script>
 
 <h3>
 {{ if .Get `title` }}
@@ -25,7 +27,6 @@
     </div>
 </main>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.58.1/mode/sql/sql.min.js"></script>
 <script type="text/javascript" src="{{ .Site.BaseURL }}js/sql_ide.js"></script>
 <script>
     {{ if .Get `dbfile` }}
@@ -44,7 +45,7 @@
         var initfile = null;
     {{ end }}
 
-    var worker_url = "{{ .Site.BaseURL }}js/worker.sql-wasm.js";
+    var worker_url = "{{ .Site.BaseURL }}js/worker-sql-wasm.js";
 
     onElementLoaded("div#sql_ide_{{ .Ordinal | safeJS }}").then(() => {
         const ide = document.querySelector("div#sql_ide_{{ .Ordinal | safeJS }}");

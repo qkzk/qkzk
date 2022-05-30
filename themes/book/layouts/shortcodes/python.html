@@ -3,6 +3,9 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.63.3/theme/idea.css">
 <link rel="stylesheet" href="{{ .Site.BaseURL }}css/python_editor.css">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.63.3/codemirror.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.63.3/mode/python/python.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.63.3/addon/comment/comment.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.63.3/addon/display/fullscreen.js"></script>
 
 {{ if .Get `title` }}
     {{ (print "### " (.Get `title`)) | .Page.RenderString }}
@@ -24,7 +27,6 @@
         <pre class="worker_error" style="display: none;"></pre>
     </div>
 </main>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.63.3/mode/python/python.min.js"></script>
 <script type="module">
     import { onElementLoaded, init_worker } from "{{ .Site.BaseURL }}js/pyodide_consumer.js";
 
