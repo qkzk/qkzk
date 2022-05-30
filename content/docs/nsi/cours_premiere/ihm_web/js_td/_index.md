@@ -10,7 +10,7 @@ weight: 10
 
 # HTML
 
-![HTML 5](https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/240px-HTML5_logo_and_wordmark.svg.png)
+![HTML 5](/docs/nsi/cours_premiere/ihm_web/js_td/img/0.svg.png)
 
 ## 1. Ecrire la structure d'une page depuis un modèle
 

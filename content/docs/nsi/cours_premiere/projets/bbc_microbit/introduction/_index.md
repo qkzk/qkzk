@@ -12,7 +12,7 @@ officielle du bbc:microbit_
 
 L'objectif est de vous initier à ce cet ordinateur à carte unique.
 
-![microbit](https://ericecmorlaix.github.io/img/bbcmicrobit.gif)
+![microbit](/docs/nsi/cours_premiere/projets/bbc_microbit/introduction/img/0.gif)
 
 ## Qu'est-ce ?
 
@@ -49,7 +49,7 @@ réalisés par des collégiens.
 
 ## Alimenter, raccorder à l'ordinateur
 
-![Alimenter](https://ericecmorlaix.github.io/img/microbit-plugged-in.gif)
+![Alimenter](/docs/nsi/cours_premiere/projets/bbc_microbit/introduction/img/1.gif)
 
 ## A faire 1
 
@@ -57,14 +57,14 @@ Branchez le câble micro-usb dans un port USB de la machine et au micro:bit.
 
 Vous devriez le voir apparaître dans l'explorateur windows.
 
-![explorateur](https://ericecmorlaix.github.io/img/MICROBIT\(E\).png)
+![explorateur](./img/usb-windows-device.jpg)
 
 
 ## `Hello World` avec l'éditeur en ligne
 
 Nous allons d'abord utiliser [l'éditeur en ligne](https://python.microbit.org/).
 
-![editeur en ligne](https://ericecmorlaix.github.io/img/editeurPythonmicrobit.png)
+![editeur en ligne](/docs/nsi/cours_premiere/projets/bbc_microbit/introduction/img/3.png)
 
 Un code par défaut (`hello world`) est proposé.
 
@@ -74,7 +74,7 @@ Ce fichier contient le code qui sera exécuté par le micro:bit.
 
 Déplacez depuis le dossier `Téléchargements` vers `E:\MICROBIT`
 
-![deplacer](https://ericecmorlaix.github.io/img/transfert.png)
+![deplacer](/docs/nsi/cours_premiere/projets/bbc_microbit/introduction/img/4.png)
 
 Une LED jaune au dos du Micro:bit doit clignotter puis rester fixe et vous
 devriez voir défiler `Hello, World!` sur la matrice de LEDS.
@@ -106,7 +106,7 @@ directement un programme. Cela évite d'avoir à transférer le fichier à la ma
 L'éditeur `Mu` _devrait_ être installé sur tous vos postes. Ouvrez le
 et assurez-vous qu'il est en mode "bbc:microbit"
 
-![mu editor](https://codewith.mu/img/en/tutorials/microbit_flash.gif)
+![mu editor](./img/microbit_flash.gif)
 
 Une fois le micro:bit raccordé, le bouton `Flash` permet d'y transférer
 le programme.
@@ -133,7 +133,7 @@ Néanmoins mu editor est meilleur :
 
 Le bouton fichier s'utilise comme ceci :
 
-![fichiers](https://codewith.mu/img/en/tutorials/microbit_files.gif)
+![fichiers](./img/microbit_files.gif)
 
 Cette fonction n'est accesible qu'après avoir chargé un fichier sur la carte.
 
@@ -141,13 +141,13 @@ Cette fonction n'est accesible qu'après avoir chargé un fichier sur la carte.
 
 L'usage est similaire à celui de l'éditeur en ligne.
 
-![shell mu editor](https://codewith.mu/img/en/tutorials/microbit_repl.gif)
+![shell mu editor](./img/microbit_repl.gif)
 
 ### Traceur dans mu editor
 
 Accessible avec le bout plot :
 
-![traceur mu editor](https://codewith.mu/img/en/tutorials/microbit_plotter.gif)
+![traceur mu editor](./img/microbit_plotter.gif)
 
 ### A faire 4
 
@@ -168,7 +168,7 @@ Gestionnaire de périphériques, dérouler la liste des Ports (COM et LPT),
 brancher et/ou débrancher le BBC micro:bit pour repérer sur quel numéro de COM
 est connectée votre carte.
 
-![gestionnaire peripherique](https://ericecmorlaix.github.io/img/W10-Gestionnaire00.png)
+![gestionnaire peripherique](/docs/nsi/cours_premiere/projets/bbc_microbit/introduction/img/9.png)
 
 Dans le dossier informatique, vous trouverez PuTTY qui permet de se connecter
 à un terminal distant (ssh, port série etc.)
@@ -178,12 +178,12 @@ vore carte et régler la vitesse de communication à 115200 bauds (bits/seconde)
 puis cliquer sur le bouton Open pour ouvrir la connection et établir la
 communication entre le PC et le BBC micro:bit.
 
-![putty setup](https://ericecmorlaix.github.io/img/W10-PuTTY00.png)
+![putty setup](/docs/nsi/cours_premiere/projets/bbc_microbit/introduction/img/10.png)
 
 Un fenêtre de terminal s'ouvre. Après avoir appuyé sur la touche Entréede votre
 clavier, Les trois chevrons >>> d'un interpréteur python doivent apparaitre :
 
-![putty shell](https://ericecmorlaix.github.io/img/W10-PuTTY01.png)
+![putty shell](/docs/nsi/cours_premiere/projets/bbc_microbit/introduction/img/11.png)
 
 Saisir alors quelques instructions en Python, et d'autre en microPython de la
 bibliothèque microbit.
@@ -311,7 +311,7 @@ Maintenant, la classe image de le.
 
 ## Actuateurs : Les boutons
 
-![boutons bbc](https://microbit-challenges.readthedocs.io/en/latest/_images/buttons.png)
+![boutons bbc](/docs/nsi/cours_premiere/projets/bbc_microbit/introduction/img/12.png)
 
 La carte BBC micro:bit dispose, sur sa face avant, de deux boutons poussoir repérés par les lettres A et B.
 
@@ -490,7 +490,7 @@ Plus d'informations sur les boutons et les touches :
 
 Il mesure l'accélération selon trois axes $(x, y, z)$ :
 
-![accelerometre](https://microbit-challenges.readthedocs.io/en/latest/_images/microbit_axes.png)
+![accelerometre](/docs/nsi/cours_premiere/projets/bbc_microbit/introduction/img/13.png)
 
 Les valeurs enregistrées vont de $-2g$ à $2g$ ($g$ étant l'accélération de
 pensanteur à la surface de la terre) et les valeurs renvoyées vont de 0 à 1024.
@@ -578,7 +578,7 @@ axes. Il peut être utilisé pour créer une boussole numérique ou pour explore
 des champs magnétiques, tels que ceux générés par un aimant permanent ou ceux
 autour d'une bobine traversée par un courant.
 
-![boussole](https://microbit-challenges.readthedocs.io/en/latest/_images/compass.png)
+![boussole](/docs/nsi/cours_premiere/projets/bbc_microbit/introduction/img/14.png)
 
 L'interprétation de l'intensité du champ magnétique n'est pas facile. Le pilote
 du magnétomètre renvoie des valeurs brutes.
@@ -610,7 +610,7 @@ chauffent lorsqu'elles sont sous tension. Par conséquent, il ne mesure pas la
 température ambiante de manière très précise. La puce utilisée pour mesurer la
 température se trouve sur le côté gauche de l'arrière du micro: bit:
 
-![dht](https://microbit-challenges.readthedocs.io/en/latest/_images/thermometer.png)
+![dht](/docs/nsi/cours_premiere/projets/bbc_microbit/introduction/img/15.png)
 
 
 Il n'y a qu'une seule fonction de base pour le thermomètre - pour obtenir la
@@ -656,7 +656,7 @@ de pince crocodiles et qu'on ne contrôle pas le volume sonore.
 
 Néanmoins, pour le fun :
 
-![speaker](https://microbit-challenges.readthedocs.io/en/latest/_images/connect_speaker.jpg)
+![speaker](/docs/nsi/cours_premiere/projets/bbc_microbit/introduction/img/16.jpg)
 
 ```python
 from microbit import *

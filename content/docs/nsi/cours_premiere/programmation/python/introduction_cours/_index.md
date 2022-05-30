@@ -11,12 +11,12 @@ author: qkzk
 
 ## Présentation de Python
 
-![python_logo](https://www.python.org/static/img/python-logo.png)
+![python_logo](/docs/nsi/cours_premiere/programmation/python/introduction_cours/img/0.png)
 
 Python est un langage de programmation crée au début des années 90 par
 Guido Van Rossum.
 
-![Guido](https://upload.wikimedia.org/wikipedia/commons/thumb/6/66/Guido_van_Rossum_OSCON_2006.jpg/160px-Guido_van_Rossum_OSCON_2006.jpg)
+![Guido](/docs/nsi/cours_premiere/programmation/python/introduction_cours/img/1.jpg)
 
 ## Python dans l'éducation
 
@@ -218,6 +218,6 @@ Parmi les entreprises et projets qui utilisent Python citons :
 
 Citons Katie Bouman, célèbre pour avoir présenté la première image d'un trou noir et qui travaille au MIT.
 
-![blackhole](https://a57.foxnews.com/media2.foxnews.com/BrightCove/694940094001/2019/04/11/931/524/694940094001_6025131006001_6025130335001-vs.jpg?ve=1&tl=1)
+![blackhole](./img/katie-bouman-trou-noir-facebook.png)
 
 On peut voir qu'elle est en train de programmer un script Python.

@@ -25,11 +25,11 @@ async function init_worker(ide, url, initfile) {
         lineNumbers: true,
         matchBrackets: true,
         indentUnit: 4,
-        autofocus: true,
         theme: "idea",
         extraKeys: {
             "Tab": (cm) => cm.execCommand("indentMore"),
             "Shift-Tab": (cm) => cm.execCommand("indentLess"),
+            "Esc": remove_focus,
             "Ctrl-Enter": read_run_code,
             "Ctrl-R": reset_editor,
             "Ctrl-S": download_editor,
@@ -37,7 +37,9 @@ async function init_worker(ide, url, initfile) {
         }
     });
 
+
     const pyodideWorker = new Worker(url);
+    window.pyodide = pyodideWorker;
     const callbacks = {};
 
     /*
@@ -84,7 +86,7 @@ async function init_worker(ide, url, initfile) {
                             python: script,
                             id,
                         }
-                        });
+                    });
             });
         };
     })();
@@ -117,21 +119,39 @@ async function init_worker(ide, url, initfile) {
     }
 
     /*
+    * Aucune de ces tentatives n'est satisfaisante
+    * J'arrive à écrire dans un fichier, mais alors pas à interrompre...
+    * Et quand j'écris dans le fichier, il faut le fermer, ce qui devient la dernière
+    * instruction, évaluée à None, ce que j'obtiens comme réponse.
+    * En définitive, `runPythonAsync` ne semble pas fait pour ça.
+    */
+    const start_script = `
+import io
+import sys
+old_stdout = sys.stdout
+new_stdout = io.StringIO()
+sys.stdout = new_stdout
+`
+
+    const end_script = `   
+new_stdout.getvalue()
+`
+    /*
     * read code from the editor and the init file content.
     * run it through the worker
     * fill the output elements in the document
     * Hide empty elements from the document
     */
     async function read_run_code() {
-        var init_content;
+        let init_content;
         if (initfile !== null) {
             init_content = await load_init_file(initfile);
         } else {
             init_content = "";
         }
 
-        var editor_code = await editor.getValue();
-        var script = init_content + editor_code;
+        let editor_code = await editor.getValue();
+        let script = start_script + init_content + editor_code + end_script;
         let resp = await run_code(script);
 
         fillOutput(resp);
@@ -149,20 +169,20 @@ async function init_worker(ide, url, initfile) {
     // Hide empty elements, display non empty ones.
     function displayOrHideOutputs(resp) {
         if (resp.output === null) {
-            output_elm.style.display   = "none";
+            output_elm.style.display = "none";
         }
-        else {  
+        else {
             output_elm.style.display = "block";
         }
-        if (resp.python_error === null) {          
+        if (resp.python_error === null) {
             python_error_elm.style.display = "none";
-        }  
+        }
         else {
             python_error_elm.style.display = "block";
-        }          
+        }
 
         if (resp.worker_error === null) {
-            worker_error_elm.style.display   = "none";
+            worker_error_elm.style.display = "none";
         }
         else {
             worker_error_elm.style.display = "block";
@@ -180,6 +200,11 @@ async function init_worker(ide, url, initfile) {
         editor.setValue(initial_editor_value);
     }
 
+    // Remove focus from editor
+    function remove_focus() {
+        editor.display.input.blur();
+    }
+
     btn_execute.addEventListener("click", read_run_code, true);
     btn_reset.addEventListener("click", reset_editor, true);
     btn_download.addEventListener("click", download_editor, true);
@@ -190,15 +215,15 @@ async function init_worker(ide, url, initfile) {
 * Download a text content to a file.
 *    Creates an <a> element with download action, clicks it and removes it.
 */
-    
+
 function download(filename, text) {
     var element = document.createElement('a');
-      element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(text));
-      element.setAttribute('download', filename);
+    element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(text));
+    element.setAttribute('download', filename);
 
-      element.style.display = 'none';
+    element.style.display = 'none';
     document.body.appendChild(element);
-    
+
     element.click();
 
     document.body.removeChild(element);
@@ -249,8 +274,8 @@ export { init_worker, onElementLoaded };
 // test interruption from server.
 // doesn't work locally
 try {
-    var  a = new SharedArrayBuffer(1);
-    console.log("SharedArrayBuffer", a);
-} catch(error) {
+    var a = new SharedArrayBuffer(1);
+    console.log("SharedArrayBuffer works", a);
+} catch (error) {
     console.log(error.message);
 }

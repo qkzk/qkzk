@@ -6,8 +6,7 @@
 importScripts("https://cdn.jsdelivr.net/pyodide/v0.20.0/full/pyodide.js");
 
 async function loadPyodideAndPackages() {
-    self.pyodide = await loadPyodide({
-    });
+    self.pyodide = await loadPyodide();
     // await self.pyodide.loadPackage(["numpy", "pytz"]);
 }
 
@@ -17,10 +16,10 @@ self.onmessage = async (event) => {
     // make sure loading is done
     await pyodideReadyPromise;
 
-     if (event.data.cmd === "setInterruptBuffer") {
+    if (event.data.cmd === "setInterruptBuffer") {
         pyodide.setInterruptBuffer(event.data.interruptBuffer);
         return;
-      }
+    }
     if (event.data.cmd === "runCode") {
         // Don't bother yet with this line, suppose our API is built in such a way:
         const { id, python, ...context } = event.data.code;

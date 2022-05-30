@@ -29,7 +29,7 @@ de qualité des prédictions.
 Une fois l'algorithme entrainé et testé on peut l'employer afin qu'il prédise
 le label d'une nouvelle donnée.
 
-![MINST](https://upload.wikimedia.org/wikipedia/commons/2/27/MnistExamples.png)
+![MINST](/docs/nsi/cours_premiere/algorithmique/knn/1_cours/img/0.png)
 
 
 
@@ -45,7 +45,7 @@ Dans l'exemple ci-dessous, les caractéristiques sont $x_1$ et $x_2$ et les
 labels sont $A$ et $B$.
 
 
-$~$![knn](https://www.math93.com/images/images_doc/nsi/k-nearest-neighbor3.png)
+$~$![knn](/docs/nsi/cours_premiere/algorithmique/knn/1_cours/img/1.png)
 
 On ajoute un nouveau point (en bleu) dont on ne connait pas le label...
 

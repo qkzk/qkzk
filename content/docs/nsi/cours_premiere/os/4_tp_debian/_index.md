@@ -203,7 +203,7 @@ Gestionnaire de fichiers et arborescence
 
 2.  **Cliquez sur l'icône : "basculer le mode de navigation" :**
 
-![nemo](https://raw.githubusercontent.com/qkzk/data_colab/master/nemo.png)
+![nemo](/docs/nsi/cours_premiere/os/4_tp_debian/img/0.png)
 
 La barre d'adresse change et on lit : `/home/user`
 
@@ -389,7 +389,7 @@ dans ses pouvoirs. Seul le super utilisateur `root` peut accéder et
 modifier tous les fichiers. C'est la raison pour laquelle on n'utilise
 que très rarement l'utilisateur `root` : une erreur est vite arrivée.
 
-![Propriétés d'un fichier](https://img-19.ccm2.net/qzFEgX1sL1kyznYvr4zK1zYluQU=/ef8e734f119b487487f6178af14d1826/ccm-ugc/Capture.JPG)
+![Propriétés d'un fichier](/docs/nsi/cours_premiere/os/4_tp_debian/img/1.JPG)
 
 1.  Rendez-vous dans `/home/user`
 
@@ -426,11 +426,9 @@ directement dans la console. Les commandes sont simples mais difficiles
 
 Ouvrez un terminal (icone noire avec *\>\_*).
 
-![icone du
-terminal](http://www.wikibit.it/wp-content/uploads/2017/04/cosa-significa-terminale.png)
+![icone du terminal](./img/cosa-significa-terminale.png)
 
-![terminaux sur un
-raspberry](http://rosafante.altervista.org/wp-content/uploads/Raspberrt-Pi-Raspbian-Terminal.jpg)
+![terminaux sur un raspberry](./img/Raspberrt-Pi-Raspbian-Terminal.jpg)
 
 Vous êtes accueilli par un **prompt (\$)** qui vous indique où écrire.
 
@@ -599,7 +597,7 @@ Nous n'utiliserons *aucun des deux*.
 Nous nous contenterons de `nano`
 
 ![nano, l'éditeur des
-débutants](https://www.howtogeek.com/wp-content/uploads/2011/02/xbanner1.png.pagespeed.gp+jp+jw+pj+ws+js+rj+rp+rw+ri+cp+md.ic.agzc6iz3OR.png)
+débutants](/docs/nsi/cours_premiere/os/4_tp_debian/img/4.png)
 
 On reconnait `nano` à la barre du haut et aux raccourcis claviers du
 bas.
@@ -655,7 +653,7 @@ Vérifiez avec `ls` que tout va bien.
 
 Pour effacer un fichier, on utilse `rm` (remove)
 
-![Attention](https://cdn.pixabay.com/photo/2012/04/23/15/39/traffic-sign-38589_960_720.png)
+![Attention](./img/traffic-sign-38589_960_720.png)
 
 **Attention, il n'y a AUCUNE CONFIRMATION dans UNIX.**
 
@@ -719,7 +717,7 @@ ne s'en sert.
 -   **whoami** : qui est l'utilisateur courant ?
 -   **w** : "Who ? What ?" Qui est connecté, que fait-il ?
 
-![top](https://www.linux.com/wp-content/uploads/2019/08/top-main.jpg)
+![top](/docs/nsi/cours_premiere/os/4_tp_debian/img/6.jpg)
 
 ------------------------------------------------------------------------
 
@@ -1157,7 +1155,7 @@ reste couramment employé.
 Dans Putty, saisir l'ip du raspberry, assurez vous d'être en ssh et se
 connecter avec Open.
 
-![Putty](http://marc.terrier.free.fr/docputty/_images/PuTTY066-Configuration01-Session-81.png)
+![Putty](/docs/nsi/cours_premiere/os/4_tp_debian/img/7.png)
 
 Un terminal s'ouvre, tapez les identifiants habituels. Et voilà, vous
 avez le contrôle de votre machine.
@@ -1218,7 +1216,7 @@ ne vois pas vraiment l'intérêt pour nous, mais vous savez que ça
 existe.
 
 ![VNC depuis ubuntu vers un
-raspberry](https://raspbian-france.fr/wp-content/uploads/2017/06/controle-raspberry-pi-distance-vnc-939x528.jpg)
+raspberry](/docs/nsi/cours_premiere/os/4_tp_debian/img/8.jpg)
 
 RQ. Cela peut être très pratique pour administrer un PC windows à
 distance. Depuis chez vous (client) vers chez un parent peu versé dans
@@ -1597,7 +1595,7 @@ On l'a dit plus haut, le succès planétaire d'UNIX et de ses dérivés
 Entrons (un peu) dans le détail.
 
 ![IO
-processus](https://upload.wikimedia.org/wikipedia/commons/5/5a/Descripteurs_de_flux.png)
+processus](/docs/nsi/cours_premiere/os/4_tp_debian/img/9.png)
 
 Sous unix chaque processus dispose de trois "descripteurs de flux" :
 l'entrée standard, la sortie standard et la sortie d'erreurs.
@@ -1643,7 +1641,7 @@ On redirige la sortie de `ls` vers `grep`.
 
 Ici on affiche tous les fichiers dont le nom se temine par *conf*.
 
-![ls](https://upload.wikimedia.org/wikipedia/commons/e/e0/Tube_ls_grep.png)
+![ls](/docs/nsi/cours_premiere/os/4_tp_debian/img/10.png)
 
 ### Résumé des redirections
 

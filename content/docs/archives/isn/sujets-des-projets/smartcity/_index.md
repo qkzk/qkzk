@@ -12,7 +12,7 @@ weight: 9
 
 _Projet de réalisation d'un objet connecté et de son interface homme machine_
 
-![smart city](https://images.itnewsinfo.com/lmi/articles/grande/000000065177.jpg)
+![smart city](/docs/archives/isn/sujets-des-projets/smartcity/img/0.jpg)
 
 ## Présentation
 
@@ -89,7 +89,7 @@ Une maquette physique d'une installation _peut_ être réalisée en :
 
 ### Comportement du  lampadaire
 
-![candelabres](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQOPreVtU2RtuYy0wA2fjHNixRNuBPTSH7r4wMnMfDpZidxkOGc2w)
+![candelabres](/docs/archives/isn/sujets-des-projets/smartcity/img/2)
 
 Les règles pour l'allumage et l'extinction varient selon 4 périodes dans le
 temps :
@@ -121,7 +121,7 @@ et qu'il fait nuit à 21h. Ces horaires seront adaptés selon la date.
 
 Elles sont infinies...
 
-![Extensions](https://i.pinimg.com/736x/61/6c/bf/616cbf5b768a6b2744f2207134cdb51d.jpg)
+![Extensions](/docs/archives/isn/sujets-des-projets/smartcity/img/3.jpg)
 
 ## Source
 

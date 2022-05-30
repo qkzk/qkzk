@@ -34,20 +34,6 @@ pre.CodeMirror-line {
   color: blue;
 }
 
-table {
-  width: auto;
-  margin: auto;
-  border: 1px solid black;
-  border-collapse: collapse;
-  margin-bottom: 10px;
-  font-size: 0.8rem;
-}
-
-th,
-td {
-  border: 1px solid #777;
-}
-
 label {
   font-size: 1rem;
 }

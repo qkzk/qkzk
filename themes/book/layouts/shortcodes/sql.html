@@ -1,5 +1,5 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.58.1/codemirror.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.58.1/theme/xq-light.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.58.1/theme/idea.css">
 <link rel="stylesheet" href="{{ .Site.BaseURL }}css/sql_editor.css">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.58.1/codemirror.js"></script>
 
@@ -11,13 +11,15 @@
 {{ end }}
 </h3>
 <main>
-    <div id="ide_{{ .Ordinal | safeJS }}">
+    <div id="sql_ide_{{ .Ordinal | safeJS }}">
         <label for='commands_{{ .Ordinal | safeJS }}'>Commande SQL</label>
         <br>
         <textarea id="commands_{{ .Ordinal | safeJS }}" class="commands">
 {{ if gt (len .Inner) 1 }}{{ .Inner }}{{ end }}
         </textarea>
-        <a id="execute" class="execute btn-sql book-btn" title="Ctrl+Enter">Exécuter</a>
+        <a id="execute" class="execute btn-sql book-btn" title="Ctrl+Enter">Run</a>
+        <a class="reset book-btn" title="Ctrl+R">Reset</a>
+        <a class="download book-btn" title="Ctrl+S">Download</a>
         <div id="error" class="error"></div>
         <pre id="output_{{ .Ordinal | safeJS }}" class="output">Résultat</pre>
     </div>
@@ -44,8 +46,8 @@
 
     var worker_url = "{{ .Site.BaseURL }}js/worker.sql-wasm.js";
 
-    onElementLoaded("div#ide_{{ .Ordinal | safeJS }}").then(() => {
-        const ide = document.querySelector("div#ide_{{ .Ordinal | safeJS }}");
+    onElementLoaded("div#sql_ide_{{ .Ordinal | safeJS }}").then(() => {
+        const ide = document.querySelector("div#sql_ide_{{ .Ordinal | safeJS }}");
         load(ide, worker_url, dbfile, initfile);
     }).catch(() => { });
 </script>

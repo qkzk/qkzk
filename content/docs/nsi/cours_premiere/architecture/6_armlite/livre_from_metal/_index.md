@@ -342,7 +342,7 @@ groupes statiques de cellules vivantes et de certains "oscillateurs" - un groupe
 qui parcourt un schéma répété.
 
 
-![Planeur](https://upload.wikimedia.org/wikipedia/commons/e/e5/Gospers_glider_gun.gif)
+![Planeur](/docs/nsi/cours_premiere/architecture/6_armlite/livre_from_metal/img/0.gif)
 
 Vous pouvez également observer des «planeurs» - de petits groupes de
 cellules qui semblent se déplacer (en diagonale) sur l'écran - en fait, les
@@ -364,7 +364,7 @@ un ordinateur) et se reproduire à partir de matières premières. Il faudrait
 50 ans avant que quiconque ne parvienne à mettre en oeuvre un exemple de cela ;
 celui illustré à droite.
 
-![VNUC](https://upload.wikimedia.org/wikipedia/commons/c/c4/Nobili_Pesavento_2reps.png)
+![VNUC](/docs/nsi/cours_premiere/architecture/6_armlite/livre_from_metal/img/1.png)
 
 Crédits photos et lectures complémentaires :
 https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life et
@@ -748,7 +748,7 @@ diviseurs matériels. Cela était dû en partie au fait que la plupart des
 premiers ordinateurs étaient principalement appliqués à des calculs
 mathématiques complexes.
 
-![ENIAC](https://upload.wikimedia.org/wikipedia/commons/1/16/Classic_shot_of_the_ENIAC.jpg)
+![ENIAC](/docs/nsi/cours_premiere/architecture/6_armlite/livre_from_metal/img/2.jpg)
 
 Avec la transition vers les «microprocesseurs» à puce unique, la multiplication
 et la division sont passées du matériel au logiciel, sous la forme de

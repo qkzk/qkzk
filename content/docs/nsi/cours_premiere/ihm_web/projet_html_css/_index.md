@@ -10,7 +10,7 @@ pdf : [pour impression](./nsi_prem_projet_css.pdf)
 
 # Mini projet CSS
 
-![Margaret Hamilton](https://i.f1g.fr/media/madame/400x/sites/default/files/img/2019/07/margaret-hamilton.jpg)
+![Margaret Hamilton](/docs/nsi/cours_premiere/ihm_web/projet_html_css/img/0.jpg)
 
 ## Objectif
 

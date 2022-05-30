@@ -141,7 +141,7 @@ modélisé par une liste de malles.
 
 On considère un rectangle de dimension 11 sur 13 (figure 0). On veut remplir ce rectangle avec le minimum de carrés.
 
-![Exemple 1](https://raw.githubusercontent.com/glassus/nsi/52b8e9a235795d39cf28b8644bcad47b9c7d290b/Premiere/Theme05_Algorithmique/data/remplissage_carres2.png)
+![Exemple 1](/docs/nsi/cours_premiere/algorithmique/glouton/5_td/img/0.png)
 
 Un algorithme glouton va chercher à positionner d'abord le plus grand carré possible (figure 1).
 
@@ -149,7 +149,7 @@ C'est une stratégie efficace (8 carrés nécessaires), mais qui n'est pas optim
 
 Est-ce qu'un algorithme glouton va toujours passer à côté de la solution optimale ? Non ! Il arrive aussi qu'il donne la solution optimale. Changeons le rectangle initial en un rectangle de 10 sur 15 :
 
-![Exemple 2](https://raw.githubusercontent.com/glassus/nsi/52b8e9a235795d39cf28b8644bcad47b9c7d290b/Premiere/Theme05_Algorithmique/data/remplissage_carres3.png)
+![Exemple 2](/docs/nsi/cours_premiere/algorithmique/glouton/5_td/img/1.png)
 
 Dans cette situation, l'algorithme glouton nous amène à la solution optimale.
 

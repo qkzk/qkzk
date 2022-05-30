@@ -44,7 +44,7 @@ Prenons l'exemple de Mme Julie Gabriaux qui habite à Bordeaux
 ayant le n° 2454 (commande n° 45). La cliente qui a passé cette commande n° 45
 est bien Mme Gabriaux, nous avons une ligne dans notre tableau "cl-com" :
 
-![commande Gabriaux](https://pixees.fr/informatiquelycee/n_site/img/nsi_prem_traitCSV_4.png)
+![commande Gabriaux](/docs/nsi/cours_premiere/donnees_structurees/table/6_tp/img/0.png)
 
 4. Écrire une fonction qui renvoie le client ayant passé la dernière commande.
 

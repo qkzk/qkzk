@@ -171,7 +171,7 @@ h2 {
 
 ### `chewie.jpg`
 
-Enregistrer cette image : ![chewie](https://www.briquestore.fr/24999-thickbox_default/mini-figurine-lego-star-wars-chewbacca.jpg) sous le nom `chewie.jpg`
+Enregistrer cette image : ![chewie](./img/chewie.jpg) sous le nom `chewie.jpg`
 
 ### `script.js`
 

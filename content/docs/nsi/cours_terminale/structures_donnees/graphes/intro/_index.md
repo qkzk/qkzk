@@ -38,7 +38,7 @@ Parmi les problèmes fréquents faisant apparaître des graphes on rencontre :
 
     *   Comment résoudre un taquin ?
 
-    ![exemple de taquin](https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/15-puzzle.svg/200px-15-puzzle.svg.png)
+    ![exemple de taquin](/docs/nsi/cours_terminale/structures_donnees/graphes/intro/img/0.svg.png)
 
 1.  L'exploration de graphe.
 

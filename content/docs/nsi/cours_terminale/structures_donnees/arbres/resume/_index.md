@@ -21,7 +21,7 @@ weight: 100
 
 * Les dossiers d'un ordinateur forment un arbre
 
-    . ![dossiers UNIX](https://runestone.academy/runestone/books/published/pythonds/_images/directory.png)
+    . ![dossiers UNIX](/docs/nsi/cours_terminale/structures_donnees/arbres/resume/img/0.png)
 
 * Les balises d'une page html forment un arbre.
 
