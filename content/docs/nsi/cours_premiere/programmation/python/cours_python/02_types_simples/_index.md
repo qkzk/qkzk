@@ -52,7 +52,7 @@ sont définies et le résultat est un entier.
 
 La division de `a / b` donne toujours un flottant.
 
-## Exercice 1
+## Exercice 1 - Vérifier un type avec `isinstance`
 
 1. Créer un script python. Affecter à `total` le nombre 134.
 
@@ -62,8 +62,14 @@ Il décide de s'attribuer le reste.
 
 2. Affecter à `diviseur` le nombre de gateaux reçus par chacun.
 3. Affecter à `reste` le nombre de gateaux restant.
-4. Vérifier avec `isinstance` que les valeurs de ces trois variables sont
+4. Que fait la fonction `isinstance` ? Utilisez l'aide !
+5. Vérifier avec `isinstance` que les valeurs de ces trois variables sont
   des entiers.
+
+_Résumons_ : 
+
+* on _découvre un type inconnu_ avec `type(objet)`
+* on _vérifie un type_ avec `isinstance(bidule, un_type)` 
 
 ## Les nombres à virgule flottante : le type `float`
 
@@ -219,8 +225,9 @@ On considère un triangle $ABC$ de longueurs respectives $x$, $y$ et $z$.
 
 2. Proposez (sur une feuille d'abord !) une expression booléenne sur les
     variables `x`, `y`, `z` (`float`, supérieurs ou égaux à 0) qui permette
-    de vérifier l'inégalité triangulaire : _la longueur d'un côté est inférieure à
-    la somme des longueurs des deux autres côtés_.
+    de vérifier l'inégalité triangulaire :
+
+    > _la longueur d'un côté est inférieure à la somme des longueurs des deux autres côtés_.
 
 3. Traduire cette expression booléenne en une variable booléenne `est_un_triangle`
     et testez la.
@@ -432,8 +439,9 @@ notation précédente en :
 
 ## Exercice 9
 
-1. Saisissez vos noms et prénoms dans des variables et créez une variable
-    avec vos initiales. `Paul Quesnoy -> PQ`
+1. Saisissez vos noms et prénoms dans des variables et créez une variable avec vos initiales :
+
+    > `Paul Quesnoy -> PQ`
 2. Recommencez pour former la notation abbrégée suivante : `P. Quesnoy`
 
 ## Mutabilité
@@ -557,4 +565,17 @@ Comme on peut le voir :
 > Finissant par un trait plutôt droit ?
 
 
+3. Un nom de fichier peut contenir des espaces et certains caractères de ponctuation. 
 
+    En utilisant la bonne méthode, renommez ces fichiers :
+
+    ```python
+    >>> fichier_1 = "super film marvel 4.mkv"
+    >>> fichier_2 = "Easy on Me [Adele].mp3"
+    ```
+
+    * En remplaçant tous les espaces par des _soulignés blancs_ : `_`,
+    * En retirant ce qui n'est pas une lettre,
+    * En passant tout en minuscule.
+
+    Peut-on le faire en une seule (longue) instruction ?

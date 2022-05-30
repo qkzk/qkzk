@@ -19,6 +19,9 @@ Utiliser une fonction se fait en deux temps :
 1. définition de la fonction,
 2. appel de la fonction.
 
+L'appel d'une fonction _renvoie_ toujours une valeur. Si aucune valeur
+de retour n'est spécifiée, alors la fonction renvoie `None`.
+
 ## Exemples
 
 On a déjà rencontré plusieurs fonctions, en particulier `len`. Cette fonction
@@ -36,8 +39,8 @@ Par exemple :
 7
 ```
 
-On a aussi rencontré la fonction `print`. Cette fonction **ne renvoie rien**
-mais affiche un objet dans la console.
+On a aussi rencontré la fonction `print`. Cette fonction renvoie `None`
+et affiche un objet dans la console.
 
 ```python
 >>> valeur = print("Bonjour !")
@@ -105,13 +108,15 @@ Que pourrait-on dire du type de `print` ?
 print(any, any, any, ...) -> None
 ```
 
-`print` accepte autant de paramètres qu'on le souhaite et ne renvoie _rien_.
+`print` accepte autant de paramètres qu'on le souhaite et renvoie `None`.
 
 Le fait qu'elle affiche quelque chose dans la console est _un effet de bord_.
 
 ## Exercice 0
 
 Relire les deux lignes précédentes jusqu'à ce que vous les connaissiez par coeur.
+
+**J'insiste**. Vous aurez 250 occasions de me remercier durant l'année.
 
 
 # Appeler une fonction
@@ -144,12 +149,12 @@ Avant de se lancer dans la syntaxe et ses subtilités : pourquoi aurait-on besoi
 de définir une fonction ?
 
 Dès qu'un morceau de code réalise une tâche spécifique ou dès qu'il est répété
-plusieurs fois, on est amené à l'inclure dans une fonction.
+plusieurs fois, on l'inclut dans une fonction.
 
 Cela permet d'éviter de le recopier plusieurs fois (et donc d'avoir à le
-modifier autant de fois lorsqu'on voudra l'adapter).
+modifier autant de fois lorsqu'on voudra l'_adapter_).
 
-Cela permet aussi de le tester indépendamment et donc de s'assurer qu'il fait
+Cela permet aussi de le _tester_ indépendamment et donc de s'assurer qu'il fait
 ce qu'on attend de lui.
 
 ce point peut sembler secondaire, pourquoi devrait-on "tester" le code. C'est
@@ -175,8 +180,9 @@ Bien sûr on pourrait faire :
 ```
 
 et convertir la température à l'aide de la formule. Même avec un copier-coller
-cette approche est pénible... et dangereuse. Avez-vous repéré l'erreur dans 
-les lignes précédentes ?
+cette approche est pénible... et dangereuse. 
+
+Avez-vous repéré l'erreur dans les lignes précédentes ?
 
 ## Définition d'une fonction : syntaxe
 
@@ -239,7 +245,31 @@ def nom_de_la_fonction(parametre1, parametre2, parametre3, ...):
 arrive ici la fonction est finie
 ```
 
-## Exercice 2 : documentation
+## Exercice 2 : écrire une fonction :
+
+1. Écrire la définition d'une fonction : 
+
+    * qui prend un paramètre appelé `prix_ht`,
+    * qui renvoie le montant majoré de 20%,
+    * appelée `prix_ttc`,
+    * dont la documentation est : `"""Calcule la TVA"""`.
+
+    On prendra garde à l'ordre !
+
+    Voici ce qu'on doit obtenir en exécutant `help(prix_ttc)` :
+
+    ```
+    >>> help(prix_ttc)
+    Help on function prix_ttc in module __main__:
+
+    tva(prix_ht)
+        Calcule le prix TTC
+    ```
+
+2. Calculez le prix TTC d'un article valant 150€, 10€
+3. Que produit votre fonction lorsqu'on l'appelle avec les paramètres `"Mireille"`, `None` ? Expliquez.
+
+## Exercice 3 : documentation
 
 Pour chaque fonction définie ci-dessous :
 
@@ -261,7 +291,7 @@ def troisieme_fonction(nom):
   print("Bonjour", nom)
 ```
 
-## Exercice 3 : dé à $n$ faces
+## Exercice 4 : dé à $n$ faces
 
 La fonction suivante simule le lancer d'un dé à six faces :
 
@@ -287,8 +317,7 @@ On l'exécute ainsi :
 6
 ```
 
-Adapter la fonction pour qu'elle accepte un paramètre, le nombre de faces du
-dé.
+Adapter la fonction pour qu'elle accepte un paramètre, le nombre de faces du dé.
 
 On souhaite pouvoir l'utiliser ainsi :
 
@@ -323,7 +352,7 @@ Ajoutons sa documentation
 
 ```python
 def image_de_f(x):
-    '''Renvoie l'image de x par f(x) = 2x + 1'''
+    """Renvoie l'image de x par f(x) = 2x + 1"""
     return 2 * x + 1
 ```
 
@@ -369,7 +398,7 @@ image_de_f(x: float) -> float
     @return:  (float) l'image
 ```
 
-## Exercice 4 - code d'une fonction
+## Exercice 5 - code d'une fonction
 
 Pour chaque question on donnera le code complet avec documentation et indication
 de type.
@@ -408,7 +437,7 @@ précédent.
   des deux.
 
 
-## Exercice 5 : simplifier le code d'une fonction
+## Exercice 6 : simplifier le code d'une fonction
 
 C'est une démarche qu'il faut envisager systématiquement : nos fonctions doivent
 être les plus simples possibles.
@@ -492,6 +521,14 @@ def ma_fonction():
 10
 ```
 
+En résumé : 
+
+> Lorsque Python rencontre un nom de variable, il utilise la définition _locale_. 
+>
+> Sans définition locale, il utilise la définition _globale_.
+>
+> Sinon il plante et lève une exception `NameError`.
+
 ### Le mot clé `global`
 
 Le mot clé `global`, indiqué au début du bloc de code d'une fonction, précise
@@ -532,7 +569,7 @@ Pour chaque fonction produite on attend :
 * la documentation complète,
 * des exemples qui attestent que la fonction fait ce qui est attendu,
 
-## Exercice 6
+## Exercice 7
 
 Écrire une fonction `carre` qui calcule le carré d'un nombre.
 
@@ -544,10 +581,11 @@ Pour chaque fonction produite on attend :
 3.141592653589793
 ```
 
-Rappels aux grands géomètres que vous êtes : l'aire d'un disque de rayon $R$
-est donnée par : $$\mathcal{A} = \pi R^2$$
+Rappels aux grands géomètres que vous êtes : 
 
-## Exercice 7
+> L'aire d'un disque de rayon $R$ est donnée par : $$\mathcal{A} = \pi R^2$$
+
+## Exercice 8
 
 Écrire une fonction qui prend deux chaînes de caractères et renvoie la plus
 courte des deux.
@@ -559,11 +597,11 @@ courte des deux.
 'ab'
 ```
 
-## Exercice 8 - la fonction `sum`
+## Exercice 9 - la fonction `sum`
 
 Python propose de nombreuses fonctions très pratiques... pourquoi les réécrire ?
 
-Et bien pour apprendre c'est un excellent exercice !
+Et bien pour apprendre c'est le seul moyen.
 
 1. Que fait la fonction `sum` ?
 2. Comment calculer la somme des entiers de 1 à 100 avec la fonction `sum` ?
@@ -580,6 +618,8 @@ Et bien pour apprendre c'est un excellent exercice !
 
     Programmer cet algorithme dans une fonction `somme` qui accepte deux
     paramètres `a` et `b` et renvoie la somme des entiers entre `a` et `b`.
+
+    On suppose que $a \leq b$.
 
     On prendra garde aux noms, dans l'algorithme `somme` désigne un _nombre_
     mais pour notre fonction, `somme` est _la fonction elle-même !_, il faudra

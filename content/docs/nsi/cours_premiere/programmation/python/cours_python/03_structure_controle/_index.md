@@ -180,7 +180,7 @@ réalise qu'un des blocs `if, elif, else` est exécuté. Jamais deux.
 
 ## Exercice 1
 
-Les codes suivants sont-ils valides ? (On ne demande pas ce qu'ils font)
+Les codes suivants sont-ils valides (on ne demande pas ce qu'ils font) ?
 S'ils sont invalides, rectifiez les.
 
 1. Code 1 :
@@ -229,12 +229,12 @@ sa tenue ("Bien sapé", "Mal sapé") et son portefeuille ("Épais", "Mince").
 1. Écrire un programme qui affiche si le client peut entrer en respectant les conditions suivantes :
 
 
-  * Un client pauvre mais bien sapé peut entrer.
-  * Les clientes entrent toujours,
-  * Un client pauvre et mal sapé n'entre pas.
+      * Un client pauvre mais bien sapé peut entrer.
+      * Les clientes entrent toujours,
+      * Un client pauvre et mal sapé n'entre pas.
 
 2. Testez le dans tous les cas.
-3. Si ce n'est pas déjà fait, écrire ce programme à l'aide d'un bloc `if` et d'une bloc `else`
+3. Si ce n'est pas déjà fait, écrire ce programme à l'aide d'un bloc `if` et d'un bloc `else`
 
 ## Exercice 4
 
@@ -264,7 +264,7 @@ Attention, `input` retourne toujours _une chaîne de caractères_ du type `str`.
 Pour en faire un entier (du type  `int`) :
 
 ```python
-poids = int(input("Combien...")
+poids = int(input("Combien..."))
 ```
 
 ## Exercice 4
@@ -278,7 +278,7 @@ L'impôt sur le revenu de Groland est assez simple à calculer :
 Ecrire un script qui demande à un utilisateur le montant de ses revenus annuels
 et affiche le montant des impots qu'il doit verser.
 
-_je précise aux plus naïfs que Groland n'existe pas..._
+_je précise aux plus naïfs que Groland n'existe pas._
 
 
 
@@ -304,6 +304,8 @@ Par exemple :
     Coefficient c ? 4
     Discriminant :  -29.75
     Il n'y a pas de solution.
+
+---
 
 # Boucles
 
@@ -426,7 +428,7 @@ somme = 1 + 2 + 3 + ... + 100
 
 Une très longue ligne serait nécessaire mais rien d'impossible.
 
-On peut en écrire moins en utilisant une variable `somme`.
+On peut aussi une variable `somme` et une boucle.
 
 On veut parcourir les entiers jusque 100 inclus, il faudra utiliser `range(101)` !
 
@@ -604,6 +606,8 @@ Modifier le programme précédent :
 1. Créer une variable `compteur` valant 0 avant la boucle,
 2. Augmenter `compteur` de 1 à chaque tour de la boucle,
 3. Affichez la valeur de `compteur` une fois la boucle terminée.
+4. _Bonus difficile_ Affichez à la fin du programme le _maximum_ atteint par Jean-Martin avec un
+    phrase un peu rageante...
 
 ## Boucle infinie
 
@@ -661,6 +665,7 @@ L'instruction `break` est donc le seul moyen de sortir de la boucle.
 
 ```python
 import time     # importation du module time
+
 while True:
     # strftime() est une fonction du module time
     print('Heure courante ', time.strftime('%H:%M:%S'))
@@ -773,5 +778,5 @@ ajoute 2000€ à son capital. Selon le système d'intérêt, ils seront pris en
 suivants.
 
 5. Calculez à l'aide d'une boucle le montant après 10 périodes pour les deux systèmes d'intérêts
-6. Calculez à l'aide d'une boucle le nombre de période pour doubler le capital dans les deux systèmes d'intérêts.
+6. Calculez à l'aide d'une boucle le nombre de périodes pour doubler le capital dans les deux systèmes d'intérêts.
 

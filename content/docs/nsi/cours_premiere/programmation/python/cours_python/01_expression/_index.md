@@ -25,7 +25,7 @@ et lorsqu'on exécute Python en mode intéractif :
 python
 ```
 
-Dans le second cas, on arrive devant une l'_interpréteur_. On le sait
+Dans le second cas, on arrive devant l'_interpréteur_. On le sait
 parce qu'il présente chaque ligne avec trois chevrons :
 
 ```python
@@ -80,7 +80,7 @@ Tout ce qui suit un symbole `#` (dièse) n'est pas interprété par Python.
 
 C'est un commentaire.
 
-Les commentaires sont plusieurs usage :
+Les commentaires ont plusieurs usages :
 
 * permettre d'informer le lecteur sur le déroulement d'un programme,
 * rendre un morceau de code inopérant le temps de sa correction.
@@ -92,7 +92,7 @@ Les commentaires sont plusieurs usage :
 ```
 
 La première ligne de code ci-dessus est un commentaire, comme la phrase :
-"je crois que c'est vrai".
+"`je crois que c'est vrai !`".
 
 Les expressions ont toute un _type_ sur lequel nous reviendrons plus tard.
 
@@ -107,6 +107,46 @@ Les expressions ont toute un _type_ sur lequel nous reviendrons plus tard.
 | division entière   | `//`    | `5 // 3`  |        `1` |
 | reste (_modulo_)   | `%`     | `5 % 3`   |        `2` |
 | puissance          | `**`    | `3 ** 2`  |        `9` |
+
+# Types
+
+C'est un sujet délicat, déjà qu'est-ce qu'un _type_ ?
+
+> En programmation informatique, un **type de donnée**, ou simplement un **type**, définit la nature des valeurs que peut prendre une donnée, ainsi que les opérateurs qui peuvent lui être appliqués.
+
+Donc c'est un type c'est : 
+
+1. un ensemble de valeurs possibles,
+2. un ensemble d'opérations possibles sur ces valeurs.
+
+Par exemple `1` est du type `int`, on peut réaliser certaines opérations _arithmétiques_ sur ce type (addition etc.)
+
+En Python, tous les objets ont un type.
+
+## Types élémentaires 
+
+| Type       | Description                   | Exemple                                       |
+|------------|-------------------------------|-----------------------------------------------|
+| `int`      | Entiers positifs ou négatifs  | `0`, `1234`, `-32`                            |
+| `float`    | Nombres à virgule             | `0.234`, `-43.483`                            |
+| `bool`     | Booléens (Vrai ou Faux)       | `True`, `False` (seules valeurs)              |
+| `NoteType` | Rien, l'absence de réponse... | `None` (seule valeur)                         |
+| `str`      | Du texte                      | `'Super Content'`, `"James Bond"`, `"123.34"` |
+
+On accède au type d'une expression avec la fonction `type` :
+
+```python
+>>> type("Super Kevin")
+<class 'str'>
+>>> type(123)
+<class 'int'>
+>>> type("123")  # attention aux guillemets !
+<class 'str'>
+```
+
+Nous travaillerons avec d'autres types mais une chose à la fois.
+
+
 
 # Exercices
 
@@ -193,7 +233,7 @@ Comprenez bien qu'un affichage ne sert qu'à l'utilisateur...
 
 1. Vérifier ces deux affirmations
 
-`print` accepte un nombre quelconque de paramètre d'entrée, séparés par des virgules :
+`print` accepte un nombre quelconque de paramètres d'entrée, séparés par des virgules :
 
 ```python
 >>> print("Hello", "Harry")
@@ -241,7 +281,10 @@ print(prenom)
 
 ## Exercice 4  - type d'une variable
 
-La fonction `type` permet de connaître le type d'une variable :
+_Remarque_ : on devrait dire : _type de la valeur associée à la variable_ ou _type de la valeur de l'expression_. c'est un abus de langage.
+
+_Rappel_ : La fonction `type` permet de connaître le type d'une expression :
+
 
 ```python
 >>> age = 17
@@ -262,5 +305,5 @@ La fonction `type` permet de connaître le type d'une variable :
 2. Afficher la taille en octets puis en bits d'un fichier de 536ko.
     _On donne : 1ko (1 kilooctet) = 1000 octets et 1 octet = 8 bits._
 
-    Affecter ces tailles à des variables bien nommées et type `int`.
+    Affecter ces tailles à des variables bien nommées et de type `int`.
 
