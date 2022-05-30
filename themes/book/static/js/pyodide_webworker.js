@@ -6,9 +6,7 @@
 importScripts("https://cdn.jsdelivr.net/pyodide/v0.20.0/full/pyodide.js");
 
 async function loadPyodideAndPackages() {
-    self.pyodide = await loadPyodide({
-    });
-    console.log(self.pyodide);
+    self.pyodide = await loadPyodide();
     // await self.pyodide.loadPackage(["numpy", "pytz"]);
 }
 
@@ -19,16 +17,13 @@ self.onmessage = async (event) => {
     await pyodideReadyPromise;
 
     if (event.data.cmd === "setInterruptBuffer") {
-        console.log("interrupt received!");
         pyodide.setInterruptBuffer(event.data.interruptBuffer);
-        console.log("interrupted");
         return;
     }
     if (event.data.cmd === "runCode") {
         // Don't bother yet with this line, suppose our API is built in such a way:
         const { id, python, ...context } = event.data.code;
         // The worker copies the context in its own "memory" (an object mapping name to values)
-        console.log(python);
         for (const key of Object.keys(context)) {
             self[key] = context[key];
         }
@@ -37,11 +32,6 @@ self.onmessage = async (event) => {
             await self.pyodide.loadPackagesFromImports(python);
             let results = await self.pyodide.runPythonAsync(python);
             results = prepareResults(results);
-            /*
-            * Tentative infructueuse de rediriger print vers un fichier pour le lire
-            */
-            // let print_content = self.pyodide.FS.readFile("/out.txt", { encoding: "utf8" });
-            // console.log("print_content", print_content);
             self.postMessage({ results, id });
         } catch (error) {
             self.postMessage({ error: error.message, id });

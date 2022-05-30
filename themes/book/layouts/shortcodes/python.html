@@ -19,7 +19,7 @@
         <a class="reset book-btn" title="Ctrl+R">Reset</a>
         <a class="download book-btn" title="Ctrl+S">Download</a>
         <a class="stop book-btn" title="Ctrl+D">Stop</a>
-        <pre id="output_{{ .Ordinal | safeJS }}" class="python_output" style="display: none;">Résultat</pre>
+        <pre class="python_output" style="display: none;">Résultat</pre>
         <pre class="python_error" style="display: none;"></pre>
         <pre class="worker_error" style="display: none;"></pre>
     </div>
@@ -32,10 +32,10 @@
 
     async function start_worker(ide) {
         {{ if .Get `init` }}
-        var initfile = "{{ .Site.BaseURL }}"  + "{{ .Page.File.Dir }}" + "{{ .Get `init` }}";
+        let initfile = "{{ .Site.BaseURL }}"  + "{{ .Page.File.Dir }}" + "{{ .Get `init` }}";
         initfile = initfile.toLowerCase();
         {{ else }}
-        var initfile = null;
+        let initfile = null;
         {{ end }}
         init_worker(ide, url, initfile);
     }

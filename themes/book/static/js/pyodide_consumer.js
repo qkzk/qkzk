@@ -118,13 +118,13 @@ async function init_worker(ide, url, initfile) {
         }
     }
 
-/*
-* Aucune de ces tentatives n'est satisfaisante
-* J'arrive à écrire dans un fichier, mais alors pas à interrompre...
-* Et quand j'écris dans le fichier, il faut le fermer, ce qui devient la dernière
-* instruction, évaluée à None, ce que j'obtiens comme réponse.
-* En définitive, `runPythonAsync` ne semble pas fait pour ça.
-*/ 
+    /*
+    * Aucune de ces tentatives n'est satisfaisante
+    * J'arrive à écrire dans un fichier, mais alors pas à interrompre...
+    * Et quand j'écris dans le fichier, il faut le fermer, ce qui devient la dernière
+    * instruction, évaluée à None, ce que j'obtiens comme réponse.
+    * En définitive, `runPythonAsync` ne semble pas fait pour ça.
+    */
     const start_script = `
 import io
 import sys
@@ -136,27 +136,6 @@ sys.stdout = new_stdout
     const end_script = `   
 new_stdout.getvalue()
 `
-//
-//     const redirect_stdout = `
-// import sys
-//
-// orig_stdout = sys.stdout
-// f = open('/out.txt', 'w', encoding="utf-8")
-// sys.stdout = f
-// `
-//
-//
-//     const close_file = `
-// f.close()
-// `
-//
-//     const contexted_script = `
-// from contextlib import redirect_stdout
-//
-// with open('/out.txt', 'w') as f:
-//     with redirect_stdout(f):
-// `
-
     /*
     * read code from the editor and the init file content.
     * run it through the worker
@@ -164,21 +143,15 @@ new_stdout.getvalue()
     * Hide empty elements from the document
     */
     async function read_run_code() {
-        var init_content;
+        let init_content;
         if (initfile !== null) {
             init_content = await load_init_file(initfile);
         } else {
             init_content = "";
         }
 
-        var editor_code = await editor.getValue();
-        var script = start_script + init_content + editor_code + end_script;
-        // var script = redirect_stdout + init_content + editor_code + close_file;
-//         var script = redirect_stdout + init_content + editor_code + `
-// f.close()
-// `;
-        // var script = contexted_script + init_content + editor_code;
-        // var script = init_content + editor_code;
+        let editor_code = await editor.getValue();
+        let script = start_script + init_content + editor_code + end_script;
         let resp = await run_code(script);
 
         fillOutput(resp);
@@ -302,7 +275,7 @@ export { init_worker, onElementLoaded };
 // doesn't work locally
 try {
     var a = new SharedArrayBuffer(1);
-    console.log("SharedArrayBuffer", a);
+    console.log("SharedArrayBuffer works", a);
 } catch (error) {
     console.log(error.message);
 }
