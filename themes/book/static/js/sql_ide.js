@@ -3,9 +3,9 @@ function load(ide, worker_url, dbfile, init_file) {
     const worker = new Worker(worker_url);
 
     // Selects the DOM elements relative to the given element.
+    const textarea_elm = ide.querySelector('textarea.commands');
     const output_elm = ide.querySelector('pre.output');
     const error_elm = ide.querySelector('div.error');
-    const textarea_elm = ide.querySelector('textarea.commands');
     const btn_execute = ide.querySelector('a.execute');
     const btn_reset = ide.querySelector('a.reset');
     const btn_download = ide.querySelector('a.download');
@@ -33,32 +33,20 @@ function load(ide, worker_url, dbfile, init_file) {
         execute(editor.getValue() + ';');
     }
 
-    // Performance measurement functions
-    var tictime;
-    if (!window.performance || !performance.now) { window.performance = { now: Date.now } }
-    function tic() { tictime = performance.now() }
-    function toc(msg) {
-        var dt = performance.now() - tictime;
-        console.log((msg || 'toc') + ": " + dt + "ms");
-    }
 
     // Execute commands received
     function execute(commands) {
-        tic();
         worker.onmessage = function(event) {
             var results = event.data.results;
-            toc("Executing SQL");
             if (!results) {
                 error({ message: event.data.error });
                 return;
             }
 
-            tic();
             output_elm.innerHTML = "";
             for (var i = 0; i < results.length; i++) {
                 output_elm.appendChild(tableCreate(results[i].columns, results[i].values));
             }
-            toc("Displaying results");
         }
         worker.postMessage({ action: 'exec', sql: commands });
         output_elm.textContent = "Fetching results...";
@@ -110,7 +98,7 @@ function load(ide, worker_url, dbfile, init_file) {
     btn_reset.addEventListener("click", reset_editor, true);
     btn_download.addEventListener("click", download_editor, true);
 
-    // Add syntax highlihjting to the textarea
+    // Add syntax highlighting to the textarea
     var editor = CodeMirror.fromTextArea(textarea_elm, {
         mode: 'text/x-mysql',
         viewportMargin: Infinity,
@@ -124,9 +112,11 @@ function load(ide, worker_url, dbfile, init_file) {
             "Tab": (cm) => cm.execCommand("indentMore"),
             "Shift-Tab": (cm) => cm.execCommand("indentLess"),
             "Esc": remove_focus,
-            "Ctrl-Enter": execute,
+            "Ctrl-Enter": execEditorContent,
             "Ctrl-R": reset_editor,
             "Ctrl-S": download_editor,
+            "Ctrl-K": (cm) => cm.execCommand("deleteLine"),
+            "Ctrl-/": (cm) => cm.execCommand("toggleComment"),
         },
     });
 

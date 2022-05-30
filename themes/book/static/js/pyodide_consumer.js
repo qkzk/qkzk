@@ -1,5 +1,6 @@
 async function init_worker(ide, url, initfile) {
 
+    // Selects the DOM elements relative to the given element.
     const textarea_elm = ide.querySelector('textarea.commands');
     const output_elm = ide.querySelector('pre.python_output');
     const python_error_elm = ide.querySelector('pre.python_error');
@@ -12,7 +13,7 @@ async function init_worker(ide, url, initfile) {
     const initial_editor_value = textarea_elm.value;
 
 
-    // Add syntax highlihjting to the textarea
+    // Add syntax highlighting to the textarea
     var editor = CodeMirror.fromTextArea(textarea_elm, {
         mode: {
             name: "python",
@@ -29,17 +30,25 @@ async function init_worker(ide, url, initfile) {
         extraKeys: {
             "Tab": (cm) => cm.execCommand("indentMore"),
             "Shift-Tab": (cm) => cm.execCommand("indentLess"),
-            "Esc": remove_focus,
-            "Ctrl-Enter": read_run_code,
+            "F11": (cm) => cm.setOption("fullScreen", !cm.getOption("fullScreen")),
+            "Esc": (cm) => {
+                if (cm.getOption("fullScreen")) {
+                    cm.setOption("fullScreen", false);
+                } else {
+                    remove_focus();
+                }
+            },
+            "Ctrl-Enter": execute,
             "Ctrl-R": reset_editor,
             "Ctrl-S": download_editor,
             "Ctrl-D": interrupt_execution,
+            "Ctrl-K": (cm) => cm.execCommand("deleteLine"),
+            "Ctrl-/": (cm) => cm.execCommand("toggleComment"),
         }
     });
 
 
     const pyodideWorker = new Worker(url);
-    window.pyodide = pyodideWorker;
     const callbacks = {};
 
     /*
@@ -96,9 +105,9 @@ async function init_worker(ide, url, initfile) {
     *   Run a script, fill an object with the worker response.
     */
     async function run_code(script) {
-        var output = null;
-        var python_error = null;
-        var worker_error = null;
+        let output = null;
+        let python_error = null;
+        let worker_error = null;
 
         try {
             const { results, error } = await asyncRun(script, "");
@@ -118,23 +127,17 @@ async function init_worker(ide, url, initfile) {
         }
     }
 
-    /*
-    * Aucune de ces tentatives n'est satisfaisante
-    * J'arrive à écrire dans un fichier, mais alors pas à interrompre...
-    * Et quand j'écris dans le fichier, il faut le fermer, ce qui devient la dernière
-    * instruction, évaluée à None, ce que j'obtiens comme réponse.
-    * En définitive, `runPythonAsync` ne semble pas fait pour ça.
-    */
+    // Creates a redirection from std_out (print) to a file
     const start_script = `
 import io
 import sys
-old_stdout = sys.stdout
-new_stdout = io.StringIO()
-sys.stdout = new_stdout
+sys.stdout = io.StringIO()
 `
 
+    // Set the `pyodide` return value to be the std_out
+    // ie returns what was printed.
     const end_script = `   
-new_stdout.getvalue()
+sys.stdout.getvalue()
 `
     /*
     * read code from the editor and the init file content.
@@ -142,7 +145,7 @@ new_stdout.getvalue()
     * fill the output elements in the document
     * Hide empty elements from the document
     */
-    async function read_run_code() {
+    async function execute() {
         let init_content;
         if (initfile !== null) {
             init_content = await load_init_file(initfile);
@@ -205,7 +208,7 @@ new_stdout.getvalue()
         editor.display.input.blur();
     }
 
-    btn_execute.addEventListener("click", read_run_code, true);
+    btn_execute.addEventListener("click", execute, true);
     btn_reset.addEventListener("click", reset_editor, true);
     btn_download.addEventListener("click", download_editor, true);
     btn_stop.addEventListener("click", interrupt_execution, true);
@@ -272,7 +275,6 @@ export { init_worker, onElementLoaded };
 
 
 // test interruption from server.
-// doesn't work locally
 try {
     var a = new SharedArrayBuffer(1);
     console.log("SharedArrayBuffer works", a);
