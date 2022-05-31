@@ -1,8 +1,9 @@
 ---
-title: "Introduction : cours"
+title: "Présentation"
 bookCollapseSection: true
 weight: 1
 author: qkzk
+
 ---
 
 ### pdf : [pour impression](/uploads/docsnsi/presentation_python/presentation_python_print.pdf) et [diaporama](/uploads/docsnsi/presentation_python/presentation_python_slides.pdf)
@@ -11,12 +12,12 @@ author: qkzk
 
 ## Présentation de Python
 
-![python_logo](/docs/nsi/cours_premiere/programmation/python/introduction_cours/img/0.png)
+![python_logo](img/0.png)
 
 Python est un langage de programmation crée au début des années 90 par
 Guido Van Rossum.
 
-![Guido](/docs/nsi/cours_premiere/programmation/python/introduction_cours/img/1.jpg)
+![Guido](img/1.jpg)
 
 ## Python dans l'éducation
 
@@ -25,7 +26,7 @@ Python est choisi pour
 * le lycée : informatique, maths, physique, snt
 * les classes prépa et les licences informatiques
 
-C'est un langage qui facile d'accès, idéal pour les débutants.
+C'est un langage facile d'accès, idéal pour les débutants.
 
 Cependant Python est un langage puissant et complet qui a de nombreux usages
 dans l'industrie informatique.
@@ -213,6 +214,15 @@ Parmi les entreprises et projets qui utilisent Python citons :
 * Industrial Light & Magic (effets spéciaux de Disney, LucasFilm etc.)
 * Netflix,
 * LibreOffice etc.
+
+D'autres sites que vous connaissez peut-être, initialement conçus avec Python :
+
+* Instagram,
+* YouTube,
+* Spotify...
+
+Mes sources ne sont pas assez récentes pour que j'affirme que c'est toujours le cas.
+
 
 ## Python dans les médias
 

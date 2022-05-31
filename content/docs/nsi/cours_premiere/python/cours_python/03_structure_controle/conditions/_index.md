@@ -60,7 +60,7 @@ Répétons :
 
 Une condition décrit un bloc de code qui n'est exécuté que si le test est vérifié.
 
-![Condition](/docs/nsi/cours_premiere/programmation/python/cours_python/03_structure_controle/img/0.png)
+![Condition](img/0.png)
 
 Par exemple :
 
