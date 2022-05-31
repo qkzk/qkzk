@@ -89,6 +89,27 @@ Plus précisément, cela signifie que `1 + 2.3` sera du type flottant.
 2. On considère un triangle $ABC$ rectangle en $A$, calculer la longueur $BC$
     sachant que $AB = 4$ et $AC=5$. 
 
+### Exercice 3
+
+1. Déterminez les types des résultats des opérations suivantes :
+
+    Entre deux entiers :
+
+    addition, soustration, produit, division, division entière, reste, exposant
+
+    Entre un entier et un flottant pour les mêmes opérations
+
+2. En déduire une règle simple : l'opération entre un entier et un flottant renvoie...
+
+{{< python title="Arithmétique entier / flottant" >}}
+a = 3
+b = 2.5
+print(type(a + b))
+{{< /python >}}
+
+
+
+
 
 ## Le module `math`
 
@@ -133,7 +154,7 @@ On quitte l'aide avec la touche 'Q'.
 L'aide donne une information utile, pour mesurer les angles, il faut utiliser
 les radians.
 
-### Exercice 3
+### Exercice 4
 
 1. Utilisez la fonction `math.radians` pour mesurer le cosinus de 45°.
 
@@ -145,6 +166,8 @@ les radians.
 3. Documentez-vous sur la fonction `hypot` et testez la. Proposez une troisième
     version de cet exercice à l'aide de cette fonction.
 
+{{< python title=" " >}}
+{{< /python >}}
 
 
 ## Les booléens, le type `bool` : `True` et `False`
@@ -171,23 +194,25 @@ Les opérations courantes sur les booléens sont `not` qui renvoie le contraire,
 False
 ```
 
-### Exercice 3
+### Exercice 5
 
 Vérifier à l'aide de Python les opérations courantes sur les booléens dans
 tous les cas possibles :
 
 ```python
->>> not True
->>> not False
->>> True and True
->>> True and False
->>> False and True
->>> False and False
->>> True or True
->>> True or False
->>> False or True
->>> False or False
+not True
+not False
+True and True
+True and False
+False and True
+False and False
+True or True
+True or False
+False or True
+False or False
 ```
+
+_Utilisez la cellule Python plus haut_
 
 ### Expression booléenne
 
@@ -200,7 +225,7 @@ lever le doute.
 True
 ```
 
-### Exercice 4
+### Exercice 6
 
 1. Vérifier à la main le résultat précédent. 
 2. Reprendre le résultat en modifiant les parenthèses afin d'obtenir le résultat `False`.
@@ -230,6 +255,9 @@ On considère un triangle $ABC$ de longueurs respectives $x$, $y$ et $z$.
 
 3. Traduire cette expression booléenne en une variable booléenne `est_un_triangle`
     et testez la.
+
+{{< python title=" " >}}
+{{< /python >}}
 
 ## Les chaînes caractère, le type `str`
 
@@ -265,15 +293,30 @@ des apostrophes :
 
 Remarquez que cette fois Python utilise des `"` dans la valeur !
 
-### Exercice 5
+### Chaînes sur plusieurs lignes
 
-1. Créer une variable contenant la phrase : 
+Python permet de saisir des chaînes de caractères sur plusieurs ligne avec trois apostrophes ou trois guillemets.
 
-    > Il m'a dit qu'il m'aimait !
+Par exemple :
 
-2. Recommencez avec la phrase :
+```python
+"""Une chaîne
+avec
+des retours à la ligne
+"""
 
-    > Je lui ai dit : "pas moi !"
+'''
+Une autre chaîne avec des retours à la ligne.
+
+Et des lignes vides
+
+voilà !
+'''
+```
+
+Ces chaînes permettent de manipuler d'importants blocs de texte
+sans devoir insérer à la main des retours à la ligne...
+
 
 ## Opérations courantes
 
@@ -336,6 +379,8 @@ True
     Vérifiez à l'aide de Python qu'une lettre très courante ne figure pas
     dans ce passage.
 
+{{< python title="La disparition" >}}
+{{< /python >}}
 
 ## Formatage
 
@@ -360,7 +405,7 @@ Si on oublie le `f`, Python ne fait rien :
 "Je suis {prenom} et j'ai {age} ans"
 ```
 
-### Exercice 7
+### Exercice 8
 
 En utilisant les variables `nom`, `prenom`, `age` et `phrase` (une f-string)
 écrire une phrase similaire à :
@@ -380,7 +425,7 @@ Un exemple :
 Python remplace chaque paire de `{}` par la valeur respective du paramètre
 de la méthode `format`
 
-### Exercice 8
+### Exercice 9
 
 Utiliser la méthode `format` pour écrire les phrases suivantes :
 
@@ -434,12 +479,15 @@ notation précédente en :
 'l'
 ```
 
-### Exercice 9
+### Exercice 10
 
 1. Saisissez vos noms et prénoms dans des variables et créez une variable avec vos initiales :
 
     > `Paul Quesnoy -> PQ`
 2. Recommencez pour former la notation abbrégée suivante : `P. Quesnoy`
+
+{{< python title="initiales" >}}
+{{< /python >}}
 
 ## Mutabilité
 
@@ -529,7 +577,7 @@ Comme on peut le voir :
     mises en majuscule.
 
 
-### Exercice 10
+### Exercice 11
 
 1. Vérifiez qu'après l'exécution de la méthode `upper`, l'objet n'a pas changé.
 1. Documentez vous sur les méthodes `count`, `lower` et `replace` des
@@ -576,3 +624,6 @@ Comme on peut le voir :
     * En passant tout en minuscule.
 
     Peut-on le faire en une seule (longue) instruction ?
+
+{{< python title=" " >}}
+{{< /python >}}
