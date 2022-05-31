@@ -6,11 +6,11 @@ weight: 3
 
 ---
 
-### pdf [pour impression](./types_simples.pdf)
+pdf [pour impression](./types_simples.pdf)
 
-# Les types
+## Les types
 
-En Python chacun des objets qu'on manipule un type.
+En Python chacun des objets qu'on manipule a un type.
 
 On accède au type d'une expression avec la fonction `type` qui s'emploie ainsi :
 
@@ -25,14 +25,14 @@ Par exemple, on peut ajouter deux entiers, on peut mesurer la longueur
 d'une chaîne de caractère, mais on ne peut pas mesurer la longueur
 d'un entier ou ajouter un entier et une chaîne de caractère.
 
-# Les nombres
+## Les nombres
 
 Python distingue plusieurs ensembles de nombres :
 
 * les entiers (sous partie finie des entiers relatifs),
 * les flottants (sous partie finie des nombres réels),
 
-## Les entiers : le type `int`
+### Les entiers : le type `int`
 
 On peut réaliser toutes les opérations courantes sur les entiers
 mais attention à la division :
@@ -52,7 +52,7 @@ sont définies et le résultat est un entier.
 
 La division de `a / b` donne toujours un flottant.
 
-## Exercice 1 - Vérifier un type avec `isinstance`
+### Exercice 1 - Vérifier un type avec `isinstance`
 
 1. Créer un script python. Affecter à `total` le nombre 134.
 
@@ -71,7 +71,7 @@ _Résumons_ :
 * on _découvre un type inconnu_ avec `type(objet)`
 * on _vérifie un type_ avec `isinstance(bidule, un_type)` 
 
-## Les nombres à virgule flottante : le type `float`
+### Les nombres à virgule flottante : le type `float`
 
 C'est une approximation des nombres réels. Nous étudierons leur construction
 et leur représentation en mémoire plus tard dans l'année.
@@ -81,7 +81,7 @@ l'emporte généralement sur les entiers.
 
 Plus précisément, cela signifie que `1 + 2.3` sera du type flottant.
 
-## Exercice 2
+### Exercice 2
 
 
 1. Sans importer la librairie `math`, comment calculer la racine carré d'un nombre ?
@@ -92,8 +92,7 @@ Plus précisément, cela signifie que `1 + 2.3` sera du type flottant.
 
 ## Le module `math`
 
-Un module est un ensemble de fichiers python qu'on peut importer lorsqu'on
-en a besoin.
+Un _module_ est un ensemble de fichiers python qu'on peut importer lorsqu'on en a besoin.
 
 On importe un module avec `import nom` (sans extension `.py`)
 
@@ -134,7 +133,7 @@ On quitte l'aide avec la touche 'Q'.
 L'aide donne une information utile, pour mesurer les angles, il faut utiliser
 les radians.
 
-## Exercice 3
+### Exercice 3
 
 1. Utilisez la fonction `math.radians` pour mesurer le cosinus de 45°.
 
@@ -148,7 +147,7 @@ les radians.
 
 
 
-# Les booléens, le type `bool` : `True` et `False`
+## Les booléens, le type `bool` : `True` et `False`
 
 * Il existe deux booléens : `True` et `False`,
 * Le résultat d'une opération de comparaison est toujours un booléen.
@@ -172,7 +171,7 @@ Les opérations courantes sur les booléens sont `not` qui renvoie le contraire,
 False
 ```
 
-## Exercice 3
+### Exercice 3
 
 Vérifier à l'aide de Python les opérations courantes sur les booléens dans
 tous les cas possibles :
@@ -190,7 +189,7 @@ tous les cas possibles :
 >>> False or False
 ```
 
-# Expression booléenne
+### Expression booléenne
 
 Lorsqu'on écrit une expression comportant des booléens, il faut prendre
 garde à l'ordre des opérations. On emploie généralement des parenthèses pour
@@ -201,7 +200,7 @@ lever le doute.
 True
 ```
 
-## Exercice 4
+### Exercice 4
 
 1. Vérifier à la main le résultat précédent. 
 2. Reprendre le résultat en modifiant les parenthèses afin d'obtenir le résultat `False`.
@@ -232,12 +231,10 @@ On considère un triangle $ABC$ de longueurs respectives $x$, $y$ et $z$.
 3. Traduire cette expression booléenne en une variable booléenne `est_un_triangle`
     et testez la.
 
-# Les chaînes caractère, le type `str`
+## Les chaînes caractère, le type `str`
 
-## Définition
 
-Une chaîne de caractère est une succession de caractères, symboles affichables
-à l'écran.
+> Une chaîne de caractère est une succession de caractères, symboles affichables à l'écran.
 
 ```python
 >>> "Salut"
@@ -268,7 +265,7 @@ des apostrophes :
 
 Remarquez que cette fois Python utilise des `"` dans la valeur !
 
-## Exerice 5
+### Exercice 5
 
 1. Créer une variable contenant la phrase : 
 
@@ -323,7 +320,7 @@ True
 `a in b` est vrai si `a` est une sous-chaîne de `b`.
 
 
-## Exercice 6
+### Exercice 6
 
 1. Concaténer les chaînes suivantes : `"L'ami "` et `'Raymond dit "belette"'`
     Que se passe-t-il lors de l'affichage ?
@@ -363,7 +360,7 @@ Si on oublie le `f`, Python ne fait rien :
 "Je suis {prenom} et j'ai {age} ans"
 ```
 
-## Exercice 7
+### Exercice 7
 
 En utilisant les variables `nom`, `prenom`, `age` et `phrase` (une f-string)
 écrire une phrase similaire à :
@@ -383,7 +380,7 @@ Un exemple :
 Python remplace chaque paire de `{}` par la valeur respective du paramètre
 de la méthode `format`
 
-## Exercice 8
+### Exercice 8
 
 Utiliser la méthode `format` pour écrire les phrases suivantes :
 
@@ -399,7 +396,7 @@ Utiliser la méthode `format` pour écrire les phrases suivantes :
 
 
 
-## Accéder à un caractère particulier
+### Accéder à un caractère particulier
 
 On peut accéder à un caractère en utilisant les `[  ]`.
 
@@ -437,7 +434,7 @@ notation précédente en :
 'l'
 ```
 
-## Exercice 9
+### Exercice 9
 
 1. Saisissez vos noms et prénoms dans des variables et créez une variable avec vos initiales :
 
@@ -532,7 +529,7 @@ Comme on peut le voir :
     mises en majuscule.
 
 
-## Exercice 10
+### Exercice 10
 
 1. Vérifiez qu'après l'exécution de la méthode `upper`, l'objet n'a pas changé.
 1. Documentez vous sur les méthodes `count`, `lower` et `replace` des

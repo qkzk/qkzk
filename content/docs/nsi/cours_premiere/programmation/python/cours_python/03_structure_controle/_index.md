@@ -6,7 +6,7 @@ weight: 4
 
 ---
 
-### pdf: [pour impression](./structure_controle.pdf)
+pdf: [pour impression](./structure_controle.pdf)
 
 # Les structures de contrôle
 
@@ -19,7 +19,7 @@ Nous allons introduire deux structures essentielles :
 
 Mais avant ça :
 
-# L'indentation
+## L'indentation
 
 _indenter_ le code c'est le décaler de quelques espaces (généralement 4,
 parfois 2) depuis la gauche.
@@ -36,7 +36,7 @@ code sans indentation
 
 ## Strucure d'un bloc de code
 
-
+{{< hint warning >}}
 Tous les blocs de code ont la même syntaxe :
 
 ```python
@@ -46,12 +46,22 @@ mot_cle expression:
 
 fin du bloc
 ``` 
+{{< /hint >}}
 
-# Conditions `if, elif, else`
+Répétons : 
+
+1. mot clé, 
+2. expression, 
+3. deux points, 
+4. à la ligne et indenté d'autres expressions.
+5. à la ligne et désindenté, la fin du bloc
+
+
+## Conditions `if, elif, else`
 
 Une condition décrit un bloc de code qui n'est exécuté que si le test est vérifié.
 
-$~$![Condition](/docs/nsi/cours_premiere/programmation/python/cours_python/03_structure_controle/img/0.png)
+![Condition](/docs/nsi/cours_premiere/programmation/python/cours_python/03_structure_controle/img/0.png)
 
 Par exemple :
 
@@ -64,7 +74,7 @@ moyenne = 3
 if moyenne >= 10:               # ne pas oublier les :
     print("je suis diplomé")        # attention à l'indentation
 
-#  suite du programme
+##  suite du programme
 ```
 
 Lorsqu'on exécute ce code, il ne se passe rien. La condition `moyenne >= 10`
@@ -84,6 +94,13 @@ print("le programme arrive ici dans tous les cas")
 Exécutez ce programme, il vous affichera "le code arrive ici dans tous les cas"
 parce que cette ligne n'est pas indentée. Elle est donc en dehors du bloc `if`.
 
+{{< python title="if...">}}
+moyenne = 3
+if moyenne >= 10:
+    print("je suis diplômé")
+
+print("le programme arrive ici dans tous les cas")
+{{< /python >}}
 
 On peut toujours compléter un bloc `if` à l'aide d'un second bloc `else`, 
 (_sinon_), qui ne sera exécuté que si la condition du `if` est fausse :
@@ -107,11 +124,20 @@ Cette fois l'exécution du programme conduit à deux affichages :
 
 Reprenez cet exemple en changeant la valeur de la moyenne afin d'exécuter le if.
 
+{{< python title="if...else" >}}moyenne = 3
+if moyenne >= 10:
+    print("je suis diplomé")
+else:
+    print("j'ai raté le diplome")
+
+print("le programme arrive ici dans tous les cas")
+{{< /python >}}
+
 Remarquez que cette fois, le bloc `else` n'est plus exécuté.
 
 C'est l'un ou l'autre.
 
-## `elif`
+### `elif`
 
 Entre `if` et `else` on peut insérer autant de bloc `elif condition:` que l'on souhaite.
 
@@ -131,7 +157,20 @@ print("le programme arrive ici dans tous les cas")
 Lorsqu'on exécute ce code avec différentes valeurs de la moyenne (5, 9, 11 par exemple) on
 réalise qu'un des blocs `if, elif, else` est exécuté. Jamais deux.
 
-## Exercice 0
+Testez tous les cas en changeant la moyenne :
+
+
+{{< python title="if...elif...else" >}}moyenne = 3
+if moyenne >= 10:
+    print("je suis diplome")
+elif moyenne >= 8:
+    print("je vais à l'oral de rattrapage")
+else:
+    print("j'ai raté le diplome")
+print("le programme arrive ici dans tous les cas")
+{{< /python >}}
+
+### Exercice 0
 
 1. Que vaut la valeur finale de la variable `b` ?
 
@@ -178,7 +217,7 @@ réalise qu'un des blocs `if, elif, else` est exécuté. Jamais deux.
       a = 0
   ```
 
-## Exercice 1
+### Exercice 1
 
 Les codes suivants sont-ils valides (on ne demande pas ce qu'ils font) ?
 S'ils sont invalides, rectifiez les.
@@ -213,7 +252,7 @@ S'ils sont invalides, rectifiez les.
   a = 2
   ```
 
-## Exercice 2
+### Exercice 2
 
 Complétez le programme "moyenne" afin d'afficher la mention obtenue par le candidat :
 
@@ -221,7 +260,7 @@ Complétez le programme "moyenne" afin d'afficher la mention obtenue par le cand
 * Bien (>= 14 de moyenne),
 * Assez Bien (>= 12 de moyenne),
 
-## Exercice 3
+### Exercice 3
 
 Un client de boite de nuit est décrit par trois variables : son genre ("Masculin" ou "Féminin"),
 sa tenue ("Bien sapé", "Mal sapé") et son portefeuille ("Épais", "Mince").
@@ -236,7 +275,7 @@ sa tenue ("Bien sapé", "Mal sapé") et son portefeuille ("Épais", "Mince").
 2. Testez le dans tous les cas.
 3. Si ce n'est pas déjà fait, écrire ce programme à l'aide d'un bloc `if` et d'un bloc `else`
 
-## Exercice 4
+### Exercice 4
 
 Jean-Raoul a un hygiène de vie très stricte. Ils se pèse tous les matins. 
 
@@ -267,7 +306,7 @@ Pour en faire un entier (du type  `int`) :
 poids = int(input("Combien..."))
 ```
 
-## Exercice 4
+### Exercice 5
 
 L'impôt sur le revenu de Groland est assez simple à calculer :
 
@@ -282,7 +321,7 @@ _je précise aux plus naïfs que Groland n'existe pas._
 
 
 
-## Exercice 4 - Niveau première en mathématiques
+### Exercice 6 - Niveau première en mathématiques
 
 Ecrire un script qui résout l'équation du second degré : $ax^2 + bx + c = 0$\
 Par exemple :
@@ -307,16 +346,19 @@ Par exemple :
 
 ---
 
-# Boucles
+## Boucles
 
+{{< hint warning >}}
 Une _boucle_ est un bloc de code qui est répété plusieurs fois.
 
 On distingue deux types de boucles, les boucles _bornées_ (`for`) et les boucles _non bornées_ (`while`).
 
 Lorsqu'on sait à l'avance combien de fois on souhaite répéter un bloc on emploie une boucle bornée sinon 
 une boucle non bornée.
+{{< /hint >}}
 
-## Boucle bornée
+
+## Boucle bornée : `for`
 
 En Python la boucle bornée s'écrit ainsi :
 
@@ -339,8 +381,7 @@ Voyons deux exemples :
 Afficher toutes les lettres d'un mot :
 
 ```python
-mot = "bonjour"
-for lettre in mot:
+for lettre in "bonjour":
   print(lettre)
 
 print("fini !")
@@ -363,13 +404,21 @@ fini !
 On réalise bien que `lettre` a pri pour valeurs successives les caractères
 composant `mot` : `"b"`, `"o"` etc.
 
+{{< python title="parcourir une chaîne" >}}for lettre in "bonjour":
+  print(lettre)
+
+print("fini !")
+{{< /python >}}
+
 ## La fonction `range`
 
-Autre exemple : afficher les entiers de 0 à 9.
-
-Pour créer une collection d'entiers, Python dispose de la fonction `range`
+{{< hint warning >}}
+La fonction `range` renvoie une collection d'entiers qu'on peut parcourir.
+{{< /hint >}}
 
 C'est une fonction avancée que nous allons étudier pas à pas :
+
+### `range` avec un paramètre
 
 ```python
 for nombre in range(10):
@@ -390,10 +439,19 @@ Dont l'exécution produit l'affichage :
 j'ai affiché les entiers de 0 à 9
 ```
 
+{{< python title="range(10)" >}}for nombre in range(10):
+    print(nombre)
+
+print("j'ai affiché les entiers de 0 à 9")
+{{< /python >}}
+
 L'instruction `print(nombre)` a donc été exécutée 10 fois (il y a 10 entiers de 0 à 9)
 
-Lorsqu'elle est utilisée avec un paramètre `n` (ici `n = 10`), `range` produit la collection des 
-entiers jusqu'à `n - 1` inclus. La borne n'est jamais atteinte.
+Résumons :
+
+{{< hint warning >}}
+`range(n)` renvoie la collection des entiers de `0` inclu à `n` exclu.
+{{< /hint >}}
 
 On n'est pas tenu d'utiliser ce paramètre, par exemple pour afficher 20 fois "Allez les bleus !",
 je peux l'écrire en 20 lignes :
@@ -416,6 +474,29 @@ for k in range(20):
 
 C'est beaucoup plus lisible et on sait immédiatement combien de fois l'instruction sera répétée.
 
+### Exercice 5
+
+
+```
+J'ai 0 ans
+J'ai 1 ans
+J'ai 2 ans
+J'ai 3 ans
+J'ai 4 ans
+J'ai 5 ans
+J'ai 6 ans
+J'ai 7 ans
+J'ai 8 ans
+J'ai 9 ans
+```
+
+Produire l'affichage précédent jusqu'à votre age en deux lignes de code.
+
+{{< python title="_La vieillesse est un naufrage_ - Charles de Gaulle" >}}
+{{< /python >}}
+
+
+### Exercice 6 - somme des entiers
 
 Calculons la somme des entiers entre 0 et 100.
 
@@ -423,49 +504,66 @@ Bien sûr on pourrait l'écrire à la main :
 
 
 ```
-somme = 1 + 2 + 3 + ... + 100
+somme = 0 + 1 + 2 + 3 + ... + 100
 ```
 
 Une très longue ligne serait nécessaire mais rien d'impossible.
 
 On peut aussi une variable `somme` et une boucle.
 
-On veut parcourir les entiers jusque 100 inclus, il faudra utiliser `range(101)` !
 
-```python
+1. Rectifiez la cellulle suivante qui veut calculer $0 + 1 + 2 + 3 = 6$
+
+
+    {{< python title="$0 + 1 + 2 + 3 = 6$" >}}
 somme = 0
-for entier in range(101):
+for entier in range(3):
     somme = somme + entier
-```
 
-Vous apprendrez cette année en mathématiques à calculer ces sommes directement avec une
-formule très efficace.
+print(somme)
+    {{< /python >}}
 
-## `range` avec deux paramètres
 
-Lorsqu'on donne deux paramètres entiers : `range(debut, fin)` parcourt les
-entiers de `debut` inclu jusque `fin` exclu.
+2. Calculez la somme des entiers jusque 100.
+
+    {{< python title="Somme des entiers jusque 100">}}
+    {{< /python >}}
+
+_Remarque :_ Vous apprendrez cette année en mathématiques à calculer ces sommes directement avec une formule très efficace.
+
+### `range` avec deux paramètres
+
+{{< hint warning >}}
+`range(debut, fin)` parcourt les entiers de `debut` inclu jusque `fin` exclu.
+{{< /hint >}}
 
 Par exemple `range(5, 10)` va parcourir les entiers : 5, 6, 7, 8, et 9. Mais pas 10.
 
-## Exercice 5
+### Exercice 7
 
 Calculer la somme des entiers à trois chiffres (de 100 à 999).
 
-## `range` avec trois paramètres
+{{< python title="$100 + ... + 999 =$">}}
+{{< /python >}}
 
-Lorsqu'on utilise trois paramètres : `range(debut, fin, pas)`, on parcourt les entiers de `debut`
-inclu à `fin` eclu en avançant de `pas` en `pas` :
+### `range` avec trois paramètres
+
+{{< hint warning >}}
+`range(debut, fin, pas)`, on parcourt les entiers de `debut` inclu à `fin` eclu en avançant de `pas` en `pas` :
+{{< /hint >}}
 
 
 Collection des entiers pairs entre 100 et 199 : (100, 102, 104, ..., 198) : `range(100, 199, 2)`
 
-## Exercice 6
+### Exercice 8
 
 1. Calculer la somme des entiers impairs entre 1000 et 10000.
 2. Calculer la somme des entiers divisibles par 3 entre 1000 et 10000.
 3. Calculer la somme des entiers qui se terminent par 7 entre 654 et 1 million.
 4. Compter le nombre d'entiers se terminant par deux zéros plus petits qu'un milliard à l'aide d'une boucle.
+
+{{< python title="Réponses à l'exercice 8">}}
+{{< /python >}}
 
 ## Combiner des blocs
 
@@ -476,7 +574,7 @@ position qu'on donne à nos strucutres.
 Les deux programmes suivants ne font pas la même chose :
 
 
-```python
+{{< python title="consécutifs" >}}
 
 nombre = 5
 couleur = "bleu"
@@ -486,11 +584,11 @@ if nombre > 10:
 
 for lettre in couleur:
     print(lettre)
-```
+{{< /python >}}
 
 et
 
-```python
+{{< python title="imbriqués" >}}
 
 nombre = 5
 couleur = "bleu"
@@ -500,64 +598,138 @@ if nombre > 10:
 
     for lettre in couleur:
         print(lettre)
-```
+{{< /python >}}
 
 1. Dans le premier cas, la structure `for` est au niveau 0 d'indentation, elle sera exécutée
     dans tous les cas.
 
-  Il affiche ligne par ligne les lettres du mot "bleu".
+      Il affiche ligne par ligne les lettres du mot "bleu".
 
 2. Dans le second cas, la structure `for` est _dans le if_, elle ne sera exécutée que si la
     condition est vraie.
 
   La condition est fausse et le bloc `if` n'est pas exécuté donc il ne se passe rien.
 
-## Exercice 7
+### Exercice 9
 
-1. La variable `lettre` est du type `str` et est de longueur égale à 1.
+1. À l'aide d'une boucle et d'une condition, produire l'affichage suivant :
 
-  Proposer un booléen qui soit vrai si `lettre` est une voyelle (pensez à `in` !)
+    ```
+    e est une voyelle
+    a est une voyelle
+    i est une voyelle
+    e est une voyelle
+    a est une voyelle
+    e est une voyelle
+    e est une voyelle
+    e est une voyelle
+    e est une voyelle
+    a est une voyelle
+    i est une voyelle
+    e est une voyelle
+    e est une voyelle
+    o est une voyelle
+    i est une voyelle
+    ```
 
-  On va négliger les accents dans cet exercice.
+    {{< python title="voyelles" >}}
+voyelles = "aeiouy"
+phrase = "je n'aime pas me lever le matin, je préfère dormir."
 
-2. En utilisant `for` et une condition bien placée, comptez les voyelles dans un mot.
 
-  Testez avec les mots "table", "exercice", "bonjour"
+    {{< /python >}}
 
-## Exercice 8 - table de multiplication
+2. Les caractères accentués ne sont pas présentés dans l'exemple précédent. Rectifiez cela !
+
+3. Compléter l'affichage précédent en affichant les consonnes : 
+
+    ```
+    j n'est pas une voyelle
+    e est une voyelle
+      n'est pas une voyelle
+    n n'est pas une voyelle
+    ' n'est pas une voyelle
+    a est une voyelle
+    i est une voyelle
+    m n'est pas une voyelle
+    e est une voyelle
+      n'est pas une voyelle
+    p n'est pas une voyelle
+    a est une voyelle
+    s n'est pas une voyelle
+      n'est pas une voyelle
+    m n'est pas une voyelle
+    e est une voyelle
+      n'est pas une voyelle
+    l n'est pas une voyelle
+    e est une voyelle
+    ...
+    ```
+
+    {{< python title="voyelles" >}}
+voyelles = "aeiouy"
+phrase = "je n'aime pas me lever le matin, je préfère dormir."
+
+
+    {{< /python >}}
+
+
+### Exercice 10
+
+1. En utilisant `for` et une condition bien placée, comptez les voyelles dans un mot.
+
+    Testez avec les mots "table", "exercice", "bonjour"
+
+    {{< python title="voyelles" >}}
+mot1 = table
+mot2 = exercice
+mot3 = bonjour
+voyelles = "a...."
+    {{< /python >}}
+
+
+2. Comptez cette fois les consonnes d'un mot sans accent ni tiret ni apostrophe comme `ordinateur`.
+
+    {{< python title="consonnes" >}}
+mot = ordinateur
+    {{< /python >}}
+
+### Exercice 11 - table de multiplication
 
 1. `nombre = 5`. En une ligne supplémentaire écrire :
 
-  `4 * 5 = 20`
+      `4 * 5 = 20`
 
-  Le nombre 20 doit être obtenu par opération.
+      Le nombre 20 doit être obtenu par opération.
 
 2. Utiliser ce principe pour écrire la table de 4.
 
-  ```
-  4 * 0 = 0
-  4 * 1 = 4
-  4 * 2 = 8
-  4 * 3 = 12
-  4 * 4 = 16
-  4 * 5 = 20
-  4 * 6 = 24
-  4 * 7 = 28
-  4 * 8 = 32
-  4 * 9 = 36
-  4 * 10 = 40
-  ```
+      ```
+      4 * 0 = 0
+      4 * 1 = 4
+      4 * 2 = 8
+      4 * 3 = 12
+      4 * 4 = 16
+      4 * 5 = 20
+      4 * 6 = 24
+      4 * 7 = 28
+      4 * 8 = 32
+      4 * 9 = 36
+      4 * 10 = 40
+      ```
 
-3. En utilisant deux boucles l'une dans l'autre (on dit qu'elles sont imbriquées), afficher
+3. En utilisant deux boucles _imbriquées_ (l'une **dans** l'autre), afficher
   les tables de multiplications des entiers de 0 à 10 inclu.
 
-# Boucles non bornées : `while`
+{{< python title="Python est malin, il a appris ses tables">}}
+{{< /python >}}
 
-`while` qui signifie "tant que" permet de répéter un bloc tant qu'une condition est respectée :
+## Boucles non bornées : `while`
+
+`while`, qui signifie _tant que_, permet de répéter un bloc tant qu'une condition est respectée :
 
 
 ```python
-
 while condition:
     bloc_repete_tant_que_condition_est_vrai
 
@@ -569,10 +741,18 @@ de répéter un bloc d'instruction.
 
 Par exemple : "tant que je n'ai pas bon à l'exercice, je recommence".
 
+Ou, tant qu'il reste du pain je mange :
+
+{{< python title="petit déjeuner" >}}tartine = 50
+while tartine > 0:
+    print("Je mange une tartine wesh !")
+    tartine = tartine - 1
+{{< /python >}}
+
 Autre exemple, le casino :
 
 Jean-Martin a 10€, il joue aux machines à sous (un vrai pigeon). Chaque mise
-lui coûte 1€ et il a une chance sur 1000 de gagner 10€ (quand je vous disais)...
+lui coûte 1€ et il a une chance sur 100 de gagner 10€ (quand je vous disais)...
 
 Le programme suivant simule cette situation dramatique :
 
@@ -582,7 +762,7 @@ import random                     # fonctions simulant le hasard
 capital = 10
 while capital > 0:
     capital = capital - 1         # il mise 1 €
-    if random.random() < 0.001:   # une chance sur mille
+    if random.random() < 0.01:    # une chance sur cent
         capital = capital + 10    # il récupère 10 €
         print("waouh...")
     else:
@@ -594,12 +774,26 @@ print("Jean-Martin a perdu tout son argent.")
 Le prof de maths qui sommeille en moi vous signale que :
 
 1. Ce programme termine toujours.
-2. L'issue est toujours la même : Jean-Martin perd tout son argent.
+2. Les étapes intermédiaires varient mais l'issue est toujours la même : Jean-Martin perd tout son argent.
 3. Le seul moyen de gagner régulièrement aux jeux d'argent est de les organiser.
   Ce privilège est reservé à l'État.
 
 
-## Exercice 9
+{{< python title="Casino">}}import random                     # fonctions simulant le hasard
+
+capital = 10
+while capital > 0:
+    capital = capital - 1         # il mise 1 €
+    if random.random() < 0.01:    # une chance sur cent
+        capital = capital + 10    # il récupère 10 €
+        print("waouh...")
+    else:
+        print("encore perdu...")
+
+print("Jean-Martin a perdu tout son argent.")
+{{< /python >}}
+
+### Exercice 12
 
 Modifier le programme précédent :
 
@@ -609,14 +803,15 @@ Modifier le programme précédent :
 4. _Bonus difficile_ Affichez à la fin du programme le _maximum_ atteint par Jean-Martin avec un
     phrase un peu rageante...
 
-## Boucle infinie
+### Boucle infinie
 
 On emploie régulièrement des boucles infinies. Il suffit d'écrire la condition `while True`
 pour qu'une boucle soit répétée indéfiniment.
 
-Afin de ne pas saturer complètement votre processeur on va intrduire un délai d'une seconde
+Afin de ne pas saturer complètement votre processeur on va introduire un délai d'une seconde
 entre deux affichages :
 
+**DANS THONNY**
 
 ```python
 from time import sleep
@@ -628,6 +823,13 @@ while True:
 
 * On importe la fonction `sleep` qui va mettre l'exécution en pause une seconde avec `sleep(1)`
 * On répète indéfiniment l'affichage "NSI" toutes les secondes.
+
+{{< hint danger >}}
+**Attention** : Impossible d'exécuter ces exemples sur mon site, il faut utiliser un programme externe.
+
+La fonction `sleep` n'est pas traitée correctement ici pour des questions techniques.
+{{< /hint >}}
+
 
 Pour arrêter le programme vous pouvez utiliser le raccourci clavier "Ctrl + C"
 
@@ -647,7 +849,7 @@ while True:
   afficher_le_jeu_a_l_ecran()
 ```
 
-## L'instruction `break`
+### L'instruction `break`
 
 
 L'instruction `break` provoque une sortie immédiate d'une boucle `while` ou
@@ -658,8 +860,21 @@ une boucle sans fin.
 
 L'instruction `break` est donc le seul moyen de sortir de la boucle.
 
+{{< python title="break" >}}a = 0
+while True:
+    print(f"a vaut {a}")
+    if a == 10:
+        break
+    a = a + 1
+print("pas de boucle infinie !")
+{{< /python >}}
+
 
 ### Affichage de l'heure courante
+
+{{< hint danger >}}
+**Doit être traité à exécuter à l'extérieur, dans Thonny par exemple**
+{{< /hint >}}
 
 
 
@@ -684,61 +899,66 @@ print("A bientôt")
     Voulez-vous quitter le programme (o/n) ? o
     A bientôt
 
-## Exercice 10
+### Exercice 13 - Le plus ou moins
+
+{{< hint danger >}}
+**Doit être traité à exécuter à l'extérieur, dans Thonny par exemple**
+{{< /hint >}}
 
 1. Se documenter sur la fonction `randint` du module `random`
 
-  ```python
-  import random
-  help(random.randint)
-  ```
+    ```python
+    import random
+    help(random.randint)
+    ```
 2. Écrire une boucle qui affiche 10 nombres aléatoires entre 1 et 100
 
-3. La fonction `input(message)` affiche un message à l'écran pour l'utilisateur,
+La fonction `input(message)` affiche un message à l'écran pour l'utilisateur,
   celui-ci saisit au clavier une valeur et cette valeur est renvoyée par `input`.
 
-  `input` renvoie toujours une chaîne de caractère.
+`input` renvoie toujours une chaîne de caractère.
 
-  Pour convertir une chaîne de caractère en un entier on peut utiliser :
+Pour convertir une chaîne de caractère en un entier on peut utiliser :
 
-  ```python
-  nombre = int(input("votre nombre : "))
-  ```
+```python
+nombre = int(input("votre nombre : "))
+```
 
-  Si l'utilisateur tape une valeur pouvant être transformée en entier comme "123",
-  `nombre` vaudra 123.
+Si l'utilisateur tape une valeur pouvant être transformée en entier comme "123",
+`nombre` vaudra 123.
 
-  Si l'utilsateur tape une valeur _ne pouvant pas être transformée en entier_ comme "Marcel",
-  Python va générer une erreur.
+Si l'utilsateur tape une valeur _ne pouvant pas être transformée en entier_ comme "Marcel",
+Python va générer une erreur.
 
-  Écrire le script du jeu du plus ou moins suivant :
+3.  Écrire le script du jeu du plus ou moins suivant :
 
-  ```
-  >>>
-  Le jeu consiste à deviner un nombre entre 1 et 100 :
+    ```
+    >>>
+    Le jeu consiste à deviner un nombre entre 1 et 100 :
 
-  --->   50
-  trop petit !
-  --->   75
-  trop petit !
-  --->   87
-  trop grand !
-  --->   81
-  trop petit !
-  --->   84
-  trop petit !
-  --->   85
-  Gagné !
-  ```
+    --->   50
+    trop petit !
+    --->   75
+    trop petit !
+    --->   87
+    trop grand !
+    --->   81
+    trop petit !
+    --->   84
+    trop petit !
+    --->   85
+    Gagné !
+    ```
 
 4. Améliorer le jeu pour indiquer combien de coups ont été necessaires pour gagner.
 
 
-## Exercice 11 - Intérêts
+### Exercice 13 - Intérêts
 
 Lorsqu'on place un capital avec intérêt, on perçoit à intervalle régulier un montant qui vient
 s'ajouter à ce capital.
 
+{{< expand "Calcul des intérêts" "...">}}
 Il existe deux manières de calculer les intérêts :
 
 * intérêts **simples** : le montant des intérêts est fixe dans le temps, généralement proportionnel au montant
@@ -756,6 +976,8 @@ Considérons 100€ de capital initial, placés avec 10% d'intérêts :
   |-----------------|------------------|------------------|------------------|
   | 100             | 110              | 120              | 130              |
 
+  Par exemple : $120 + 10 = 130$
+
 * Intérêts composés
 
   Les intérêts sont variables et valent 10% du dernier capital
@@ -764,6 +986,13 @@ Considérons 100€ de capital initial, placés avec 10% d'intérêts :
   |-----------------|------------------|------------------|------------------|
   | 100             | 110              | 121              | 133.1            |
 
+  Par exemple : 
+
+  On utilise un _coefficient multiplicateur_ de $1.1$ :
+  
+  $120 \times 1.1 = 133.1$
+
+{{< /expand >}}
 
 _Questions_
 
@@ -777,6 +1006,9 @@ Corsons un peu le contexte. Cette fois on ajoute aussi un dépôt régulier de 2
 ajoute 2000€ à son capital. Selon le système d'intérêt, ils seront pris en compte ou non dans les intérêts
 suivants.
 
-5. Calculez à l'aide d'une boucle le montant après 10 périodes pour les deux systèmes d'intérêts
-6. Calculez à l'aide d'une boucle le nombre de périodes pour doubler le capital dans les deux systèmes d'intérêts.
+6. Calculez à l'aide d'une boucle le montant après 10 périodes pour les deux systèmes d'intérêts
+7. Calculez à l'aide d'une boucle le nombre de périodes pour doubler le capital dans les deux systèmes d'intérêts.
+
+{{< python title="Intérêts">}}capital = 50000
+{{< /python >}}
 
