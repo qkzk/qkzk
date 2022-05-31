@@ -1,5 +1,5 @@
 ---
-title: "Introduction : TD"
+title: "TD"
 bookCollapseSection: true
 weight: 2
 date: 2020/07/25
@@ -273,8 +273,8 @@ vers une case mémoire. Celle-ci contient l'entier 2.
 
 Il ne faut pas confondre l'affectation (`=`) et la comparaison "égalité" (`==`)
 
-* Une _comparaison_ retourne toujours un _booléen_ `True` ou `False`.
-* Une _affectation_ ne retourne rien.
+* Une _comparaison_ s'évalue en un _booléen_ `True` ou `False`.
+* Une _affectation_ ne s'évalue pas.
 
 Vous rencontrerez aussi les affectations multiples :
 
@@ -526,7 +526,7 @@ Qui va afficher :
 
 Mon animal numero 1 est Lulu\
 Mon animal numero 2 est Lili\
-Mon animal numero 3 est Minouch\
+Mon animal numero 3 est Minouche\
 
 On a utilisé la fonction `len(collection) -> int` qui retourne la longueur
 d'une collection.

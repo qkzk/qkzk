@@ -1,5 +1,5 @@
 ---
-title: "généralités"
+title: "Généralités"
 bookCollapseSection: true
 author: "qkzk"
 weight: 1
@@ -7,7 +7,7 @@ weight: 1
 ---
 
 
-### pdf [pour impression](/uploads/docnsitale/organisation/presentation_rentree.pdf)
+pdf [pour impression](/uploads/docnsitale/organisation/presentation_rentree.pdf)
 
 
 # Terminale NSI
@@ -24,7 +24,7 @@ Nous allons évoquer l'organisation de cette année en NSI :
 
 L'horaire en terminale est de 6h par semaine.
 
-Pour la rentrée 2020, nous devrions avoir tous les cours en salle info.
+Si l'effectif le permet, nous devrions avoir tous les cours en salle info.
 
 
 ## Programme

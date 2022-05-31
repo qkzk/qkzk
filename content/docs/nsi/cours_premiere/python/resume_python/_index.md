@@ -18,12 +18,12 @@ En Python chaque ligne donne une **instruction**. Pour séparer certains blocs (
 fonctions, conditions, boucles etc.) on utilise l'**indentation** (4 espaces).
 Les commentaires sont précédés d'un `#` et ne sont pas exécutés.
 
-~~~python
+```python
 note = 20                             #  instruction
 if note == 20:                        #  condition
     print("super note !")             #  n'est effectué que si x vaut 20
 print("au revoir")                    #  sera toujours effectué
-~~~
+```
 
 La syntaxe Python impose de respecter l'indentation. Chaque bloc qui est indenté
 est précédé du symbole `:`
@@ -56,16 +56,16 @@ Par exemple `note = 20`. On peut inclure n'importe quel objet Python dans une va
 
 On obtient le type d'un objet avec la fonction type :
 
-~~~python
+```python
 >>> type(4)
 <class 'int'>
 >>> type(1 != 2)
 <class 'bool'>
-~~~
+```
 
 # 4. Types complexes
 
-On a déjà rencontré quatre types complexes : `str`, `list`, `tuple` et `dic`.
+On a déjà rencontré quatre types complexes : `str`, `list`, `tuple` et `dict`.
 
 ## a) Les chaînes de caractères. Type `str`
 
@@ -75,15 +75,15 @@ On les note avec des apostrophes ou des guillemets.
 
 Chaque caractère est numéroté et on peut l'atteindre avec son _indice_.
 
-~~~python
+```python
 >>> chaine = "Bonjour"
 >>> chaine[0]
 'B'
-~~~
+```
 
 Les chaînes de caractères ne sont _pas mutables._ Mais on peut opérer dessus !
 
-~~~python
+```python
 >>> "Bonjour" + "Papy"            # concaténation
 'BonjourPapy'
 >>> "Bonjour {}".format("Diego")  # formatage, version 1
@@ -91,22 +91,22 @@ Les chaînes de caractères ne sont _pas mutables._ Mais on peut opérer dessus 
 >>> nom = "Robert"
 >>> f"Bonjour {nom}"              # formatage, version 2
 'Bonjour Robert'
-~~~
+```
 
 ## b) Les tableaux ou listes. Type `list`
 
 Ce sont des tableaux où les objets sont indexés à partir de 0.
 On peut atteindre un objet depuis son indice :
 
-~~~python
+```python
 >>> L = ["a", "b", "c"]       # Les listes sont notées entre [ ]
 >>> L[2]                      # le TROISIEME élément de L
 'c'
-~~~
+```
 
 Les listes sont **mutables**. On peut les modifier **modifier**
 
-~~~python
+```python
 >>> L.pop(0)                  # renvoyer l'élément 0 et l'effacer de la liste
 'a'
 >>> L
@@ -114,7 +114,7 @@ Les listes sont **mutables**. On peut les modifier **modifier**
 >>> L.append("d")             # ajouter un élément à la fin de la liste
 >>> L
 ['b', 'c', 'd']
-~~~
+```
 
 ## c) Les tuples
 
@@ -122,14 +122,14 @@ Ce sont des séries indexées d'objets. Ils sont notés avec des parenthèses.
 Les tuples **ne sont pas mutables.** C'est comme les listes, mais pas mutable
 et plus rapide.
 
-~~~python
+```python
 >>> tup = (1, 2, 3)
 (1, 2, 3)
 >>> tup.pop(0)
 Traceback (most recent call last):
   File "<stdin>", line 1, in <module>
 AttributeError: 'tuple' object has no attribute 'pop'
-~~~
+```
 
 ## d) Les dictionnaires (tables de hashage), type `dict`
 
@@ -138,7 +138,7 @@ entre accolades. Attention, dans les accolades on utilise `:`.
 
 Les dictionnaires sont mutables.
 
-~~~python
+```python
 >>> dict = {"DS": 5, "DM": 1}   # remarquez les :
 >>> dict["DM"]                  # obtenir un élément d'un dictionnaire
 1
@@ -146,7 +146,7 @@ Les dictionnaires sont mutables.
 >>> del dict["DM"]              # del permet d'effacer un élément d'un mutable
 >>> dict
 {"DS": 5, "IE": 2}
-~~~
+```
 
 # Les conditions : `if elif else`
 
@@ -156,7 +156,7 @@ Les dictionnaires sont mutables.
 
 La syntaxe est :
 
-~~~python
+```python
 if condition_1:                           # les : sont obligatoires !
     bloc execute si condition_1 est True  # indentation !!!
 elif condition_2:
@@ -164,19 +164,19 @@ elif condition_2:
 else:
     bloc execute si condition_1 est False et condition_2 False
 bloc toujours execute car pas indente
-~~~
+```
 
 
 
 * Les comparaisons entre nombres sont : `==, >, <, >=, <=, !=`
 * On peut tester si un objet est dans un autre avec `in`
 
-~~~python
+```python
 >>> 4 in [1, 2, 3]
 False
 >>> "DM" in {"DS": 5, "DM": 1}
 True
-~~~
+```
 
 * On peut tester plusieurs conditions grace aux opérateurs booléens `and` et `or`
 
@@ -197,18 +197,18 @@ En Python, `for` parcourt toujours une collection d'objet (un _itérable_).
 On construit une série de nombres avec `range(debut, fin, pas)`. Attention on
 s'arrête toujours _avant_ `fin`.
 
-~~~python
+```python
 >>> for k in range(0, 3, 1): # k varie de 0 à 2 avec un pas de 1
 ...     k                    # indentation !!!
 ...
 0
 1
 2
-~~~
+```
 
 On peut parcourir une liste, un tuple, une chaîne ou un dictionnaire (vu plus tard).
 
-~~~python
+```python
 >>> for nombre in [0, 2, 4]:
 ...     nombre ** 2
 ...
@@ -220,7 +220,7 @@ On peut parcourir une liste, un tuple, une chaîne ou un dictionnaire (vu plus t
 'a'
 'b'
 'c'
-~~~
+```
 
 ## Boucle `while`
 
@@ -231,7 +231,7 @@ Pour arrêter une boucle `while` **il faut que la condition devienne FAUSSE**.
 
 _Exemple :_ chaque mois je gagne 100€. Combien de mois avant d'avoir 2.000€ ?
 
-~~~python
+```python
 >>> mois = 0                 # sera mon compteur
 >>> somme = 0                # je vais ajouter mes revenus dans somme
 >>> while somme < 2000:      # tant que ma somme est plus petite que 2000...
@@ -240,7 +240,7 @@ _Exemple :_ chaque mois je gagne 100€. Combien de mois avant d'avoir 2.000€ 
 ...
 >>> mois                     # remarquez que mois contient la bonne valeur...
 20
-~~~
+```
 
 **Boucle infinie**
 
@@ -266,10 +266,10 @@ parle d'_effet de bord_.
 
 Par exemple, `len` est une fonction qui renvoie la longueur d'un itérable.
 
-~~~python
+```python
 >>> len("abcd")
 4
-~~~
+```
 
 * Son paramètre d'entrée est un itérable (`list, tuple, dict, str` etc.)
 * Sa valeur de retour est un `int`
@@ -287,13 +287,13 @@ objet qu'on peut écrire à l'écran et qui l'affiche. Elle renvoie `None` (rien
 * Une fonction se définit avec `  def nom(parametre):   ` suivi d'un bloc indenté.
 * On retourne une valeur avec `  return truc_de_sortie`
 
-~~~python
+```python
 def carre(x):
   '''
   documentation : détaillé ci-dessous
   '''
   return x ** 2
-~~~
+```
 
 ## Documentation
 
@@ -307,7 +307,7 @@ apostrophes. On y trouve :
 * les paramètres retournés :
 * un exemple, quand c'est faisable :
 
-~~~python
+```python
 '''
 Renvoie le carré d'un nombre
 @param x: (int ou float)
@@ -315,11 +315,34 @@ Renvoie le carré d'un nombre
 >>> carre(2)
 4
 '''
-~~~
+```
 
-Je vous l'ai dit, j'insiste, plus le temps passe et moins je serai transigeant
-avec la documentation. Je ne lirai plus vos fonctions non documentées d'ici
-janvier.
+### Indications de types
+
+On peut considérablement abréger la documentation en indiquant les types.
+
+Plutôt que d'écrire :
+
+```python
+def somme_trois_nombres(a, b, c):
+    """
+    Renvoie la somme des trois nombres.
+
+    @param a: (int)
+    @param b: (int)
+    @param c: (int)
+    @return: (int)
+    """
+    return a + b + c
+```
+
+On peut se contenter de :
+
+```python
+def somme_trois_nombres(a: int, b: int, c: int) -> int:
+    """Renvoie la somme des trois nombres."""
+    return a + b + c
+```
 
 ## entrée != saisie et sortie != affichage
 
@@ -338,14 +361,14 @@ Quand un programme génère une erreur, Python _lève une exception_.
 Il affiche alors un message commençant par `Traceback` et se lisant de bas en
 haut :
 
-~~~python
+```python
 >>> l = [0, 1, 2]
 >>> l[4]
 Traceback (most recent call last):
   File "<stdin>", line 1, in <module>
 IndexError: list index out of range
 
-~~~
+```
 
 * Le type d'exception : `IndexError`
 * la ligne : 1
@@ -354,22 +377,29 @@ IndexError: list index out of range
 
 ## Les erreurs courantes sont :
 
+Erreurs produises quand Python _lit_ le fichier .py :
+
+* `IndentationError` : mélange entre espaces et tabulations ou indentation incorrecte
 * `SyntaxError` : oublier des parenthèses, oublier `:` après `if`, `print 3`,
+
+Erreurs produites durant l'exécution du programme lui même :
+
 * `ZeroDivisionError` : division par 0,
 * `IndexError` : aller chercher un élément inexistant dans une liste,
 * `ValueError` : racine carrée d'un nombre négatif etc.
 * `TypeError` : réaliser une opération impossible sur ce type (`len(print)`),
 * `AssertionError` : quand un _test_ avec `assert` est faux
 
-~~~python
+```python
 >>> assert 2 == 3
 Traceback (most recent call last):
   File "<stdin>", line 1, in <module>
 AssertionError
-~~~
+```
 
 ## `try: ... except Exception as e: ...`
 
 On peut _attraper_ une exception prévisible avec `try except`. C'est à la
-limite du programme mais vous le rencontrerez souvent dans le code que vous
-lirez car c'est un procédé courant en programmation aussi sachez le.
+limite du programme mais vous le rencontrerez souvent dans le code.
+
+C'est un procédé courant, en particulier pour gérer les saisies d'utilisateur.
