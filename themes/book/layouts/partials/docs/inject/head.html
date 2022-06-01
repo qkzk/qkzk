@@ -1,15 +1,13 @@
 <!-- mathjax support latex -->
 {{ if and (not .Params.disable_mathjax) (or (in (string .Content) "\\") (in (string .Content) "$")) }}
 <script src="//yihui.name/js/math-code.js"></script>
-<script async src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML">
-</script>
-{{ end }}
+<script id="MathJax-script" async
+    src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 
 <script type="text/x-mathjax-config">
 MathJax.Hub.Config({
   tex2jax: {
     inlineMath: [['$','$']],
-    // displayMath: [['$$','$$'], ['\[','\]']],
     displayMath: [['$$','$$']],
     processEscapes: true,
     processEnvironments: true,
@@ -19,52 +17,6 @@ MathJax.Hub.Config({
   }
 });
 </script>
-<!-- mathjax support latex -->
-<!-- source : https://bwaycer.github.io/hugo_tutorial.hugo/tutorials/mathjax/ -->
-{{ if and (not .Params.disable_mathjax) (or (in (string .Content) "\\") (in (string .Content) "$")) }}
-
-<!-- ne fonctionne plus -->
-<!-- <script src="//yihui.name/js/math-code.js"></script>
-<script async src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML">
-</script> -->
-
-<script type="text/javascript"
-  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
-</script>
 {{ end }}
 
-<script type="text/x-mathjax-config">
-MathJax.Hub.Config({
-  tex2jax: {
-    inlineMath: [['$','$']],
-    // displayMath: [['$$','$$'], ['\[','\]']],
-    displayMath: [['$$','$$']],
-    processEscapes: true,
-    processEnvironments: true,
-    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
-    TeX: { equationNumbers: { autoNumber: "AMS" },
-         extensions: ["AMSmath.js", "AMSsymbols.js"] }
-  }
-});
-</script>
-
-
-<!-- <script type="text/x-mathjax-config">
-  MathJax.Hub.Queue(function() {
-    // Fix <code> tags after MathJax finishes running. This is a
-    // hack to overcome a shortcoming of Markdown. Discussion at
-    // https://github.com/mojombo/jekyll/issues/199
-    var all = MathJax.Hub.getAllJax(), i;
-    for(i = 0; i < all.length; i += 1) {
-        all[i].SourceElement().parentNode.className += ' has-jax';
-    }
-});
-</script> -->
 <script async src="https://unpkg.com/mermaid@8.2.3/dist/mermaid.min.js"></script>
-<!-- {{ $mermaid := resources.Get "https://unpkg.com/mermaid@8.2.3/dist/mermaid.min.js" }}
-<script src="{{ $mermaid }}"></script>
-<script>
-    window.onload = function() {
-        mermaid.init(undefined, ".language-mermaid");
-    };
-</script> -->
