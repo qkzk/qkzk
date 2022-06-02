@@ -1,6 +1,7 @@
 ---
 title: "16 - Échantillonnage"
 weight: 23
+disable_mathjax: true
 
 ---
 

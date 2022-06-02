@@ -42,6 +42,8 @@ d = [1, 2]
 # comment
 ```
 
+Inline code no color `class A():` with color {{< highlight python "linenos=inline" >}}a = "abc" + "def"{{< /highlight >}}
+
 **SQL**
 
 ```sql
