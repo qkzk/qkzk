@@ -9,14 +9,14 @@ bookCollapseSection: true
 
 ---
 
-# Présentation de la NSI
+## Présentation de la NSI
 
 * [vidéo de présentation](https://www.youtube.com/watch?v=V_IIf5svHqQ)
 * Diaporama : [google slides](https://docs.google.com/presentation/d/1CBm63JEIcIvMcAVHODccfZmoJL3EJNBLYaGexLzu-UU/edit?usp=sharing) et [pdf](/uploads/docsnsi/pres_po/presentation_nsi_slides.pdf)
 
 
 
-# Numérique et sciences informatiques
+## Numérique et sciences informatiques
 
 
 Bienvenue dans la partie relative à la spécialité Numérique et Sciences
@@ -40,8 +40,10 @@ Informatiques du baccalauréat général.
 
 ## Classe de première
 
-Durant l'année 2020-2021 nous aurons des séances en classe entière et des
-séances en demi groupe, sur postes.
+Selon l'effectif :
+
+* soit 2h en classe entière et 2h sur poste informatique,
+* soit 4h sur poste informatique.
 
 ### Matériel en NSI
 
@@ -49,11 +51,8 @@ séances en demi groupe, sur postes.
 1. Un cahier d'exercices pour prendre des notes, écrire les algorithmes etc.
 2. Une partie dans le trieur ou un classeur pour ranger les polycopiés (cours,
     TD, résumés etc.)
-2. Des copies pour les DS
-3. Une clé USB 3.0 (embout bleu) disposant de 16 go (7€). Elle servira à
-    installer un système d'exploitation Linux. **Attention :**
-    * Toutes les données présentes sur la clé seront perdues,
-    * Vous ne pourrez plus stocker de données sur la clé.
+3. Des copies pour les DS
+
 
 ### Programme
 
@@ -110,8 +109,7 @@ Nous aurons différents types de séances :
 ## Classe de terminale
 
 * La progression est indiquée dans la partie du site relative à la terminale.
-* Le programme, la nature de l'épreuve et les documents d'accompagnement sont
-    donnés plus haut.
+* Le programme, la nature de l'épreuve et les documents d'accompagnement sont donnés plus haut.
 
 ---
 
@@ -129,9 +127,8 @@ Sur chaque poste vous trouverez plusieurs interfaces de développement (IDE) :
 
 
 * Thony qui permet de visualiser facilement les états des variables de déboguer
-* Sublime Text et Atom qui sont des IDE généralistes auxquels on peut ajouter
+* Sublime Text qui sont des IDE généralistes auxquels on peut ajouter
     des modules offrant une grande richesse et beaucoup de souplesse.
-* Idle qui est l'IDE officiel de Python, d'une grande simplicité.
 
 Une grande partie de vos travaux se dérouleront en ligne et nous utiliserons
 la suite logicielle de Google :

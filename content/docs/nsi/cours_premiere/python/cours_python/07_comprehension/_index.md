@@ -7,7 +7,7 @@ weight: 8
 
 ---
 
-### pdf: [pour impression](./comprehension.pdf)
+pdf: [pour impression](./comprehension.pdf)
 
 Jusqu'ici nous avons crée les listes et les dictionnaires "à la main" ou 
 en utilisant une boucle.
@@ -159,6 +159,10 @@ Pour vous rassurer, on doit obtenir :
 triples = [30, 33, 36, 39, 42, 45, 48, 51, 54, 57]
 ~~~
 
+
+{{< python title="Exercice 1" >}}
+{{< /python >}}
+
 ## Exercice 2
 
 
@@ -172,7 +176,11 @@ contenant la lettre `e` parmi :
 
 Bien sûr, on doit trouver `[6, 5]`, car seuls `"tomate"` et `"salle"` contiennent un `e`
 
-# Dictionnaires par compréhension
+
+{{< python title="Exercice 2" >}}
+{{< /python >}}
+
+## Dictionnaires par compréhension
 
 Le principe est exactement le même, on crée un dictionnaire en itérant
 sur une collection.
@@ -195,7 +203,27 @@ divisibles par trois :
 {1: 1, 2: 4, 4: 16, 5: 25, 7: 49, 8: 64, 10: 100}
 ```
 
+Les noms des super héros :
+
+```python
+>>> noms = ["JP", "Clémence", "Chantal"]
+>>> super_noms = {nom: "Super " + nom for nom in noms}
+{"JP": "Super JP", "Clémence": "Super Clémence", "Chantal": "Super Chantal"}
+```
+
 ## Exercice 3
+
+En partant de `noms`, créer le dictionnaire :
+
+```python
+{"Super JP": "JP", "Super Clémence": "Clémence", "Super Chantal": "Chantal"}
+```
+
+{{< python title="Exercice 3" >}}noms = ["JP", "Clémence", "Chantal"]
+{{< /python >}}
+
+
+## Exercice 4
 
 On considère la liste suivante :
 
@@ -206,6 +234,15 @@ liste_mots = ["tomate", "ballon", "salle", "bois"]
 1. Créer par comprehénsion le dictionnaire ayant pour clés les mots
   et pour valeur leur dernière lettre.
 2. Recommencer en filtrant les mots qui contiennent la lettre "e"
+3. Créer par compréhension le dictionnaire : 
+
+    ```python
+    {"tomate": "TOMATE", "ballon": "BALLON", "salle": "SALLE", "bois": "BOIS"}
+    ```
+
+
+{{< python title="Exercice 4" >}}liste_mots = ["tomate", "ballon", "salle", "bois"]
+{{< /python >}}
 
 
 

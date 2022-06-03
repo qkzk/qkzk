@@ -7,18 +7,21 @@ weight: 1
 
 ---
 
-### pdf : [pour impression](./parcours_sequentiel.pdf)
+# Parcours séquentiel d'un tableau
 
+pdf : [pour impression](./parcours_sequentiel.pdf)
 
-# Algorithmes sur les tableaux
+**Attendus :** Écrire un algorithme de recherche d’une occurrence sur des valeurs de type quelconque. Écrire un algorithme de recherche d’un extremum, de calcul d’une moyenne.
 
-##
+**Commentaire :** On montre que le coût est linéaire.
+
+## Algorithmes sur les tableaux
+
 
 Lorsqu'on dispose de plusieurs données similaires (notes à un devoirs, dépenses journalières etc.) il est commode de les ranger dans un tableau.
 
 On est alors amené à effectuer de nombreuses opérations sur ces tableaux.
 
-##
 
 ```python
 notes = [12, 10, 8, 6, 20]
@@ -27,6 +30,10 @@ notes = [12, 10, 8, 6, 20]
 Est-ce qu'un élève a eu 20 ?
 
 La réponse est oui, 20 est le dernier élément du tableau. Pour une machine, répondre à cette question n'est pas immédiat.
+
+En pratique, la seule manière qu'elle ait de répondre est de parcourir le tableau entier et de comparer un par un les éléments avec `20`.
+
+C'est ce qu'on appelle un **parcours séquentiel**.
 
 ## Outils natifs de Python
 
@@ -38,7 +45,9 @@ True
 >>> 13 in tableau
 False
 ```
-Mais comment fait-il ?
+Mais comment fait-il ? 
+
+_Relire la partie précédente si vous n'avez pas deviné, lisez le [code source code de Python](https://github.com/python/cpython/blob/d52ffc1d1f14576605195e4ed3a4d5d63497c3e3/Objects/listobject.c#L435) si vous doutez_.
 
 ## Autre outil natif pour la moyenne
 
@@ -53,24 +62,17 @@ De même, pour calculer la moyenne à ce devoir, on pourrait utiliser :
 
 Mais comment ?
 
-Et cette approche pose un problème majeur : **ces instructions n'existent pas dans tous les langages !**
+L'autre danger des _outils natifs_, c'est que de telles instructions **n'existent pas dans tous les langages !**
 
 ## Objectifs
 
-* Nous allons étudier de simples algorithmes qui utilisent le caractère séquentiel d'un tableau.\
-* Systématiquement, nos algorithme vont utiliser une boucle qui parcourt les éléments du tableau.\
-* À chaque fois il faudra adapter ce que nous faisons dans la boucle à notre contexte.
+* Nous allons étudier de simples algorithmes qui utilisent le caractère séquentiel d'un tableau.
+* Systématiquement, nos algorithmes vont utiliser une seule boucle qui parcourt les éléments du tableau.
+* À chaque fois, il faudra adapter ce que nous faisons dans la boucle pour résoudre le problème.
 
 
 
 
-# Parcours séquentiel d'un tableau
-
-##
-
-**Attendus :** Écrire un algorithme de recherche d’une occurrence sur des valeurs de type quelconque. Écrire un algorithme de recherche d’un extremum, de calcul d’une moyenne.
-
-**Commentaire :** On montre que le coût est linéaire.
 
 ## Les tableaux en informatique
 
@@ -78,7 +80,7 @@ Et cette approche pose un problème majeur : **ces instructions n'existent pas d
 
 On suppose pouvoir parcourir le tableau, élément par élément.
 
-## Les tableaux en Python
+### Les tableaux en Python
 
 En Python, pour illustrer les tableaux, on utilise les objets `list`.
 
@@ -88,11 +90,11 @@ En Python, pour illustrer les tableaux, on utilise les objets `list`.
 <class 'list'>
 ```
 
-## Constructions de tableaux
+### Constructions de tableaux
 
 Il existe quatre méthodes simples pour construire les tableaux en Python
 
-## Construction directe
+### Construction directe
 
 * En les définissant directement
 
@@ -100,7 +102,7 @@ Il existe quatre méthodes simples pour construire les tableaux en Python
     equipe = ["Diego", "Franz", "Michel", "Johann",
     ...       "Lionel", "Christiano"]
     ```
-## Ajouts successifs
+### Ajouts successifs
 
 * En ajoutant, élément par élément avec `append`,
 
@@ -114,7 +116,7 @@ Il existe quatre méthodes simples pour construire les tableaux en Python
 
     `[5, 5, 6, 6, 6, 10]`
 
-## tableaux par compréhension
+### Tableaux par compréhension
 
 * par compréhension,
 
@@ -122,7 +124,7 @@ Il existe quatre méthodes simples pour construire les tableaux en Python
   cubes = [x ** 3 for x in [1, 2, 3, 4]]
   ```
 
-## `range`
+### `range`
 
 * cas des nombres espacés régulièrement : `range`
 
@@ -134,7 +136,6 @@ Il existe quatre méthodes simples pour construire les tableaux en Python
   range(debut, fin, pas)
   ```
 
-## `range`
 
 Les nombres entre `debut` (inclu) et `fin` (exclu) séparés de `pas` à chaque fois
 
@@ -144,13 +145,12 @@ range(3, 19, 4)
 
 Les nombres entre `3` (inclu) et `19` (exclu) séparés de `4` à chaque fois
 
-## `range`
 
 On va obtenir un itérable correspondant à `[3, 7, 11, 15]`
 
 `19` n'y figure pas car la borne de droite est toujours exclue.
 
-## `range` avec ou sans bornes
+### `range` avec ou sans bornes
 
 * S'il n'y a que deux nombres, ce sont les bornes de début et de fin. Le pas est 1.
 * S'il n'y a qu'un nombre, c'est la borne de fin. La borne de début est 0.
@@ -179,7 +179,7 @@ Rappelons qu'il existe deux types de boucles :
     ```python
     compteur = 0
     while compteur < 5:
-      print(compteur) # on faire autre chose...
+      print(compteur) # ou faire autre chose...
       compteur = compteur + 1
     ```
 
@@ -206,10 +206,10 @@ Il est courant de créer des boucles qui ne s'arrêtent pas :
     ```
 
 
-# Algorithmes sur les tableaux
+## Algorithmes sur les tableaux
 
 
-## Recherche d'un élément dans un tableau
+### Recherche d'un élément dans un tableau
 
 **Contexte :** on dispose d'un tableau,
 
@@ -217,14 +217,16 @@ par exemple `T=[0, 1, 2, ..., 10]`.
 
 On veut savoir si un nombre $x$ figure dans le tableau.
 
-## Algorithme :
+**Algorithme :**
 
 ```
-fonction (tableau T, objet x) ---> booléen:
+fonction (tableau T, objet x) -> booléen:
   Pour chaque élément e de T,
     Si e = x, alors on retourne Vrai
   Si la boucle se termine, on retourne Faux.
 ```
+
+**ATTENTION** remarquez bien la position de la condition... on ne renvoie `Faux` que si la boucle se termine.
 
 ## Exemple
 
@@ -245,7 +247,7 @@ Le parcours de la boucle se termine et l'algorithme retourne Faux.
 
 | élément           | 2     | 5     | -4    | 12    |
 |------------------ |------ |------ |------ |------ |
-| `élément == 9 ?`  | Faux  | Faux  | Vrai  | x     |
+| `élément == 9 ?`  | Faux  | Faux  | Vrai  |       |
 
 L'algorithme retourne Vrai. La dernière case du tableau n'est jamais visitée !
 
@@ -260,7 +262,6 @@ Le **coût** d'un algorithme correspond au nombre d'opérations à effectuer.
 
 Il est très difficile de le calculer exactement, beaucoup plus facile de l'estimer.
 
-## Coût du parcours séquentiel
 
 Dans notre cas, on a, grosso modo, autant d'opérations qu'il y a d'éléments dans le tableau.
 
@@ -270,18 +271,18 @@ On note : **le parcours séquentiel est un algorithme en $O(n)$**
 
 $n$ désigne la taille du tableau.
 
-## En Python :
+### En Python :
 
 ```python
 def recherche_sequentielle(tableau, x):
   for elt in tableau:
     if x == e:
       return True
+
   # on n'arrive ici que si l'élément n'est pas dans le tableau
   return False
 ```
 
-## Le mot de la fin
 
 Sans information supplémentaire, le parcours séquentiel est la seule manière de répondre à
 
@@ -294,7 +295,7 @@ Nous en étudierons un important : **la recherche dichotomique**.
 
 
 
-## Recherche d'extremum
+### Recherche d'extremum
 
 **Contexte :** On cherche la valeur extrème d'un tableau de nombres `T`.
 
@@ -313,7 +314,7 @@ Pour le tableau `T = [2, 5, 9, 7]` cela donne :
 Le maximum vaut 9.
 
 
-## Algorithme
+### Algorithme
 
 ```
 fonction maximum(tableau T, nombre x) ---> nombre:
@@ -324,7 +325,7 @@ fonction maximum(tableau T, nombre x) ---> nombre:
   retourner max
 ```
 
-## En Python :
+### En Python :
 
 ```python
 def maximum(tableau):
@@ -336,7 +337,7 @@ def maximum(tableau):
 ```
 
 
-## Opérations natives : `min` et `max`
+### Opérations natives : `min` et `max`
 
 ```python
 >>> tableau = [4, 5, 2, -1, 3]
@@ -346,7 +347,7 @@ def maximum(tableau):
 -1
 ```
 
-## Moyenne des éléments d'un tableau
+### Moyenne des éléments d'un tableau
 
 **Contexte :** Calculer la moyenne d'un tableau de nombres
 
@@ -365,7 +366,7 @@ Pour le tableau `T = [2, 5, 9, 8]` cela donne :
 
 Le somme vaut 24 et il y a 4 éléments : la moyenne est `24/4 = 6`
 
-## Algorithme
+### Algorithme
 
 ```
 fonction moyenne(tableau T, nombre x) ---> nombre:
@@ -377,7 +378,7 @@ fonction moyenne(tableau T, nombre x) ---> nombre:
   retourner Somme / Effectif
 ```
 
-## En Python :
+### En Python :
 
 ```python
 def moyenne(tableau):
@@ -389,7 +390,7 @@ def moyenne(tableau):
   return somme / effectif
 ```
 
-## En python, solution native
+### En python, solution native
 
 Version courte qui n'illustre pas le programme :
 
@@ -410,14 +411,14 @@ Difficile de comprendre ce qui se passe !
 
 Comment faire ?
 
-## principe
+### principe
 
 * On crée un tableau vide `R` pour nos éléments retournés
 * On parcourt le tableau `T`,
   * pour chaque élément rencontré, on _l'insère au début de R_
 * On retourne `R`
 
-## python
+### python
 
 ```python
 def retourner(tableau):
@@ -433,7 +434,7 @@ def retourner(tableau):
 
   On _ajoute deux tableaux_: Python les met bout à bout !
 
-## opération native en python
+### Opération native en python
 
 ```python
 >>> tableau = [1, 2, 3]
@@ -443,7 +444,7 @@ def retourner(tableau):
 [3, 2, 1]
 ```
 
-# Tableaux à deux dimensions
+## Tableaux à deux dimensions
 
 On rencontre souvent des données qui sont présentées sous la forme d'un tableau
 à deux dimensions :
@@ -455,7 +456,7 @@ On rencontre souvent des données qui sont présentées sous la forme d'un table
 
 Ces tableaux sont appelés des **matrices**. Celle-ci a 2 lignes et 4 colonnes
 
-## Affecter une matrice à une variable
+### Affecter une matrice à une variable
 
 Chaque ligne de la matrice est dans un tableau.
 
@@ -474,7 +475,7 @@ On dit que c'est une structure _imbriquée_.
 
 Cette notation est universelle.
 
-## Atteindre un élément.
+### Atteindre un élément.
 
 
 ```python
@@ -493,7 +494,7 @@ colonne :
 On utilise deux séries de `[]` pour les lignes puis pour les colonnes.
 
 
-## Parcourir une matrice : boucles imbriquées
+### Parcourir une matrice : boucles imbriquées
 
 Parcourir une structure imbriquée **demande forcement deux boucles imbriquées.**
 
@@ -505,18 +506,16 @@ for ligne in tableau:
 
 ```
 
-### BOUCLES IMBRIQUÉES : L'UNE DANS L'AUTRE.
+### BOUCLES IMBRIQUÉES = L'UNE DANS L'AUTRE.
 
-```
 
-```
 
 Si vous devez retenir 1 phrase de cette partie c'est celle là.
 
 
 
 
-## coût des boucles imbriquées
+### coût des boucles imbriquées = multiplier les coûts
 
 * Si j'ai 9 lignes et 7 colonnes... j'ai ... $9\times 7 = 63$ éléments.
 
@@ -532,7 +531,7 @@ visiter,
   je ferai $3 \times 5 \times 10 \times 4 = 600$ opérations.
 
 
-## erreurs fréquentes
+### erreurs fréquentes
 
 * indentation
 
@@ -551,7 +550,7 @@ visiter,
 
   cette syntaxe est fausse...
 
-## erreurs fréquentes : pire
+### erreurs fréquentes : pire
 
 * même problème mais qui ne plante pas...
 
@@ -567,7 +566,6 @@ visiter,
   ```
 
 
-## erreurs fréquentes : pire
 
   C'est encore pire ! Au moins la première fois on avait une erreur...
 
@@ -695,8 +693,7 @@ display(img) # afficher dans colab
 ```
 ## dégradé obtenu
 
-![Degradé rouge -> noir](degrade.jpg)
-
+![Degradé rouge -> noir](/uploads/docsnsi/algo/sequentiel/degrade.jpg)
 
 # Variants et invariants
 
@@ -707,9 +704,47 @@ display(img) # afficher dans colab
     Dans une boucle bornée (`for`), il n'est pas nécessaire de donner un variant, la boucle se termine toujours.
     
 
+```python
+def indice_du_maximum(tab: list) -> int:
+    """
+    Renvoie l'indice de l'élément maximal de `tab`
+    """
+    indice_maxi = 0
+    i = 0
+    while i < len(tab):
+        if tab[i] > tab[indice_maxi]:
+            indice_maxi = i
+        i = i + 1
+    return indice_maxi
+```
+
+1. Cette fonction comporte une boucle `while`, il est utile de donner un variant.
+    Le variant proposé est `i`.
+
+    * À chaque tour de la boucle, on fait `i = i + 1`, donc `i` augment de 1.
+    * Lorsque `i` atteind `len(tab)`, la boucle s'arrête.
+
+    Donc la fonction termine bien.
+
+2. L'invariant est plus difficile à trouver : `indice_maxi` est l'indice du plus grand élément parmi les `i` premiers.
+
+    * C'est vrai avant d'entrer dans la boucle.
+    * Si c'est vrai au _début_ d'un tour... alors deux possibilités :
+
+        * si `tab[i] > tab[indice_maxi]`, alors l'indice courant `i` est celui d'un élément plus grand que `tab[indice_maxi]`.
+            Donc cet indice `i` est celui du plus grand élément parmi les `i` premiers.
+        * Sinon... c'est que `tab[indice_maxi] >= tab[i]`, or `tab[indice_maxi]` est le plus grand élément des `i` premiers,
+            c'est toujours le cas après ce tour.
+
+    Conclusion : lorsque la boucle se termine à `i = len(tab)`, `indice_maxi` est l'indice du plus grand de tous les éléments.
+
 ## Exemples
 
 ### Exponentiation rapide
+
+Pour illustrer la notion de variant, nous allons utiliser un algorithme largement hors programme.
+
+Tout ce qu'on veut, **c'est démontrer que cette fonction va toujours terminer.**
 
 ```python
 def puissance(a: int, n: int) -> int:

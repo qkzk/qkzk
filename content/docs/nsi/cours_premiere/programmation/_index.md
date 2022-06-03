@@ -10,7 +10,13 @@ weight: 1
 
 On y trouve tout ce qui n'est pas déjà dans la partie spécifique : "cours Python".
 
-* une présentation de Python et un résumé des commandes de base,
-* les compléments relatifs aux autres langages,
-* présentation de logiciels particuliers (thonny, repl etc.)
-* tester et spécifier ses programmes
+## Parties du programme :
+
+* [Spécifier ses programmes](specifier)
+* [Tester ses programmes](tester)
+* [Diversité des langages](comparaison)
+
+## Activités diverses
+
+* [Activités de programmation](activites)
+* [Outils pour développer](outils)

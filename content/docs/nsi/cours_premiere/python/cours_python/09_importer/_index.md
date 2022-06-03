@@ -7,13 +7,15 @@ weight: 10
 
 ---
 
-### pdf: [pour impression](./importer.pdf)
+# Importer un fichier python ou une fonction
+
+pdf: [pour impression](./importer.pdf)
 
 ## Importer : deux méthodes aux syntaxes différentes
 
 Il est courant de devoir utiliser des morceaux de programmes déjà écrits.
 
-On connait les deux syntaxes :
+On connait la syntaxe :
 
 ```python
 import math
@@ -24,7 +26,7 @@ print(math.pi)
 et on peut accéder à toutes les fonctions de la librairie `math` avec
 `dir(math)` ou l'aide `help(math)`
 
-Il est aussi possible de n'importer qu'une fonction particulière avec :
+Il est aussi possible de n'importer qu'un objet particulier avec :
 
 ```python
 from math import pi
@@ -36,8 +38,10 @@ Cette fois, on n'a accès qu'à ce qu'on a importé.
 
 C'est plus simple pour écrire le code et cela évite de créer beaucoup d'identifieur inutiles.
 
+{{< hint info >}}
 Attention cependant, `import module` et `from module import objet` conduisent tous deux à ce que
 Python charge tout le `module`... Il n'y pas d'économie de mémoire à utiliser le second.
+{{< /hint >}}
 
 Enfin, on peut renommer des modules en les important :
 

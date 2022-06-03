@@ -4,13 +4,13 @@ bookCollapseSection: true
 weight: 4
 ---
 
-### pdf : [pour impression](/uploads/docsnsi/programmation/specifier/specification_des_programmes_print.pdf) et [diaporama](/uploads/docsnsi/programmation/specifier/specification_des_programmes_slides.pdf)
+pdf : [pour impression](/uploads/docsnsi/programmation/specifier/specification_des_programmes_print.pdf) et [diaporama](/uploads/docsnsi/programmation/specifier/specification_des_programmes_slides.pdf)
 
 # Spécification
 
 ## Spéficication
 
-De manière générale la **spécification** est un ensemble de d'exigences à satisfaire par un produit ou un service.
+De manière générale la **spécification** est un ensemble d'exigences à satisfaire par un produit ou un service.
 
 En programmation, **spécifier** un programme revient à décrire explicitement ce qu'il doit faire et dans quelles conditions.
 
@@ -33,7 +33,7 @@ Il est difficile de savoir ce qu'elle fait sans lire ou exécuter le code.
 ## Avec des spécifications convenables
 
 ```python
-def fibonacci(n):
+def fibonacci(n: int) -> list:
   '''
   Termes de la suite de Fibonacci jusqu'à l'indice n inclus
   @param n: (int) l'indice maximal voulu
@@ -54,14 +54,21 @@ def fibonacci(n):
 
 Cette fois on dispose d'éléments pour comprendre le code.
 
-1. Sa documentation en haut
-2. Des variables explicites
+1. Des indications de types,
+1. Sa documentation,
+2. Des variables explicites.
 
-# Spécifications attendues dans une fonction
+## Spécifications attendues dans une fonction
 
-## Documentation
+### Indications de types
 
-La **documentation** (docstring) d'une fonction en Python est constituée d'une
+Python permet d'indiquer les types d'entrée et de sortie d'une fonction.
+
+Parfois ils sont complexes et nécessitent un import, dans ce cas on s'en passera.
+
+### Documentation
+
+La **documentation** (_docstring_) d'une fonction en Python est constituée d'une
 chaîne de caractères sur plusieurs lignes :
 
 ```python
@@ -70,7 +77,6 @@ Chaîne sur plusieurs
 lignes
 """
 ```
-## Documentation
 
 On y précise :
 
@@ -82,7 +88,7 @@ On y précise :
 * Les conditions d'utilisation et effets de bord : `@CU : La table `
 * Eventuellement des tests
 
-## Comment accéder à la documentation ?
+### Comment accéder à la documentation ?
 
 Une fois qu'une fonction est en mémoire, on peut afficher sa documentation avec
 `help(nom_fonction)`
@@ -97,21 +103,21 @@ cos(x, /)
     Return the cosine of x (measured in radians).
 ```
 
-## Intérêt
+### Intérêt
 
-* programmer : documenter AVANT d'écire le code donne un objectif clair
-* relire : les programmes complexes sont difficiles à comprendre.
+* **écrire** : documenter AVANT d'écire le code donne un objectif clair
+* **lire** : les programmes complexes sont difficiles à comprendre.
   La documentation simplifie cette étape
-* collaborer : travailler à plusieurs demande de l'organisation et une
+* **collaborer** : travailler à plusieurs demande de l'organisation et une
   documentation claire est indispensable
 
-## Documenter : un attendu
+### Documenter : un attendu
 
 La documentation fait partie des éléments attendus et qui seront toujours évalués.
 
 Si vous ne documentez pas vos fonctions, **vous n'obtiendrez jamais le maximum des points.**
 
-## Variables explicites
+### Variables explicites
 
 Afin de rendre le code _lisible_ par un être humain, il faut nommer
 convenablement les objets qu'on emploie.
@@ -128,19 +134,19 @@ convenablement les objets qu'on emploie.
   * `t = 180` est mauvais
   * `taille = 180` est bon
 
-# Spécification et attendus
+## Spécification et attendus
 
 Nous allons distinguer plusieurs situations :
 
-## Lire du code
+### Lire du code
 
 Vous devez être capable de dire si un code **correspond à sa spécification**.
 
 ```python
-def presenter(liste):
+def presenter(liste: list) -> str:
   '''
-  Retourne une chaîne affichable à partir d'une liste
-  Chaque élément occupe une ligne
+  Renvoie une chaîne affichable à partir d'une liste,
+  chaque élément sur une ligne
 
   @param liste : (list) la liste d'entrée
   @return: (str) la chaîne affichable à l'écran
@@ -150,7 +156,7 @@ def presenter(liste):
 
 
 
-## Spécifier du code
+### Spécifier du code
 
 Vous devez être capable **d'écrire** la spécification d'une fonction
 
@@ -162,7 +168,7 @@ def presenter(liste):
   return '\n'.join(liste)
 ```
 
-## Programmer
+### Programmer
 
 Vous devez être capable **de programmer** une fonction à partir de sa spécification.
 
@@ -179,16 +185,16 @@ def presenter(liste):
 ```
 
 
-# Spécification d'un script
+## Spécification d'un script
 
-## readme.md
+### readme.md
 
 Un script (fichier `.py` indépendant) doit aussi être documenté.
 
 S'il est hébergé en ligne sur un dépôt git, on peut intégrer un fichier `readme.md`
 qui contient les informations :
 
-## README.md
+### README.md
 
 * auteur,
 * objectif,
@@ -197,13 +203,13 @@ qui contient les informations :
 * cahier des charges,
 * Avancée du projet etc.
 
-## Docstring d'un script
+### Docstring d'un script
 
-* Ce qui fait le script :
+* Ce que fait le script :
 
     ```python
     '''
-    titre : éléments de la suite de Fibonacci
+    titre : Suite de Fibonacci
     auteur : qkzk
     objectif : Affiche la suite de Fibonacci
     etc.
@@ -214,12 +220,10 @@ qui contient les informations :
 
 * S'il n'y a pas de fichier README.md, vous pouvez intégrer les consignes et quelques informations
 
-# Conventions d'écriture : PEP8
+## Conventions d'écriture : PEP8
 
 Les conventions d'écritures en Python font partie du projet Python lui même et
-sont indiquées dans PEP8
-
-Python Enhancement Proposal 8 : proposition d'amélioration de Python n° 8.
+sont indiquées dans PEP8 : Python Enhancement Proposal 8 pour _proposition d'amélioration de Python n° 8._
 
 
-Un résumé de la [PEP8](http://sametmax.com/le-pep8-en-resume/) de Python.
+Un résumé de la [PEP8](https://python.sdv.univ-paris-diderot.fr/15_bonnes_pratiques/#151-de-la-bonne-syntaxe-avec-la-pep-8) de Python.

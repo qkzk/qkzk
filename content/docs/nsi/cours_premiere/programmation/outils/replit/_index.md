@@ -3,15 +3,17 @@ title: REPL.it
 bookCollapseSection: true
 author: qkzk
 weight: 7
----
 
-### pdf : [pour impression](/uploads/docsnsi/programmation/repl/presentation_repl_print.pdf) et [diaporama](/uploads/docsnsi/programmation/repl/presentation_repl_slides.pdf)
+---
 
 # REPL
 
+pdf : [pour impression](/uploads/docsnsi/programmation/repl/presentation_repl_print.pdf) et [diaporama](/uploads/docsnsi/programmation/repl/presentation_repl_slides.pdf)
+
+
 ## REPL
 
-L'acronyme **Read-Eval-Print loop** désigne une interface dans laquelle on peut
+L'acronyme **Read-Eval-Print-Loop** désigne une interface dans laquelle on peut
 écrire une commande, l'exécuter, voir s'afficher une réponse et recommencer.
 
 En programmation on parle souvent **console** et dans l'utilisation d'un

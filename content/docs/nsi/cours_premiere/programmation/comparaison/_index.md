@@ -8,15 +8,17 @@ date:
 theme:
   metropolis
 weight: 9
+
 ---
+# Diversité et unité des langages de programmation
 
-### pdf [pour impression](/uploads/docsnsi/comparaison_langage/comparaison_langages_print.pdf)
+pdf [pour impression](/uploads/docsnsi/comparaison_langage/comparaison_langages_print.pdf)
 
-# Exemples sur repl
+## Exemples sur repl
 
 [ici, pour moi](https://repl.it/repls/folder/Comparaisons%20de%20langages%2Fdiu_comparaison), en bas de la page pour vous.
 
-# Diversité et unité des langages de programmation
+## Comparaisons de quelques langages
 
 Une rapide comparaison de différents langages de programmation autour d'un même algorithme
  - Python
@@ -29,14 +31,14 @@ Une rapide comparaison de différents langages de programmation autour d'un mêm
 Les codes sont fournis en respectant autant que possible un même squelette de base. On fait donc apparaître ici plus les similitudes des structures que les spécificités des langages, même si certains points importants apparaissent déjà.
 Parmi les points communs, on peut donc retrouver les fonctions et leurs paramètres, la déclaration de variables, les structures itératives et conditionnelles, la notion de bloc d'instruction.
 
-Le langage Prolog est ajouté pour montrer une approche très différente de la programmation (par des clauses logiques). Compte-tenu de sa spécificité, on ne compare pas ce langage avec les autres dans le paragraphe suivant.
+Le langage Prolog est ajouté pour montrer une approche très différente de la programmation (_par des clauses logiques_). Compte-tenu de sa spécificité, on ne compare pas ce langage avec les autres dans le paragraphe suivant.
 
-Quelques éléments de comparaison :
+### Quelques éléments de comparaison :
 
 
- - Python, Javascript et Scheme sont interprétés alors que Java et C sont compilés
- - Javascript, Java et C partagent la même syntaxe sur les structures de base (syntaxe issue de C)
- - Python, Javascript et Scheme sont dynamiquement typés alors que Java et C sont statiquement typés
+ - Python, Javascript et Scheme sont _interprétés_ alors que Java et C sont _compilés_
+ - Javascript, Java et C _partagent la même syntaxe sur les structures de base_ (syntaxe issue de C)
+ - Python, Javascript et Scheme sont _dynamiquement typés_ alors que Java et C sont _statiquement typés_
  - En java les méthodes doivent être placées dans des classes
  - En C le code produit par le compilateur est du code binaire, spécifique
  - En java le code produit par le compilateur est du bytecode interprétable par une machine virtuelle

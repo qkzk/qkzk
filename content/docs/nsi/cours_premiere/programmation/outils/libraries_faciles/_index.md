@@ -2,9 +2,10 @@
 author: qkzk
 date: 2019-12-10 07:08:58+00:00
 draft: false
-title: Python 3 - Librairies faciles d'emploi
+title: Librairies faciles d'emploi
 bookCollapseSection: true
 weight: 16
+
 ---
 
 # Présentation de quelques librairies faciles à employer
@@ -49,12 +50,12 @@ sur un modèle simple : un serveur (broker) auquel se connectent des clients.
 Le client envoie un message au client avec un sujet spécifique (topic), le
 broker diffuse le sujet à tous les clients abonnés à ce sujet.
 
+Ce design s'appelle _pub-sub_ pour [_Publish & Suscribe_](https://fr.wikipedia.org/wiki/Publish-subscribe).
+
 Elle est optimisée pour l'IOT et très peu gourmande en ressources.
 
 MQTT n'est pas spécifique à Python et existe sous UNIX, Windows, sous forme
-de libriarie pour tous les langages modernes etc.
-
-C'est un standard de l'industrie.
+de libriarie pour tous les langages modernes. C'est un standard de l'industrie.
 
 
 ## [Flask](flask)

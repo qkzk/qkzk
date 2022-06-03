@@ -193,6 +193,73 @@ personnes = [('Joe', 16), ('Zoé', 17), ('Martin', 15)]
 2. Traduire votre algorithme en Python.
 
 
+## 9. Lettres consécutives
+
+Proposer un algorithme qui prend en entrée un tableau de lettres et renvoie en sortie le nombre de fois où deux lettres consécutives sont identiques.
+
+Par exemple :
+
+```
+nb_lettres_consecutives(["a", "a", "b", "c", "c", "c"])
+```
+
+vaut 3 (`a, a`, `c, c`, `c, c`)
+
+et :
+
+```
+nb_lettres_consecutives(["a", "a", "a", "a", "c", "c"])
+```
+
+vaut 4.
+
+## 10. Trace et sommes des matrices carrés
+
+En algèbre, la _trace_ d'une matrice carrée est la somme de ses coefficients diagonaux.
+
+Par exemple pour la matrice :
+
+$$\begin{pmatrix}
+1 & 2 & 3 \newline
+4 & 5 & 6 \newline
+7 & 8 & 9
+\end{pmatrix}$$
 
 
+* Cette matrice comporte 3 lignes et 3 colonnes (deux nombres égaux), on dit qu'elle est carrée _de taille 3_.
+* Sa trace est $1 + 5 + 9 = 15$, somme des coefficients obtenus en suivant sa diagonale du haut à gauche, en bas à droite.
 
+On considère une matrice carrée d'entiers représentée par des tableaux imbriqués :
+
+```python
+matrice = [
+    [1, 2, 3],
+    [4, 5, 6],
+    [7, 8, 9]
+]
+```
+
+1. Proposer une fonction qui calcule la trace d'une matrice carrée de taille quelconque.
+
+La somme de deux matrices est obtenue en ajoutant les éléments termes à termes. Cette opération
+est définie pour toute paire de matrices qui ont des nombres de lignes et de colonnes égales.
+
+$$\begin{pmatrix}
+1 & 2 & 3 \newline
+4 & 5 & 6 \newline
+7 & 8 & 9
+\end{pmatrix} + 
+\begin{pmatrix}
+7 & 2 & 1 \newline
+6 & 3 & 2 \newline
+4 & 0 & 1
+\end{pmatrix}
+ = \begin{pmatrix}
+8 & 4 & 4 \newline
+10 & 8 & 8 \newline
+11 & 8 & 10
+\end{pmatrix}$$
+
+2. Proposer une fonction `somme` qui prend deux matrices en paramètres (supposées de mêmes dimensions) et renvoie la matrice somme.
+
+    _On pourra procéder en deux temps, en supposant d'abord que la matrice finale est déjà créée et ensuite en la créant_.

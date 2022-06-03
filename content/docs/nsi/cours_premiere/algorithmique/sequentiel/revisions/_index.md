@@ -22,8 +22,10 @@ weight: 3
     ```
 
     1. Compléter la fonction
-    2. On considère `tab = [3, 2, 4, 5, 1]`. Quel donner la valeur `elt` après chaque tour de la
-        boucle lorsqu'on exécute `minimum(tab)`.
+    2. On considère `tab = [3, 2, 4, 5, 1]` et on appelle `minimum(tab)`. 
+
+        Quelle est la valeur de `elt` après chaque tour de la
+        boucle.
     3. Qu'est-ce qu'un **invariant** de boucle ? Qu'un **variant** de boucle ?
     4. Dans quel type de boucle peut-on se passer d'un variant ? Pourquoi ?
     5. Proposer un invariant de la boucle de la fonction `minimum`
@@ -42,21 +44,23 @@ weight: 3
     ```
 
     a. Quelle est la valeur de `image[1][2]` ?
+
     b. Quelle instruction saisir pour modifier la dernière ligne et la remplacer par `[1, 1, 0, 0]` ?
+    
     c. Écrire le code d'une fonction `negatif` qui prend en paramètre un tableau à 2 dimensions
-        représentant une image et renvoie son négatif.
+       représentant une image et renvoie son négatif.
 
-        En voici un exemple d'utilisation :
+      En voici un exemple d'utilisation :
 
-        ```python
-        >>> negatif(image)
-        [
-            [0, 1, 1, 1],
-            [1, 1, 0, 0],
-            [1, 0, 1, 1],
-            [1, 0, 1, 0],
-        ]
-        ```
+      ```python
+      >>> negatif(image)
+      [
+          [0, 1, 1, 1],
+          [1, 1, 0, 0],
+          [1, 0, 1, 1],
+          [1, 0, 1, 0],
+      ]
+      ```
 
-        Attention, votre fonction doit accepter des images de toutes dimensions pas seulement 4x4.
+      Attention, votre fonction doit accepter des images de toutes dimensions pas seulement 4x4.
 

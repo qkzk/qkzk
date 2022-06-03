@@ -6,10 +6,10 @@ date: "2021/04/27"
 weight: 6
 
 ---
-
-### pdf: [pour impression](./dict.pdf)
-
 # Les dictionnaires : le type `dict`
+
+pdf: [pour impression](./dict.pdf)
+
 
 Python propose le type `dict` qui permet d'enregistrer et de manipuler des paires
 de `clé` et `valeurs`.
@@ -136,6 +136,10 @@ On considère la ville suivante :
 3. Ajouter la densité qui est de 4992 habitants au kilomètre carré.
 4. Supprimer la clé "pop" pour qu'elle devienne "population".
 
+
+{{< python title="Exercice 1" >}}
+{{< /python >}}
+
 ## Itérer
 
 On peut écrire des boucles qui parcourent un dictionnaire.
@@ -210,9 +214,9 @@ Considérons la liste de mot suivants :
 mots = ["person", "woman", "man", "camera", "tv"]
 ```
 
-Nous allons créer un dictionnaire enregitrant chaque mot et sa longueur.
+Nous allons créer un dictionnaire associant chaque mot à sa longueur.
 
-Pourquoi ? Pour vous montrer, il ne sert à rien.
+Pourquoi ? Parce que c'est moi qui décide.
 
 On peut utiliser `len` lorsqu'on en a besoin.
 
@@ -274,6 +278,8 @@ pas avec précision les valeurs contenues.
 
 
 # Exercices
+
+_Trop d'exercices pour mon site, réalisez-les à l'extérieur._
 
 ## Exercice 2
 
@@ -355,7 +361,7 @@ values = [10, 20, 30]
 
 ```python
 
-sampleDict = { 
+sample_dict = { 
    "class":{ 
       "student":{ 
          "name":"Mike",
@@ -370,12 +376,14 @@ sampleDict = {
 
 Comment accéder à la valeur correspondant à `"history"` ?
 
-### Exercice 7 
+_On pourra commencer par examiner `sample_dict["class"]`, quel est son type ?_
+
+## Exercice 7 
 
 Changez la clé `"city"` en `"location"` dans le dictionnaire suivant :
 
 ```python
-sampleDict = {
+sample_dict = {
   "name": "Kelly",
   "age":25,
   "salary": 8000,
@@ -394,29 +402,29 @@ sortie voulue :
   "location": "New york"
 }
 ```
-### Exercice 8
+## Exercice 8
 
 
 1. Changez le salaire de Brad en 8500 depuis le dictionnaire suivant :
 
-  ```python
-  sampleDict = {
+    ```python
+    sample_dict = {
        'emp1': {'name': 'Jhon', 'salary': 7500},
        'emp2': {'name': 'Emma', 'salary': 8000},
        'emp3': {'name': 'Brad', 'salary': 6500}
-  }
-  ```
+    }
+    ```
 
-  Sortie attendue
+    Sortie attendue
 
 
-  ```python
-  sampleDict = {
+    ```python
+    sample_dict = {
        'emp1': {'name': 'Jhon', 'salary': 7500},
        'emp2': {'name': 'Emma', 'salary': 8000},
        'emp3': {'name': 'Brad', 'salary': 8500}
-  }
-  ```
+    }
+    ```
 
 2. À l'aide d'une boucle calculer le cumul des salaires.
 3. À l'aide d'une boucle créer la liste des noms des employés.

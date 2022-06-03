@@ -7,7 +7,7 @@ weight: 9
 
 ---
 
-### pdf: [pour impression](./exceptions.pdf)
+pdf: [pour impression](./exceptions.pdf)
 
 Une _exception_ est une erreur provoquée par Python.
 
@@ -57,7 +57,7 @@ Le programme est-il foutu dès qu'une exception est rencontrée ?
 Non... il est toujours possible d'éviter qu'il ne plante en _attrapant_ cette exception.
 
 
-# `try... except`
+## `try... except`
 
 La syntaxe est la suivante :
 
@@ -116,6 +116,10 @@ impossible
 _ces nombres sont les inverses des entiers de 10 à -10_
 
 
+{{< python title="Exercice 1" >}}
+{{< /python >}}
+
+
 ## Différentes exceptions
 
 
@@ -158,8 +162,10 @@ impossible
   de toutes les personnes enregistrées dans le dictionnaire.
 
 
+{{< python title="Exercice 2" >}}
+{{< /python >}}
 
-# Compléments
+## Compléments
 
 
 Les exceptions ne sont pas au programme mais vous risquez d'en rencontrer...
@@ -183,7 +189,7 @@ Cela peut s'avérer pratique pour être certain que certaines instructions sont
 exécutées même si le programme plante. Par exemple pour se deconnecter proprement
 ou fermer un fichier etc.
 
-# Le mot clé `assert`
+## Le mot clé `assert`
 
 Ce mot clé s'utilise de la façon suivante :
 
@@ -256,6 +262,10 @@ et maintenant les tests passent tous.
 2. Écrire 5 tests avec `assert` vous assurant de vérifier les différentes
     situations.
 
+
+{{< python title="Exercice 2" >}}
+{{< /python >}}
+
 ## Usage pour valider des valeurs
 
 Lors du développement d'un programme complexe, on découpe les étapes afin
@@ -294,10 +304,28 @@ def extrait_initiale(mot: str) -> str:
 Ainsi, on aura toujours une erreur lisible si les données reçues par 
 `extrait_initiale` ne sont pas du bon type.
 
-# `SyntaxError` et `IndentationError`
+## `SyntaxError` et `IndentationError`
 
-Ces erreurs sont provoquées lorsque Python ne parvient pas à lire la ligne
-considérées... Il n'est pas possible de les capturer.
+Ces _erreurs_ sont provoquées lorsque Python ne parvient pas à lire la ligne
+considérées. Ce ne sont pas des _exceptions_, il n'est pas possible de les capturer.
 
 La seule solution est de les rectifier.
+
+### Complément : exécution d'un fichier python
+
+Pour comprendre la distinction précédente il faut connaître la démarche réalisée lorsqu'on exécute un script.
+
+On exécute :
+
+```bash
+$ python script.py
+```
+
+Trois opérations sont effectuées :
+
+
+1. L'interpréteur cherche la présence du fichier `script.pyc` au même emplacement. S'il le trouve, il passe à l'étape 3.
+2. Si aucun fichier `script.pyc` n'existe, l'interpréteur lit le script et le converti en un code binaire dans ce fameux fichier.
+    Les _erreurs de syntaxe sont produites ici._
+3. Le fichier `.pyc` est exécuté ligne par ligne par l'intrpréteur. Les _exceptions_ sont produites ici.
 

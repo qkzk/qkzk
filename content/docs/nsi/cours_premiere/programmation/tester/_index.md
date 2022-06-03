@@ -21,7 +21,7 @@ Imaginons la situation courante du développeur :
 * projet comportant déjà 100.000 lignes dans 1000 fichiers,
 * il travaille environ 18 mois sur ce projet avant de passer à autre chose.
 
-Comment espérer comprendre l'intégralité du programme ?
+Comment espérer comprendre l'intégralité du programme ? Comment être certain qu'une modification, même mineure, n'engendre pas un bug dans un des 999 autres fichiers ?
 
 ### Solution
 
@@ -56,19 +56,18 @@ Comment s'assurer que deux mots de passes différents sont encodés différemmen
 
 Il faudrait une infinité de tests. C'est impossible.
 
-## Alors comment faire ?
+### Alors comment faire ?
 
 Il faut essayer de tester tous les cas intéressants, couvrant toutes les situations possibles.
 Certains développeurs sont spécialisés dans ce domaine. Ils cherchent les cas
 limites susceptibles de provoquer des erreurs.
 
-C'est le seul moyen de les éviter sur le produit.
 
 ## Les tests en pratique
 
-Python (et tous les langages modernes) propose de nombreuses méthodes
+Python propose de nombreuses méthodes.
 
-## Écrire les tests soi même
+### Écrire les tests soi même
 
 Le moyen le plus simple consiste à écrire un jeu de test après `if __name__="__main__":`
 
@@ -80,11 +79,9 @@ if __name__ == '__main__':
   print(ma_fonction(5))
 ```
 
-C'est généralement ce qu'on fait quand on développe. Ces tests doivent couvrir tous les cas possibles et être compréhensibles.
+C'est généralement ce qu'on fait quand on cherche à résoudre un bug.
 
-Selon les contextes (devoir, projet, développement en cours...) on peut les laisser ou les effacer.
-
-Il est préférable de les remplacer par de vrais tests...
+En pratique, ces affichages ne doivent pas persister une fois la résolution.
 
 ## Assert
 
@@ -99,7 +96,9 @@ Traceback (most recent call last):
 AssertionError
 ```
 
-{{< python title="Assert" >}}
+La cellule ci-dessous devrait vous afficher une erreur :
+
+{{< python title="AssertionError" >}}
 assert 1 + 1 == 2, "message si ça échoue"
 assert "1" + "1" == "2", "Concaténation..."
 {{< /python >}}
@@ -113,9 +112,8 @@ Il ne faut pas intégrer les assertions à la fonction elle même. Il est préf�
 Reprenons notre fonction Fibonacci
 
 
-{{< expand "Code Fibonacci" "..." >}}
 ```python
-def fibonacci(n):
+def fibonacci(n: int) -> list:
     """
     Liste des termes de la suite de Fibonacci
     de l'indice 0 à l'indice n inclus
@@ -135,33 +133,6 @@ def fibonacci(n):
 
     return suite_fibonacci
 ```
-{{< /expand >}}
-
-{{< python title="Fibonacci" >}}def fibonacci(n):
-    """
-    Liste des termes de la suite de Fibonacci
-    de l'indice 0 à l'indice n inclus
-
-    @param n: (int) l'indice maximal voulu
-    @return: (list) la liste des termes
-    """
-    if type(n) != int or n < 0:
-        return None
-    x = 1
-    y = 1
-    suite_fibonacci = [x]
-
-    for indice in range(n):
-        x, y = y, x + y
-        suite_fibonacci.append(x)
-
-    return suite_fibonacci
-
-fibonacci(15)
-{{< /python >}}
-
-
-
 
 On peut tester plusieurs choses :
 
@@ -172,7 +143,6 @@ On peut tester plusieurs choses :
 * La sortie dans les cas impossibles : paramètre négatif, paramètre non entier
 
 
-{{< expand "Test Fibonacci" "..." >}}
 ```python
 def tester_fibonacci():
     '''
@@ -203,7 +173,6 @@ def tester_fibonacci():
     assert fibonacci('a') is None
     assert fibonacci(3.14) is None
 ```
-{{< /expand  >}}
 
 {{< python title="Tester Fibonacci" init="fib.py">}}
 def tester_fibonacci():
@@ -242,32 +211,7 @@ tester_fibonacci()
 
 Python permet grâce au module `doctest` d'intégrer les tests à la documentation.
 
-Il est parfois délicat de tester certaines fonctions, en particulier les affichages.
-
-Pour les fonctions qui réalisent des calculs cela est pratique.
-
-### Un exemple :
-
-{{< expand "Exemple de doctest" "..." >}}
-```python
-def multiply(a: int, b: int) -> int:
-    """
-    Calcule produit de a et b
-
-    >>> multiply(4, 3)
-    12
-    >>> multiply('a', 3)
-    'aaa'
-    """
-    return a * b
-
-if __name__ == '__main__':
-  import doctest
-  doctest.testmod() # s'il ne se passe rien, les test sont justes
-```
-{{< /expand >}}
-
-{{< python title="Exemple de doctest" >}}
+{{< python title="Exemple de `doctest`" >}}
 def multiply(a: int, b: int) -> int:
     """
     Calcule produit de a et b

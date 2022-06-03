@@ -7,12 +7,13 @@ weight: 100
 
 ---
 
+pdf : pour [impression](/uploads/docsnsi/programmation/bases/python_complet.pdf)
+
 # Les bases de Python
 
 
-### pdf : pour [impression](/uploads/docsnsi/programmation/bases/python_complet.pdf)
 
-# 1. Bloc d'instruction
+## 1. Bloc d'instruction
 
 En Python chaque ligne donne une **instruction**. Pour séparer certains blocs (
 fonctions, conditions, boucles etc.) on utilise l'**indentation** (4 espaces).
@@ -42,13 +43,13 @@ est précédé du symbole `:`
 
 Certaines agissent différemment selon l'objet : `'a' + 'b' == 'ab'`
 
-# 2. Affecter
+## 2. Affecter
 
 Pour affecter une valeur à une variable on utilise la notation `variable = valeur`.
 
 Par exemple `note = 20`. On peut inclure n'importe quel objet Python dans une variable.
 
-# 3. Types de base
+## 3. Types de base
 
 * `int` : les entiers naturels. Ex: `2`
 * `float` : les nombres à virgule flottantes. Ex: `3.14`
@@ -63,11 +64,11 @@ On obtient le type d'un objet avec la fonction type :
 <class 'bool'>
 ```
 
-# 4. Types complexes
+## 4. Types complexes
 
 On a déjà rencontré quatre types complexes : `str`, `list`, `tuple` et `dict`.
 
-## a) Les chaînes de caractères. Type `str`
+### a) Les chaînes de caractères. Type `str`
 
 Ce sont des séries de caractères affichables à l'écran (simplification abusive).
 En Python 3 ils sont _encodés_ en `utf-8`. On en reparlera.
@@ -93,7 +94,7 @@ Les chaînes de caractères ne sont _pas mutables._ Mais on peut opérer dessus 
 'Bonjour Robert'
 ```
 
-## b) Les tableaux ou listes. Type `list`
+### b) Les tableaux ou listes. Type `list`
 
 Ce sont des tableaux où les objets sont indexés à partir de 0.
 On peut atteindre un objet depuis son indice :
@@ -116,7 +117,7 @@ Les listes sont **mutables**. On peut les modifier **modifier**
 ['b', 'c', 'd']
 ```
 
-## c) Les tuples
+### c) Les tuples
 
 Ce sont des séries indexées d'objets. Ils sont notés avec des parenthèses.
 Les tuples **ne sont pas mutables.** C'est comme les listes, mais pas mutable
@@ -131,7 +132,7 @@ Traceback (most recent call last):
 AttributeError: 'tuple' object has no attribute 'pop'
 ```
 
-## d) Les dictionnaires (tables de hashage), type `dict`
+### d) Les dictionnaires (tables de hashage), type `dict`
 
 Ce sont des tables d'associations entre une clé et une valeur. On les notes
 entre accolades. Attention, dans les accolades on utilise `:`.
@@ -148,7 +149,7 @@ Les dictionnaires sont mutables.
 {"DS": 5, "IE": 2}
 ```
 
-# Les conditions : `if elif else`
+## Les conditions : `if elif else`
 
 * Permettent de réaliser des choix ou de tester des résultats.
 * s'utilisent dans cet ordre : if, elif (optionnel), else (optionnel)
@@ -183,14 +184,14 @@ True
     Attention c'est un simplification et `and` et `or` sont en réalité plus
     compliqués.
 
-# Les boucles : `for` et `while`
+## Les boucles : `for` et `while`
 
 Il existe deux types de boucles :
 
 * `for` quand on veut parcourir un objet ou qu'on connait le nombre d'étapes.
 * `while` quand on ne connait pas le nombre d'étapes.
 
-## Boucle `for`
+### Boucle `for`
 
 En Python, `for` parcourt toujours une collection d'objet (un _itérable_).
 
@@ -222,7 +223,7 @@ On peut parcourir une liste, un tuple, une chaîne ou un dictionnaire (vu plus t
 'c'
 ```
 
-## Boucle `while`
+### Boucle `while`
 
 Effectuer quelque chose _tant qu'une condition est vraie_.
 
@@ -247,10 +248,10 @@ _Exemple :_ chaque mois je gagne 100€. Combien de mois avant d'avoir 2.000€ 
 * On exécute une boucle _infinie_ avec `while True:`
 * Pour l'arrêter, on peut utiliser le mot clé `break`
 
-# Fonctions
+## Fonctions
 
 
-## Qu'est ce qu'une fonction ?
+### Qu'est ce qu'une fonction ?
 
 Les fonctions sont des morceaux de code qu'on peut _appeler_ quand on le souhaite.
 
@@ -262,7 +263,7 @@ toujours une valeur.
 Si elle font autre chose, comme afficher du texte ou modifier la mémoire, on
 parle d'_effet de bord_.
 
-## Exemples
+### Exemples
 
 Par exemple, `len` est une fonction qui renvoie la longueur d'un itérable.
 
@@ -282,7 +283,7 @@ objet qu'on peut écrire à l'écran et qui l'affiche. Elle renvoie `None` (rien
 * Sa valeur de retour est `None` (rien...)
 * Son effet de bord et d'afficher à l'écran quelque chose.
 
-## Définir une fonction
+### Définir une fonction
 
 * Une fonction se définit avec `  def nom(parametre):   ` suivi d'un bloc indenté.
 * On retourne une valeur avec `  return truc_de_sortie`
@@ -295,7 +296,7 @@ def carre(x):
   return x ** 2
 ```
 
-## Documentation
+### Documentation
 
 Quand vous définissez une fonction, **vous devez toujours la documenter.**
 
@@ -344,7 +345,7 @@ def somme_trois_nombres(a: int, b: int, c: int) -> int:
     return a + b + c
 ```
 
-## entrée != saisie et sortie != affichage
+### entrée != saisie et sortie != affichage
 
 * utiliser `input` permet de demander à l'utilisateur d'un programme de taper
     une valeur. Ce n'est pas le paramètre d'entrée d'une fonction
@@ -352,9 +353,9 @@ def somme_trois_nombres(a: int, b: int, c: int) -> int:
     fonction. Paramètre de sortie : `return`
 
 
-# Les erreurs ou exceptions
+## Les erreurs ou exceptions
 
-## Lire les messages d'erreur
+### Lire les messages d'erreur
 
 Quand un programme génère une erreur, Python _lève une exception_.
 
@@ -375,7 +376,7 @@ IndexError: list index out of range
 * d'autres informations (par exemple quelle série d'appels de fonctions a
     provoqué cette erreur)
 
-## Les erreurs courantes sont :
+### Les erreurs courantes sont :
 
 Erreurs produises quand Python _lit_ le fichier .py :
 
@@ -397,7 +398,7 @@ Traceback (most recent call last):
 AssertionError
 ```
 
-## `try: ... except Exception as e: ...`
+### `try: ... except Exception as e: ...`
 
 On peut _attraper_ une exception prévisible avec `try except`. C'est à la
 limite du programme mais vous le rencontrerez souvent dans le code.

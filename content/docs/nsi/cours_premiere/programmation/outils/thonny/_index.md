@@ -5,9 +5,10 @@ author: "DIU EIL"
 weight: 6
 ---
 
-### pdf : [pour impression](/uploads/docsnsi/thonny/presentation_thonny_print.pdf) et [diaporama](/uploads/docsnsi/thonny/presentation_thonny_slides.pdf)
 
 # Thonny
+
+pdf : [pour impression](/uploads/docsnsi/thonny/presentation_thonny_print.pdf) et [diaporama](/uploads/docsnsi/thonny/presentation_thonny_slides.pdf)
 
 ## Thonny
 
@@ -32,7 +33,7 @@ rangée de boutons, et deux panneaux correspondant à
 * l'éditeur (onglet nommé `<untitled>`)
 * l'interpréteur (onglet nommé `Shell`)
 
-![vue sur Thonny](thonny.png)
+![vue sur Thonny](/uploads/docsnsi/thonny/thonny.png)
 
 ## Le shell
 Le *shell* est la zone dans laquelle l'utilisateur intéragit/dialogue avec
@@ -96,7 +97,7 @@ nom de script.
 
 ## Répertoire de travail
 
-**NB** lors de l'éxécution d'un script, le répertoire de travail est celui dans
+**NB :** lors de l'éxécution d'un script, le répertoire de travail est celui dans
 lequel est sauvegardé le script. (Important si besoin d'accéder à des fichiers)
 
 **Remarque :** si un script ne contient aucune instruction d'affichage
@@ -211,7 +212,7 @@ cf fichier [demo_syracuse.py](/uploads/docsnsi/thonny/demo_syracuse.py)
 
 ## demo_04.py
 
-* [**demo04.py**](/uploads/docsnsi/thonny/demo04.py) on complète la doctring avec des informations
+* [**demo_04.py**](/uploads/docsnsi/thonny/demo_04.py) on complète la doctring avec des informations
   de type des paramètres et de valeur renvoyée, en mentionnant les contraintes
   (ou conditions) d'utilisation (ici aucune) et en donnant quelques
   exemples (préparation aux doctests vus à la session prochaine)
@@ -231,6 +232,6 @@ cf fichier [demo_syracuse.py](/uploads/docsnsi/thonny/demo_syracuse.py)
 
 ## demo_05.py
 
-* [**demo05.py**](/uploads/docsnsi/thonny/demo05.py) faire de même pour les deux autres fonctions
+* [**demo_05.py**](/uploads/docsnsi/thonny/demo_05.py) faire de même pour les deux autres fonctions
 
   ![Docstring et fonction help](/uploads/docsnsi/thonny/thonny_docstring.png)

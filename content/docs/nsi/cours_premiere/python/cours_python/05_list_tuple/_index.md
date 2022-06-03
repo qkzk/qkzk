@@ -6,11 +6,11 @@ date: "2021/04/22"
 weight: 5
 
 ---
-
-### pdf [pour impression](./listes_tuples.pdf)
-
-
 # Les listes et les tuples
+
+pdf [pour impression](./listes_tuples.pdf)
+
+
 
 Python propose deux types : `list` et `tuple` qui partagent beaucoup de points
 communs et qui sont généralement considérés comme des _tableaux_.
@@ -74,6 +74,9 @@ Comme les `str`, les `list` ont une longueur à laquelle on peut accéder avec
 5. Mesurer sa longueur.
 6. Vérifier, toujours à l'aide d'une boucle quels sont les entiers inférieurs
   à 10 qu'il contient.
+
+{{< python title="Exercice 0" >}}
+{{< /python >}}
 
 ### Type des objets dans les `list`
 
@@ -188,6 +191,9 @@ Lorsque ce sont les mêmes objets en mémoire on dit qu'elles sont _identiques_.
 2. Vérifier qu'elles contiennent les mêmes éléments.
 3. Sont-elles pour autant égales ?
 
+{{< python title="Exercice 1" >}}
+{{< /python >}}
+
 **Dans une `list`, l'ordre des éléments compte**
 
 ### Exercice 2
@@ -214,10 +220,13 @@ Pour chaque question on créera la liste de deux manières :
 4. Créer la liste de vos cinq séries ou films préférés (remplacez par
   jeux-vidéos si vous préférez).
 
+{{< python title="Exercice 2" >}}
+{{< /python >}}
+
 ### Concaténer des listes
 
 Contaténer des listes se fait exactement de la même manière que pour
-les châines de caractères avec le symbole `+`
+les chaînes de caractères avec le symbole `+`
 
 On obtient _une copie_ des listes données.
 
@@ -314,6 +323,9 @@ structure `list` n'est clairement pas la plus adaptée à ce travail...
 Nous verrons les `dict` qui permettent de faire ça beaucoup plus aisément_
 
 
+{{< python title="Exercice 3" >}}
+{{< /python >}}
+
 ### Copier une liste
 
 Lorsqu'on souhaite _faire une copie_ d'une liste il faut être très prudent.
@@ -347,6 +359,9 @@ la méthode `.copy`
 ["Amandine", "Paul", "Jacques"]
 ```
 
+**Visualiser sur [Python Tutor](https://pythontutor.com/render.html#code=l1%20%3D%20%5B%22Pierre%22,%20%22Paul%22,%20%22Jacques%22%5D%0Al2%20%3D%20l1%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%23%20l3%20est%20identique%20%C3%A0%20l1%0Al3%20%3D%20l1.copy%28%29%20%20%20%20%20%20%20%20%20%20%20%20%20%20%23%20l2%20est%20une%20copie%20de%20l1%0Aprint%28l2%20%3D%3D%20l1%29%0A%0Al1%5B0%5D%20%3D%20%22Amandine%22%0A%0Aprint%28l2%20%3D%3D%20l1%29%0Aprint%28l3%20%3D%3D%20l1%29&cumulative=false&curInstr=7&heapPrimitives=nevernest&mode=display&origin=opt-frontend.js&py=3&rawInputLstJSON=%5B%5D&textReferences=false)**
+
+
 
 
 ## Le type `tuple`
@@ -362,10 +377,14 @@ Pour modifier un tuple, on en crée une copie et voila.
 L'intérêt des tuples est qu'ils sont plus rapides. Lorsqu'on n'a pas besoin
 de modifier les éléments qu'ils contiennent, on privilégie les tuples.
 
+### Interface des `tuple` 
+
+* pour les opérations ne changeant pas les tuples : identiques à celle des `list`
+* les opérations induisant un changement de la `list` ne sont pas définies pour les `tuple`
+
 ### Détupler
 
-Une opération courante qu'on rencontre dans des programmes python
-consister à détupler des valeurs.
+Cette opération consiste à affecter à plusieurs valeurs le contenu d'un tuple.
 
 Par exemple :
 
@@ -435,6 +454,10 @@ les actions suivantes :
 4. Afficher 12 fois la valeur du dernier élément de la liste
 5. Peut-on réaliser toutes ces étapes avec un tuple ?
 
+
+{{< python title="Exercice 4" >}}
+{{< /python >}}
+
 ### Exercice 5
 
 1. Créer la liste des cubes des entiers entre 1 et 20. On utilisera un `range`.
@@ -456,6 +479,10 @@ les actions suivantes :
     1
     0
     ```
+
+
+{{< python title="Exercice 5" >}}
+{{< /python >}}
 
 ## Fonctions, `list` et mutabilité
 
@@ -496,9 +523,9 @@ Visualisez le comportement dans [Python Tutor](http://pythontutor.com/visualize.
 
 
 Échanger deux variables.
-Python permet d'aller plus vite, mais déjà les bases !
+Commençons par les bases : on souhaite échanger les valeurs affectées à `x` et `y`.
 
-Pour échanger les valeurs des variables `x` et `y` on utilise une troisième variable `z`.
+On utilise une troisième variable `z`.
 
 ```python
 x = 2
@@ -518,7 +545,7 @@ y = z
     y = x
     ```
 
-    Vérifiez l'état des variables `x` et `y`.
+    [Vérifiez sur python tutor](https://pythontutor.com/render.html#code=x%20%3D%202%0Ay%20%3D%203%0A%0Ax%20%3D%20y%0Ay%20%3D%20x&cumulative=false&curInstr=0&heapPrimitives=nevernest&mode=display&origin=opt-frontend.js&py=3&rawInputLstJSON=%5B%5D&textReferences=false) l'état des variables `x` et `y`. 
 
 2. Modifier l'exemple précédent pour partir de `x = 2, y= 3` et arriver au contraire.
 
@@ -545,3 +572,6 @@ y = z
     >>> l1
     >>> [3, 2, 1]
     ```
+
+{{< python title="Exercice 6" >}}
+{{< /python >}}
