@@ -1,6 +1,24 @@
 <script src="{{ .Site.BaseURL }}viz/viz.js"></script>
 <script src="{{ .Site.BaseURL }}viz/full.render.js"></script>
+<style>
+.svg-container {
+    display: inline-block;
+    position: relative;
+    width: 100%;
+    padding-bottom: 100%;
+    vertical-align: middle;
+    overflow: hidden;
+}
 
+.svg-content {
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+
+</style>
 <main>
     <h3>
         {{ if .Get `title` }}
@@ -9,7 +27,7 @@
             {{ (print "### Graphe " (add .Ordinal 1)) | .Page.RenderString }}
         {{ end }}
     </h3>
-    <div id="viz_{{ .Ordinal | safeJS }}" style="width: 100%; height: 100%;">
+    <div id="viz_{{ .Ordinal | safeJS }}">
     </div>
 </main>
 
@@ -17,10 +35,26 @@
     const viz_elm_{{ .Ordinal | safeJS }} = document.getElementById("viz_{{ .Ordinal | safeJS }}");
     const graphContent_{{ .Ordinal | safeJS }} = {{ .Inner }};
     let viz_{{ .Ordinal | safeJS }} = new Viz();
-
-    viz_{{.Ordinal | safeJS }}.renderImageElement(graphContent_{{ .Ordinal | safeJS }})
+    
+    viz_{{.Ordinal | safeJS }}.renderSVGElement(graphContent_{{ .Ordinal | safeJS }})
         .then(function(element) {
             viz_elm_{{ .Ordinal |safeJS }}.appendChild(element);
+            return element;
+        })
+        .then(function(element) {
+            let box = element.viewBox.baseVal;
+            let aspectRatio = box.width / box.height;
+            if (aspectRatio > 1) {
+                let paddingBottom = Math.ceil(100 / aspectRatio);
+                viz_elm_{{ .Ordinal | safeJS }}.style.paddingBottom = `${paddingBottom}%`;
+                viz_elm_{{ .Ordinal | safeJS }}.style.maxWidth = `${box.width}px`;
+                viz_elm_{{ .Ordinal | safeJS }}.classList.add("svg-container");
+                element.removeAttribute("width");
+                element.removeAttribute("height");
+                element.classList.add("svg-content");
+            } else {
+                viz_elm_{{ .Ordinal | safeJS }}.style.textAlign = "center";
+            }
         })
         .catch(error => {
             // Create a new Viz instance (@see Caveats page for more info)
