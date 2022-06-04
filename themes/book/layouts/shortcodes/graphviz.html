@@ -1,0 +1,32 @@
+<script src="{{ .Site.BaseURL }}viz/viz.js"></script>
+<script src="{{ .Site.BaseURL }}viz/full.render.js"></script>
+
+<main>
+    <h3>
+        {{ if .Get `title` }}
+            {{ (print "### " (.Get `title`)) | .Page.RenderString }}
+        {{ else }}
+            {{ (print "### Graphe " (add .Ordinal 1)) | .Page.RenderString }}
+        {{ end }}
+    </h3>
+    <div id="viz_{{ .Ordinal | safeJS }}" style="width: 100%; height: 100%;">
+    </div>
+</main>
+
+<script>
+    const viz_elm_{{ .Ordinal | safeJS }} = document.getElementById("viz_{{ .Ordinal | safeJS }}");
+    const graphContent_{{ .Ordinal | safeJS }} = {{ .Inner }};
+    let viz_{{ .Ordinal | safeJS }} = new Viz();
+
+    viz_{{.Ordinal | safeJS }}.renderImageElement(graphContent_{{ .Ordinal | safeJS }})
+        .then(function(element) {
+            viz_elm_{{ .Ordinal |safeJS }}.appendChild(element);
+        })
+        .catch(error => {
+            // Create a new Viz instance (@see Caveats page for more info)
+            viz_{{ .Ordinal | safeJS }} = new Viz();
+
+            // Possibly display the error
+            console.error(error);
+        });
+</script>
