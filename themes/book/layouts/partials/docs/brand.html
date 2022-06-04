@@ -1,20 +1,15 @@
 <h1 class="book-brand">
-    <!-- <a href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a> -->
     <link disabled id="dark-mode-theme" rel="stylesheet" href="{{ .Site.BaseURL }}css/dark.css">
-    <link 
-        rel="stylesheet" 
-        href="{{ .Site.BaseURL }}css/dark_theme_icons.css" 
-        type="text/css" 
-        media="screen"
-        title="no title" 
-        charset="utf-8"
-    >
+    <link rel="stylesheet" href="{{ .Site.BaseURL }}css/dark_theme_icons.css" type="text/css" media="screen"
+        title="no title" charset="utf-8">
     <script src="https://kit.fontawesome.com/3fe16e504a.js" crossorigin="anonymous"></script>
     <span>
-    Contenus
-    <a id="dark-mode-toggle" class="toggle_dark btn">
-      <i class="fas fa-moon" id="toggle-switch" style="width: auto;"></i>
-    </a>
+        <a id="dark-mode-toggle" class="toggle_dark btn" style="padding-right: 1rem;">
+            <i class="fas fa-moon" id="toggle-switch"></i>
+        </a>
+        <a href="{{ .Site.BaseURL }}">
+            {{ .Site.Title }}
+        </a>
     </span>
 
     <script src="{{ .Site.BaseURL }}js/updatestyle.js" charset="utf-8"></script>

@@ -131,7 +131,7 @@ SELECT name,hired_on FROM employees ORDER BY hired_on;
 ## Mermaid
 
 
-Pas configuré correctement je pense...
+Depuis un shortcode
 
 
 {{< mermaid class="text-center">}}
