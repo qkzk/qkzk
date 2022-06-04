@@ -29,7 +29,7 @@ Un texte est une suite finie de symboles.
 
 On dispose alors généralement d'un **index**
 
-.![index](index.jpg)
+.![index](./img/un_index.jpg)
 
 L'index peut-être vu comme un _dictionnaire_ : on repère la clé qui nous intéresse
 et sa valeur nous indique la position du motif.

@@ -1,5 +1,5 @@
 ---
-title: "vis.js"
+title: "viz.js"
 weight: 100000000
 
 ---
