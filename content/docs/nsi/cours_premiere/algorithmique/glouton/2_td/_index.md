@@ -7,11 +7,13 @@ weight: 2
 
 ---
 
-### pdf [pour impression](/uploads/docsnsi/algo/glouton/2_td.pdf)
+# Gloutons : 2. TD
 
-# 1. Le problème du sac à dos
+pdf [pour impression](/uploads/docsnsi/algo/glouton/2_td.pdf)
 
-Un cambrioleur possède un sac à dos d'une contenance maximum de 30 Kg.
+## 1. Le problème du sac à dos
+
+Un cambrioleur possède un sac à dos d'une contenance maximum de 30 kg.
 Au cours d'un de ses cambriolages, il a la possibilité de dérober 4
 objets A, B, C et D. Voici un tableau qui résume les caractéristiques de
 ces objets :
@@ -52,7 +54,7 @@ On ajoute les contraintes suivantes :
     une liste d'objets et une contenance de sac à dos passés en paramètres.
     Cette fonction utilisera l'algorithme glouton présenté plus haut.
 
-# 2. Le rendu de monnaie.
+## 2. Le rendu de monnaie.
 
 On considère un jeu de pièce et une somme à rendre.
 Nous allons étudier deux situations générales, pour lesquelles l'algorithme
@@ -79,7 +81,19 @@ la meilleure.
 
 4. Comparer les complexités de deux algorithmes : glouton et exhaustif.
 
-# 3. Somme de $n$ nombres maximale
+{{< expand "Système monétaire canonique" "...">}}
+
+Afin de résoudre en pratique les problèmes de monnaie on crée des systèmes de monnaie
+qui permettent **de rendre la monnaie de manière optimale en suivant l'algorithme glouton**.
+
+Un tel jeu de pièce -- comme l'Euro -- est dit _canonique_.
+
+Il faut donc comprendre qu'on prend le problème à l'envers : le système monétaire est inventé **pour** respecter l'algorithme glouton.
+
+Cela n'a pas toujours été le cas et certains systèmes étaient notoirement mauvais.
+{{< /expand >}}
+
+## 3. Somme de $n$ nombres maximale
 
 On cherche à sélectionner **cinq** nombres de la liste suivante en maximisant leur somme et en s'interdisant de choisir deux nombres voisins.
 
@@ -92,7 +106,7 @@ Ainsi, si la liste contient la séquence `1, 2, 3`, et qu'on choisit `2`, il ne 
 3. Vérifier que `20, 18, 17, 16, 15` est une solution acceptable.
 4. Comparer ces solutions.
 
-# 4. Retour sur le voyageur de commerce
+## 4. Retour sur le voyageur de commerce
 
 _à traiter après avoir étudié le problème en TP machine_
 
@@ -115,7 +129,7 @@ Par exemple : Nancy, Metz, Paris, Reims, Troye, Nancy est un trajet possible.
 3. Comparer à : Nancy, Metz, Reims, Paris, Troyes, Nancy.
 4. Estimer le nombre de trajets possibles (départ & retour à Nancy).
 
-# 5. Le parc d'attractions
+## 5. Le parc d'attractions
 
 Vous visitez un parc d'attractions proposant des spectables à différents horaires. Voici les horaires des spectacles :
 
@@ -138,5 +152,5 @@ Voici deux stratégies gloutonnes possibles :
 1. Appliquer ces deux stratégies aux données.
 2. Laquelle est la meilleure ?
 
-_Remarque théorique_ : la seconde stratégie gloutonne donne toujours la meilleure solution.
+_Remarque théorique_ : la seconde stratégie gloutone donne toujours la meilleure solution.
 

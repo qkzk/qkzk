@@ -5,44 +5,45 @@ weight: 2
 
 ---
 
-### pdf : [pour impression](/uploads/docsnsi/donnees_qkzk_img/booleen_td.pdf)
+pdf : [pour impression](/uploads/docsnsi/donnees_qkzk_img/booleen_td.pdf)
 
 # Objectifs
 
 * Construire la table de vérité d'une expression booléenne relativement simple.
 * Évaluer et construire des expressions booléennes en Python
 
-# Exercice 1
+
+## Exercice 1
 
 Construire la table de vérité de l'expression : `a OU (NON b)`
 
-# Exercice 2
+## Exercice 2
 
 Construire la table de vérité de l'expression : `NON a et (b ou c)`
 
-# Exercice 3
+## Exercice 3
 
 Construire la table de vérité de l'expression : `(a et NON b) ou (NON a et b)`
 
-# Exercice 4
+## Exercice 4
 
 Construire la table de vérité de l'expression : `(a OU b) ET (a OU c)`
 
-# Exercice 5
+## Exercice 5
 
 Trouver une expression équivalente à `a et b` construite uniquement à partir
 des opérateurs `NON` et `ou`
 
 On vérifiera à l'aide d'une table de vérité.
 
-# Exercice 6
+## Exercice 6
 
 Trouver une expression équivalente à `a OU b` construite uniquement à partir
 des opérateurs `NON` et `et`
 
 On vérifiera à l'aide d'une table de vérité.
 
-# Exercice 7
+## Exercice 7
 
 Donner la valeur des expressions booléennes suivantes :
 
@@ -54,7 +55,7 @@ b = 455
 a != (b // 2)
 ```
 
-# Exercice 8
+## Exercice 8
 
 insérer le minimum de parenthèses dans les expressions suivantes pour
 les égalités soient correctes
@@ -66,7 +67,7 @@ les égalités soient correctes
 ```
 
 
-# Exercice 9
+## Exercice 9
 
 La clé de vérification utilisée en France pour les numéros de sécurité sociale
 est égal à 97 moins le résidu modulo 97 du nombre formé par les autres chiffres
@@ -89,10 +90,10 @@ Nous allons traduire ceci en Python
     la clé de sécurité de `numero` et fausse sinon.
 
 
-# Exercice 10 - Demi additionneur binaire
+## Exercice 10 - Demi additionneur binaire
 
 
-## Représentation graphique
+### Représentation graphique
 
 A chaque porte est associée une représentation graphique. Voici pour les
 portes ET et XOR :
@@ -119,7 +120,7 @@ portes ET et XOR :
       Dans quel cas aura-t-on une retenue à écrire ? Quelle opération booléenne sur les bits
       permet d'obtenir ce résultat ?
 
-# Portes logiques
+### Portes logiques
 
 
 Les opérations logiques évoquées ci-dessus sont mises en oeuvre en
@@ -150,7 +151,7 @@ et la retenue éventuelle par $R$.
 Construisez les tables de vérité de $S$ et $R$ et comparez à celle de l'addition
 de deux bits $A$ et $B$.
 
-# Retrouver une expression booléenne
+## Retrouver une expression booléenne
 
 ## Exercice 12
 
@@ -174,7 +175,7 @@ On considère la table de vérité de l'expression `U` ci-dessous
 
 Exprimer `U` à l'aide des fonctions booléennes et, ou, non.
 
-# Programmer une table de vérité
+## Exercice 14 -  Programmer une table de vérité
 
 Partons d'un exemple avec l'expression booléenne `Non (a ET Non b)`
 

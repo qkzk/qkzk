@@ -13,10 +13,33 @@ weight: 6
 
 1. Tracer sur la calculatrice les fonctions suivantes :
 
-$$f(x) = x^2,\; g(x) = x,\; h(x) = \ln (x),\; k(x) = x \ln(x)$$
+    $$f(x) = x$$ 
+    $$g(x) = x^2$$ 
+    $$h(x) = \ln (x)$$
+    $$k(x) = x \ln(x)$$
+
+    On prendra $x$ entre $10$ et $100$
 
 2. Trier ces fonctions par _vitesse de croissance_. De celle qui explose
-  le moins vite à celle qui explose le plus vite.
+  le moins vite à celle qui explose le plus vite quand $x$ tend vers $+\infty$
+
+
+3. Reprenons les fonctions de la question 1.
+
+    On considère maintenant $F, G, H, K$ des algorithmes.
+    Ils prennent tous en entrée une seule donnée dont la taille est $x$ et leur coût est 
+    est donné par la fonction correspondante.
+
+    Ainsi, _le coût de l'algorithme $F$ pour $x=3$ est $f(3)$
+
+    Estimer les temps d'exécution pour $x = 100$.
+
+    On multiplie la taille de l'entrée par $2$. Estimer les temps d'exécution.
+
+4. Recommencer avec l'exponentielle : $l(x) = 2^x$.
+
+
+## Exercice 2 - Logarithme binaire
 
 Le logarithme est une fonction très utilisé en science et qui dispose
 de beaucoup de propriétés.
@@ -24,30 +47,23 @@ de beaucoup de propriétés.
 En informatique on utilise notamment le fait qu'il permet de mesurer
 le nombre de bits nécessaires pour écrire un nombre.
 
-2. Combien de bits sont nécessaires pour écrire $N = 123~567$ en mémoire ?
-3. Calculer $\dfrac{\ln x}{\ln 2}$ à l'aide de la calculatrice.
+1. Combien de bits sont nécessaires pour écrire $N = 3~567$ en mémoire ?
+2. Calculer $\dfrac{\ln x}{\ln 2}$ à l'aide de la calculatrice.
 
   Cette fonction est appelé _logarithme en base 2_ et permet d'encadrer
-  le nombre de bits utilisé par un entier.
+  le nombre de bits utilisé par un entier. Elle est généralement notée $\log_2$
 
-4. Proposer une formule pour encadrer la taille d'un entier en mémoire avec le logarithme
+3. Proposer une formule pour encadrer la taille d'un entier en mémoire avec le logarithme
   en base 2.
 
-5. Recommencer avec le logarithme en base 10.
 
-6. Reprenons les fonctions de la question 1.
+{{< hint info >}}
+Le nombre de bits nécessaire pour représenter un entier $n$ est $\lceil \log_2(n+1) \rceil$
+{{< /hint >}}
 
-    On considère maintenant $F, G, H, K$ des algorithmes.
-    Ils prennent tous en entrée une seule donnée dont la taille est $x$ et leur coût est 
-    est donné par la fonction correspondante.
+où $\lceil x \rceil$ est l'arrondi à l'entier supérieur de $x$.
 
-    Pour une valeur de $x$ choisie, leur temps d'exécution est 1 seconde.
-
-    On double la valeur de $x$. Estimer les temps d'exécution de chaque algorithme.
-
-7. Recommencer avec l'exponentielle : $l(x) = 2^x$.
-
-## Exercice 2 - Complexité de quelques fonctions
+## Exercice 3 - Complexité de quelques fonctions
 
 1. On considère la fonction `indice_mini` utilisée dans le tri par sélection.
     Quelle est sa complexité ?
@@ -103,7 +119,7 @@ le nombre de bits nécessaires pour écrire un nombre.
       Que dire du cas où les boucles sont _imbriquées_  (= l'une dans l'autre) ?
 
 
-## Exercice 3 - Tableau `insert` et `append`
+## Exercice 4 - Tableau `insert` et `append`
 
 Python propose deux méthodes sur les tableaux :
 
@@ -127,55 +143,47 @@ Python propose deux méthodes sur les tableaux :
     * que font-elles ?
     * que renvoient-elles ?
 
-2. En mémoire, un objet `list` est représenté par un tableau de cases mémoires
+{{< hint info >}}
+En mémoire, un objet `list` est représenté par un tableau de cases mémoires
   contigues (côte à côte).
 
-  Lorsqu'on crée une liste, Python réserve un grand nombre de cases à l'avance
-  et celles-ci sont vides. Notons ce nombre $N$. Sa valeur n'a pas d'importance
-  et elle a changé avec les versions de Python.
+Lorsqu'on crée une liste, Python réserve un grand nombre de cases à l'avance
+et celles-ci sont vides.
 
-  À chaque fois qu'on ajoute un élément dans le tableau,
-  un attribut, _sa longueur_ est augmenté.
+À chaque fois qu'on ajoute un élément dans le tableau,
+un attribut, _sa longueur_ est augmentée.
 
-  Ainsi, on sait toujours combien d'éléments il contient.
+Ainsi, on sait toujours combien d'éléments il contient.
+{{< /hint >}}
 
-3. D'après la description de précédente, quelle est la complexité de la fonction
+2. D'après la description de précédente, quelle est la complexité de la fonction
   `len` ?
 
-4. Toujours d'après cette description, laquelle des deux méthodes `insert` et
+3. Toujours d'après cette description, laquelle des deux méthodes `insert` et
   `append` est la plus efficace ?
 
     Donner leur complexité.
 
-5. Accéder à un élément.
 
-  Toujours en utilisant la description plus haut, proposer un moyen d'accéder
-  à un élément d'un tableau par son indice :
+Considérons :
 
-  ```python
-  >>> t = [4, 5, 6]
-  >>> t[0]
-  4
-  >>> t[1]
-  5
-  ```
+```python
+>>> t = [4, 5, 6]
+>>> t[0]
+4
+>>> t[-1]
+6
+```
 
-  Va-t-on plus vite lorsqu'on souhaite accéder au premier élément ? Au dernier ?
+{{< hint info >}}
+Lorsqu'on accède à un élément par son indice, Python doit simplement se rendre
+à l'adresse de l'emplacement mémoire correspondant. Ensuite il renvoie la valeur
+contenue dans cet emplacement.
+{{< /hint >}}
 
 
+4. Va-t-on plus vite lorsqu'on souhaite accéder au premier élément ? Au dernier ?
 
-_Remarques :_ 
-
-* Pour retirer un élément, la méthode `pop` est très rapide. ELle renvoie le dernier
-  élément (celui dont l'indice est `len(tableau) - 1`) et modifie la longueur
-  du tableau, indiquant simplement qu'il a perdu un élément.
-
-  Pour retirer un autre élément, d'indice quelconque, c'est plus délicat, il
-  faut déplacer tous les éléments qui étaient après lui et cela prend du temps.
-
-* Bien-sûr, lorsqu'on a ajouté $N$ éléments au tableau... celui-ci est plein.
-  Python réserve alors d'autres emplacements mémoire pour pouvoir continuer
-  à agrandir arbitrairement le tableau.
 
 5. Il existe une autre méthode pour ajouter des éléments à un tableau, l'opération
   `+`.
@@ -198,3 +206,40 @@ _Remarques :_
   au début de celui-ci en utilisant `+`.
 
 7.  Quelle est sa complexité ?
+
+
+---
+
+## Remarques 
+
+* Pour retirer un élément, la méthode `pop` est très rapide. Elle renvoie le dernier
+  élément (celui dont l'indice est `len(tableau) - 1`) et modifie la longueur
+  du tableau, indiquant simplement qu'il a perdu un élément.
+
+  Pour retirer un autre élément, d'indice quelconque, c'est plus délicat, il
+  faut déplacer tous les éléments qui étaient après lui et cela prend du temps.
+
+* Bien-sûr, lorsqu'on a rempli une liste... celle-ci est pleine.
+  Python réserve alors d'autres emplacements mémoire pour pouvoir continuer
+  à agrandir arbitrairement le tableau.
+
+* On préfère éviter les _copies_ lorsqu'on peut se contenter d'ajouter
+    à la fin d'un tableau :
+
+    ```python
+    >>> t = [1, 2, 3]
+    >>> t.append(4)
+    >>> t
+    [1, 2, 3, 4]
+    ```
+
+    et 
+
+    ```python
+    >>> t = [1, 2, 3]
+    >>> t = t + [4]
+    >>> t
+    [1, 2, 3, 4]
+    ```
+
+    Produisent le même résultat mais la première est beaucoup plus rapide que la seconde.

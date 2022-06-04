@@ -39,7 +39,7 @@ weight: 4
     * Quel ordre conduit au minimum de comparaison ?
     * Quel ordre conduit au maximum de comparaison ?
 
-## Exercice 3 - Permutations
+## Exercice 3 - Retrouver la sortie
 
 Les sorties des instructions suivantes ont été effacées. Écrire les sorties
 produites.
@@ -96,14 +96,14 @@ top1000 = [249712, 345681, 254010, 153020, ..., 128763]
 
 ## Exercice 6 - doublons
 
-La presence de doublon dans une grande liste est un soucis permanent.
+La presence de doublons dans une grande liste est un soucis permanent.
 Si l'on agrège des numéros de téléphone à joindre, on souhaite éviter d'appeler
 plusieurs fois le même numéro !
 
 Il existe des structures de données qui permettent d'éviter les doublons.
 
 1. Comment utiliser un tri pour repérer les doublons dans une liste de téléphone ?
-2. La structure de donnée `set` du langage Python fonctionne comme les ensembles
+2. La structure de donnée `set` (_ensemble_) du langage Python fonctionne comme les ensembles
   mathématiques : elle ne contient aucun doublon.
 
     ```python

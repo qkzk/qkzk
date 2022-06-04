@@ -7,9 +7,11 @@ weight: 5
 
 ---
 
-### pdf [pour impression](/uploads/docsnsi/algo/glouton/5_td.pdf)
+# 5. second TD
 
-# 1. Éclairage
+pdf [pour impression](/uploads/docsnsi/algo/glouton/5_td.pdf)
+
+## 1. Éclairage
 
 Il y a une longue allée dans le jardin d’Alice avec n marches d’escalier
 placées de manière irrégulière aux positions $x_i$ pour $i \in 1\ldots n$. 
@@ -31,7 +33,7 @@ marches. Alice peut la consulter autant de fois qu’elle le souhaite.
 5. Proposer un algorithme le plus eﬃcace possible pour aider Alice à trouver le
     nombre minimum de lanternes permettant d’éclairer chaque marche.
 
-# 2. Menu
+## 2. Menu
 
 Alice a enfin fixé sa liste d’invités et pense maintenant au menu.
 Malheureusement ses invités sont très difficiles, mais elle connaît l’ensemble 
@@ -45,7 +47,7 @@ de plats qui assure que chaque invité trouvera son bonheur sur le buffet.
 3. En combien d’étapes au maximum s’arrête votre algorithme ?
 
 
-# 3. Déménagement
+## 3. Déménagement
 
 Alice doit déménager et pour cela ranger toutes ses affaires dans des cartons.
 Pour faire le moins de trajets possibles dans l’escalier elle souhaite réussir
@@ -59,7 +61,7 @@ $i \in 1\ldots n$ et dispose d’autant de cartons identiques qu’elle le souha
 2. Votre algorithme est-il optimal ? Justifiez
 3. En combien d’étapes au maximum s’arrête votre algorithme ?
 
-# 4. Ranger les malles du Père Noël
+## 4. Ranger les malles du Père Noël
 
 Le Père Noël est en plein préparatif de la grande nuit. Le doit ranger dans les
 malles de son traîneau les cadeaux destinés aux enfants. Il veut optimiser
@@ -131,6 +133,8 @@ modélisé par une liste de malles.
 
 4. Proposez une implémentation en Python de l'algorithme des lutins. Écrire
     au moins un test. On ne demande pas la documentation dans cette question.
+
+---
 
 ## Compléments de Gilles Lassus
 

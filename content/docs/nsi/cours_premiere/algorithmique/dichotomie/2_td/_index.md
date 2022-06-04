@@ -5,25 +5,27 @@ weight: 2
 
 ---
 
-### pdf [pour impression](/uploads/docsnsi/algo/dicho/dichotomie_td.pdf)
-
 # Recherche dichotomique dans un tableau trié.
+
+pdf [pour impression](/uploads/docsnsi/algo/dicho/dichotomie_td.pdf)
+
 
 ## 1. Recherche dichotomique
 
 1. Peut-on appliquer la recherche dichotomique au tableau `[-4, 1, 3, 0, 5, 8]`
   pour rechercher le nombre 2 ? Justifier.
-1. Combien d'itérations vont être nécessaires à la recherche dichotomique vue
+2. Combien d'itérations vont être nécessaires à la recherche dichotomique vue
   en cours pour trouver `15` dans le tableau `[1, 2, 15, 17, 30]` ?
 
-  Même question pour trouver l'élément `2`.
-2. Même question pour `[-4, -2, 0, 2, 10, 15, 18]` et les éléments `15` puis `2`.
-3. Quand on multiplie par 2 la taille du tableau, de combien augmente le nombre
-  d'itération d'une recherche dichotomique ?
+   Même question pour trouver l'élément `2`.
+
+3. Même question pour `[-4, -2, 0, 2, 10, 15, 18]` et les éléments `15` puis `2`.
+4. Quand on double la taille du tableau, de combien augmente le nombre
+  de tours d'une recherche dichotomique ?
 
 ## 2. Faire tourner à la main
 
-On rappelle l'algorithme de recherche dichotomique dans un tableau trié.
+Voici une version légèrement différente de la recherche dichotomique vue en cours.
 
 On dispose d'un tableau d'éléments triés par ordre croissant.
 
@@ -50,30 +52,35 @@ fonction appartient(tableau, element)
 
     b. Compléter le tableau suivant pour l'appel précédent.
 
-    |           | `gauche` | `milieu` | `droite` | `tableau[milieu]` | `trouvé` |
-    |-----------|----------|----------|----------|-------------------|----------|
-    | `# AVANT` | 0        | -        | ?        | -                 | ?        |
-    | `# ICI`   | 0        | 2        | ?        | ?                 | ?        |
-    | `# LA`    | 0        | 2        | 1        | 5                 | ?        |
-    | `# ICI`   | 0        | 0        | 1        | 1                 | ?        |
-    | `# LA`    | ?        | ?        | ?        | ?                 | ?        |
-    | `# ICI`   | ?        | ?        | ?        | ?                 | ?        |
-    | `# LA`    | ?        | ?        | ?        | ?                 | ?        |
+      |           | `gauche` | `milieu` | `droite` | `tableau[milieu]` | `trouvé` |
+      |-----------|:--------:|:--------:|----------|:-----------------:|:--------:|
+      | `# AVANT` |     0    |     -    | ?        |         -         |     ?    |
+      | `# ICI`   |     0    |     2    | ?        |         ?         |     ?    |
+      | `# LA`    |     0    |     2    | 1        |         5         |     ?    |
+      | `# ICI`   |     0    |     0    | 1        |         1         |     ?    |
+      | `# LA`    |     ?    |     ?    | ?        |         ?         |     ?    |
+      | `# ICI`   |     ?    |     ?    | ?        |         ?         |     ?    |
+      | `# LA`    |     ?    |     ?    | ?        |         ?         |     ?    |
 
     c. Dans l'exemple précédent, pourquoi sort-on de la boucle ?
 
 2. On exécute l'appel  `appartient ([1, 3, 5, 17, 17, 19], 4)` .
 
     a. Que renvoie cet appel ?
+
     b. Construire un tableau similaire au précédent.
+
     c. Pourquoi sort-on de la boucle ?
+
     d. Combien de fois passe-t-on par la ligne `# ICI` ?
 
 3. On exécute l'appel  `appartient ([1, 13, 5, 17, 17], 13)`
 
     a. Quelle devrait-être la sortie de la fonction ?
+
     b. Qu'obtient-on en pratique ? On s'aidera d'un tableau similaire aux
         précédents.
+
     c. Expliquer le problème.
 
 
@@ -89,8 +96,9 @@ fonction appartient(tableau, element)
     ```python
     def indice(tableau: list, element: int) -> int:
         '''
-        Retourne l'indice `i` tel que `tableau[i] == element` s'il y en a un
-        sinon retourne -1.
+        Renvoie l'indice de `element` dans `tableau`, une `list` triée par
+        ordre croissant, si `element` est présent.
+        Sinon renvoie -1.
         Pré condition : ... A FAIRE
         '''
         # À FAIRE
@@ -101,7 +109,7 @@ fonction appartient(tableau, element)
            indice([1, 5, 17, 17, 19], 3) == 4
     ```
 
-## 4. Dichotomie et présence d'ex aequo
+## 5. Dichotomie et présence d'ex aequo
 
 La fonction `bisect_left(t, v)` de Python (`from bisect import bisect_left`) est
 une variante de la recherche dichotomique vue en cours qui renvoie systématiquement
@@ -143,8 +151,8 @@ variable réelle.
 Cette méthode peut être utilisée dans les cas où une solution analytique n'est
 pas connue.
 
-Dans toute la suite, on supposera que $f$ est une fonction continue.\
-On admet que s'il existe $a \textless b$ tels que $f(a) \times f(b) \textless 0$ alors, il
+Dans toute la suite, on supposera que $f$ est une fonction continue (ie. tracée sans lever le crayon).\
+On admet que s'il existe $a < b$ tels que $f(a) \times f(b) < 0$ alors, il
 existe $c \in [a;b]$ tel que $f(c) = 0$.
 
 1. L'algorithme de recherche de solution par la méthode dichotomique consiste,

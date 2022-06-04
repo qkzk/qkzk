@@ -5,18 +5,22 @@ weight: 5
 
 ---
 
-### PDF : [Pour impression](./5_cout.pdf)
+pdf : [pour impression](./5_cout.pdf)
 
 # Correction d'un algorithme
 
 Afin de justifier qu'un algorithme est juste on doit s'assurer de plusieurs
 choses :
 
+{{< hint warning >}}
 1. Qu'il termine bien.
 2. Qu'il fait ce qu'il affirme.
+{{< /hint >}}
 
 ## Variant et invariant
 
+
+{{< hint info >}}
 Un **variant** de boucle est une valeur entière positive qui décroît à chaque
 passage dans la boucle.
 
@@ -25,20 +29,26 @@ de boucle.
 
 Dans une boucle _bornée_ (`for i in range(3)`) il n'est pas utile de donner
 un variant, par définition cette boucle termine.
+{{< /hint >}}
 
+{{< hint info >}}
 Un **invariant** de boucle est une propriété qui est vraie au début et à la fin
 de chaque tour de la boucle.
 
 On prouve souvent la _correction_ d'un algorithme en produisant un invariant
 de boucle.
+{{< /hint >}}
 
-# Correction du tri par sélection
+## Correction du tri par sélection
 
 Considérons la fonction `tri_select` ci-dessous.
 
 ```python
 def plus_petit(tableau: list, indice: int) -> int:
-    '''renvoie l'indice du plus petit élément de tableau à partir de "indice"'''
+    '''
+    Renvoie l'indice du plus petit élément de tableau 
+    à partir de `indice`.
+    '''
     mini = indice
     for k in range(indice, len(tableau)):
         if tableau[k] < tableau[mini]:
@@ -46,27 +56,39 @@ def plus_petit(tableau: list, indice: int) -> int:
     return mini
 
 
-def tri_select(tableau: list) -> None:
-    '''réalise le tri par sélection du tableau donné'''
+def tri_select(tableau: list):
+    '''
+    Réalise le tri par sélection du tableau donné
+    '''
     for i in range(len(tableau)):
         mini = plus_petit(tableau, i)
         tableau[i], tableau[mini] = tableau[mini], tableau[i]
 ```
 
+### Terminaison
 
 Lorsqu'on l'appelle avec un tableau d'objets comparables, elle réalise
 une boucle _bornée_ consistant à appeler la fonction plus petit.
 
-Dans la fonction plus petit, on réalise aussi une boucle bornée.
+Dans la fonction plus petit, on réalise aussi une boucle _bornée_.
 
 Aussi, ces deux algorithmes terminent bien.
 
-**Invariants de boucle**
+### Invariants de boucle
 
-Commençons par `plus_petit`. À chaque tour de la boucle, la propriété :
-"`tableau[mini] <= tableau[k]`" est vérifiée.
+**Fonction `plus_petit`.**
 
-Aussi, c'est un invariant de boucle.
+L'invariant est :
+
+{{< hint info >}}
+`mini` est l'indice du plus petit des `k` premiers éléments du tableau.
+{{< /hint >}}
+
+La propriété est vraie au départ, pour `k=0`.
+
+Si la propriété est vraie quand on débute un tour de boucle, elle le reste après celui-ci.
+
+En effet, si `tableau[k] < tableau[mini]`, alors `mini` prend la valeur `k` et la propriété reste juste.
 
 Quand la boucle est terminée, on a eu `tableau[mini] <= tableau[k]` pour
 tous les indices `k` entre `indice` et l'indice du dernier élément.
@@ -74,9 +96,13 @@ tous les indices `k` entre `indice` et l'indice du dernier élément.
 Donc `tableau[mini]` est le plus petit élément du tableau.
 
 
-Maintenant pour `tri_select`.
+**Fonction `tri_select`**
 
-L'invariant est : "les `i` premiers éléments sont triés et sont les plus petits éléments du tableau."
+L'invariant est : 
+
+{{< hint info >}}
+les `i` premiers éléments sont triés et sont les plus petits éléments du tableau.
+{{< /hint >}}
 
 * Elle est vraie au départ. Les `0` premiers éléments `[]` sont triés.
 * Elle reste vraie au tour suivant, puisqu'on ajoute le plus petit des éléments
@@ -96,7 +122,7 @@ L'invariant est : "les `i` premiers éléments sont triés et sont les plus peti
 En définitive, l'invariant de boucle prouve que la liste finale est triée.
 
 
-# Correction du tri par insertion
+## Correction du tri par insertion
 
 Elle se démontre d'une manière similaire.
 
@@ -111,11 +137,15 @@ et `i`.
 Vous pouvez vérifier que cet invariant est vrai à toutes les étapes de la boucle
 interne.
 
-# Complexité du tri par sélection
+## Complexité 
 
+
+
+{{< hint info >}}
 La _complexité_ d'un algorithme est une mesure du temps qu'il va prendre à
 s'exécuter. En particulier on cherche une relation entre la taille des données
 en entrée et la durée.
+{{< /hint >}}
 
 Afin de rendre le calcul faisable, on réalise des simplifications.
 
@@ -127,17 +157,17 @@ Afin de rendre le calcul faisable, on réalise des simplifications.
 
 2. On ne s'intéresse généralement qu'à l'odre de grandeur du nombre d'opérations réalisé.
 
-
 On range généralement les algorithmes dans de grandes catégories de vitesse.
 
-## Quelles opérations compter ?
+### Quelles opérations compter ?
 
 On pourrait les compter toutes. C'est ce qui donnerait les résultats les plus précis.
+On pourrait aussi ne compter que celles qui interviennent dans les boucles.\
+Intéressons nous au **nombre de comparaisons** effectuées dans l'algorithme.
 
-On pourrait aussi ne compter que celles qui interviennent dans les boucles.
+### Complexité du tri par sélection
 
-Intéressons nous au nombre de comparaisons effectuées dans l'algorithme.
-
+{{< expand "tri par selection" "...">}}
 ```python
 def plus_petit(tableau: list, indice: int) -> int:
     '''renvoie l'indice du plus petit élément de tableau à partir de "indice"'''
@@ -154,25 +184,24 @@ def tri_select(tableau: list) -> None:
         mini = plus_petit(tableau, i)
         tableau[i], tableau[mini] = tableau[mini], tableau[i]
 ```
+{{< /expand >}}
 
 
 Où compare-t-on ? Dans la boucle interne, en particulier, dans la fonction `plus_petit`.
 
-Cette fonction réalise une boucle qui tourne de `indice` jusque `len(tableau - 1)`
+Cette fonction réalise une boucle qui tourne de `indice = 0` jusque `indice = len(tableau - 1)`
 
 Notons $n$ la taille du tableau.
 
-Qu'est-ce qu'`indice` ?
-
-Regardons dans la fonction appelante `tri_select` : `indice` est ici noté `i`.
-
-et évolue de 0 à $n - 1$.
+Regardons dans la fonction appelante `tri_select` : `indice` est ici noté `i` et évolue de $0$ à $n - 1$.
 
 On fait donc, pour chaque $i$ allant de 0 à $n - 1$, à chaque fois $n - i$ comparaisons.
 
 Notons $C$ le nombre de comparaisons. On a alors :
 
 $$C = (n-1) + (n-2) + (n-3) + \cdots + 2 + 1$$
+
+Qu'on réordonne par ordre croissant.
 
 $$C = 1 + 2 + \cdots + (n-2) + (n-1)$$
 
@@ -182,7 +211,11 @@ et qui vaut $$C = \dfrac{(n-1)n}{2}$$
 
 On reconnaît ici une expression du second degré, qu'on peut développer et simplifier :
 
-$$C = \dfrac{1}{2}(n^2 - n) \leq n^2$$
+$$C = \dfrac{1}{2}(n^2 - n)$$
+
+Seul l'ordre de grandeur nous intéresse, pas les coefficients ni le second terme donc :
+
+$$C \leq n^2$$
 
 On note cela $$C = O(n^2)$$ et on dit que le tri par sélection et _quadratique_,
 
@@ -192,18 +225,26 @@ _quadratique_.
 
 ### À retenir : _Coût du tri par sélection_
 
-> **Le coût du tri par sélection évolue avec le carré de la taille du tableau d'entrée.**
+
+{{< hint info >}}
+Le coût du tri par sélection évolue avec le carré de la taille du tableau d'entrée.
+{{< /hint >}}
 
 
-# Complexité du tri par insertion
+## Complexité du tri par insertion
 
 
 La preuve est exactement la même et le résultat similaire :
 
+
 ### À retenir : _Coût du tri par insertion_
 
-> **Le coût du tri par insertion évolue avec le carré de la taille du tableau d'entrée.**
 
+{{< hint info >}}
+Le coût du tri par insertion évolue avec le carré de la taille du tableau d'entrée.
+{{< /hint >}}
+
+---
 
 ## Remarques finales
 

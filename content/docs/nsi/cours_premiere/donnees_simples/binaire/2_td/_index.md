@@ -6,9 +6,9 @@ weight: 2
 
 ---
 
-### pdf : [pour impression](/uploads/docsnsi/donnees_qkzk_img/TD_binaire.pdf)
+pdf : [pour impression](/uploads/docsnsi/donnees_qkzk_img/TD_binaire.pdf)
 
-## 1. Conversion binaire vers décimal.
+## Exercice 1. Conversion binaire vers décimal.
 
 1. Donnez les valeurs entières décimales représentées par les nombres :
 
@@ -22,7 +22,7 @@ weight: 2
 
 2. Comment savoir qu'un entier représenté en binaire est divisible par 2 ? Par 4 ?
 
-## 2. Conversion décimal vers binaire.
+## Exercice 2. Conversion décimal vers binaire.
 
 1. Convertir les nombres suivants en binaire :
 
@@ -45,7 +45,7 @@ weight: 2
     De la forme $2^k$ ?
 5. En remarquant que $2~048=2^{11}$, donner la représentation binaire de $2021$.
 
-## 3. Binaire et python
+## Exercice 3. Binaire et python
 
 Python permet d'obtenir la représentation binaire d'un entier à l'aide de la
 fonction `bin`. Voici ce qu'on obtient avec `help(bin)` :
@@ -97,7 +97,7 @@ class int(object)
   ```
 
 
-## 4. Capacité
+## Exercice 4. Capacité
 
 Parmi les additions suivantes, lesquelles vont provoquer un dépassement de
 capacité lorsque les nombres sont encodés sur 8 bits ?
@@ -106,4 +106,5 @@ capacité lorsque les nombres sont encodés sur 8 bits ?
 * $1001~1011 + 0111~1011$
 * $0011~1011 + 1001~1001$
 * $1010~1011 + 0001~0100$
+
 

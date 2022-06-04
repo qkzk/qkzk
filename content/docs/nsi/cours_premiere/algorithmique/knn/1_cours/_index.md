@@ -1,23 +1,27 @@
 ---
-subtitle: "1. cours - kNN"
+title: "1. Cours - kNN"
 weight: 1
 
 ---
+pdf : [pour impression](./1_intro.pdf)
 
-### pdf : [pour impression](./1_intro.pdf)
+# 1. Cours : les k plus proches voisins
+
 
 
 Nous allons étudier un algorithme d'apprentissage automatique (_machine learning_)
 dont l'objectif est de classifier des objets.
 
-Entrainer une machine à apprendre n'est pas une idée récente, la première
-référence remontant à 1959 et est due
-à l'informaticien américain Arthur Samuel. Depuis le début des années 2000 ces
-méthodes rencontrent un important succès dû à la disponibilité de nombreux jeux
-de données et à l'amélioration de la performance des machines.
+> _Entrainer une machine à apprendre n'est pas une idée récente, la première_
+> _référence remontant à 1959 et est due_
+> _à l'informaticien américain Arthur Samuel. Depuis le début des années 2000 ces_
+> _méthodes rencontrent un important succès dû à la disponibilité de nombreux jeux_
+> _de données et à l'amélioration de la performance des machines._
 
-# Principe
+## Principe
 
+
+{{< hint info >}}
 L'algorithme des $k$ plus proches voisins est un algorithme
 _d'apprentissage supervisé_.
 
@@ -28,13 +32,16 @@ de qualité des prédictions.
 
 Une fois l'algorithme entrainé et testé on peut l'employer afin qu'il prédise
 le label d'une nouvelle donnée.
+{{< /hint >}}
 
 ![MINST](/docs/nsi/cours_premiere/algorithmique/knn/1_cours/img/0.png)
 
+_Ici l'objectif est clair : reconnaître ces chiffres manuscrits_
 
 
 
-# Classification
+
+## Classification
 
 Le jeu de données doit :
 
@@ -45,7 +52,7 @@ Dans l'exemple ci-dessous, les caractéristiques sont $x_1$ et $x_2$ et les
 labels sont $A$ et $B$.
 
 
-$~$![knn](/docs/nsi/cours_premiere/algorithmique/knn/1_cours/img/1.png)
+![knn](/docs/nsi/cours_premiere/algorithmique/knn/1_cours/img/1.png)
 
 On ajoute un nouveau point (en bleu) dont on ne connait pas le label...
 
@@ -56,17 +63,19 @@ Le point se voit attribuer la catégorie $A$.
 ## Algorithme $kNN$
 
 
+{{< hint info >}}
 * On choisit une valeur pour $k$,
 * On calcule les distances $d$ entre la nouvelle donnée $N$ et ses voisins $X_i$ déjà
   classifiés.
 * Parmi les points $X_i$, les $k$ plus proches de $N$ sont retenus.
 * On attribue à $N$ le label majoritaire parmi les $k$ plus proches voisins.
+{{< /hint >}}
 
 ## Choix d'une valeur de $k$
 
 On peut choisir la valeur que l'on veut mais ...
 
-* Une valeur impaire produit des ex-aequos,
+* Une valeur paire produit des ex-aequos,
 * Une valeur trop faible va rendre le résultat sensible au _bruit_,
 * Une valeur trop grande risque de faire sortir des classes.
 
@@ -88,7 +97,7 @@ pour lesquelles on connait déjà la classe.
 On considère deux espèces, les _crocodiles_ et les _alligators_.
 
 On a des raisons de supposer qu'on peut les distinguer en mesurant la
-largeur de leur gueule et la longueur de leur corps.
+_largeur de leur gueule_ et la _longueur de leur corps_.
 
 | gueule  | longueur | classe    |
 |---------|----------|-----------|
@@ -178,8 +187,10 @@ afin de les ramener entre 0 et 1.
 
 Bien qu'il soit linéaire, l'algorithme kNN présente un défaut majeur :
 
-> À chaque nouvelle donnée, il faut parcourir tout le tableau pour la classifier.
-> Plus on ajoute de données, plus il est _lent_.
+{{< hint info >}}
+À chaque nouvelle donnée, il faut parcourir tout le tableau pour la classifier.
+Plus on ajoute de données, plus il est _lent_.
+{{< /hint >}}
 
 ## Utilisations dans l'industrie
 

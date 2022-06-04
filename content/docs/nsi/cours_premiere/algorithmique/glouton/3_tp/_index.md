@@ -6,10 +6,10 @@ date: 2020/03/07
 weight: 3
 
 ---
+# 3. TP : Le problème des étagères
 
-### pdf [pour impression](/uploads/docsnsi/algo/glouton/3_tp.pdf)
+pdf [pour impression](/uploads/docsnsi/algo/glouton/3_tp.pdf)
 
-# Le problème des étagères
 
 
 La bibliothèque prévoit de refaire ses étagères. Elle comprend une collection de
@@ -76,7 +76,7 @@ etageres = [
 
 1. Compléter la fonction fonction `ranger_livres`
 
-    Elle prend en paramètres une liste de livres intitulée `livres`
+    Elle prend en paramètres une liste de livres intitulée `livres`.
     Elle retourne la double liste des étagères décrite plus haut.
 
 2. Exécuter à nouveau le script [tester_etageres.py](tester_etageres.py).
@@ -123,9 +123,3 @@ est vrai. S'il est faux, il affiche un message d'erreur accompagné de la `strin
 La suite du code est similaire, on s'assure que tous les livres ont une
 taille convenable.
 
-# Rendu de monnaie
-
-1. Programmer une fonction Python qui prend en paramètre un jeu de pièces
-    et une somme à rendre et retourne les pièces utilisées.
-    Elle utilise l'algorithme glouton.
-2. Écrire un jeu de tests pour votre fonction.

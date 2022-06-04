@@ -6,10 +6,10 @@ date : 2020/08/01
 weight: 4
 
 ---
+# 4. Principe général d'un algorithme glouton
 
-### pdf [pour impression](/uploads/docsnsi/algo/glouton/4_cours.pdf)
+pdf [pour impression](/uploads/docsnsi/algo/glouton/4_cours.pdf)
 
-# Principe général d'un algorithme glouton
 
 ## Généralités
 
