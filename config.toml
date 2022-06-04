@@ -5,9 +5,7 @@ theme = "book"
 BookDateFormat = '2-1-2006'
 
 
-# pygmentsstyle = "b2"
 pygmentsstyle = "manni"
-# pygmentsstyle = "murphy"
 pygmentscodefences = true
 pygmentscodefencesguesssyntax = true
 
@@ -35,7 +33,6 @@ disable = true
 disable = true
 
 [permalinks]
-docs = "/"
 
 [markup.goldmark.renderer]
 unsafe = true

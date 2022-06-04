@@ -11,13 +11,12 @@
     <div class="white-back">
 
         <div class="container flex content-desktop ">
-            <div id="bannerImgTitle">
-                <a id="bannerTitle" href="/">
-                    <h1 id="siteTitle">
-                        {{ .Site.Title}}
-                    </h1>
-                </a>
-            </div>
+            <a id="bannerTitle" href="/">
+                <h1 id="siteTitle">
+                    {{ partial "docs/title" . }}
+                    <!-- {{ .Site.Title}} -->
+                </h1>
+            </a>
         </div>
 
         <input type="checkbox" class="hidden toggle" id="menu-control" />

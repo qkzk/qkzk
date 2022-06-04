@@ -6,7 +6,11 @@ weight: 1
 
 ---
 
-# Documents
+# NSI & Mathématiques
 
-Tous les documents du site sont accessibles en dépliant les menus.
+
+Bienvenue sur le site consacré aux enseignements de NSI et de mathématiques.
+
+* Toutes les parties du sites sont accessibles depuis les menus situés à gauche.
+* Le contenu de chaque page s'affiche sur la droite.
 
