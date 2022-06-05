@@ -82,13 +82,13 @@ Divers
 * [Python 3](https://www.cs.put.poznan.pl/csobaniec/software/python/py-qrc.html)
 * [js](https://htmlcheatsheet.com/js/)
 
-# Références en français
+# Références en français
 
 
 * [OpenClassRooms](http://fr.openclassrooms.com/informatique/cours/dynamisez-vos-sites-web-avec-javascript) : LA référence en français, complète et didactique (anciennement : site du zéro).
-* [France IOI](http://www.france-ioi.org/algo/chapters.php) : Site d'entrainement à la programmation et à l'algorithmique. De nombreux cours et exercices interactifs dans plusieurs langages (Python, C, C++, Python, Java, CAML etc.)
+* [France IOI](http://www.france-ioi.org/algo/chapters.php) : Site d'entrainement à la programmation et à l'algorithmique. De nombreux cours et exercices interactifs dans plusieurs langages (Python, C, C++, Python, Java, CAML etc.)
 * [Le manuel de référence, édité par l'INRIA.](/uploads/docs/livreISN.pdf) Il est mis à votre disposition gratuitement mais son usage est protégé. Un [mirroir](https://wiki.inria.fr/wikis/sciencinfolycee/images/7/73/Informatique_et_Sciences_du_Num%C3%A9rique_-_Sp%C3%A9cialit%C3%A9_ISN_en_Terminale_S.pdf) sur le site de l'INRIA.
-* Vous souhaitez découvrir linux ? Lisez [cette introduction](http://raspbian-france.fr/decouvrir-linux-cours-introduction-debutants/) et regardez les slides.  Une distribution populaire, facile d'accès et entièrement libre : [Ubuntu](http://www.ubuntu.com/). Une [communauté](http://ubuntu-fr.org/) d'utilisateurs avec des ressources en français.
+* Vous souhaitez découvrir linux ? Lisez [cette introduction](http://raspbian-france.fr/decouvrir-linux-cours-introduction-debutants/) et regardez les slides.  Une distribution populaire, facile d'accès et entièrement libre : [Ubuntu](http://www.ubuntu.com/). Une [communauté](http://ubuntu-fr.org/) d'utilisateurs avec des ressources en français.
 * [Apprendre à programmer avec Python 3](https://inforef.be/swi/download/apprendre_python3_5.pdf). Le livre recommandé par l'université de Lille et écrit par Gérard Swinnen.
 
 # Raspberry pi
@@ -107,11 +107,11 @@ Le vrai langage de l'informatique n'est ni C++ ni Python mais l'anglais... Aussi
 * [StackOverflow](https://stackoverflow.com/) : Pourquoi ça marche pas quand je fais ça ? Tapez le en anglais dans google et vous arriverez sans doute ici... Toutes vos incompréhensions ont une réponse et elle se trouve sur stackoverflow.
 * [GitHub](https://github.com) : Des tonnes de projets et de logiciels entièrement accessibles. Devenu incontournable, même les éditeurs les plus fermés s'y sont mis.
 * [Code Academy](http://www.codecademy.com/tracks/javascript) : des exercices accessibles et de difficulté croissante pour s'initier à Javascript. Seul problème : tout est en anglais.
-* [W3 Schools](https://www.w3schools.com/) : référence sur les langages du web. Toutes les commandes sont illustrées. Un tour de force. Idéal pour débugguer du javascript.
+* [W3 Schools](https://www.w3schools.com/) : référence sur les langages du web. Toutes les commandes sont illustrées. Un tour de force. Idéal pour débugguer du javascript.
 * [MDN](https://developer.mozilla.org/fr/docs/Web/Reference) la référence de Mozilla pour html, css et javascript.
 * [AdaFruit](https://www.adafruit.com/) : un vendeur d’électronique très complet qui propose trois tonnes de tutoriels en tout genre pour le Raspberry Pi ou l'Arduino.
-* SoloLean : application mobile d'apprentissage comportant des tutoriels etc. Disponible sur [googleplay](https://play.google.com/store/apps/developer?id=SoloLearn) et [l'apple store](https://itunes.apple.com/us/developer/sololearn-inc/id933957049).
-* [WordPress.org](https://Wordpress.org) : à intégrer dans un site PHP pour le rendre ultra fonctionnel et esthétique en quelques (dizaines) d'heures.
+* SoloLean : application mobile d'apprentissage comportant des tutoriels etc. Disponible sur [googleplay](https://play.google.com/store/apps/developer?id=SoloLearn) et [l'apple store](https://itunes.apple.com/us/developer/sololearn-inc/id933957049).
+* [WordPress.org](https://Wordpress.org) : à intégrer dans un site PHP pour le rendre ultra fonctionnel et esthétique en quelques (dizaines) d'heures.
 * [WordPress.com](https://fr.wordpress.com) : la même chose mais déjà hébergé, installé et très simplifié...
 
 

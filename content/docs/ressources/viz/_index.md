@@ -1,10 +1,20 @@
 ---
 title: "viz.js"
-weight: 100000000
+weight: 100
 
 ---
 
 # Graphe au format DOT avec viz.js
+
+## Exemple 0
+
+{{< graphviz title="Graphe orienté" >}}
+digraph {
+    rankdir="LR";
+    a -> b
+}
+{{< /graphviz >}}
+
 
 ## Exemple 1
 

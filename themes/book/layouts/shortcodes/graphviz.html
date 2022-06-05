@@ -8,6 +8,7 @@
     padding-bottom: 100%;
     vertical-align: middle;
     overflow: hidden;
+    text-align: center;
 }
 
 .svg-content {
@@ -48,6 +49,7 @@
                 let paddingBottom = Math.ceil(100 / aspectRatio);
                 viz_elm_{{ .Ordinal | safeJS }}.style.paddingBottom = `${paddingBottom}%`;
                 viz_elm_{{ .Ordinal | safeJS }}.style.maxWidth = `${box.width}px`;
+                viz_elm_{{ .Ordinal | safeJS }}.style.maxHeight = `${box.height}px`;
                 viz_elm_{{ .Ordinal | safeJS }}.classList.add("svg-container");
                 element.removeAttribute("width");
                 element.removeAttribute("height");
