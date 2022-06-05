@@ -104,6 +104,43 @@ une clé primaire)
 * Les colonnes référencées doivent pré-exister dans la table référencée
 {{< /hint >}}
 
+
+### Contraintes d'intégrité
+
+
+
+
+{{< hint info >}}
+Une contrainte d'intégrité est une règle qui définit la cohérence d'une donnée ou d'un ensemble de données d'une  base de données.
+{{< /hint >}}
+
+
+{{< hint info >}}
+Tout  d'abord,  le type  de  données  que l'on  cherche  à  stocker définit  une
+**contrainte de domaine**. Cela est intégré dans la conception de la BDD.
+{{< /hint >}}
+
+{{< hint info >}}
+Ensuite, chaque ligne d'une table doit pouvoir être identifiée par une clé primaire, unique et non nulle. On parle dans ce cas de **contrainte de relation.**
+{{< /hint >}}
+
+Enfin, lorsque des tables sont liées, il est indispensable que les trois règles suivantes soient respectées :
+
+{{< hint info >}}
+1. Une clé étrangère ne peut être une valeur qui n'est pas clé primaire de la table à laquelle on se réfère.
+
+2. Une ligne de la table primaire ne peut être effacée si elle possède des lignes liées.
+
+3. La clé primaire ne peut être changée dans la table primaire si cette ligne possède des lignes liées.
+
+Ces trois règles définissent la notion de **contrainte d'intégrité réferentielle** d'une base de données.
+{{< /hint >}}
+
+Cet ensemble  de règles est au  coeur même de la  base de données et  confère le
+caractère relationnel au  modèle étudié.
+
+
+
 ### Identifier : une nécessité
 
 Il arrive qu'un ordre de transaction ne parvienne pas jusqu'au bout...
