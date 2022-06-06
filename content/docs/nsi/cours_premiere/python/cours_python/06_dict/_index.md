@@ -233,7 +233,7 @@ print(longueurs)
 Ce script va produire l'affichage suivant :
 
 ```
-{"person": 6, "woman": 6, "man": 3, "camera": 6, "tv": 2}
+{"person": 6, "woman": 5, "man": 3, "camera": 6, "tv": 2}
 
 ```
 
