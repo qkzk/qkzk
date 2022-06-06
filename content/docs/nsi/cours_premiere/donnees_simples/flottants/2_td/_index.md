@@ -7,10 +7,10 @@ weight: 2
 
 ---
 
-### pdf : [pour impression](/uploads/docsnsi/flottants/flottants_td.pdf)
+pdf : [pour impression](/uploads/docsnsi/flottants/flottants_td.pdf)
 
 
-# 1. Écriture en base 2 des nombres à virgule
+## 1. Écriture en base 2 des nombres à virgule
 
 1. Parmi les nombres à virgule binaires suivants, lesquels sont strictement 
     supérieurs à $\dfrac{1}{2}$ ?
@@ -42,7 +42,7 @@ weight: 2
 
 
 
-# 2. Représenter des nombres en virgule fixe
+## 2. Représenter des nombres en virgule fixe
 
 Le microcontrôleur de l'antimissile _Patriot_ stocke la valeur $\dfrac{1}{10}$
 en ne conservant que 23 bits pour la partie décimale (codage en virgule fixe).
@@ -68,7 +68,7 @@ seconde.
     de 500 m, peut-on être certain qu'il l'atteigne ?
 
 
-# 3. Nombres à virgule flottante
+## 3. Nombres à virgule flottante
 
 1. Soit le nombre dyadique $x = + 1,10101 \times 2^{11}$. Convertir ce
     nombre en décimal :
@@ -112,13 +112,13 @@ seconde.
     e. En déduire la représentation dyadique de $x$.
 
 
-# 4. Comprendre la norme IEEE-754
+## 4. Comprendre la norme IEEE-754
 
 _Le codage des nombres en virgule flottantes est la manière la plus répandue
 de coder les nombres à virgule. Elle est employée dans les ordinateurs, les
 smartphones, les cartes graphiques._
 
-## Le sujet
+### Le sujet
 
 La norme IEEE-754 (virgule flottante) présente plusieurs variantes, dont une
 est nommée double précision. En double précision, les nombres sont codés
@@ -165,7 +165,7 @@ Dans toute la suite, on ne s'intéresse qu'aux nombres positifs.
 8. Le zéro est obtenu avec un exposant décalé nul et une mantisse nulle.
     représentez le 0 et tous les nombres déjà calculés sur l'axe réel.
 
-## La feuille de route
+### La feuille de route
 
 1. **Convertir un nombre à virgule en binaire**\
     Convertissez d'abord la partie entière, puis par multiplications 

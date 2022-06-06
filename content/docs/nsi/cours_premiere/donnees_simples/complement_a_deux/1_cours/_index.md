@@ -7,7 +7,7 @@ date: 2020/07/25
 
 ---
 
-### pdf [pour impression](./complement_a_2_eleves.pdf)
+pdf [pour impression](./complement_a_2_eleves.pdf)
 
 
 # Le complément à deux : comment représenter les entiers relatifs ?
@@ -24,11 +24,13 @@ date: 2020/07/25
 Un signe n'est pas un nombre... On ne peut pas l'encoder directement en binaire.
 
 
+{{< hint info >}}
 Le principe est d'attribuer au _bit de poids fort_ (premier bit) le signe du
 nombre.
 
 * Si le _bit de poids_ fort est **0**, le nombre est **positif**,
 * Si le _bit de poids_ fort est **1**, le nombre est **négatif**.
+{{< /hint >}}
 
 ## Nombres encodés sur un octet
 
@@ -40,7 +42,9 @@ Sinon :
 * Comment déterminer "le bit de poids fort" ?
 * Comment savoir où s'arrête le nombre ?
 
-Durant tout le chapitre, on encodera **nos nombres entiers sur 8 bits.**
+{{< hint danger >}}
+Dans tout ce document, on encodera **nos nombres entiers sur 8 bits.**
+{{< /hint >}}
 
 ## Approche naïve : binaire signé
 
@@ -56,22 +60,36 @@ Pour encoder un entier sur 8 bits,
 * Si le nombre est positif, on garde le bit de poids fort à 0,
 * **Sinon, on met le bit de poids fort à 1.**
 
+Ce qui fait donc :
 
-### 27
+{{< hint info >}}
+**Binaire signé sur un octet**
+* 1 bit de signe (0: positif, 1, négatif),
+* 7 bits pour la valeur absolue.
+{{< /hint >}}
+
+
+On peut donc représenter de `1 111 1111` à `0 111 1111` soit de -127 à 127.
+
+Que dire des nombres : `1 000 0000` et `0 000 0000` ? 
+
+Ils valent tous deux 0... on les note -0 et +0.
+
+**Premier exemple : 27**
 
 ```
 
 27 = 0b11011
 
 On complète sur 8 bits :
-27 = 0b 0001 1011
+27 = 0001 1011
 
 27 > 0 on garde le premier bit à 0
 ```
 
-## Approche naïve : binaire signé
+La représentation en binaire signé sur un octet de 27 est `0 001 1011`
 
-### -9
+**Autre exemple : -9**
 
 ```
 
@@ -80,29 +98,36 @@ La valeur absolue de -9 est 9.
 9 = 0b1001
 
 On complète sur 8 bits :
-9 = 0b 0000 1001
+9 = 0000 1001
+
 -9 < 0 on remplace le premier bit par -1 :
 
--9 = 0b 1000 1001
+-9 = 1 000 1001
 ```
+
+La représentation en binaire signé sur un octet de -9 est `1 000 1001`
+
 **Jusqu'ici tout va bien...**
 
-## Et soudain, c'est le drame...
+### Et soudain, c'est le drame...
 
-### Essayons d'ajouter ces exemples :
+Essayons d'ajouter ces exemples :
 
 Vérifions que $27 + (-9) = 18$
 
 ```
-  0b 0001 1011
-+ 0b 1000 1001
---------------
-= 0b 1010 0100
+   0001 1011
++  1000 1001
+------------
+=  1010 0100
 ```
 
-... mais `0b 1010 0100 = -36` en binaire signé...
+... mais `1 010 0100 = -36` en binaire signé sur un octet...
 
-À retenir : **Le binaire signé ne permet pas de réaliser les additions habituelles**
+
+{{< hint info >}}
+**Le binaire signé ne permet pas de réaliser les additions habituelles**
+{{< /hint >}}
 
 ---
 
@@ -110,14 +135,13 @@ Vérifions que $27 + (-9) = 18$
 
 On suppose toujours nos entiers encodés sur un octet.
 
-1. Donner la représentation binaire naïve de 12, de -100 et de -88.
-2. Réaliser l'addition binaire bit à bit $12 + (-100)$.
+1. Donner la représentation binaire signé de 12, de -100 et de -88.
+2. Réaliser l'addition binaire bit à bit 12 + (-100).
 3. Comparer avec le résultat obtenu.
 
 
-## La méthode naïve ne permet pas de faire de calculs !
 
-Avec la méthode naïve, **on ne peut plus réaliser d'opération naturelle sur les entiers**.
+Avec le binaire signé, **on ne peut plus réaliser d'opération naturelle sur les entiers**.
 On a maintenant deux objectifs :
 
 1. Représenter les entiers relatifs,
@@ -126,36 +150,35 @@ On a maintenant deux objectifs :
 
 ---
 
-# Le complément à deux
+## Le complément à deux
 
 
 On doit encore travailler avec **une taille fixe**
 
 On choisit à nouveau 8 bits par simplicité.
 
-## Complètement à deux : entiers positifs
+### Entiers positifs
 
 
-1. coder l'entier en binaire comme d'habitude,
-2. compléter l'octet avec des 0 devant.
+1. Coder l'entier en binaire comme d'habitude,
+2. Compléter l'octet avec des 0 devant.
 
-## Complément à deux : entiers négatifs
+### Entiers négatifs
 
 
 1. Coder la valeur absolue du nombre en binaire,
-2. compléter l'octet avec des 0 devant,
-3. échanger tous les bits ($1 \leftrightarrow 0$),
-4. ajouter 1.
+2. Compléter l'octet avec des 0 devant,
+3. Échanger tous les bits ($1 \leftrightarrow 0$),
+4. Ajouter 1.
 
 
-## Signe du complément à deux
+### Signe du complément à deux
 
-* Si le bit de poids fort est 0 : le nombre est positif
-* Si le bit de poids fort est 1 : le nombre est négatif
+* Si le bit de poids fort est 0, le nombre est positif
+* Si le bit de poids fort est 1, le nombre est négatif
 
-## Exemple 1 : 27
+**Exemple 1 : 27**
 
-### 27
 
 ```
 
@@ -167,9 +190,8 @@ On choisit à nouveau 8 bits par simplicité.
 
 Le complément à 2 sur un octet de 27 est `0b 0001 1011`
 
-## Exemple 2 : -9
+**Exemple 2 : -9**
 
-### -9
 
 ```
 
@@ -192,41 +214,43 @@ La méthode précédente se code facilement, elle est plus pénible à la main.
 
 La méthode rapide : complément à 2 sur un octet de $n$ :
 
-> Si l'entier est négatif : 
->
-> 1. donner la représentation binaire de $|n|$
-> 2. Compléter à gauche jusqu'à avoir la taille voulue
-> 3. de droite à gauche, conserver tous les bits jusqu'au premier 1 inclus
-> 4. changer tous les bits à gauche
+{{< hint info >}}
+Si l'entier est négatif : 
+
+1. donner la représentation binaire de la valeur absolue
+2. Compléter à gauche jusqu'à avoir la taille voulue
+3. de droite à gauche, conserver tous les bits jusqu'au premier 1 inclus
+4. changer tous les bits à gauche
+{{< /hint >}}
 
 
-### Méthode rapide : exemple
+**Exemple $n = -108$**
 
-> $n = -108$
+1. Valeur absolue : 
 
-Valeur absolue : 
+    $|n| = 108 = 64 + 32 + 8 + 4$
 
-> $|n| = 108 = 64 + 32 + 8 + 4$
+    Représentation binaire :
 
-Représentation binaire :
+    $|n| = 108$ = `110 1100`
 
-> $|n| = 108$ = `0b110 1100`
+2. Compléter :
 
-Compléter :
+    $|n| = 108$ = `0110 1100`
 
-> $|n| = 108$ = `0b0110 1100`
+3. Conserver les 0 à droite jusqu'au premier 1 inclus, changer tous les
+    bits à gauche.
 
-Conserver les 0 à droite jusqu'au premier 1 inclus, changer tous les
-bits à gauche.
+    $n = -108$ = `  10010  100`
 
-> $n = -108$ = `  0b1001 0100`
-
-
+La représentation en complément à 2 sur un octet de $-108$ est `1001 0100`.
 
 
-### Vérifions : $27 + (-9)$
 
-Vérifions : $27 + (-9) = 18$
+
+
+**Vérifions : $27 + (-9)$**
+
 
 ```
   0001 1011
@@ -235,7 +259,7 @@ Vérifions : $27 + (-9) = 18$
 = 0001 0010
 ```
 
-On vérifie immédiatement que `18 = 0b10010`
+On a bien `18 = 0b10010`
 
 **Remarque** la dernière retenue (tout à gauche) disparait.
 
@@ -271,9 +295,8 @@ $1 \times 1 + 1\times 2 + 1\times 8 + 1\times 16 = 27$
 3. Convertir en décimal normalement,
 4. Changer le signe.
 
-### Exemple : `0b 1111 0111`, en complément à 2 sur 8 bits,
+**Exemple : `0b 1111 0111`, en complément à 2 sur 8 bits,**
 
-**Exemple :** `0b 1111 0111`
 
 ```
 1. On échange tous les bits,
@@ -286,23 +309,30 @@ $1 \times 1 + 1\times 2 + 1\times 8 + 1\times 16 = 27$
     0b 1111 0111 = -9
 ```
 
+{{< hint info >}}
 ## Du complément à 2 au le décimal, méthode rapide.
 
-1. Conserver tous les bits à 0 droite jusqu'au premier 1 inclus,
+Si le nombre est positif, comme d'habitude.
+
+Si le nombre est négatif :
+
+1. De droite à gauche, conserver tous jusqu'au premier 1 inclus,
 2. Échanger tous les bits **à gauche** de ce 1,
 3. Convertir en décimal normalement,
 4. Changer le signe,
+{{< /hint >}}
 
-### Exemple : `0b 1010 1000`, en complément à 2 sur 8 bits,
+**Exemple : `0b 1010 1000`, en complément à 2 sur 8 bits**
 
 
-1. Conserver tous les bits à 0 droite jusqu'au premier 1 inclus,
-2. Échanger tous les bits à gauche de ce 1,
-    `0b 0101 1000`
-3. Convertir en décimal normalement,
-    `0b 0101 1000` = $8 + 16 + 64 = 88$
-4. Changer le signe :
-    en complément à 2 sur un octet $n =$ `0b 1010 1000` $=-88$
+1. De droite à gauche, conserver tous jusqu'au premier 1 inclus,\
+    `0000` et `1000` qui sera conservé
+2. Échanger tous les bits à gauche de ce 1,\
+    `0101 1000`
+3. Convertir en décimal normalement,\
+    `0101 1000` = $8 + 16 + 64 = 88$
+4. Changer le signe :\
+    en complément à 2 sur un octet $n =$ `1010 1000` $=-88$
 
 ---
 
@@ -318,7 +348,9 @@ Donner les notations décimales des compléments à deux sur un octet suivants :
 
 ---
 
-## Table de valeurs
+## Propriétés
+
+### Table de valeurs
 
 La table de valeur est remarquable, en particulier les "petits" nombres négatifs sont remplis de 1.
 
@@ -338,15 +370,17 @@ signe
     1 0 0 0 0 0 0 0 = -128
 ```
 
-## Combien d'entiers relatifs sur un octet ?
+### Combien d'entiers relatifs sur un octet ?
 
 
 > Sur 8 bits en complément à deux, on peut encoder de $-128$ à $127$,
 
-## Combien d'entiers relatifs sur avec `n` bits ?
+### Combien d'entiers relatifs sur avec `n` bits ?
 
 
-> Sur un octet on peut encoder de $-2^{n-1}$ à $2^{n-1} - 1$.
+{{< hint info >}}
+Sur  $n$ bits on peut encoder de $-2^{n-1}$ à $2^{n-1} - 1$.
+{{< /hint >}}
 
 
 ### Exercice 5
@@ -359,10 +393,11 @@ signe
 
 ## Complément à 2 : résumé
 
+{{< hint info >}}
 * Le complément à 2 sur $n$ bits permet de représenter des entiers positifs et négatifs,
 * Le signe du nombre est donné par le premier bit,
 * L'addition usuelle fonctionne aussi avec les entiers _négatifs_.
-* Cette méthode permet d'encoder les entiers de $-2^{n-1}$ à $2^{n-1} - 1$
+* Cette méthode permet d'encoder sur $n$ bits les entiers de $-2^{n-1}$ à $2^{n-1} - 1$
 * La méthode rapide pour encoder un entier en complément à 2 sur un octet :
     * s'il est positif, on l'écrit en binaire et on complète l'octet avec des 0 à gauche,
     * s'il est négatif, 
@@ -371,6 +406,7 @@ signe
         * on conserve tous les 0 à droite jusqu'au premier 1 inclus,
         * on inverse tous les bits à gauche de ce premier 1.
 * Pour décoder on fait le contraire
+{{< /hint >}}
 
 ---
 

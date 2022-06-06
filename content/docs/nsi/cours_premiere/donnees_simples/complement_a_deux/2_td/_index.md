@@ -6,13 +6,13 @@ weight: 2
 
 ---
 
-### pdf : [pour impression](./complement_a_2_TD.pdf)
+pdf [pour impression](./complement_a_2_TD.pdf)
 
 ## 0. V/F
 
 1. Tous les entiers relatifs admettent une unique représentation en complément à deux.
 2. En complément à deux sur un octet, on peut représenter des nombres de -128 à 127.
-3. L'addition en complément à deux sur un octet de 100 et 110 donne un résultat conforme.
+3. L'addition en complément à deux sur un octet de 100 et -110 donne un résultat conforme (-10).
 
 ## 1. Additions d'entiers relatifs
 

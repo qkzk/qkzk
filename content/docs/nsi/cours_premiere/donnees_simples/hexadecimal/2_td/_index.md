@@ -5,11 +5,11 @@ weight: 2
 
 ---
 
-### pdf : [pour impression](./hexa_td.pdf)
+pdf : [pour impression](./hexa_td.pdf)
 
 ## Exercice 1
 
-1. Convertir en décimal :
+1. Convertir en binaire et en décimal :
 
     * `0x10`
     * `0xA0`
@@ -87,10 +87,10 @@ alors que la feuille sur laquelle on imprime est _blanche_...
 Pour imprimer on utilise l'encodage des couleurs `CMYK`.
 
 Il existe d'autres encodages pour les couleurs, qui sont adaptés aux travaux
-de graphisme, en particulier HSV (teinte, saturation, valeur) qui convient
+de graphisme, en particulier HSV : hue (_teinte_), saturation, value qui convient
 davantage à la perception humaine des couleurs.
 
-[hsv](https://upload.wikimedia.org/wikipedia/commons/1/1b/Triangulo_HSV.png)
+![hsv](./Triangulo_HSV.png)
 
 
 

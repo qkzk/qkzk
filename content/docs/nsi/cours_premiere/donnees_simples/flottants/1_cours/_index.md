@@ -8,24 +8,54 @@ weight: 1
 
 ---
 
-### pdf : [pour impression](/uploads/docsnsi/flottants/flottants.pdf)
-
 # Nombre à virgule flottantes
+
+pdf : [pour impression](/uploads/docsnsi/flottants/flottants.pdf)
+
 
 Comment représenter un nombre à virgule en machine ?
 
-Comment le faire efficacement pour des nombres extrèmement proches de 0
-comme \
-`0,00000000000000000000000000000000000000000000000000000123` ou
-extrèmement grands comme\
-`87686786786872163812638162386123861387163871687168,78613` ?
+
+Souvenons nous des contraines de base : chaque nombre doit occuper un nombre fixe de bits.
+
+## Approche simpliste : la virgule fixe.
+
+
+On écrit chaque chiffre dans une case, la position indique la valeur !
+
+Le séparateur décimal est toujours au même endroit.
+
+Voici ce que cela donnerait pour 8 chiffres décimaux avec un séparateur décimal au centre :
+
+| 1000   | 100   | 10   | 1   |     | 0.1   | 0.01   | 0.001   | 0.0001   |
+| :----: | ----: | :--: | --: | :-: | :---: | :----: | :-----: | :------: |
+| 0      | 2     | 3    | 4   | .   | 4     | 6      | 2       | 1        |
+
+
+Pas très efficace :
+
+Les nombres sont limités : ici on ne peut dépasser `9999.9999` et le plus petit est `0.0001`.
+
+Avec 8 chiffres on devrait pouvoir décrire `9999 9999` et `0.000 0001`
+
+## La virgule flottante
+
+
+Comment le faire efficacement pour des nombres 
+
+* extrèmement proches de 0 
+
+    `0,0000000000000000000000000000000123` 
+
+* ou extrèmement grands 
+
+    `876867867868721637163871687168,78613` ?
 
 
 La réponse à ce premier problème est la notation scientifique : $2.3772 \times 10^{32}$
 
 
-Une autre difficulté apparaît : les machines fonctionnent en base 2 tandis
-que nous utilisons quotidiennement la base 10. 
+Bien sûr en machine, on utilise la base 2 tandis que nous utilisons quotidiennement la base 10. 
 
 Cela soulève immédiatement une autre difficulté :
 
@@ -53,11 +83,19 @@ False
 
 ## Nombres à virgule flottante
 
+
+{{< hint info >}}
 Dans les machines, on utilise **les nombres à virgule flottante**
 
 Les nombres sont alors appelés des *flottants* (*floats* en anglais)
 
-### L'égalité de deux flottants n'a aucun sens
+**L'égalité de deux flottants n'a aucun sens**
+
+```python
+>>> 0.1 + 0.2 == 0.3
+False
+```
+{{< /hint >}}
 
 ## Notation positionnelle des décimaux
 
@@ -86,9 +124,15 @@ chiffres      1     1     1   .         1     0     1
 
 4 + 2 + 1 + 1/2 + 1/8 = 7.625
 
+
+Exactement comme pour les décimaux, n'importe quel nombre réel peut être approché aussi précisément que l'on veut par des dyadiques.
+
+$3.14 < \pi < 3.15$
+
+
 ## Décimal vers binaire pour les nombres à virgule
 
-On cherche à convertir 2.3 en binaire.
+On cherche à convertir 2.3 en dyadique (_on dira souvent "en binaire"_).
 
 1. On commence par la partie entière : `2 = 0b10`
 2. On multiplie le nombre précédent, sans sa partie entière, par 2.
@@ -136,7 +180,7 @@ $$x = 0,001001001_2 = \frac{1}{2^3} + \frac{1}{2^6} + \frac{1}{2^9} = 0.14257812
 
 0,1 et 0,2 ont des notations décimales _finies_ (ce sont des _décimaux_)
 
-Leur notiation _dyadique_ n'est pas finie !
+Leur notation _dyadique_ n'est pas finie !
 
 $$0,1 = (0,00011001100110011001100110011001100110011\cdots)_2$$
 
@@ -151,13 +195,13 @@ stocke ainsi ses nombres.
 
 **Problème :**
 
-### comment manipuler des nombres très grands et des nombres très petits en même temps ?
+**comment manipuler des nombres très grands et des nombres très petits en même temps ?**
 
 La taille de l'univers d'un côté, la masse d'un atome de l'autre : il faudrait
 des milliers de chiffres.
 
 
-## La notation scientifique
+### Rappel : calculer avec la notation scientifique
 
 
 $A = 300 000 000 \times 0.000 000 15$
@@ -185,6 +229,8 @@ La machine procède de la même manière en base 2.
 
 ## Nombre dyadique
 
+
+{{< hint info >}}
 Un **nombre dyadique** est s'écrit :
 $$\pm( 1,b1 \cdots bk)_2 \times 2^e$$
 
@@ -192,23 +238,26 @@ où $b1,\ldots,bk$ sont des bits et $e$ est un entier relatif.
 
 La suite de bits $b1\ldots bk$ est la _mantisse_ du nombre, \
 La puissance de 2 est _l’exposant_ du nombre.
+{{< /hint >}}
 
-## Exemple
+### Exemple
 
 $6,25 = (110,01)_2 = (1,1001)_2  \times 2^2$
 
 * La mantisse est la suite `1 0 0 1`
 * L'exposant est `2`
 
-## Nombres à virgule flottante
+## Nombres à virgule flottante en détail
+
+On rencontre deux représentations courantes des flottants _simple précision_ : 32 bits et _double précision_ : 64 bits.
 
 La _norme IEE 754_ de 1985 est adoptée par la majorité des langages informatiques modernes.
 
 Dans cette norme (IEE 754, double précision), les nombres dyadiques sont codés sur 64 bits en réservant :
 
-* 1 bit pour le signe $S$,
-* 11 bits pour l’exposant $E$,
-* 52 bits pour la mantisse $M$.
+* $1$ bit pour le signe $S$,
+* $11$ bits pour l’exposant $E$,
+* $52$ bits pour la mantisse $M$.
 
 La valeur du nombre est alors :
 
@@ -224,7 +273,7 @@ Ce qu'on peut résumer ainsi :
 Pour des questions techniques il est nécessaire d'y inclure d'autres objets comme `NaN` (_not a number_)
 et des infinis positifs et négatifs.
 
-## Amplitude
+### Amplitude
 
 Sans entrer dans les détails, en codant sur 64 bits on peut représenter des
 nombres entre :
@@ -243,7 +292,9 @@ Quand un flottant dépasse le plus grand nombre possible il est considéré comm
 inf
 ```
 
-## Quelques surprises avec `inf`
+{{< expand "Compléments" "..." >}}
+### Quelques surprises avec `inf` et `nan`
+
 
 `inf` se comporte "grosso modo" comme l'infini des mathématiques...
 
@@ -271,15 +322,42 @@ False
 Attention donc, les comparaisons entre grands entiers et grands flottants ne
 sont pas correctes mathématiquement parlant. Il faut absolument les éviter.
 
+Bon okay... c'est bizarre mais on retrouve quelques-unes de ces règles en maths, lorsqu'on calcule des limites.
+
+Et pour `nan` ? Et bien c'est mieux encore :
+
+```python
+>>> a = float('inf') - float('inf')
+>>> a
+nan
+>>> a == a
+False
+```
+
+En gros, `nan` est le résultat d'une opération qui ne peut être comparé...
+
+Lorsqu'on a deux nombres _immenses_ comme 
+
+$a = \text{nombre de grains de sable sur terre}^\text{nombre d'étoiles de la voie lactée}$
+
+$b = \text{nombre d'étoiles de la voie lactée}^\text{nombre de grains de sable sur terre}$
+
+qu'on soustraie, on ne peut deviner l'ordre de grandeur.
+
+Ainsi ce résultat est évalué à `nan`
+
+Deux `nan` ne sont pas forcément égaux... D'où `nan != nan`
+{{< /expand >}}
+
 ## Deux problèmes dans les calculs avec les flottants
 
 ### Absorption
 
 ```python
->>> (1. + 2.**53) - 2.**53  # = 1
-0.0                         # 1 a été absorbé par l'enorme nombre 2**53
->>> 2.**53 - 2.**53 + 1     # on change l'ordre...
-1                           # et ça fonctionne
+>>> (1.0 + 2.0**53) - 2.0**53  # = 1
+0.0                            # 1 a été absorbé par l'enorme nombre 2**53
+>>> 2.0**53 - 2.0**53 + 1      # on change l'ordre...
+1                              # et ça fonctionne
 ```
 
 ### Annulation
@@ -287,13 +365,13 @@ sont pas correctes mathématiquement parlant. Il faut absolument les éviter.
 Soustraire deux nombres proches fait perdre de la précision
 
 ```python
->>> a = 2.**53 + 1
->>> b = 2.**53
+>>> a = 2.0 ** 53 + 1
+>>> b = 2.0 ** 53
 >>> a - b
 0.0
 ```
 
-## Il peut y avoir des conséquences
+### Il peut y avoir des conséquences
 
 Les calculs avec des flottants engendrent toujours des erreurs qu'il
 est possible d'éviter en limitant leur quantité et les répétitions.
@@ -316,20 +394,116 @@ est possible d'éviter en limitant leur quantité et les répétitions.
 
 ## Outils
 
-1. Obtenir la représentation interne d'un nombre à virgule flottante en Python :
+Obtenir la représentation interne d'un nombre à virgule flottante en Python :
 
-  ```python
-  import struct
+```python
+import struct
 
-  def float_rep(num: float) -> str:
-      """
-      Renvoie les 64 bits de la représentation interne en précision double
-      s : signe     : 1 bit
-      e : exposant  : 11 bits
-      m : mantisse  : 52 bits
-      num = (-1)**s * 1,m * 2 ** (e - 1023)
-      """
-      return ''.join("{:08b}".format(elem) for elem in struct.pack('!d', num))
-  ```
+def float_rep(num: float) -> str:
+    """
+    Renvoie les 64 bits de la représentation interne en précision double
+    s : signe     : 1 bit
+    e : exposant  : 11 bits
+    m : mantisse  : 52 bits
+    num = (-1)**s * 1,m * 2 ** (e - 1023)
+    """
+    return ''.join("{:08b}".format(elem) for elem in struct.pack('!d', num))
 
-2. [floating point converter](https://www.exploringbinary.com/floating-point-converter/), un outil en ligne.
+
+print(float_rep(8 + 4 + 2 + 1/4))
+```
+
+Qui affiche :
+
+
+```
+0100000000101100100000000000000000000000000000000000000000000000
+```
+
+
+
+{{<python title="Représentation des flottants">}}import struct
+
+def float_rep(num: float) -> str:
+    """
+    Renvoie les 64 bits de la représentation interne en précision double
+    s : signe     : 1 bit
+    e : exposant  : 11 bits
+    m : mantisse  : 52 bits
+    num = (-1)**s * 1,m * 2 ** (e - 1023)
+    """
+    return ''.join("{:08b}".format(elem) for elem in struct.pack('!d', num))
+
+
+print(float_rep(8 + 4 + 2 + 1/4))
+{{</python>}}
+
+
+Faisons le calcul :
+
+Commençons par découper : 
+
+* signe : 1 bit, 
+* exposant : 11 bits, 
+* mantisse : 52 bits
+
+```python
+
+0100000000101100100000000000000000000000000000000000000000000000
+
+Soit 
+
+0   10000000010   1100100000000000000000000000000000000000000000000000
+^   \_________/   \__________________________________________________/
+|    exposant e                       mantisse m
+|   
+signe s
+```
+
+
+```
+s:  0   
+le nombre est positif
+```
+C'était facile.
+
+Pour l'exposant, il faut lui soustraire 1023 :
+
+```
+exposant: 
+10000000010
+
+soit (0b10000000010 - 1023) = (1026 - 1023) = 3
+```
+
+Le vrai exposant est donc `3`, le nombre est multiplé par `2 ** 3`.
+
+_Cette soustraction permet de représenter les exposants négatifs (proches de 0) par des nombres positifs !_
+
+
+Pour la mantisse, on doit se souvenir que le premier bit est toujours égal à 1 et est effacé :
+
+```
+mantisse
+1100100000000000000000000000000000000000000000000000
+
+Ces bits étant après la virugle, on peut enlever les 0 finaux :
+
+11001
+
+On ajoute 1 avant la virgule :
+1,11001 = 1 + 1/2 + 1/4 + 0 + 0 + 1/32 = 57 / 32
+```
+
+On peut maintenant appliquer la formule vue plus haut :
+
+```
+n = (-1)**0 * 57/32 * 2**3 = 14.25
+
+Vérifions : 8 + 4 + 2 + 1/4 = 14.25
+
+```
+
+---
+
+Un outil en ligne : [floating point converter](https://www.exploringbinary.com/floating-point-converter/), 

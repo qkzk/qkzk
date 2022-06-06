@@ -5,11 +5,22 @@ weight: 2
 
 ---
 
-### pdf: [pour impression](./chaines_td.pdf)
+pdf [pour impression](./chaines_td.pdf)
 
 ## Exercice 1
 
+
 1. Citer trois encodages différents permettant de représenter des chaînes de caractères en mémoire.
+2. Lesquels utilisent une taille fixe ?
+3. Dans la mémoire on lit l'octet `0x41` de représentation binaire `0100 0001` et valant 65.
+Est-ce une lettre ? Si oui laquelle ? Un nombre ?
+4. Plaçons-nous à la place d'une machine incapable de comprendre la signification d'un texte.
+
+    On reçoit un paquet d'octets supposés représenter du texte dont on ne connait pas l'encodage.
+
+    * Peut-on savoir s'il est encodé en ASCII ? Comment ?
+    * Peut-on savoir s'il est encodé en UTF-8 ? Comment ?
+    * Et sinon ? Peut-on être confiant qu'en au fait qu'il soit encodé d'une manière ou d'une autre ?
 
 ## Exercice 2 - Chiffrement de César
 
@@ -89,6 +100,12 @@ chr(i, /)
     'BONJOUR'
     ```
 
+9. Dans certains forums old school, on trouve une fonction appelée `rot13` et qui 
+    consiste à effectuer un chiffrement de César avec une clé valant 13 sur du texte ASCII.
+
+    1. Effectuez `x = rot13("ABC")`.
+    2. Effectuez `rot13(x)`.
+    3. Que remarque-t-on ? Expliquer.
 
 
 ## Exercice 2 - Se déplacer dans la table ASCII
@@ -254,6 +271,11 @@ Elle est composée de trois parties :
 
     Qui va ouvrir le fichier en mode lecture et vous afficher son contenu
     sous la forme d'une chaîne de caractères.
+
+
+{{< expand  "Vérifiez" "..." >}}
+[ascii_table.txt](./ascii_table.txt)
+{{< /expand >}}
 
 
 ## Exercice 4 - Un peu d'UTF-8
