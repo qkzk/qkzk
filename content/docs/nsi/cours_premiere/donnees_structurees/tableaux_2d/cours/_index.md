@@ -1,5 +1,5 @@
 ---
-title: "Cours : tableaux 2D"
+title: "Cours"
 bookCollapseSection: true
 author: "qkzk"
 date: "2020/11/22"
@@ -7,7 +7,7 @@ weight: 1
 
 ---
 
-### pdf : [pour impression](/uploads/docsnsi/tableaux_2d/cours_2d.pdf)
+pdf : [pour impression](/uploads/docsnsi/tableaux_2d/cours_2d.pdf)
 
 # Structures imbriquées et compréhension
 

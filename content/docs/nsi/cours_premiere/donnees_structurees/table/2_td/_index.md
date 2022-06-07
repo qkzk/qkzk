@@ -7,9 +7,9 @@ weight: 2
 
 ---
 
-### pdf : [pour impression](./2_td.pdf)
+pdf : [pour impression](./2_td.pdf)
 
-# 1. Reconnaître un fichier csv
+## 1. Reconnaître un fichier csv
 
 ```
 nom       prenom      date_naissance
@@ -62,7 +62,7 @@ Geronomo,Apache, France,212.12
     D. l'auteur de la table de données
 
 
-# 1. Sélection et projections depuis une table donnée
+## 2. Sélection et projections depuis une table donnée
 
 On considère la table suivante :
 
@@ -105,7 +105,7 @@ repertoire = [
 
 
 
-# 2. Importer et manipuler une table
+## 3. Importer et manipuler une table
 
 
 On dispose du fichier « info.csv » donné ci-dessous :
@@ -140,7 +140,7 @@ Détaillons ce programme :
 
  Remarquons que tous les éléments des enregistrements sont des `str` !
 
-## Questions
+### Questions
 
 1. Combien d'éléments comporte la liste `tableau` ?
 2. Évaluez `tableau[2]`.
@@ -154,7 +154,7 @@ Détaillons ce programme :
       plus rempli. On prendra garde au _type_ des données dans `tableau` !
 
 
-# 3. Importer une table
+## 4. Importer une table
 
 On considère le fichier csv `films.csv` dont voici un extrait.
 
@@ -169,7 +169,7 @@ réponse ainsi que la valeur de celle-ci lorsque l'information est connue.
 3. Combien de champs différents comporte cette table ?
 3. Quelles sont les différents champs ?
 
-# 4. Exporter une table, sélections, projections
+## 5. Exporter une table, sélections, projections
 
 Les joueurs d'échecs sont classés selon les résultats de leurs parties.
 Chaque partie permet de gagner ou perdre des points élo et les joueurs
@@ -194,23 +194,23 @@ joueurs = [
 ]
 ```
 
-## Enregistrer
+### Enregistrer
 
 1. Enregistrer cette table au format CSV.
 
-## Parcourir les données
+### Parcourir les données
 
 2. Comment accéder aux différents champs ?
 3. Comment connaître le nombre d'enregistrements ?
 
-## Sélections
+### Sélections
 
 2. Comment sont enregistrées les nationalités ?
 3. Créer la table des joueurs français.
 4. Créer la table des joueurs ayant plus de 2780 points élo.
 5. Compter les joueurs de la table ayant entre 2700 et 2800 points élo.
 
-## Projections
+### Projections
 
 6. Créer la projection des noms de joueurs. Limiter ensuite cette table
     au top 5.

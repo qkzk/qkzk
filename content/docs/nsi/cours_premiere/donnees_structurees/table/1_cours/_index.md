@@ -32,20 +32,20 @@ Par "données en table" on entend ce type d'information :
 
 * correctement importé dans un tableur
 
-  $\;$![dans un fichier texte](/uploads/docsnsi/table_csv/img/fr-creation-fichier-csv.jpg)
+  ![dans un fichier texte](/uploads/docsnsi/table_csv/img/fr-creation-fichier-csv.jpg)
 
 * sans mise en forme dans un tableur
 
-  $\;$![dans un tableur](/uploads/docsnsi/table_csv/img/csv_1.png)
+  ![dans un tableur](/uploads/docsnsi/table_csv/img/csv_1.png)
 
 * sans mise en forme dans un fichier texte
 
-  $\;$![dans un tableur](/uploads/docsnsi/table_csv/img/eg_formats_csv01_01.png)
+  ![dans un tableur](/uploads/docsnsi/table_csv/img/eg_formats_csv01_01.png)
 
 
 Excel et les tableurs évolués réalisent un traitement complexe des données 
 mais on peut toujours exporter un tableau de données vers un fichier au
-format particulier ou importer un tel fichier.
+format particulier ou importer un tel fichier
 
 
 
@@ -128,7 +128,8 @@ mais on accède aux valeurs _par leur clés_.
 
 # 3. Fichiers CSV
 
-* Le format CSV (Comma Separated Value) est couramment utilisé pour importer ou
+{{< hint info >}}
+* Le format CSV (_Comma Separated Value_) est couramment utilisé pour importer ou
     exporter des données d'une feuille de calcul d'un tableur. C'est un fichier
     texte dans lequel chaque ligne correspond à une ligne du tableau, les 
     colonnes étant séparées par des **virgules**. Il permet donc de représenter
@@ -136,6 +137,7 @@ mais on accède aux valeurs _par leur clés_.
 
     **À noter :** _Ce format est né bien avant les ordinateurs personnels et
     le format_ `xls` _puisque c'est en 1972 qu'il a été introduit._
+{{< /hint >}}
 
 * Pour éviter les problèmes dûs à l'absence de standardisation du séparateur
     décimal (virgule en France, point dans les pays anglo-saxons), on peut

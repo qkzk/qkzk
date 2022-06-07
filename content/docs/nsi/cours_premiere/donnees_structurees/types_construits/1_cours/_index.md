@@ -1,25 +1,30 @@
 ---
-title: "Types construits : cours"
+title: "Cours"
 bookCollapseSection: true
 weight: 1
 
 ---
 
 
-## pdf [pour impression](./types_complexes.pdf)
+[pour impression](./types_complexes.pdf)
 
 
 # Types construits
 
 ## Qu'est-ce ?
 
+
+{{< hint info >}}
 Par type construit, on entend, tout objet composé de plusieurs objets simples
+{{< /hint >}}
 
-# Tuples
+## Tuples
 
-## Qu'est-ce qu'un tuple ?
+### Qu'est-ce qu'un tuple ?
 
+{{< hint info >}}
 Un _tuple_ est une série de valeurs séparées par des virgules.
+{{< /hint >}}
 
 Exemple : `tup = (1, 2, 3)` ou `tup = ('a', 'b', 'c')`
 
@@ -27,7 +32,9 @@ En python, les tuples peuvent être constitués de valeurs de type différent.
 
 ## Manipuler les tuples
 
+{{< hint info >}}
 **Les tuples ne sont pas mutables** : on ne peut en changer le contenu
+{{< /hint >}}
 
 On accède à un élément par son indice :
 
@@ -37,9 +44,9 @@ On accède à un élément par son indice :
 'c'
 ```
 
-## Fonction qui retourne un tuple
+### Fonction qui renvoie un tuple
 
-Une fonction peut retourner un tuple !
+Une fonction peut renvoyer un tuple !
 
 ```python
 def oppose_vecteur(x, y):
@@ -53,20 +60,25 @@ et cela donne :
 (-1, -3)
 ```
 
-# Tableaux
+## Tableaux : le type `list`
 
-## Qu'est-ce qu'un tableau ?
+### Qu'est-ce qu'un tableau ?
 
+
+{{< hint info >}}
 Un **tableau** est une collection _mutable_ d'objets.
+{{< /hint >}}
 
+{{< hint info >}}
 Contrairement aux tuples, on peut en changer le contenu. On peut aussi ajouter
 ou retirer des éléments à un tableau.
+{{< /hint >}}
 
 En python, tous les tableaux ont le type `list`
 
 Pourquoi cette distinction ? Pour éviter les confusions ultérieures !
 
-## Tableaux construits à la main
+### Tableaux construits à la main
 
 On peut créer, de plusieurs manières un tableau :
 
@@ -86,24 +98,26 @@ On peut créer, de plusieurs manières un tableau :
 [0, 1, 4, 9, 16]
 ```
 
-## Tableaux construits par compréhension
+### Tableaux construits par compréhension
 
 Il existe une manière beaucoup plus simple d'écrire les tableaux : par
 compréhension
 
-```
-[carres des entiers de 0 à 4] = [0, 1, 4, 9, 16]
-```
+Pour construire la liste des carrés des entiers de 0 à 4 :
 
-En python :
+
 
 ```python
->>> tab = [i ** 2 for i in range(5)]
->>> tab
+[i ** 2 for i in range(5)]
+```
+
+soit :
+
+```python
 [0, 1, 4, 9, 16]
 ```
 
-## Liste par compréhension complexe
+### Liste par compréhension complexe
 
 On peut imbriquer plusieurs boucles ou ajouter des conditions :
 
@@ -115,18 +129,24 @@ En python :
 
 
 ```python
->>> tab = [i ** 2 for i in range(10) if i % 3 == 0]
->>> tab
+[i ** 2 for i in range(10) if i % 3 == 0]
+```
+
+soit
+
+```python
 [0, 9, 81]
 ```
 
 `i % 3` est le reste de la division de i par 3 (se lit `i` _modulo_ `3`).
 
-# Dictionnaire
+## Dictionnaire
 
-## Qu'est-ce qu'un dictionnaire ?
+### Qu'est-ce qu'un dictionnaire ?
 
-Un dictionnaire est un enregistrement de valeurs associées à des clés (parfois appelées champs).
+{{< hint info >}}
+Un dictionnaire est un enregistrement de **valeurs** associées à des **clés**.
+{{< /hint >}}
 
 Exemple : répertoire téléphonique
 
@@ -136,7 +156,7 @@ Exemple : répertoire téléphonique
 | Robert   	| 0320123456 	|
 | Amandine 	| 0320987654 	|
 
-## Dictionnaire par clés et valeurs
+### Dictionnaire par clés et valeurs
 
 En python cela donne :
 
@@ -148,7 +168,7 @@ tel = {
 }
 ```
 
-## Accéder à une valeur
+### Accéder à une valeur
 
 On accède à une **valeur** par sa **clé**
 
@@ -161,9 +181,11 @@ dictionnaire[cle] ----------> valeur
 "0320987654"
 ```
 
-## Dictionnaire : mutable
+### Dictionnaire : mutable
 
+{{< hint info >}}
 Les dictionnaires sont mutables.
+{{< /hint >}}
 
 Si Robert change de numéro :
 
@@ -171,19 +193,25 @@ Si Robert change de numéro :
 tel["Robert"] = "0320445566"
 ```
 
+{{< hint warning >}}
 Remarquez bien la différence de syntaxe : on utilise `:` pour déclarer le dictionnaire
 et `=` pour changer une valeur
+{{< /hint >}}
 
-# Itérer
+---
 
-## Collections
+## Itérer
+
+### Collections
 
 En python (mais aussi dans beaucoup de langages), les éléments cités plus haut
 sont des collections. Cela signifie qu'on peut itérer dessus.
 
+> Itérer : _parcourir à l'aide d'une boucle_
+
 On peut écrire des boucles `for element in objet_construit:`
 
-## Cas simple
+### Cas simple
 
 Pour les :
 
@@ -202,7 +230,6 @@ Z
 e
 ```
 
-##
 
 ```python
 >>> tuple = (6, 4, 2)
@@ -213,7 +240,6 @@ e
 4
 ```
 
-##
 
 ```python
 >>> liste = [a-1 for a in range(3)]
@@ -224,13 +250,13 @@ e
 3
 ```
 
-## Cas particulier propres aux dictionnaires
+### Cas particulier propres aux dictionnaires
 
 Il existe plusieurs manières d'itérer sur un dictionnaire.
 
 Mais ATTENTION dans **Python < 3.6**  il n'y a pas d'ordre particulier.
 
-## Itération simple :
+**Itération simple :**
 
 ```python
 tel = {
@@ -248,7 +274,7 @@ tel = {
 "0320987654"
 ```
 
-## Itération avec `.keys()`
+**Itération avec `.keys()`**
 
 `keys()` : collection des clés (les noms dans l'exemple plus haut.)
 
@@ -262,7 +288,7 @@ tel = {
 
 C'est identique à l'itération normale !
 
-## Itération avec `.keys()`
+**Itération avec `.items()`**
 
 `items()` : collection des TUPLES (clé, valeur)
 
@@ -276,12 +302,11 @@ Le numéro de Robert est 0320123456
 Le numéro de Amandine est 0320987654
 ```
 
-## Itération avec `.values()`
+**Itération avec `.values()`**
 
-Cette fois on ne récupère que les _valeurs_. Cela ne sert pas à grand chose
-dans le cadre d'une boucle
+Cette fois on ne récupère que les _valeurs_. C'est la moins utilisée en pratique.
 
-## Dictionnaire par compréhension. _Hors programme._
+## Dictionnaire par compréhension.
 
 On peut créer des dictionnaires par compréhension :
 

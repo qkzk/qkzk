@@ -7,7 +7,7 @@ weight: 3
 
 ---
 
-### pdf : [pour impression](/uploads/docsnsi/table_csv/3_tp.pdf)
+pdf : [pour impression](/uploads/docsnsi/table_csv/3_tp.pdf)
 
 # Objectifs du TP : manipuler des données en table dans Python
 
@@ -17,9 +17,9 @@ weight: 3
 3. projeter une table,
 4. exporter une table vers un fichier csv.
 
-# Exercice 1.
+## Exercice 1
 
-## 1. Importer
+### 1. Importer
 
 
 1. Téléchargez le fichier csv suivant : [utilisateurs](/uploads/docsnsi/table_csv/utilisateurs.csv).
@@ -29,7 +29,7 @@ weight: 3
 
 3. Utiliser cette fonction pour créer la table `utilisateurs`.
 
-## 2. Sélections
+### 2. Sélectionner
 
 
 Pour toutes les sélections à effectuer, on partira de la table crée à la
@@ -43,7 +43,7 @@ On donnera une fonction Python par question (pouvant appeler d'autres fonctions)
 3. Créer la table des enregistrements des utilisateurs dont l'adresse mail fait
     partie du domaine `@example.fr`
 
-## 3. Projections
+### 3. Projecter
 
 Pour chaque _projection_ on créera une fonction qui retourne une table.
 
@@ -62,7 +62,7 @@ précédemment
         score pour chaque jeu. Enfin, effacer les doublons.
 
 
-# Exercice 2.
+## Exercice 2
 
 1. Récupérer le fichier [ville_virgule.csv](https://pixees.fr/informatiquelycee/n_site/asset/villes_virgule.csv).
     Examinez soigneusement son contenu (vous pouvez l'ouvrir localement dans
@@ -77,8 +77,8 @@ précédemment
 3. Votre ville figure-t-elle dans le fichier ? Afficher l'enregistrement qui
     lui correspond. Si ce n'est pas le cas, vous pouvez travailler avec Lille.\
     Écrire un programme qui affiche les informations de votre ville
-    dans une phrase rédigée : "J'habite Lille, qui comporte x habitants et est
-    située à y de latitude et z de longitude. Son altitude minimale est w" etc.
+    dans une phrase rédigée : "_J'habite Lille, qui comporte x habitants et est
+    située à y de latitude et z de longitude. Son altitude minimale est w_" etc.
 
 4. Après avoir sélectionné toutes les villes située à plus de 1500m d'altitude,
     calculer la moyenne de leur nombre d'habitant pour le dernier relevé

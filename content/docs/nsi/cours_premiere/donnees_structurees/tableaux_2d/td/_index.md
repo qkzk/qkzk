@@ -1,5 +1,5 @@
 ---
-title: "TD : tableaux 2D"
+title: "TD"
 author: "qkzk"
 date: "2021/05/23"
 weight: 3
@@ -8,7 +8,7 @@ bookCollapseSection: true
 ---
 
 
-### PDF [pour impression](./td_2d_comprehension.pdf)
+pdf [pour impression](./td_2d_comprehension.pdf)
 
 
 # Tableaux à deux dimensions
@@ -96,7 +96,7 @@ Le programme suivant génère une image rectangulaire comportant un dégradé
 du blanc au noir :
 
 
-$\;$![degradé](./degrade_bn.png)
+![degradé](./degrade_bn.png)
 
 ```python
 from PIL import Image
@@ -120,7 +120,7 @@ def degrade_blanc_noir():
 2. On souhaite tourner l'image afin de produire un dégradé vertical.
     Adaptez la fonction.
 
-    $\;$![degradé vetical](./degrade_vertical.png)
+    ![degradé vetical](./degrade_vertical.png)
 
 
 
@@ -164,26 +164,26 @@ for i in range(3):
     Proposer une fonction qui : 
 
     a. prend en entrée une liste de taille $n \times p$ et les nombres
-        entiers $n$ et $p$ ;
-    b. ne retourne rien ;
+        entiers $n$ et $p$ ;\
+    b. ne retourne rien ;\
     c. affiche les éléments par bloc ainsi :
 
-        ```python
-        1 3 2 3 2
-        2 4 2 6 4
-        1 3 2 1 4
-        ```
+    ```python
+    1 3 2 3 2
+    2 4 2 6 4
+    1 3 2 1 4
+    ```
 
-        On utilisera le paramètre _positionnel_ de la fonction `print` :
+    On utilisera le paramètre _positionnel_ de la fonction `print` :
 
-        ```python
-        >>> for x in range(3):
-        ...    print(x, end=" ")
-        ...
-        0 1 2
-        ```
+    ```python
+    >>> for x in range(3):
+    ...    print(x, end=" ")
+    ...
+    0 1 2
+    ```
 
-        Par défaut, Python ajoute un retour à la ligne à la fin d'un `print` : `end="\n"` 
+    Par défaut, Python ajoute un retour à la ligne à la fin d'un `print` : `end="\n"` 
 
 3. Écrire un programme Python `transforme_liste(liste, n, p)` qui transforme 
     une telle liste de taille $n \times p$

@@ -1,5 +1,5 @@
 ---
-title: "Intro : tableaux 2D"
+title: "Intro"
 author: "qkzk"
 date: "2021/12/04"
 weight: 2
@@ -9,7 +9,7 @@ bookCollapseSection: true
 
 [pdf pour impression](./td_intro_2D.pdf)
 
-# Comment représenter plusieurs dimensions dans un tableau ?
+## Comment représenter plusieurs dimensions dans un tableau ?
 
 Imaginons qu'on dispose de cases dans une grille à deux dimensions.
 Chaque case possède deux coordonnées : un numéro de ligne et un numéro de colonne.
@@ -53,7 +53,7 @@ Chaque case possède deux coordonnées : un numéro de ligne et un numéro de co
     le contenu du tableau en insérant `elem` à cette position.
 
 
-# Une autre représentation, en ligne
+## Une autre représentation, en ligne
 
 Il est possible aussi d'utiliser un seul tableau, de taille `ligne * colonne` pour représenter
 une grille. 
@@ -86,7 +86,7 @@ Ainsi pour accéder à `f` on faisait : `tableau_2d[1][2]`
 On fera maintenant : `tableau_1d[5]`
 
 
-**Admettons que les dimensions soient 10x7 : 10 lignes, 7 colonnes et 70 cases en ligne.**
+**Admettons que les dimensions soient `10 * 7` : 10 lignes, 7 colonnes et 70 cases en ligne.**
 
 1. Proposer une fonction qui prend un numéro de ligne, un numéro de colonne
     et renvoie l'indice de la case dans le tableau.

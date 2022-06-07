@@ -7,12 +7,12 @@ weight: 4
 
 ---
 
-### pdf : [pour impression](/uploads/docsnsi/table_csv/4_cours.pdf)
+pdf : [pour impression](/uploads/docsnsi/table_csv/4_cours.pdf)
 
 _Dans cette partie nous allons étudier les opérations de tri selon une colonne,
 la notion de domaine de valeur et la fusion de tables._
 
-# 1. Tri d'une table selon une colonne
+## 1. Tri d'une table selon une colonne
 
 * Puisqu'une table est représentée par une liste, on peut la trier en utilisant
     la fonction de tri `sorted` qui dispose d'un argument `key` permettant de 
@@ -71,7 +71,7 @@ des données dans une nouvelle table. Cette opération s'appelle jointure de
 tables_
 
 
-# 2. Fusion de deux tables pour un même attribut
+## 2. Fusion de deux tables pour un même attribut
 
 * On veut fusionner deux tables selon un attribut commun.
     On va sélectionner dans chaque table la ligne ayant la même valeur pour
@@ -114,7 +114,7 @@ tables_
     On utilise ici une fonction `jointure` définie pour l'occasion, comme celle
     fournie plus bas.
 
-# 3. La fusion de deux tables pour des attributs différents
+## 3. La fusion de deux tables pour des attributs différents
 
 * Cependant dans certaines tables, l'attribut commun peut avoir une autre
     appellation. Par exemple la seconde table peut aussi exister sous la forme :
@@ -131,7 +131,7 @@ tables_
     >>> jointure(Table1, Table2, 'Nom', 'Name')
     ```
 
-# 4. Exemple de fonction effectuant une jointure
+## 4. Exemple de fonction effectuant une jointure
 
 Voici une proposition de code
 
@@ -171,7 +171,9 @@ FROM Table1 JOIN Table2
 ON Table1.Nom = Table2.Nom
 ```
 
-# 5. Domaine de valeur
+_C'est quand même beaucoup plus simple... mais on n'a aucune idée de ce qui est fait en interne._
+
+## 5. Domaine de valeur
 
 _Un problème subsiste : que faire si les données ont des formats différents ?_
 

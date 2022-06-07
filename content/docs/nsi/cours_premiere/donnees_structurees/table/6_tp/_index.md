@@ -1,5 +1,5 @@
 ---
-title: '6. TP : fusion et tris. Mini projet "TP randonnée"'
+title: '6. TP : fusion et tris'
 bookCollapseSection: true
 author: 'qkzk'
 date: '2020/07/31'
@@ -7,9 +7,9 @@ weight: 6
 
 ---
 
-### pdf : [pour impression](/uploads/docsnsi/table_csv/6_tp.pdf)
+pdf : [pour impression](/uploads/docsnsi/table_csv/6_tp.pdf)
 
-# Exercice 1 : Fusion et tri de tables
+## Exercice : Fusion et tri de tables
 
 Il est possible de fusionner 2 tableaux de données qui ont une colonne commune :
 
@@ -51,7 +51,3 @@ est bien Mme Gabriaux, nous avons une ligne dans notre tableau "cl-com" :
 5. Écrire une fonction qui prend une ville et une table en paramètre et
     retourne tous les numéros de commande adressés à des clients de cette ville.
 
-# Exerice 2 : TP randonnée
-
-
-Traiter le TP sur les randonnées.

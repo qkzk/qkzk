@@ -1,12 +1,12 @@
 ---
-title: "Types construits : TD"
+title: "TD"
 bookCollapseSection: true
 date: "2021/05/25"
 weight: 2
 
 ---
 
-### pdf : [pour impression](./td_types_construits.pdf)
+pdf [pour impression](./td_types_construits.pdf)
 
 
 # Se tester
@@ -15,24 +15,24 @@ weight: 2
 
 1. Parmi les affirmations suivantes lesquelles sont vraies ?
 
-    a. Une liste peut contenir plusieurs éléments.
-    b. On peut ajouter des éléments à un tuple.
-    c. On peut modifier les éléments d'un tuple.
+    a. Une liste peut contenir plusieurs éléments.\
+    b. On peut ajouter des éléments à un tuple.\
+    c. On peut modifier les éléments d'un tuple.\
     d. Un tuple peut contenir à la fois des nombres et des chaînes de 
         caractères.
 
 2. Si `liste` est la liste `[1, 3, 5]`, quelles sont les opérations valides ?
 
-    a. `liste.append(4)`
-    b. `liste[0]`
-    c. `liste[0] = 4`
-    d. `liste[4] = 7`
-    e. `liste = [1, 3, 10, 7, 3]`
+    a. `liste.append(4)`\
+    b. `liste[0]`\
+    c. `liste[0] = 4`\
+    d. `liste[4] = 7`\
+    e. `liste = [1, 3, 10, 7, 3]`\
 
 3. Si `triplet` est le tuple `(1, 3, 5)`, quelles sont les opérations valides ?
 
-    a. `triplet.append(4)`
-    b. `triplet[0]`
+    a. `triplet.append(4)`\
+    b. `triplet[0]`\
     c. `triplet[0] = 4`
 
 ## 2. Dictionnaires
@@ -43,10 +43,10 @@ dico = {"a": True, "b": False, "c": False}
 
 1. Quelle est la valeur de `dico[1]` ?
 
-    a. `"a"`
-    b. `True`
-    c. `"b"`
-    d. `False`
+    a. `"a"`\
+    b. `True`\
+    c. `"b"`\
+    d. `False`\
     e. Rien car l'expression est invalide.
 
 2. Quelle est la valeur de `dico["a"]` ?
@@ -65,7 +65,7 @@ dico = {"a": True, "b": False, "c": False}
 
     **Remarque**: _Par défaut la fonction `print` termine l'affichage par
     un retour à la ligne (le caractère `/n`). On peut modifier ce comportement
-    en ajoutant `end=" ", cela remplace le retour à la ligne par un espace._
+    en ajoutant `end=" "`, cela remplace le retour à la ligne par un espace._
 
 5. Quels sont les affichages possibles lors de l'exécution du code suivant ?
 
@@ -76,7 +76,7 @@ dico = {"a": True, "b": False, "c": False}
 
 ## 3. Compréhension et structures imbriquées
 
-1. Si liste désigne la liste `[1, [2, 3], [4, 5], 6, 7]` que faut `len(liste)` ?
+1. Si `tab` désigne la liste `[1, [2, 3], [4, 5], 6, 7]` que faut `len(tab)` ?
 
 2. Que vaut `[2 * n for n in range(5)]`
 
@@ -136,9 +136,11 @@ ce qu'on attend.
             voyelles_presentes.append(lettre)
     ```
 
-4. Calculer un capital après 10 années. Henri a déposé 1000€ sur son compte.
+4. Calculer un capital après 10 années. 
+
+    Henri a déposé 1000€ sur son compte.
     Les intérêts sont annuels et composés, on augmente de 5% chaque année le
-    montant du capital. Ensuite on affiche le montant du capital atteind.
+    montant du capital. Ensuite on affiche le montant du capital atteint.
 
     ```python
     capital = 1000
@@ -147,7 +149,7 @@ ce qu'on attend.
     print(capital)
     ```
 
-5. Compter le tours de boucles jusqu'à avoir atteint une valeur donnée et l'afficher.
+5. Compter le tours de boucle jusqu'à avoir atteint une valeur donnée et l'afficher.
 
 
     ```python
@@ -224,7 +226,7 @@ ce qu'on attend.
 
 
 
-## 5. Modéliser des Pokémons avec des dictionnaires et des tuples
+## 7. Modéliser des Pokémons avec des dictionnaires et des tuples
 
 On modélise des informations (nom, taille et poids) sur des Pokémons de la 
 façon suivante :
@@ -273,18 +275,17 @@ Par exemple, Bulbizarre est un Pokémon qui mesure 70 cm et pèse 7 kg.
     assert taille(exemple_pokemons, 'Dracaufeu') == None
     ```
 
-## 6. Construire des listes en compréhension
+## 8. Construire des listes en compréhension
 
 1. Parmi les extraits de programme suivants, lesquels permettent de construire
     la liste des cinq premiers nombres impairs ?
 
-    a. $\;$
-
+    a. 
       ```python
       impairs = [1, 3, 5, 7, 9]
       ```
 
-    b. $\;$
+    b. 
 
       ```python
       impairs = []
@@ -292,19 +293,19 @@ Par exemple, Bulbizarre est un Pokémon qui mesure 70 cm et pèse 7 kg.
               impairs.append(2 * n + 1)
       ```
 
-    c. $\;$
+    c. 
 
       ```python
       impairs = [2 * n + 1 for n in  range(5)]
       ```
 
-    d. $\;$
+    d. 
 
       ```python
       impairs = [n for n in range(1, 11, 2)]
       ```
 
-    e. $\;$
+    e. 
 
       ```python
       impairs = []
@@ -318,7 +319,7 @@ Par exemple, Bulbizarre est un Pokémon qui mesure 70 cm et pèse 7 kg.
 2. Donner plusieurs programmes permettant de construire la liste des
     25 premiers nombres pairs.
 
-3. $\;$
+3. 
     a. Quelle est la valeur de `couples` à la fin de l'exécution du programme
         suivant ?
 
@@ -330,7 +331,7 @@ Par exemple, Bulbizarre est un Pokémon qui mesure 70 cm et pèse 7 kg.
     b. Proposer un programme qui permet de construire `couples` en utilisant
         des boucles bornées.
 
-## 7. Vérifier un carré magique
+## 10. Vérifier un carré magique
 
 Un carré d'ordre $n$ est un tableau  carré contenant $n^2$ entiers 
 strictement positifs.\
@@ -393,7 +394,7 @@ prend un carré en paramètre et renvoie `True` si le carré est magique et
 `False` sinon._
 
 
-## 8. Manipuler des listes de nombres
+## 11. Manipuler des listes de nombres
 
 On donne le code de la fonction suivante :
 
@@ -443,7 +444,7 @@ assert not mystere([1, 6, 2, 9])
 
     Que fait la fonction `mystere` ?
 
-## 9. Itérer sur les éléments d'un dictionnaire
+## 12. Itérer sur les éléments d'un dictionnaire
 
 Au zoo de Beauval, il y a 5 éléphants d'Asie, 17 écureuils d'Asie, 2 pandas
 d'Asie...\
