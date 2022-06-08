@@ -19,7 +19,7 @@ Nous travaillerons aussi dans un langage particulier à chaque machine : l'assem
 ### Cours
 
 
-### Videos
+### Videos complémentaires
 
 1. la [video Comparaison](/uploads/docsnsi/architecture/videos/Comparing.mp4) et les [soustitres](/uploads/docsnsi/architecture/videos/Comparing.srt)
 2. la [video Breadboard](/uploads/docsnsi/architecture/videos/breadboard.mp4) et les [soustitres](/uploads/docsnsi/architecture/videos/breadboard.srt)
