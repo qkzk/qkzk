@@ -1,31 +1,35 @@
 ---
-title: "Architecture - OS : trois concepts clés"
+title: "OS : trois concepts clés"
 bookCollapseSection: true
-weight: 1
+weight: -1
 
 ---
 
-### PDF : [pour impression](/uploads/docsnsi/architecture/linux/concepts/concepts_cles.pdf)
+PDF : [pour impression](/uploads/docsnsi/architecture/linux/concepts/concepts_cles.pdf)
 
+
+{{< hint info >}}
 Le systèmes d'exploitations (OS) sont des logiciels spécialisés qui servent
 d'intermédiaire entre le matériel et l'utilisateur.
 
 Ils rendent l'utilisation du matériel possible et sûre.
 
-Les grandes familles de systèmes d'exploitation modernes sont UNIX et Windows.
+Les grandes _familles_ de systèmes d'exploitation modernes sont UNIX et Windows.
+{{< /hint >}}
 
 UNIX n'est pas un OS à proprement parler mais désigne tous les OS qui s'inspirent
 des premières versions d'UNIX : Linux, Android, iOS, MacOS etc.
 
 
-
-# La mémoire
+## Catégories matérielle
 
 Résumons le matériel d'un ordinateur à trois grandes catégories :
 
 * la mémoire (où sont enregistrées les informations)
 * le processeur (qui calcule),
 * les entrées/sorties (clavier, souris, écran, réseau, haut parleur etc.)
+
+## La mémoire
 
 Supposons que trois applications tournent en parallèle (on en reparlera).
 
@@ -53,7 +57,7 @@ un bug.
 
  ![6](/uploads/docsnsi/architecture/linux/concepts/img/OS_6.png)
 
-## La mémoire virtuelle
+### La mémoire virtuelle
 
 Le système d'exploitation se place entre la mémoire physique (qui existe)
 et les applications. Il donne à chaque application une mémoire virtuelle
@@ -83,16 +87,20 @@ et le bug est évité.
 
 
 
-La mémoire virtuelle est donc un moyen (parmi d'autres) de mettre en commun
+{{< hint info >}}
+La **mémoire virtuelle** est donc un moyen (parmi d'autres) de mettre en commun
 une ressource (la mémoire) entre différentes applications.
 
 Elle rend l'utilisation multi-tâches possibles : plusieurs programmes peuvent
 s'exécuter en même temps.
+{{< /hint >}}
 
-# L'ordonnancement des inscructions processeur
+## L'ordonnancement des inscructions processeur
 
+{{< hint info >}}
 Le processeur, même s'il dispose parfois d'un grand nombre d'instructions possibles
 ne peut en traiter qu'une à la fois.
+{{< /hint >}}
 
 Chaque application qui doit réaliser un calcul envoie ceux-ci dans une file d'attente
 et... pendant ce temps, les applications attendent leur tour.
@@ -108,12 +116,14 @@ en une fois, il ne se passera plus rien et la machine sera totalement figée.
  ![10](/uploads/docsnsi/architecture/linux/concepts/img/OS_10.png)
 
 Vous ne pourrez même plus bouger la souris à l'écran, les vidéos s'arrêtent...
-Plus rien tant que les instructions ne sont pas traitées.
+Plus rien ne se produit tant que les instructions ne sont pas traitées.
 
-## L'ordonnanceur
+### L'ordonnanceur
 
+{{< hint info >}}
 Le rôle de l'ordonnanceur est de donner la parole à chaque application
 selon des règles pré-établies et afin de donner l'illusion de la simultanéité.
+{{< /hint >}}
 
 Ainsi les applications voient leurs instructions se réaliser régulièrement
 et ne sont pas figées.
@@ -127,20 +137,25 @@ Plusieurs solutions sont possibles, par exemple :
 
  ![12](/uploads/docsnsi/architecture/linux/concepts/img/OS_12.png)
 
-À nouveau, l'application permet d'éviter de paralyser le système et l'ordonnanceur
+
+{{< hint info >}}
+À nouveau, l'OS permet d'éviter de paralyser le système et l'ordonnanceur
 est un autre procédé employé pour rendre le système multi-tâches.
+{{< /hint >}}
 
 
-# Les interruptions
+## Les interruptions
 
+{{< hint info >}}
 Comment rendre les périphériques accessibles aux applications... alors qu'on
 a des centaines de variantes de ces périphériques ?
+{{< /hint >}}
 
 Chaque génération de smartphones dispose de son propre matériel qui fonctionne
 différemment de la version précédente... Et pourtant, je peux utiliser un
-logiciel antérieur sur un nouveau téléphone...
+logiciel antérieur sur un nouveau téléphone.
 
-## Les appels systèmes
+### Les appels systèmes
 
 Lorsqu'une application souhaite utiliser le matériel, l'OS commence par vérifier
 qu'il en a le droit.
@@ -151,17 +166,22 @@ puisse le faire.
 
  ![14](/uploads/docsnsi/architecture/linux/concepts/img/OS_14.png)
 
+{{< hint info >}}
 Si c'est le cas, l'OS attend qu'un événement venant du micro-phone se produise,
 ce qu'on appelle une _interruption_ et lorsque c'est le cas, elle transmet
 ce signal à l'application.
+{{< /hint >}}
 
 
  ![15](/uploads/docsnsi/architecture/linux/concepts/img/OS_15.png)
 
+{{< hint info >}}
 Les appels systèmes sont formalisés et sont donc indépendant du matériel.
+{{< /hint >}}
 
-## Un mot sur le matériel : les pilotes
+### Un mot sur le matériel : les pilotes
 
+{{< hint info >}}
 Lorsqu'un fabricant crée un nouveau matériel, compatible avec une machine,
 on crée alors un _pilote_. C'est d'ailleurs généralement le fabricant lui-même
 qui le fait.
@@ -171,27 +191,28 @@ par l'API (_Application Programming Interface_) de l'OS.
 
 Ainsi, les matériels très variés communiquent tous de la même manière avec
 les applications, à travers les pilotes et l'API.
+{{< /hint >}}
 
-# Multitude d'OS
+## Multitude d'OS
 
 Si tous les OS fonctionnent sur le même principe, pourquoi en existe-t-il autant ?
 
-Parce que certains sont spécialisés :
+Parce que **certains sont spécialisés** :
 
 On n'utilise pas Android sur un super calculateur conçu pour réaliser très
-vite des milliards de calculs mais une version de Linux spécialement conçue.
-Et pourtant, ces deux reposent tous les deux sur le même noyau, celui de Linux.
+vite des milliards de d'opérations mais une version de Linux spécialement conçue.
+Et pourtant, _ces deux reposent tous les deux sur le même noyau, celui de Linux_.
 
-Ensuite, certains OS sont propriétaires, c'est le cas de Windows. Bien qu'il
+Ensuite, certains OS sont _propriétaires_, c'est le cas de Windows. Bien qu'il
 existe des versions gratuites ou d'usage gratuit de Windows, le seul
-moyen de consulter le code source de celui-ci est de travailler chez Microsoft.
+moyen de consulter le code source de celui-ci est de travailler pour Microsoft.
 
 Ce n'est pas le cas des systèmes dits libres dont le code est consultable par
 tout le monde. Voici par exemple une [copie](https://github.com/torvalds/linux)
 du code source de Linux... 
 
 _Chose amusante : ce dépôt appartient à Linus Torvald,
-créateur à la fois de Linux et du logiciel qui fait tourner Github : Git...
+créateur à la fois de Linux et du logiciel qui derrière Github : Git...
 mais Github (le site lui même) appartient à Microsoft, le grand rival de Linux...
 Le monde est petit._
 

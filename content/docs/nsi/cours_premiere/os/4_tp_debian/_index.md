@@ -1,5 +1,5 @@
 ---
-title: "NSI première : TP debian"
+title: "TP debian"
 bookCollapseSection: true
 author: qkzk
 weight: 4
@@ -773,7 +773,7 @@ et font apparaître le mot `root` quelque part.
     -   Créer un fichier vide `boucle.py`
     -   avec `nano` éditer ce fichier et y ajouter une boucle infinie :
 
-    ``` {.python}
+    ```python
     from time import sleep
     while True:
         sleep(10)
@@ -793,12 +793,17 @@ Relancer la boucle infinie et ouvrir un deuxième terminal.
     autre terminal.
 
 -   Dans le second terminal, filtrer, parmi les processus en cours, les
-    scripts python : \~\~\~ \$ ps -ef \| grep python \~\~\~ Parmi les
+    scripts python :  `
+
+    ```sh
+    $ ps -ef | grep python 
+    ```
+
+    Parmi les
     résultats vous devriez voir votre programme. Repérez le numéro qui
     apparaît juste après votre nom d'utilisateur
 
-    Exemple : \~\~\~ pi 838 839 0 14:21 ? 00:00:11 python boucle.py
-    \~\~\~
+    Exemple : `pi 838 839 0 14:21 ? 00:00:11 python boucle.py`
 
     C'est le PID de votre processus (process identifier). Chez moi 838.
     Vous pouvez alors, depuis le second terminal, tuer votre programme
@@ -813,9 +818,9 @@ Relancer la boucle infinie et ouvrir un deuxième terminal.
     `[1]+  Terminated              python boucle.py` et voir votre
     programme s'arrêter dans le premier terminal.
 
-    Si jamais un programme résiste, vous pouvez insister avec kill -9 (à
+    Si jamais un programme résiste, vous pouvez insister avec `kill -9` (à
     éviter pour beaucoup de raisons que je n'aborderai pas) ou, si vous
-    n'avez pas les droits, essayer un sudo kill ...
+    n'avez pas les droits, essayer un `sudo kill` ...
 
 ------------------------------------------------------------------------
 
@@ -835,12 +840,12 @@ Relancer la boucle infinie et ouvrir un deuxième terminal.
     plus rapide de tester la connection à internet est de faire un ping
     à google avec :
 
-```{=html}
-<!-- -->
-```
-        $ ping google.com
+    ```sh
+    $ ping google.com
+    ```
 
-      Utilisez le raccourci clavier ctrl + c pour l'arrêter.
+
+    Utilisez le raccourci clavier ctrl + c pour l'arrêter.
 
 ------------------------------------------------------------------------
 
@@ -1498,11 +1503,10 @@ employer pour exécuter ce fichier source.
 1.  Créer un fichier appelé `hawaii.py` contenant ce bel extrait de code
     dans votre dossier utilisateur (dont les raccourci est `~`) :
 
-```{=html}
-<!-- -->
-```
+    ```sh
     cd
     nano hawaii.py
+    ```
 
 Coller le code avec MaJ + inser (ou un clic sur la molette)
 
@@ -1511,10 +1515,9 @@ Ensuite, CTRL + X, oui (ou yes, c'est selon...) Entrée.
 1.  Lui donner les droits d'exécution : `$ chmod +x hawaii.py`
 2.  Exécuter le script avec :
 
-```{=html}
-<!-- -->
-```
+    ```sh
     $ ./hawaii.py
+    ```
 
 Il n'est pas utile de préciser qui appelle le fichier, le shell va
 trouver tout seul en lisant la première ligne du code.
@@ -1525,21 +1528,24 @@ laissez le tourner.
 1.  Ouvrir un autre terminal et vérifier qu'un processus Python tourne
     bien :
 
-```{=html}
-<!-- -->
-```
+    ```sh
     $ ps - ef | grep Python
+    ```
 
 Voici un exemple de sortie pour cette commande :
 
-    pi   2272  2255  0 oct.15 pts/2   00:00:49 /usr/bin/python /home/pi/hawaii.py
+```sh
+pi   2272  2255  0 oct.15 pts/2   00:00:49 /usr/bin/python /home/pi/hawaii.py
+```
 
 Revenons en détail sur la sortie de `ps -f`
 
-    $ ps -f
-    UID        PID  PPID  C STIME TTY          TIME CMD
-    quentin  15769  3826  0 10:15 pts/0    00:00:00 bash
-    quentin  17689 15769  0 10:43 pts/0    00:00:00 ps -f
+```sh
+$ ps -f
+UID        PID  PPID  C STIME TTY          TIME CMD
+quentin  15769  3826  0 10:15 pts/0    00:00:00 bash
+quentin  17689 15769  0 10:43 pts/0    00:00:00 ps -f
+```
 
 `ps -f` affiche les infos des processus tournant dans la session
 courante (le terminal). Donc il en trouve deux : `bash` qui est le
@@ -1562,17 +1568,20 @@ n'affiche que les lignes contenant le mot `python`
 
 1.  Tuer le processus avec :
 
-```{=html}
-<!-- -->
-```
+    ```sh
     $ kill 2272
+    ```
 
 Vérifier que le script a cessé de tourner dans le premier terminal.
 
 Le processus parent a-t-il été tué ? Mais qui est le processus parent
 ???
 
-1.  Cherchons le processus parent : \~\~\~ ps -ef \| grep 2255 \~\~\~
+1.  Cherchons le processus parent : 
+
+    ```sh
+    ps -ef | grep 2255 
+    ```
 
     Remplacez, bien sûr, 2255 par le PPID obtenu à la question 4.
 
@@ -1615,7 +1624,9 @@ Partons d'un exemple historique :
 **Repérer les fautes d'orthographes les mots mal orthographiés dans les
 fichiers texte "foo.txt et "bar.txt"**
 
-    $ cat foo.txt bar.txt | spell -french | sort > err.txt
+```sh
+$ cat foo.txt bar.txt | spell -french | sort > err.txt
+```
 
 1.  `cat foo.txt bar.txt` : ouvre les deux fichiers et lit leur contenu.
     Envoie vers la sortie standard...
@@ -1635,7 +1646,9 @@ fichiers foo.txt et bar.txt dans un nouveau fichier err.txt
 
 Un autre exemple en détail :
 
-    $ ls | grep "conf$"
+```sh
+$ ls | grep "conf$"
+```
 
 On redirige la sortie de `ls` vers `grep`.
 
@@ -1662,16 +1675,16 @@ Les plus couramment utilisées sont, dans cet ordre :
 
 Il existe aussi d'autres moyens de rediriger les sorties d'erreurs :
 
--   `<code>`{=html}com 2\>&1`</code>`{=html} : redirige la sortie des
-    erreurs de `<code>`{=html}com`</code>`{=html} vers la sortie
-    standard de `<code>`{=html}com`</code>`{=html},
--   `<code>`{=html}com1 \| com2 `</code>`{=html} : redirige la sortie
-    standard de la commande `<code>`{=html}com1`</code>`{=html} vers
-    l'entrée standard de `<code>`{=html}com2`</code>`{=html}.
--   `<code>`{=html}com1 \|& com2`</code>`{=html} : branche ("connecte"
+-   `com 2>&1` : redirige la sortie des
+    erreurs de `com` vers la sortie
+    standard de `com`,
+-   `com1 | com2 ` : redirige la sortie
+    standard de la commande `com1` vers
+    l'entrée standard de `com2`.
+-   `com1 |& com2` : branche ("connecte"
     selon le manuel bash) la sortie standard et la sortie d'erreur de
-    `<code>`{=html}com1`</code>`{=html} sur l'entrée de
-    `<code>`{=html}com2`</code>`{=html}
+    `com1` sur l'entrée de
+    `com2`
 
 Exercice sur les redirections
 -----------------------------
@@ -1790,7 +1803,7 @@ Par exemple :
 -   `$PWD` l'adresse du dossier courant,
 -   `$PATH` la liste des adresses où chercher les commandes à exécuter.
 
-Donc, quand j'exécute \~\~\~ \$ ls \~\~\~ bash va chercher dans `$PATH`
+Donc, quand j'exécute `ls` bash va chercher dans `$PATH`
 après un programmé nommé `ls`. S'il le trouve, il l'exécute avec comme
 paramètre `$PWD`, le dossier courant. La commande exécutée est donc
 `\usr\bin\ls \home\pi`
@@ -1798,7 +1811,7 @@ paramètre `$PWD`, le dossier courant. La commande exécutée est donc
 **Attention :** il ne faut pas confondre le **prompt :**
 `pi@raspberry : ~ $` souvent résumé en `$` quand on introduit linux et
 qui présente l'endroit où sont tapées les commandes dans le terminal
-avec les **variables shell** qui sont toutes précédées d'un **\$**
+avec les **variables shell** qui sont généralement précédées d'un **\$**.
 
 En pratique avec les variables d'environnement.
 

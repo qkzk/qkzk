@@ -1,12 +1,12 @@
 ---
-title: "Première NSI - Système d'exploitation Linux - intro"
+title: "Linux - intro"
 bookCollapseSection: true
 author: qkzk
 weight: 1
 
 ---
 
-### pdf [pour impression](/uploads/docsnsi/architecture/linux/linux_intro.pdf)
+pdf [pour impression](/uploads/docsnsi/architecture/linux/linux_intro.pdf)
 
 ## Système d'exploitation
 
@@ -20,15 +20,17 @@ comprenne et exécute l'action.
 
 Le système d'exploitation va donc :
 
+{{< hint info >}}
 * fournir une interface entre l'humain et la machine;
 * gérer les ressources de l'ordinateur, à savoir sa mémoire, son processeur,
     ses périphériques (écrans, imprimantes etc.) la gestion de l'énergie,...;
-* gérer les utilisateur ainsi que leurs droits d'accès à certains fichiers;
+* gérer les utilisateurs ainsi que leurs droits d'accès à certains fichiers;
 * être indépendant du matériel (un même OS peut être exécuté sur des 
     ordinateurs n'ayant pas les mêmes composants);
 * faire en sorte de rendre concret ce qui ne l'est pas (un fichier est par
     essence abstrait mais nous le considérons bel et bien comme une entité
     concrète.)
+{{< /hint >}}
 
 Le système d'exploitation se sépare en deux grandes parties : 
 
@@ -38,6 +40,8 @@ Le système d'exploitation se sépare en deux grandes parties :
     l'utilisateur.
 2. Les applications utilisent l'interface proposée par le noyau et sont
     accessibles aux utilisateurs.
+
+_L'interface entre le noyau et les applications est le shell (coquille)_
 
 ## Linux et les systèmes libres
 
@@ -54,7 +58,7 @@ Le système d'exploitation se sépare en deux grandes parties :
     informatique (la majorité des langages actuels dérivent du C et la majorité
     des machines professionnelles tournent sur un dérivé d'UNIX).
 * UNIX et ses dérivés sont présents partout : tous les smartphones fonctionnent
-    sur un de ses dérivés (Linux pour android, bsd pour iOS) ainsi que les mac.
+    sur un de ses dérivés (Linux pour android, bsd pour iOS) ainsi que les macs.
 * UNIX fonctionne sur n'importe quelle machine : une caméra IP, un super
     ordinateur (les 500 plus puissants utilisent tous linux), un chromecast,
     une switch etc.
@@ -78,13 +82,13 @@ change rien. La grande majorité des logiciels existent sur toutes les
 plateformes hormis quelques exceptions notables :
 
 * Photoshop et la suite adobe : windows et osx. De nombreuses alternatives
-* les jeux vidéos : windows (**possible** de jouer sous linux ou osx mais demande du courage).
+* les jeux vidéos : windows (grâce à steam, il est de plus en plus facile de jouer sous linux...).
 
 ## Grandes familles de systèmes d'exploitation
 
-On en rencontre massivement deux :
+On en rencontre principalement deux :
 
-* Windows et ses dérivés (MSDOS (~1985), Windows NT (1999), windows 7->10 (2008)). Domine le marché du PC "personnel"
+* Windows et ses dérivés (MSDOS (~1985), Windows NT (1999), windows 7->10 (2008), windows 11 (2020+)). Domine le marché du PC "personnel"
 * UNIX et ses dérivés : bsd (systèmes embarqués, réseaux d'entreprises), linux (partout dont android, super calculateurs, PC personnels, serveur web), OSX & iOS (produits apple)
 
 ## Utilisation d'un système UNIX
@@ -102,7 +106,10 @@ Deux modes d'utilisation :
 
 Le premier vous connaissez : fenêtres, clic clic clic.
 
+
 Le second repose sur la console. On est devant un terminal qui exécute une boucle REPL (read eval print loop) :
+
+![shell](./shell.png)
 
 1. On tape une commande. Le shell la lit (read)
 2. Le système traite la commande et calcule une réponse (eval)
@@ -168,7 +175,7 @@ La sécurité sous unix est gérée par la notion de permission.
 
 * Un utilisateur ne peut pas faire ce qu'il veut.
 * Le super utilisteur `root` peut tout faire. Devenir `root` avec `$ su`, exécuter une commande comme root avec `$ sudo commande`.
-* Pourquoi ? Parce qu'en tant que `root` il suffit de 8 caractères pour effacer tous les disques de la machine...
+* On évite au maximum d'être `root`... Parce qu'en tant que `root` il suffit de 8 caractères pour effacer tous les disques de la machine...
 
 L'affichage détaillé d'un fichier (`ls -lah`) montre les permissions de
 
@@ -213,8 +220,8 @@ On change les permissions avec `chmod`
 
 ## Processus
 
-* Programme : du texte, décrivant des opérations à la machine.
-* processus : un programme en cours d'exécution par la machine.
+* **Programme** : du texte, décrivant des opérations à la machine.
+* **Processus** : un programme en cours d'exécution par la machine.
 
 Chaque fois qu'on lance un programme, UNIX crée un processus.
 
@@ -239,7 +246,7 @@ Gestionnaire de ressources `$ top`
 
 UNIX fonctionne principalement avec des petits programmes exécutant quelques tâches simples, le plus souvent une seule.
 
-Ils communiquent avec des flux de texte qu'on peut enchaîner ou rediriger.
+Ils communiquent avec des flux de textes qu'on peut enchaîner ou rediriger.
 
 On peut, par exemple :
 

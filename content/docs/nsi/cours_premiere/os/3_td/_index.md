@@ -1,12 +1,12 @@
 ---
-title: "Première NSI - Système d'exploitation Linux - TD"
+title: "Linux - TD"
 bookCollapseSection: true
 author: qkzk
 weight: 3
 
 ---
 
-### pdf [pour impression](/uploads/docsnsi/architecture/linux/linux_td.pdf)
+pdf [pour impression](/uploads/docsnsi/architecture/linux/linux_td.pdf)
 
 # Se tester
 

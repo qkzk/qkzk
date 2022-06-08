@@ -1,16 +1,16 @@
 ---
-title: "Première NSI - Système d'exploitation Linux - cours"
+title: "Linux - cours"
 bookCollapseSection: true
 author: qkzk
 weight: 2
 
 ---
 
-### pdf [pour impression](/uploads/docsnsi/architecture/linux/linux_cours.pdf)
+pdf [pour impression](/uploads/docsnsi/architecture/linux/linux_cours.pdf)
 
 # Linux et les systèmes libres
 
-## Le BASH
+## Le shell
 
 ### 1. Le terminal
 
@@ -18,7 +18,7 @@ Quelle que soit la déclinaison de Linux, on trouve une application "terminal"
 qu'on peut lancer et l'interpréteur de commande avec lequel on intéragit est
 par défaut Bash. (_Bourne Again Shell_) qui est l'interpréteur de commandes
 le plus courant sous Linux et aussi sous OSX. Il est également possible de 
-l'activer sous windows 10.
+l'activer sous windows (10 +).
 
 Le terminal fonctionne avec le principe REPL : Read Eval Print Loop.
 
@@ -179,8 +179,8 @@ Nous utilisons cette fois un chemin "relatif" qui part de la position actuelle.
     * `grep` pour afficher les lignes qui contiennent un mot clé ;
     * `wc` pour compter des lignes ou des caractères ;
     * `sort` pour trier ;
-    * `cut` pour extraire des colonnes dans un fichier ;
-    * `tr` pour transposer ou supprimer des caractères.
+    * `tail` seulement la fin ;
+    * `head` seulement le début.
 
 * Ces filtres s'utilisent généralement avec des tubes (_pipes_) notés "`|`".
 
@@ -234,11 +234,11 @@ Nous utilisons cette fois un chemin "relatif" qui part de la position actuelle.
 _Le système de droits et de permissions sous UNIX est aspects fondamentaux
 de la gestion de la sécurité du système._
 
-## Droits et groupes
+## 3. Droits et groupes
 
-### 1. Le monde selon UNIX
+### 1. Les utilisateurs selon UNIX
 
-Unix sépare le monde en trois catégories du point de vue des droits :
+Unix sépare les utilisateurs en trois catégories du point de vue des droits :
 
 * L'utilisateur (user) ;
 * Le groupe (group) ;
@@ -281,7 +281,7 @@ Unix sépare le monde en trois catégories du point de vue des droits :
 **Remarque :** le droit `x` pour un répertoire est le droit de traverser ce
 répertoire.
 
-## 2. Changer des droits 
+## 4. Changer des droits 
 
 ### 1. La commande `chmod`
 

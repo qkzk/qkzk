@@ -8,9 +8,9 @@ weight: 5
 ---
 
 
-### pdf [pour impression](/uploads/docsnsi/architecture/linux/creer_cle_linux_print.pdf)
+pdf [pour impression](/uploads/docsnsi/architecture/linux/creer_cle_linux_print.pdf)
 
-# Utiliser Linux
+## Utiliser Linux
 
 Le programme de NSI demande à ce que vous utilisiez un système libre.
 
@@ -18,17 +18,20 @@ Le plus couramment utilisé étant Linux, c'est celui qui a été choisi pour vo
 Il existe de nombreuses possibiités pour utiliser Linux au Lycée et l'une
 d'entre elle est la clé **Freeduc Jbart.**
 
-# Clé Linux : Freeduc Jbart
+## Clé Linux : Freeduc Jbart
 
 Le Lycée Jean Bart à Dunkerque propose une clé USB qui permet de mettre en
 oeuvre tous les éléments du programme de NSI concernant les systèmes
 d'exploitation et les logiciels libres.
 
+Elle dispose aussi d'une propriété très rare : une **partition de persistence**
+dans laquelle vous pouvez conserver vos fichiers.
+
 Elle utilise la distribution **debian** et l'environnement de bureau **cinnamon**
 
 ![debian et cinnamon](/docs/nsi/cours_premiere/os/5_cle_linux/img/0.png)
 
-## Créer la clé.
+### Créer la clé.
 
 La démarche est entièrement détaillée [ici](https://usb.freeduc.org/freeduc-usb/freeduc-jbart/index.fr.html)
 
@@ -68,7 +71,7 @@ La démarche est entièrement détaillée [ici](https://usb.freeduc.org/freeduc-
   2. `$ ls`
   3. `sudo rm -rf lost+found`
 
-## Booter sur la clé
+### Booter sur la clé
 
 C'est variable selon les systèmes mais il faut toujousr s'assurer qu'on peut
 démarrer depuis une clé usb dans le bios. Certains bios remettent ce paramètre
@@ -79,7 +82,7 @@ Pour booter sur la clé :
 1. brancher la clé
 2. rebooter et, dans le bios, activer le boot sur la clé.
 
-## Tester la persistence
+### Tester la persistence
 
 La clé n'est fournie qu'avec des logiciels libres. On peut installer google chrome pour tester.
 
@@ -98,11 +101,11 @@ La clé n'est fournie qu'avec des logiciels libres. On peut installer google chr
 6. Tester : `$ google-chrome`
 8. **rebooter**. Google chrome doit toujours être présent.
 
-## Utiliser la clé.
+### Utiliser la clé.
 
 Se référer au TP "découverte le linux" et aux résumés fournis.
 
-## Dupliquer sa clé
+### Dupliquer sa clé
 
 Il est possible de **dupliquer** la partie "programmes" de la clé
 (sans la persistence) avec l'outil fourni directement dans la distribution : **live clone**
