@@ -7,9 +7,9 @@ weight: 4
 **PDF : [pour impression](./4_assembleur-Article.pdf), [diapos](./4_assembleur-Beamer.pdf)**
 
 
-# Initiation à l'assembleur
+## Initiation à l'assembleur
 
-## instructions machines
+### instructions machines
 
 * Les instructions machines sont exécutées par l'unité de commande.
 
@@ -20,19 +20,18 @@ Le CPU est incapable d'exécuter directement des programmes écrits en Python
 
 Les instructions exécutées au niveau du CPU sont donc codées en binaire.
 
-## Langage machine
 
 ### Langage machine :
 
 Ensemble des instructions exécutables par le microprocesseur
 
-## Les instructions machines sont propres à chaque processeur
+### Les instructions machines sont propres à chaque processeur
 
 Chaque processeur possède son propre jeu d'instruction !
 
-Mais il existe de grandes familles (x86 PC, ARM téléphones etc.)
+Heureusement, il existe de grandes familles (x86 PC, ARM téléphones etc.)
 
-## Précisions
+### Précisions
 
 Une instruction machine est une chaîne binaire composée principalement
 de 2 parties :
@@ -45,15 +44,15 @@ de 2 parties :
 
 ![instruction machine](../img/instr_machine.png)
 
-# Familles Instruction machine
+## Familles Instruction machine
 
-## Trois grandes familles
+### Trois grandes familles
 
 * arithmétiques
 * transfert de données
 * rupture de séquence
 
-## Arithmétique
+### Arithmétique
 
 * Les instructions _arithmétiques_ (addition, soustraction,
     multiplication\...).
@@ -61,14 +60,14 @@ de 2 parties :
     "additionne la valeur contenue dans le registre R1 et
     le nombre 789 et range le résultat dans le registre R0".
 
-## Transfert de données
+### Transfert de données
 
 * Les instructions _de transfert de données_
 
   "prendre la valeur située à l'adresse mémoire 487 et la placer
   dans la registre R2"
 
-### Registre & Mémoire
+**Registre & Mémoire**
 
 Un "mot" est un entier binaire sur $n$ bits. $n$ est une puissance de 2 correspondant à la classe du processeur.
 
@@ -84,12 +83,12 @@ L'assembleur dispose généralement de deux type de mémoires :
 * on _écrit_ depuis un registre vers la mémoire.
 * On _déplace_ vers un registre (soit une valeur littérale, soit la valeur d'un autre registre).
 
-## Rupture de séquence
+### Rupture de séquence
 
-### Séquence d'instruction
+**Séquence d'instruction**
 
 
-les instructions machines sont situées en mémoire vive
+les instructions machines sont situées en mémoire vive.
 Au cours de l'exécution, le CPU passe d'une instruction à une autre
 
 * l'instruction n°1 située à l'adresse mémoire 343,
@@ -99,11 +98,8 @@ Ce déroulé se poursuit jusqu'à :
 
 * rencontrer un bug,
 * rencontrer `HALT`,
-* rencontrer une rupture de séquence,
+* rencontrer une **rupture de séquence**,
 
-## Rupture de séquence
-
-### Rupture de séquence
 
 Rupture de séquence (ou _saut, branchement_) :
 
@@ -119,13 +115,13 @@ Par exemple, :
 ### Sauts conditionnels ou inconditionnels
 
 * Un saut _inconditionnel_ se déroulera toujours. On passe de tel emplacement à tel emplacement.
-* Un saut _inconditionnel_ doit suivre une comparaison. Selon le résultat de cette comparaison on sautera ou on passera à l'emplacement suivant.
+* Un saut _conditionnel_ doit suivre une comparaison. Selon le résultat de cette comparaison on sautera ou on passera à l'emplacement suivant.
 
 ## Programme en langage machine
 
 Suite très très longue de "1" et de "0".
 
-Extrêmement difficile :  on remplace les codes binaires par des symboles _mnémoniques_.
+Extrêmement difficile de lire ou d'écrire ainsi :  on remplace les codes binaires par des symboles _mnémoniques_.
 
 `11100010100000100001000001111101 <--> ADD R1,R2,#125`
 
@@ -147,9 +143,9 @@ En fait :
 
 Encore aujourd'hui, programmer en assembleur est une activité courante.
 
-# Présentation d'un langage assembleur par l'exemple
+## Présentation d'un langage assembleur par l'exemple
 
-## Déplacements
+### Déplacements
 
 | Mnemonique                | Exemple          | Description                                                                 |
 |---------------------------|------------------|-----------------------------------------------------------------------------|
@@ -157,7 +153,7 @@ Encore aujourd'hui, programmer en assembleur est une activité courante.
 | Stocker                   | `STR R3,125`     | Place la valeur stockée dans le registre R3 en mémoire vive à l'adresse 125 |
 | Déplacer                  | `MOV R1, #23`    | Place 23 dans R0                                                            |
 
-## Opérations arithmétiques
+### Opérations arithmétiques
 
 | Mnemonique                | Exemple          | Description                                                                 |
 |---------------------------|------------------|-----------------------------------------------------------------------------|
@@ -166,7 +162,7 @@ Encore aujourd'hui, programmer en assembleur est une activité courante.
 | Soustraire                | `SUB R1,R0,#128` | Soustrait 128 de R0, place dans R1                                          |
 | Soustraire deux registres | `SUB R0,R1,R2`   | Soustrait R2 de R1, place dans R0                                           |
 
-## Rupture de séquence
+### Rupture de séquence
 
 | Mnemonique                | Exemple          | Description                                                                 |
 |---------------------------|------------------|-----------------------------------------------------------------------------|
@@ -181,7 +177,7 @@ Encore aujourd'hui, programmer en assembleur est une activité courante.
 | Saut "Plus petit"         | `BLT 78`         | Si le dernier CMP est plus petit, saute à l'adresse 78                      |
 
 
-## Exemple
+### Exemple
 
 Expliquez brièvement :
 
@@ -198,7 +194,7 @@ Expliquez brièvement :
 
 
 
-## Exemple
+### Exemple
 
 Écrire les instructions en assembleur correspondant à :
 
@@ -212,7 +208,7 @@ Expliquez brièvement :
 -   Si la valeur stockée dans le registre R0 est égale 42 alors la
     prochaine instruction à exécuter se situe à l'adresse mémoire 85
 
-## Labels
+### Labels
 
 
 Les instructions assembleur B, BEQ, BNE, BGT et BLT
@@ -229,7 +225,7 @@ Un label correspond à une adresse en mémoire vive
        MOV R0,#18
        HALT
 
-## Python --> assembleur
+### Python --> assembleur
 
 
 ~~~python
@@ -242,7 +238,7 @@ else:
 z = 6
 ~~~
 
-## Python --> assembleur
+### Python --> assembleur
 
        MOV R0, #4       
        MOV R1, #8       

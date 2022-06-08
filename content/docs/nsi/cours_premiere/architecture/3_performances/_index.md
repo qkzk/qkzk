@@ -14,18 +14,16 @@ geometry: margin=1.5cm
 
 ## Loi de Moore
 
+{{< hint info >}}
 **Tous les 18 mois, le nombre de transistors par processeur double**
 
 ![loi de moore](../img/Loi_de_Moore.png)
 
-## Loi de Moore
-
-
-### Tous les 18 mois, le nombre de transistors par processeur double
-
-
 * Énoncée en 1965 par Gordon Moore (pdg d'Intel).
 * Restée valable jusqu'en 2005 environ.
+
+**La loi de Moore n'est plus d'actualité**
+{{< /hint >}}
 
 ### Applicable à d'autres contextes :
 
@@ -43,12 +41,14 @@ Plus on augmente la fréquence d'horloge d'un CPU, plus ce dernier chauffe.
 
 Mais... si la surface diminue, dissiper la chaleur devient impossible.
 
+_D'autres facteurs sont limitants, dont la finesse de gravure._
+
 
 ## Deux périodes dans l'histoire de l'informatique
 
 ### Durant la loi de Moore 
 
-inutile d'optimiser (=accélérer) les programmes... il suffit d'attendre 2 ans /
+inutile d'optimiser (=accélérer) les programmes... il suffit d'attendre 2 ans 
 4 ans et le matériel ira beaucoup plus vite...
 
 ### Après la loi de Moore
@@ -63,7 +63,7 @@ Comment contourner la loi de Moore ?
 
 Une piste possible : utiliser plusieurs CPU
 
-## Mais qu'est qu'un coeur dans un microprocesseur ?
+**Mais qu'est qu'un coeur dans un microprocesseur ?**
 
 Un coeur est principalement composé :
 
@@ -73,26 +73,25 @@ Un coeur est principalement composé :
 
 Un coeur est donc capable d'exécuter des programmes de façon autonome.
 
-## Plusieurs coeurs sur une seule puce
+### Plusieurs coeurs sur une seule puce
 
 
-Aujourd'hui (en 2019) on trouve sur le marché (_=dans votre poche_) des CPU possédant jusqu'à 18 coeurs !
+Aujourd'hui on trouve sur le marché (_=dans votre poche_) des CPU ayant de 8 à 18 coeurs !
 
 
 
-## Plusieurs coeurs = de meilleures performances ?
+### Plusieurs coeurs = de meilleures performances ?
 
 Pas forcement !
 
 Tirer profit d'un CPU multicoeur demande certaines techniques de programmation...
 
-## Parallélisme
+### Parallélisme
 
 Les  différents coeurs d'un CPU se partagent l'accès à la mémoire vive
 
 L'accès aux ressources devient un enjeu. L'**état** des ressources aussi.
 
-## Parallélisme
 
 * Mémoire 
 
@@ -113,7 +112,6 @@ L'accès aux ressources devient un enjeu. L'**état** des ressources aussi.
   * si la valeur est > 100, afficher _"bonjour"_
   * sinon, afficher _"au revoir"_
 
-## Parallélisme
 
 * Si les instructions s'exécutent dans l'ordre :
 
@@ -128,7 +126,6 @@ L'accès aux ressources devient un enjeu. L'**état** des ressources aussi.
     on affiche _"au revoir"_
 
 
-## Parallélisme
 
 Comment contrôler l'ordre dans lequel les instructions sont réalisées sur
 plusieurs coeurs ?
