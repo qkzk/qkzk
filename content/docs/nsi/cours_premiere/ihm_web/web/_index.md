@@ -4,11 +4,12 @@ bookCollapseSection: true
 author: David Roche
 theme: metropolis
 weight: 1
+
 ---
 
 pdf : [pour impression](/uploads/docsnsi/ihm_web/nsi_prem_web.pdf)
 
-# Le web
+## Le web
 
 Le "World Wide Web", plus communément appelé "Web" a été développé
 au CERN (Conseil Européen pour la Recherche Nucléaire) par le
@@ -22,9 +23,12 @@ consulter d'autres documents en cliquant sur des mots clés. Ces mots
 bleu. Ces hyperliens sont plutôt connus aujourd'hui sous le simple
 terme de "liens".
 
+
+## première page web
+
 ![première page web](/uploads/docsnsi/ihm_web/img/prem_web.png)
 
-première page web, les hyperliens sont soulignés et en bleu
+Les hyperliens sont soulignés et en bleu
 
 Cette première page web est toujours consultable à l'adresse suivante :
 <http://info.cern.ch/hypertext/WWW/TheProject.html>
@@ -35,10 +39,13 @@ de lire des pages contenant des hypertextes), il l'appelle simplement
 web "NCSA Mosaic" pour que le web commence à devenir populaire en
 dehors du petit monde de la recherche.
 
+## http, url & html
+
 Techniquement le web se base sur trois choses : le protocole HTTP
 (HyperText Transfert Protocol), les URL (Uniform Resource Locator) et le
-langage de description HTML (HyperText Markup Language). Nous aurons,
-très prochainement l'occasion de revenir sur ces trois éléments.
+langage de description HTML (HyperText Markup Language).
+
+## web != internet
 
 Une chose très importante à bien avoir à l'esprit : beaucoup de
 personnes confondent "web" et "internet". Même si le "web"

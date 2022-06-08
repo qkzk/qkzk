@@ -8,10 +8,10 @@ bookCollapseSection: true
 
 ---
 
-### [pdf](./reseau_rappels.pdf)
+[pdf](./reseau_rappels.pdf)
 
 
-# Rappels : Introduction au réseau
+## Rappels : Introduction au réseau
 
 _Ce qu’il faut retenir de seconde_
 
@@ -19,7 +19,7 @@ _Ce qu’il faut retenir de seconde_
   entre eux soit par l'intermédiaire d’un câble (ex : câble Ethernet avec
   prises RJ45) ou d’une connexion radio (ex : Wifi) Pour relier plus de 2
   ordinateurs, il est nécessaire d’utiliser un switch
-* Pour identifier un ordinateur sur un réseau, on utilise une adresse IP. Les
+* Pour identifier un ordinateur sur un réseau, on utilise _généralement_ une adresse IP. Les
   adresses IP sont de la forme : "a.b.c.d", avec a, b, c et d compris entre 0
   et 255 (a, b, c et d sont codés sur 1 octet).
 * Une partie de l’adresse IP permet d’identifier le réseau auquel appartient la
@@ -48,5 +48,8 @@ _Ce qu’il faut retenir de seconde_
       a.b.c.d/24, les parties a, b et c sont consacrées à l'adresse réseau, le
       reste (d) est consacré à la partie machine de l'adresse IP. On aura donc
       une adresse réseau de la forme a.b.c.0
+* Il existe un protocole appelé DNS qui fait le lien entre un domaine (`impots.gouv.fr`)
+    et une adresse IP (`145.242.11.100`). Certaines machines sur internet accomplissent ce rôle.
+    Cela nous évite d'avoir à retenir des adresses IP, c'est comme une liste de contacts.
 
 

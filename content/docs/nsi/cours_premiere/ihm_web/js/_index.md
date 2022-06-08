@@ -7,9 +7,9 @@ weight: 14
 
 ---
 
-### pdf [pour impression](./nsi_prem_js_intro.pdf)
+pdf [pour impression](./nsi_prem_js_intro.pdf)
 
-# JavaScript
+## JavaScript
 
 
 Avant d'entrer dans le vif du sujet, un petit historique :
@@ -49,7 +49,7 @@ Avant d'entrer dans le vif du sujet, un petit historique :
   sont programmés en JavaScript.
 
 
-# Inclure un script JS dans une page web
+## Inclure un script JS dans une page web
 
 Un script JavaScript est chargé et exécuté dans une balise `<script> </script>`.
 
@@ -104,7 +104,7 @@ Ainsi JS permet de changer le contenu d'une balise.
 
 Il existe de nombreuses méthodes permettant de faire ce genre de choses.
 
-# Modifier le style
+## Modifier le style
 
 Une fois qu'on a récupéré un _élément html_, on peut lui attribuer du style,
 par exemple :
@@ -116,7 +116,7 @@ element.style.color = "red";
 
 Exercice : lire attentivement et écrire le CSS équivalent à ce script.
 
-# Éléments de syntaxe
+## Éléments de syntaxe
 
 * Commentaire
 
@@ -170,7 +170,7 @@ Exercice : lire attentivement et écrire le CSS équivalent à ce script.
 Exercice. Afficher "J'ai fait 10 pompes !", "J'ai fait 20 pompes", etc. 
 jusque "J'ai fait 200 pompes !" dans la console.
 
-# Modifier les attributs html
+## Modifier les attributs html
 
 Considérons ce contenu html
 
@@ -239,7 +239,7 @@ Maintenant nous allons ajouter à l'élément sélectionné dans le script :
 
 Et javascript va ajouter la classe `"rouge"` et son style à notre paragraphe.
 
-# Intéractivité
+## Intéractivité
 
 Ajoutons maintenant des boutons...
 
@@ -324,7 +324,7 @@ en rouge, et lorsqu'on appuie sur le bouton "vert"... Je vous laisse deviner.
 Exercice : Modifier les fonctions afin de changer aussi le contenu du paragraphe
 lorsqu'on clique sur les boutons.
 
-# Programmation _événementielle_
+## Programmation _événementielle_
 
 Python utilise la programmation _séquentielle_ où les lignes sont exécutées les
 une après les autres. L'exécution d'une fonction est donc prédite par

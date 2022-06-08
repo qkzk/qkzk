@@ -1,13 +1,13 @@
 ---
-title: "Travaux dirigés"
+title: "TD complet"
 bookCollapseSection: true
 weight: 120
 
 ---
 
-### pdf [pour impression](./TD_IHM.pdf)
+pdf [pour impression](./TD_IHM.pdf)
 
-# Exercice 1
+## Exercice 1
 
 Donner le protocole, le domaine et l'URL des adresses suivantes :
 
@@ -15,7 +15,7 @@ Donner le protocole, le domaine et l'URL des adresses suivantes :
 2. `http://www.france-ioi.org/`
 3. `ftp://192.168.1.2/docs/devoir.pdf`
 
-# Exercice 2
+## Exercice 2
 
 Quelles sont les URL correctes ? Proposer une rectification des URL fausses.
 
@@ -25,7 +25,7 @@ Quelles sont les URL correctes ? Proposer une rectification des URL fausses.
 4. `http://ici.jerome.fr/base index ailleurs`
 5. `http://jerome.fr/bla?r=toto&d=tata`
 
-# Exercice 3
+## Exercice 3
 
 On considère l'arborescence de fichiers suivante :
 
@@ -50,7 +50,7 @@ On considère l'arborescence de fichiers suivante :
 2. Donner l'adresse relative de `resultat.html` depuis `/templates`
 3. Donner l'adresse relative de `index.html` depuis `/serveur/essai`
 
-# Exercice 4
+## Exercice 4
 
 Voici un extrait de code html d'une page web ouverte dans le navigateur.
 
@@ -95,7 +95,7 @@ Voici un extrait de code html d'une page web ouverte dans le navigateur.
 
 
 
-# Exercice 5
+## Exercice 5
 
 Donner le nom de la balise qui correspond à sa description
 
@@ -106,7 +106,7 @@ Donner le nom de la balise qui correspond à sa description
 5. Élément de liste,
 6. Liste numérotée.
 
-# Exercice 6
+## Exercice 6
 
 On considère l'extrait de page HTML ci-dessous.
 

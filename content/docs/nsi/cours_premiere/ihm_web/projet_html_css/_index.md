@@ -41,19 +41,17 @@ Vous disposez de **trois fichiers** :
 
 * Vous rendrez un travail individuel
 * Seul le fichier `style.css` est à rendre, les autres ne devant pas changer.
-* Il sera déposé dans votre drive :
-
-    `NSI_Robert_DUCHMOL/ihm_web/margaret_hamilton/style.css`
-* Le retour est prévu _autour du vendredi 3 décembre_.
+* Les autres modalités sont détaillées dans le travail donné.
 
 ## Quelques précisions
 
 Démarche :
 
 1. Enregistrer les trois fichiers dans un dossier `ihm_web/margaret_hamilton/` sur votre drive et localement.
-1. Ouvrir les trois fichiers dans atom ou sublime text.
+1. Ouvrir les trois fichiers dans atom, sublime text ou vs code. Vous pouvez utiliser autre chose mais je vous recommande un de ceux là.
     * atom connait bien le css et propose une auto complétion assez pertinente.
     * sublime texte est moins efficace, il connaît les propriétés et complète les attributs mais ne les propose pas.
+    * vs code fait le café.
 
 2. Modifier le fichier `style.css` pour cela :
 
@@ -73,6 +71,8 @@ Etant donné que j'ai _d'abord_ crée le style et ensuite converti, c'est
 parfaitement faisable.
 
 Mon fichier source fait 61 lignes. Pas 23456...
+
+Attention, les attributs html sont loin d'être parfaits et manquent parfois de cohérence mais... lire le paragraphe suivant.
 
 ## Soin du détail
 
@@ -95,7 +95,7 @@ Afin de vous éviter une galère trop conséquente, vous trouverez ici la liste
 de toutes les propriétés CSS utilisées dans la correction, par ordre
 alphabétique :
 
-~~~
+```css
 border-bottom-color
 border-bottom-style
 color
@@ -111,7 +111,7 @@ padding-top
 text-align
 text-decoration
 width
-~~~
+```
 
 Certaines sont employées plusieurs fois, selon l'élément ou la classe, avec
 des attributs différents.

@@ -9,7 +9,7 @@ weight: 12
 pdf : [pour impression](/uploads/docsnsi/ihm_web/nsi_prem_html_css_print.pdf)
 
 
-# HTML et CSS : les bases
+## HTML et CSS : les bases
 
 Nous allons nous intéresser à un acteur fondamental du développement
 web, le couple HTML+CSS (Hyper Text Markup Langage et Cascading Style
@@ -51,12 +51,12 @@ dans la barre d'adresse.
 
 Vous devriez voir apparaître ceci :
 
-![jsfiddle](/uploads/docsnsi/ihm_web/img/jsfiddle.png){.img-responsive}
+![jsfiddle](/uploads/docsnsi/ihm_web/img/jsfiddle.png)
 
 Nous allons pour l'instant uniquement utiliser la fenêtre « HTML » et
 la fenêtre « Result ».
 
-## À faire vous-même 1
+### Exercice 1
 
 Écrivez le code HTML suivant :
 
@@ -171,7 +171,7 @@ Il existe beaucoup d'attributs différents, nous allons nous contenter
 de 2 exemples avec les attributs `id` (id pour identifiant) et `class`. Nous
 verrons l'intérêt de ces attributs dans l'activité suivante.
 
-## À faire vous-même 2
+### Exercice 2
 
 Écrivez le code HTML suivant :
 
@@ -195,7 +195,7 @@ utilisera le CSS (Cascading Style Sheets).
 Dans JSFIDDLE, il est possible d'écrire du CSS dans la fenêtre en haut
 à droite.
 
-## À faire vous-même 3
+### Exercice 3
 
 Écrivez le code HTML suivant :
 
@@ -225,12 +225,12 @@ Qu'est-ce qui s'affiche dans la fenêtre ?
 
 ---
 
-Dans l'exemple du "À faire vous-même 3", les propriétés « text-align
+Dans l'exemple du "Exercice 3", les propriétés « text-align
 » et «background-color» seront appliquées au contenu de toutes les
 balises de type h1 (avec respectivement les valeurs «center» et
 «red»).....
 
-## À faire vous-même 4
+### Exercice 4
 
 Écrivez le code HTML suivant :
 
@@ -274,7 +274,7 @@ réalisation d'un vrai site internet (ou d'une vraie application web).
 Nous allons créer 2 fichiers : un fichier qui contiendra du HTML
 (index.html) et un fichier qui contiendra du CSS (style.css).
 
-## À faire vous-même 5
+### Exercice 5
 
 À l'aide d'un éditeur de texte (sublime text, atom...), créer un nouveau fichier.
 
@@ -302,7 +302,7 @@ Testez votre code à l'aide d'un navigateur web (Chrome) en
 
 ---
 
-Dans l'exemple du "À faire vous-même 5", vous reconnaissez le code se
+Dans l'exemple du "Exercice 5", vous reconnaissez le code se
 trouvant entre les balises `<body>` :
 
 ~~~html
@@ -330,7 +330,7 @@ Le reste des balises devraient vous êtes inconnues. Passons-les en revue
   page (attention ce titre ne s'affiche pas dans le navigateur, ne pas
   confondre avec la balise `<h1>`).
 
-## À faire vous-même 6
+### Exercice 6
 
 Toujours à l'aide d'un éditeur de texte, vous allez créer un fichier
 qui va contenir le CSS de notre page (par exemple style.css). Complétez
@@ -443,7 +443,7 @@ permet de jouer des rôles très différents.
 
 La balise button nous sera aussi d'une grande utilité.
 
-## À faire vous-même 7
+### Exercice 7
 
 Créez un fichier html contenant le code suivant :
 
@@ -501,7 +501,7 @@ Cela revient à dire qu'une balise de type "block" prend toute la
 largeur de la page alors qu'une balise de type "inline" prend juste la
 largeur qui lui est nécessaire.
 
-## À faire vous-même 8
+### Exercice 8
 
 Créez un fichier html contenant le code suivant :
 
@@ -527,7 +527,7 @@ Testez ce code
 
 ---
 
-## À faire vous-même 9
+### Exercice 9
 
 Élaborez une page HTML en utilisant les balises vues ci-dessus.
 

@@ -9,7 +9,7 @@ weight: 4
 
 pdf : [pour impression](./nsi_prem_clsv_print.pdf)
 
-# Modèle Client-Server
+## Modèle Client-Server
 
 Deux ordinateurs en réseau peuvent s'échanger des données. Dans la
 plupart des cas ces échanges ne sont pas "symétriques" : en effet un
@@ -54,13 +54,16 @@ visite une page web. Il y a de fortes chances pour que votre ordinateur
 personnel joue quasi exclusivement le rôle de client (sauf si vous êtes
 un adepte du "peer to peer").
 
+
+## Serveur
+
 N'importe quel type d'ordinateur peut jouer le rôle de serveur, mais
 dans le monde professionnel les serveurs sont des machines spécialisées
 conçues pour fonctionner 24h sur 24h. Ils peuvent aussi avoir une grosse
 capacité de stockage afin de stocker un grand nombre de ressources
 (vidéos, sons,...). Une seule machine peut servir de nombreuses applications.
 
-![serveur](img/serveur.jpg)
+![serveur](/uploads/docsnsi/ihm_web/img/serveur.jpg)
 
 _Un serveur_
 
@@ -78,7 +81,7 @@ utilisateurs en permanence. Ces entreprises possèdent d'immenses salles
 contenant chacune des centaines ou des milliers de serveurs (ces
 serveurs sont rangés dans des armoires appelées "baie serveur").
 
-![salle-serveur](img/salle-serveur.jpg)
+![salle-serveur](/uploads/docsnsi/ihm_web/img/salle-serveur.jpg)
 
 _salle serveur_
 
@@ -86,55 +89,61 @@ Souvent les serveurs sont spécialisés dans certaines tâches, par
 exemple, les serveurs qui envoient aux clients des pages au format HTML
 sont appelés "serveur web".
 
+## Statique, dynamique
+
 Il y a quelques années, le web était dit « statique » : le concepteur de
 site web écrivait son code HTML et ce code était simplement envoyé par
 le serveur web au client. Les personnes qui consultaient le site avaient
 toutes le droit à la même page, le web était purement « consultatif ».
 
-Le site que vous consultez en ce moment est _statique_.
 
 Les choses ont ensuite évolué : les serveurs sont aujourd'hui capables
 de générer eux-mêmes du code HTML. Les résultats qui s'afficheront à
 l'écran dépendront donc des demandes effectuées par l'utilisateur du
 site : le web est devenu _dynamique._
 
-Différents langages de programmation peuvent être utilisés « côté
-serveur » afin de permettre au serveur de générer lui-même le code HTML
-à envoyer. Les plus utilisés aujourd'hui pour générer des pages web côté serveur
-sont PHP, Java et Python. On trouve aussi Javascript avec node.js
+Le site que vous consultez en ce moment est _statique_.
+
+Vous pouvez consulter l'intégralité du code source [ici](https://github.com/qkzk/qkzk.github.io) et vous constaterez que les seuls langages de programmation
+sont exécutés _sur le client_. Ainsi que je le rappelle en bas de chaque page, "_aucune donnée n'est enregistrée_", mon site ne nécessite aucune base de donnée.
+
+Donc un site _statique_ n'est pas "immobile" -- vous pouvez, par exemple, activer un thème sombre sur mon site, c'est du JS --
+c'est un site qui ne repose pas sur l'exécution permanente d'un programme supplémentaire sur le serveur.
+
+Tout site qui _enregistre quelque chose_ est dynamique, tout site qui vous demande une inscription, par exemple, repose sur l'exécution permanente d'un programme (quasi n'importe lequel, mais généralement Java, C++, Python, JavaScript, Golang, Ruby, PHP...) EN PLUS du serveur web. Ce programme _génère_ du code HTML à la volée.
+
 
 Voici un exemple très simple de code en PHP :
 
 
-~~~php
+```php
 <?php
 $heure = date("H:i");
 echo '<h1>Bienvenue sur mon site</h1>
       <p>Il est '.$heure.'</p>';
 ?>
-~~~
+```
 
 Sans entrer dans les détails, si un client se connecte à un serveur web
 qui exécute ce code à 18h23, le serveur enverra au client le code HTML
 ci-dessous :
 
-~~~html
+```html
 <h1>Bienvenue sur mon site</h1>
 <p>Il est 18h23</p>
-~~~
+```
 
 
 En revanche si un client se connecte à ce même serveur à 9h12, le
 serveur enverra au client le code HTML ci-dessous :
 
-~~~html
+```html
 <h1>Bienvenue sur mon site</h1>
 <p>Il est 9h12</p>
-~~~
+```
 
 Comme vous pouvez le constater, le PHP permet de générer des pages HTML
-dynamiquement. Inutile de préciser que cet exemple est volontairement
-très simple, le PHP est capable de générer des pages HTML bien plus
+dynamiquement. PHP est capable de générer des pages HTML bien plus
 complexes. En particulier l'exemple ci-dessus est parfaitement réalisable en
 Javascript _côté client_.
 

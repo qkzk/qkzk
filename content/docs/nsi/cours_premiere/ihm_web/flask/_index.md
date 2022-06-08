@@ -43,13 +43,13 @@ au client une simple page HTML statique (ne pas hésiter à consulter la
 partie consacrée au modèle [client-serveur](/docs/nsi/cours_premiere/ihm_web/clsv/) pour
 plus de précision sur ce terme "statique").
 
-## À faire vous-même 1
+## Exercice 1
 
 Dans votre répertoire personnel, créez un répertoire nommé "serveur_essai".
 
 ---
 
-## À faire vous-même 2
+## Exercice 2
 
 À l'aide de Thonny, créez un fichier Python "views.py" (ce fichier
 devra être sauvegardé dans le répertoire "serveur_essai" précédemment créé).
@@ -70,7 +70,7 @@ app.run(debug=True)
 
 ---
 
-## À faire vous-même 3
+## Exercice 3
 
 Après avoir exécuté le programme ci-dessus, ouvrez votre navigateur web
 et tapez dans la barre d'adresse "localhost:5000".
@@ -149,7 +149,7 @@ debuggage dans le navigateur.
 
 Ce n'est souhaitable que durant le _développement_ d'un site web.
 
-## À faire vous-même 4
+## Exercice 4
 
 À l'aide de Thonny, modifiez le fichier Python "views.py" :
 
@@ -181,7 +181,7 @@ d'adresse ("localhost:5000" ou "localhost:5000/about")
 Python n'est pas très pratique, Flask propose une autre solution bien
 plus satisfaisante :
 
-## À faire vous-même 5
+## Exercice 5
 
 Dans votre répertoire "serveur_web", créez un répertoire "templates". Dans
 ce répertoire templates, créez un fichier index.html. Saisissez le code
@@ -203,7 +203,7 @@ HTML ci-dessous dans ce fichier index.html
 
 ---
 
-## À faire vous-même 6
+## Exercice 6
 
 Modifiez le programme `views.py` comme suit :
 
@@ -244,7 +244,7 @@ pages dynamiques :
     client
 -   une fois reçue, la page HTML est affichée dans le navigateur web
 
-## À faire vous-même 7
+## Exercice 7
 
 Modifiez le fichier "views.py" comme suit :
 
@@ -297,7 +297,7 @@ fichier HTML.
 
 ---
 
-## À faire vous-même 8
+## Exercice 8
 
 Modifiez le fichier "index.html" comme suit :
 
@@ -357,7 +357,7 @@ le navigateur.
 
 Nous allons maintenant nous intéresser à la gestion des formulaires.
 
-## À faire vous-même 8
+## Exercice 8
 
 Modifiez le fichier "index.html" comme suit :
 
@@ -394,7 +394,7 @@ et créez un fichier "resultat.html" (dans le répertoire
 </html>
 ~~~
 
-## À faire vous-même 9
+## Exercice 9
 
 Modifiez le fichier views.py comme suit :
 
@@ -483,7 +483,7 @@ bien."
 Pour gérer le formulaire, il est possible d'utiliser une méthode HTTP
 `GET` à la place de la méthode `POST` :
 
-## À faire vous-même 10
+## Exercice 10
 
 Modifiez les fichiers comme suit :
 
@@ -548,7 +548,7 @@ on utilise `request.args` à la place de `request.form`.
 
 ---
 
-## À faire vous-même 11
+## Exercice 11
 
 Relancez l'exécution de "views.py" et saisissez `localhost:5000`
 dans la barre d'adresse d'un navigateur web. Une fois la page web
@@ -575,7 +575,7 @@ envoyées par l'intermédiaire de l'URL.
 Les données envoyées par l'intermédiaire d'une méthode `GET` peuvent
 être modifiées directement dans l'URL :
 
-## À faire vous-même 12
+## Exercice 12
 
 Ouvrez votre navigateur Web et tapez dans la barre d'adresse
 "localhost:5000". Une fois la page web affichée dans votre navigateur,

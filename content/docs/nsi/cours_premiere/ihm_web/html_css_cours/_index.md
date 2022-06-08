@@ -8,7 +8,7 @@ header-includes:
     - \usepackage[margin=2cm]{geometry}
 ---
 
-### pdf : [pour impression](/uploads/docsnsi/ihm_web/nsi_prem_cours_html_css.pdf)
+pdf : [pour impression](/uploads/docsnsi/ihm_web/nsi_prem_cours_html_css.pdf)
 
 
 # HTML et CSS : rappels
@@ -148,8 +148,20 @@ Javascript n'est pas le seul langage qui permette d'écrire du code HTML,
 tous les langages modernes peuvent être utilisés pour générer une page web
 automatiquement et structurer des données.
 
-Javascript est par contre le seul qui puisse être _exécuté dans le navigateur
+Javascript est par contre le seul (_ou presque [^1]_) qui puisse être _exécuté dans le navigateur
 du client._
+
+[^1]: Il existe aussi _Webassembly_ (assembleur du web) qui est langage très bas niveau, proche de l'assembleur
+    et qui peut être exécuté par le navigateur. L'intérêt de ce langage est qu'on peut _compiler une application d'un langage quelconque vers du web assembly_.
+
+    Par exemple [ce jeu](https://qkzk.xyz/reversi) est écrit en _[rust](https://www.rust-lang.org/fr)_ -- le langage derrière Firefox, très rapide -- et compilé en _web assembly_. Son interface graphique est écrite en Javascript.
+
+    Cette version tourne ~1000 fois plus vite que l'équivalente en pur Javascript.
+
+    Si vous vous souvenez de vos premiers pas en Python dans le navigateur et bien... c'était aussi du web assembly.
+
+    Python est généralement exécuté par CPython, donc un C sur votre machine. En ligne c'est pyodide, entre autres, qui permet d'exécuter Python.
+
 
 En quoi est-ce intéressant ? Cela permet de réaliser les calculs
 _sur la machine du client_ et non sur le serveur directement.

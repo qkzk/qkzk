@@ -34,23 +34,23 @@ ordinateur. Un fichier peut se trouver dans un dossier qui peut lui-même
 se trouver dans un autre dossier... On parle d'une structure en
 arborescence, car elle ressemble à un arbre à l'envers :
 
-![arbo](img/url.jpg)
+![arbo](/uploads/docsnsi/ihm_web/img/url.jpg)
 
-structure en arborescence
 
-Comme vous pouvez le constater, la base de l'arbre s'appelle la racine
+Comme vous pouvez le constater, la base de l'arbre s'appelle la _racine_ 
 de l'arborescence et se représente par un `/`
 
 ## Chemin absolu ou chemin relatif ?
 
-Pour indiquer la position d'un fichier (ou d'un dossier) dans
-l'arborescence, il existe 2 méthodes : indiquer un chemin absolu ou
-indiquer un chemin relatif. Le chemin absolu doit indiquer « le chemin »
-depuis la racine. Par exemple l'URL du fichier `fichier3.jpg` sera :
-`/dossier2/dossier3/fichier3.jpg`
+Il existe deux types de chemins dans une arborescence : **absolu** et **relatif**.
 
-Remarquez que nous démarrons bien de la racine `/` (attention les symboles
-de séparation sont aussi des `/`)
+Le chemin absolu doit indiquer le chemin depuis la racine. 
+
+Par exemple l'URL du fichier `fichier3.jpg` sera : `/dossier2/dossier3/fichier3.jpg`
+
+Remarquez que nous démarrons bien de la racine `/` 
+
+(attention les symboles de séparation sont aussi des `/`)
 
 Imaginons maintenant que le fichier fichier1.css fasse appel au fichier
 fichier3.jpg (comme un fichier HTML peut faire appel à un fichier CSS).

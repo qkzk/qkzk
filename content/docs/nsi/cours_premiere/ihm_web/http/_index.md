@@ -241,7 +241,7 @@ serveur :
 C'est la requête qui a été transmise quand on a tapé :
 
 ```python
->>> reponse = requests.get("http://qkzk.xyz")
+>>> reponse = requests.get("https://qkzk.xyz")
 ```
 
 On a bien transmis une requête GET au serveur, avec toutes les informations

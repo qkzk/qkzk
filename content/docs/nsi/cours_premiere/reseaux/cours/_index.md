@@ -9,9 +9,9 @@ bookCollapseSection: true
 
 ---
 
-### [pdf](./reseau_cours.pdf)
+[pdf](./reseau_cours.pdf)
 
-# Réseau
+## Réseau
 
 Lorsqu'on relie plusieurs ordinateurs on dit qu'ils sont en **réseau**.
 
@@ -20,7 +20,7 @@ La laison entre ces machines peut être filaire (un câble) ou non (ondes radio)
 Nous allons étudier les protocoles qui sont employés sur internet afin de relier
 les machines, à savoir TCP et IP
 
-# Liaison physique
+## Liaison physique
 
 Dans l'usage courant, on rencontre : 
 
@@ -29,12 +29,12 @@ Dans l'usage courant, on rencontre :
 * les réseaux mobiles GSM (Global System for Mobile Communications)
 
 
-# Adresse IP
+## Adresse IP
 
 **IP** pour, _Internet Protocol_ désigne à la fois le protocole utilisé et
 l'adresse d'une machine sur un réseau IP.
 
-## IPv4, IPv6
+### IPv4, IPv6
 
 Commençons par le protocole dont vous avez tous entendu parlé, IPv4.
 
@@ -54,7 +54,7 @@ Plus rarement, on donne l'adresse et un complément : `192.168.0.1/24`
 Le `/24` permet de distinguer la partie **réseau** de la partie **machine** 
 dans cette adresse.
 
-## Partie réseau, partie machine
+### Partie réseau, partie machine
 
 Considérons une adresse IPv4 complète : `192.168.1.2/24`
 
@@ -119,7 +119,7 @@ sur internet.
 
 Une approche est de modifier la norme IPv4 afin de proposer davantage d'adresses.
 
-## IPv6
+### IPv6
 
 Cette nouvelle norme utilise 128 bits (au lieu de 32) soit largement assez
 pour donner une adresse unique à chaque machine.
@@ -129,9 +129,11 @@ Il y a donc $2^{128}$ adresses IPv6 disponibles...
 La partie réseau occupe toujours les 64 premiers bits et la partie machine les
 64 derniers bits.
 
-Les adresses IPv6 sont généralement données en hexadécimal : `43:2f:5b:df:b2:f4`
+Les adresses IPv6 sont généralement données en hexadécimal : `fe81::b097:2eb5:47e3:fb4d:1ef3:98d3:90b4`
 
-## Réseaux publics et privés
+Vérifions rapidement : 8 blocs de 4 chiffres hexadécimaux = 32 chiffres hexadécimaux donc $16^{32} = 2^{4 \times 32} = 2^{128}$ adresses différentes. Le compte est bon...
+
+### Réseaux publics et privés
 
 Internet est un ensemble de réseaux publics, chaque machine raccordée à internet
 peut transmettre des données à une autre machine.
@@ -149,7 +151,7 @@ distante, c'est le routeur qui se charge de transmettre les données.
 $\;$![réseaux publics et privés](./reseaux_prives_publics.png)
 
 
-# Protocole IP
+## Protocole IP
 
 Le rôle du protocole IP est de transmettre des **paquets IP** provenant d'une
 couche supérieure (nous reviendrons sur ce terme) .
@@ -164,7 +166,7 @@ les recevant de les réordonner.
 
 Pour simplifier grandement, IP, c'est comme la poste.
 
-## Fiabilité
+### Fiabilité
 
 Ce protocole est dit "non fiable", cela ne signifie pas que les données
 sont déteriorée ou perdues mais qu'aucune règle ne permet de s'assurer :
@@ -174,7 +176,7 @@ sont déteriorée ou perdues mais qu'aucune règle ne permet de s'assurer :
 
 Cette fiabilité est assurée par un autre protocole... TCP.
 
-# TCP/IP
+## TCP/IP
 
 TCP/IP désigne l'ensemble des deux protocoles principaux sur internet.
 
@@ -194,7 +196,7 @@ de lui.
 En pratique cela signifie qu'on verra apparaître la même page qu'on soit
 raccordé en Wi-Fi ou en Ethernet.
 
-## Encapsulation
+### Encapsulation
 
 Considérons le fichier html suivant :
 
@@ -255,7 +257,7 @@ Considérons le fichier html suivant :
 
 ![Encapsulation](./encapsulation.png)
 
-## TCP
+### TCP
 
 On l'a dit, le protocole TCP (Transmission Control Protocol) est un protocole
 de transport "fiable" et "connecté" :
@@ -274,7 +276,7 @@ accusé de réception de la machine B vers la machine A.
 
 En l'absence de celui-ci, la machine A recommence et renvoie le même segment.
 
-## Trajet sur le réseau
+### Trajet sur le réseau
 
 $\:$![tcp/ip](./tcp.png)
 
@@ -304,7 +306,7 @@ Chaque fois que vous ouvrez deux onglets dans le navigateur, celui-ci établi un
 connexion avec une machine différente et se voit attribuer un port de réception
 différent.
 
-## Modèle OSI
+### Modèle OSI
 
 Le modèle TCP/IP n'est pas le seul modèle servant à décrire les étapes de connexion
 sur un réseau. Un autre modèle théorique existe, appelé OSI et constitué de 7 couches.
@@ -316,27 +318,27 @@ $\:$![osi](./osi.png)
 
 TCP/IP est donc représenté par les couches `segments` et `packets` du modèle OSI.
 
-## Principes
+### Principes
 
 ### Les grandes règles du modèle OSI
 
 * Chaque couche est indépendante
 * Chaque couche ne peut communiquer qu'avec une couche adjacente
 
-## Chaque couche est indépendante
+### Chaque couche est indépendante
 
 * Les informations d'une couche ne peuvent être utilisées dans une autre
 * Exemple : l'adresse IP (couche 3) ne pourra être utilisée ailleurs
 * Cela permet l'évolution des communications dans le temps
 * Elles sont interchangeables : IPv4 va devenir IPv6 sans qu'on doive tout réécrire
 
-## Chaque couche ne peut communiquer qu'avec une couche adjacente
+### Chaque couche ne peut communiquer qu'avec une couche adjacente
 
 **Exemple :** on entre `google.com` dans le navigateur.
 
 Le navigateur (application) s'est adressé aux couches réseau (1 à 4) pour qu'elles transmettent l'information à l'application sur la machine demandée (le serveur web de google)
 
-# Protocole du bit alterné
+## Protocole du bit alterné
 
 
 
@@ -361,13 +363,13 @@ _De gauche à droite : transmission sans erreur, erreur d'émission, erreur lors
 
 $\;$![bit alterné](./bit_alterne_3.png)
 
-# Compléments
+## Compléments
 
 Présentons quelques protocoles utilisés couramment :
 
 Ils sont classés en haut en bas dans le modèle TCP/IP
 
-## SMTP
+### SMTP
 
 SMTP pour _simple mail transfer protocol_ est, avec POP et IMAP un des protocoles
 utilisés pour envoyer des emails. Que vous utilisiez une application en ligne 
@@ -396,7 +398,7 @@ Cette image occupe 64ko et, une fois convertie en texte, 85ko.
 
 
 
-## UDP
+### UDP
 
 UDP pour _user datagram protocol_ est un autre protocole de la couche transfert,
 comme TCP.
@@ -408,7 +410,7 @@ pas la fiabilité des Communications.
 Il est utilisé pour transférer des données en flux (streaming, jeux vidéos), 
 généralement après avoir établi une communication via un autre procédé.
 
-## DNS
+### DNS
 
 DNS pour _Domain Name System_ est un service effectué par une machine d'un réseau
 pour attribuer des noms à des adresses IP. C'est donc _une machine_ qui effectue
@@ -439,7 +441,7 @@ fictive `1.2.3.4`, le DNS ne répond pas lorsqu'on lui demande l'adresse.
 Il est possible de changer de serveur DNS pour utiliser des DNS publics (comme 8.8.8.8)
 afin de contourner certains blocages.
 
-## ICMP
+### ICMP
 
 ICMP pour _internet control message protocol_ est un protocole utilisé pour
 assurer qu'il existe une laison entre deux machines. 
@@ -455,12 +457,12 @@ CLI (command line interface = la console).
 
 * `traceroute` permet de connaître les routeurs empruntés lors d'un trajet.
 
-# Commandes réseau de base
+## Commandes réseau de base
 
 Il existe de nombreuses commandes UNIX permettant de configurer et vérifier
 le bon fonctionnement d'un réseau. Nous allons présenter les plus courantes.
 
-## Comment reproduire ces commandes ?
+### Comment reproduire ces commandes ?
 
 Nous allons présenter des commandes UNIX et ou Windows.
 
@@ -479,10 +481,10 @@ les commandes soient bloquées...
 | Configurer le réseau de la machine  | `ip` ou `ifconfig` | `ipconfig` |
 | Connâitre la route empruntée        | `traceroute`       | `tracert`  |
 
-## Consulter et manipuler le réseau depuis la ligne de commande
+### Consulter et manipuler le réseau depuis la ligne de commande
 
 
-## `ip a` et `ifconfig` ou `ipconfig` sous windows.
+### `ip a` et `ifconfig` ou `ipconfig` sous windows.
 
 Ces commandes permettent de connaître l'adresse IP, l'adresses MAC et la configuration
 d'un réseau (passerelle, masque, serveur DNS etc.)
@@ -563,7 +565,7 @@ interface `wlan0` `Wireless Local Area Network 0` : l'interface wifi.
 Cette machine n'est raccordée qu'en Wi-Fi, ce qu'`ifconfig` ne permet que de deviner...
 
 
-## `ping`
+### `ping`
 
 Cette commande est employée pour s'assurer qu'une liaison existe avec une machine
 distante et connaître la durée d'un trajet aller retour.
@@ -592,7 +594,7 @@ Chaque routeur enlève 1 à ce TTL avant de transmettre. Le routeur qui arrive �
 le paquet.
 
 
-## `traceroute`
+### `traceroute`
 
 `traceroute` permet de connaître les routeurs empruntés lors d'une connexion.
 
@@ -632,7 +634,7 @@ traceroute to ovh.fr (54.39.46.56), 30 hops max, 60 byte packets
 Ma machine est à Lille, le serveur d'OVH est à Roubaix, soit à 15km de chez moi... et pourtant
 les paquets sont passés par la Belgique et l'Angleterre.
 
-## `nmap`
+### `nmap`
 
 `nmap` permet de connaître les ports en écoute sur une machine. Chaque serveur attend de recevoir
 des connexions en ouvrant un port TCP prédéfini (80 pour un serveur web non sécurisé, 443 pour un

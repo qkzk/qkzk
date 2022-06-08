@@ -68,7 +68,7 @@ Très peu de nouveautés !
 ## IDE
 
 * Thonny gère Flask sans problème.
-* N'importe quel IDE installé sur votre machine (atom, sublime text...) pour
+* N'importe quel IDE installé sur votre machine (vs code, atom, sublime text...) pour
     écrire le code html (et éventuellement Python)
 * On _peut_ servir un site depuis colab avec Flask mais c'est **sport.**
     Un [exemple](https://stackoverflow.com/questions/54465816/how-to-use-flask-in-google-colaboratory-python-notebook). Ouvrez le lien de la première réponse pour découvrir un exemple.
@@ -79,13 +79,6 @@ Flask est la seule librairie dont vous ayez besoin.
 Elle est déjà présente sur votre machine.
 
 ---
-
-## Délais
-
-Ce projet doit être terminé **début décembre**.
-J'attends de vous voir travailler pour fixer précisément le délai.
-Je vais rater beaucoup de séances alors prédire l'avenir est délicat mais cela
-me semble un délai raisonnable.
 
 ## Résultat attendu
 
@@ -126,14 +119,16 @@ Le projet final est constitué des fichiers suivants :
 
 ## Cahier des charges détaillé
 
-1. Servir une page (statique d'abord) avec flask
-2. Lire une requête du formulaire
-3. Répondre avec des données statiques (sans passer par openweathermap) et les intégrer à la page correctement
-3. Transformer la requête du formulaire et envoyer une commande à l'api openweathermap
-4. Lire le json en réponse via json load, renvoyer ce json
-5. Extraire les infos du json et remplir un dictionnaire avec la requête
-5. Remplir le template de reponse avec les vraies données
-6. Extensions : css, prévisions, carte de France avec les villes, ce que vous voulez.
+0. Créer le readme et commencer à le remplir. À refaire après chacune des étape suivante, remerciez-moi plus tard
+1. Faire un dessin avec le trajet de l'information entre "j'écris Lille dans le formulaire et presse le bouton" et "je vois qu'il fait 37.2°C à Lille ce 8 décembre". À nouveau, vous me remercierez plus tard
+2. Servir une page (statique d'abord) avec flask
+3. Lire une requête du formulaire
+4. Répondre avec des données statiques (sans passer par openweathermap) et les intégrer à la page correctement
+5. Transformer la requête du formulaire et envoyer une commande à l'api openweathermap
+6. Lire le json en réponse via json load, renvoyer ce json au template. Affichez le brutalement sur la page sans chercher à en faire quoi que ce soit.
+7. Extraire les infos du json et remplir un dictionnaire avec la requête
+8. Remplir le template de reponse avec les vraies données aux bons endroits
+9. Extensions : css, prévisions, carte de France avec les villes, ce que vous voulez.
 
 ---
 
@@ -167,7 +162,7 @@ Le serveur web (Python + Flask)
 
 Et le site Openweathermap
 
-* ![Le client, le serveur flask et openweathermap](img/meteo_flask/meteo_flask(9).svg)
+* ![Le client, le serveur flask et openweathermap](/uploads/docsnsi/ihm_web/img/meteo_flask/meteo_flask(9).svg)
 
 
 
@@ -175,42 +170,42 @@ Et le site Openweathermap
 
 Quand on exécute le script Python du serveur il attend qu'un client se connecte...
 
-* ![Le serveur se lance et sert une page *index.html*](img/meteo_flask/meteo_flask(8).svg)
+* ![Le serveur se lance et sert une page *index.html*](/uploads/docsnsi/ihm_web/img/meteo_flask/meteo_flask(8).svg)
 
 
 ## Le client se connecte sur le site
 
 L'utilisateur a tapé l'adresse du site dans sa barre d'adresse...
 
-* ![Le client se connecte sur le site](img/meteo_flask/meteo_flask(7).svg)
+* ![Le client se connecte sur le site](/uploads/docsnsi/ihm_web/img/meteo_flask/meteo_flask(7).svg)
 
 
 ## Le serveur web renvoie alors une page html
 
 La page html est un formulaire à remplir (ville ?) avec un bouton _submit_
 
-* ![première requête : *index.html*, réponse du serveur](img/meteo_flask/meteo_flask(6).svg)
+* ![première requête : *index.html*, réponse du serveur](/uploads/docsnsi/ihm_web/img/meteo_flask/meteo_flask(6).svg)
 
 
 ## Formulaire rempli, _submit_
 
 L'utilisateur a rempli son formulaire avec _Lille_ et cliqué sur submit
 
-* ![l'utilisateur remplit le formulaire (_Lille_) sur le client, clique *submit*](img/meteo_flask/meteo_flask(4).svg)
+* ![l'utilisateur remplit le formulaire (_Lille_) sur le client, clique *submit*](/uploads/docsnsi/ihm_web/img/meteo_flask/meteo_flask(4).svg)
 
 
 ## Le serveur reçoit et traite la requête
 
 Le serveur Python récupère les données du formulaire et appelle une fonction...
 
-* ![la requête est envoyée au serveur web, qui la traite...](img/meteo_flask/meteo_flask(3).svg)
+* ![la requête est envoyée au serveur web, qui la traite...](/uploads/docsnsi/ihm_web/img/meteo_flask/meteo_flask(3).svg)
 
 
 ## Le serveur envoie à son tour une requête à OWM...
 
 La requête est transmise à OWM via une URL (string...) qu'on formate
 
-* ![le serveur envoie une requête à OMW avec leur API (_...weather lille..._)](img/meteo_flask/meteo_flask(2).svg)
+* ![le serveur envoie une requête à OMW avec leur API (_...weather lille..._)](/uploads/docsnsi/ihm_web/img/meteo_flask/meteo_flask(2).svg)
 
 
 ## OWM lit traite la requête et renvoie la météo dans un JSON
@@ -218,7 +213,7 @@ La requête est transmise à OWM via une URL (string...) qu'on formate
 JSON (Javascript Object Notation) est le format le plus populaire pour échanger des données sur le web.
 Les données ressemblent à un dictionnaire Python. Python manipule sans difficulté les JSON.
 
-* ![OWM lit la requête et répond avec un JSON contenant la météo (*...temp 12.3...*)](img/meteo_flask/meteo_flask(1).svg)
+* ![OWM lit la requête et répond avec un JSON contenant la météo (*...temp 12.3...*)](/uploads/docsnsi/ihm_web/img/meteo_flask/meteo_flask(1).svg)
 
 
 ## Le serveur traite la réponse et injecte la météo dans une page _resultat.html_
@@ -229,4 +224,4 @@ Qui l'affiche dans le navigateur.
 
 L'utilisateur lit la météo de Lille : **il fait 12.3°C** !
 
-* ![Le serveur traite la réponse JSON et sert une page au client (*`<p>12.3°C</p>`*)](img/meteo_flask/meteo_flask.svg)
+* ![Le serveur traite la réponse JSON et sert une page au client (*`<p>12.3°C</p>`*)](/uploads/docsnsi/ihm_web/img/meteo_flask/meteo_flask.svg)

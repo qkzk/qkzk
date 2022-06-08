@@ -6,23 +6,25 @@ weight: 10
 
 ---
 
-### pdf : [pour impression](./TD_IHM_2_js.pdf)
+pdf : [pour impression](./TD_IHM_2_js.pdf)
 
-# HTML
+## HTML
 
 ![HTML 5](/docs/nsi/cours_premiere/ihm_web/js_td/img/0.svg.png)
 
-## 1. Ecrire la structure d'une page depuis un modèle
+### 1. Ecrire la structure d'une page depuis un modèle
 
 Imaginons que le document devant vous (cet énoncé) soit une page web.
 
+Zoomez jusqu'à faire disparaître les colonnes de gauche et de droite.
+
 Écrire la structure de la page en question (on peut ignorer les phrases, seules
-les balises importent) jusqu'à la fin de l'exercice 1.
+les balises importent) du haut de la page jusqu'à la fin de cette question.
 
 Inclure les éléments de style (centrage, taille des polices) dans un fichier 
 CSS séparé.
 
-## 2. Dessiner la page depuis un code,
+### 2. Dessiner la page depuis un code,
 
 Écrire la page qui sera rendu par le navigateur à partir du code suivant :
 
@@ -30,23 +32,22 @@ CSS séparé.
 <!DOCTYPE html>
 <html>
 <head>
-<title>Page Title</title>
+    <title>Page Title</title>
 </head>
 <body>
-
-<h1>This is a Heading</h1>
-<p>This is a paragraph.</p>
-<ul>
-    <li>Hello</li>
-    <li>World</li>
-</ul>
+    <h1>This is a Heading</h1>
+    <p>This is a paragraph.</p>
+    <ul>
+        <li>Hello</li>
+        <li>World</li>
+    </ul>
 </body>
 </html>
 ```
 
-# JavaScript
+## JavaScript
 
-## 1. Éléments de syntaxe
+### 1. Éléments de syntaxe
 
 Voici quelques éléments de comparaison entre Python et Javascript :
 
@@ -92,7 +93,7 @@ Voici quelques éléments de comparaison entre Python et Javascript :
     ```
 
 
-## 2. Modifier le contenu d'une page web avec JavaScript
+### 2. Modifier le contenu d'une page web avec JavaScript
 
 L'usage courant de JavaScript permet de rendre une page dynamique.
 
@@ -148,7 +149,7 @@ remplacé.
     c. À l'aide d'une boucle `for`.
 
 
-## 3. Réagir à un événement
+### 3. Réagir à un événement
 
 JavaScript permet de réagir à des événements déclenchés par l'utilisateur.
 L'exemple le plus simple est peut-être un bouton sur lequel on clique.
