@@ -7,7 +7,7 @@ weight: 1
 
 ---
 
-### pdf : [pour impression](/uploads/docnsitale/recursivite/pdf/1_cours_print.pdf), diapo [avec anim](/uploads/docnsitale/recursivite/pdf/1_cours_slides_animes.pdf), diapo [sans anim](content/uploads/docnsitale/recursivite/pdf/1_cours_slides.pdf)
+pdf : [pour impression](/uploads/docnsitale/recursivite/pdf/1_cours_print.pdf), diapo [avec anim](/uploads/docnsitale/recursivite/pdf/1_cours_slides_animes.pdf), diapo [sans anim](content/uploads/docnsitale/recursivite/pdf/1_cours_slides.pdf)
 
 # Récursivité
 
@@ -23,8 +23,8 @@ weight: 1
   > *Théorie destinée à fournir un cadre rigoureux à l'étude des notions intuitives de calculabilité et de décidabilité effectives. (Church a montré [1936] que la récursivité est l'équivalent mathématique de la calculabilité effective : la fonction récursive est une fonction rigoureusement calculable.)*
   * [récursif](https://www.larousse.fr/dictionnaires/francais/r%C3%A9cursif_r%C3%A9cursive/67268) :
 
-    > *Se dit d'une règle ou d'un élément doués de récursivité.*
-    > *Se dit d'un programme informatique organisé de manière telle qu'il puisse se rappeler lui-même, c'est-à-dire demander sa propre exécution au cours de son déroulement.*
+  > *Se dit d'une règle ou d'un élément doués de récursivité.*
+  > *Se dit d'un programme informatique organisé de manière telle qu'il puisse se rappeler lui-même, c'est-à-dire demander sa propre exécution au cours de son déroulement.*
 
   Avec au passage, un bel exemple de récursivité (croisée).
 * [Wikipédia](https://fr.wikipedia.org/wiki/R%C3%A9cursivit%C3%A9) :
@@ -188,17 +188,37 @@ La pile est nécessaire pour mémoriser les valeurs propre à chaque appel.
 
 ```python
 def fact(n):
+    """Version légèrement différente avec un seul return"""
     if n <= 1:
         result = 1
     else:
-  next_value = n-1
-        result = n * fact(next_value)
+        result = n * fact(n - 1)
     return result
 
 fact(5)         # s'évalue à 120
 ```
 
 Dans [PythonTutor](http://pythontutor.com/live.html#code=def%20fact%28n%29%3A%0A%20%20%20%20if%20n%20%3C%3D%201%3A%0A%20%20%20%20%20%20%20%20result%20%3D%201%0A%20%20%20%20else%3A%0A%20%20%20%20%20%20%20%20next_value%20%3D%20n-1%0A%20%20%20%20%20%20%20%20result%20%3D%20n%20*%20fact%28next_value%29%0A%20%20%20%20return%20result%0Afact%285%29&cumulative=true&curInstr=0&heapPrimitives=false&mode=display&origin=opt-live.js&py=3&rawInputLstJSON=%5B%5D&textReferences=false)
+
+{{< graphviz title="Ordre des appels récursifs" >}}
+digraph G {
+    graph [fontsize=30 labelloc="t" label="" splines=true overlap=false rankdir = "LR"];
+    in [label="entrée = fact(4)"]
+    4 [label="fact"]
+    3 [label="fact"]
+    2 [label="fact"]
+    1 [label="fact"]
+    out [label="sortie = 24"]
+    in -> 4 [label=4]
+    4 -> 3 [label=3]
+    3 -> 2 [label=2]
+    2 -> 1 [label=1]
+    1 -> 2 [label="1" loc="b"]
+    2 -> 3 [label="2"]
+    3 -> 4 [label="6"]
+    4 -> out [label="24"]
+}
+{{< /graphviz >}}
 
 ### Déroulement des appels récusifs
 
@@ -250,28 +270,30 @@ et modifiée par
 
 # Eléments Caractéristiques
 
-_cours, à noter_
 
+{{< hint info >}}
 Un programme récursif est constitué de deux parties :
 
-1. **il faut au moins une situation qui ne consiste pas en un appel récursif**
+1. **Le cas de base.**\
+   il faut au moins une situation qui ne consiste pas en un appel récursif.
 
-  ```python
-     if n <= 1:
-        return 1
-  ```
-Cette situation est appelée **situation de terminaison** ou **situation d'arrêt** ou **cas d'arrêt** ou **cas de base**.
+      ```python
+         if n <= 1:
+            return 1
+      ```
+      Cette situation est appelée *situation de terminaison* ou *situation d'arrêt* ou *cas d'arrêt* ou *cas de base*.
 
+2. **Un appel récursif.**\
+    chaque appel récursif doit se faire avec des données qui **permettent de se rapprocher d'une situation de terminaison**
 
-2. **chaque appel récursif doit se faire avec des données qui permettent de se rapprocher d'une situation de terminaison**
-
- ```python
-         return n * fact(n-1)
- ```
+     ```python
+             return n * fact(n-1)
+     ```
 
  Il faut s'assurer que la situation de terminaison est atteinte après un nombre fini d'appels récursifs.
 
 La preuve de terminaison d'un algorithme récursif se fait en identifiant la construction d'une suite strictement décroissante d'entiers positifs ou nuls.
+{{< /hint >}}
 
 _Remarque:_ Dans le cas de factorielle, il s'agit simplement de la suite des valeurs du paramètre.
 
@@ -298,17 +320,25 @@ Il faut trouver un énoncé récursif de résolution du problème, c'est-à-dire
 *Exemple* : calculer le nombre d'occurrences d'un caractère dans une chaîne.
 
 *Énonce* :
-*Le **nombre d'occurrences** de *c* dans *s* est 0 si *s* est vide.*
-*Si *c* est le premier caractère de *s*, on ajoute 1 au **nombre d'occurrences** de *c* dans les autres caractères de *s*. Sinon, il s'agit du **nombre d'occurrences** de *c* dans les autres caractères de *s*.*
+
+* **Cas de base**
+
+    Le **nombre d'occurrences** de `c` dans `s` est 0 si `s` est vide.
+
+* **Appel récursif**
+
+    * Si `c` est le premier caractère de `s`, on ajoute 1 au **nombre d'occurrences** de `c` dans les autres caractères de `s`. 
+
+    * Sinon, il s'agit du **nombre d'occurrences** de `c` dans les autres caractères de `s`.
 
 ```python
 def occurrences(char, string):
     if string == "":
-       return 0
+        return 0
     elif char == s[0]:
-       return 1 + occurrences(char, string[1:])
+        return 1 + occurrences(char, string[1:])
     else:
-         return occurrences(char, string[1:])
+        return occurrences(char, string[1:])
 ```
 
 La terminaison se vérifie en considérant la suite des longueurs des chaînes passées en paramètre.

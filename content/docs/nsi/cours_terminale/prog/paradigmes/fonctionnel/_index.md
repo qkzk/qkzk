@@ -1,11 +1,11 @@
 ---
-title: Paradigmes
+title: Paradigme fonctionnel
 bookCollapseSection: true
 author: Florian Kauder
 weight: 2
 ---
 
-### pdf [format imprimable](/uploads/docnsitale/paradigmes/fonctionnel.pdf)
+pdf [format imprimable](/uploads/docnsitale/paradigmes/fonctionnel.pdf)
 
 # Le Paradigme fonctionnel
 

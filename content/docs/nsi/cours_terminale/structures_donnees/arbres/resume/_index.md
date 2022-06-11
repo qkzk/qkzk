@@ -5,7 +5,7 @@ weight: 100
 
 ---
 
-### pdf: [pour impression](/uploads/docnsitale/arbres/cours_resume_print.pdf)
+pdf: [pour impression](/uploads/docnsitale/arbres/cours_resume_print.pdf)
 
 # Qu'est-ce qu'un arbre en informatique ?
 

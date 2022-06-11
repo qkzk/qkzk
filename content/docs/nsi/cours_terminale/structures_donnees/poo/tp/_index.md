@@ -1,19 +1,19 @@
 ---
-title: TP POO
+title: TP
 bookCollapseSection: true
 author: qkzk
 weight: 1
+
 ---
 
-### pdf : [pour impression](/uploads/docnsitale/poo/1_td.pdf)
+pdf : [pour impression](/uploads/docnsitale/poo/1_td.pdf)
 
 
 # La programmation objet
 
 ## Les objets : un moyen de séparer la conception de l'utilisation
 
-La programmation orientée objet repose, comme son nom l'indique, sur le
-concept d'objet.
+La _programmation orientée objet_ repose sur le concept d'_objet_.
 
 Un objet dans la vie courante, vous connaissez, mais en
 informatique, qu'est ce que c'est ? Une variable ? Une fonction ? Ni
@@ -27,11 +27,11 @@ Imaginez que l'on enferme cet objet dans une caisse et que
 l'utilisateur de l'objet n'ait pas besoin d'en connaître son
 principe de fonctionnement interne pour pouvoir l'utiliser.
 
-L'utilisateur a, à sa disposition, des boutons, des manettes et des
+L'_utilisateur_ a, à sa disposition, des boutons, des manettes et des
 écrans de contrôle pour faire fonctionner l'objet, ce qui rend son
 utilisation relativement simple. C'est ce qu'on fait quand on conduit !
 
-La mise au point de l'objet (par des
+La _mise au point_ de l'objet (par des
 ingénieurs) a été très complexe, en revanche son utilisation est
 relativement simple. Programmer de manière orientée objet, c'est un peu
 reprendre cette idée : _utiliser des objets sans se soucier de leur
@@ -66,11 +66,11 @@ paradigmes dans un même programme.
 La création d'une classe en python commence toujours par le mot `class`.
 Ensuite toutes les instructions de la classe seront indentées :
 
-~~~python
+```python
 class LeNomDeMaClasse:
   # instructions de la classe
 # La définition de la classe est terminée.
-~~~
+```
 
 La classe est une espèce de moule (nous reviendrons plus tard sur cette
 analogie qui a ses limites), à partir de ce moule nous allons créer des
@@ -78,18 +78,18 @@ objets (plus exactement nous parlerons d'_instances_).
 
 Par exemple, nous pouvons créer une classe voiture :
 
-~~~python
+```python
 class Voiture:
   # tout le code propre aux objets Voiture
-~~~
+```
 
 Puis créer différentes
 instances de cette classe (Peugeot407, Renault Espace,...). Pour créer une de ces
 instances, la procédure est relativement simple :
 
-~~~python
+```python
 peugeot407 = Voiture()
-~~~
+```
 
 Cette ligne veut tout simplement dire : "crée un objet (une instance)
 de la classe Voiture que l'on nommera peugeot407."
@@ -97,9 +97,9 @@ de la classe Voiture que l'on nommera peugeot407."
 Ensuite, rien ne nous empêche de créer une deuxième instance de la
 classe Voiture :
 
-~~~python
+```python
 renaultEspace = Voiture()
-~~~
+```
 
 Nous rencontrons ici la limite de notre analogie avec le moule. En effet
 2 objets fabriqués avec le même moule seront (définitivement)
@@ -116,16 +116,17 @@ instances : `bilbo` et `gollum`.
 
 Ensuite ils vont se taper, parce que je l'aime pas Gollum.
 
-### À faire vous-même 1
+### Exercice 1
 
 Saisissez, analysez et testez ce code
 
-~~~python
+```python
 class Personnage:
   pass
+
 gollum = personnage()
 bilbo = personnage()
-~~~
+```
 
 ## Attributs
 
@@ -147,35 +148,36 @@ le personnage sera mort !)
 Ces attributs s'utilisent comme des variables, l'attribut vie pour
 `bilbo` sera noté
 
-~~~python
+```python
 bilbo.vie
-~~~
+```
 
 de la même façon l'attribut vie de l'instance `gollum` sera noté
 
-~~~python
+```python
 gollum.vie
-~~~
+```
 
-### À faire vous-même 2
+### Exercice 2
 
 Saisissez, analysez et testez ce code
 
-~~~python
+```python
 class Personnage:
   pass
-gollum=Personnage()
-gollum.vie=20
-bilbo=Personnage()
-bilbo.vie=20
-~~~
+
+gollum = Personnage()
+gollum.vie = 20
+bilbo = Personnage()
+bilbo.vie = 20
+```
 
 Comme pour une variable il est possible d'utiliser la console Python
 pour afficher la valeur référencée par un attribut. Il suffit de taper
 dans la console `gollum.vie` ou `bilbo.vie` (sans bien sûr avoir oublié
 d'exécuter le programme au préalable...)
 
-\hrulefill
+---
 
 Cette façon de faire n'est pas très "propre" et n'est pas une bonne pratique
 
@@ -186,7 +188,7 @@ caisse" pour que l'utilisateur puisse l'utiliser facilement sans se
 préoccuper de ce qui se passe à l'intérieur, or, ici, ce n'est pas
 vraiment le cas.
 
-En effet, les attributs (gollum.vie et bilbo.vie), font partie de la
+En effet, les attributs (`gollum.vie` et `bilbo.vie`), font partie de la
 classe et devraient donc être enfermés dans la "caisse" !
 
 ## Méthode
@@ -194,15 +196,16 @@ classe et devraient donc être enfermés dans la "caisse" !
 Pour résoudre ce problème, nous allons définir les attributs, dans la
 classe, à l'aide d'une **méthode** d'initialisation des attributs.
 
-_définition_ : **une méthode est une fonction définie dans une classe**
+_définition_ : 
+>**une méthode est une fonction définie dans une classe** 
 
 
 Cette méthode est définie dans le code source par la ligne :
 
-~~~python
-def __init__ (self):
+```python
+def __init__(self):
 
-~~~
+```
 
 La méthode `__init__` est automatiquement exécutée au moment de la
 création d'une instance. La variable `self` est obligatoirement le premier
@@ -211,22 +214,22 @@ argument d'une méthode (nous reviendrons ci-dessous sur ce mot `self`)
 Nous retrouvons ce mot self lors de la définition des attributs. La
 définition des attributs sera de la forme :
 
-~~~python
-self.vie=20
-~~~
+```python
+self.vie = 20
+```
 
 
-Le mot self représente **l'instance**. Quand vous définissez une instance
+Le mot self (_soi même_) représente **l'instance**. Quand vous définissez une instance
 de classe (`bilbo` ou `gollum`) le nom de votre instance va remplacer le mot
 self.
 
 Dans le code source, nous allons avoir :
 
-~~~python
+```python
 class Personnage:
-  def __init__ (self):
-    self.vie=20
-~~~
+  def __init__(self):
+    self.vie = 20
+```
 
 Ensuite lors de la création de l'instance `gollum`, python va
 automatiquement remplacer `self` par `gollum` et ainsi créer un attribut
@@ -237,24 +240,25 @@ Il se passera exactement la même chose au moment de la création de
 l'instance `bilbo`, on aura automatiquement la création de l'attribut
 `bilbo.vie`.
 
-### À faire vous-même 3
+### Exercice 3
 
 Saisissez, analysez et testez ce code
 
-~~~python
+```python
 class Personnage:
   def __init__(self):
     self.vie = 20
+
 bilbo = Personnage()
 gollum = Personnage()
-~~~
+```
 
-Utilisez la console Python comme dans le "À faire vous-même 2"
+Utilisez la console Python comme dans l'Exercice 2
 
-\hrulefill
+---
 
-Le résultat du "À faire vous-même 3" est identique au résultat de l'exemple du
-"À faire vous-même 2". Mais cette fois nous n'avons pas défini l'attribut
+Le résultat de l'Exercice 3 est identique au résultat de l'exemple de l'Exercice 2. 
+Mais cette fois nous n'avons pas défini l'attribut
 `gollum.vie=20` et `bilbo.vie=20` en dehors de la classe, nous avons
 utilisé une méthode `__init__`.
 
@@ -268,27 +272,28 @@ de vie ! Pour l'instant, impossible d'introduire cette contrainte
 
 Une méthode, comme une fonction, peut prendre des paramètres.
 
-Le passage de paramètres se fait au moment de la création de l'instance :
+Le passage de paramètres à un objet se fait au moment de la création de l'instance :
 
-### À faire vous-même 4
+### Exercice 4
 
 Saisissez, analysez et testez ce code
 
-~~~python
+```python
 class Personnage:
   def __init__(self, point_de_vie):
     self.vie = point_de_vie
+
 gollum = Personnage(20)
 bilbo = Personnage(15)
-~~~
+```
 
 Utilisez la console Python pour vérifier que `gollum.vie` est égal à 20 et
 `bilbo.vie` est égal à 15
 
-\hrulefill
+---
 
 Au moment de la création de l'instance gollum, on passe comme argument le
-nombre de vies (`gollum=Personnage (20)`).
+nombre de vies (`gollum = Personnage(20)`).
 
 Ce nombre de vies est attribué au
 premier argument de la méthode `__init__`, la variable `point_de_vie` (`point_de_vie`
@@ -307,11 +312,11 @@ Nous allons créer 2 nouvelles méthodes :
 -   Une méthode qui enlèvera un point de vie au personnage blessé
 -   Une méthode qui renverra le nombre de vies restantes
 
-### À faire vous-même 5
+### Exercice 5
 
 Saisissez, analysez et testez ce code
 
-~~~python
+```python
 class Personnage:
   def __init__(self, point_de_vie):
     self.vie = point_de_vie
@@ -324,26 +329,26 @@ class Personnage:
 
 gollum = Personnage(20)
 bilbo = Personnage(15)
-~~~
+```
 
 
 Pour tester ce programme, dans la console, tapez successivement les
 instructions suivantes :
 
-~~~python
+```python
 >>> gollum.get_etat()
 >>> bilbo.get_etat()
 >>> gollum.perd_vie()
 >>> gollum.get_etat()
 >>> bilbo.perd_vie()
 >>> bilbo.get_etat()
-~~~
+```
 
-\hrulefill
+---
 
-Vous avez sans doute remarqué que lors de "l'utilisation" des instances biblo
+Vous avez sans doute remarqué que lors de "l'utilisation" des instances bilbo
 et gollum, nous avons uniquement utilisé des méthodes et nous n'avons plus
-directement utilisé des attributs (plus de "gollum.vie").
+directement utilisé des attributs (plus de "`gollum.vie`").
 
 ## Encapsulation et interface
 
@@ -363,11 +368,11 @@ Pour l'instant nous avons utilisé les méthodes uniquement en tapant des
 instructions dans la console, il est évidemment possible d'utiliser ces
 méthodes directement dans votre programme :
 
-### À faire vous-même 6
+### Exercice 6
 
 Saisissez, analysez et testez ce code
 
-~~~python
+```python
 class Personnage:
 
   def __init__(self, point_de_vie):
@@ -382,24 +387,24 @@ class Personnage:
 bilbo = Personnage(15)
 bilbo.perd_vie()
 point = bilbo.get_etat()
-~~~
+```
 
 Évaluez la variable point à l'aide de la console.
 
-### À faire vous-même 7
+### Exercice 7
 
 Nos personnages peuvent boire une potion qui leur ajoute un point de
-vie. Modifiez le programme du "À faire vous-même 5" en ajoutant une
-méthode `boirePotion`. Testez ensuite cette modification à l'aide de la
+vie. Modifiez le programme de l'Exercice 5 en ajoutant une
+méthode `boire_potion`. Testez ensuite cette modification à l'aide de la
 console.
 
-\hrulefill
+---
 
-### À faire vous-même 8
+### Exercice 8
 
 Saisissez, analysez et testez ce code
 
-~~~python
+```python
 class Personnage:
   def __init__(self, point_de_vie):
     self.vie = point_de_vie
@@ -407,24 +412,24 @@ class Personnage:
   def get_etat (self):
     return self.vie
 
-  def perd_vie (self, nbPoint):
-    self.vie = self.vie - nbPoint
+  def perd_vie (self, nb_point):
+    self.vie = self.vie - nb_point
 
 bilbo = Personnage(15)
 bilbo.perd_vie(2)
 point = bilbo.get_etat()
-~~~
+```
 
 Évaluez la variable point à l'aide de la console.
 
-\hrulefill
+---
 
-### À faire vous-même 9
+### Exercice 9
 
 Saisissez, analysez et testez ce code
 
 
-~~~python
+```python
 import random
 
 
@@ -438,25 +443,25 @@ class Personnage:
 
   def perd_vie (self):
     if random.random() > 0.5:
-      nbPoint = 1
+      nb_point = 1
     else:
-      nbPoint = 2
-    self.vie = self.vie - nbPoint
+      nb_point = 2
+    self.vie = self.vie - nb_point
 
 bilbo = Personnage(15)
 bilbo.perd_vie()
 bilbo.perd_vie()
 bilbo.perd_vie()
 point = bilbo.get_etat()
-~~~
+```
 
 Évaluez la variable point à l'aide de la console.
 
 N.B : `random.random()` renvoie une valeur aléatoire comprise entre 0 et 1
 
-Expliquez le fonctionnement de la méthode perd_vie
+Expliquez le fonctionnement de la méthode `perd_vie`.
 
-\hrulefill
+---
 
 Comme vous l'avez remarqué, il est possible d'utiliser une instruction
 conditionnelle (`if / else`) dans une méthode. Il est donc possible d'utiliser
@@ -464,11 +469,11 @@ dans le même programme le _paradigme objet_ et le _paradigme impératif_.
 
 Nous allons maintenant organiser un combat virtuel entre nos personnages :
 
-### À faire vous-même 10
+### Exercice 10
 
 Saisissez, analysez ce code
 
-~~~python
+```python
 import random
 class Personnage:
 
@@ -480,11 +485,11 @@ class Personnage:
 
   def perd_vie(self):
     if random.random() < 0.5:
-      nbPoint = 1
+      nb_point = 1
     else:
-      nbPoint = 2
+      nb_point = 2
 
-    self.vie = self.vie - nbPoint
+    self.vie = self.vie - nb_point
 
 def game():
   bilbo = Personnage(20)
@@ -506,7 +511,7 @@ def game():
     msg = "Les deux combattants sont morts en même temps"
 
   return msg
-~~~
+```
 
 Pour tester le programme, exécutez la fonction game dans une console.
 Vérifiez que l'on peut obtenir des résultats différents en exécutant
@@ -515,9 +520,9 @@ plusieurs fois la fonction `game`.
 Nous avons encore ici la démonstration qu'il est possible d'utiliser
 le paradigme objet et le paradigme impératif dans un même programme.
 
-### À faire vous-même 11
+### Exercice 11
 
-Améliorez le programme développé au "À faire vous-même 10" en
+Améliorez le programme développé dans l'Exercice 10 en
 modifiant les méthodes et en implémentant les méthodes suivantes.
 
 1. Dans l'initialisation, on ne peut donner de nom au personnage !
@@ -525,9 +530,9 @@ modifiant les méthodes et en implémentant les méthodes suivantes.
     * créez un attribut `nom` qu'on doit donner en premier paramètre :
       on crée une instance de `Personnage` comme ceci :
 
-      ~~~python
+      ```python
       gollum = Personnage("Gollum", 20)
-      ~~~
+      ```
 
     * créez une méthode `get_nom` qui renvoie le nom du personnage.
 
@@ -535,13 +540,13 @@ modifiant les méthodes et en implémentant les méthodes suivantes.
     On doit pouvoir créer d'autres personnages et les messages doivent tenir
     compte des noms de ceux-ci.
 
-    ~~~python
+    ```python
     >>> frodon = Personnage("Frodon", 20)
     >>> araignee = Personnage("Araignée", 10)
-    >>> game()
+    >>> game(frodon, araignee)
     Frodon est vainqueur, il lui reste encore 3 points
     alors que Araignée est mort
-    ~~~
+    ```
 
 
     Remarquez bien que la _signature_ de la fonction `game` est différente !
@@ -553,7 +558,7 @@ modifiant les méthodes et en implémentant les méthodes suivantes.
     du combat :
 
 
-    ~~~python
+    ```python
     >>> aragorn = Personnage(10)
     >>> orc = Personnage(10)
     >>> game(aragorn, orc)
@@ -563,12 +568,12 @@ modifiant les méthodes et en implémentant les méthodes suivantes.
     Aragorn perd deux points de vie
     Orc perd deux points de vie
     Orc est vainqueur, il lui reste encore 3 points alors que Aragorn est mort
-    ~~~
+    ```
 
 4. Revenons à `Personnage`\
     On dispose maintenant des méthodes suivantes :
 
-    ~~~python
+    ```python
     class Personnage:
     |
     |  get_etat
@@ -581,7 +586,7 @@ modifiant les méthodes et en implémentant les méthodes suivantes.
     |  get_nom
     |     --> str
     |     renvoie le nom du personnage
-    ~~~
+    ```
 
     On veut créer un attribut `chance` lors de l'instanciation du personnage.
     C'est un entier entre 0 et 4.
@@ -607,9 +612,9 @@ modifiant les méthodes et en implémentant les méthodes suivantes.
       * Il faut aussi changer la méthode `__init__` pour pouvoir créer nos
         personnages ainsi :
 
-        ~~~python
+        ```python
         aragorn = Personnage("Aragorn", 30, 2)
-        ~~~
+        ```
 
     Implémentez la chance et faites quelques essais.
 
@@ -637,7 +642,7 @@ modifiant les méthodes et en implémentant les méthodes suivantes.
 
 Et c'est la fin de cette très longue partie !
 
-### A faire 12
+### Exercice 12
 
 Vous pouvez continuer ce jeu en mode texte avec vos propres méthodes.
 

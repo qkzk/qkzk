@@ -11,7 +11,7 @@ weight: 1
 pandoc -t beamer --slide-level=2
 -->
 
-### pdf : pour [impression](/uploads/docnsitale/dictionnaire/cours.pdf)
+pdf pour [impression](/uploads/docnsitale/dictionnaire/cours.pdf)
 
 # Structure de donnée : Dictionnaire
 
@@ -122,7 +122,7 @@ désigne la clé et le second la valeur. Ainsi `a` est la clé et `1` est la val
 Lors de l'ajout, on doit vérifier (en parcourant la liste) qu'elle ne contient
 pas déjà une `clé` à ce nom.
 
-Cette opération de recherche est longue et nécessite un parcours.
+La recherche est longue et nécessite un parcours.
 
 Lors de l'accès à une valeur depuis sa clé, il faut encore parcourir la liste
 afin de trouver le couple `(clé, valeur)`. Là encore, ce parcours prend beaucoup
@@ -279,6 +279,8 @@ exemple, celui des [tuples](https://github.com/python/cpython/blob/caba55b3b7354
 qui fait 1000 lignes de C... La liste des contributeurs fait apparaître plusieurs
 'célébrités' de Python (Guido Von Rossum, Raymond Hettinger, Tim Peters etc.)
 
+Bref, c'est tout sauf simple.
+
 
 
 ## Fonction de hachage cryptographique 
@@ -295,11 +297,10 @@ on dit d'une telle fonction qu'elle est à sens unique.
 
 Une fonction de hachage cryptographique idéale possède les quatre propriétés suivantes :
 
-la valeur de hachage d'un message se calcule « très rapidement » ;
-
-* il est, par définition, impossible, pour une valeur de hachage donnée, de construire un message ayant cette valeur de hachage ;
-* il est, par définition, impossible de modifier un message sans changer sa valeur de hachage ;
-* il est, par définition, impossible de trouver deux messages différents ayant la même valeur de hachage.
+1. la valeur de hachage d'un message se calcule « très rapidement » ;
+2. il est, par définition, impossible, pour une valeur de hachage donnée, de construire un message ayant cette valeur de hachage ;
+3. il est, par définition, impossible de modifier un message sans changer sa valeur de hachage ;
+4. il est, par définition, impossible de trouver deux messages différents ayant la même valeur de hachage.
 
 ### Exemples de fonctions de hachage cryptographique
 
@@ -320,19 +321,22 @@ Les entrées de la fonction de compression sont découpées
 
 * en mots de 32 bits pour SHA-256 et SHA-224,
 * en mots de 64 bits pour SHA-512 et SHA-384.
-*
+
 La fonction de compression répète les mêmes opérations un nombre de fois
 déterminé, on parle de tour ou de ronde, 64 tours pour SHA-256, 80 tours pour
-SHA-512. Chaque tour fait intervenir comme primitives l'addition entière pour
+SHA-512. 
+
+Chaque tour fait intervenir comme primitives l'addition entière pour
 des entiers de taille fixe, soit une addition modulo 232 ou modulo 264, des
-opérations bit à bit : opérations logiques, décalages avec perte d'une partie
-des bits et décalages circulaires, et des constantes prédéfinies, utilisées
+opérations bit à bit (opérations logiques, décalages avec perte d'une partie
+des bits et décalages circulaires), et des constantes prédéfinies, utilisées
 également pour l'initialisation.
 
 Avant traitement, le message est complété par bourrage de façon que sa
 longueur soit un multiple de la taille du bloc traité par la fonction de
-compression. Le bourrage incorpore la longueur (en binaire) du mot à traiter :
-c'est le renforcement de Merkle-Damgård ((en)Merkle-Damgård strengthening), ce
+compression.\
+Le bourrage incorpore la longueur (en binaire) du mot à traiter :
+c'est le renforcement de Merkle-Damgård, ce
 qui permet de réduire la résistance aux collisions de la fonction de hachage à
 celle de la fonction de compression. Cette longueur est stockée en fin de
 bourrage sur 64 bits dans le cas de SHA-256 (comme pour SHA-1), sur 128 bits

@@ -6,6 +6,7 @@ weight: 4
 
 # Structures de données
 
+* Les [dictionnaires](dictionnaire).
 * La [programmation orientée objet](poo).
 * Les [arbres](arbres) binaires.
 * Les [listes](listes).

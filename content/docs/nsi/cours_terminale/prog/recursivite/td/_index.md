@@ -5,11 +5,12 @@ author: qkzk
 weight: 2
 ---
 
-### pdf : [pour impression](/uploads/docnsitale/recursivite/pdf/2_td_recursivite.pdf)
+pdf : [pour impression](/uploads/docnsitale/recursivite/pdf/2_td_recursivite.pdf)
 
-# Généralités sur les algorithmes récursifs
 
-## Que calculent les fonctions `even` et `odd` ?
+## Exercice 1. `even` et `odd` 
+
+even : _pair_, odd : _impair_.
 
 Voici la déclaration en Python de deux fonctions :
 
@@ -32,7 +33,7 @@ def odd(n):
 2. Illustrer graphiquement une série d'appel récursif afin d'exposer le problème.
 
 
-## Encore la fonction `even`
+## Exercice 2. Encore la fonction `even`
 
 Voici la déclaration en Python de la fonction `even` :
 
@@ -48,7 +49,8 @@ def even(n):
   termine et un pour lequel elle ne termine pas.
 2. Rectifier la fonction.
 
-# Algorithmes simples
+## Exercice 3. Algorithmes simples
+
 
 1.  Proposer un algorithme récursif qui calcule la **somme** des entiers de `1` à `n`.
 2.  **Factorielle.**
@@ -101,8 +103,7 @@ def even(n):
     `puissance(3, 2)  ---> 9`
 
 
-# Algorithmes sur les tableaux et les chaînes
-
+## Exercice 4. Algorithmes sur les tableaux et les chaînes
 
 1.  **Palindromes**
 
@@ -121,7 +122,7 @@ def even(n):
 
     Adapter cet algorithme afin de mesurer la longueur d'une liste.
 
-3.  Retourner une chaîne de caractères.
+3. **Retourner une chaîne de caractères.** 
 
     Proposez une fonction `retourner` paramétrée par une chaîne de
     caractère et qui retourne la même chaîne écrite de droite à gauche.
@@ -153,7 +154,8 @@ def even(n):
     le mot.
 
 
-# Autres algorithmes récursifs
+## Exercice 5. Autres algorithmes récursifs
+
 
 1.  **Coloriage**
 
@@ -214,7 +216,7 @@ def even(n):
      correspondante au second caractère est supérieure à celle du premier.
 
 
-4.  **Mélanger deux lises**
+4.  **Mélanger deux listes**
 
     Réalisez récursivement une fonction nommée `shuffle` paramétrée par deux
     listes `l1` et `l2` qui renvoie une liste dont les éléments sont ceux de ces

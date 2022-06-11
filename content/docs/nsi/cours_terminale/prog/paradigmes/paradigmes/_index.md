@@ -2,16 +2,17 @@
 title: Paradigmes de programmation
 bookCollapseSection: true
 weight: 1
+
 ---
 
-### pdf [format imprimable](/uploads/docnsitale/paradigmes/paradigme.pdf)
+pdf [format imprimable](/uploads/docnsitale/paradigmes/paradigme.pdf)
 
 Dans ce court chapitre nous allons définir ce qu'est un paradigme de programmation.
 
 Cette notion fait référence à la _diversité et l'unité_ des langages de
 programmation, abordée en première.
 
-# Paradigme de programmation
+## Paradigme de programmation
 
 **Définition :**
 
@@ -144,6 +145,178 @@ Que doit faire la personne ? Comment intéragit-elle avec l'objet ville ?
 
 Ces intéractions permettent de définir les _méthodes_.
 
+
+{{< graphviz "Diagramme de classe complexe" >}}
+digraph UML_Class_diagram {
+	graph [
+		label="UML Class diagram demo"
+		labelloc="t"
+		fontname="Helvetica,Arial,sans-serif"
+	]
+	node [
+		fontname="Helvetica,Arial,sans-serif"
+		shape=record
+		style=filled
+		fillcolor=gray95
+	]
+	edge [fontname="Helvetica,Arial,sans-serif"]
+	edge [arrowhead=vee style=dashed]
+	Client -> Interface1 [label=dependency]
+	Client -> Interface2
+
+	edge [dir=back arrowtail=empty style=""]
+	Interface1 -> Class1 [xlabel=inheritance]
+	Interface2 -> Class1 [dir=none]
+	Interface2 [label="" xlabel="Simple\ninterface" shape=circle]
+
+	Interface1[label = <{<b>«interface» I/O</b> | + property<br align="left"/>...<br align="left"/>|+ method<br align="left"/>...<br align="left"/>}>]
+	Class1[label = <{<b>I/O class</b> | + property<br align="left"/>...<br align="left"/>|+ method<br align="left"/>...<br align="left"/>}>]
+	edge [dir=back arrowtail=empty style=dashed]
+	Class1 -> System_1 [label=implementation]
+	System_1 [
+		shape=plain
+		label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="4">
+			<tr> <td> <b>System</b> </td> </tr>
+			<tr> <td>
+				<table border="0" cellborder="0" cellspacing="0" >
+					<tr> <td align="left" >+ property</td> </tr>
+					<tr> <td port="ss1" align="left" >- Subsystem 1</td> </tr>
+					<tr> <td port="ss2" align="left" >- Subsystem 2</td> </tr>
+					<tr> <td port="ss3" align="left" >- Subsystem 3</td> </tr>
+					<tr> <td align="left">...</td> </tr>
+				</table>
+			</td> </tr>
+			<tr> <td align="left">+ method<br/>...<br align="left"/></td> </tr>
+		</table>>
+	]
+
+	edge [dir=back arrowtail=diamond]
+	System_1:ss1 -> Subsystem_1 [xlabel="composition"]
+
+	Subsystem_1 [
+		shape=plain
+		label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="4">
+			<tr> <td> <b>Subsystem 1</b> </td> </tr>
+			<tr> <td>
+				<table border="0" cellborder="0" cellspacing="0" >
+					<tr> <td align="left">+ property</td> </tr>
+					<tr> <td align="left" port="r1">- resource</td> </tr>
+					<tr> <td align="left">...</td> </tr>
+				</table>
+				</td> </tr>
+			<tr> <td align="left">
+				+ method<br/>
+				...<br align="left"/>
+			</td> </tr>
+		</table>>
+	]
+	Subsystem_2 [
+		shape=plain
+		label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="4">
+			<tr> <td> <b>Subsystem 2</b> </td> </tr>
+			<tr> <td>
+				<table align="left" border="0" cellborder="0" cellspacing="0" >
+					<tr> <td align="left">+ property</td> </tr>
+					<tr> <td align="left" port="r1">- resource</td> </tr>
+					<tr> <td align="left">...</td> </tr>
+				</table>
+				</td> </tr>
+			<tr> <td align="left">
+				+ method<br/>
+				...<br align="left"/>
+			</td> </tr>
+		</table>>
+	]
+	Subsystem_3 [
+		shape=plain
+		label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="4">
+			<tr> <td> <b>Subsystem 3</b> </td> </tr>
+			<tr> <td>
+				<table border="0" cellborder="0" cellspacing="0" >
+					<tr> <td align="left">+ property</td> </tr>
+					<tr> <td align="left" port="r1">- resource</td> </tr>
+					<tr> <td align="left">...</td> </tr>
+				</table>
+				</td> </tr>
+			<tr> <td align="left">
+				+ method<br/>
+				...<br align="left"/>
+			</td> </tr>
+		</table>>
+	]
+	System_1:ss2 -> Subsystem_2;
+	System_1:ss3 -> Subsystem_3;
+
+	edge [xdir=back arrowtail=odiamond]
+	Subsystem_1:r1 -> "Shared resource" [label=aggregation]
+	Subsystem_2:r1 -> "Shared resource"
+	Subsystem_3:r1 -> "Shared resource"
+	"Shared resource" [
+		label = <{
+			<b>Shared resource</b>
+			|
+				+ property<br align="left"/>
+				...<br align="left"/>
+			|
+				+ method<br align="left"/>
+				...<br align="left"/>
+			}>
+	]
+}
+{{< /graphviz >}}
+
+
+En exemple de classes interdépendantes
+
+```python
+class Voiture:
+    def __init__(self, modele):
+        self.modele = modele
+        self.proprio = None
+
+    def detenue_par(self, proprio):
+        self.proprio = proprio
+
+    def rouler(self):
+        return f"{self.modele} fait vroom"
+
+    def tourner(self, direction):
+        return f"{self.modele} tourne à {direction}"
+
+    def __repr__(self):
+        return f"{Voiture({self.modele})}"
+
+def Personne:
+    def __init__(self, nom):
+        self.nom = nom
+        self.voiture = None
+
+    def achete_voiture(self, voiture):
+        self.voiture = voiture
+        voiture.proprio = self.nom
+
+    def conduire(self):
+        return self.voiture.rouler()
+
+    def __repr__(self):
+        return f"{Personne({self.nom})}"
+
+jean = Personne("Jean")
+clio = Voiture("Clio")
+jean.achete(clio)
+print(jean.voiture)
+print(clio.proprio)
+print(jean.conduit())
+```
+
+On verra :
+
+```
+Voiture("Clio")
+Personne("Jean")
+Clio fait vroom
+```
+
 ## Programmation fonctionnelle
 
 La programmation fonctionnelle est un paradigme de programmation de type
@@ -151,10 +324,10 @@ déclaratif qui considère le calcul en tant qu'évaluation de fonctions
 mathématiques.
 
 Comme le changement d'état et la mutation des données ne peuvent pas être
-représentés par des évaluations de fonctions la programmation fonctionnelle
-ne les admet pas, au contraire elle met en avant l'application des fonctions,
-contrairement au modèle de programmation impérative qui met en avant les
-changements d'état.
+représentés par des évaluations de fonctions, la programmation fonctionnelle
+ne les admet pas. Au contraire elle met en avant l'application des fonctions.
+
+Le modèle de programmation impérative met en avant les changements d'état.
 
 Alors que
 l'origine de la programmation fonctionnelle peut être trouvée dans le

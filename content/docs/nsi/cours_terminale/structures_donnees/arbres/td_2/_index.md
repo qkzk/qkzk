@@ -6,14 +6,14 @@ weight: 3
 
 ---
 
-### PDF : [pour impression](/uploads/docnsitale/arbres/td_arbres_fig.pdf)
+PDF : [pour impression](/uploads/docnsitale/arbres/td_arbres_fig.pdf)
 
 
 
 
 **Compétence :** _Savoir décrire et caractériser un arbre ou un nœud._
 
-# Exercice 1
+## Exercice 1
 
 On donne l'arbre suivant :
 
@@ -27,7 +27,7 @@ On donne l'arbre suivant :
     et ses feuilles
 2. Pour le noeud 4, déterminer son père, ses frères, sa hauteur, sa profondeur.
 
-# Exercice 2
+## Exercice 2
 
 On donne ci-dessous le tableau caractérisant un arbre :
 
@@ -52,7 +52,7 @@ On donne ci-dessous le tableau caractérisant un arbre :
 
 **Compétence :** _Savoir évaluer quelques mesures sur les arbres binaires_
 
-# Exercice 3
+## Exercice 3
 
 On donne l'arbre A suivant :
 
@@ -66,7 +66,7 @@ On donne l'arbre A suivant :
 **Compétence :** _Identifier des situations nécessitant des structures de données
 arborescentes._
 
-# Exercice 4
+## Exercice 4
 
 On donne ci-dessous une liste aléatoire de 14 nombres entiers :
 
@@ -78,7 +78,7 @@ Construire (dans l'ordre de la liste) l'arbre binaire de recherche associé.
 
 **Compétence :** _Savoir raisonner avec un type abstrait_
 
-# Exercice 5
+## Exercice 5
 
 On donne la suite d'instructions suivantes :
 

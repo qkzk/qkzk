@@ -7,7 +7,7 @@ weight: 1
 ---
 
 
-### pdf: [pour impression](/uploads/docnsitale/arbres/cours_td_intro.pdf)
+pdf: [pour impression](/uploads/docnsitale/arbres/cours_td_intro.pdf)
 
 
 <!-- à compiler par
@@ -259,6 +259,42 @@ taille (a) :
 ```
 
 -->
+
+
+**Remarque importante**
+
+On rencontre plusieurs définitions de la hauteur... jusque dans les énoncés de bac.
+L'informatique est toujours une science récente et certaines définitions ne sont pas arrêtées.
+
+Si la hauteur de la racine est 0
+
+{{< graphviz title="hauteur">}}
+graph {
+    n [label="r"]
+    g
+    d
+    gg [label="nil" shape="square"]
+    gd [label="nil" shape="square"]
+    dg [label="nil" shape="square"]
+    dd
+    ddg [label="nil" shape="square"]
+    ddd [label="nil" shape="square"]
+    n -- g
+    n -- d
+    g -- gg
+    g -- gd
+    d -- dg
+    d -- dd
+    dd -- ddg
+    dd -- ddd
+}
+{{< /graphviz >}}
+
+
+* Si la hauteur de la racine est 0, cet arbre a pour hauteur 2.
+* Si la hauteur de la racine est -1, cet arbre a pour hauteur 1.
+
+Il faudra vous adapter au contexte, qui le précise toujours.
 
 Caractériser les arbres binaires
 ================================

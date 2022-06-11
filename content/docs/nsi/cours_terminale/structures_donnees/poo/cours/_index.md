@@ -1,11 +1,11 @@
 ---
-title : cours POO
+title : cours
 author: qkzk
 weight: 2
 
 ---
 
-### pdf : [format imprimable](/uploads/docnsitale/poo/2_cours_clean.pdf), fichier [contact.py](/uploads/docnsitale/poo/contact.py)
+pdf : [format imprimable](/uploads/docnsitale/poo/2_cours_clean.pdf), fichier [contact.py](/uploads/docnsitale/poo/contact.py)
 
 
 
@@ -159,7 +159,7 @@ de la classe.
 
 ## Exemple de classe : `Combattant`
 
-```{#numCode .python .numberLines}
+```python
 class Combattant:
 
     def __init__(self, vie, attaque):
@@ -173,7 +173,7 @@ class Combattant:
             self.vivant = False
             self.vie = 0
 
-    def attaquer(self, autre):
+    def attaque(self, autre):
         autre.perdre_vie(self.attaque)
 ```
 
@@ -211,13 +211,13 @@ Cependant, _je vous l'impose._ Si vous écrivez autre chose que `self` :
 True
 >>> magicien.vie                    # != guerrier.vie
 5
->>> magicien.attaquer(guerrier)     # utilisation d'une méthode
+>>> magicien.attaque(guerrier)     # utilisation d'une méthode
 >>> guerrier.vie
 6
->>> magicien.attaquer(guerrier)
+>>> magicien.attaque(guerrier)
 >>> guerrier.vie
 2
->>> magicien.attaquer(guerrier)
+>>> magicien.attaque(guerrier)
 >>> guerrier.vie
 0
 ```
@@ -257,7 +257,7 @@ class Combattant:
             self.vivant = False
             self.vie = 0
 
-    def attaquer(self, autre):
+    def attaque(self, autre):
         autre.perdre_vie(self.attaque)
 ```
 
@@ -333,9 +333,8 @@ Ici, cela peut sembler inutile mais on pourrait, dans la méthode
 Ou vérifier que la nouvelle valeur d'un numéro de téléphone est valide, qu'un
 age est positif, qu'un compte bancaire bloqué n'est pas à découvert etc.
 
-\hrulefill coeur de la POO en NSI
 
-### encapsulation\
+### encapsulation
 
 Les données (attributs) sont regroupées avec les traitements qui les manipulent
 (méthodes)
@@ -345,7 +344,7 @@ Les données (attributs) sont regroupées avec les traitements qui les manipulen
   * seules les méthodes sont accessibles
 
 
-### règle d'or\
+### règle d'or
 
 **les attributs sont déclarés privés** = accessibles uniquement au sein de la
 classe

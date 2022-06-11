@@ -6,13 +6,13 @@ weight: 100
 
 ---
 
-### pdf: [pour impression](/uploads/docnsitale/poo/poo_resume.pdf)
+pdf: [pour impression](/uploads/docnsitale/poo/poo_resume.pdf)
 
 # Introduction à la programmation objet : Les grands principes
 
 ## langage à objet
 
-\hfill Alan Kay _SmallTalk_
+Alan Kay _SmallTalk_
 
 * tout est objet
 * chaque objet a un **type**
@@ -22,10 +22,9 @@ weight: 100
 
 ## type
 
-\begin{center}c'est quoi un \textbf{type} ?
+c'est quoi un **type** ?
 
 booléen, entier, Competiteur, Temps, List, Combattant, Voiture etc.
-\end{center}
 
 
 un **type** de données définit
@@ -208,7 +207,6 @@ class Vecteur:
 
 ## encapsulation
 
-\hrulefill coeur de la POO en NSI
 
 ### encapsulation
 

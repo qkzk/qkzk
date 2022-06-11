@@ -7,7 +7,7 @@ weight: 100
 
 ---
 
-### pdf:[pour impression](/uploads/docnsitale/recursivite/pdf/resume_recursion.pdf)
+pdf:[pour impression](/uploads/docnsitale/recursivite/pdf/resume_recursion.pdf)
 
 # Récursivité
 
