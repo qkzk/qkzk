@@ -5,6 +5,7 @@ author: qkzk
 weight: 1
 
 ---
+pdf au [format imprimable](/uploads/docsnsi/reseau/reseaux-Article.pdf) et [diaporama](/uploads/docsnsi/reseau/reseaux-Beamer.pdf),
 
 # Deux versions d'un même cours.
 
@@ -17,7 +18,6 @@ Vous trouverez :
 
 
 
-### pdf au [format imprimable](/uploads/docsnsi/reseau/reseaux-Article.pdf) et [diaporama](/uploads/docsnsi/reseau/reseaux-Beamer.pdf),
 
 * simulation d'un réseau,
 * capture de paquets sur un réseau.
@@ -78,7 +78,7 @@ Le modèle OSI est un modèle _théorique_ dont TCP/IP s'est inspiré
 
 ---------------------
 
-![Le modèle OSI](/uploads/docsnsi/architecture/img/osi.png){height=8cm}
+![Le modèle OSI](/uploads/docsnsi/architecture/img/osi.png)
 
 ## Les couches du modèle OSI
 
@@ -124,7 +124,7 @@ Le navigateur (application) s'est adressé aux couches réseau (1 à 4) pour qu'
 
 -------------------
 
-![Toutes les couches sont parcourues de haut en bas pour transmettre](/uploads/docsnsi/architecture/img/osi_transmission.png){height=8cm}
+![Toutes les couches sont parcourues de haut en bas pour transmettre](/uploads/docsnsi/architecture/img/osi_transmission.png)
 
 # Couche 1 : physique
 
@@ -134,7 +134,7 @@ Zappons l'aspect historique des câbles coaxiaux qui ne sont plus utilisés.
 
 ### Les cables torsadés
 
-### ![câbles à paires torsadées](/uploads/docsnsi/architecture/img/paire_torsadee.jpg){height=6cm}
+![câbles à paires torsadées](/uploads/docsnsi/architecture/img/paire_torsadee.jpg)
 
 ## Les cables torsadés
 
@@ -155,17 +155,17 @@ Une gaine plastique protège 8 fils, eux mêmes protégés et torsadés par pair
 
 * Deux vieux ordinateurs entre eux (rare), il faut **croiser** les câbles : l'_émission_ sur la _réception_
 
-### ![cables croises](/uploads/docsnsi/architecture/img/croise.png)
+![cables croises](/uploads/docsnsi/architecture/img/croise.png)
 
 * Un ordinateur et un switch : on peut utiliser des **câbles droits**
 
-### ![cables droits](/uploads/docsnsi/architecture/img/droits.png)
+![cables droits](/uploads/docsnsi/architecture/img/droits.png)
 
 
 ---------------------
 
 ## Matériel réseau : le hub
-### ![hub](/uploads/docsnsi/architecture/img/hub.png)
+![hub](/uploads/docsnsi/architecture/img/hub.png)
 
 Le **hub** relie plusieurs prises RJ45 entre elles.
 
@@ -175,7 +175,7 @@ Le **hub** relie plusieurs prises RJ45 entre elles.
 
 ## Matériel réseau : le switch
 
-### ![switch](/uploads/docsnsi/architecture/img/switch.png)
+![switch](/uploads/docsnsi/architecture/img/switch.png)
 
 Le **switch** adresse les infos aux _machines destinataires_
 
@@ -193,7 +193,7 @@ Transporte l'information avec la **lumière** et non plus des 0 et 1.
 
 Coûteuse mais beaucoup plus efficace. Utilisée au _coeur du réseau._
 
-### ![Fibre Optique](/uploads/docsnsi/architecture/img/optic.jpg)
+![Fibre Optique](/uploads/docsnsi/architecture/img/optic.jpg)
 
 ## Deux types de fibres
 
@@ -219,7 +219,7 @@ La **topologie d'un réseau** décrit la manière dont sont reliées les machine
 * Réseau en étoile localement (routeur / switch au centre)
 * Réseau maillé (mesh) sur internet
 
-### ![Reseau en étoile](/uploads/docsnsi/architecture/img/Star_topology.png) ![Reseau maillé](/uploads/docsnsi/architecture/img/Fully_topology.png)
+![Reseau en étoile](/uploads/docsnsi/architecture/img/Star_topology.png) ![Reseau maillé](/uploads/docsnsi/architecture/img/Fully_topology.png)
 
 ## Comment éviter les collisions d'information ?
 
@@ -352,7 +352,7 @@ Les couches 1 et 2 permettent de communiquer dans un réseau local
 
 ### Le rôle de la couche 3 et d'interconnecter les réseaux
 
-![Plusieurs routes sont possibles](/uploads/docsnsi/architecture/img/route.png){height=5cm}
+![Plusieurs routes sont possibles](/uploads/docsnsi/architecture/img/route.png)
 
 ## Comment découvrir le chemin emprunté ?
 
@@ -629,7 +629,7 @@ Un **routeur** est un **ordinateur** qui dispose de plusieurs interfaces (=carte
 
 Internet, deux routeurs, un hub, un switch et un serveur FTP.
 
-![Un réseau complet](/uploads/docsnsi/architecture/img/reseau_complet.gif){height=6cm}
+![Un réseau complet](/uploads/docsnsi/architecture/img/reseau_complet.gif)
 
 ## Mais internet avec l'ADSL ?
 

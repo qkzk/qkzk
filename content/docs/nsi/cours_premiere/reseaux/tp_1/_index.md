@@ -8,20 +8,22 @@ bookCollapseSection: true
 
 ---
 
-### [pdf](./tp_reseau_1.pdf)
+[pdf](./tp_reseau_1.pdf)
 
+
+## Présentation
 
 Après la théorie, passons maintenant à la pratique. Il est un peu
 difficile de mettre en place un réseau pour effectuer quelques tests. 
 
-À la place, nous allons utiliser un simulateur de réseau. Il existe différents
+À la place, nous allons utiliser un **simulateur de réseau**. Il existe différents
 types de simulateurs : du plus simple au plus "professionnel". Nous allons
 utiliser un simulateur relativement simple à prendre en main et déjà installé
 sur vos postes : [Filius](http://www.lernsoftware-filius.de/Herunterladen) (la page
 web est en allemand, mais le logiciel est disponible en anglais). 
 
-Avant de visionner une petite vidéo qui devrait vous aider à prendre en
-main Filius, quelques petites indications
+Avant de visionner une vidéo qui devrait vous aider à prendre en
+main Filius, quelques indications
 
 Nous allons utiliser deux commandes dans la vidéo :
 
@@ -52,7 +54,7 @@ YouTube pour un meilleur confort de lecture).
 
 Lien vers la [vidéo](https://youtu.be/nzuRSOwdF5I)
 
-#### À faire vous-même 1
+## Exercice 1
 
 En utilisant le logiciel Filius, créez un réseau de 4 machines (M1, M2,
 M3 et M4). L'adresse IP de la machine M1 est "192.168.1.1",
@@ -63,7 +65,7 @@ adresse IP et de déterminer son adresse MAC (adresse physique)
 
 Effectuez un "ping" de la machine M2 vers la machine M4.
 
-#### À faire vous-même 2
+## Exercice 2
 
 Visionner les vidéos "filius 2" à "filius 4" et reproduire les manipulations
 présentées.

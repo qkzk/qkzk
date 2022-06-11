@@ -8,7 +8,7 @@ bookCollapseSection: true
 
 ---
 
-### [pdf](./tp_reseau_2.pdf)
+[pdf](./tp_reseau_2.pdf)
 
 
 
@@ -18,13 +18,13 @@ d'analyser les données échangées entre les machines grâce à l'outil
 "data exchange". Pour afficher cet outil, il suffit de faire un clic
 droit sur la machine concernée et de choisir "show data exchange".
 
-## À faire vous-même 1
+## Exercice 1
 
 Commencez par visionner la vidéo ci-dessous :
 
 Lien vers [la vidéo](https://youtu.be/fY2yiRXMdS8)
 
-## À faire vous-même 2
+## Exercice 2
 
 Une fois la vidéo visionnée, en utilisant le logiciel Filius :
 

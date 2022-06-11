@@ -10,7 +10,7 @@ bookCollapseSection: true
 
 ### pdf [pour impression](./td_reseau.pdf)
 
-# Adresse IP
+## Exercice 1. Adresse IP
 
 Soit l'adresse ip suivante :
 
@@ -22,7 +22,7 @@ Soit l'adresse ip suivante :
 3. Écrire le masque de sous réseau au format décimal
 4. L'adresse 192.16.5.130 figure-t-elle dans le même réseau ? Justifier.
 
-# Adresse IP : masque de taille quelconque
+## Exercice 2.  Adresse IP : masque de taille quelconque
 
 On considère l'adresse IP 172.16.31.28/22
 
@@ -32,7 +32,7 @@ On considère l'adresse IP 172.16.31.28/22
 4. Convertir chaque adresse : réseau, hôte et masque en décimal.
 5. L'adresse 172.16.29.12/22 figure-t-elle dans le même réseau ?
 
-# Commandes linux
+## Exercice 3. Commandes linux
 
 
 1. Quelle commande linux permet de connaître la configuration réseau
@@ -48,7 +48,7 @@ On considère l'adresse IP 172.16.31.28/22
    Quelle commande saisir ? Verra-t-on toujours toutes les machines intermédiaires ?
 
 
-# Analyser la sortie d'une commande
+## Exercice 4. Analyser la sortie d'une commande
 
 Voici la sortie d'une commande linux :
 
@@ -89,7 +89,7 @@ Voici la sortie d'une commande linux :
 3. Le réseau `eth0` est-il actif ? Justifier.
 
 
-# Analyser la sortie d'une commande
+## Exercice 5. Analyser la sortie d'une commande
 
 ```
 PING 8.8.8.8 (8.8.8.8) 56(84) bytes of data.
@@ -109,7 +109,7 @@ rtt min/avg/max/mdev = 6.639/7.810/9.730/1.368 m
 4. Peut-on estimer le débit à l'aide de cette commande ?
 
 
-# Analyser la sortie d'une commande
+## Exercice 6. Analyser la sortie d'une commande
 
 ```
 traceroute to 1.1.1.1 (1.1.1.1), 30 hops max, 60 byte packets
@@ -151,7 +151,7 @@ traceroute to google.com (216.58.214.78), 30 hops max, 60 byte packets
 
 
 
-# Un réseau domestique
+## Exercice 7. Un réseau domestique
 
 Le réseau domestique de Thibault est constitué des éléments suivants
 
