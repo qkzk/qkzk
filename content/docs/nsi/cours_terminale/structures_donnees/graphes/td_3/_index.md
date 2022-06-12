@@ -5,7 +5,7 @@ weight: 12
 
 ---
 
-### pdf : [pour impression](/uploads/docnsitale/graphes/4_td_etude.pdf)
+pdf : [pour impression](/uploads/docnsitale/graphes/4_td_etude.pdf)
 
 ## Deux problèmes
 

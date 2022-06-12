@@ -11,7 +11,7 @@ weight: 15
 
 **pdf [pour impression](/uploads/docnsitale/graphes/6_cours_algos_graphes.pdf)**
 
-# Algorithmes sur les graphes
+## Algorithmes sur les graphes
 
 Nous allons présenter différents algorithmes sur les graphes :
 
@@ -35,7 +35,7 @@ Les applications sont nombreuses :
     algorithmes (choix d'une route optimale sur une carte, par exemple) qui
     exigent parfois _qu'il n'y ait pas de cycle_ dans le graphe.
 
-# Parcourir un graphe simple
+## Parcourir un graphe simple
 
 Nous avons déjà vu comment parcourir un arbre. Le principe est identique.
 
@@ -232,7 +232,7 @@ pile (ou à la file).
 
 ---
 
-# Déterminer un chemin dans un graphe simple
+## Déterminer un chemin dans un graphe simple
 
 Cette fois on souhaite savoir quels sommets emprunter pour rejoindre
 une destination depuis une source.
@@ -256,7 +256,7 @@ aident à s'orienter ou à choisir le prochain sommet à visiter.
 **Le principe est le même, on doit simplement conserver une information**
 **supplémentaire : d'où venons-nous ?**
 
-## Algorithme : détermination d'un chemin dans un graphe simple.
+### Algorithme : détermination d'un chemin dans un graphe simple.
 
 ### Première étape : parcourir
 
@@ -339,7 +339,7 @@ chemin = [0, 2, 3, 4], 0 est la source, on a terminé.
 Elle retourne alors : `[0, 2, 3, 4]`
 
 
-# Recherche de la présence de cycle dans un graphe simple
+## Recherche de la présence de cycle dans un graphe simple
 
 **Un cycle est un chemin dont la source et la destination sont égales.**
 
@@ -359,7 +359,7 @@ plus de cycle :
 On souhaite créer une fonction qui réponde "Vrai" pour le premier graphe (il
 a un cycle) et "Faux" pour le second: il n'en a pas.
 
-## Algorithme : présence d'un cycle dans un graphe
+### Algorithme : présence d'un cycle dans un graphe
 
 Il existe beaucoup de variantes. Nous n'en présentons qu'une.
 
@@ -450,9 +450,9 @@ On retourne Faux
 
 À aucun moment la variable `Cycle_present` n'a changé d'état.
 
-# Compléments
+## Compléments
 
-## Preuve des algorithmes
+### Preuve des algorithmes
 
 ### Parcours
 
@@ -478,7 +478,7 @@ dans la pile / file (sinon son drapeau serait passé à 1).
 Il existe donc un chemin qui part de ce point et revient à ce point sans reculer.
 C'est donc un cycle.
 
-## Complexité des algorithmes
+### Complexité des algorithmes
 
 La complexité de ces algorithmes est la même pour tous.
 

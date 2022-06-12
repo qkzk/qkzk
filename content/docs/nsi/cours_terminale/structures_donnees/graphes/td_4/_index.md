@@ -6,11 +6,11 @@ weight: 21
 ---
 
 
-### pdf : [pour impression](/uploads/docnsitale/graphes/6_cours_algos_graphes.pdf)
+pdf : [pour impression](/uploads/docnsitale/graphes/6_cours_algos_graphes.pdf)
 
 **Compétence :** _Savoir parcourir un graphe_
 
-# Exercice 1
+## Exercice 1
 
 À partir de la classe à la fin de l'exercice,
 on donne ci-dessous la représentation informatique de l'arbre `a`. On
@@ -43,7 +43,7 @@ class Arbre:
 2. Donner le résultat du parcours de cet arbre en largeur d'abord.
 3.  Donner le résultat du parcours en préfixe, en infixe, en suffixe.
 
-# Exercice 2
+## Exercice 2
 
 **Compétence :** _Savoir rechercher et insérer une clé dans un arbre binaire de recherche._
 
@@ -73,7 +73,7 @@ for cle in liste_cles:
 
 **Compétence :** _Savoir parcourir un graphe_
 
-# Exercice 3
+## Exercice 3
 
 On donne ci-dessous la représentation informatique du graphe _non orienté_ `g` :
 
@@ -119,7 +119,7 @@ g.ajouter_arete('I', 'H')
 **Compétence :** _Savoir détecter un cycle dans un graphe. Savoir
 rechercher un chemin dans un graphe._
 
-# Exercice 4
+## Exercice 4
 
 Reprenons le graphe défini dans l'exercice précédent.
 

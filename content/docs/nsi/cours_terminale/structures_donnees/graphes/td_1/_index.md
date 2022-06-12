@@ -5,7 +5,7 @@ weight: 10
 
 ---
 
-### pdf: [pour impression](/uploads/docnsitale/graphes/3_td_bases.pdf)
+pdf: [pour impression](/uploads/docnsitale/graphes/3_td_bases.pdf)
 
 # Exercices sur les graphes
 

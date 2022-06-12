@@ -5,7 +5,7 @@ weight: 11
 
 ---
 
-### pdf: [pour impression](/uploads/docnsitale/graphes/9_td_basique.pdf)
+pdf: [pour impression](/uploads/docnsitale/graphes/9_td_basique.pdf)
 
 **Compétence :** _Savoir représenter une situation sous la forme d'un graphe._
 

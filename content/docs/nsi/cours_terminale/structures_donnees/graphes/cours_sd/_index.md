@@ -4,11 +4,11 @@ bookCollapseSection: true
 weight: 2
 
 ---
-### pdf : [pour impression](/uploads/docnsitale/graphes/2_cours_print.pdf)
+pdf : [pour impression](/uploads/docnsitale/graphes/2_cours_print.pdf)
 
-# Définitions
+## Définitions
 
-## Définition : Graphe simple
+### Définition : Graphe simple
 
 ![graphe](../intro/img/graphe.png)
 
@@ -19,8 +19,7 @@ Un graphe _simple_ est un couple $G = (V, E)$ comprenant
 
     Une arrête est simplement un couple de sommets ou un ensemble de deux sommets.
 
-Les termes et notations anglais, que vous rencontrerez souvent sont :
-sommet : _vertice_ et arête : _edge_. D'où les noms des ensembles.
+En anglais : sommet, _vertice_ et arête, _edge_. D'où les noms des ensembles.
 
 
 
@@ -31,9 +30,9 @@ sommet : _vertice_ et arête : _edge_. D'où les noms des ensembles.
 Dans le graphe ci-dessus
 
 * Les sommets sont : $V = \lbrace 1, 2, 3, 4, 5, 6\rbrace $
-* Les arrêtes sont : $E = \lbrace  \lbrace 1, 2\rbrace , \lbrace 1, 5\rbrace , \lbrace 2, 3\rbrace , \lbrace 2, 5\rbrace , \lbrace 3, 4\rbrace , \lbrace 3, 5\rbrace , \lbrace 4, 5\rbrace , \lbrace 5, 6\rbrace $
+* Les arrêtes sont : $E = \lbrace  \lbrace 1, 2\rbrace , \lbrace 1, 5\rbrace , \lbrace 2, 3\rbrace , \lbrace 2, 5\rbrace , \lbrace 3, 4\rbrace , \lbrace 3, 5\rbrace , \lbrace 4, 5\rbrace , \lbrace 5, 6\rbrace\rbrace$
 
-## Définition : Graphe orienté
+### Définition : Graphe orienté
 
 ![graph_000.svg](graph_000.svg)
 
@@ -52,7 +51,7 @@ l'autre sens.
 
 
 
-## Définition : Graphe pondéré
+### Définition : Graphe pondéré
 
 Dans certains cas, toutes les arêtes ne se valent pas.
 (Un trajet "Lille-Paris" ne _coûte_ pas autant qu'un "Paris-Lyon".)
@@ -66,9 +65,9 @@ Ici l'_arête_ $(E, b)$ a un _poids_ de $10$.
 
 Et le _trajet_ $(E, b, d, S)$ pèse $10+2+6 = 18$
 
-# Structure de donnée graphe
+## Structure de donnée graphe
 
-## Introduction
+### Introduction
 
 De quoi a-t-on besoin de pour décrire des graphes ?
 
@@ -103,7 +102,7 @@ Pour les **arêtes**, c'est différent.
 Il existe plusieurs manières de les décrire et toutes ont leur utilité.
 Nous devons apprendre à passer de l'une à l'autre.
 
-## Ensemble d'arêtes
+### Ensemble d'arêtes
 
 La méthode la plus simple et la plus courante pour décrire les arêtes est d'en
 donner une _collection_. En mathématiques un ensemble, en informatique,
@@ -122,7 +121,7 @@ dictionnaire.
 Pour le graphe précédent :
 
 ```python
-aretes = {
+graphe = {
   1: [2],
   2: [1, 3, 4],
   3: [2, 4],
@@ -130,7 +129,21 @@ aretes = {
 }
 ```
 
-## Matrice d'adjacence
+Les sommets :
+
+```python
+>>> list(graphe.keys())
+[1, 2, 3, 4]
+```
+
+Peut-on relier 4 depuis 1 directement ?
+
+```python
+>>> 4 in graphe[1]
+False
+```
+
+### Matrice d'adjacence
 
 Il est courant et souvent pratique de représenter les arêtes dans une matrice.
 
@@ -267,7 +280,7 @@ etc.
 Malheureusement, les opérations sur les matrices ne sont pas au programme de NSI
 et nous n'aurons pas l'occasion d'approfondir le sujet.
 
-## Apparté : opérations matricielles
+### Apparté : opérations matricielles
 
 ### La somme
 
@@ -319,13 +332,13 @@ Par exemple, $C_{1, 2} = 1\times 1 + 2 \times -4 = -7$
 
 * Le produit matriciel est **contre-intuitif** : il n'est pas commutatif (généralement $AB \neq BA$), le théorème du produit nul est faux (il existe $A\neq O, B\neq O$ tels que $AB = O$)
 
-# Structure de donnée graphe
+## Structure de donnée graphe
 
 Pour travailler avec les graphes nous allons avoir besoin d'une structure de
 donnée. Contrairement aux arbres, représentés depuis leur sommet,
 nous allons créer un objet `Graphe` qui devra respecter certaines propriétés.
 
-## Primitives
+### Primitives
 
 Quelles sont les primitives dont nous avons besoin pour créer un graphe ?
 
@@ -388,7 +401,7 @@ Ce graphe est alors :
 ![graph_004.svg](graph_004.svg)
 
 
-## Objectifs ultérieurs
+### Objectifs ultérieurs
 
 1. **TD** Maîtriser les notions, le vocabulaires, découvrir quelques algorithmes,
 2. **TP** Prendre en main `networkx` et tester les fonctionnalités intégrées,

@@ -5,13 +5,13 @@ weight: 1
 
 ---
 
-### pdf : [pour impression](/uploads/docnsitale/graphes/1_intro_print.pdf)
+pdf : [pour impression](/uploads/docnsitale/graphes/1_intro_print.pdf)
 
-# Les graphes : une longue introduction
+## Les graphes : une longue introduction
 
 ![reseau_social](img/reseau_social_donnees.png)
 
-## Présentation
+### Présentation
 
 La théorie des graphe est une théorie fondamentale de l'informatique et des
 mathématiques.
@@ -30,7 +30,7 @@ applications sont innombrables :
     ![réseau social](img/reseau_social.jpg)
 
 
-# Utilisation des graphes en informatique
+## Utilisation des graphes en informatique
 
 Parmi les problèmes fréquents faisant apparaître des graphes on rencontre :
 
@@ -70,7 +70,7 @@ Parmi les problèmes fréquents faisant apparaître des graphes on rencontre :
 
     ![uml](img/uml.png)
 
-## Distinction mathématique, informatique
+### Distinction mathématique, informatique
 
 Les définitions des graphes en mathématique et en informatique sont similaires.
 Les applications diffèrent souvent.
@@ -87,7 +87,7 @@ Un algorithme qui termine mais prend des millions d'années n'a que peu d'intér
 Enfin, si la structure nous intéresse d'un point de vue abstrait, son
 _implémentation_ est importante.
 
-## Objectifs
+### Objectifs
 
 Nous allons donc :
 

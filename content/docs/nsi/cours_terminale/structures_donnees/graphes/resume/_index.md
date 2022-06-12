@@ -6,13 +6,13 @@ weight: 100
 
 ---
 
-### pdf : [pour impression](/uploads/docnsitale/graphes/graphe_resume.pdf)
+pdf : [pour impression](/uploads/docnsitale/graphes/graphe_resume.pdf)
 
-# Les graphes : une longue introduction
+## Les graphes : une longue introduction
 
 ![graphe](/uploads/docnsitale/graphes/graphe.png)
 
-## Présentation
+### Présentation
 
 La théorie des graphe est une théorie fondamentale de l'informatique et des
 mathématiques.
@@ -27,7 +27,7 @@ mathématiques.
 
 
 
-# Utilisation des graphes en informatique
+## Utilisation des graphes en informatique
 
 Parmi les problèmes fréquents faisant apparaître des graphes on rencontre :
 
@@ -40,7 +40,7 @@ Parmi les problèmes fréquents faisant apparaître des graphes on rencontre :
 0.  Les algorithmes peuvent être vus comme des graphes :
 
 
-## Distinction mathématique, informatique
+### Distinction mathématique, informatique
 
 Les définitions des graphes en mathématique et en informatique sont similaires.
 Les applications diffèrent souvent.
@@ -48,7 +48,7 @@ Les applications diffèrent souvent.
 Nous (les informaticiens) cherchons souvent à exposer les solutions de nos problèmes.
 Un algorithme doit fournir une solution en un temps fini.
 
-## Objectifs
+### Objectifs
 
 Nous allons donc :
 
@@ -66,11 +66,12 @@ Parmi les problèmes que nous allons aborder :
 3. La recherche de cycles dans un graphe.
 
 
-# Définitions
+## Définitions
 
-## Définition : Graphe simple
+### Définition : Graphe simple
 
-![graphe](img/graphe.png)
+
+![graphe](/uploads/docnsitale/graphes/graphe.png)
 
 Un graphe _simple_ est un couple $G = (V, E)$ comprenant
 
@@ -93,9 +94,10 @@ Dans le graphe ci-dessus
 * Les sommets sont : $V = \{1, 2, 3, 4, 5, 6\}$
 * Les arrêtes sont : $E = \{ \{1, 2\}, \{1, 5\}, \{2, 3\}, \{2, 5\}, \{3, 4\}, \{3, 5\}, \{4, 5\}, \{5, 6\}\}$
 
-## Définition : Graphe orienté
+### Définition : Graphe orienté
 
-```graph
+<!--
+```graphviz
 digraph G {
 
 bgcolor="#ffffff00"
@@ -119,6 +121,8 @@ layout=circo
 
 }
 ```
+-->
+![0.svg](./0.svg)
 
 
 Lorsque les arêtes sont marquées d'une flèche, elles sont **orientées**.
@@ -131,9 +135,9 @@ Par exemple l'arête $(1, 2)$ _part_ de $1$ et _arrive_ en $2$.
 
 
 
-# Structure de donnée graphe
+## Structure de donnée graphe
 
-## Introduction
+### Introduction
 
 Il nous faut pouvoir représenter
 
@@ -151,13 +155,14 @@ Les **sommets** d'un graphe peuvent être enregistrés dans n'importe quelle "co
 
 Il existe plusieurs manières de décrire les arrêtes et toutes ont leur utilité.
 
-## Ensemble d'arêtes
+### Ensemble d'arêtes
 
 Par exemple : $G = (V, E)$ avec $V = \{1, 2, 3, 4\}$
 et $E = \{(1, 2), (2, 3), (3, 4), (2, 4)\}$
 
 
-```graph
+<!--
+```graphviz
 graph G {
 
 bgcolor="#ffffff00"
@@ -171,6 +176,8 @@ ranksep=0.5;
 2 -- 4 [label = "" color=black fontcolor=black]
 }
 ```
+-->
+![1.svg](./1.svg)
 
 Pour le graphe précédent avec un dictionnaire :
 
@@ -183,7 +190,7 @@ aretes = {
 }
 ```
 
-## Matrice d'adjacence
+### Matrice d'adjacence
 
 **Définition :**
 
@@ -236,7 +243,8 @@ $$
 
 Il existe un _unique_ graphe qu'elle représente :
 
-```graph
+<!--
+```graphviz
 graph G {
 
 bgcolor="#ffffff00"
@@ -254,6 +262,8 @@ ranksep=0.5;
 4 -- 5 [label = "" color=black fontcolor=black]
 }
 ```
+-->
+![2.svg](./2.svg)
 
 _Remarque_ : attention cependant, si on change l'ordre des sommets on obtient
 une autre matrice d'adjacence ! La matrice d'adjacence est unique
@@ -277,7 +287,8 @@ Lorsque les graphes sont **orientés** on doit tenir compte de l'ordre.
     matrice d'adjacence contient 1 pour chaque arête qui **arrive** en 2.
 
 
-```graph
+<!--
+```graphviz
 digraph G {
 
 bgcolor="#ffffff00"
@@ -293,6 +304,8 @@ ranksep=0.5;
 3 -> 3 [label = "" color=black fontcolor=black];
 }
 ```
+-->
+![3.svg](./3.svg)
 
 $$
 \begin{pmatrix}
@@ -308,10 +321,10 @@ d'adjacence on peut le voir parce qu'il y a un 1 sur la diagonale en $a_{3, 3}$
 
 
 
-# Structure de donnée graphe
+## Structure de donnée graphe
 
 
-## Primitives
+### Primitives
 
 Quelles sont les primitives dont nous avons besoin pour créer un graphe ?
 
@@ -372,7 +385,8 @@ None
 
 Ce graphe est alors :
 
-```graph
+<!--
+```graphviz
 digraph G {
 
 bgcolor="#ffffff00"
@@ -386,8 +400,10 @@ ranksep=0.5;
 3 -> 2 [label = "" color=black fontcolor=black];
 }
 ```
+-->
+![4.svg](./4.svg)
 
-# Algorithmes sur les graphes
+## Algorithmes sur les graphes
 
 
 
@@ -525,7 +541,7 @@ C'est bien un parcours en profondeur d'abord.
 
 
 
-## Algorithme : détermination d'un chemin dans un graphe simple.
+### Algorithme : détermination d'un chemin dans un graphe simple.
 
 ### Première étape : parcourir
 
@@ -575,13 +591,14 @@ Fonction créer un chemin (prédécesseurs, source, destination)
 ```
 
 
-# Recherche de la présence de cycle dans un graphe simple
+## Recherche de la présence de cycle dans un graphe simple
 
 **Un cycle est un chemin dont la source et la destination sont égales.**
 
 Par exemple le graphe ci-dessous contient un cycle `[0, 1, 2]` :
 
-```graph
+<!--
+```graphviz
 graph G {
 
 bgcolor="#ffffff00"
@@ -598,18 +615,20 @@ layout=circo;
 1 -- 5 [label = "" color=black fontcolor=black];
 }
 ```
+-->
+![5.svg](./5.svg)
 
 
 Si on enlève simplement l'arête entre (1, 2) on obtient un graphe qui n'a
 plus de cycle :
 
-![graphe sans cycle](img/sans_cycle.png){width=40%}\
+![graphe sans cycle](../cours_algo/sans_cycle.png)
 
 
 On souhaite créer une fonction qui réponde "Vrai" pour le premier graphe (il
 a un cycle) et "Faux" pour le second: il n'en a pas.
 
-## Algorithme : présence d'un cycle dans un graphe
+### Algorithme : présence d'un cycle dans un graphe
 
 On utilise un parcours en largeur (en profondeur c'est pareil).
 
