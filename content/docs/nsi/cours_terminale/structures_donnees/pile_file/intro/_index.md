@@ -5,11 +5,11 @@ author: qkzk
 weight: 1
 ---
 
-### pdf : au [format imprimable](/uploads/docnsitale/pile_file/file_pile.pdf)
+pdf : au [format imprimable](/uploads/docnsitale/pile_file/file_pile.pdf)
 
-# Les files et les piles
+## Les files et les piles
 
-## Une classe générique pour les structures en ligne : les sacs
+### Une classe générique pour les structures en ligne : les sacs
 
 
 Les piles et les files sont des exemples de structures de données que faute de
@@ -47,7 +47,7 @@ référencé dans une liste python. C'est un choix qui sera commode.
 Ainsi on ajoute par exemple un élément `e` dans le sac `b` par `b.ajouter(e)`,
 ce qui modifie l’état interne du sac.
 
-## Piles et Files : des sacs aux propriétés particulières
+### Piles et Files : des sacs aux propriétés particulières
 
 Piles et files se distinguent par la relation entre éléments ajoutés et
 éléments retirés.
@@ -64,7 +64,12 @@ Si on représente pile et file par des tas de cases, on voit que la pile possèd
 un sommet, où sont ajoutés et d’où sont retirés les éléments, tandis que la
 file possède une entrée et une sortie.
 
-![pile_file](img/file_pile.png)\
+{{< columns >}}
+Pile
+<--->
+File
+{{< /columns >}}
+![pile_file](/uploads/docnsitale/pile_file/img/file_pile.png)
 
 
 Tout ceci est parfaitement conforme à l’intuition d’une pile d’assiettes, ou de
@@ -152,12 +157,12 @@ Traditionnellement, ajouter un élément dans une pile se dit empiler (`push`),
 et l’enlever dépiler (`pop`), tandis qu’ajouter un élément dans une file se dit
 enfiler (`enqueue`), et l’enlever défiler (`dequeue`).
 
-# Python et les piles et files
+## Python et les piles et files
 
 Le moyen le plus simple de modéliser une pile ou une file est d'utiliser
 un objet `list` et les méthodes `append` et `pop`
 
-## Modéliser une pile avec un objet `list`
+### Modéliser une pile avec un objet `list`
 
 ```python
 
@@ -173,7 +178,7 @@ un objet `list` et les méthodes `append` et `pop`
 1
 ```
 
-## Modéliser une file avec un objet `list`
+### Modéliser une file avec un objet `list`
 
 ```python
 
@@ -192,7 +197,7 @@ un objet `list` et les méthodes `append` et `pop`
 Bien sûr il est parfaitement possible de créer une classe et d'implémenter
 les notations traditionnelles (push, pop, enqueue, dequeue).
 
-# Utilisation des piles et files en informatique
+## Utilisation des piles et files en informatique
 
 *   Les gestionnaires de messages, utilisent un "tampon" pour accumuler les
     messages à traiter. Si le traitement est long et qu'ils peuvent recevoir
@@ -208,3 +213,7 @@ les notations traditionnelles (push, pop, enqueue, dequeue).
 *   Les appels successifs d'une fonction récursive s'accumulent dans la pile
     de récursion. Le dernier appel retourne une valeur au précédent, qui
     retourne au précédent etc.
+
+    Le bouton "annuler" et le retour en arrière des navigateurs utilisent
+    des piles assez évoluées (on peut, par exemple, consulter le contenu sans
+    vider la pile).

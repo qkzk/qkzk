@@ -7,9 +7,9 @@ weight: 100
 ---
 
 
-### pdf : [pour impression](/uploads/docnsitale/pile_file/pile_file_resume.pdf)
+pdf : [pour impression](/uploads/docnsitale/pile_file/pile_file_resume.pdf)
 
-# Les files et les piles
+## Les files et les piles
 
 
 Les piles et les files sont des exemples de structures de données que faute de
@@ -22,7 +22,7 @@ mieux, nous appellerons des _sacs_. Un sac offre trois opérations élémentaire
 
 Le sac est une structure impérative : un sac se modifie au cours du temps.
 
-# piles vs files
+## piles vs files
 
 
 
@@ -41,8 +41,13 @@ Si on représente pile et file par des tas de cases, on voit que la pile possèd
 un sommet, où sont ajoutés et d’où sont retirés les éléments, tandis que la
 file possède une entrée et une sortie.
 
-![pile_file](../cours/img/file_pile.png)\
 
+{{< columns >}}
+Pile
+<--->
+File
+{{< /columns >}}
+![pile_file](/uploads/docnsitale/pile_file/img/file_pile.png)
 
 
 Il y a un peu de vocabulaire spécifique aux piles et aux files.
@@ -51,10 +56,9 @@ et l’enlever dépiler (`pop`), tandis qu’ajouter un élément dans une file 
 enfiler (`enqueue`), et l’enlever défiler (`dequeue`).
 
 
-\newpage
 
 
-## Python : modéliser une pile ou une file avec un objet `list`
+### Python : modéliser une pile ou une file avec un objet `list`
 
 ```python
 
@@ -74,7 +78,7 @@ enfiler (`enqueue`), et l’enlever défiler (`dequeue`).
 
 > Il est possible de créer une classe qui modélise une pile ou une file. (cf TP)
 
-# Utilisation des piles et files en informatique
+## Utilisation des piles et files en informatique
 
 *   Les gestionnaires de messages, utilisent un "tampon" pour accumuler les
     messages à traiter. Si le traitement est long et qu'ils peuvent recevoir

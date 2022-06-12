@@ -1,16 +1,16 @@
 ---
-title: "Structures de données linéaires : travaux dirigés"
+title: "Structures de données linéaires : TD"
 bookCollapseSection: true
 author: "qkzk"
 weight: 100
 
 ---
 
-### PDF : [pour impression](/uploads/docnsitale/pile_file/td_structures_lineaires.pdf)
+PDF : [pour impression](/uploads/docnsitale/pile_file/td_structures_lineaires.pdf)
 
 **Compétence :** _Choisir un type de données en fonction d'un problème à résoudre_
 
-# Exercice 1
+## Exercice 1
 
 Quelle structure de données choisir pour chacune de ces tâches ?
 
@@ -21,7 +21,7 @@ Quelle structure de données choisir pour chacune de ces tâches ?
 
 **Compétence :** _Savoir raisonner à l'aide du type abstrait Liste_
 
-# Exercice 2
+## Exercice 2
 
 On donne la séquence d'instructions suivante :
 
@@ -29,13 +29,13 @@ On donne la séquence d'instructions suivante :
 l1 = creer_liste_vide()
 l2 = creer_liste_vide()
 
-# paramètres (liste, valeur insérée, position). Modifie la liste.
+## paramètres (liste, valeur insérée, position). Modifie la liste.
 inserer(l1, 1, 1) 
 inserer(l1, 2, 2)
 inserer(l1, 3, 3)
 inserer(l1, 4, 4)
 
-# paramètres (liste, position). Renvoie la valeur à cette position.
+## paramètres (liste, position). Renvoie la valeur à cette position.
 a = lire(l1, 1)
 
 inserer(l2, lire(l1, 1), 1)
@@ -49,19 +49,19 @@ inserer(l2, lire(l1, 4), 1)
 
 **Compétence :** _Savoir raisonner à l'aide du type abstrait File._
 
-# Exercice 3
+## Exercice 3
 
 On donne la séquence d'instruction suivante :
 
 ```python
 f = creer_file_vide()
 
-# paramètre (file, valeur enfilée)
+## paramètre (file, valeur enfilée)
 enfiler(f, 4)
 enfiler(f, 1)
 enfiler(f, 3)
 
-# paramètre (file), renvoie la valeur défilée
+## paramètre (file), renvoie la valeur défilée
 n = defiler(f)
 enfiler(f, 8)
 n = defiler(f)
@@ -71,7 +71,7 @@ Illustrer le résultat de chaque étape de cette séquence.
 
 **Compétence :** _Savoir raisonner à l'aide des types abstraits File et Pile._
 
-# Exercice 4
+## Exercice 4
 
 On suppose que l'on a déjà une file `f1` qui contient les éléments suivants
 saisis dans l'ordre alphabétique :
@@ -89,7 +89,7 @@ f1 = ('A', 'B', 'C', 'D', 'E')`
 3. Que faudrait-il faire pour avoir exactement le même fonctionnement qu'avec
     une file, c'est-à-dire avec sortie éventuelle d'élément ?
 
-# Exercice 5
+## Exercice 5
 
 La notation polonaise inverse (NPI) permet d'écrire des opérations arithmétiques,
 sans utiliser de parenthèses. Ici nous nous limiterons à des nombres entiers 
@@ -131,7 +131,7 @@ de mathématiques. Dans cette notation on réalise :
 
 **Compétence :** _savoir implémenter une structure à l'aide d'un type donnée en Python_
 
-# Exercice 6.
+## Exercice 6.
 
 Étudier les méthodes `append` et `pop` du type `list` de Python à l'aide
 de la documentation Python.
@@ -141,7 +141,7 @@ de la documentation Python.
 2. Proposer de la même manière une implémentation des opérations classiques
     de la file en Python.
 
-# Exercice 7 : Bilan
+## Exercice 7 : Bilan
 
 Dans un logiciel de calcul formel ou, plus généralement dans un éditeur de texte
 (par exemple utilisé pour écrire des programmes), il y a une gestion dynamique
