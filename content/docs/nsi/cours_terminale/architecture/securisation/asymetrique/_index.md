@@ -6,10 +6,9 @@ weight: 2
 
 ---
 
-### [pour impression](/uploads/docnsitale/securisation/asymetrique.pdf)
+[pour impression](/uploads/docnsitale/securisation/asymetrique.pdf)
 
-La cryptographie à clé publique - Principe de fonctionnement
-============================================================
+# La cryptographie à clé publique - Principe de fonctionnement
 
 ![](/uploads/docnsitale/securisation/sousmarin.jpg)
 
@@ -49,7 +48,6 @@ de déchiffrement $S$. On peut fabriquer simultanément un couple $(P,S)$,
 mais connaissant uniquement $P$, il est impossible (ou au moins très
 difficile) de retrouver $S$.
 
-::: {.liste}
 -   $P$ est la _clé publique_ (le cadenas), que vous pouvez
     révéler à quiconque. Si Louis veut vous envoyer un message, il vous
     transmet P(message).
@@ -60,7 +58,6 @@ difficile) de retrouver $S$.
     l'envoi des messages codés, puisqu'elle ne permet pas de
     retrouver S. Il est possible de donner librement $P$, qui mérite bien
     son nom de clé publique.
-:::
 
 ## Un fonctions à sens unique ?
 

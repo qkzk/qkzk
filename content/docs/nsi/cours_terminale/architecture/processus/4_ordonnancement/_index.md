@@ -51,7 +51,7 @@ doit alors :
 
 L'ordonnanceur peut fonctionner selon deux modes :
 
-* **collaboratif** : les programmes doivent alors prévoir de passer eux-mêmes
+* **coopératif** : les programmes doivent alors prévoir de passer eux-mêmes
   la main aux autres,
 * **préemptif** : l'ordonnanceur peut à tout moment couper un processus
   dans son travail et le remplacer par un autre (avec la commutation de contexte).

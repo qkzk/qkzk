@@ -7,7 +7,7 @@ weight: 3
 
 [pdf](./3_interblocage.pdf)
 
-# Les interblocages
+## L'interblocage
 
 Nous avons dits précédemment que des processus peuvent avoir besoin de la
 même ressource.
@@ -44,14 +44,14 @@ Si la chronologie est la suivante :
 * P2 attend D1
 
 Alors aucun des deux processus ne pourra avancer. C'est **l'interblocage**.
-Rien ne pourra avancer sans une intervention extérieure.
+Sans une intervention extérieure, la situation est figée.
 
-Face à cette problématique la plupart des systèmes d'exploitation ont choisir
+Face à cette problématique la plupart des systèmes d'exploitation ont choisi
 de ne pas essayer d'éviter les interblocages mais de les détecter s'ils
 surviennent et de les solutionner.
 
 
-## Détecter une situation d'interblocage
+### Détecter une situation d'interblocage
 
 Afin de résoudre _conceptuellement_ ce problème on peut utiliser un graphe orienté.
 
@@ -73,16 +73,38 @@ Ce graphe présente un cycle et les processus sont bloqués.
 
 Ce graphe ne présente pas ce cycle, il n'y a pas d'interblocage.
 
+En pratique, P1 possède les deux ressources dont il a besoin et va terminer en premier.
+Ensuite P2 va acquérir les ressources et terminer.
+
+---
+
+Il existe d'autres situations critiques lorsqu'on exécute plusieurs processus
+en même temps. En voici une :
+
 ## Race condition (_situation de compétition_) - HP
 
 C'est une situation dans laquelle le résultat d'une série d'opération
-dépend de _l'ordre_ dans lequel celles-ci sont effectuées...
+dépend de _l'ordre_ dans lequel celles-ci sont effectuées.
 
 Lorsque un processus principal crée plusieurs processus fils, il ne contrôle
 pas l'ordre dans lequel ils sont exécutés. S'il a besoin des résultats de ceux
 ci, il ne pourra pas prédire le résultat final.
 
 
+### Un exemple
+
+`hello` et `bonjour` sont deux processus indépendants qui partagent une même ressource.
+
+Afin d'illustrer on se contente de les faire écrire dans la console. En pratique
+ils écriraient dans le même fichier.
+
+À l'aide de Python nous allons les lancer l'un après l'autre et attendre
+qu'ils aient terminé tous les deux.
+
+Le système d'exploitation se charge de leur exécution et leur donne la main
+selon un ordre difficile (_quasi impossible_) à prédire.
+
+Leur résultat commun est donc la sortie console.
 
 
 ```python
@@ -239,15 +261,44 @@ C'est la raison pour laquelle on ne travaille pas avec des threads en NSI,
 vous verrez ça plus tard :) !
 
 
-### Threads vs Processus
+## Threads vs Processus
+
+Lorsqu'on exécute un programme simple, il se déroule sur un seul coeur de processeur.
+Or... ajouter des coeurs de processeurs est la seule solution réaliste qu'on ait trouvé
+pour accélérer les machines depuis 15 ans.
+
+Un programme devant s'exécuter vite n'a pas le choix, il doit utiliser au maximum les ressources
+de la machine et donc _le parallélisme_.
+
+On a donc crée deux manières d'exécuter plusieurs séquences d'instructions en parallèle : les _threads_ (fils d'exécutions) et les _processus_.
 
 Ce sont des séquences d'instructions indépendantes.
 
 * Un thread s'exécute dans le même processus que le processus parent, il partage la mémoire du processus.
 * Un processus fils est un autre processus, dépendant du parent, qui dispose de sa propre mémoire.
 
-Un processus est plus _lourd_ pour le système qu'un thread... mais peut s'exécuter
-sur un coeur de processeur différent et donc en parallèle.
+Un processus est plus _lourd_ pour le système qu'un thread... mais peut facilement être isolé
+et son exécution est déléguée à l'OS, d'autre part un processus dispose de son propre expace
+mémoire et ses erreurs ne risquent pas de compromettre l'ensemble du programme.
 
-Un thread est généralement cantoné au processeur sur lequel s'exécute le processus
-qui l'a crée.
+D'autres nuances existent et selon les besoins on choisira l'un ou l'autre.
+
+Ces thèmes étant largement hors programme, je vous laisse vous documenter [ici en anglais](https://www.geeksforgeeks.org/difference-between-process-and-thread/).
+
+D'autres précisions plus formelles sur la nuance _thead vs process_ :
+
+> A process is an address space with some open files and other resources, plus some number of threads.
+> 
+> A thread is a set of registers and a stack and a program counter, that runs in an address space.
+> 
+> Threads in the same process share the address space, and the threads have a consistent (coherent) view of the contents of memory, subject to memory ordering rules.
+> 
+> So in current processors, you can run the threads of a process on any core, because modern machines all have coherent memory.
+> 
+> It wasn’t always so. There were multiprocessors in the 80’s and 90’s where the different cores did not necessarily have coherent views of memory. On those systems, including some built by Silicon Graphics I think, you could not have multiple threads from the same process running on different cores.
+> 
+> I am not sure those machines even had threads, but if they did, all the threads for a process would have to be scheduled on the same core.
+> 
+> Threads like that would still be useful, because threads are useful as programming conveniences as well as for parallel execution. Programmers often use threads to call synchronous I/O functions where they block waiting for events. Programmers think this is easier than using event driven programming with a single thread or using asynchronous I/O. I am not sure I agree, but that’s what folks do.
+> 
+> [source quora](https://www.quora.com/Could-process-threads-always-be-shared-between-cores)

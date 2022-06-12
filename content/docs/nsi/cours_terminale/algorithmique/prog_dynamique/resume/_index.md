@@ -6,9 +6,9 @@ weight: 100
 
 ---
 
-### pdf : [pour impression](/uploads/docnsitale/algo/prog_dynamique/resume.pdf)
+pdf : [pour impression](/uploads/docnsitale/algo/prog_dynamique/resume.pdf)
 
-# Programmation dynamique
+## Programmation dynamique
 
 La _programmation dynamique_ est une méthode algorithmique qui vise à résoudre
 des problèmes d'optimisation.
@@ -28,7 +28,7 @@ _Programmation_ dans le sens "planification et ordonnancement"
 > *   Chevauchement de sous-problèmes
 > *   Sous-structure optimale
 
-## Chevauchement de sous-problèmes
+### Chevauchement de sous-problèmes
 
 Ce qu'on entend par là c'est le fait _d'avoir à faire plusieurs fois le même calcul._
 
@@ -70,7 +70,7 @@ On calcule donc deux fois la valeur $F_2$ : les sous problèmes se chevauchent.
 * **diviser pour régner** : sous problèmes indépendants (ex. dichotomie)
 * **programmation dynamique** : sous problèmes se chevauchent (ex. Fibonacci)
 
-## Sous-structure optimale
+### Sous-structure optimale
 
 Cela signifie qu'on peut découper le problème en sous-problèmes et les résoudre.
 
@@ -134,7 +134,7 @@ fonction fibonacci(n):
 Cette nouvelle approche ne conserve que les derniers termes en mémoire,
 ceux dont on a réellement besoin.
 
-## Concevoir un algorithme
+### Concevoir un algorithme
 
 La conception d’un algorithme de programmation dynamique est typiquement
 découpée en quatre étapes.

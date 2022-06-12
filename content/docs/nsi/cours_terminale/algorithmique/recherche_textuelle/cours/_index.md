@@ -6,10 +6,10 @@ date: 2020/05/03
 weight: 3
 
 ---
+pdf [imprimable](/uploads/docnsitale/algo/recherche_textuelle/cours_td_recherche_textuelle-print.pdf), [diaporama](/uploads/docnsitale/algo/recherche_textuelle/cours_td_recherche_textuelle-beamer.pdf).
 
 # Recherche textuelle
 
-pdf [imprimable](/uploads/docnsitale/algo/recherche_textuelle/cours_td_recherche_textuelle-print.pdf), [diaporama](/uploads/docnsitale/algo/recherche_textuelle/cours_td_recherche_textuelle-beamer.pdf).
 
 
 **[Animation des recherches présentées](http://fred.boissac.free.fr/AnimsJS/recherchetextuelle/index.html)**

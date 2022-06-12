@@ -9,7 +9,7 @@ weight: 1
 
 
 
-### pdf: [pour impression](/uploads/docnsitale/algo/divide_n_conquer/tri_fusion_print.pdf), [diaporama](/uploads/docnsitale/algo/divide_n_conquer/tri_fusion_slides.pdf)
+pdf: [pour impression](/uploads/docnsitale/algo/divide_n_conquer/tri_fusion_print.pdf), [diaporama](/uploads/docnsitale/algo/divide_n_conquer/tri_fusion_slides.pdf)
 
 ## Tri fusion
 
@@ -24,7 +24,6 @@ Tri Fusion (`tableau`):
 * On appelle Tri fusion sur `gauche` et sur `droite`
 * On fusionne `gauche` et `droite` dans `tableau`
 
-##
 
 ```
 fusionner (`tableau`, `gauche`, `droite`):
@@ -35,53 +34,50 @@ fusionner (`tableau`, `gauche`, `droite`):
     de tableau
 ```
 
+## Exemples
 
-## Exemple en vidéo
+### Exemple en vidéo
 
 [Vidéo Geek for geek](https://www.youtube.com/watch?v=JSceec-wEyw)
 
-## Exemple détaillé 0
+### Exemple détaillé
 
 <!-- .![Etape 0](/uploads/docnsitale/algo/divide_n_conquer/figure/tri_fusion_00.png){height=25%} -->
 .![Etape 0](/uploads/docnsitale/algo/divide_n_conquer/figure/tri_fusion_00.png)
 
-##
 
 <!-- .![Etape 1](/uploads/docnsitale/algo/divide_n_conquer/figure/tri_fusion_01.png){height=25%} -->
 .![Etape 1](/uploads/docnsitale/algo/divide_n_conquer/figure/tri_fusion_01.png)
 
-##
 
 <!-- .![Etape 2](/uploads/docnsitale/algo/divide_n_conquer/figure/tri_fusion_02.png){height=25%} -->
 .![Etape 2](/uploads/docnsitale/algo/divide_n_conquer/figure/tri_fusion_02.png)
 
-##
 
 <!-- .![Etape 3](/uploads/docnsitale/algo/divide_n_conquer/figure/tri_fusion_03.png){height=25%} -->
 .![Etape 3](/uploads/docnsitale/algo/divide_n_conquer/figure/tri_fusion_03.png)
 
-##
 
 <!-- .![Etape 4](/uploads/docnsitale/algo/divide_n_conquer/figure/tri_fusion_04.png){height=25%} -->
 .![Etape 4](/uploads/docnsitale/algo/divide_n_conquer/figure/tri_fusion_04.png)
 
-##
 
 <!-- .![Etape 5](/uploads/docnsitale/algo/divide_n_conquer/figure/tri_fusion_05.png){height=25%} -->
 .![Etape 5](/uploads/docnsitale/algo/divide_n_conquer/figure/tri_fusion_05.png)
 
-##
 
 .![Etape 6](/uploads/docnsitale/algo/divide_n_conquer/figure/tri_fusion_06.png)
 
 
-## En une seule image
+### En une seule image
 
-![exemple](/docs/nsi/cours_terminale/algorithmique/diviser_pour_regner/tri_fusion/img/0.png)\
+![exemple](/docs/nsi/cours_terminale/algorithmique/diviser_pour_regner/tri_fusion/img/0.png)
 
 ## Algorithme : tri_fusion
 
 Une excellente [vidéo de présentation](https://www.youtube.com/watch?v=TzeBrDU-JaY )
+
+### Algorithme tri fusion
 
 ```
 tri_fusion (tableau) :
@@ -99,7 +95,7 @@ tri_fusion (tableau) :
       fusion(tableau, gauche, droite)
 ```
 
-## Algorithme Fusion
+## Algorithme fusion
 
 ```
 fusion (tableau, gauche, droite)
@@ -114,13 +110,12 @@ fusion (tableau, gauche, droite)
   Pour les éléments restant, les ajouter à fin de tableau
 ```
 
-## Exemple détaillé pour la fusion
+### Exemple détaillé pour la fusion
 
 Fusionner `g = [1, 2, 5]` et `d = [3, 4]` : le premier élément du tableau
 fusionné sera le premier élément d'une des deux tableaux d'entrée
 (soit 1, soit 3) car ce sont des listes triées.
 
-##
 
 
 `g = [1, 2, 5]` et `d = [3, 4]`
@@ -140,7 +135,7 @@ fusionné sera le premier élément d'une des deux tableaux d'entrée
 * Compléter `5` → `t=[1, 2, 3, 4, 5]`
 
 
-## Récursion
+### Récursion
 
 Il faut bien comprendre l'ordre dans lequel sont effectués les appels récursifs
 
@@ -154,7 +149,7 @@ jusqu'à avoir un élément (le premier).
 Ensuite on fait fusion sur lui (il ne change pas)
 Ensuite on arrive à la fusion des deux premiers,
 
-##
+
 
 Pour avancer il faut avoir découpé (3 et 4) jusqu'à avoir une taille 1,
 Ensuite on les fusionne.
@@ -172,7 +167,7 @@ L'algorithme ne progresse pas "par étage" comme la présentation le laisse croi
 * Combien d'étapes dans le tri fusion ? Autant d'étape qu'il en faut pour arriver
     à `log_2(n)` en effectuant des divisions par 2.
 
-## Exemple
+### Exemple
 
 Pour un tableau de taille `n = 64` il faut :
 
@@ -185,7 +180,7 @@ $2^6 = 64$.
 Comme toujours quand on peut séparer le tableau en deux, la méthode diviser
 pour régner permet de ne réaliser que $\log_2 n$ étapes. Mais...
 
-## Complexité fusion
+### Complexité fusion
 
 * La partie fusion utilise une boucle qui parcourt plusieurs tableaux en même temps.
     * On réalise à chaque étape la même chose :
@@ -195,7 +190,7 @@ pour régner permet de ne réaliser que $\log_2 n$ étapes. Mais...
 
     La complexité est linéaire.
 
-## Utilisation du tri fusion
+### Utilisation du tri fusion
 
 Contrairement au tri par sélection ou par insertion, le tri fusion est
 réellement utilisé en pratique : C++ et java

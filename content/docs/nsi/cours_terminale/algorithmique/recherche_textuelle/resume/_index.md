@@ -6,7 +6,7 @@ weight: 100
 
 ---
 
-### pdf : [pour impression](/uploads/docnsitale/algo/recherche_textuelle/resume.pdf)
+pdf : [pour impression](/uploads/docnsitale/algo/recherche_textuelle/resume.pdf)
 
 # Recherche textuelle
 
@@ -29,7 +29,7 @@ Un texte est une suite finie de symboles.
 
 On dispose alors généralement d'un **index**
 
-.![index](./img/un_index.jpg)
+.![index](../cours/index.jpg)
 
 L'index peut-être vu comme un _dictionnaire_ : on repère la clé qui nous intéresse
 et sa valeur nous indique la position du motif.

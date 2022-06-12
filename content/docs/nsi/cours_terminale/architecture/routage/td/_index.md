@@ -5,13 +5,13 @@ weight: 100
 
 ---
 
-* [pour impression](/uploads/docnsitale/routage/routage_td.pdf)
+[pour impression](/uploads/docnsitale/routage/routage_td.pdf)
 
 
 
 **Compétence :** _Analyser un datagramme IP_
 
-# Exercice 1
+## Exercice 1
 
 Nous avons utilisé le logiciel WireShark (analyse de trames) pour capturer
 les datagrammes échangés sur un réseau local. Nous étudions le datagramme suivant :
@@ -73,7 +73,7 @@ Internet Control Message Protocol
 
 **Compétence :** _Connaître le fonctionnement du protocole de routage RIP_
 
-# Exercice 2
+## Exercice 2
 
 
 Un routeur a la table de routage suivante :
@@ -89,7 +89,7 @@ Un routeur a la table de routage suivante :
 
 1. Donner le message RIP émis par ce routeur.
 
-# Exercice 3
+## Exercice 3
 
 Soit le réseau suivant :
 
@@ -97,7 +97,7 @@ Soit le réseau suivant :
 
 Donner la table de routage RIP du routeur 1
 
-# Exercice 4
+## Exercice 4
 
 Soit le réseau suivant :
 
@@ -109,7 +109,7 @@ Soit le réseau suivant :
 3. Donner la table de routage RIP du routeur R4.
 4. Donner la table de routage RIP du routeur R6.
 
-# Exercice 5
+## Exercice 5
 
 La socitété IMPORT3000 est spécialisée dans l'import de produits numériques et
 dans leur revente sur le marché français. Son réseau informatique est structuré
@@ -134,7 +134,7 @@ L'organisation de ce réseau est la suivante :
 
 **Compétence :** _Analyse une situation réelle de routage_
 
-# Exercice 6
+## Exercice 6
 
 Sur un serveur Linux, la commande qui permet d'afficher la table de routage
 est `route`.
@@ -155,7 +155,7 @@ default         0.0.0.0         0.0.0.0         UG    1      0        0 eth0
 
 À combien de réseau ce routeur est-il relié ?
 
-# Exercice 7 - Bilan
+## Exercice 7 - Bilan
 
 HTTP est le protocole de base du Web : c'est lui qui transmet les requêtes
 de pages Web et assure le transport de ces pages Web entre le serveur et le

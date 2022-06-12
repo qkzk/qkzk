@@ -8,7 +8,7 @@ weight: 1
 
 [pdf](./1_cours_prog_dynamique_print.pdf)
 
-# Programmation dynamique
+## Programmation dynamique
 
 La _programmation dynamique_ est une méthode algorithmique qui vise à résoudre
 des problèmes d'optimisation.
@@ -195,7 +195,7 @@ n'est pas suffisant.
 
 ---
 
-## Approche du bas vers le haut
+### Approche du bas vers le haut
 
 Contrairement à la méthode diviser pour régner, la programmation dynamique
 privilégie une approche du bas vers le haut.
@@ -260,7 +260,7 @@ fonction fibonacci(n):
 Cette nouvelle approche ne conserve que les derniers termes en mémoire,
 ceux dont on a réellement besoin.
 
-## Concevoir un algorithme
+### Concevoir un algorithme
 
 La conception d’un algorithme de programmation dynamique est typiquement
 découpée en quatre étapes.

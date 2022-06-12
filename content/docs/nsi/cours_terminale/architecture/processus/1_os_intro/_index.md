@@ -7,7 +7,7 @@ weight: 1
 
 [pdf](./1_os_intro.pdf)
 
-# Rappels de première
+## Rappels de première
 
 Les _systèmes d'exploitation_ (OS) sont des logiciels spécialisés qui servent
 d'intermédiaire entre le matériel et l'utilisateur.
@@ -19,7 +19,7 @@ et Windows (95, 98, NT, 10 etc.)
 
 UNIX désigne _une famille_ d'OS, pas un OS en particulier.
 
-## La mémoire
+### La mémoire
 
 On peut simplifier le matériel à trois grandes catégories :
 
@@ -61,7 +61,7 @@ Ainsi, le contenu de l'adresse 3 pour le processus P1 n'est pas écrasé et
 lorsqu'il voudra lire cette adresse il retrouvera les informations qu'il y
 avait écrite.
 
-## Ordonnancement
+### Ordonnancement
 
 Les processeurs n'exécutent qu'une instruction à la fois.
 Un processus ayant beaucoup d'instructions à réaliser va paraliser le système
@@ -83,10 +83,10 @@ Plusieurs algorithmes existent :
 
 En pratique les algorithmes sont beaucoup plus complexes.
 
-## Les interruptions
+### Les interruptions
 
 Un même type de périphérique (un microphone par exemple) peut disposer d'un
-millier de variante qui fonctionnent toutes différemment.
+millier de variantes qui fonctionnent toutes différemment.
 
 Comment un programme qui souhaite utiliser le microphone (l'application "Téléphoner"
 de votre smartphone) pourrait-il être capable de les utiliser toutes ?
@@ -117,7 +117,7 @@ de l'OS.
 Cela permet à du matériel très varié de communiquer de la même manière avec les 
 applications, à travers leur pilote et l'API commune.
 
-## Autres rôles
+### Autres rôles
 
 Citons :
 
@@ -129,11 +129,11 @@ Citons :
   par les utilisateurs et les applications.
 
 
-# Multitude d'OS
+## Multitude d'OS
 
 Pourquoi tant d'OS différents s'ils utilisent le même principe ?
 
-## La spécialisation
+### La spécialisation
 
 Certains OS répondent à un cahier des charges précis et sont spécialisés.
 

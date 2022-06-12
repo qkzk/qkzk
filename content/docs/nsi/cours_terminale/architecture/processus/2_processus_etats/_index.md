@@ -7,16 +7,24 @@ weight: 2
 
 [pdf](./2_processus_etats.pdf)
 
-# Système d'exploitation
+## Système d'exploitation
 
 L'OS est chargé d'assurer la liaison entre les ressources matérielles, l'utilisateur
 et les logiciels.
 
-Plusieurs situations existent :
+Voici les trois situations les plus courantes (OS seul, microcontroleur, virtualisation)
 
 ![Les trois situations courantes](./img/OS.png)
 
-## Rôles
+* Dans le premier cas, l'OS fonctionne normalement et sert d'interface unique à l'utilisateur
+* Dans le cas du _microcontroleur_, il n'y a pas d'OS ! Les programmes s'exécutent directement sur le matériel
+* Dans le cas de la _virtualisation_, l'hyperviseur permet de faire fonctionner simultanément plusieurs OS sur
+    une même machine. Les utilisateurs (généralement en réseau...) peuvent utiliseur l'un ou l'autre.
+
+
+
+
+### Rôles
 
 Les rôles principaux d'un OS sont :
 
@@ -27,7 +35,7 @@ Les rôles principaux d'un OS sont :
 * La gestion des **droits**,
 * La gestion des **fichiers** et du **système de fichier**.
 
-## Composants d'un OS
+### Composants d'un OS
 
 * Le **noyau** (_kernel_) contient les fonctions principales d'un OS (mémoire, processus, fichiers, IO, communication etc.)
 * Le **shell** (_shell_ pour coquille...) permet la communication des via un intermédiaire.
@@ -37,7 +45,7 @@ Les rôles principaux d'un OS sont :
     un script. Le shell le plus couramment utilisé est BASH.
   * **GUI** (_Graphical User Interface_ : les fenêtres) : interface graphique proposant un pointeur, des fenêtres, des icônes, des boutons pour rendre la manipulation conviviale et aisée.
 
-## Statistiques d'utilisation
+### Statistiques d'utilisation
 
 **Bureau et portable**
 
@@ -100,7 +108,11 @@ des machines utilisent un linux virtualisé dans Docker et orchestré par Kubern
 Google utilise un OS pour _datacenter_ appelé BORG.
 C'est un projet assez secret mais qui a contribué à la création de Kubernetes.
 
-# Processus
+_Je crois qu'il fonctionne sur UNIX mais même la vidéo de présentation d'1h30 ne répond pas à la question_.
+
+En bref : les informaticiens utilisent UNIX.
+
+## Processus
 
 **Programme**
 
@@ -111,7 +123,7 @@ C'est un projet assez secret mais qui a contribué à la création de Kubernetes
 > Un programme en cours d'exécution
 
 
-## Lancement
+### Lancement
 
 L'exécution d'un programme consiste à copier son code en mémoire et à faire
 pointer le CPU sur la première instruction.
@@ -131,7 +143,7 @@ En ajoutant une esperluette (_ampersand_ &) on exécute le programme en tâche
 de fond et on récupère la main sur le terminal.
 
 
-## Format d'exécutable
+### Format d'exécutable
 
 Chaque système d'exploitation dispose de son propre format pour rendre un fichier
 exécutable.
@@ -149,7 +161,7 @@ besoin lors de l'exécution.
 
 Mach-O et PE utilisent des principes similaires.
 
-## Composants d'un processus
+### Composants d'un processus
 
 Un processus est constitué :
 
@@ -184,7 +196,7 @@ Pour afficher le contenu de ces fichiers on peut, par exemple :
 $ sudo cat /proc/17/status
 ```
 
-## Arborescence des processus
+### Arborescence des processus
 
 Au lancement de l'OS, un premier processus est crée, il sera
 l'ancetre de tous les autres. Il se nomme `init` et son PID est 1.
@@ -206,7 +218,7 @@ Python, comme tous les langages modernes, permet de manipuler les processus : d'
 ```python
 import os
 os.system("/usr/bin/mousepad")
-# le programme python est _bloqué_ jusqu'à la terminaison du processus...
+## le programme python est _bloqué_ jusqu'à la terminaison du processus...
 ```
 
 La bibliothèque `os` contient des fonctions permettant de réaliser
@@ -229,19 +241,19 @@ puis l'afficher.
 ```python
 from multiprocessing import Process
 
-# cette fonction sera _embarquée_ dans un processus fils
+## cette fonction sera _embarquée_ dans un processus fils
 def saluer(nb_fois: int):
     """Affiche `nb_fois` la ligne 'bonjour' """
     for _ in range(nb_fois):
         print("bonjour")
 
-# création d'un processus embarquant la fonction saluer
+## création d'un processus embarquant la fonction saluer
 p1 = Process(target=saluer, args=(5,))
 
-# lancement du processus
+## lancement du processus
 p1.start()
 
-# attente de la fin du processus (=synchronsation)
+## attente de la fin du processus (=synchronsation)
 p1.join()
 ```
 
@@ -272,7 +284,7 @@ Il existe d'autres états :
   cet état pour récupérer les ressources.
 
 
-## Consulter les processus en cours d'exécution
+### Consulter les processus en cours d'exécution
 
 On peut souhaiter consulter une liste statique plus ou moins riche d'informations
 ou un tableau dynamique.
@@ -371,7 +383,15 @@ ou un tableau dynamique.
   quentin   727330  727329  0 08:07 pts/1    00:00:01 /usr/bin/python -O /usr/bin/ranger
   ```
 
-## Envoyer un signal au processus
+Il existe d'autres gestionnaires de tâches sous UNIX et certains sont même jolis comme **btop**
+
+![btop](./btop.png)
+
+À ne pas confondre avec **btop**
+
+![btopp](./btopp.jpg)
+
+### Envoyer un signal au processus
 
 Avec `ps -ef | grep mon_binaire` on peut accéder au PID d'un processus,
 ensuite on peut lui envoyer un signal.

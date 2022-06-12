@@ -7,14 +7,14 @@ weight: 1
 
 ---
 
-### pdf : [pour impression](/uploads/docnsitale/composants/composants_socs.pdf)
+pdf : [pour impression](/uploads/docnsitale/composants/composants_socs.pdf)
 
 
-# Cours introductif
+## Cours introductif
 
 [Cours introductif](./cours_tp_system_on_chip.pdf) écrit par David Sallé.
 
-## Vidéos du cours
+### Vidéos du cours
 
 * [Transistors NPN PNP](http://www.youtube.com/watch?v=Uqvk7x6nmfg&t=1m17s)
 * [Portes logiques](https://www.youtube.com/watch?v=L_EFljkLz_M&t=1m4s)
@@ -23,10 +23,10 @@ weight: 1
 
     Activer les soustitres traduits automatiquement. Le narrateur s'exprime assez clairement pour que la traduction soit de qualité.
 
-# Composants et systèmes sur puce
+## Composants et systèmes sur puce
 
 
-## Microprocesseur et mémoire
+### Microprocesseur et mémoire
 
 ### L'architecture de base
 
@@ -122,7 +122,7 @@ Dans un ordinateur plusieurs grandes familles de mémoire sont utilisées :
     microprocesseurs actuels, la taille du registre est un facteur important
     de choix et de prix.
 
-## Les systèmes sur puces : les SoCs
+### Les systèmes sur puces : les SoCs
 
 ### Le principce
 
@@ -197,7 +197,7 @@ Les inconvénients existent aussi :
     et les améliorations possibles.
 
 
-## Schéma de circuit d'un SoC
+### Schéma de circuit d'un SoC
 
 Physiquement, qu'est-ce qu'un SoC ?
 
@@ -205,38 +205,37 @@ Physiquement, qu'est-ce qu'un SoC ?
 
 Voici un raspberry Pi (vous l'étudierez plus en détail en TD)
 
+![raspberry pi](/docs/nsi/cours_terminale/architecture/composants/cours/img/0.jpg)
 
-$~$ ![raspberry pi](/docs/nsi/cours_terminale/architecture/composants/cours/img/0.jpg)
+Et un agrandissement de son oC
 
-Et un agrandissement de son SoC
+![raspberry soc](./img/4a5a3a301f_73649_soc.jpg)
 
-$~$ ![raspberry soc](./img/4a5a3a301f_73649_soc.jpg)
+Pour se faire une idée des dimesions :
 
-Pour se faire une idée des dimensions :
-
-$~$ ![SoC](/docs/nsi/cours_terminale/architecture/composants/cours/img/2.png)
+![SoC](/docs/nsi/cours_terminale/architecture/composants/cours/img/2.png)
 
 Il n'est pas simple de trouver un schéma de circuit compréhensible et utile
 d'un raspberry pi.
 
-Voici ce qui s'approche le plus du modèle de Von Neumann (cf [première](/docs/nsi/cours_premiere/architecture/von_neumann/)).
+Voici ce qui s'approche le plus du modèle de Von Neumann (cf [première](/docs/nsi/cours_premiere/architecture/vo_neumann/)).
 
-$~$ ![schéma rpi](/docs/nsi/cours_terminale/architecture/composants/cours/img/3.svg)
+![schéma rpi](/docs/nsi/cours_terminale/architecture/composants/cours/img/3.svg)
 
 Comme on peut le voir, le CPU est regroupé en un seul bloc, comportant aussi un GPU.
 
 On y voit que les entrées / sorties sont séparées en deux parties, l'I/O au sens
 large et le bus USB.
 
-Physiquement, ça se traduit comme ça :
+Physiquement, ça se taduit comme ça :
 
-$~$ ![raspberry rôle](/docs/nsi/cours_terminale/architecture/composants/cours/img/4.svg.png)
+![raspberry rôle](/docs/nsi/cours_terminale/architecture/composants/cours/img/4.svg.png)
 
 Et on remarque (entre autres) que le SoC utilisé ne comporte pas de RAM...
 
-### Un schéma de circuit un peu plus détaillé
+### Un schéma de circuitun peu plus détaillé
 
-$~$ ![circuit](/docs/nsi/cours_terminale/architecture/composants/cours/img/5.jpg)
+![circuit](/docs/nsi/cours_terminale/architecture/composants/cours/img/5.jpg)
 
 Vous pouvez remarquer que l'on retrouve bien sur ce schéma un CPU et de la
 mémoire (on a différents types de mémoires, mais ce sujet ne sera pas abordé

@@ -7,7 +7,7 @@ weight: 1
 
 ---
 
-### [pour impression](/uploads/docnsitale/securisation/introduction_print.pdf)
+[pour impression](/uploads/docnsitale/securisation/introduction_print.pdf)
 
 # Sécurisation des communications
 
@@ -80,7 +80,7 @@ Durant la période ancienne on rivalise d'ingéniosité.
 
 *   Le code César (60 av. J-C.) : simple décalage de lettres.
 
-    ![Code César](/uploads/docnsitale/securisation/cesar.png){width=60%}\
+    ![Code César](/uploads/docnsitale/securisation/cesar.png)
 
 *   le chiffrement affine dans lequel on applique des transformations
     mathématiques simples mais où toutes les lettres sont transformées de la
@@ -91,7 +91,7 @@ Durant la période ancienne on rivalise d'ingéniosité.
 
 *   Le chiffre de Vigenère, qui a résisté 300 ans aux assauts des analystes.
 
-Au XIX^e^ siècle les premières machines réalisant des calculs compliquent la
+Au XIXeme siècle les premières machines réalisant des calculs compliquent la
 tâche. Il faut trouver des procédés qui leur résistent.
 
 On s'intéresse alors aux grands principes. L'un d'eux émerge et reste d'actualité :
@@ -99,7 +99,7 @@ On s'intéresse alors aux grands principes. L'un d'eux émerge et reste d'actual
 > _la sécurité d'un système ne doit pas reposer sur le secret de la méthode de_
 > _chiffrement (Kerckhoffs - 1883)._
 
-Au XX^e^ siècle :
+Au XXeme siècle :
 
 *   La cryptanalyse prend d'abord le dessus : le succès des alliés durant la
     première guerre mondiale est indissociable de leur aptitude à décrypter
@@ -183,8 +183,8 @@ La cryptographie asymétrique utilise deux clés :
 
 Afin qu'on puisse lui écrire, Robert a généré deux clés :
 
-*   une publique qu'il rend accessible,
-*   une privée qu'il conserve.
+*   une publique qu'il rend accessible et qui sert à chiffrer,
+*   une privée qu'il conserve et qui sert à déchiffrer.
 
 1.  J'écris à Robert : _j'encode avec sa clé publique_. Qu'est-ce que j'encode ?
 
@@ -192,9 +192,11 @@ Afin qu'on puisse lui écrire, Robert a généré deux clés :
 
 2.  _Robert décode le message à l'aide de sa clé privée._
 
-  Robert encode sa réponse _avec MA clé publique_ et me l'envoie.
+      Robert encode sa réponse _avec MA clé publique_ et me l'envoie.
 
-3.   Je décode _ma clé privée_ etc.
+3.   Je décode avec _ma clé privée_ son message.
+
+     Et on recommence. J'encode mon message avec la clé publique de Robert, retour à 1.
 
 
 ## Plusieurs défauts à cette méthode
@@ -231,7 +233,7 @@ symétrique (une fois qu'elle est établie).
 *   Mon interlocuteur est-il celui qu'il prétend être ? C'est
     l'**authenticité** (certificats pour SSL et TLS employés par HTTPS).
 
-    ![sha](/uploads/docnsitale/securisation/certificat.png){width=60%}\
+    ![sha](/uploads/docnsitale/securisation/certificat.png)
 
 *   Ce message que je reçois a-t-il été altéré par un tiers ? C'est
     l'**intégrité** (fonctions de hachages cryptographiques : SHA, MD5)
@@ -244,7 +246,7 @@ symétrique (une fois qu'elle est établie).
     *   Le hash est rendu public.
     *   Quiconque modifie l'un doit changer l'autre.
 
-    ![sha](/uploads/docnsitale/securisation/sha.png){width=70%}\
+    ![sha](/uploads/docnsitale/securisation/sha.png)
 
 
 ## Quelques algorithmes modernes
@@ -261,10 +263,37 @@ symétrique (une fois qu'elle est établie).
     de _chiffrement par flot_. Ce principe évite d'avoir à découper les messages.
 *   **SHA** et **MD5** sont des _fonctions de hashages cryptographiques_.
     Permettent surtout de s'assurer qu'un message ou fichier n'a pas été altéré.
-*   **TLS** et SSL : _protocole réseau_ "englobant" HTTP pour former HTTPS.
+*   **TLS** et **SSL** : _protocole réseau_ "englobant" HTTP pour former HTTPS.
     Permet la communication sécurisée entre un client et un serveur web.
     Utilise tous les précédents.
+*   **HTTPS = HTTP + TLS** c'est du HTTP normal mais les paquets sont chiffrés.
+    Nécessite plusieurs étapes, des certificats, des tiers de confiance... mais
+    tout au fond, c'est du HTTP classique.
 *   **End to End Encryption** principe combinant chiffrement asymétrique et
     symétrique pour assurer des échanges. Ce terme signifie que _le serveur_
     _entre les usagers_ Alice et Bob (qui se parlent) ne peut décoder le message.
     Utilisé par Signal, Wire, Whatsapp et Telegram (optionnel).
+    
+### Rermaques sur les bonnes pratiques
+
+1. Si vous servez un site, débrouillez-vous pour qu'il soit en HTTPS.
+    Cela peut se faire gratuitement avec Let's Encrypt. Assez peu d'efforts à fournir.
+    Suiviez un tuto, c'est pas méchant.
+2. Quelle messagerie choisir ? Facile : Signal.
+    C'est la seule (à ma connaissance et à ce jour) à proposer :
+    * chiffrement de bout en bout avec algorithmes validés par la science
+    * aucun transit des données en clair sur un serveur quelconque
+    * code complètement open source
+    * effacement automatique des messages
+
+    Mais c'est pas cool signal il manque ceci-cela... alors peut-être Telegram ou Whatsapp
+
+    Telegram n'est pas vraiment sécurisé et personne ne sait ce qu'il arrive à vos données
+    dans Whatsapp.
+
+    Et Snapchat ? Aucun chiffrement, vos données transitent en clair chez eux.
+3. Et les mots de passe ? Ce n'est pas le sujet mais changez les régulièrement, n'utilisez pas
+    partout les mêmes et utilisez un gestionnaire de mot de passe.
+4. Dois-je chiffrer mes données sur ma machine ? Si vous ne voulez pas qu'on retrouve vos photos
+    perso partout après vous être fait voler votre téléphone, oui.
+    Est-ce vraiment lent ? En pratique non.

@@ -8,30 +8,30 @@ weight: 1
 
 
 
-### pdf: [pour impression](/uploads/docnsitale/algo/divide_n_conquer/diviser_pour_regner_print.pdf), [diaporama](/uploads/docnsitale/algo/divide_n_conquer/diviser_pour_regner_slides.pdf)
+pdf: [pour impression](/uploads/docnsitale/algo/divide_n_conquer/diviser_pour_regner_print.pdf), [diaporama](/uploads/docnsitale/algo/divide_n_conquer/diviser_pour_regner_slides.pdf)
 
 <!-- pandoc diviser_pour_regner.md -o diviser_pour_regner_print.pdf -->
 <!-- pandoc -t beamer diviser_pour_regner.md --slide-level=2 -o diviser_pour_regner_slides.pdf -->
 
-# Diviser pour régner
+## Diviser pour régner
 
-### Diviser pour régner:
-###
 
-> Classe d'algorithme où l'on découpe un problème en sous problèmes
-> qui s'énoncent de la même manière
+{{< hint info >}}
+Classe d'algorithme où l'on 
+* découpe un problème en sous problèmes _indépendants_ qui s'énoncent de la même manière
+* qu'on recompose à la fin pour former une solution
 
-> et qu'on recompose à la fin pour former une solution
+C'est une approche "du haut vers les bas", généralement, les algorithmes sont récursifs
+{{< /hint >}}
 
-###
 
-> C'est une approche "du haut vers les bas".
+_Nous allons exposer quelques problèmes simples afin d'explorer la démarche._
+_Dans un premier temps, nos nouveaux algorithmes seront moins efficaces que leur version classique._
 
-###
+_Ensuite nous traiterons de vrais problèmes avec l'approche diviser pour régner._
 
-> Généralement, les algorithmes sont récursifs
 
-# Recherche du maximum dans une liste
+## Recherche du maximum dans une liste
 
 On dispose d'un tableau de nombres, on en cherche le plus grand élément.
 
@@ -39,7 +39,7 @@ On dispose d'un tableau de nombres, on en cherche le plus grand élément.
 tableau = [5, 71, 23, 45, 28, 89, 63, 39]
 ```
 
-## Algorithme itératif naturel
+### Algorithme itératif naturel
 
 On a déjà vu un algorithme en première :
 
@@ -49,7 +49,7 @@ On a déjà vu un algorithme en première :
     Si `elt > max` alors `max = elt`
 3. On retourne `max`
 
-## Version diviser pour régner
+### Version diviser pour régner
 
 
 fonction `maximum`:  `tableau ---> entier`
@@ -93,7 +93,7 @@ tableau = [5, 71, 23, 45, 28, 89, 63, 39]
     ```
 
 
-## Est-ce plus efficace ? Non... c'est même plus lent !
+### Est-ce plus efficace ? Non... c'est même plus lent !
 
 ![maximum](/uploads/docnsitale/algo/divide_n_conquer/figure/maximum.png)\
 
@@ -103,7 +103,7 @@ tableau = [5, 71, 23, 45, 28, 89, 63, 39]
 
 On dispose d'un tableau d'entiers. On cherche à savoir s'il contient un élément.
 
-## Version itérative (cf première)
+### Version itérative (cf première)
 
 fonction `chercher` : `(tableau, clé) ----> booléen`
 
@@ -114,7 +114,7 @@ fonction `chercher` : `(tableau, clé) ----> booléen`
 
 3. on retourne `trouvé`
 
-## Version diviser pour régner
+### Version diviser pour régner
 
 
 fonction `chercher` : `(tableau, clé) ----> booléen`
@@ -125,7 +125,7 @@ fonction `chercher` : `(tableau, clé) ----> booléen`
     `chercher(gauche, clé)` ou `chercher(droite, clé)`\
      est vrai.
 
-## Exemple
+### Exemple
 
 ```
 tableau = [4, 10, 20, 5]
@@ -134,7 +134,6 @@ clé = 10
 
 A-t-on `clé` dans `tableau` ?
 
-## Exemple
 
 ```
 clé = 10
@@ -146,7 +145,7 @@ combiner       Vrai    ou    Faux
 combiner              Vrai
 ```
 
-## C'est mieux cette fois ??? Toujours pas.
+### C'est mieux cette fois ??? Toujours pas.
 
 ![Recherche](/uploads/docnsitale/algo/divide_n_conquer/figure/recherche.png)\
 
@@ -157,7 +156,7 @@ Le coût est toujours linéaire, avec un coefficient assez mauvais.
 * Pour le maximum, on fait autant de comparaison que dans la méthode itérative.
 * Pour la recherche on fait autant de comparaison ET on ajoute `n-1` "Vrai ou Faux".
 
-## Quand est-ce intéressant ?
+### Quand est-ce intéressant ?
 
 * **Quand on a une structure particulière,**
 * **Quand on peut éviter beaucoup d'étapes**
@@ -175,7 +174,7 @@ On cherche **dans un tableau trié** la présence d'un élément.
 * S'il est plus grand que la clé, on cherche entre le début et la _valeur centrale_,
 * Sinon, on cherche entre _la valeur centrale_ et la fin,
 
-## Dichotomie : récursif
+### Dichotomie : récursif
 
 La version que nous avions étudiée était itérative.
 
@@ -185,7 +184,7 @@ En Python, ce n'est pas plus rapide :(
 
 Python, n'est pas un langage _fonctionnel_, les récursions ne sont pas optimisées.
 
-## Mais
+### Mais
 
 ![dichotomie](/uploads/docnsitale/algo/divide_n_conquer/figure/dichotomie.png)\
 
@@ -197,69 +196,169 @@ $$3^7 = 3 \times 3 \times 3 \times 3 \times 3 \times 3 \times 3$$
 
 C'est déjà un algorithme !
 
-## Algorithme naïf pour $y^n$
+### Algorithme naïf pour $y^n$
 
-Puissance : $(y, n) \mapsto  y^n$
 
-1. On initialise $p = 0$ et $i = 0$
-2. Tant que $i < n$ faire
-    * $p = p \times y$
-    * $i = i + 1$
-3. Retourner $p$
+```
+Puissance(y, n)
 
-## Complexité ?
+1. initialiser p = 0 et i = 0
+2. Tant que i < n, faire
+    p = p * y
+    i = i + 1
+renvoyer p
+```
+
+### Complexité ?
 
 Clairement linéaire. Une seule boucle qui itère autant de fois que la puissance
 voulue.
 
 ## Exponentiation rapide
 
+### Algorithme
 
 $ExpoRapide : (y, n) \mapsto y^n$
 
-Si $n = 0$ alors
 
-* retourner $1$
+```
+Exporapide(y, n)
 
-Sinon si $n$ est pair
+Si n = 0, renvoyer 1
+Sinon, si n est pair,
+    a = exporapide(y, n // 2)
+    renvoyer a * a
+Sinon,
+    renvoyer y * exporapide(y, n - 1)
+```
 
-* $a = ExpoRapide(y, n // 2)$
-* retourner $a \times a$
+### Un exemple
 
-Sinon
+On veut calculer $3^7$
 
-* retourner $y * ExpoRapide(y, n - 1)$
+{{< columns >}}
+Appels récursifs
+```
+exporapide(3, 7)
+    7 > 0 et 7 impair
+    on renvoie 3 * exporapide(3, 6)
 
-## Vitesses
+exporapide(3, 6)
+    6 > 0 et 6 pair
+    a = exporapide(3, 3)
+    on renvoie a * a
 
-![expo](/uploads/docnsitale/algo/divide_n_conquer/figure/exponentiation.png)\
+exporapide(3, 3)
+    3 > 0 et 3 impair
+    on renvoie 3 * exporapide(3, 2)
+
+exporapide(3, 2)
+    2 > 0 et 2 pair
+    a = exporapide(3, 1)
+    renvoyer a * a
+
+exporapide(3, 1)
+    1 > 0 et 1 impair
+    renvoyer 3 * exporapide(3, 0)
+
+exporapide(3, 0)
+    0 est nul
+    renvoyer 1
+
+```
+<--->
+Valeurs de retour
+```
+exporapide(3, 0) -> 1
+exporapide(3, 1) -> 3 * 1   = 3
+exporapide(3, 2) -> 3 * 3   = 9
+exporapide(3, 3) -> 3 * 9   = 27
+exporapide(3, 6) -> 27 * 27 = 729
+exporapide(3, 7) -> 3 * 729 = 2187
+```
+
+
+On gagne assez peu d'étapes avec cet exemple !
+{{< /columns >}}
+
+Recommençons avec $3^{9}$
+
+{{< columns >}}
+Appels récursifs
+```
+exporapide(3, 9)
+    9 > 0 et 8 impair
+    on renvoie 3 * exporapide(3, 8)
+
+exporapide(3, 8)
+    8 > 0 et 8 pair
+    a = exporapide(4, 4)
+    on renvoie a * a
+
+exporapide(3, 4)
+    4 > 0 et 3 pair
+    a = exporapide(3, 2)
+    on renvoie a * a
+
+exporapide(3, 2)
+    2 > 0 et 2 pair
+    a = exporapide(3, 1)
+    renvoyer a * a
+
+exporapide(3, 1)
+    1 > 0 et 1 impair
+    renvoyer 3 * exporapide(3, 0)
+
+exporapide(3, 0)
+    0 est nul
+    renvoyer 1
+
+```
+<--->
+Valeurs de retour
+```
+exporapide(3, 0) -> 1
+exporapide(3, 1) -> 3 * 1   = 3
+exporapide(3, 2) -> 3 * 3   = 9
+exporapide(3, 4) -> 9 * 9   = 81
+exporapide(3, 8) -> 81 * 81 = 6561
+exporapide(3, 7) -> 3 * 729 = 19683
+```
+
+Cette fois on passe de 9 étapes à seulement 5.
+
+Pour les exposants légèrement plus grands qu'une puissance de deux, c'est un excellent algorithme.
+{{< /columns >}}
+
+### Vitesses
+
+![expo](/uploads/docnsitale/algo/divide_n_conquer/figure/exponentiation.png)
 
 ##
 
-![expo](/uploads/docnsitale/algo/divide_n_conquer/figure/expon_rapide_natif.png)\
+![expo](/uploads/docnsitale/algo/divide_n_conquer/figure/expon_rapide_natif.png)
 
 ## Conclusion
 
 La méthode **_diviser pour régner_** :
 
-* découper le problème en sous-problèmes qui s'énoncent de la même manière
+* découper le problème en sous-problèmes _indépendants_ qui s'énoncent de la même manière
 * résoudre les cas limites
 * combiner les solutions
 
-## Algorithmes récursifs, implémentation
 
 ### Algorithmes
 
 Les algorithmes présentés s'énoncent facilement de manière récursive.
 
-Ce ne sont pas toujours les meilleurs.
+Ce sont parfois les meilleurs possibles (expo rapide, recherche dichotomique, tri fusion)
 
 ### Implémentation
 
 Elle n'est pas toujours plus efficace. Cela dépend du langage employé.
 
 <!--
-## Exos
+### Exos
 
  Utiliser le principe de la recherche dichotomique pour rédiger une fonction Caml calculant la
 racine carrée entière d’un entier n ∈ N, à savoir E(sqrt(n)), avec un coût logarithmique -->

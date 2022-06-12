@@ -6,9 +6,9 @@ bookCollapseSection: true
 
 ---
 
-### [pour impression](/uploads/docnsitale/securisation/https.pdf)
+[pour impression](/uploads/docnsitale/securisation/https.pdf)
 
-# Principe
+## Principe
 
 
 **HTTPS** (littéralement « protocole de transfert hypertextuel sécurisé ») est
@@ -16,7 +16,7 @@ la combinaison du protocole HTTP et d'une couche de chiffrement, généralement
 TLS (sécurité de la couche transport).
 
 
-# Objectifs
+## Objectifs
 
 Trois objectifs sont visés par ce protocole :
 
@@ -24,28 +24,28 @@ Trois objectifs sont visés par ce protocole :
 * **Confidentialité** : les échanges sont chiffrés et ne peuvent être lus par un tiers.
 * **Intégrité** : HTTPS rend la technique "man in the middle" quasi impossible.
 
-## Authenticité
+### Authenticité
 
 HTTPS permet aux visiteurs de vérifier l'identité du site web auquel il se
 connecte. Cette identité est assurée par un **certificat** délivré par une
 autorité.
 
-![certificat](/uploads/docnsitale/securisation/certificat.png){width=40%}
+![certificat](/uploads/docnsitale/securisation/certificat.png)
 
-## Confidentialité
+### Confidentialité
 
 Les échanges étant chiffrés, seuls les détenteurs des clés peuvent les lire.
 Cela assure que votre numéro de carte bancaire n'est pas lisible par un tiers
 qui parviendrait à pirater un routeur ou lorsque vous êtes sur une connexion
 partagée.
 
-## Intégrité
+### Intégrité
 
 Lors de ce chiffrage on ajoute une étape qui permet de s'assurer que le message
 transmis est intègre (c'est-à-dire qu'il n'a pas été altéré par une tierce
 personne ou des erreurs de transmission).
 
-# Etapes
+## Etapes
 
 HTTPS procède en deux temps :
 
@@ -55,7 +55,7 @@ HTTPS procède en deux temps :
 
 
 
-## Étapes d'une connexion http... qui se passe mal
+### Étapes d'une connexion http... qui se passe mal
 
 1.  Vous ouvrez votre navigateur et vous rendez sur un site HTTP.
     Votre navigateur envoie une requête `GET` à l'adresse ip du site.
@@ -74,7 +74,7 @@ HTTPS procède en deux temps :
 
     Toutes les machines intermédiaires peuvent lire ce message.
 
-    (Il y a **trente** sauts entre mon pc et mon site web, par exemple)
+    (Il y a **trente** machines entre mon pc et mon site web, par exemple)
 
 4.  Un des routeurs entre votre PC et le serveur web a été piraté !
     **Tous les messages sont interceptés et envoyés vers un site extérieur.**
@@ -92,7 +92,7 @@ etc.
 
 En deux temps :
 
-## 1. Négociation : la poignée de main
+### 1. Négociation : la poignée de main
 
 La phase de négociation assure **l'authenticité** de l'interlocuteur.
 
@@ -102,7 +102,7 @@ La phase de négociation assure **l'authenticité** de l'interlocuteur.
 
     Ainsi, vous êtes rassuré : le site visité n'est pas celui d'un faussaire.
 
-### Chiffrement asymétrique : pour initialiser la connexion.
+### 2. Chiffrement asymétrique : pour initialiser la connexion.
 
 1.  Ce certificat étant transmis, il contient donc une **clé publique** qui permet
     de chiffrer un message.
@@ -124,7 +124,7 @@ La phase de négociation assure **l'authenticité** de l'interlocuteur.
 
 ### BOOM. **Client et serveur sont seuls détenteurs d'une clé secrète commune.**
 
-## 2. Chiffrement symétrique : durant la communication
+### 3. Chiffrement symétrique : durant la communication
 
 Le chiffrement asymétrique est très pratique mais aussi très lent et coûteux
 en ressources.
@@ -142,7 +142,7 @@ Vos messages sont maintenant confidentiels (seul le serveur et vous détenez
 la clé secrète) et authentiques (la clé secrète permet aussi de vérifier
 que le message n'a pas été altéré durant le transport).
 
-## Résumé des étapes d'une communication TLS
+### Résumé des étapes d'une communication TLS
 
 A chaque envoi de données le serveur :
 
@@ -159,7 +159,7 @@ A chaque réception de données le client :
 * décompresse les données,
 * les assemble
 
-# Précisions
+## Précisions
 
 1.  **Choix d'un algorithme de chiffrement.**
 
@@ -176,9 +176,11 @@ A chaque réception de données le client :
     *   Les algorithmes **asymétriques** courants sont **RSA** (avec différentes
         longueurs de clé) qui repose sur l'arithmétique modulaire
         et un algorithme similaire à Diffie Hellman mais reposant les courbes
-        elliptiques.
+        elliptiques **ECC**.
 
     *   L'algorithme **symétrique** courant est **AES**. Successeur de DES.
+        Il est extrèment rapide et peut être implanté dans des puces assez
+        simples et peu coûteuses.
 
     *   Ces algorithmes sont tous rendus publics, cela peut sembler
         contre-intuitif mais c'est le meilleur moyen de repérer les failles
@@ -207,8 +209,10 @@ A chaque réception de données le client :
 
     *   _adresse_  : https://qkzk.xyz, <----- nom du site
     *   _délivré par_ : Let's Encrypt <------ une autorité
-    *   _date de validité_ : du 30 mars 2020 au 28 juin 2020
+    *   _date de validité_ : du 30 mars 2020 au 28 juin 2020 (mis à jour depuis, rassurez vous)
     *   _empreinte_ : `FF 45 67 FA...` <------ vous permet de vérifier ce certificat auprès de Let's Encrypt
+
+    Vérifiez en faisant un clic droit sur le cadenas à gauche de la barre d'adresse !
 
 4.  **HTTPS EveryWhere**. À l'initiative de google et des acteurs des réseaux
     décentralisés TOR, de nombreux acteurs du web militent pour que tous les

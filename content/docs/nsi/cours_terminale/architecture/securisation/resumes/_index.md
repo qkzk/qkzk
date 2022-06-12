@@ -7,11 +7,11 @@ weight: 100
 
 ---
 
-### [pour impression](/uploads/docnsitale/securisation/securisation_resume.pdf)
+[pour impression](/uploads/docnsitale/securisation/securisation_resume.pdf)
 
-# Sécurisation des communications
+## Sécurisation des communications
 
-## Introduction et historique
+### Introduction et historique
 
 
 La sécurisation des échanges est un enjeu majeur de l'économie moderne.
@@ -28,7 +28,7 @@ Dans la période actuelle on y trouve aussi d'autres aspects :
 * l'anonymat,
 
 
-## Chiffrement 
+### Chiffrement 
 
 L'objectif : assurer qu'un message ne puisse être lu que par son destinataire.
 
@@ -41,7 +41,7 @@ Les navires arrivent à minuit   --------------->   KZQ BPCUEZ PEEUCZBR P LUBUR
 KZQ BPCUEZ PEEUCZBR P LUBUR     --------------->   Les navires arrivent à minuit
 ```
 
-## Symétrique vs asymétrique
+### Symétrique vs asymétrique
 
 
 _symétrique_: 
@@ -65,7 +65,7 @@ ou à brèche secrète (exemple : factorisation des entiers.)
 Certains protocoles (comme Diffie-Helmman - 1976) permettent un échange de clé
 sécurisé.
 
-## Fonction à sens unique : la factorisation des entiers
+### Fonction à sens unique : la factorisation des entiers
 
 
 
@@ -88,7 +88,7 @@ Brèche secrète :
 
 
 
-## Différents types de clé
+### Différents types de clé
 
 La cryptographie symétrique repose sur une seule clé :
 
@@ -100,7 +100,7 @@ La cryptographie asymétrique utilise deux clés :
 > Une **clé publique** permet d'encoder un message. Tout le monde la connaît.\
 > Une **clé privée** permet de déchiffrer un message. Seul vous la connaissez.
 
-## Un exemple de communication très simplifié avec un chiffrement asymétrique
+### Un exemple de communication très simplifié avec un chiffrement asymétrique
 
 Afin qu'on puisse lui écrire, Robert a généré deux clés :
 
@@ -118,7 +118,7 @@ Afin qu'on puisse lui écrire, Robert a généré deux clés :
 3.   Je décode _ma clé privée_ etc.
 
 
-## Plusieurs défauts à cette méthode
+### Plusieurs défauts à cette méthode
 
 1.  Le chiffrement asymétrique est lent,
 2.  nous ne somme pas à l’abri d'une amélioration des sciences qui rendraient
@@ -127,7 +127,7 @@ Afin qu'on puisse lui écrire, Robert a généré deux clés :
     Le chiffrement RSA (le plus couramment employé) serait alors inutile.
 
 
-## Amélioration considérable de la méthode
+### Amélioration considérable de la méthode
 
 1.  J'écris à Robert : j'encode avec sa clé publique. Qu'est-ce que j'encode ?
 
@@ -146,7 +146,7 @@ On comprend bien qu'il est à la fois possible et préférable de combiner
 chiffrement asymétrique (pour établir une communication) et chiffrement
 symétrique (une fois qu'elle est établie).
 
-## HTTPS
+### HTTPS
 
 
 **HTTPS** (littéralement « protocole de transfert hypertextuel sécurisé ») est
@@ -212,7 +212,7 @@ la communication réelle commence.
 Commence alors l'échange HTTP habituel... mais tous les messages - y compris les
 adresses (pages internes visitées, mots clés) sont chiffrées.
 
-## Résumé des étapes d'une communication TLS
+### Résumé des étapes d'une communication TLS
 
 A chaque envoi de données le serveur :
 

@@ -7,9 +7,9 @@ weight: 10
 
 ---
 
-### pdf : [pour impression](/uploads/docnsitale/composants/td_soc.pdf)
+pdf : [pour impression](/uploads/docnsitale/composants/td_soc.pdf)
 
-# Travaux pratiques
+## Travaux pratiques
 
 Dans ce TP nous allons mener une petite étude comparative de différentes
 machines utilisant des systèmes sur puce.
@@ -17,7 +17,7 @@ machines utilisant des systèmes sur puce.
 Les objectifs du programme étant très vagues (cf fin du TP) nous allons
 nous contenter de peu de choses...
 
-## Questions générales
+### Questions générales
 
 1. À propos de la RAM
 
@@ -40,11 +40,11 @@ nous contenter de peu de choses...
     c. En plus de sa petite taille, quel est l'autre principal avantage d'un SoC ?
     d. Citer un inconvénient majeur des SoCs.
 
-## Le raspberry Pi
+### Le raspberry Pi
 
 1. Documentez-vous sur le Raspberry Pi [ici](https://fr.wikipedia.org/wiki/Raspberry_Pi).
 
-## Document 1 : `pinout`
+### Document 1 : `pinout`
 
 En utilisant une carte Raspberry Pi, on ouvre un terminal et on tape la commande
 `pinout`. Voici ce que le terminal renvoie :
@@ -100,12 +100,12 @@ GPIO26 (37) (38) GPIO20
 For further information, please refer to https://pinout.xyz/
 ```
 
-## Document 2 : numéro de révision
+### Document 2 : numéro de révision
 
 Le numéro de révision est un code utilisé depuis le Raspberry Pi 2. C'est un
 ensemble de 6 caractères au format hexadécimal.
 
-## Document 3 : lecture du numéro de révision
+### Document 3 : lecture du numéro de révision
 
 En numérotant les 24 bits de gauche à droite ($b_1$ à $b_{24}$), on peut
 obtenir les informations suivantes :
@@ -134,7 +134,7 @@ obtenir les informations suivantes :
 6. Que signifie l'acronyme GPIO (se documenter si nécessaire). Quel usage peut-on
     donner à ces pins ?
 
-## La console Nintendo Switch
+### La console Nintendo Switch
 
 1. Se documenter sur la [nintendo Switch](https://fr.wikipedia.org/wiki/Nintendo_Switch)
 
@@ -161,7 +161,7 @@ obtenir les informations suivantes :
     Peut-on trouver des références sur le matériel fournie par le constructeur ?
 
 
-## Le smartphone OnePlus 6T
+### Le smartphone OnePlus 6T
 
 _J'ai choisi ce modèle relativement ancien car on dispose de beaucoup d'information
 le concernant_
@@ -189,7 +189,7 @@ le concernant_
         mobiles qui se compilent avec le même code sur Android et sur iPhone.
         Citez-en un.
 
-## Votre smartphone
+### Votre smartphone
 
 Votre smartphone comporte aussi un SoC.
 
@@ -207,7 +207,7 @@ Votre smartphone comporte aussi un SoC.
 
 ***
 
-## Programme
+### Programme
 
 **Contenus** : Composants intégrés d’un système sur puce.
 
