@@ -1,17 +1,16 @@
 html {
-    background-color: #171716 !important;
+  background-color: #171716 !important;
 }
 html {
-    filter: invert(99%) hue-rotate(180deg) brightness(105%) contrast(85%);
-    -webkit-filter: invert(99%) hue-rotate(180deg) brightness(105%) contrast(85%);
+  filter: invert(99%) hue-rotate(180deg) brightness(105%) contrast(85%);
+  -webkit-filter: invert(99%) hue-rotate(180deg) brightness(105%) contrast(85%);
 }
 body {
-    background-color: #FFF !important;
+  background-color: #fff !important;
 }
 img,
 video,
 body * [style*="background-image"] {
-    filter: hue-rotate(179deg) contrast(100%) invert(100%);
-    -webkit-filter: hue-rotate(179deg) contrast(100%) invert(100%);
+  filter: hue-rotate(179deg) contrast(100%) invert(100%);
+  -webkit-filter: hue-rotate(179deg) contrast(100%) invert(100%);
 }
-
