@@ -13,7 +13,7 @@ weight: 1
 Cette page contient les liens vers les cours de
 mathématiques utilisés cette année
 
-## [Seconde](/docs/maths/seconde/)
+## [Terminale STMG](t_stmg/)
 
 ## [L1S1](/docs/maths/l1s1)
 
