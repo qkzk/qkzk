@@ -198,6 +198,8 @@ On a mesuré que la probabilité du défaut $A$ est $\dfrac{1}{1000}$ et celle d
 1. Quelle est la probabilité qu'une pièce présente les deux défauts ?
 2. Quelle est la probabilité qu'une pièce présente au moins un défaut.
 
+Répondons
+
 1. On veut calculer $P(A \cap B)$.
 
     $P(A \cap B) = P(A) \times P_A(B) = P(A) \times P(B)$ car $A$ et $B$ sont indépendants.
