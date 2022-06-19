@@ -73,7 +73,7 @@ Facile !
 1. D'une année $n$ à la suivante, le capital est augmenté de 1.5%. Il est donc multiplié par 1.015. On a donc $v_{n+1} = 1.015 v_n$. C'est une suite géométrique de raison $1.015$.
 
     On a aussi $v_n = 1000 \times 1.015^n$
-2. En 2022, 12 ans se sont écoulés depluis le placement. Il y aura donc $1000 \times 1.015^{12} \approx 1195.62$ €.
+2. En 2022, 12 ans se sont écoulés depuis le placement. Il y aura donc $1000 \times 1.015^{12} \approx 1195.62$ €.
 
 [^1]: Les _intérêts composés_ génèrent des intérêts. D'une année à l'autre le capital est augmenté par les intérêts avant de calculer les intérêts de l'année suivante. Ce n'est pas le cas des _intérêts simples_ où les intérêts sont fixes.
 
@@ -107,7 +107,7 @@ Par exemple pour $v_n = 1000 \times 0.6^n$
 
 #### Cas d'une raison négative
 
-Lorsque la raison est négative, les valeurs de la suite géoémtrique changent de signe à chaque terme.
+Lorsque la raison est négative, les valeurs de la suite géométrique changent de signe à chaque terme.
 
 Par exemple pour $v_n = 150 \times (-1.2)^n$
 
@@ -167,7 +167,7 @@ $$S_n = v_0 + v_1 + \cdots + v_n = \sum_{k=0}^n v_k = v_0 \dfrac{1 - q^{n+1}}{1-
 
 On reprend le dernier exemple :
 
-Menu **Calculs**, touche **Paste**, choisir **Analye** puis **Somme** et saisir :
+Menu **Calculs**, touche **Paste**, choisir **Analyse** puis **Somme** et saisir :
 
 ![Somme des termes sur la numworks](./numworks_4.png)
 

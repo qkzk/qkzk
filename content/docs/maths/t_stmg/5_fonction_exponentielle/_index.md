@@ -97,10 +97,10 @@ Hz. en force !
     ![Tableau de valeurs sur la Numworks](numworks_3.png)
     ![Graphe sur la Numworks](numworks_4.png)
 
-_Ce modèle, totalement irréalise, illustre une propriété de la fonction exponentielle de base $a>1$ :
+_Ce modèle, totalement irréaliste, illustre une propriété de la fonction exponentielle de base $a>1$ :
 elle explose rapidement vers l'infini !_
 
-#### Les bactéries inarrétables
+#### Les bactéries inarrêtables
 
 Le nombre de bactéries présentes dans un organisme suite à une infection est modélisé par $f(x) = 50000 \times 1.5^x$ où $x$ est en heures.
 

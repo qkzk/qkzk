@@ -1,0 +1,57 @@
+graph probability_tree {
+    rankdir=LR
+    Univers [label="" shape=point width=0.01 height=0.01]
+    S [label="Succès" shape=none width=0.01]
+    E [label="Échec" shape=none width=0.01]
+    
+    S1 [label="Succès" shape=none width=0.01]
+    E1 [label="Échec" shape=none width=0.01]
+    S2 [label="Succès" shape=none width=0.01]
+    E2 [label="Échec" shape=none width=0.01]
+    
+    S3 [label="Succès" shape=none width=0.01]
+    E3 [label="Échec" shape=none width=0.01]
+    S4 [label="Succès" shape=none width=0.01]
+    E4 [label="Échec" shape=none width=0.01]
+    S5 [label="Succès" shape=none width=0.01]
+    E5 [label="Échec" shape=none width=0.01]
+    S6 [label="Succès" shape=none width=0.01]
+    E6 [label="Échec" shape=none width=0.01]
+
+
+    SSS [shape=none width=0.01];
+    SSE [shape=none width=0.01 fontcolor="red"];
+    SES [shape=none width=0.01 fontcolor="red"];
+    SEE [shape=none width=0.01];
+    ESS [shape=none width=0.01 fontcolor="red"];
+    ESE [shape=none width=0.01];
+    EES [shape=none width=0.01];
+    EEE [shape=none width=0.01];
+
+    Univers -- S [label="1/4"];
+    Univers -- E [label="3/4"];
+    S -- S1 [label="1/4"];
+    S -- E1 [label="3/4"];
+    E -- S2 [label="1/4"];
+    E -- E2 [label="3/4"];
+
+    S1 -- S3 [label="1/4"];
+    S1 -- E3 [label="3/4"];
+    E1 -- S4 [label="1/4"];
+    E1 -- E4 [label="3/4"];
+    S2 -- S5 [label="1/4"];
+    S2 -- E5 [label="3/4"];
+    E2 -- S6 [label="1/4"];
+    E2 -- E6 [label="3/4"];
+
+    S3 -- SSS;
+    E3 -- SSE;
+    S4 -- SES;
+    E4 -- SEE;
+    S5 -- ESS;
+    E5 -- ESE;
+    S6 -- EES;
+    E6 -- EEE;
+}
+
+
