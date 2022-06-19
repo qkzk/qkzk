@@ -89,7 +89,7 @@ Par contre :
 Un _schéma de Bernoulli_ est la répétition de $n$ épreuves de Bernoulli _identiques_ (la même expérience aléatoire) et _indépendantes_ (sans influence l'une sur l'autre)
 de probabilité de succès $p$.
 
-Il faut donc 2 paramètres pour définir un schéma de Bernoulli : le nombre de répétitions $n$ et la proba. du succès $p$.
+Il faut donc 2 paramètres pour définir un schéma de Bernoulli : le nombre de répétitions $n$ et la probabilité du succès $p$.
 
 #### Exemple
 
@@ -97,7 +97,7 @@ On lance $100$ fois une pièce équilibrée : c'est un schéma de Bernoulli avec
 
 ### 3. Loi binomiale
 
-On réalise un schéma de Bernoulli composé de $n$ épreuves de Bernoulli de proba de succès $p$.
+On réalise un schéma de Bernoulli composé de $n$ épreuves de Bernoulli de probabilité de succès $p$.
 
 La **loi binomiale** donne la probabilité d'obtenir $k$ succès, pour $k$ entier entre 0 et $n$.
 
@@ -123,7 +123,7 @@ $X$ est la variable aléatoire qui compte les succès. $X$ suit la loi binomiale
 
 ![3 répétitions](./arbre_1.svg)
 
-Nous allons compter les succès rencontrés aux extémités de chaque branche (_les feuilles_).
+Nous allons compter les succès rencontrés aux extrémités de chaque branche (_les feuilles_).
 
 De haut en bas : 3 succès, 2, 2, 1, 2, 1, 1, 0.
 
@@ -162,21 +162,7 @@ En rouge les feuilles avec 2 succès exactement. À nouveau il y en a 3.
 La probabilité de gagner deux fois à ce jeu est donc $P(X = 2) = 3 \times \left(\dfrac{1}{4}\right)^2 \times \dfrac{3}{4} = \dfrac{9}{64}$.
 
 
-### 4. Combinaisons 
-
-On note $\binom{n}{k}$ le nombre de branches menant à $k$ succès dans un arbre probabilisé représentant un schéma de Bernoulli avec $n$ répétitions.
-
-Ce nombre est appelé "Combinaisons de $k$ parmi $n$".
-
-Dans les exemples précédents on a vu que $\binom{3}{0} = 1, \binom{3}{1} = 3, \binom{3}{2} = 3, \binom{3}{3} = 1$
-
-#### Propriétés
-
-* $\binom{n}{0} = \binom{n}{n} = 1$ : il y a toujours 1 seul chemin qui mène à 0 succès ou à $n$ succès.
-*  $\binom{n}{1} = \binom{n}{n - 1} = n$ : il y a toujours n chemins qui mènent à $1$ succès ou à $n - 1$ succès.
-
-
-### 5. Calculatrice et tableur
+### 4. Calculatrice et tableur
 
 #### Numworks
 
@@ -195,7 +181,7 @@ C'est le menu pour calculer $P(X = k)$ saisir **$5$**.
 
 On lit que $P(X=5) \approx 0.103$.
 
-### 6. Allure de la loi binomiale
+### 5. Allure de la loi binomiale
 
 On peut remarquer quelques propriétés de la figure figure précédentes, elles sont vraies pour toutes les 
 loi binomiales.
@@ -206,7 +192,7 @@ Voici par exemple ce qu'on obtient pour $n=100$ et $p=0.3$.
 $\quad$![Loi binomiale : la courbe en cloche](./numworks_2.png)
 
 * On reconnait une _cloche_ (ça monte et ça descend)
-* Les "valeurs centrales" ont une probabilité plus élevées que les valeurs extrèmes.
+* Les "valeurs centrales" ont une probabilité plus élevées que les valeurs extrêmes.
     Intuitivement, lorsqu'on fait 100 parties de pile ou face, il est plus probable d'obtenir 50 piles que 0 pile.
 
 Essayez d'autres valeurs de $p$ avec $n=100$.
@@ -257,3 +243,84 @@ Soit $X$ la variable aléatoire comptant les bonnes réponses. Elle suit une loi
 et $p=0.25$.
 
 Son espérance est $E(X) = 10 \times 0.25 = 2.5$. On peut espérer 2.5 points en moyenne.
+
+---
+
+## 3. Coefficients binomiaux
+
+
+### 1. Combinaisons 
+
+#### Définition
+
+On note $\binom{n}{k}$ le nombre de branches menant à $k$ succès dans un arbre probabilisé représentant un schéma de Bernoulli avec $n$ répétitions.
+
+Ce nombre est appelé "Combinaisons de $k$ parmi $n$".
+
+#### Exemple
+
+Dans les exemples précédents on a vu que $\binom{3}{0} = 1, \binom{3}{1} = 3, \binom{3}{2} = 3, \binom{3}{3} = 1$
+
+### Propriétés
+
+* $\binom{n}{0} = \binom{n}{n} = 1$ : il y a toujours 1 seul chemin qui mène à 0 succès ou à $n$ succès.
+* $\binom{n}{1} = \binom{n}{n - 1} = n$ : il y a toujours n chemins qui mènent à $1$ succès ou à $n - 1$ succès.
+
+#### Calculatrice Numworks
+
+Menu **calculs**, touche **paste**, choisir **probabilités**, puis **Dénombrement**, $\binom{n}{k}$
+
+### 2. Triangle de Pascal
+
+On peut représenter les coefficients binomiaux d'une manière pratique et qui permet de les retrouver facilement.
+
+![Triangle de Pascal](./triangle_pascal.svg)
+
+En _ligne_, les valeurs de $n$, en _colonne_ celles de $k$.
+
+On remarque que $20 + 15 = 35$ soit  $\binom{6}{3} + \binom{6}{4} = \binom{7}{4}$.
+
+Cette propriété est vraie pour tout $n$ et tout $k$, à condition de supposer que les cases vides valent 0.
+
+#### Propriété du triangle de Pascal
+
+$$\text{Pour tout } n \text{ et tout } k \leq n, \text{ on a } \binom{n}{k} + \binom{n}{k + 1} = \binom{n+1}{k+1}$$
+
+### 3. Calculer une probabilité de la loi binomiale
+
+On peut maintenant citer la formule générale :
+
+#### Propriété
+
+Soit une variable aléatoire $X$ qui suit une loi binomiale $B(n, p)$, on a :
+
+$$P(X=k) = \binom{n}{k} p^k (1-p)^{n - k}$$
+
+#### Exemple
+
+On considère une urne contenant 5 boules blanches et 3 boules noires.
+L'expérience consiste à prélever une boule, examiner sa couleur _et la remettre dans l'urne_.
+
+On répète cette expérience 6 fois.
+
+Calculer la probabilité d'avoir exactement 4 boules blanches.
+
+**Réponse**
+
+Notons $X$ la variable aléatoire qui compte le nombre de boules blanches.
+La probabilité d'un succès est $\dfrac{5}{8}$.
+
+L'expérience étant un schéma de Bernouilli, $X$ suit une loi binomiale $B\left(6, \dfrac{5}{8}\right)$.
+
+La probabilité d'avoir 4 boules blanches est :
+
+$$P(X=4) = \binom{6}{4} \left(\dfrac{5}{8}\right)^4\left(1 - \dfrac{5}{8}\right)^{6-4}$$
+$$P(X=4) = \binom{6}{4} \left(\dfrac{5}{8}\right)^4\left(\dfrac{3}{8}\right)^{2}$$
+
+
+D'après le triangle de Pascal donné plus haut, $\binom{6}{4} = 15$, donc
+
+$$P(X=4) = 15 \left(\dfrac{5}{8}\right)^4\left(\dfrac{3}{8}\right)^{2} = \dfrac{84~375}{262~144} \approx 0.322$$
+
+
+
