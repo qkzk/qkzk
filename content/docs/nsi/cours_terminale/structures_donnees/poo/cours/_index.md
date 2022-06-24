@@ -179,24 +179,64 @@ class Combattant:
 
 ### Commentaires sur le code de la classe.
 
-* Ligne 1. On utilise une majuscule pour un nom de classe.
+*   Ligne 1. 
+
+    ```python
+    class Combattant:
+    ```
+    
+    On utilise une majuscule pour un nom de classe. 
 * Lignes 2 à 15. La définition de la classe se termine quand on revient à 
     l'indentation de départ.
+
+    ```python
+    class Combattant:
+        # définition de la classe
+
+    # fin de la définition de la classe
+    ```
 * Ligne 3, ligne 8, ligne 15. définition d'une _méthode_
+
+    ```python
+    class Combattant:
+        def __init__(self, vie, attaque):
+            pass
+
+        def perdre_vie(self, points):
+            pass
+
+        def attaque(self, autre):
+            pass
+    ```
 * La variable `self` est toujours le premier paramètre d'une méthode.
-    Il désigne l'objet lui même.
+    Il désigne **l'objet lui même.**
 * Ligne 4, 5, 6 : des _attributs_.
+
+    ```python
+    class Combattant:
+        
+        def __init__(self, vie, attaque):
+            self.vie = vie          # attribut 
+            self.attaque = attaque  # attribut
+            self.vivant = True      # attribut
+    ```
 * Ligne 4 à 6, ligne 9 : _dans_ la classe on utilise `self.qqchose`
     pour accéder à un attribut ou une méthode.
+
+    ```python
+    class Combattant:
+        ...
+        
+        def perdre_vie(self, points):
+            self.vie = self.vie - points # on accède à un attribut
+            ...
+    ```
 * La méthode `__init__` est appelée "constructeur", c'est elle qui est exécutée
     quand vous exécutez l'instruction `Combattant(10, 2)`.
     Elle crée un objet du type `Combattant`
 
-**Attention !** Python n'impose pas le nom `self`... ce n'est qu'un _usage_.\
-Cependant, _je vous l'impose._ Si vous écrivez autre chose que `self` :
-
-1. personne ne comprendra,
-2. vous aurez 0 à l'exo.
+#### Attention !
+Python n'impose pas le nom `self`... ce n'est qu'un _usage que tout le monde respecte_ et que j'impose.
 
 ## Utilisation de la classe `Combattant`
 
@@ -268,7 +308,7 @@ Elle exécute une méthode de cet objet (`autre.perdre_vie(...)`) ,
 c'est un _message_ !
 
 Ce n'est pas le seul usage envisageable de la méthode `perdre_vie`,
-plus tard dans le développement du jeu, on peut imaginer qu'un Combattant
+plus tard dans le développement du jeu, on peut imaginer qu'un `Combattant`
 perde de la vie en marchant dans la lave ou sur un piège...
 
 ## Interface
@@ -388,7 +428,9 @@ classe
 
   un attribut existe parce qu'il permet l'implémentation d'une méthode
 
-## exemple : les disques
+## Différentes implantations résolvant un même problème
+
+### Exemple : les disques
 
 On doit représenter des **disques**.
 On a besoin de connaître le rayon, diamètre, aire, périmètre.
@@ -402,7 +444,7 @@ On a besoin de connaître le rayon, diamètre, aire, périmètre.
 
 ---
 
-### implémentation avec "rayon"
+### Implémentation avec "rayon"
 
 ```python
 class Disque:
@@ -438,7 +480,7 @@ class Disque:
 
 ## Qu'est ce qui change ?
 
-*   Pour le **développeur**, s'il défini ses disques avec le diamètre,
+*   Pour le **développeur**, s'il définit ses disques avec le diamètre,
     le constructeur et les méthodes changent.
 
 
@@ -676,7 +718,60 @@ class Vecteur:
 * permet de créer des objets répondant à des contraintes
   succeptibles _d'évoluer_...\
     donc de _maintenir_ du code.
-* J'ai des sources si ça vous intéresse.
+* Un [exemple](./polymorphisme.py) si ça vous intéresse.
+
+    
+{{< expand  "Héritage" "..." >}}
+```python
+class Animal:
+    """
+    Classe de base `Animal` dont les autres animaux héritent.
+    """
+
+    def __init__(self, name):
+        self.name = name
+
+    def info(self):
+        """Affiche une description générique"""
+        print(f"je suis {self.name}")
+
+    def move(self):
+        """Affiche une action"""
+        print("je bouge ...")
+
+
+class Cat(Animal):
+    """
+    `Cat` hérite de `Animal`
+
+    Dispose d'un constructeur particulier :
+    """
+
+    def __init__(self, name: str, age: int, taille: int):
+        # on appelle le constructeur de la classe parente avec les parmaètres par défaut
+        super().__init__(name)
+
+        self.age = age
+        self.taille = taille
+
+    def info(self):
+        """Redéfinition de la méthode."""
+        print("je suis {self.name}")
+        print(f" age {self.age}")
+        print(f" taille {self.taille}")
+
+
+def exemple():
+    tom = Cat("Tom", 3, 20)
+    # C'est la méthode de `Cat` qui est appelée
+    tom.info()
+    # Les instances de Cat disposent aussi de la méthode move
+    tom.move()
+
+
+exemple()
+```
+{{< /expand >}}
 
 En pratique... en Python, toutes les classes héritent de `object` qui
 est un format général de classe.
