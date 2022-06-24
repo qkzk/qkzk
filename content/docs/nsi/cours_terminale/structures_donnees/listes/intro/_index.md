@@ -3,6 +3,7 @@ title: introduction
 bookCollapseSection: true
 author: qkzk
 weight: 1
+
 ---
 
 <!-- compile print with: pandoc -t beamer --slide-level=2 intro.md -o listes_intro_slides.pdf -->
@@ -94,37 +95,39 @@ Les listes peuvent donc être vues comme _des structures de données récursives
 
 : Les _opérations primitives_ d'une structure de donnée sont les opérations minimales qui permettent de définir la structure et de lui donner les méthodes attendues.
 
-### Primitives sur les listes
+### Constructeur
 
-Constructeur. Une liste est
+Une liste est :
 
 * soit la liste vide,
 * soit un couple constitué de l'élément de tête suivi de la liste des éléments qui suivent.
 
 _Le constructeur de liste doit donc permettre de produire soit une liste vide et pour cela aucun argument n'est nécessaire, soit une liste à partir de deux arguments._
 
-### Primitives sur les listes
+### Sélecteurs
 
-Sélecteurs.
 
 * Les listes non vides possèdent une tête et un reste.
 
 _Il nous faut les sélecteurs pour accéder à ces deux composantes._
 
-Prédicat
+### Prédicat
 
 * Un prédicat testant si une liste est vide est utile.
 
 _**Prédicat** : une question dont la réponse est un _booléen_ (V/F)_
 
 
-### Résumé des primitives
+### **Résumé des primitives**
 
+
+{{< hint info >}}
 Une structure de donnée **liste** doit implémenter :
 
 1. **La construction** à partir d'une liste vide ou à partir d'un couple tête (élément) et reste (liste).
 2. **La sélection** de l'élément de tête ou du reste.
 3. **Prédicat.** on doit pouvoir répondre à la question : "_cette liste est-elle vide ?_"
+{{< /hint >}}
 
 ## Liste vs tableaux
 
@@ -269,6 +272,40 @@ False
 >>> l.est_vide()
 True
 ```
+
+
+{{< expand  "Version complète, pour l'instant" "..." >}}
+
+```python
+class Liste:
+    def __init__(self, *args):
+        if len(args) == 0:
+            self.__tete = None
+            self.__queue = None
+        else:
+            self.__tete = args[0]
+            self.__queue = args[1]
+
+    def tete(self):
+        return self.__tete
+
+    def queue(self):
+        return self.__queue
+
+    def est_vide(self):
+        return self.__tete is None and self.__queue is None
+
+def test():
+    e = Liste()
+    assert e.est_vide()
+    d = Liste("d", e)
+    assert not d.est_vide()
+    assert d.tete() == "d"
+    assert d.queue() is e
+
+test()
+```
+{{< /expand >}}
 
 ## Méthodes utiles
 
