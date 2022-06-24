@@ -69,7 +69,7 @@ On peut ajouter d'autres manipulations, en particulier :
 
 Notons que Python propose toutes ces opérations avec le type `dict`.
 
-Un exemple en programme les illustrant toutes et indiquant à quelle méthode 
+Un exemple de programme les illustrant toutes et indiquant à quelle méthode 
 magique ils correspondent est disponible en fin de document.
 
 ## 5. Implantation
@@ -147,6 +147,133 @@ comme approfondissement.
 
 Les [sources](/uploads/docnsitale/dictionnaire/code/dictionnaire_hash.py)
 
+{{< expand "sources" "..." >}}
+```python
+'''
+Implantation des dictionnaires en utilisant une table de hachage.
+
+Objectif : accès aux valeurs en temps constant
+
+On se limitera (pour l'instant) à 1024 éléments
+'''
+
+
+class DictionnaireHash:
+    '''Implantation des dictionnaires utilisant une table de hachage'''
+
+    TAILLE_MAX = 1024
+
+    def __init__(self, collection=None):
+        self.__cles_valeurs = [None] * self.TAILLE_MAX
+        self.__longueur = 0
+        if collection is not None:
+            for cle, valeur in collection:
+                self[cle] = valeur
+
+    def __calculer_indice(self, cle):
+        '''calcule l'indice d'un élément dans la liste `__cles_valeurs`'''
+        return hash(cle) % self.TAILLE_MAX
+
+    def est_vide(self):
+        '''prédicat vrai ssi le dictionnaire est vide'''
+        return len(self) == 0
+
+    def __setitem__(self, cle, valeur):
+        '''permet d'ajouter un élément avec 'd[cle] = valeur' '''
+        indice = self.__calculer_indice(cle)
+        self.__cles_valeurs[indice] = (cle, valeur)
+        self.__longueur += 1
+
+    def __getitem__(self, cle):
+        '''permet d'accéder à un élément avec 'd[cle]' -> 'valeur' '''
+        indice = self.__calculer_indice(cle)
+        contenu = self.__cles_valeurs[indice]
+        if contenu is not None:
+            return contenu[1]
+        raise KeyError(cle)
+
+    def __repr__(self) -> str:
+        '''renvoie une chaîne présentant le dictionnaire'''
+        if self.est_vide():
+            return 'DictionnaireHash()'
+        elems = tuple((elt for elt in self.__cles_valeurs if elt is not None))
+        return f'DictionnaireHash({elems})'
+
+    def __iter__(self):
+        '''permet d'itérer avec 'for cle in d' '''
+        for elt in self.__cles_valeurs:
+            if elt is not None:
+                yield elt[0]
+
+    def __delitem__(self, cle_recherchee):
+        '''permet d'effacer une paire avec 'del d[cle] ' '''
+        if self[cle_recherchee] is not None:
+            indice = self.__calculer_indice(cle_recherchee)
+            self.__cles_valeurs[indice] = None
+            self.__longueur -= 1
+
+    def values(self):
+        '''renvoie un iterateur des valeurs'''
+        return (elt[1] for elt in self.__cles_valeurs if elt is not None)
+
+    def keys(self):
+        '''renvoie un itérateur des clé'''
+        return (elt[0] for elt in self.__cles_valeurs if elt is not None)
+
+    def items(self):
+        '''renvoie un itérateur des couples (clé, valeur)'''
+        return (elt for elt in self.__cles_valeurs if elt is not None)
+
+    def clear(self):
+        '''vide le dictionnaire'''
+        self.__longueur = 0
+        self.__cles_valeurs = [None] * 1024
+
+    def copy(self):
+        '''retourne une copie du dictionnaire'''
+        items = [elt for elt in self.__cles_valeurs if elt is not None]
+        return DictionnaireHash(items)
+
+    def get(self, cle):
+        '''retourne la valeur de la clé si elle est contenue, None sinon'''
+        return self[cle] if cle in self else None
+
+    def __len__(self) -> int:
+        '''renvoie la longueur du dictionnaire avec 'len(d)' '''
+        return self.__longueur
+
+
+def tester():
+    d = DictionnaireHash()
+    assert len(d) == 0
+    d[1] = 2
+    assert len(d) == 1
+    assert d[1] == 2
+    e = DictionnaireHash(((1, 2), (3, 4)))
+    assert e[1] == 2
+    assert e[3] == 4
+    assert repr(e) == 'DictionnaireHash(((1, 2), (3, 4)))'
+    assert len(e) == 2
+    assert [(k, e[k]) for k in e] == [(1, 2), (3, 4)]
+    assert [v for v in e.values()] == [2, 4]
+    assert 1 in d
+    del d[1]
+    assert 1 not in d
+    e.clear()
+    assert len(e) == 0
+    e = DictionnaireHash(((1, 2), (3, 4)))
+    f = e.copy()
+    assert repr(f) == 'DictionnaireHash(((1, 2), (3, 4)))'
+    e[1] = 5
+    assert repr(e) == 'DictionnaireHash(((1, 5), (3, 4)))'
+    assert e.get(7) is None
+
+
+if __name__ == "__main__":
+    tester()
+```
+{{< /expand >}}
+
 ### 4. Le type `dict`
 
 Python propose le type `dict` qui implémante tout ce qu'on peut attendre
@@ -154,6 +281,99 @@ d'une table de hachage. Il utilise la fonction native `hash` qui accepte
 en paramètre tout objet non mutable et renvoie un entier.
 
 [Ici](/uploads/docnsitale/dictionnaire/code/dict_python.py) un petit rappel de la syntaxe.
+
+
+{{< expand  "Rappels sur les dict" "..." >}}
+```python
+__doc__ = '''
+Dictionnaire en Python
+
+Que peut-on faire avec un dictionnaire ?
+'''
+
+# 1. Créer un dictionnaire :
+
+# vide
+
+d1 = {}
+d2 = dict()
+
+# Avec des clés et valeurs
+
+d3 = {'cle': 'valeur'}
+# avec le nom de la classe, on doit passer un tuple contenant des tuples
+d4 = dict((('cle1', 'valeur1'), ('cle2', 'valeur2')))
+
+assert d4['cle1'] == 'valeur1'
+assert d4['cle2'] == 'valeur2'
+
+# 2. Accéder à un élément
+
+assert d3['cle'] == 'valeur'
+assert d3.get('cle') == 'valeur'
+# si la clé n'est pas présente, la méthode get renvoie None
+assert d3.get('bonjour') is None
+
+try:
+    d3["bonjour"]
+except KeyError as e:
+    # si la clé n'est pas présente, la notation d[cle] lève une exception KeyError"
+    pass
+
+# 3. ajouter un élément
+
+d3["bonjour"] = "aurevoir"
+
+# la notation d[cle] = valeur appelle la méthode d.__setitem__(cle, valeur)
+d3.__setitem__("1", "2")
+
+assert d3["bonjour"] == "aurevoir"
+# la notation d[cle] appelle d.__getitem__(cle)
+assert d3.__getitem__("1") == "2"
+
+# itérer sans préciser : sur les clés
+print()
+for cle in d3:
+    print("clé:", cle, " - valeur: ", d3[cle])
+
+# itérer sur les clés
+print()
+for cle in d3.keys():
+    print("clé:", cle, " - valeur: ", d3[cle])
+
+# itérer sur les valeurs
+print()
+for valeur in d3.values():
+    print("valeur: ", valeur)
+
+# itérer sur les couples clés, valeurs
+print()
+for cle, valeur in d3.items():
+    print("clé:", cle, " - valeur: ", valeur)
+
+# 4. Contient
+
+assert "1" in d3
+assert not 1 in d3
+
+# 5. Longueur, comparaison
+
+assert len(d4) == 2
+assert d4 == {'cle1': 'valeur1', 'cle2': 'valeur2'}
+
+# 6. Nettoyer, copier
+
+d4.clear()  # vide le dictionnaire
+assert d4 == {}
+
+d5 = d3.copy()
+
+assert d3 == d5      # ils contiennent les mêmes éléments...
+assert d3 is not d5  # mais sont des objets différents en mémoire
+
+print("d3 et d5 sont des objets différents", id(d3), id(d5))
+```
+{{< /expand >}}
 
 # Compléments (hors programme) sur les fonctions de hachage
 
