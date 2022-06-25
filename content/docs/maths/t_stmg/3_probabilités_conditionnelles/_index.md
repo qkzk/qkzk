@@ -13,6 +13,7 @@ weight: 3
 
 ## 1. Rappels sur les probabilités
 
+{{< hint warning >}}
 Lorsqu'on rencontre un phénomène _aléatoire_ (appelé _expérience_) on définit des _événéments_ (ensembles de _résultats possibles_).
 
 On mesure la _probabilité_ d'un événement comme étant la chance qu'il se réalise.
@@ -22,16 +23,19 @@ Si tous les résultats ont la même probabilité d'apparaître (_équiprobabilit
 
 * Les probabilités sont comprises entre 0 et 1.
 * Le complémentaire de $A$, noté $\bar{A}$ vérifie $P(\bar{A}) = 1 - P(A)$.
+{{< /hint >}}
 
 ---
 
 ## 2. Notion de probabilité conditionnelle
 
 #### Définition 
+{{< hint info >}}
 Soit $A$ et $B$ deux événements avec $P(A) \neq 0$.
 On appelle **probabilité conditionnelle** de $B$ sachant $A$ la probabilité que l'événement $B$
 se réalise sachant que l'événement $A$ est réalisé. Elle est notée $P_A(B)$ et est définie par : 
 $$P_A(B) = \dfrac{P(A \cap B)}{P(B)}$$
+{{< /hint >}}
 
 
 #### Exemple
@@ -73,7 +77,9 @@ $$P_V(R) = \dfrac{P(R \cap V)}{P(R)} = \dfrac{\frac{1}{6}}{\frac{2}{3}} = \frac{
 
 #### Propriété
 
+{{< hint info >}}
 Si $P(A) \neq 0$ alors $P(A \cap B) = P(A) P_A(B)$
+{{< /hint >}}
 
 ---
 
@@ -83,7 +89,9 @@ Si $P(A) \neq 0$ alors $P(A \cap B) = P(A) P_A(B)$
 
 En reprenant l'exemple précédent, qu'on peut résumer ainsi :
 
+{{< hint warning >}}
 ![Arbre probabilisé](./arbre1.svg)
+{{< /hint >}}
 
 #### Propriété
 
@@ -102,15 +110,19 @@ Par exemple, en partant du noeud $N$ on a $P_N(V) + P_N(P) = \dfrac{2}{3} + \dfr
 
 #### Propriété
 
+{{< hint info >}}
 La probabilité d'une feuille (extrémité d'un chemin) est égale au produit des probabilités des branches menant à cette feuille.
+{{< /hint >}}
 
 Ainsi, $P(N \cap V) = \dfrac{2}{3} \times \dfrac{2}{3} = \dfrac{4}{9}$.
 
 
 #### Formule des probabilités totales
 
+{{< hint info >}}
 La probabilité d'un événement apparaissant dans plusieurs feuilles est la somme des probabilités
 de ces feuilles.
+{{< /hint >}}
 
 Par exemple, $P(P) = P(R \cap P) + P(N \cap P) = \dfrac{1}{3} \times \dfrac{1}{2} + \dfrac{2}{3} \times \dfrac{1}{3} = \dfrac{1}{6} + \dfrac{2}{9} = \dfrac{7}{18}$
 
@@ -126,7 +138,9 @@ _L'indépendance est une notion fondamentale qui permet de simplifier des situat
 
 ### Définition
 
+{{< hint info >}}
 Deux événements $A$ et $B$ de probabilité non nulle sont _indépendants_ si $P_A(B) = P(B)$.
+{{< /hint >}}
 
 Réciproquement, $A$ et $B$ sont _indépendants_ si $P_B(A) = P(A)$.
 
@@ -173,8 +187,10 @@ $\dfrac{3}{31} \neq \dfrac{1}{8}$ donc les événements $A$ et $P$ ne sont pas i
 
 #### Indépendance $\neq$ incompatible
 
+{{< hint warning >}}
 * indépendant = pas d'influence : $P(A \cap B) = P(A) \times P(B)$
 * incompatible = l'intersection est impossible : $P(A \cap B) = 0$
+{{< /hint >}}
 
 Par exemple, les événements "j'arrive à l'heure" et "mon reveil n'a pas sonné" sont _incompatibles_. 
 

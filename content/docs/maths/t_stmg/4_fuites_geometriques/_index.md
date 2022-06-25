@@ -12,15 +12,20 @@ weight: 4
 
 ## 1. Termes consécutifs 
 
+{{< hint warning >}}
  $2, 8, 32$ sont-ils trois termes consécutifs d'une suite géométrique ?
 
  Pour répondre on calcule les quotients $\dfrac{8}{2} = 4$ et $\dfrac{32}{8} = 4$. La réponse est oui, ce sont trois termes consécutifs d'une suite géométrique de raison $q = 4$.
 
  ![3 termes en progression géométrique](./ex1.svg)
+{{< /hint >}}
 
+
+{{< hint warning >}}
  Lorsque ces quotients sont différents (comme pour 2, 8 et 16) alors ce ne sont pas trois termes consécutifs d'une suite géométrique.
 
  ![3 termes qui ne progressent pas géométriquement](./ex2.svg)
+{{< /hint >}}
 
 ---
 
@@ -28,7 +33,9 @@ weight: 4
 
 ### Définition
 
+{{< hint info >}}
 Une suite $(v_n)$ vérifiant $v_{n+1} = q v_{n}$ est géométrique de raison $q$.
+{{< /hint >}}
 
 La raison doit être _constante_ (indépendante de $n$).
 
@@ -36,7 +43,9 @@ La raison doit être _constante_ (indépendante de $n$).
 
 On l'a vu, pour démontrer qu'une suite _n'est pas géométrique_, il suffit de le vérifier sur trois termes.
 
+{{< hint danger >}}
 Mais pour **démontrer qu'une suite est géométrique, il faut le faire pour tous les termes**.
+{{< /hint >}}
 
 Considérons $v_n = 7 \times 4^n$. Prouvons qu'elle est géométrique.
 
@@ -53,13 +62,17 @@ $(v_n)$ est une suite géométrique de raison $4$.
 
 ### Formule explicite
 
+{{< hint info >}}
 Si $(v_n)$ est une suite géométrique de raison $q$ alors, pour tout $n \in \mathbb{N}$, on a : $v_n = v_0 q^n$.
+{{< /hint >}}
 
 Par exemple, si $v_{n+1} = 0.5 v_n$ et $v_0=17$, on a $v_n = 17 \times 0.5^n$.
 
 #### Réciproque
 
+{{< hint info >}}
 Toute suite donc le terme général s'écrit sous la forme $v_n = v_0 q^n$ est géométrique de raison $q$.
+{{< /hint >}}
 
 #### Exemple
 
@@ -85,6 +98,7 @@ Facile !
 
 _Lorsqu'on représente une suite on place en abscisse (horizontal) les indices et en ordonnée (vertical) les valeurs._
 
+{{< hint warning >}}
 #### Représenter une suite sur la Numworks
 
 
@@ -95,6 +109,7 @@ Menu **Suites**, ajouter une suite, **Récurrente d'ordre 1**, $u_{n+1} = 1.6 \t
 ![Progression géométrique vers l'infini](./numworks_1.png)
 
 Lorsqu'on trace les termes d'une suite géométrique on remarque une _progression exponentielle_.
+{{< /hint >}}
 
 
 #### Cas d'une raison entre 0 et 1
@@ -128,9 +143,11 @@ Si $(v_n)$ est géométrique de raison $q$ et de premier terme $v_0$
 
 #### Propriété
 
+{{< hint info >}}
 La somme $S_n$ des termes consécutifs d'une suite géométrique 
 
 $$S_n = v_0 + v_1 + \cdots + v_n = \sum_{k=0}^n v_k = v_0 \dfrac{1 - q^{n+1}}{1-q}$$
+{{< /hint >}}
 
 #### Exemples
 
@@ -167,9 +184,11 @@ $$S_n = v_0 + v_1 + \cdots + v_n = \sum_{k=0}^n v_k = v_0 \dfrac{1 - q^{n+1}}{1-
 
 On reprend le dernier exemple :
 
+{{< hint warning >}}
 Menu **Calculs**, touche **Paste**, choisir **Analyse** puis **Somme** et saisir :
 
 ![Somme des termes sur la numworks](./numworks_4.png)
+{{< /hint >}}
 
 
 ---

@@ -15,7 +15,9 @@ weight: 2
 
 #### Définition
 
+{{< hint info >}}
 La fonction inverse est définie sur $\mathbb{R} \setminus \{0\}$ par $f(x) = \dfrac{1}{x}$.
+{{< /hint >}}
 
 #### Valeurs
 
@@ -23,9 +25,11 @@ La fonction inverse est définie sur $\mathbb{R} \setminus \{0\}$ par $f(x) = \d
 |----------------|------|----|------|---|-----|---|-----|
 | $\dfrac{1}{x}$ | -0.5 | -1 | 2    | x | 2   | 1 | 0.5 |
 
+{{< hint info >}}
 #### Représentation graphique
 
 ![L'hyperbole de la fonction inverse](./img/inverse.svg)
+{{< /hint >}}
 
 Le graphe de la fonction inverse est une _hyperbole_ de centre $O$, symétrique par rapport à l'origine.
 
@@ -33,7 +37,9 @@ Le graphe de la fonction inverse est une _hyperbole_ de centre $O$, symétrique 
 
 #### Dérivée
 
+{{< hint info >}}
 La fonction dérivée de la fonction inverse : $\left( \dfrac{1}{x} \right)' = -\dfrac{1}{x^2}$
+{{< /hint >}}
 
 #### Démonstration
 
@@ -92,17 +98,21 @@ Soit $f(x) = 3 - 4x - \dfrac{1}{x}$ définie sur $\mathbb{R} \setminus \{0\}$.
 
 ### Formules de dérivation
 
+{{< hint info >}}
 | Formule                       | Dérivée        |
 |-------------------------------|----------------|
 | Somme                         | $(f+g)'=f'+g'$ |
 | Produit par une constante $k$ | $(k f)'=k f'$  |
+{{< /hint >}}
 
+{{< hint info >}}
 | Fonction   $f$ | Dérivée $f'$ |
 |----------------|--------------|
 | $a$, constant  | 0            |
 | $x$            | 1            |
 | $x^2$          | $2x$         |
 | $x^3$          | $3x^2$       |
+{{< /hint >}}
 
 1. On applique la formule et :
 

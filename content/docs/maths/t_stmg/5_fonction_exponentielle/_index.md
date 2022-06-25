@@ -24,7 +24,9 @@ On peut ainsi donner une image à des nombres non entiers comme 3.5.
 
 #### Définition
 
-La fonction $f,$ définie sur $\mathbb{R}$ avec $a>0$ est la **fonction exponentielle de base $a$**.
+{{< hint info >}}
+La fonction $f,$ définie sur $\mathbb{R}$ avec $a>0$ par $f(x) = a^x$ est la **fonction exponentielle de base $a$**.
+{{< /hint >}}
 
 #### Exemple
 
@@ -35,6 +37,7 @@ La fonction exponentielle de base 2 est définie par $f(x)=2^x$.
 #### Propriétés algébriques
 
 
+{{< hint warning >}}
 * La fonction exponentielle de base $a$ est toujours positive.
 
 * Pour tout $x$ dans $\mathbb{R}$, $a^{-x}=\dfrac{1}{a^x}$.
@@ -42,18 +45,23 @@ La fonction exponentielle de base 2 est définie par $f(x)=2^x$.
 * $a^{x+y} = a^x \times a^y$
 * $a^{x-y} = \dfrac{a^x}{a^y}$
 * $(a^{x})^y = a^{xy}$
+{{< /hint >}}
 
 ---
 
 ## 2. Variations
 
+{{< hint info >}}
 ##### Si $0 < a < 1$, $x \mapsto a^x$ est décroissante sur $\mathbb{R}$
 
 ![Expo. décroissante](numworks_2.png)
+{{< /hint >}}
 
+{{< hint info >}}
 ##### Si $a > 1$, $x \mapsto a^x$ est croissante sur $\mathbb{R}$
 
 ![Expo. croissante](numworks_1.png)
+{{< /hint >}}
 
 ---
 
@@ -62,18 +70,18 @@ La fonction exponentielle de base 2 est définie par $f(x)=2^x$.
 
 #### Hz. capitale du monde
 
-La population d'Hz. cesse de croitre ! L'attrait indéniable de son lycée
+La population d'Hz. ne cesse de croitre ! La qualité indéniable de son lycée
 en fait une des villes les plus attractives du monde.
 
 Suite à des relevés très précis, le maire décide de modéliser la population
 d'Hz. avec la fonction exponentielle $f(x) = 30000 \times 1.3^x$ où $x$ est
 le nombre d'année après 2020.
 
-1. Quel est le sens de variation de la population d'apèrs ce modèle ?
+1. Quel est le sens de variation de la population d'après ce modèle ?
 1. Calculer la population d'Hz. en 2021, en 2022
 2. Calculer les valeurs successives jusqu'à dépasser $100~000$ habitants puis $1~000~000$
 
-Hz. en force !
+Répondons :
 
 
 1. La fonction exponentielle de base 1.3 est croissante, multiplier par $30~000$ ne change

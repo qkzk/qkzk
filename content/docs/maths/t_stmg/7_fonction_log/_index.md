@@ -25,35 +25,45 @@ Cette solution se note $\log b$.
 
 #### Définition
 
+{{< hint info >}}
 On appelle **logarithme décimal** d'un réel strictement positif $b$, l'unique solution de l'équation $10^x=b$.
 
 On la note $\log b$.
 
 La **fonction logarithme décimal** est définie sur $]0;+\infty[.$
+{{< /hint >}}
 
 #### Propriétés
 
+{{< hint info >}}
 1. Pour tout $b > 0$, $10^x=b \Longleftrightarrow x = \log b$
 2. $\log 10^x = x$
 3. $10^{\log x} = x,$ pour tout $x > 0$
+{{< /hint >}}
 
 ---
 
 ## 2. Représentation graphique
 
+{{< hint info >}}
 La fonction logarithme décimal est croissante sur $]0; +\infty[$
 
 ![Le logarithme décimal](./logarithme.svg)
+{{< /hint >}}
 
 #### Valeurs remarquables
 
+{{< hint info >}}
 $\log 1 = 0$, $\log 10 = 1$, $\log \dfrac{1}{10}=-1$
+{{< /hint >}}
 
 ## 3. Propriétés algébriques
 
 #### Le logarithme transforme les produits en somme
 
+{{< hint info >}}
 Pour tout $a > 0$ et $b > 0$ on a : $\log(ab)=\log(a) + \log(b)$
+{{< /hint >}}
 
 #### Exemple
 
@@ -65,7 +75,9 @@ $$A = \log\left( 2^2 -\sqrt{2}^2  \right) = \log(4 - 2) = \log(2)$$
 
 #### Le logarithme transforme les quotients en soustraction
 
+{{< hint info >}}
 Pour tout $a > 0$ et $b > 0$ on a : $\log\left(\dfrac{a}{b}\right) = \log(a) - \log(b)$
+{{< /hint >}}
 
 #### Exemple
 
@@ -75,7 +87,9 @@ $$B = \log(50) - \log(10) = \log\left( \dfrac{50}{10} \right) = \log\left( 5 \ri
 
 #### Le Logarithme "sort" les puissances
 
+{{< hint info >}}
 Pour tout $a > 0$ et $n \in \mathbb{R}$, on a $\log (a^n) = n \log (a)$
+{{< /hint >}}
 
 #### Exemple
 

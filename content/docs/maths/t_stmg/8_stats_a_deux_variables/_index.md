@@ -13,14 +13,20 @@ weight: 8
 
 ## 1. Nuage de points
 
+{{< hint info >}}
 Une **série statistique** est composée de plusieurs valeurs similaires. Lorsque ces valeurs sont des _paires
 de nombres_ on parle de série à **deux variables**.
+{{< /hint >}}
 
+{{< hint info >}}
 On représente alors graphiquement ces valeurs en traçant **un nuage de points**.
+{{< /hint >}}
 
 #### Définition
 
+{{< hint info >}}
 On appelle nuage de points, l'ensemble des points $M_i$ de coordonnées $(x_i;y_i)$. 
+{{< /hint >}}
 
 #### Exemple
 
@@ -40,11 +46,13 @@ On représente le nuage de points en prenant en $x$ les années et en $y$ les d�
 
 #### Point moyen
 
+{{< hint info >}}
 Soit une série statistique à deux variables $x$ et $y$ de moyennes $\bar{x}$ et $\bar{y}$. 
 
 Le point $G$ de coordonnées $(\bar{x};\bar{y})$ avec 
 $$\bar{x}=\frac{1}{n}\sum_{i=1}^{n}{x_i} \quad\text{ et }\quad \bar{y}=\frac{1}{n}\sum_{i=1}^{n}{y_i}$$ 
 est appelé le \emph{point moyen} du nuage.
+{{< /hint >}}
 
 #### Exemple
 
@@ -58,6 +66,7 @@ Donc le point moyen est $G(1995, 18)$.
 
 
 ![Point moyen](./fig_2.svg)
+
 ---
 
 
@@ -65,12 +74,16 @@ Donc le point moyen est $G(1995, 18)$.
 
 #### Droite d'ajustement
 
+{{< hint info >}}
 Toute droite passant par le point moyen du nuage et "résumant approximativement" le nuage est appelée 
 _droite d'ajustement_ du nuage de points.
+{{< /hint >}}
 
 ### 1. Au jugé
 
+{{< hint warning >}}
 On trace "au jugé" une droite passant par le point moyen du nuage qui semble résumer le nuage de points. C'est une méthode simple mais qui dépend de la droite tracée.
+{{< /hint >}}
 
 
 
@@ -78,10 +91,12 @@ On trace "au jugé" une droite passant par le point moyen du nuage qui semble r�
 
 ### 2. Interpolation et extrapolation
 
+{{< hint warning >}}
 En utilisant une droite d'ajustement on peut prédire des valeurs manquantes.
 
 * Lorsque la valeur à prédire est _entre_ les valeurs extrèmes, on parle d'_interpolation_
 * Lorsque la valeur à prédire est _en dehors_ des valeurs extrèmes, on parle d'_extrapolation_
+{{< /hint >}}
 
 #### Exemples
 
@@ -105,19 +120,25 @@ de la droite ayant la même abscisse.
 
 #### Droite de regression
 
+{{< hint info >}}
 Il existe _une_ droite qui minimise ces aires, elle est appelée **droite de regression linéaire**
 
 ![Droites de regression linéaire](./Regression_lineaire_ordonnees.svg)
+{{< /hint >}}
 
 
+{{< hint warning >}}
 Donner la droite de régression c'est _écrire son équation sous la forme $y=ax+b$._
+{{< /hint >}}
 
 #### Numworks
 
 La calculatrice Numworks permet de dessiner les nuages de points et d'obtenir la droite de régression.
 
+{{< hint warning >}}
 Menu **Regression**, saisir les valeurs en $X$ et $Y$.
 Monter, aller sur **Stats**, descendre jusqu'à **Régression** et lire $a$ et $b$.
+{{< /hint >}}
 
 
 
@@ -129,11 +150,13 @@ On peut maintenant tracer et on a tout sur un seul écran !
 
 Pour l'exemple précédent (_consommation des ménages_), on lit :
 
-* Droite de regression : $y = -0.9x + 197.56$ 
+* Droite de regression : $y = -0.09x + 197.56$ 
 
 #### Coefficient de corrélation linéaire
 
+{{< hint warning >}}
 Le nombre $r$, appelé _coéfficient de corrélation linéaire_, est un indicateur de la qualité de cette regression.
+{{< /hint >}}
 
 Il doit être proche (_très proche_) de 1 si la droite monte, de -1 si la droite descend.
 

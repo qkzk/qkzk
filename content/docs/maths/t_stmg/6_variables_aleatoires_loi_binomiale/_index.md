@@ -15,14 +15,18 @@ weight: 6
 
 #### Définition
 
+{{< hint info >}}
 L'espérance d'une variable aléatoire est la moyenne que l'on peut espérer si l'on répète
 l'expérience un grand nombre de fois.
+{{< /hint >}}
 
 #### Formule
 
+{{< hint info >}}
 L'espérance d'une variable aléatoire $X$ est :
 
 $$E(x) = x_1 P(X=x1) + x_2 P(X=x2) + \cdots + x_n P(X=xn) = \sum_{i=1}^n x_i P(X = x_i)$$
+{{< /hint >}}
 
 
 #### Exemple
@@ -71,8 +75,10 @@ On note $G$ la variable correspondant au gain (positif ou négatif) du joueur.
 
 ### 1. Épreuve de Bernoulli
 
+{{< hint info >}}
 Une _épreuve de Bernoulli_ est une épreuve aléatoire qui présente deux issues possibles. On les appelle "Succès" et "Échec".
 On note $p$ la probabilité du succès.
+{{< /hint >}}
 
 #### Exemples
 
@@ -86,8 +92,10 @@ Par contre :
 
 ### 2. Schéma de Bernoulli
 
+{{< hint info >}}
 Un _schéma de Bernoulli_ est la répétition de $n$ épreuves de Bernoulli _identiques_ (la même expérience aléatoire) et _indépendantes_ (sans influence l'une sur l'autre)
 de probabilité de succès $p$.
+{{< /hint >}}
 
 Il faut donc 2 paramètres pour définir un schéma de Bernoulli : le nombre de répétitions $n$ et la probabilité du succès $p$.
 
@@ -97,9 +105,11 @@ On lance $100$ fois une pièce équilibrée : c'est un schéma de Bernoulli avec
 
 ### 3. Loi binomiale
 
+{{< hint info >}}
 On réalise un schéma de Bernoulli composé de $n$ épreuves de Bernoulli de probabilité de succès $p$.
 
 La **loi binomiale** donne la probabilité d'obtenir $k$ succès, pour $k$ entier entre 0 et $n$.
+{{< /hint >}}
 
 #### Exemple
 
@@ -138,7 +148,7 @@ On remarque que l'ordre n'a pas d'importance, seul compte le _nombre de succès_
 Résumons
 
 | $k$               | 0         | 1           | 2           | 3     |
-|-------------------|-----------|-------------|-------------|-------|
+|-------------------|:---------:|:-----------:|:-----------:|:-----:|
 | Nombre de chemins | 1         | 3           | 3           | 1     |
 | $P(X = k)$        | $(1-p)^3$ | $3p(1-p)^2$ | $3p^2(1-p)$ | $p^3$ |
 
@@ -171,7 +181,9 @@ mais nous allons utiliser la calculatrice.
 
 On note $X$ une variable aléatoire qui suit $B(10, 0.3)$. Déterminer $P(X = 5)$.
 
+{{< hint warning >}}
 Menu **Probabilités**, choisir **Binomiale**, saisir $n=10$ et $p=0.3$, **Suivant**. 
+{{< /hint >}}
 
 Aller à gauche sur la **courbe orange** et choisir le **trait** (pas les zones complètes.)
 
@@ -203,7 +215,9 @@ Comment se déplace la cloche lorsque $p$ est proche de 0 ? Proche de 1 ?
 
 Le tableur permet aussi de représenter facilement la loi binomiale. Par exemple pour $B(10, 0.3)$
 
+{{< hint warning >}}
 $\quad$![Tableur Google Calc](./loi_binomiale.png)
+{{< /hint >}}
 
 On commence par écrire les titres des colonnes, puis remplir la colonne $A$ avec le nombre de succès
 allant de $0$ à $n$.
@@ -225,7 +239,9 @@ La syntaxe de cette formule varie un peu d'un modèle de tableur à l'autre (Exc
 
 ##### Espérance
 
+{{< hint info >}}
 L'espérance d'une variable aléatoire $X$ qui suit une loi binomiale $B(n, p)$ est donnée par $E(X) = n \times p$
+{{< /hint >}}
 
 #### Exemple 1
 
@@ -253,9 +269,11 @@ Son espérance est $E(X) = 10 \times 0.25 = 2.5$. On peut espérer 2.5 points en
 
 #### Définition
 
+{{< hint info >}}
 On note $\binom{n}{k}$ le nombre de branches menant à $k$ succès dans un arbre probabilisé représentant un schéma de Bernoulli avec $n$ répétitions.
 
 Ce nombre est appelé "Combinaisons de $k$ parmi $n$".
+{{< /hint >}}
 
 #### Exemple
 
@@ -263,8 +281,10 @@ Dans les exemples précédents on a vu que $\binom{3}{0} = 1, \binom{3}{1} = 3, 
 
 ### Propriétés
 
+{{< hint info >}}
 * $\binom{n}{0} = \binom{n}{n} = 1$ : il y a toujours 1 seul chemin qui mène à 0 succès ou à $n$ succès.
 * $\binom{n}{1} = \binom{n}{n - 1} = n$ : il y a toujours n chemins qui mènent à $1$ succès ou à $n - 1$ succès.
+{{< /hint >}}
 
 #### Calculatrice Numworks
 
@@ -292,9 +312,11 @@ On peut maintenant citer la formule générale :
 
 #### Propriété
 
+{{< hint info >}}
 Soit une variable aléatoire $X$ qui suit une loi binomiale $B(n, p)$, on a :
 
 $$P(X=k) = \binom{n}{k} p^k (1-p)^{n - k}$$
+{{< /hint >}}
 
 #### Exemple
 
