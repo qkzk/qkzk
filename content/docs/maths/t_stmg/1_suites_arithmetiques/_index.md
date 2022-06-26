@@ -34,6 +34,8 @@ Une suite est _arithmétique_ si la différence de deux termes consécutifs est 
 
 Lorsque c'est le cas, cette différence est appelée la _raison_ de la suite et est notée $r$.
 
+![Relation de récurrence](./img/recurrence.png)
+
 #### Définition 
 
 {{< hint info >}}
@@ -109,6 +111,8 @@ _Le terme général d'une suite est son expression en fonction de $n$_
 #### Le terme général d'une suite arithmétique est de la forme $u_n = u_0 + n \times r$
 {{< /hint >}}
 
+![Relation de récurrence et terme général](./img/rec_terme_general.png)
+
 #### Réciproque 
 
 Toute suite dont le terme général s'exprime ainsi est arithmétique
@@ -154,11 +158,11 @@ $$\sum_{i=0}^{10}(3 + 5 * i) = 308$$
 
 ## Résumé
 
-| **Résumé** | Cours                                                                           | Exemple                                       |
-|------------|---------------------------------------------------------------------------------|-----------------------------------------------|
-| Définition | $(u_n)$ arithmétique\newline  - de raison $r$,\newline - de premier terme $u_0$ | $r=-0.5$, $u_0=6$                             |
-| Propriété  | $u_{n+1} = u_n + r$                                                             | $u_{n+1} = u_n - 0.5$                         |
-| Variations | Si $r>0$, $u$ est croissante\newline Si $r<0$, $u$ est décroissante             | $r=-0.5$\newline La suite est décroissante    |
-| Somme      | $S = \text{nb de termes} \times \dfrac{\text{1er} + \text{dernier terme}}{2}$   | $u_2+\cdots+u_9 = 8\dfrac{u_2+u_8}{2}$        |
-| Graphe     | Les points de la représentation graphique sont alignés                          |                                               |
-|            | On parle de croissance linéaire                                                 | ![numworks resumé](/docs/maths/t_stmg/1_suites_arithmetiques/img/Numworks_resume.png) |
+| **Résumé** | Cours                                                                         | Exemple                                                                               |
+|------------|-------------------------------------------------------------------------------|---------------------------------------------------------------------------------------|
+| Définition | $(u_n)$ arithmétique <br> de raison $r$, <br> de premier terme $u_0$          | $r=-0.5$, $u_0=6$                                                                     |
+| Propriété  | $u_{n+1} = u_n + r$                                                           | $u_{n+1} = u_n - 0.5$                                                                 |
+| Variations | Si $r>0$, $u$ est croissante <br> Si $r<0$, $u$ est décroissante              | $r=-0.5$<br> La suite est décroissante                                                |
+| Somme      | $S = \text{nb de termes} \times \dfrac{\text{1er} + \text{dernier terme}}{2}$ | $u_2+\cdots+u_9 = 8\dfrac{u_2+u_8}{2}$                                                |
+| Graphe     | Les points de la représentation graphique sont alignés                        |                                                                                       |
+|            | On parle de croissance linéaire                                               | ![numworks resumé](/docs/maths/t_stmg/1_suites_arithmetiques/img/Numworks_resume.png) |
