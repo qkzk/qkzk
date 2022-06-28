@@ -119,14 +119,17 @@ Toute suite dont le terme général s'exprime ainsi est arithmétique
 
 ## Somme des termes
 
-_La somme des termes consécutifs d'une suite est la somme $u_0 + u_1 + u_2 + \cdots + u_{n-1} + u_n$._
+_La somme des termes consécutifs d'une suite est la somme :_ $u_0 + u_1 + u_2 + \cdots + u_{n-1} + u_n$.
 
-De l'indice 0 à l'indice $n$ il y a $n+1$ termes. $u_0 + u_1 +  u_2 + u_3$ : il y a 4 termes !
+$u_0 + u_1 +  u_2 + u_3$ : il y a **4** termes.
+
+De l'indice 0 à l'indice $n$ il y a $n+1$ termes. 
 
 {{< hint info >}}
 #### La somme des termes consécutifs d'une suite arithmétique
 
-$$S_n = u_0 + u_1+ u_2+ \cdots +u_n = \text{nb de termes} \times \frac{\text{1er} + \text{dernier terme}}{2}$$
+$$S_n = u_0 + u_1+ u_2+ \cdots +u_n$$
+$$S_n= \text{nb de termes} \times \frac{\text{1er} + \text{dernier terme}}{2}$$
 {{< /hint >}}
 
 #### Exemple
@@ -152,7 +155,7 @@ Pour calculer la somme des termes avec la calculatrice Numworks il faut connaitr
 Menu **calculs**, touche **paste**, choisir **Analyse** puis **Somme**
 {{< /hint >}}
 
-$$\sum_{i=0}^{10}(3 + 5 * i) = 308$$
+$$\sum_{i=0}^{10}(3 + 5 \times i) = 308$$
 
 ![Numworks somme](/docs/maths/t_stmg/1_suites_arithmetiques/img/numworks_somme.png)
 

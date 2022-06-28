@@ -41,6 +41,8 @@ Le graphe de la fonction inverse est une _hyperbole_ de centre $O$, symétrique 
 La fonction dérivée de la fonction inverse : $\left( \dfrac{1}{x} \right)' = -\dfrac{1}{x^2}$
 {{< /hint >}}
 
+
+{{< expand  "Démontration" "..." >}}
 #### Démonstration
 
 Avec $f(x) = \dfrac{1}{x}$.
@@ -50,16 +52,22 @@ Calculons le taux d'accroissement entre $a$ et $a+h$ :
 $$\dfrac{f(a + h) - f(a)}{h} = \dfrac{\frac{1}{a+h} - \frac{1}{a}}{h} = \dfrac{\frac{a}{a(a+h)} - \frac{a+h}{a(a+h)}}{h} = \frac{\frac{-h}{a(a+h)}}{h} = \frac{-h}{ah(a+h)}=\frac{-1}{a(a+h)}$$
 
 Lorsqu'on fait tendre $h$ vers 0, l'expression précédente tend vers $-\dfrac{1}{a^2}$
+{{< /expand >}}
 
 #### Variations
 
+
+{{< hint info >}}
 La fonction inverse est décroissante sur $]-\infty; 0[$ et est décroissante sur $]0; +\infty[$.
+{{< /hint >}}
 
 ## Limites : comportement à l'infini
 
 ### En $+\infty$
 
+{{< hint info >}}
 Lorsque $x$ devient grand, $\dfrac{1}{x}$ devient proche de 0.
+{{< /hint >}}
 
 _Pensez le ainsi : vous avez 1 gateau à diviser en $x$ invités._
 
@@ -96,6 +104,10 @@ Soit $f(x) = 3 - 4x - \dfrac{1}{x}$ définie sur $\mathbb{R} \setminus \{0\}$.
 3. Construire le tableau de variations
 4. Représenter $f$ dans un repère.
 
+
+
+{{< expand  "Rappels" "..." >}}
+
 ### Formules de dérivation
 
 {{< hint info >}}
@@ -114,6 +126,11 @@ Soit $f(x) = 3 - 4x - \dfrac{1}{x}$ définie sur $\mathbb{R} \setminus \{0\}$.
 | $x^3$          | $3x^2$       |
 {{< /hint >}}
 
+{{< /expand >}}
+
+
+
+{{< expand  "Réponses" "..." >}}
 1. On applique la formule et :
 
     $$f'(x) = 0 - 4 - \dfrac{-1}{x^2}$$
@@ -153,3 +170,4 @@ Soit $f(x) = 3 - 4x - \dfrac{1}{x}$ définie sur $\mathbb{R} \setminus \{0\}$.
 4. Figure
 
     ![Représentation graphique](./img/courbe.svg)
+{{< /expand >}}
