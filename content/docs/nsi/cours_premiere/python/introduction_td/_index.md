@@ -927,7 +927,43 @@ False
         Écrire une fonction association qui renvoie le complémentaire.
     3. Écrire une fonction `replique` qui prend une chaîne d'ADN valide et renvoie le complémentaire.
 6. Écrire une fonction `nb_div_par_2` qui prend un entier `n` et renvoie le nombre de fois où `n` est divisible par 2.
+7. `split` est une méthode des chaînes de caractères qui permet de les découper en morceau. Écrire une fonction `split` qui prend deux chaines `phrase` et `symbole` et qui découpe la phrase en une liste de chaîne pour chaque `symbole`.
 
+    ```python
+    >>> split("salut les amis", " ")
+    ["salut", "les", "amis"]
+    ```
+8. `join` fait le contraire de `split`. Elle regroupe une liste de chaines en une seule chaîne séparées par un caractère. Écrire une fonction `join` qui prend une liste de chaînes et une chaîne en paramètres et renvoie une seule chaîne formée des mots de la liste, séparés par le caractère.
+
+    ```python
+    >>> join(["salut", "les", "amis"], "-")
+    "salut-les-amis"
+    ```
+9. Écrire une fonction `ne_garder_que` qui prend deux paramètres `phrase` et `symboles`, des chaînes, et qui renvoie les symboles de `phrase` qui figurent dans `symboles` :
+
+    ```python
+    >>> ne_garder_que("mon num 0711223344 apl moi bb", "0123456789")
+    "0711223344"
+    >>> ne_garder_que("j'ai mange un cassoulet du tonnerre", "aeiouy")
+    "aieaoueuoee"
+    ```
+10. Écrire une fonction `premier_creu` qui reçoit une liste de nombres et renvoie l'indice du premier minimum local rencontré.
+
+    ```python
+    >>> premier_creu([7, 6, 4, 2, 3, 4, 9, 7, 4, 1, 0, 10])
+    3
+    ```
+
+    Le premier minimum local est la valeur 2 (d'abord on descend : 7, 6, 4, 2 ; ensuite on monte : 2, 3, 4...). L'indice de la valeur `2` est 3. La fonction renvoie 3.
+
+11. Écrire une fonction `est_palindrome` qui prend un chaîne et renvoie un booléen vrai si le mot est un parlindrome (_qui se lit de la même manière dans les deux sens, comme radar_).
+
+    ```python
+    >>> est_palindrome("radar")
+    True
+    >>> est_palindrome("radarzz")
+    False
+    ```
 ## Exercice 16 - Dictionnaires
 
 On considère le script suivant :
