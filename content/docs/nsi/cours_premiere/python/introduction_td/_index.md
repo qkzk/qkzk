@@ -17,10 +17,9 @@ header-includes: |
 
 ---
 
-[**pdf**](/uploads/docsnsi/programmation/travaux_diriges/python_elementaire_td.pdf)
+[pdf](./python_intro_td.pdf)
 
 ## Exercice 1 - Lecture de code
-Lire les extraits de code
 
 Vous en rencontrerez de deux sortes :
 
@@ -58,7 +57,7 @@ Vous en rencontrerez de deux sortes :
 
 **Questions**
 
-1. On a effacé les lignes de sortie de l'interpréteur. Compléter les lignes vides.
+1. On a effacé les lignes de sortie de l'interpréteur. Écrire la sortie attendue.
 
     ```python
     >>> x = 8
@@ -285,13 +284,37 @@ x, y, z = ma_liste
     le type de la variable ?
 
     ```python
-    a = "22"                                ma_liste = [1, "2", trois]
-    b = 22                                  ma_liste = ["1", 2, "trois"]
-    c = a + b                               ma_liste[2] = 9
-    "d" = 22                                ma_liste[3] = 5
-    "d" = "22"                              e = ("b" == 22)
-    ma_liste = [1, "2", trois]              f = True
+    a = "22"                                
+    b = 22                                  
+    c = a + b                               
+    "d" = 22                                
+    "d" = "22"                              
+    ma_liste = [1, "2", trois]              
+    ma_liste = [1, "2", trois]
+    ma_liste = ["1", 2, "trois"]
+    ma_liste[2] = 9
+    ma_liste[3] = 5
+    e = ("b" == 22)
+    f = True
     ```
+
+## Exercice 6 - Échanger deux valeurs
+
+On part de :
+
+```python
+a = 3
+b = 6
+```
+
+Comment arriver à ce que la valeur de `a` soit 6 et celle de `b` 3 ?
+
+Bien sûr, on s'interdit de faire :
+
+```python
+a = 6
+b = 3
+```
 
 # Blocs d'instructions
 
@@ -320,7 +343,7 @@ Cette fonction renvoie (`return`) $2x + 3$ pour tout $x$
 
 Une fonction sans `return` renvoie toujours `None` (_rien_).
 
-## Exercice 6 - évaluer
+## Exercice 7 - évaluer
 
 ```python
 def func(a, b):
@@ -336,7 +359,7 @@ def func(a, b):
 >>> func(10, func(5, 7))
 ```
 
-## Exercice 7 - définir
+## Exercice 8 - définir
 
 1. Définir une fonction qui prend deux chaînes de caractères et renvoie les initiales :
 
@@ -383,7 +406,7 @@ None
 
 Remarquez que lorsqu'on `print` une chaîne, celle-ci n'est pas entourée de guillemets.
 
-## Exercice 8 - Effets de bord
+## Exercice 9 - Effets de bord
 
 On considère :
 
@@ -438,7 +461,7 @@ Le programme ci-dessus comporte une instruction conditionnelle : `if ... else`
 * Si d'autres conditions doivent être réalisées, on peut ajouter des
     instructions `elif condition:`
 
-## Exercice 9 - `if elif else`
+## Exercice 10 - `if elif else`
 
 1. Que verra-t-on à l'écran après avoir exécuté les lignes précédentes ?
 1. Écrire un programme Python qui affecte à `nb_pommes` un entier. Ensuite, si le
@@ -482,7 +505,7 @@ Le programme ci-dessus comporte une instruction conditionnelle : `if ... else`
 
 5. Écrire une fonction qui prend une note (nombre entre 0 et 20) et renvoie la mention associée. 
 
-## Exercice 10 - Boucles non bornées : `while`
+## Exercice 11 - Boucles non bornées : `while`
 
 Python propose deux boucles : `while` et `for`.
 
@@ -537,7 +560,7 @@ while True:
     Programmer une fonction `seuil` qui prend un nombre `a` et renvoie le premier entier `n` tel que $f(n) > a$.
 5. Programmer une fonction `nb_annee_pour_doubler` qui prend un taux d'intérêt `t` en pourcentage (positif) et renvoie le nombre d'années nécessaires pour doubler un capital placé à intérêts composés avec le taux `t`.
 
-## Exercice 11 - Boucles bornées : `for`
+## Exercice 12 - Boucles bornées : `for`
 
 Une boucle `for` itère sur une _collection_ la syntaxe est :
 
@@ -663,7 +686,7 @@ un couple avec l'indice et l'élément.
 
     Avec $n$ exposants.
 
-## Exercice 12 - Un premier types complexe : `list`
+## Exercice 13 - Un premier types complexe : `list`
 
 Un objet de type `list` Python est une collection d'objets, regroupés dans des
 `[]`.
@@ -734,7 +757,7 @@ On peut mesurer la longueur d'une liste avec `len(ma_liste)`
     On utilisera une liste pour enregistrer les jours `["lundi",...]`
 
 
-## Exercice 13 - Liste et boucle for
+## Exercice 14 - Liste et boucle for
 
 _Dans cet exercice on répondra d'abord simplement à la question avant de
 proposer une fonction qui le fasse. On prendra garde aux types des paramètres
@@ -844,10 +867,68 @@ False
     * -1 si `x` n'est pas dans  `l`
 
 7. Écrire la fonction `copie_pairs` qui prend une liste d'entiers et renvoie la copie des entiers _pairs_ de la liste.
-7. Écrire une fonction qui prend une liste et renvoie une copie renversée de la liste.
+8. Écrire une fonction qui prend une liste et renvoie une copie renversée de la liste.
 
 
-## Exercice 14 - Dictionnaires
+## Exercice 15 - Compléments sur les fonctions et les listes
+
+1. Écrire une fonction `est_triee` qui prend en paramètre une liste et renvoie un booléen vrai si la liste est triée.
+2. Écrire une fonction `concat` qui prend deux listes `l_1` et `l_2` et renvoie une nouvelle liste formée des éléments de `l_1` suivi des éléments de `l_2`
+3. On considère la fonction :
+
+    ```python
+    def ajoute_paire(l_1, l_2):
+        l_3 = []
+        for i in ...:
+            ...
+        ...
+    ```
+    Cette fonction prend deux listes, supposées de même taille et renvoie une nouvelle liste contenant les sommes des éléments de chaque liste.
+
+    Exemple :
+
+    ```python
+    ajoute_paire([1, 2, 3], [10, 12, 15])
+    [11, 14, 18]
+    ```
+
+    Compléter la fonction.
+4. On considère la fonction mystère suivante : 
+
+    ```python
+    def mystere(l):
+        z = 0
+        t = 0
+        for i in range(len(l)):
+            z += l[i]
+            t += 1
+        return z / t
+    ```
+
+    1. On suppose que le paramètre d'entrée `l` est une liste d'entiers. Quel est le type de sortie ?
+    2. Proposer une valeur de `l` qui provoque une erreur.
+    3. Faire tourner la fonction sur `l = [1, 2, 3]`
+    4. Que fait la fonction ?
+5. ADN. Un brin d'ADN peut être modélisé par une chaîne de caractères ne contenant que des symboles `"a", "t", "g", "c"`
+    1. Écrire une fonction `est_brin_ADN` qui reçoit en paramètre une chaîne et renvoie un booléen vrai si la chaîne ne contient que des caractères valides.
+
+        ```python
+        >>> est_brin_ADN("atcgdadt") # contient un "d"
+        False
+        >>> est_brin_ADN("atcgcadt") # c'est bon
+        True
+        ```
+    2. Lors de la réplication d'un brin d'ADN, l'organisme réalise une copie en utilisant l'association suivante :
+
+        ```
+        "a" <-> "t"
+        "c" <-> "g"
+        ```
+        Écrire une fonction association qui renvoie le complémentaire.
+    3. Écrire une fonction `replique` qui prend une chaîne d'ADN valide et renvoie le complémentaire.
+6. Écrire une fonction `nb_div_par_2` qui prend un entier `n` et renvoie le nombre de fois où `n` est divisible par 2.
+
+## Exercice 16 - Dictionnaires
 
 On considère le script suivant :
 
@@ -869,7 +950,7 @@ dict_eleve = {
 4. Jean vient de quitter l'établissement (renvoyé parce qu'il écoute du JuL).
     Supprimer sa moyenne du dictionnaire.
 
-## Exercice 15 - Depuis un dictionnaire vide.
+## Exercice 17 - Depuis un dictionnaire vide.
 
 1. Comment créer un dictionnaire vide ? Proposer deux syntaxes différentes.
 2. Comment s'assurer qu'un objet enregistré dans une variable `d` est du type
@@ -912,8 +993,7 @@ dict_eleve = {
     >>> dict( [(1: 2), (3: 4)] )
     {1: 2, 3: 4}
     ```
-4. Écrire une fonction `acceder` qui prend trois paramètres : `d` un dictionnaire, `k`
-une clé éventuellement présente et `defaut` un objet. Elle renvoie la valeur de `k` si `k` est une clé de `d` sinon la valeur par `defaut` :
+4. Écrire une fonction `acceder` qui prend trois paramètres : `d` un dictionnaire, `k` une clé éventuellement présente et `defaut` un objet. Elle renvoie la valeur de `k` si `k` est une clé de `d` sinon la valeur par `defaut` :
 
     ```python
     >>> acceder({'a': 1, 'b': 5}, 'a', 2)
@@ -928,7 +1008,7 @@ une clé éventuellement présente et `defaut` un objet. Elle renvoie la valeur 
     {"b": 2, "c": 3}
     ```
 
-## Exercice 16 - Itérer sur un dictionnaire.
+## Exercice 18 - Itérer sur un dictionnaire.
 
 1. Quelles sont les trois manières d'itérer sur un dictionnaire en Python ?
 2. Un site de jeux vidéos enregistre les scores de ses joueurs au jeu Pacman 
@@ -999,3 +1079,85 @@ une clé éventuellement présente et `defaut` un objet. Elle renvoie la valeur 
     >>> ma_liste
     [1, 2, 3]
     ```
+## Exercice 19 - Boucle `while`
+
+La syntaxe d'une boucle `while` est :
+
+```python
+while condition:
+    tour de boucle
+```
+
+Tant que `condition` est vraie, on tourne.
+
+1. Écrire à l'aide d'une boucle `while` la boucle suivante :
+
+    ```python
+    mot = "raisonable"
+    c = 0
+    for lettre in mot:
+        if lettre == a:
+            c = c + 1
+    ```
+
+    Intérêt ? Aucun, c'est même plus pénible.
+
+2. On part d'un capital valant 1000€. Chaque année, il est augmenté de 5% (= multiplié par 1.05).
+
+    Écrire une boucle `while` qui détermine le nombre d'année nécessaires pour doubler le capital.
+
+3. La fonction `input(chaine)` :
+
+    * affiche chaîne,
+    * lit l'entrée standard (ce que tape l'utilisateur) et la renvoie sous la forme d'une chaîne :
+
+    ```python
+    >>> nom = input("taper votre nom :")
+    taper votre nom : MARCEL
+    >>> nom
+    "MARCEL"
+    ```
+    En enchaînant `int` et `input` on peut convertir une saisie en un entier.
+
+    ```python
+    >>> nombre = int(input("votre nombre :"))
+    votre nombre : 22
+    >>> nombre
+    22
+    ```
+    
+    Remarquez que `nombre` est du type `int`.
+
+    À l'aide des fonctions `randint` du module `random`, de `int` et de `input` écrire une fonction qui
+    fait jouer l'utilisateur au "plus ou moins". Exemple de partie :
+
+    ```python
+    >>> plus_ou_moins()
+    votre nombre : 50
+    C est plus
+    votre nombre : 75
+    C est moins
+    votre nombre : 67
+    BRAVO !
+    Le nombre était 67, vous avez trouvé en 3 coups.
+    ```
+
+4. Écrire une fonction qui prend une liste d'entiers différents et compris
+   entre 1 et 10 en paramètre et renvoie un entier aléatoire entre 1 et 10 _qui
+   ne figure pas dans la liste reçue._
+
+   ```python
+   >>> entier_aleatoire_un_dix([1, 2, 6, 7, 9, 10])
+   8
+   >>> entier_aleatoire_un_dix([1, 2, 6, 7, 9, 10])
+   5
+   ```
+
+   Que se passe-t-il si tous les entiers entre 1 et 10 figurent dans la liste reçue ?
+
+   Améliorer votre fonction pour renvoyer -1 si tous les entiers sont choisis :
+
+   ```python
+   >>> entier_aleatoire_un_dix([1, 2, 3, 4, 5, 6, 7, 8, 9, 10])
+   -1
+   ```
