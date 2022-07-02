@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg height="283" width="433.14" xmlns="http://www.w3.org/2000/svg">
+	<path d="m431.64 141.5c0 77.32-62.68 140-140 140s-140-62.68-140-140 62.68-140 140-140 140 62.68 140 140zm-150.14 0c0 77.32-62.68 140-140 140s-140-62.68-140-140 62.68-140 140-140 140 62.68 140 140z" stroke="#000" stroke-width="3" fill="#d8d1f7"/>
+	<rect height="40" width="103" y="210.5" x="164.64" fill="#d8d1f7"/>
+	<g font-size="40px" transform="translate(-59.357,-187.86)" font-family="Liberation Sans, Arial, sans-serif">
+		<text y="431.23129" x="233" xml:space="preserve"><tspan y="431.23129" x="233">A</tspan><tspan y="431.23129" x="260.34375">∪</tspan><tspan y="431.23129" x="289.64063">B</tspan></text>
+		<text y="252.23129" x="124" xml:space="preserve"><tspan y="252.23129" x="124" font-weight="bold">A</tspan></text>
+		<text y="250.23129" x="379" xml:space="preserve"><tspan y="250.23129" x="379" font-weight="bold">B</tspan></text>
+	</g>
+</svg>

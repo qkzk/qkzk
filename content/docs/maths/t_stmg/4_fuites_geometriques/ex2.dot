@@ -1,5 +1,0 @@
-digraph g {
-    rankdir=LR
-    2 -> 8 [label="x4"]
-    8 -> 16 [label="x2"]
-}
