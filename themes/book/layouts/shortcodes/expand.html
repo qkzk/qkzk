@@ -1,13 +1,7 @@
-{{ warnf "Expand shortcode is deprecated. Use 'details' instead." }}
-<div class="book-expand">
-  <label>
-    <div class="book-expand-head flex justify-between">
-      <span>{{ default (i18n "Expand") (.Get 0) }}</span>
-      <span>{{ default "↕" (.Get 1) }}</span>
+<details {{ if or (.Get "open" ) (in .Params "open" ) }}open{{ end }}>
+    {{- $summary := "" -}}
+    <summary>{{ $summary | .Page.RenderString }}</summary>
+    <div class="markdown-inner">
+        {{ .Inner | .Page.RenderString }}
     </div>
-    <input type="checkbox" class="hidden" />
-    <div class="book-expand-content markdown-inner">
-      {{ .Inner | markdownify }}
-    </div>
-  </label>
-</div>
+</details>
