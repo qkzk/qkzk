@@ -16,27 +16,34 @@ weight: 5
 
 #### Introduction
 
+{{< expand "Introduction" "..." >}}
 On considère la suite géométrique de raison $a$, définie par $u_n=a^n$.
 Elle est définie pour tout $n \in \mathbb{N}$.
 On peut prolonger son ensemble de définition à $\mathbb{R}$ tout entier avec $f(x)=a^x$.
 
 On peut ainsi donner une image à des nombres non entiers comme 3.5.
+{{< /expand >}}
 
 #### Définition
 
+{{< expand "Définition" "..." >}}
 {{< hint info >}}
 La fonction $f,$ définie sur $\mathbb{R}$ avec $a>0$ par $f(x) = a^x$ est la **fonction exponentielle de base $a$**.
 {{< /hint >}}
+{{< /expand >}}
 
 #### Exemple
 
+{{< expand "Exemple" "..." >}}
 La fonction exponentielle de base 2 est définie par $f(x)=2^x$.
+{{< /expand >}}
 
 ![Exponentielle de base 2](intro.svg)
 
 #### Propriétés algébriques
 
 
+{{< expand "Propriétés algébriques" "..." >}}
 {{< hint warning >}}
 * La fonction exponentielle de base $a$ est toujours positive.
 
@@ -46,22 +53,27 @@ La fonction exponentielle de base 2 est définie par $f(x)=2^x$.
 * $a^{x-y} = \dfrac{a^x}{a^y}$
 * $(a^{x})^y = a^{xy}$
 {{< /hint >}}
+{{< /expand >}}
 
 ---
 
 ## 2. Variations
 
+{{< expand "variations" "..." >}}
 {{< hint info >}}
 ##### Si $0 < a < 1$, $x \mapsto a^x$ est décroissante sur $\mathbb{R}$
 
 ![Expo. décroissante](numworks_2.png)
 {{< /hint >}}
+{{< /expand >}}
 
+{{< expand "variations" "..." >}}
 {{< hint info >}}
 ##### Si $a > 1$, $x \mapsto a^x$ est croissante sur $\mathbb{R}$
 
 ![Expo. croissante](numworks_1.png)
 {{< /hint >}}
+{{< /expand >}}
 
 ---
 
@@ -81,7 +93,7 @@ le nombre d'année après 2020.
 1. Calculer la population d'Hz. en 2021, en 2022
 2. Calculer les valeurs successives jusqu'à dépasser $100~000$ habitants puis $1~000~000$
 
-Répondons :
+{{< expand "Réponses" "..." >}}
 
 
 1. La fonction exponentielle de base 1.3 est croissante, multiplier par $30~000$ ne change
@@ -104,6 +116,7 @@ Répondons :
 
     ![Tableau de valeurs sur la Numworks](numworks_3.png)
     ![Graphe sur la Numworks](numworks_4.png)
+{{< /expand >}}
 
 _Ce modèle, totalement irréaliste, illustre une propriété de la fonction exponentielle de base $a>1$ :
 elle explose rapidement vers l'infini !_
@@ -116,7 +129,7 @@ Le nombre de bactéries présentes dans un organisme suite à une infection est 
 2. Déterminer les variations de $f$ sur [0; 10]
 3. Déterminer le temps nécessaire pour que la population double.
 
-**Réponses**
+{{< expand "Réponses" "..." >}}
 
 1. Après 30 minutes, soit 0.5 heures, le nombre de bactéries est $f(0.5) = 61000$ environ.
 
@@ -129,6 +142,7 @@ Le nombre de bactéries présentes dans un organisme suite à une infection est 
 
     Il faut donc 1.7 heures = 1h et $0.7 \times 60$ minutes, soit 1h42 pour doubler la population (environ...)
 
+{{< /expand >}}
 _Cette modélisation est beaucoup plus réaliste. Elle peut durer jusqu'à une infection complète de l'hôte._
 
 ## 4. Taux d'évolution moyen
@@ -139,6 +153,7 @@ Les fonctions exponentielles permettent de modéliser facilement des accélérat
 
 Entre 2012 et 2015, le prix du gaz a augmenté de 25%. Calculer le taux d'évolution annuel moyen.
 
+{{< expand "Exemple" "..." >}}
 Notons $t$ ce taux, le coefficient multiplicateur d'une augmentation annuelle est $1 + \dfrac{t}{100}$.
 
 Le coefficient multiplicateur de trois augmentations successives est 
@@ -163,3 +178,4 @@ Pour tout $a>0$ et $x>0$, on a $a^n=x \Longleftrightarrow a = x^{\frac{1}{n}}$
 
 
 $x^{\frac{1}{n}}$ est la racine énième de $x$.
+{{< /expand >}}
