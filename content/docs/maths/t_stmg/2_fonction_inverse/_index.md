@@ -15,15 +15,19 @@ weight: 2
 
 #### Définition
 
+{{< expand "Définition" "..." >}}
 {{< hint info >}}
 La fonction inverse est définie sur $\mathbb{R} \setminus \{0\}$ par $f(x) = \dfrac{1}{x}$.
 {{< /hint >}}
+{{< /expand >}}
 
 #### Valeurs
 
+{{< expand "Valeurs" "..." >}}
 | $x$            | -2   | -1 | -0.5 | 0 | 0.5 | 1 | 2   |
 |----------------|------|----|------|---|-----|---|-----|
 | $\dfrac{1}{x}$ | -0.5 | -1 | 2    | x | 2   | 1 | 0.5 |
+{{< /expand >}}
 
 {{< hint info >}}
 #### Représentation graphique
@@ -31,15 +35,19 @@ La fonction inverse est définie sur $\mathbb{R} \setminus \{0\}$ par $f(x) = \d
 ![L'hyperbole de la fonction inverse](./img/inverse.svg)
 {{< /hint >}}
 
+{{< expand "Définition" "..." >}}
 Le graphe de la fonction inverse est une _hyperbole_ de centre $O$, symétrique par rapport à l'origine.
+{{< /expand >}}
 
 ## Dérivée et variations
 
 #### Dérivée
 
+{{< expand "Propriété" "..." >}}
 {{< hint info >}}
 La fonction dérivée de la fonction inverse : $\left( \dfrac{1}{x} \right)' = -\dfrac{1}{x^2}$
 {{< /hint >}}
+{{< /expand >}}
 
 
 {{< expand  "Démontration" "..." >}}
@@ -57,14 +65,17 @@ Lorsqu'on fait tendre $h$ vers 0, l'expression précédente tend vers $-\dfrac{1
 #### Variations
 
 
+{{< expand "Propriété" "..." >}}
 {{< hint info >}}
 La fonction inverse est décroissante sur $]-\infty; 0[$ et est décroissante sur $]0; +\infty[$.
 {{< /hint >}}
+{{< /expand >}}
 
 ## Limites : comportement à l'infini
 
 ### En $+\infty$
 
+{{< expand "Propriété" "..." >}}
 {{< hint info >}}
 Lorsque $x$ devient grand, $\dfrac{1}{x}$ devient proche de 0.
 {{< /hint >}}
@@ -78,19 +89,24 @@ _Avec 3 invités, ça va, chacun mange un tiers, avec 1000 invités, chacun mang
 |----------------|---|-----|------|-------|--------|
 | $\dfrac{1}{x}$ | 1 | 0.1 | 0.01 | 0.001 | 0.0001 |
 
+Graphiquement : plus $x$ devient grand, plus la courbe s'approche de l'axe des abscisses.
+{{< /expand >}}
+
 
 ![Asymptote en plus l'infini](./img/asymptote_plus_infini.svg)
 
-Graphiquement : plus $x$ devient grand, plus la courbe s'approche de l'axe des abscisses.
 
 ### En  $-\infty$
 
+{{< expand "Propriété" "..." >}}
 Lorsque $x$ devient grand "chez les négatifs", $\frac{1}{x}$ devient proche de 0 (_mais toujours négatif_).
 
 
+Graphiquement : plus $x$ devient négatif, plus la courbe s'approche de l'axe des abscisses.
+{{< /expand >}}
+
 ![Asymptote en moins l'infini](./img/asymptote_moins_infini.svg)
 
-Graphiquement : plus $x$ devient négatif, plus la courbe s'approche de l'axe des abscisses.
 
 
 #### L'axe des abscisses est une asymptote à la courbe de la fonction inverse en $+\infty$ et $-\infty$.
