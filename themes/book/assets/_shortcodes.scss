@@ -4,10 +4,12 @@
     margin-top: $padding-16;
     margin-bottom: $padding-16;
 
-    border: $padding-1 solid var(--gray-200);
+    border: none;
     border-radius: $border-radius;
 
     overflow: hidden;
+
+    outline: none;
 
     .book-expand-head {
       background: var(--gray-100);

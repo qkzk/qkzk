@@ -267,7 +267,7 @@ body[dir="rtl"] .book-menu {
   .book-icon {
     height: 1em;
     width: 1em;
-    margin-inline-end: .5em;
+    margin-inline-end: 0.5em;
   }
 
   ul {
@@ -360,4 +360,16 @@ body[dir="rtl"] .book-menu {
   .book-toc .book-toc-content {
     padding: $padding-16 * 2 $padding-16;
   }
+}
+
+summary {
+  outline: none;
+}
+
+summary:focus {
+  outline: none;
+}
+
+.no-outline {
+  outline: none;
 }

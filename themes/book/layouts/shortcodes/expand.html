@@ -1,6 +1,6 @@
-<details {{ if or (.Get "open" ) (in .Params "open" ) }}open{{ end }}>
+<details {{ if or (.Get "open" ) (in .Params "open" ) }}open{{ end }} class="no-outline">
     {{- $summary := "" -}}
-    <summary>{{ $summary | .Page.RenderString }}</summary>
+    <summary class="no-outline">{{ $summary | .Page.RenderString }}</summary>
     <div class="markdown-inner">
         {{ .Inner | .Page.RenderString }}
     </div>
