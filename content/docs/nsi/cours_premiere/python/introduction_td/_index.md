@@ -1197,3 +1197,38 @@ Tant que `condition` est vraie, on tourne.
    >>> entier_aleatoire_un_dix([1, 2, 3, 4, 5, 6, 7, 8, 9, 10])
    -1
    ```
+
+5. _Avec remise_ 
+
+    À l'aide de `random.randint` écrire une fonction qui prend trois paramètres entiers `a, b, n`
+    et renvoie `n` valeurs entieres aléatoires entre `a` et `b` inclus.
+
+    ```python
+    >>> echantillon(10, 20, 5)
+    [12, 14, 11, 17, 17]
+    ```
+
+    _Sans remise_
+
+    On souhaite maintenant que les valeurs soient toutes différentes.
+    Ce n'est pas le cas de l'exemple précédent.
+
+    Il faut bien sûr avoir assez de valeurs pour en choisir `n` 
+
+    Proposer une condition mathématique à vérifier entre `a`, `b` et `n` pour que ce soit
+    possible.
+
+    Écrire une telle fonction qui :
+
+    * Renvoie `n` valeurs aléatoires _distinctes_ si la condtion est respectée.
+    * Plante sinon ( `assert condtion, "message"` )
+
+    ```python
+    >>> echantillon_sans_remise(10, 20, 5)
+    [15, 16, 18, 19, 10]
+    >>> echantillon_sans_remise(10, 12, 20)
+    Traceback (most recent call last):
+      File "<stdin>", line 1, in <module>
+      File "<stdin>", line 2, in echantillon_sans_remise
+    AssertionError: pas assez de valeurs entre a et b
+    ```
