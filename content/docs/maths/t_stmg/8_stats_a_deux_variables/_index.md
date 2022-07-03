@@ -219,8 +219,11 @@ Toujours avec la consommation des ménages on a lu $y=-0.09x + 197.564$
 
         On lit $x=2028$ et $y=15$.
 
-    * _Par le calcul_, on résout :
-        $$-0.09x + 197.564 = 15 \Longleftrightarrow -0.09x = 15 - 197.564 \Longleftrightarrow -0.09x=-182.564 \Longleftrightarrow x= \dfrac{-182.564}{-0.09} \approx 2028.48$$
+    * _Par le calcul_,
+
+        on résout :
+        $$-0.09x + 197.564 = 15 \Longleftrightarrow -0.09x = 15 - 197.564$$
+        $$\Longleftrightarrow -0.09x=-182.564 \Longleftrightarrow x= \dfrac{-182.564}{-0.09} \approx 2028.48$$
 
         C'est bien entre 2028 et 2029 que la part de l'alimentaire dans la consommation des ménages devrait passer sous les 15%.
 {{< /expand >}}
