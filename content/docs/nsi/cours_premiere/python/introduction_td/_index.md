@@ -242,7 +242,8 @@ Il existe trois opérateurs sur les booléens :
     2. $x \in ]-\infty;0[ \cup ]2; 3]$
 3. On veut savoir si l'entier $n$ est divisible par trois sans qu'il ne 
     vaille 0. Proposer une expression booléenne.
-
+4. Une année est bissextile si elle est divisible par 4 mais non divisible par 100. Les années divisibles par 400 sont également bissextiles.
+    Ecrire une condition portant sur une `annee` pour savoir si elle est bissextile.
 
 ## Exercice 5 - Affectation
 
@@ -964,6 +965,11 @@ False
     >>> est_palindrome("radarzz")
     False
     ```
+12. Écrire une fonction qui renvoie le $n^{ieme}$ terme de la suite $u_n = \dfrac{4n - 2}{0.8^n}$.
+
+    Écrire une fonction qui calcule la somme des termes de $(u_k)$ pour $k$ entre $0$ et $n$
+13. Écrire une fonction qui renvoie le $n^{ieme}$ terme de la suite $u_n = 2u_n - 2$ et $u_0=25$.
+
 ## Exercice 16 - Dictionnaires
 
 On considère le script suivant :
@@ -1115,7 +1121,7 @@ dict_eleve = {
     >>> ma_liste
     [1, 2, 3]
     ```
-## Exercice 19 - Boucle `while`
+## Exercice 19 - Complément sur les boucles `while`
 
 La syntaxe d'une boucle `while` est :
 
@@ -1232,3 +1238,20 @@ Tant que `condition` est vraie, on tourne.
       File "<stdin>", line 2, in echantillon_sans_remise
     AssertionError: pas assez de valeurs entre a et b
     ```
+
+6. La conjecture de Syracuse s'intéresse au comportement des suites définies par :
+
+    * un premier terme $u_0$ entier positif,
+    * pour tout $n$, $u_{n+1} = \dfrac{u_n}{2}$ si $u_n$ est pair et $u_{n+1}= 3n+1$ si $u_n$ est impair.
+
+    La conjecture affirme que toute suite de ce type contient la valeur 1.
+
+    Par exemple, la suite des valeurs successives depuis 3 est :
+
+    $$3, 10, 5, 16, 8, 4, 2, 1, 4, 2, 1 \ldots$$
+
+    Cette suite de valeurs contient bien 1.
+
+    a. Programmer une fonction `syracuse_vol` qui prend un entier positif `n` et renvoie la _liste des valeurs jusqu'à rencontrer 1 inclus_.
+    b. Programmer une fonction `syracuse_duree` prenant le même paramètre et qui renvoie _le nombre de termes_ du vol.
+    c. Programmer une fonction `syracuse_hauteur` prenant le même paramètre et qui renvoie _la valeur maximale atteinte_ durant le vol.
