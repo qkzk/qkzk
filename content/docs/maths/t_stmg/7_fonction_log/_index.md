@@ -129,20 +129,22 @@ Le logarithme permet de résoudre certaines équations et inéquations.
 2. Résoudre dans $]0; +\infty[$ l'inéquation $x^4 < 12$
 3. 5 évolutions successives de $t$% correspondent à une augmentation de 25%. Déterminer le taux moyen.
 
-{{< expand "Exemple" "..." >}}
 **Réponses**
 
 ### 1. Résoudre $5^x=33$
 
+{{< expand "Exemple" "..." >}}
 On applique le $\log$ à gauche et à droite :
 
 $$5^x = 33 \Longleftrightarrow \log(5^x) = \log(33) \Longleftrightarrow x\log(5) = \log(33) \Longleftrightarrow x = \dfrac{\log(33)}{\log(5)}$$
+{{< /expand >}}
 
 
 
 
 ### 2. Résoudre dans $]0; +\infty[$ l'inéquation $x^4 < 12$
 
+{{< expand "Exemple" "..." >}}
 On applique le $\log$ de chaque côté -- C'est une fonction croissante qui conserve l'ordre.
 
 $$x^4 < 12 \Longleftrightarrow \log(x^4) < \log(12)$$
@@ -163,8 +165,10 @@ $$x^4 < 12\Longleftrightarrow x < 12^{\frac{1}{4}}$$
 
 L'ensemble des solutions est $\left] 0; 12^{\frac{1}{4}}\right[$
 
+{{< /expand >}}
 ### 3.  Déterminer le taux moyen si 5 évolutions successives de $t$% correspondent à une augmentation de 25%.
 
+{{< expand "Exemple" "..." >}}
 Pour un prix $P$, les cinq évolutions correspondent à $P \times \left(1 + \dfrac{t}{100}\right)^5 = P \times 1.25$
 
 On peut simplifier $P$ immédiatement et on doit résoudre :

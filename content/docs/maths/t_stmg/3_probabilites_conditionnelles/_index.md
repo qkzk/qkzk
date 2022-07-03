@@ -61,32 +61,31 @@ On prélève une boule au hasard dans l'urne.
 
 1. **Quelle est la probabilité que La boule soit marquée sachant qu'elle est rouge ?**
 
-    {{< expand "réponse" "..." >}}
-
-    Ainsi $R \cap V$ désigne l'événement : "La boule est rouge et est marquée d'un 'V'".
-
-    La probabilité de $R$ est $P(R) = \dfrac{10}{30} = \dfrac{1}{3}.$
-
-    La probabilité de $R \cap V$ est $\dfrac{5}{30} = \dfrac{1}{6}.$
-
-    La probabilité de l'événement : "La boule est marquée sachant qu'elle est rouge" est :
-
-    $$P_R(V) = \dfrac{P(R \cap V)}{P(V)} = \dfrac{\frac{1}{6}}{\frac{1}{3}} = \frac{3}{6} = \frac{1}{2}$$
-
-    _On peut aussi inverser la condition :_ 
-    {{< /expand >}}
+   {{< expand "réponse" "..." >}}
+   
+   Ainsi $R \cap V$ désigne l'événement : "La boule est rouge et est marquée d'un 'V'".
+   
+   La probabilité de $R$ est $P(R) = \dfrac{10}{30} = \dfrac{1}{3}.$
+   
+   La probabilité de $R \cap V$ est $\dfrac{5}{30} = \dfrac{1}{6}.$
+   
+   La probabilité de l'événement : "La boule est marquée sachant qu'elle est rouge" est :
+   
+   $$P_R(V) = \dfrac{P(R \cap V)}{P(V)} = \dfrac{\frac{1}{6}}{\frac{1}{3}} = \frac{3}{6} = \frac{1}{2}$$
+   
+   _On peut aussi inverser la condition :_ 
+   {{< /expand >}}
 
 2. **Quelle est la probabilité que la boule soit rouge sachant qu'elle est marquée ?**
 
+   {{< expand "réponse" "..." >}}
 
-    {{< expand "réponse" "..." >}}
+   Il nous faut calculer la probabilité que la boule soit marquée : $P(V) = \dfrac{5+15}{30}=\dfrac{2}{3}.$
 
-    Il nous faut calculer la probabilité que la boule soit marquée : $P(V) = \dfrac{5+15}{30}=\dfrac{2}{3}.$
+   La probabilité de l'événement : "La boule est rouge sachant qu'elle est marquée" est :
 
-    La probabilité de l'événement : "La boule est rouge sachant qu'elle est marquée" est :
-
-    $$P_V(R) = \dfrac{P(R \cap V)}{P(R)} = \dfrac{\frac{1}{6}}{\frac{2}{3}} = \frac{3}{12} = \frac{1}{4}$$
-    {{< /expand >}}
+   $$P_V(R) = \dfrac{P(R \cap V)}{P(R)} = \dfrac{\frac{1}{6}}{\frac{2}{3}} = \frac{3}{12} = \frac{1}{4}$$
+   {{< /expand >}}
 
 #### Propriété
 

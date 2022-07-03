@@ -28,7 +28,7 @@ l'expérience un grand nombre de fois.
 {{< hint info >}}
 L'espérance d'une variable aléatoire $X$ est :
 
-$$E(x) = x_1 P(X=x1) + x_2 P(X=x2) + \cdots + x_n P(X=xn) = \sum_{i=1}^n x_i P(X = x_i)$$
+$$E(x) = x_1 P(X=x_1) + x_2 P(X=x_2) + \cdots + x_n P(X=x_n) = \sum_{i=1}^n x_i P(X = x_i)$$
 {{< /hint >}}
 {{< /expand >}}
 
