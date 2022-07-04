@@ -29,7 +29,7 @@ On considère `a = 0b1010 0110` et `b = 0b11 1101`
 2. Ces nombres sont-ils divisibles par 2 ? Pourquoi ?
 3. Combien de bits occupe la représentation binaire de `a + b` ?
 
-## 2. Conversion décimal vers binaire.
+## 3. Conversion décimal vers binaire.
 
 1. Convertir les nombres suivants en binaire :
 
@@ -56,7 +56,7 @@ On considère `a = 0b1010 0110` et `b = 0b11 1101`
     2022 = 0b  111 1110 xxxx
     ```
 
-## 3. Binaire et python
+## 4. Binaire et python
 
 Python permet d'obtenir la représentation binaire d'un entier à l'aide de la
 fonction `bin`. Voici ce qu'on obtient avec `help(bin)` :
@@ -116,7 +116,7 @@ class int(object)
     ```
 
 
-## 4. Capacité
+## 5. Capacité
 
 1. Parmi les additions suivantes, lesquelles vont provoquer un dépassement de
     capacité lorsque les nombres sont encodés sur 8 bits ?
@@ -144,7 +144,7 @@ Rappelons les opérations bits à bits élémentaires :
 | Décalage à droite | `>>`     | `0b1101 >> 2     = 0b11`     | Revient à diviser par $2^n$    |
 | Décalage à gauche | `<<`     | `0b1101 << 2     = 0b110100` | Revient à multiplier par $2^n$ |
 
-### 5. Mettre un bit à 1
+### 6. Mettre un bit à 1
 
 On dispose d'un entier `x` dont on ne connait pas la représentation.
 
@@ -159,7 +159,7 @@ xxxx xxxx xxxx ------------>  xxxx xxx1 xxxx
 
 Proposer une opération bit à bit qui réalise cet exploit.
 
-### 6. Alterner un bit
+### 7. Alterner un bit
 
 Même point de départ, un entier `x` quelconque.
 
@@ -177,23 +177,23 @@ Les autres bits sont inchangés.
 
 Proposer une opération bit à bit.
 
-### 7. Retourner la queue
+### 8. Convertir les 0 finaux en 1
 
-On veut échanger les derniers bits d'un entier, à partir de son dernier 1 :
+On veut échanger les derniers bits d'un entier, à partir de son dernier bit à 1 :
 
 ```
-             retourner la queue
-1101 1100    ----------------->  1101 1000
+             0 finaux en 1
+1101 1000    ------------>  1101 1111
 ```
 
-Les bits précédents le dernier 1 sont inchangés.
+Les bits précédents le dernier 1 sont inchangés, ceux après (les 0 finaux) deviennent des 1.
 
 Proposer une opération bit à bit.
 
 _On pourra commencer par comparer les représentations binaires de `x` et `x - 1`._
 
 
-### 8. Extraire une partie
+### 9. Extraire une partie
 
 On considère un entier sur 8 bits comme : 
 
@@ -204,18 +204,9 @@ indices =    0123 4567
 
 On souhaite récupérer les bits numéro 2, 3 et 4 du nombre (en comptant à partir de 0) donc : `110`
 
-1. On vire les derniers bits, il y en a 3 :
+Proposer une opération bit à bit.
 
-    `x = nombre >> 3`
-
-2. On masque avec `111` pour ne garder que trois bits : `bits = nombre & 0b_111`
-
-_Questions_
-
-1. Détailler les calculs précédents et vérifier le résultat.
-2. Extraire les bits de position 4, 5 et 6 du nombre `0b1110 1100 1001` (en comptant à partir de 0)
-
-### 8. Dénombrer les bits à 1 d'un entier
+### 10. Dénombrer les bits à 1 d'un entier
 
 Nous allons étudier deux algorithmes qui répondent à la même question : **compter les bits valant 1 dans un entier**
 
