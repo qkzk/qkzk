@@ -15,25 +15,34 @@ pdf [pour impression](./td_types_construits.pdf)
 
 1. Parmi les affirmations suivantes lesquelles sont vraies ?
 
-    a. Une liste peut contenir plusieurs éléments.\
-    b. On peut ajouter des éléments à un tuple.\
-    c. On peut modifier les éléments d'un tuple.\
+    a. Une liste peut contenir plusieurs éléments.
+    b. On peut ajouter des éléments à un tuple.
+    c. On peut modifier les éléments d'un tuple.
     d. Un tuple peut contenir à la fois des nombres et des chaînes de 
         caractères.
 
 2. Si `liste` est la liste `[1, 3, 5]`, quelles sont les opérations valides ?
 
-    a. `liste.append(4)`\
-    b. `liste[0]`\
-    c. `liste[0] = 4`\
-    d. `liste[4] = 7`\
-    e. `liste = [1, 3, 10, 7, 3]`\
+    a. `liste.append(4)`
+    b. `liste[0]`
+    c. `liste[0] = 4`
+    d. `liste[4] = 7`
+    e. `liste = [1, 3, 10, 7, 3]`
 
 3. Si `triplet` est le tuple `(1, 3, 5)`, quelles sont les opérations valides ?
 
-    a. `triplet.append(4)`\
-    b. `triplet[0]`\
+    a. `triplet.append(4)`
+    b. `triplet[0]`
     c. `triplet[0] = 4`
+
+4. Associer correctement les collections à leur description :
+
+   | Collection | Description                                                |
+   |------------|------------------------------------------------------------|
+   | `list`     | tableau mutable d'associations de paires de clé et valeur  |
+   | `dict`     | collection ordonnée et non mutable d'éléments de tout type |
+   | `tuple`    | collection ordonnée et non mutable de caractères           |
+   | `str`      | collection ordonnée mutable d'éléments de tout type        |
 
 ## 2. Dictionnaires
 
@@ -42,13 +51,6 @@ dico = {"a": True, "b": False, "c": False}
 ```
 
 1. Quelle est la valeur de `dico[1]` ?
-
-    a. `"a"`\
-    b. `True`\
-    c. `"b"`\
-    d. `False`\
-    e. Rien car l'expression est invalide.
-
 2. Quelle est la valeur de `dico["a"]` ?
 3. Quelle instruction permet de modifier le dictionnaire de façon à ce que
     sa nouvelle valeur soit :
@@ -56,7 +58,7 @@ dico = {"a": True, "b": False, "c": False}
     ```python
     {"a": True, "b": False, "c": False, "e": True}
     ```
-4. Quels sont les affichages possibles lors de l'exécution du code suivant ?
+4. Qu'affichent les instructions suivantes ?
 
     ```python
     for cle in dico.keys():
@@ -76,9 +78,9 @@ dico = {"a": True, "b": False, "c": False}
 
 ## 3. Compréhension et structures imbriquées
 
-1. Si `tab` désigne la liste `[1, [2, 3], [4, 5], 6, 7]` que faut `len(tab)` ?
+1. Si liste désigne la liste `[1, [2, 3], [4, 5], 6, 7]` que faut `len(liste)` ?
 
-2. Que vaut `[2 * n for n in range(5)]`
+2. Que vaut `[2 * n for n in range(5)]` ?
 
 3. Supposons que `liste = [-5, 2, 3, -7, 42, 7]`
 
@@ -103,9 +105,7 @@ a = premiers[i]
 
 ## 5. Détecter les erreurs dans les boucles et les listes.
 
-Pour chaque question suivante, on souhaite accomplir ce qui est décrit.
-Malheureusement tous ces codes sont faux. Rectifiez les afin qu'ils réalisent
-ce qu'on attend.
+Tous ces codes sont faux. Décrire les problèmes et les rectifier afin qu'ils réalisent ce qu'on attend.
 
 1. Afficher les 10 premiers nombres pairs.
 
@@ -136,11 +136,9 @@ ce qu'on attend.
             voyelles_presentes.append(lettre)
     ```
 
-4. Calculer un capital après 10 années. 
-
-    Henri a déposé 1000€ sur son compte.
+4. Calculer un capital après 10 années. Henri a déposé 1000€ sur son compte.
     Les intérêts sont annuels et composés, on augmente de 5% chaque année le
-    montant du capital. Ensuite on affiche le montant du capital atteint.
+    montant du capital. Ensuite on affiche le montant du capital atteind.
 
     ```python
     capital = 1000
@@ -149,7 +147,7 @@ ce qu'on attend.
     print(capital)
     ```
 
-5. Compter le tours de boucle jusqu'à avoir atteint une valeur donnée et l'afficher.
+5. Compter le tours de boucles jusqu'à avoir atteint une valeur donnée et l'afficher.
 
 
     ```python
@@ -198,20 +196,6 @@ ce qu'on attend.
 
 3. Boucles et dictionnaires.
 
-    On a vu qu'il existe trois syntaxes permettant d'itérer sur les dictionnaires.
-
-    Par exemple si `d` est un dictionnaire :
-
-    * sur les **clés** :
-
-      `for cle in d: ...`  ou `for cle in dict.keys(): ...`
-    * sur les **valeurs** : 
-
-      `for valeur in d.values(): ...` 
-    * sur les paires (**clé, valeur**) : 
-
-      `for cle, valeur in d.items()`
-
     1. À l'aide d'une boucle, afficher toutes les clés du dictionnaire.
     2. À l'aide d'une boucle, construire la liste des valeurs du dictionnaire.
     3. À l'aide d'une boucle construire l'affichage suivant :
@@ -232,11 +216,8 @@ On modélise des informations (nom, taille et poids) sur des Pokémons de la
 façon suivante :
 
 ```python
-exemple_pokemons = {
-    'Bulbizarre': (70, 7),
-    'Herbizarre': (100, 13),
-    'Ago': (200, 7),
-    'Jungko': (170, 52)}
+exemple_pokemons = {'Bulbizarre': (70, 7),  'Herbizarre': (100, 13),
+                    'Ago':        (200, 7), 'Jungko':     (170, 52)}
 ```
 
 Par exemple, Bulbizarre est un Pokémon qui mesure 70 cm et pèse 7 kg.
@@ -280,70 +261,60 @@ Par exemple, Bulbizarre est un Pokémon qui mesure 70 cm et pèse 7 kg.
 1. Parmi les extraits de programme suivants, lesquels permettent de construire
     la liste des cinq premiers nombres impairs ?
 
-    a. 
-      ```python
-      impairs = [1, 3, 5, 7, 9]
-      ```
+    ```python
+    impairs1 = [1, 3, 5, 7, 9]
+    ```
 
-    b. 
+    ```python
+    impairs2 = []
+    for n in range(5):
+            impairs.append(2 * n + 1)
+    ```
 
-      ```python
-      impairs = []
-      for n in range(5):
-              impairs.append(2 * n + 1)
-      ```
+    ```python
+    impairs3 = [2 * n + 1 for n in  range(5)]
+    ```
 
-    c. 
+    ```python
+    impairs4 = [n for n in range(1, 11, 2)]
+    ```
 
-      ```python
-      impairs = [2 * n + 1 for n in  range(5)]
-      ```
-
-    d. 
-
-      ```python
-      impairs = [n for n in range(1, 11, 2)]
-      ```
-
-    e. 
-
-      ```python
-      impairs = []
-      n = 0
-      while len(impairs) != 5:
-          if n % 2 == 1:
-              impairs.append(n)
-          n = n + 1
-      ```
+    ```python
+    impairs5 = []
+    n = 0
+    while len(impairs) != 5:
+        if n % 2 == 1:
+            impairs.append(n)
+        n = n + 1
+    ```
 
 2. Donner plusieurs programmes permettant de construire la liste des
-    25 premiers nombres pairs.
+    25 premiers multiples de 7.
+3. Construire par compréhension la liste `[31 ** 2, 41 ** 2, 51 ** 2, ..., 1311 ** 2, 1321 ** 2]`
 
 3. 
     a. Quelle est la valeur de `couples` à la fin de l'exécution du programme
         suivant ?
 
-      ```python
-      lettres = ["a", "b", "c"]
-      nombres = [1, 5]
-      couples = [(c, n) for c in lettres for n in nombres]
-      ```
+        ```python
+        lettres = ["a", "b", "c"]
+        nombres = [1, 5]
+        couples = [(c, n) for c in lettres for n in nombres]
+        ```
     b. Proposer un programme qui permet de construire `couples` en utilisant
         des boucles bornées.
 
-## 10. Vérifier un carré magique
+## 9. Vérifier un carré magique
 
-Un carré d'ordre $n$ est un tableau  carré contenant $n^2$ entiers 
+Un **carré d'ordre $n$** est un tableau  carré contenant $n^2$ entiers 
 strictement positifs.\
-On dit qu'un carré d'ordre $n$ est magique si :
+On dit qu'un carré d'ordre $n$ est **magique** si :
 
 - il contient tous les nombres entiers de $1$ à $n^2$
 - les sommes des nombres de chaque rangée, de chaque colonne et de chaque
     diagonale principale sont égales.
 
-On modélie un carré par une liste de liste de nombres.
-
-Exemples :
+On modélie un carré par une liste de listes de nombres. Exemples :
 
 ```python
 carre3 = [
@@ -351,7 +322,10 @@ carre3 = [
      [9, 5, 1],
      [4, 3, 8]
     ]
+```
 
+
+```python
 carre4 = [
      [ 4,  5, 11, 14],
      [15, 10,  8,  1],
@@ -366,35 +340,32 @@ carre4 = [
     d. Quelle instruction permet de récupérer la valeur `3` de `carre4` ?
 2.  a. On propose le code suivant :
 
-      ```python
-      def somme_ligne(carre, n):
-          """
-          carre un tableau carré de nombres
-          n est un nombre entier
-          """
-          somme = 0
-          for nombre in carre[n]:
-              somme = somme + nombre
-          return somme
-      ```
+        ```python
+        def somme_ligne(carre: list, n: int) -> int:
+            """
+            carre un tableau carré de nombres
+            n est un nombre entier
+            """
+            somme = 0
+            for nombre in carre[n]:
+                somme = somme + nombre
+            return somme
+        ```
 
-      Que vaut `somme_ligne(carre4, 2)` ?
-
-      À quoi sert cette fonction ?
-
+        Que vaut `somme_ligne(carre4, 2)` ?
+        À quoi sert cette fonction ?
     b. Écrire le code d'une fonction qui prend un carré en paramètre et qui
         vérifie que les sommes de nombres de chaque ligne sont égales.
-
     c. Proposer le code d'une fonction d'une fonction qui prend un carré
         en paramètre ainsi que le numéro d'une colonne, et qui renvoie la somme
         des nombres de cette colonne.
 
-**À noter :** _Pour aller plus loin, écrivez une fonction `est_magique` qui 
+**Pour aller plus loin** : _écrivez une fonction `est_magique` qui 
 prend un carré en paramètre et renvoie `True` si le carré est magique et
 `False` sinon._
 
 
-## 11. Manipuler des listes de nombres
+## 10. Manipuler des listes de nombres
 
 On donne le code de la fonction suivante :
 
@@ -413,15 +384,12 @@ assert mystere([1, 2, 6, 9])
 assert not mystere([1, 6, 2, 9])
 ```
 
-1. Compléter le tabealu avec les valeurs des expressions à chaque passage
+1. Compléter le tableau avec les valeurs des expressions à chaque passage
     par la ligne indiquée par le commentaire `# ICI` lors de l'appel à
     `mystere([1, 2, 6, 9])`
 
     | `i`           | `i-1`         | `liste[i - 1]` | `liste[i]`
     | ------------- | ------------- | -------        | -----      |
-    |               |               |                |            |
-    |               |               |                |            |
-    |               |               |                |            |
     |               |               |                |            |
     
 
@@ -444,7 +412,7 @@ assert not mystere([1, 6, 2, 9])
 
     Que fait la fonction `mystere` ?
 
-## 12. Itérer sur les éléments d'un dictionnaire
+## 11. Itérer sur les éléments d'un dictionnaire
 
 Au zoo de Beauval, il y a 5 éléphants d'Asie, 17 écureuils d'Asie, 2 pandas
 d'Asie...\
@@ -469,39 +437,34 @@ zoo_la_fleche = {
     'hippopotame': ('Afrique', 3)}
 ```
 
-On souhaite se doner d'une fonction `plus_grand_nombre` qui prend un zoo
-en paramètre et qui renvoie le nom de l'animal le plus représenté dans ce zoo.
+1. On souhaite se doner d'une fonction `plus_grand_nombre` qui prend un zoo
+    en paramètre et qui renvoie le nom de l'animal le plus représenté dans ce zoo.
 
-Par exemple :
+    Par exemple :
 
-```python
-assert plus_grand_nombre(zoo_la_fleche) == 'girafe'
-assert plus_grand_nombre(zoo_beauval) == 'écureuil'
-```
+    ```python
+    assert plus_grand_nombre(zoo_la_fleche) == 'girafe'
+    assert plus_grand_nombre(zoo_beauval) == 'écureuil'
+    ```
 
-1.  a. Quel type de boucle peut-on envisager pour le code de cette fonction ?
+    a. Quel type de boucle peut-on envisager pour le code de cette fonction ?
+        
+        ```python
+        for cle in dico.keys()
+        ```
 
-      i. $\hspace{1cm}$
+         ```python
+        for valeur in dico.values()
+        ```
 
-      ```python
-      for cle in dico.keys()
-      ```
+        ```python
+        for (cle, valeur) in dico.items()
+        ```
 
-      ii. $\hspace{1cm}$ 
-
-      ```python
-      for valeur in dico.values()
-      ```
-
-      iii.  $\hspace{1cm}$
-
-      ```python
-      for (cle, valeur) in dico.items()
-      ```
-
-      iv. aucune boucle.
+        aucune boucle.
 
     b. Écrire le code de cette fonction.
+
 2. On souhaite se doter d'une fonction `nombre_total` qui prend un zoo en
     paramètre ainsi que le nom d'un continent, et qui renvoie le nombre
     d'animaux originaires de ce continent dans le zoo. Par exemple :
@@ -512,25 +475,6 @@ assert plus_grand_nombre(zoo_beauval) == 'écureuil'
     ```
 
     a. Quel type de boucle peut-on envisager pour le code de cette fonction ?
-
-      i.  $\hspace{1cm}$
-
-      ```python
-      for cle in dico.keys()
-      ```
-      ii. $\hspace{1cm}$
-
-      ```python
-      for valeur in dico.values()
-      ```
-
-      iii. $\hspace{1cm}$ 
-
-      ```python
-      for (cle, valeur) in dico.items()
-      ```
-
-      iv. aucune boucle.
 
     b. Écrire le code de cette fonction.
 3. On souhaite se doter d'une fonction `nombre` qui prend un zoo en paramètre
@@ -543,25 +487,6 @@ assert plus_grand_nombre(zoo_beauval) == 'écureuil'
     ```
 
     a. Quel type de boucle peut-on envisager pour le code de cette fonction ?
-
-      i. $\hspace{1cm}$
-
-      ```python
-      for cle in dico.keys()
-      ```
-      ii. $\hspace{1cm}$ 
-
-      ```python
-      for valeur in dico.values()
-      ```
-
-      iii. $\hspace{1cm}$ 
-
-      ```python
-      for (cle, valeur) in dico.items()
-      ```
-
-      iv. aucune boucle.
 
     b. Écrire le code de cette fonction.
 
@@ -587,25 +512,25 @@ notes_de_lea = [12, 14, 3, 16, 17, 2, 13, 19]
     données ?
 4. On propose le code suivant :
 
-    ```python
-    def fonction(liste_de_notes):
-        """
-        `liste_de_notes` est une liste de nombres qui modélise les notes d'un
-        élève
-        Cette fonction renvoie ???
-        """
-        compteur1 = 0
-        compteur2 = 0
-        for note un liste_de_notes:
-            if note >= 10:
-                compteur1 = compteur1 + 1
-            else:
-                compteur2 = compteur2 + 1
-        return (compteur1, compteur2)
+```python
+def fonction(liste_de_notes):
+    """
+    `liste_de_notes` est une liste de nombres qui modélise les notes d'un
+    élève
+    Cette fonction renvoie ???
+    """
+    compteur1 = 0
+    compteur2 = 0
+    for note un liste_de_notes:
+        if note >= 10:
+            compteur1 = compteur1 + 1
+        else:
+            compteur2 = compteur2 + 1
+    return (compteur1, compteur2)
 
-    notes_de_lea = [12, 14, 3, 16, 17, 2, 13, 19]
-    assert fonction(notes_de_lea) == ???
-    ```
+notes_de_lea = [12, 14, 3, 16, 17, 2, 13, 19]
+assert fonction(notes_de_lea) == ???
+```
 
 1. Quel est le type de retour de cette fonction ?
 2. Recopier et compléter la dernière de ce code.
@@ -636,16 +561,16 @@ notes_de_la_classe = [('Enzo', 3), ('Emma', 16), ('Lucas', 14), ('Manon', 13)]
     b. On donne le code mélangé de cette fonction. À vous de le remettre dans
         l'ordre.
 
-      ```python
-                  note_max = note
-          note_max = None
-      def nom_du_genie(les_notes):
-          return genie
-                  genie = nom
-          genie = None
-              if note_max == None or note > note_max:
-          for (nom, note) in les_notes:
-      ```
+        ```python
+                    note_max = note
+            note_max = None
+        def nom_du_genie(les_notes):
+            return genie
+                    genie = nom
+            genie = None
+                if note_max == None or note > note_max:
+            for (nom, note) in les_notes:
+        ```
     c. Que vaut l'expression `nom_du_genie([])` ?
 
 ### Partie 3 : Une modélisation plus complète.
@@ -654,10 +579,10 @@ Dans cette partie, on souhaite modéliser dans une même structrure de données
 les notes des élèves d'une classe en précisant le nom de la matière concernée
 par la note. On propose la modélisation suivante :
 
-  ```python
-  notes = {'Enzo': ('Math', 3), 'Emma': ('Math', 16),
-           'Lucas': ('NSI', 14), 'Manon': ('NSI', 13)}
-  ```
+```python
+notes = {'Enzo': ('Math', 3), 'Emma': ('Math', 16),
+         'Lucas': ('NSI', 14), 'Manon': ('NSI', 13)}
+```
 
 1. Quel est le type de `notes` ?
 2. Que vaut l'expression `notes[2]` ?
@@ -683,11 +608,10 @@ par la note. On propose la modélisation suivante :
     les noms des matières et les valeurs les notes obtenues par les élèves
     dans chaque matiere.
 
-    _Exemple_ :
+    _Exemple_ :\
 
     ```python
-    >>> notes = {'Emma': ('Math', 16), 'Lucas': ('NSI', 14), 
-                 'Manon': ('NSI', 13)}
+    >>> notes = {'Emma': ('Math', 16), 'Lucas': ('NSI', 14), 'Manon': ('NSI', 13)}
     >>> tri_par_matiere(notes)
     {'Math': [16], 'NSI': [14, 13]}
     ```
@@ -710,6 +634,7 @@ par la note. On propose la modélisation suivante :
 4. b. **Remettre en ordre un code mélangé**\
         Le code est donné. L'indentation devrait vous aider à remettre les 
         lignes dans l'ordre.
+
 ### Partie 3 : Une modélisation plus complète
 5. **Écrire le code d'une fonction**\
 Vous pouvez proposer comme test une instruction qui commence par `assert`.\
