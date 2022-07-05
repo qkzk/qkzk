@@ -65,7 +65,7 @@ fonction maximum(tableau T, nombre x) ---> nombre:
 
 # S'entraîner
 
-## 3. Retourner un tableau
+## 3. Renverser un tableau
 
 1. Proposer un algorithme qui prend un tableau et le retourne. Voici la
     signature attendue :
@@ -139,42 +139,65 @@ def mystere(mot: str) -> bool:
 3. Proposer un algorithme alternatif réalisant la même chose utilisant une fonction introduite dans
     un exercice précédent.
 
-## 6. Correction de l'algorithme `factorielle`
+## 6. `positions`
+
+La fonction `positions` reçoit un tableau `t` et un objet `x` et renvoie la liste des indices de `x` dans `t`. Malheureusement ses instructions sont dans le désordre et l'indentation est fausse. Rectifier.
+
+```python
+pos.append(i)
+for i in range(len(t)):
+if e == x:
+e = t[i]
+return pos
+def positions(t: list, x) -> list:
+pos = []
+```
+
+## 7. Séparer
+
+Écrire une fonction `separer` permettant, à partir d’une liste de nombres, d’obtenir deux listes. La première comporte les nombres inférieurs ou égaux à un nombre donné, la seconde les nombres qui lui sont strictement supérieurs.
+
+```python
+>>> separer([45, 21, 56 ,12, 1, 8, 30, 22, 6, 33], 30)
+([21, 12, 1, 8, 30, 22, 6], [45, 56, 33])
+```
+
+## 8. Correction de l'algorithme `factorielle`
 
 On rappelle la définition de la factorielle :
 
 $0! = 1$ et $n! = 1 \times 2 \times 3 \times \cdots \times n$
 
-Ainsi $1! = 1, 2! = 2, 3! = 6, 4! = 24$ etc.
+Ainsi $1! = 1,\; 2! = 2,\; 3! = 6,\; 4! = 24$ etc.
 
 On considère l'algorithme suivant :
 
-```
+```python
 factorielle(entier n) ---> entier:
     i = 0
     f = 1
     Tant que i < n:
         i = i + 1
         f = f * i
-    retourner f
+    renvoyer f
 ```
 
 1. Vérifier les exemples cités plus haut pour cette fonction.
-1. Justifier que la boucle n'est pas infinie.
-2. Montrer, en utilisant la pré-condition $n \geq 0$, que la propriété :
+2. Justifier que la boucle n'est pas infinie.
+3. Montrer, en utilisant la pré-condition $n \geq 0$, que la propriété :
     $$f = i! \text{ et } i \geq n$$
 
    est un invariant de la boucle.
-3. Formuler une post-condition qui établit la correction de cette algorithme.
+4. Formuler une post-condition qui établit la correction de cette algorithme.
 
-## 7. Puissance de 2
+## 9. Puissance de 2
 
 1. Écrire un algorithme utilisant une boucle _tant que_ permettant de déterminer
     si un entier $n$ strictement positif est une puissance de 2.
 2. Montrer que la boucle _tant que_ se termine.
 3. Montrer que l'algorithme produit le résultat attendu.
 
-## 8. Le plus vieux
+## 10. Le plus vieux
 
 On dispose d'une liste de personnes et de leurs ages sous cette forme :
 
@@ -193,73 +216,6 @@ personnes = [('Joe', 16), ('Zoé', 17), ('Martin', 15)]
 2. Traduire votre algorithme en Python.
 
 
-## 9. Lettres consécutives
-
-Proposer un algorithme qui prend en entrée un tableau de lettres et renvoie en sortie le nombre de fois où deux lettres consécutives sont identiques.
-
-Par exemple :
-
-```
-nb_lettres_consecutives(["a", "a", "b", "c", "c", "c"])
-```
-
-vaut 3 (`a, a`, `c, c`, `c, c`)
-
-et :
-
-```
-nb_lettres_consecutives(["a", "a", "a", "a", "c", "c"])
-```
-
-vaut 4.
-
-## 10. Trace et sommes des matrices carrés
-
-En algèbre, la _trace_ d'une matrice carrée est la somme de ses coefficients diagonaux.
-
-Par exemple pour la matrice :
-
-$$\begin{pmatrix}
-1 & 2 & 3 \newline
-4 & 5 & 6 \newline
-7 & 8 & 9
-\end{pmatrix}$$
 
 
-* Cette matrice comporte 3 lignes et 3 colonnes (deux nombres égaux), on dit qu'elle est carrée _de taille 3_.
-* Sa trace est $1 + 5 + 9 = 15$, somme des coefficients obtenus en suivant sa diagonale du haut à gauche, en bas à droite.
 
-On considère une matrice carrée d'entiers représentée par des tableaux imbriqués :
-
-```python
-matrice = [
-    [1, 2, 3],
-    [4, 5, 6],
-    [7, 8, 9]
-]
-```
-
-1. Proposer une fonction qui calcule la trace d'une matrice carrée de taille quelconque.
-
-La somme de deux matrices est obtenue en ajoutant les éléments termes à termes. Cette opération
-est définie pour toute paire de matrices qui ont des nombres de lignes et de colonnes égales.
-
-$$\begin{pmatrix}
-1 & 2 & 3 \newline
-4 & 5 & 6 \newline
-7 & 8 & 9
-\end{pmatrix} + 
-\begin{pmatrix}
-7 & 2 & 1 \newline
-6 & 3 & 2 \newline
-4 & 0 & 1
-\end{pmatrix}
- = \begin{pmatrix}
-8 & 4 & 4 \newline
-10 & 8 & 8 \newline
-11 & 8 & 10
-\end{pmatrix}$$
-
-2. Proposer une fonction `somme` qui prend deux matrices en paramètres (supposées de mêmes dimensions) et renvoie la matrice somme.
-
-    _On pourra procéder en deux temps, en supposant d'abord que la matrice finale est déjà créée et ensuite en la créant_.
