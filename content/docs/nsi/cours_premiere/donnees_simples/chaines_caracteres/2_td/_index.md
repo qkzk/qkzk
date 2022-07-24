@@ -2,25 +2,23 @@
 title: "Chaînes : TD"
 bookCollapseSection: true
 weight: 2
-
 ---
 
 pdf [pour impression](./chaines_td.pdf)
 
 ## Exercice 1
 
-
 1. Citer trois encodages différents permettant de représenter des chaînes de caractères en mémoire.
 2. Lesquels utilisent une taille fixe ?
 3. Dans la mémoire on lit l'octet `0x41` de représentation binaire `0100 0001` et valant 65.
-Est-ce une lettre ? Si oui laquelle ? Un nombre ?
+   Est-ce une lettre ? Si oui laquelle ? Un nombre ?
 4. Plaçons-nous à la place d'une machine incapable de comprendre la signification d'un texte.
 
-    On reçoit un paquet d'octets supposés représenter du texte dont on ne connait pas l'encodage.
+   On reçoit un paquet d'octets supposés représenter du texte dont on ne connait pas l'encodage.
 
-    * Peut-on savoir s'il est encodé en ASCII ? Comment ?
-    * Peut-on savoir s'il est encodé en UTF-8 ? Comment ?
-    * Et sinon ? Peut-on être confiant qu'en au fait qu'il soit encodé d'une manière ou d'une autre ?
+   - Peut-on savoir s'il est encodé en ASCII ? Comment ?
+   - Peut-on savoir s'il est encodé en UTF-8 ? Comment ?
+   - Et sinon ? Peut-on être confiant qu'en au fait qu'il soit encodé d'une manière ou d'une autre ?
 
 ## Exercice 2 - Chiffrement de César
 
@@ -55,58 +53,56 @@ chr(i, /)
 2. Enchaînons : `chr(ord("A"))` ?
 3. Que faire pour obtenir un `"D"` quand on passe un `"A"` ?
 4. Englober le tout dans une première fonction `cesar` qui prend une lettre
-  et l'encode.
+   et l'encode.
 5. La version précédente a deux défauts :
 
-    * Elle n'accepte qu'une lettre à la fois,
-    * `"X"`, `"Y"` et `"Z"` ne sont pas encodés par des lettres.
+   - Elle n'accepte qu'une lettre à la fois,
+   - `"X"`, `"Y"` et `"Z"` ne sont pas encodés par des lettres.
 
-    1. À l'aide d'une boucle, résoudre le prermier problème.
+   1. À l'aide d'une boucle, résoudre le prermier problème.
 
-        Souvenons-nous que `"bonjour" + "Quentin" == "bonjourQuentin"`
+      Souvenons-nous que `"bonjour" + "Quentin" == "bonjourQuentin"`
 
-    2. Quelle opération Python permet d'obtenir le reste d'une division euclidienne ?
+   2. Quelle opération Python permet d'obtenir le reste d'une division euclidienne ?
 
 6. Version complète.
 
-    Afin de toujours obtenir une lettre, même pour `"X"`, `"Y"` et `"Z"`,
-    nous allons :
+   Afin de toujours obtenir une lettre, même pour `"X"`, `"Y"` et `"Z"`,
+   nous allons :
 
-    1. Ramener chaque entier entre 0 et 25.
+   1. Ramener chaque entier entre 0 et 25.
 
-        Combien faut-il soustraire à `ord(lettre)` pour qu'une majuscule renvoie
-        toujours en entier entre 0 et 25 ?
+      Combien faut-il soustraire à `ord(lettre)` pour qu'une majuscule renvoie
+      toujours en entier entre 0 et 25 ?
 
-    2. Ajouter 3.
-    3. Prendre un reste modulo 26.
-    4. Ajouter le même entier qu'à l'étape 1.
+   2. Ajouter 3.
+   3. Prendre un reste modulo 26.
+   4. Ajouter le même entier qu'à l'étape 1.
 
-    Écrire l'opération complète réalisée sur chaque lettre.
+   Écrire l'opération complète réalisée sur chaque lettre.
 
 7. Englober le tout dans une fonction `cesar` qui prend en paramètre
-    une chaîne de caractère (seulement des lettres majuscules, aucune espace
-    ni ponctuation) et renvoie sa version encodée.
+   une chaîne de caractère (seulement des lettres majuscules, aucune espace
+   ni ponctuation) et renvoie sa version encodée.
 
-    ```python
-    >>> cesar("BONJOUR")
-    'ERQMRXU'
-    ```
-
+   ```python
+   >>> cesar("BONJOUR")
+   'ERQMRXU'
+   ```
 
 8. Écrire la fonction de décodage.
 
-    ```python
-    >>> decesar('ERQMRXU')
-    'BONJOUR'
-    ```
+   ```python
+   >>> decesar('ERQMRXU')
+   'BONJOUR'
+   ```
 
-9. Dans certains forums old school, on trouve une fonction appelée `rot13` et qui 
-    consiste à effectuer un chiffrement de César avec une clé valant 13 sur du texte ASCII.
+9. Dans certains forums old school, on trouve une fonction appelée `rot13` et qui
+   consiste à effectuer un chiffrement de César avec une clé valant 13 sur du texte ASCII.
 
-    1. Effectuez `x = rot13("ABC")`.
-    2. Effectuez `rot13(x)`.
-    3. Que remarque-t-on ? Expliquer.
-
+   1. Effectuez `x = rot13("ABC")`.
+   2. Effectuez `rot13(x)`.
+   3. Que remarque-t-on ? Expliquer.
 
 ## Exercice 2 - Se déplacer dans la table ASCII
 
@@ -192,12 +188,8 @@ NAME
 2. Donner la représentation binaire du "A", représenté en mémoire par l'entier 65.
 3. Recommencer avec le "a".
 4. Comment passer facilement d'une lettre majuscule à sa version minuscule quand
-  on dispose de la représentation binaire ?
+   on dispose de la représentation binaire ?
 5. À quelle opération mathématique cela correspond-t-il ?
-
-
-
-
 
 ## Exercice 3
 
@@ -217,66 +209,64 @@ Elle est composée de trois parties :
 
 1. Que fait l'instruction `range(32, 128)` ?
 2. L'instruction `bytearray( ... )` lorsqu'on lui passe une séquence itérable
-  d'entiers entre 0 et 255 produit un tableau d'octets qu'on peut écrire dans
-  un fichier. Que va produire `bytearray(range(32, 128))` ?
+   d'entiers entre 0 et 255 produit un tableau d'octets qu'on peut écrire dans
+   un fichier. Que va produire `bytearray(range(32, 128))` ?
 
 3. L'instruction `open( fichier, mode)` ouvre un fichier selon le mode
-    fourni par `mode`. Le `mode` est donné par une chaîne de caractères
-    et voici un extrait de la documentation python :
+   fourni par `mode`. Le `mode` est donné par une chaîne de caractères
+   et voici un extrait de la documentation python :
 
-    ```
-    ========= ===============================================================
-    Character Meaning
-    --------- ---------------------------------------------------------------
-    'r'       open for reading (default)
-    'w'       open for writing, truncating the file first
-    'x'       create a new file and open it for writing
-    'a'       open for writing, appending to the end of the file if it exists
-    'b'       binary mode
-    ```
+   ```
+   ========= ===============================================================
+   Character Meaning
+   --------- ---------------------------------------------------------------
+   'r'       open for reading (default)
+   'w'       open for writing, truncating the file first
+   'x'       create a new file and open it for writing
+   'a'       open for writing, appending to the end of the file if it exists
+   'b'       binary mode
+   ```
 
-    Que fait le mode `wb` ?
+   Que fait le mode `wb` ?
 
 4. Le premier paramètre de la fonction `open`, dans l'instruction plus haut
-  est `ascii_table.txt`. 
+   est `ascii_table.txt`.
 
-  Voici un extrait de la documentation Python
+Voici un extrait de la documentation Python
 
-  ```
-  open(file, mode='r', encoding=None, ... )
-    Open file and return a stream.  Raise OSError upon failure.
+```
+open(file, mode='r', encoding=None, ... )
+  Open file and return a stream.  Raise OSError upon failure.
 
-    file is either a text or byte string giving the name (and the path
-      if the file isn't in the current working directory) of the file to
-      be opened
-  ```
+  file is either a text or byte string giving the name (and the path
+    if the file isn't in the current working directory) of the file to
+    be opened
+```
 
-  Quel est le résultat de l'instruction `open("ascii_table.txt", "wb")` ?
+Quel est le résultat de l'instruction `open("ascii_table.txt", "wb")` ?
 
 4. Appliquée à un fichier ouvert en mémoire, la méthode `write` en mode accepte
-  en paramètre soit une chaîne de caractère, soit une collection itérable
-  d'octets (`bytearray`).
+   en paramètre soit une chaîne de caractère, soit une collection itérable
+   d'octets (`bytearray`).
 
-  Maintenant que nous avons étudié toutes les parties, quel devrait-être le
-  résultat de l'instruction complète ?
+Maintenant que nous avons étudié toutes les parties, quel devrait-être le
+résultat de l'instruction complète ?
 
 5. Vérifier en exécutant l'instruction.
 
-    Si vous utilisez _Basthon_, vous pouvez consulter le contenu du fichier
-    avec :
+   Si vous utilisez _Basthon_, vous pouvez consulter le contenu du fichier
+   avec :
 
-    ```python
-    >>> open("ascii_table.txt").read()
-    ```
+   ```python
+   >>> open("ascii_table.txt").read()
+   ```
 
-    Qui va ouvrir le fichier en mode lecture et vous afficher son contenu
-    sous la forme d'une chaîne de caractères.
-
+   Qui va ouvrir le fichier en mode lecture et vous afficher son contenu
+   sous la forme d'une chaîne de caractères.
 
 {{< expand  "Vérifiez" "..." >}}
 [ascii_table.txt](./ascii_table.txt)
 {{< /expand >}}
-
 
 ## Exercice 4 - Un peu d'UTF-8
 
@@ -284,9 +274,9 @@ On l'a vu, l'encodage ASCII est limité à 127 caractères.
 Afin de dépasser cette limite assez de caractères pour toutes les langues
 il a fallu ruser. L'encodage UTF-8 permet :
 
-* de représenter un texte ne comportant que des caractères ASCII sans le changer,
-* de représenter jusqu'à $2^{31}$ symboles,
-* de reconnaître tous les symboles qu'il encode manière unique.
+- de représenter un texte ne comportant que des caractères ASCII sans le changer,
+- de représenter jusqu'à $2^{31}$ symboles,
+- de reconnaître tous les symboles qu'il encode manière unique.
 
 Afin d'éviter les confusions, certains bits sont réservés :
 
@@ -327,68 +317,95 @@ en hexadécimal puis les bits qu'ils peuvent occuper.
 Ainsi pour tous les nombres entre `0x00000000` et `0x0000007F` on utilise uniquement
 les bits `0xxxxxxx`
 
-
 1. En quoi cela-permet-t-il d'assurer la compatibilité avec ASCII ?
 2. Comment-sait-on qu'un caractère est encodé sur 2 octets ? 3 octets ?
 3. Donner les bits de la représentation utf-8 du caractère unicode `0xa9` (le signe copyright).
 4. Un caractère est encodé par les bits : `11100010 10001001 10100000`
 
-    * Combien d'octets occupe-t-il en mémoire ?
-    * Convertir chaque octet en hexadécimal et déterminer sur internet
-      à quel symbole il correspond.
-
+   - Combien d'octets occupe-t-il en mémoire ?
+   - Convertir chaque octet en hexadécimal et déterminer sur internet
+     à quel symbole il correspond.
 
 ## Exercice 5 - base64
 
 1. Reprendre les caractéristiques de l'encodage base64 vues en cours
 2. Encoder les mots :
 
-    ```
-    wok
-    tir
-    666
-    ```
+   ```
+   wok
+   tir
+   666
+   ```
 
-    un texte composé de caractères ASCII est-il toujours lisible après
-    encodage en base64 ?
+   un texte composé de caractères ASCII est-il toujours lisible après
+   encodage en base64 ?
 
 3. Encoder les mots :
 
-    ```
-    rave
-    12345
-    ```
-  
+   ```
+   rave
+   12345
+   ```
+
 4. Décoder depuis base64 les mots :
 
-    ```
-    YXpl
-    bnNp
-    bnNpIHN1cGVy
-    ZnJhbmNlOTg=
-    ```
+   ```
+   YXpl
+   bnNp
+   bnNpIHN1cGVy
+   ZnJhbmNlOTg=
+   ```
 
-    Ces deux chaînes encodent-elles des phrases de la même longueur ? Justifier.
+   Ces deux chaînes encodent-elles des phrases de la même longueur ? Justifier.
 
 5. Depuis Python
 
-    La calculatrice numworks ne permet pas de tester l'encodage base64
-    mais Python installé sur votre téléphone ou une version en ligne permettent
-    de tester l'encodage et le décodage base64
+   La calculatrice numworks ne permet pas de tester l'encodage base64
+   mais Python installé sur votre téléphone ou une version en ligne permettent
+   de tester l'encodage et le décodage base64
 
-    Pour encoder un texte :
+   Pour encoder un texte :
 
-    ```
-    >>> import base64
-    >>> base64.b64encode(b"salut")
-    b'c2FsdXQ='
-    >>> base64.b64decode(b'SGkh')
-    b'Hi!'
-    ```
+   ```
+   >>> import base64
+   >>> base64.b64encode(b"salut")
+   b'c2FsdXQ='
+   >>> base64.b64decode(b'SGkh')
+   b'Hi!'
+   ```
 
-    Vérifier vos réponses aux questions 1 et 2 avec Python (sur mobile ou en ligne
-    si nécessaire).
+   Vérifier vos réponses aux questions 1 et 2 avec Python (sur mobile ou en ligne
+   si nécessaire).
 
+## Exercice 6 - Latin cochon
 
-  
+Pour écrire en Latin cochon, on transforme chaque mot commençant par une consonne selon la
+recette suivante :
 
+- on déplace la première lettre à la fin du mot,
+- on rajoute le suffixe `UM`
+
+Par exemple `VITRE` devient `ITREVUM`
+
+Les mots commençant par une voyelle ne sont pas transformés.
+
+1. Écrire une fonction qui transforme un mot en latin-cochon.
+2. Écrire une fonction utilisant la précédente qui transforme une phrase en latin-cochon.
+
+On suppose que les mots sont tous en majuscule et que les mots sont séparés par des espaces sans ponctuation.
+
+_Rappel :_
+
+- Les chaînes de caractère ne sont pas mutables, il faut en créer d'autres
+- On peut séparer une chaîne de mots avec `phrase.split(" ")`
+- On peut regrouper une liste de mots avec `" ".join(mots)`
+
+```python
+consonnes = "BCDFGHJKLMNPQRSTVWXZ"
+
+def mot_latin_cochon(mot: str) -> str:
+  pass
+
+def phrase_latin_cochon(phrase: str) -> str:
+  pass
+```
