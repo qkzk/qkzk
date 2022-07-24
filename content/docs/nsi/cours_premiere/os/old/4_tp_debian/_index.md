@@ -3,6 +3,7 @@ title: "TP debian"
 bookCollapseSection: true
 author: qkzk
 weight: 4
+geometry: margin=1.5cm
 
 ---
 
