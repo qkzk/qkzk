@@ -320,3 +320,35 @@ On peut créer des dictionnaires par compréhension :
   3: 9
 }
 ```
+
+## `list` & `dict` Python : comparaison
+
+Ces deux structures ont des points communs : 
+
+* Collection d'objets
+* Accéder à un élément avec `collection[ obj ]`
+* Effacer avec `del collection[ ob ]`
+* Itérer avec `for obj in collection: ...`
+
+Mais aussi des différences majeures
+
+* Les `dict` sont beaucoup plus complexes que les `list`
+* L'itération est rapide pour une `list`, très lente pour un `dict`
+* Les `dict` n'ont pas d'ordre : pas de premier, second, dernier élément...
+
+### Vitesses
+
+Généralement, les `list` sont beaucoup plus rapides que les `dict`.
+
+Une exception majeure, l'appartenance : `obj in collecion`. Plus rapide pour les dict que les list.
+
+Pour les `list` il faut tout parcourir et comparer élément par élément, pour les `dict` c'est en temps constant.
+
+### Implantation
+
+Les `list` python sont des _tableaux dynamiques_ mutables qui acceptent des éléments de n'importe quel type.
+
+Les `dict` python sont des _tableaux d'associations_ mutables dans lesquels on ne peut ajouter que des clés _non mutables_.
+Par exemple `(1, 2)` peut être un clé de dictionnaire mais `[1, 2]` ne le peut.
+
+Le type `dict` fait l'objet d'un chapitre complet de terminale aussi on s'arrête là.
