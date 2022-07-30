@@ -187,12 +187,12 @@ $$\sum_{i=0}^{10}(3 + 5 \times i) = 308$$
 ## Résumé
 
 
-| **Résumé** | Cours                                                                           | Exemple                                                                               |
-|------------|---------------------------------------------------------------------------------|---------------------------------------------------------------------------------------|
-| Définition | $(u_n)$ arithmétique\newline  - de raison $r$,\newline - de premier terme $u_0$ | $r=-0.5$, $u_0=6$                                                                     |
-| Propriété  | $u_{n+1} = u_n + r$                                                             | $u_{n+1} = u_n - 0.5$                                                                 |
-| Propriété  | $u_{n} = u_0 + n\times r$                                                       | $u_{n} = 6 - 0.5r$                                                                    |
-| Variations | Si $r>0$, $u$ est croissante\newline Si $r<0$, $u$ est décroissante             | $r=-0.5$\newline La suite est décroissante                                            |
-| Somme      | $S = \text{nb de termes} \times \dfrac{\text{1er} + \text{dernier terme}}{2}$   | $u_2+\cdots+u_9 = 8\dfrac{u_2+u_8}{2}$                                                |
-| Graphe     | Les points de la représentation graphique sont alignés                          |                                                                                       |
-|            | On parle de croissance linéaire                                                 | ![numworks resumé](/docs/maths/t_stmg/1_suites_arithmetiques/img/Numworks_resume.png) |
+| **Résumé** | Cours                                                                         | Exemple                                                                               |
+|------------|-------------------------------------------------------------------------------|---------------------------------------------------------------------------------------|
+| Définition | $(u_n)$ arithmétique  -- de raison $r$ -- de premier terme $u_0$              | $r=-0.5$, $u_0=6$                                                                     |
+| Propriété  | $u_{n+1} = u_n + r$                                                           | $u_{n+1} = u_n - 0.5$                                                                 |
+| Propriété  | $u_{n} = u_0 + n\times r$                                                     | $u_{n} = 6 - 0.5r$                                                                    |
+| Variations | Si $r>0$, $u$ est croissante -- Si $r<0$, $u$ est décroissante                | $r=-0.5$ -- La suite est décroissante                                                 |
+| Somme      | $S = \text{nb de termes} \times \dfrac{\text{1er} + \text{dernier terme}}{2}$ | $u_2+\cdots+u_9 = 8\dfrac{u_2+u_8}{2}$                                                |
+| Graphe     | Les points de la représentation graphique sont alignés                        |                                                                                       |
+|            | On parle de croissance linéaire                                               | ![numworks resumé](/docs/maths/t_stmg/1_suites_arithmetiques/img/Numworks_resume.png) |
