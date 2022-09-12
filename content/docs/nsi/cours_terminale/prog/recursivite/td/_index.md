@@ -7,7 +7,6 @@ weight: 2
 
 pdf : [pour impression](/uploads/docnsitale/recursivite/pdf/2_td_recursivite.pdf)
 
-
 ## Exercice 1. `even` et `odd` 
 
 even : _pair_, odd : _impair_.
@@ -29,9 +28,8 @@ def odd(n):
 ```
 
 1. Que pensez-vous des expressions calculées par chacune des deux fonctions
-  dans les deux cas de base et récursif ?
+   dans les deux cas de base et récursif ?
 2. Illustrer graphiquement une série d'appel récursif afin d'exposer le problème.
-
 
 ## Exercice 2. Encore la fonction `even`
 
@@ -46,11 +44,10 @@ def even(n):
 ```
 
 1. Cette fonction termine-t-elle toujours ? Proposer un exemple pour lequel elle
-  termine et un pour lequel elle ne termine pas.
+   termine et un pour lequel elle ne termine pas.
 2. Rectifier la fonction.
 
 ## Exercice 3. Algorithmes simples
-
 
 1.  Proposer un algorithme récursif qui calcule la **somme** des entiers de `1` à `n`.
 2.  **Factorielle.**
@@ -64,17 +61,16 @@ def even(n):
     entiers, c'est-à-dire le plus grand entier positif divisant ces deux
     nombres, par des divisions successives.
 
-    Voici le déroulement de cet algorithme pour le calcul du pgcd de *a=119*
-    et *b=544*
+    Voici le déroulement de cet algorithme pour le calcul du pgcd de _a=119_
+    et _b=544_
 
-    | a   	|   	| b      	|     	| q 	|   	| r      	|
-    |-----	|---	|--------	|-----	|---	|---	|--------	|
-    | 119 	| = 	| 544    	| `*` 	| 0 	| + 	| 119    	|
-    | 544 	| = 	| 119    	| `*` 	| 4 	| + 	| 68     	|
-    | 119 	| = 	| 68     	| `*` 	| 1 	| + 	| 51     	|
-    | 68  	| = 	| 51     	| `*` 	| 1 	| + 	| **17** 	|
-    | 51  	| = 	| **17** 	| `*` 	| 3 	| + 	| 0      	|
-
+    | a   |     | b      |     | q   |     | r      |
+    | --- | --- | ------ | --- | --- | --- | ------ |
+    | 119 | =   | 544    | `*` | 0   | +   | 119    |
+    | 544 | =   | 119    | `*` | 4   | +   | 68     |
+    | 119 | =   | 68     | `*` | 1   | +   | 51     |
+    | 68  | =   | 51     | `*` | 1   | +   | **17** |
+    | 51  | =   | **17** | `*` | 3   | +   | 0      |
 
     Le pgcd de 119 et 544 est le dernier reste non nul,
     c'est-à-dire 17.
@@ -82,7 +78,7 @@ def even(n):
     Le pgcd n'est pas défini lorsque les deux nombres sont nuls.
 
     Exprimez de manière récursive cet algorithme. Vous pourrez supposer que
-    les deux entiers *a* et *b* sont positifs ou nuls, et que l'un au moins
+    les deux entiers _a_ et _b_ sont positifs ou nuls, et que l'un au moins
     de ces deux entiers n'est pas nul.
 
 4.  **Suite de Fibonacci**
@@ -100,8 +96,7 @@ def even(n):
 
     Proposer un algorithme récursif qui calcule la puissance d'un nombre.
 
-    `puissance(3, 2)  ---> 9`
-
+    `puissance(3, 2) ---> 9`
 
 ## Exercice 4. Algorithmes sur les tableaux et les chaînes
 
@@ -122,7 +117,7 @@ def even(n):
 
     Adapter cet algorithme afin de mesurer la longueur d'une liste.
 
-3. **Retourner une chaîne de caractères.** 
+3.  **Retourner une chaîne de caractères.**
 
     Proposez une fonction `retourner` paramétrée par une chaîne de
     caractère et qui retourne la même chaîne écrite de droite à gauche.
@@ -132,17 +127,15 @@ def even(n):
     'trebor'
     ```
 
-
 4.  **Concaténer**
 
     Proposez une fonction qui concatène deux listes passées en paramètres.
 
-    *   Votre fonction doit être récursive,
-    *   Les seules méthodes sur les listes auxquelles vous avez droit sont :
-        *  `ajouter` qui ajoute un élément à la fin de la `liste`,
-        *  `retirer` qui retourne le premier élément de la `liste` et supprime
-            cet élément de la liste.
-
+    - Votre fonction doit être récursive,
+    - Les seules méthodes sur les listes auxquelles vous avez droit sont :
+      - `ajouter` qui ajoute un élément à la fin de la `liste`,
+      - `retirer` qui retourne le premier élément de la `liste` et supprime
+        cet élément de la liste.
 
 5.  **Occurrences**
 
@@ -153,13 +146,11 @@ def even(n):
     Elle retourne le nombre de fois où cette lettre apparaît dans
     le mot.
 
-
 ## Exercice 5. Autres algorithmes récursifs
-
 
 1.  **Coloriage**
 
-    Supposons données les coordonnées (entières) *(x ; y)* d’un pixel
+    Supposons données les coordonnées (entières) _(x ; y)_ d’un pixel
     situé à l’intérieur d’une région du plan délimitée par une courbe
     fermée. Les points sur la courbe délimitant la région sont de couleur
     noire, et ceux à l’intérieur sont blancs. On souhaite donner la
@@ -167,33 +158,31 @@ def even(n):
 
     Proposez un algorithme récursif pour effectuer ce coloriage. (Vous
     pourrez utiliser deux fonctions `get_color(x, y)` qui renvoie la couleur
-    du pixel de coordonnées *(x ; y)* et `set_color(x, y, color)` qui fixe la
-    couleur du pixel de coordonnées *(x ; y)*.
+    du pixel de coordonnées _(x ; y)_ et `set_color(x, y, color)` qui fixe la
+    couleur du pixel de coordonnées _(x ; y)_.
 
     Pour simplifier on peut supposer ici que les couleurs sont définies
     par des valeurs globales `BLACK`, `WHITE` et `RED`.
 
-    * Cet algorithme est utilisé dans Paint pour colorier une surface fermée (icône pot de peinture)
-    * Connaissez vous un jeu où cet algorithme soit utilisé ?
-
+    - Cet algorithme est utilisé dans Paint pour colorier une surface fermée (icône pot de peinture)
+    - Connaissez vous un jeu où cet algorithme soit utilisé ?
 
 2.  **Permutations des caractères**
 
-
-    Dans cet exercice, on appelle *permutation* d'une chaîne de caractères
-    *s* toute chaîne de même longueur que *s* contenant les mêmes caractères
-    que *s*. Par exemple, la chaîne `'eadbc'` est une permutation de la chaîne
+    Dans cet exercice, on appelle _permutation_ d'une chaîne de caractères
+    _s_ toute chaîne de même longueur que _s_ contenant les mêmes caractères
+    que _s_. Par exemple, la chaîne `'eadbc'` est une permutation de la chaîne
     `'abcde'`.
 
     Réalisez une fonction récursive qui construit la liste de toutes les permutations
     possibles d'une chaîne $s$.
 
-    *NB*  il sera probablement nécessaire de définir des fonctions auxiliaires, on essaiera de les coder  récursivement aussi.
-
+    _NB_ il sera probablement nécessaire de définir des fonctions auxiliaires, on essaiera de les coder récursivement aussi.
 
 3.  **Conversion des nombres romains**
 
     On suppose défini le dictionnaire :
+
     ```python
     VALEUR_ROMAIN = { 'M' : 1000, 'D' : 500, 'C' : 100, 'L' : 50,
                       'X' : 10, 'V' : 5, 'I' : 1}
@@ -212,9 +201,8 @@ def even(n):
     2019
     ```
 
-    *NB* Il est nécessaire de prendre en compte le cas où la valeur
-     correspondante au second caractère est supérieure à celle du premier.
-
+    _NB_ Il est nécessaire de prendre en compte le cas où la valeur
+    correspondante au second caractère est supérieure à celle du premier.
 
 4.  **Mélanger deux listes**
 
@@ -230,7 +218,6 @@ def even(n):
     [1,8,5,2,3,6,9,7]
     ```
 
-
 5.  **Les tours de Hanoï**
 
     ![Hanoï](/docs/nsi/cours_terminale/prog/recursivite/td/img/0.jpeg)
@@ -241,23 +228,23 @@ def even(n):
 
     > Les tours de Hanoï sont un jeu de réflexion imaginé par le mathématicien français Édouard Lucas, et consistant à déplacer des disques de diamètres différents d'une tour de « départ » à une tour d'« arrivée » en passant par une tour « intermédiaire », et ceci en un minimum de coups, tout en respectant les règles suivantes :
     >
-    >  - on ne peut déplacer plus d'un disque à la fois ;
-    >  - on ne peut placer un disque que sur un autre disque plus grand que lui ou sur un emplacement vide.
+    > - on ne peut déplacer plus d'un disque à la fois ;
+    > - on ne peut placer un disque que sur un autre disque plus grand que lui ou sur un emplacement vide.
 
     ![Hanoï animation](/docs/nsi/cours_terminale/prog/recursivite/td/img/1.gif)
 
     Pour ceux qui souhaitent [s'entrainer](http://towersofhanoi.info/Play.aspx).
 
-    * choisir : "play",
-    * discs : "5",
-    * pegs : "3"
+    - choisir : "play",
+    - discs : "5",
+    - pegs : "3"
 
-    Trouver (puis programmer) un algorithme pour résoudre ce problème *n* disques.
-    On pourra se contenter d'afficher sur la sortie standard les déplacements réalisés au cours de la résolution (par exemple *"dique de taille 3 déplacer de la tour 1 à la tour 2"*).
+    Trouver (puis programmer) un algorithme pour résoudre ce problème _n_ disques.
+    On pourra se contenter d'afficher sur la sortie standard les déplacements réalisés au cours de la résolution (par exemple _"dique de taille 3 déplacer de la tour 1 à la tour 2"_).
 
 6.  **Tri par insertion**
 
-    Réalisez une version récursive du *tri par insertion* vu en première
+    Réalisez une version récursive du _tri par insertion_ vu en première
 
 7.  **Permutations**
 
@@ -265,13 +252,13 @@ def even(n):
     On cherche ici à produire la liste de toutes les listes obtenues par permutation des éléments d'une liste donnée.
 
     On peut alors reproduire l'[exemple donné sur Wikipedia](https://fr.wikipedia.org/wiki/Algorithme_r%C3%A9cursif#Un_exemple_pr%C3%A9liminaire_:_les_permutations[2]) pour produire toutes les permutations de la liste `["Belle Marquise","vos beaux yeux","me font mourir","d'amour"]`
-    dont le texte est  tiré du Bourgeois gentilhomme (Acte II Scène IV) de Molière.
+    dont le texte est tiré du Bourgeois gentilhomme (Acte II Scène IV) de Molière.
 
 8.  **Organisation des rencontres d'un championnat**
 
-    Dans le cadre d'un championnat sportif (ou autre) on dispose de la liste de tous les  joueurs (ou équipes) concernés. On souhaite organiser la liste de toutes les rencontres possibles entre ces joueurs. Chaque joueur devant rencontrer tous les autres une et une seule fois.
+    Dans le cadre d'un championnat sportif (ou autre) on dispose de la liste de tous les joueurs (ou équipes) concernés. On souhaite organiser la liste de toutes les rencontres possibles entre ces joueurs. Chaque joueur devant rencontrer tous les autres une et une seule fois.
 
-    On considère que chaque joueur est identifié par un nombre (qui peut par exemple correspondre à une clef dans une table qui permet d'accéder aux informations détaillées sur le joueur). Une liste de joueurs est  donc en fait la liste des nombres associés à ces joueurs.
+    On considère que chaque joueur est identifié par un nombre (qui peut par exemple correspondre à une clef dans une table qui permet d'accéder aux informations détaillées sur le joueur). Une liste de joueurs est donc en fait la liste des nombres associés à ces joueurs.
 
     Une rencontre est représentée par un couple (tuple) dont les deux composantes sont les numéros des deux joueurs impliqués.
 
@@ -308,3 +295,29 @@ def even(n):
         >>> y
         ['a', 'b', 'c'])
         ```
+
+10. Triangles
+
+Écrire deux fonctions récursives `triangle1` et `triangle2` qui prennent un paramètre entier `n` et affichent un triangle :
+
+```python
+>>> triangle1(6)
+******
+*****
+****
+***
+**
+*
+```
+
+et
+
+```python
+>>> triangle2(6)
+*
+**
+***
+****
+*****
+******
+```
