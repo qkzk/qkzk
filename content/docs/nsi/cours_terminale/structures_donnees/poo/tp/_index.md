@@ -3,11 +3,9 @@ title: TP
 bookCollapseSection: true
 author: qkzk
 weight: 1
-
 ---
 
 pdf : [pour impression](/uploads/docnsitale/poo/1_td.pdf)
-
 
 # La programmation objet
 
@@ -124,8 +122,8 @@ Saisissez, analysez et testez ce code
 class Personnage:
   pass
 
-gollum = personnage()
-bilbo = personnage()
+gollum = Personnage()
+bilbo = Personnage()
 ```
 
 ## Attributs
@@ -134,7 +132,6 @@ Pour l'instant, notre classe ne sert à rien et nos instances d'objet ne peuvent
 rien faire. Comme il n'est pas possible de créer une classe totalement vide,
 nous avons utilisé l'instruction `pass` qui ne fait rien. Ensuite nous avons
 créé 2 instances de la classe Personnage : gollum et bilbo.
-
 
 Comme expliqué précédemment, une instance de classe possède des
 attributs et des méthodes. Commençons par les attributs :
@@ -196,9 +193,9 @@ classe et devraient donc être enfermés dans la "caisse" !
 Pour résoudre ce problème, nous allons définir les attributs, dans la
 classe, à l'aide d'une **méthode** d'initialisation des attributs.
 
-_définition_ : 
->**une méthode est une fonction définie dans une classe** 
+_définition_ :
 
+> **une méthode est une fonction définie dans une classe**
 
 Cette méthode est définie dans le code source par la ligne :
 
@@ -217,7 +214,6 @@ définition des attributs sera de la forme :
 ```python
 self.vie = 20
 ```
-
 
 Le mot self (_soi même_) représente **l'instance**. Quand vous définissez une instance
 de classe (`bilbo` ou `gollum`) le nom de votre instance va remplacer le mot
@@ -257,7 +253,7 @@ Utilisez la console Python comme dans l'Exercice 2
 
 ---
 
-Le résultat de l'Exercice 3 est identique au résultat de l'exemple de l'Exercice 2. 
+Le résultat de l'Exercice 3 est identique au résultat de l'exemple de l'Exercice 2.
 Mais cette fois nous n'avons pas défini l'attribut
 `gollum.vie=20` et `bilbo.vie=20` en dehors de la classe, nous avons
 utilisé une méthode `__init__`.
@@ -309,8 +305,8 @@ pour n'importe quelle fonction).
 
 Nous allons créer 2 nouvelles méthodes :
 
--   Une méthode qui enlèvera un point de vie au personnage blessé
--   Une méthode qui renverra le nombre de vies restantes
+- Une méthode qui enlèvera un point de vie au personnage blessé
+- Une méthode qui renverra le nombre de vies restantes
 
 ### Exercice 5
 
@@ -330,7 +326,6 @@ class Personnage:
 gollum = Personnage(20)
 bilbo = Personnage(15)
 ```
-
 
 Pour tester ce programme, dans la console, tapez successivement les
 instructions suivantes :
@@ -427,7 +422,6 @@ point = bilbo.get_etat()
 ### Exercice 9
 
 Saisissez, analysez et testez ce code
-
 
 ```python
 import random
@@ -527,118 +521,115 @@ modifiant les méthodes et en implémentant les méthodes suivantes.
 
 1. Dans l'initialisation, on ne peut donner de nom au personnage !
 
-    * créez un attribut `nom` qu'on doit donner en premier paramètre :
-      on crée une instance de `Personnage` comme ceci :
+   - créez un attribut `nom` qu'on doit donner en premier paramètre :
+     on crée une instance de `Personnage` comme ceci :
 
-      ```python
-      gollum = Personnage("Gollum", 20)
-      ```
+     ```python
+     gollum = Personnage("Gollum", 20)
+     ```
 
-    * créez une méthode `get_nom` qui renvoie le nom du personnage.
+   - créez une méthode `get_nom` qui renvoie le nom du personnage.
 
 2. Modifiez la fonction `Game` pour qu'elle tienne compte du nom du personnage.\
-    On doit pouvoir créer d'autres personnages et les messages doivent tenir
-    compte des noms de ceux-ci.
+   On doit pouvoir créer d'autres personnages et les messages doivent tenir
+   compte des noms de ceux-ci.
 
-    ```python
-    >>> frodon = Personnage("Frodon", 20)
-    >>> araignee = Personnage("Araignée", 10)
-    >>> game(frodon, araignee)
-    Frodon est vainqueur, il lui reste encore 3 points
-    alors que Araignée est mort
-    ```
+   ```python
+   >>> frodon = Personnage("Frodon", 20)
+   >>> araignee = Personnage("Araignée", 10)
+   >>> game(frodon, araignee)
+   Frodon est vainqueur, il lui reste encore 3 points
+   alors que Araignée est mort
+   ```
 
+   Remarquez bien que la _signature_ de la fonction `game` est différente !
 
-    Remarquez bien que la _signature_ de la fonction `game` est différente !
-
-    On doit créer les personnages AVANT de l'appeler. Il faut changer plusieurs
-    éléments.
+   On doit créer les personnages AVANT de l'appeler. Il faut changer plusieurs
+   éléments.
 
 3. Améliorez encore la fonction `game` pour qu'elle affiche un journal détaillé
-    du combat :
+   du combat :
 
-
-    ```python
-    >>> aragorn = Personnage(10)
-    >>> orc = Personnage(10)
-    >>> game(aragorn, orc)
-    Aragorn perd un point de vie
-    Orc perd deux points de vie
-    ...
-    Aragorn perd deux points de vie
-    Orc perd deux points de vie
-    Orc est vainqueur, il lui reste encore 3 points alors que Aragorn est mort
-    ```
+   ```python
+   >>> aragorn = Personnage(10)
+   >>> orc = Personnage(10)
+   >>> game(aragorn, orc)
+   Aragorn perd un point de vie
+   Orc perd deux points de vie
+   ...
+   Aragorn perd deux points de vie
+   Orc perd deux points de vie
+   Orc est vainqueur, il lui reste encore 3 points alors que Aragorn est mort
+   ```
 
 4. Revenons à `Personnage`\
-    On dispose maintenant des méthodes suivantes :
+   On dispose maintenant des méthodes suivantes :
 
-    ```python
-    class Personnage:
-    |
-    |  get_etat
-    |     --> int
-    |     renvoie le nombre de pts de vie
-    |
-    |  perd_vie
-    |     enleve un ou deux points de vie
-    |
-    |  get_nom
-    |     --> str
-    |     renvoie le nom du personnage
-    ```
+   ```python
+   class Personnage:
+   |
+   |  get_etat
+   |     --> int
+   |     renvoie le nombre de pts de vie
+   |
+   |  perd_vie
+   |     enleve un ou deux points de vie
+   |
+   |  get_nom
+   |     --> str
+   |     renvoie le nom du personnage
+   ```
 
-    On veut créer un attribut `chance` lors de l'instanciation du personnage.
-    C'est un entier entre 0 et 4.
+   On veut créer un attribut `chance` lors de l'instanciation du personnage.
+   C'est un entier entre 0 et 4.
 
-    L'effet de la chance est le suivant :
+   L'effet de la chance est le suivant :
 
-      * dans la méthode `perd_vie`, on tire toujours un nombre aléatoire entre 0
-        et 1.
+   - dans la méthode `perd_vie`, on tire toujours un nombre aléatoire entre 0
+     et 1.
 
-          * Si ce nombre multiplié par 10 dépasse la chance du personnage,
-            il perd un point de vie.
+     - Si ce nombre multiplié par 10 dépasse la chance du personnage,
+       il perd un point de vie.
 
-          * Sinon il ne perd pas de vie et on affiche "Aragorn a de la chance !"
+     - Sinon il ne perd pas de vie et on affiche "Aragorn a de la chance !"
 
-        Par exemple, Aragorn a 2 de chance.
+     Par exemple, Aragorn a 2 de chance.
 
-          * dans `perd_vie`, on tire 0.3,\
-            `10 * 0.3 = 3` et `3 > 2` : il perd un point de vie.
+     - dans `perd_vie`, on tire 0.3,\
+       `10 * 0.3 = 3` et `3 > 2` : il perd un point de vie.
 
-          * dans `perd_vie`, on tire 0.12345\
-            `10 * 0.12345 = 1.2345` et `1.2345 < 2` : il ne perd pas de vie.
+     - dans `perd_vie`, on tire 0.12345\
+       `10 * 0.12345 = 1.2345` et `1.2345 < 2` : il ne perd pas de vie.
 
-      * Il faut aussi changer la méthode `__init__` pour pouvoir créer nos
-        personnages ainsi :
+   - Il faut aussi changer la méthode `__init__` pour pouvoir créer nos
+     personnages ainsi :
 
-        ```python
-        aragorn = Personnage("Aragorn", 30, 2)
-        ```
+     ```python
+     aragorn = Personnage("Aragorn", 30, 2)
+     ```
 
-    Implémentez la chance et faites quelques essais.
+   Implémentez la chance et faites quelques essais.
 
-    **Attention**, si vous donnez une chance trop élevée, le personnage ne
-    perdra jamais de vie et la boucle de la fonction `game` sera infinie !
+   **Attention**, si vous donnez une chance trop élevée, le personnage ne
+   perdra jamais de vie et la boucle de la fonction `game` sera infinie !
 
 5. Maintenant qu'on peut donner un attribut chance, il faut _protéger_
-    le programme.
+   le programme.
 
-    Une valeur de chance trop élevée peut conduire à un programme qui ne
-    termine jamais, il suffit de donner une chance de 10 pour qu'un personnage
-    soit invicible !
+   Une valeur de chance trop élevée peut conduire à un programme qui ne
+   termine jamais, il suffit de donner une chance de 10 pour qu'un personnage
+   soit invicible !
 
-    Nous allons créer une méthode interne `__limiter_chance` qui empêche la
-    chance d'être supérieure à 4.
+   Nous allons créer une méthode interne `__limiter_chance` qui empêche la
+   chance d'être supérieure à 4.
 
-    Si le paramètre `chance` est inférieure ou égale à 4, il est inchangé,
-    S'il dépasse 4, il est ramené à 4.
+   Si le paramètre `chance` est inférieure ou égale à 4, il est inchangé,
+   S'il dépasse 4, il est ramené à 4.
 
-    Cette méthode interne ne sera pas appelée par les éléments extérieurs
-    au programme, seulement par le programme lui même !
+   Cette méthode interne ne sera pas appelée par les éléments extérieurs
+   au programme, seulement par le programme lui même !
 
-    On utilise cette méthode interne dans `__init__`, il faut penser à l'appeler.
-
+   On utilise cette méthode interne dans `__init__`, il faut penser à l'appeler.
 
 Et c'est la fin de cette très longue partie !
 
