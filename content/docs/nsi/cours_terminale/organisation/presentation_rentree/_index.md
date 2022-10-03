@@ -3,22 +3,18 @@ title: "Généralités"
 bookCollapseSection: true
 author: "qkzk"
 weight: 1
-
 ---
-
 
 pdf [pour impression](/uploads/docnsitale/organisation/presentation_rentree.pdf)
 
-
 # Terminale NSI
-
 
 Nous allons évoquer l'organisation de cette année en NSI :
 
-* les horaires,
-* le programme et la progression,
-* les coefficients,
-* les épreuves.
+- les horaires,
+- le programme et la progression,
+- les coefficients,
+- les épreuves.
 
 ## Horaire
 
@@ -26,98 +22,96 @@ L'horaire en terminale est de 6h par semaine.
 
 Si l'effectif le permet, nous devrions avoir tous les cours en salle info.
 
-
 ## Programme
 
 ### Contenus
 
-* Algorithmique
-    * diviser pour régner
-    * programmation dynamique
-    * recherche textuelle
-    * arbres
-    * graphes
-* Bases de données
-* Architecture
-    * processus
-    * sécurisation des échanges
-    * routage
-    * composants sur puce
-* Structures de données
-    * listes
-    * files, piles
-    * arbres
-    * graphes
-    * Programmation orientée objet
-    * Structure de donnée abstraite
-* Programmation
-    * récursion
-    * paradigme fonctionnel
-    * calculabilité
+- Algorithmique
+  - diviser pour régner
+  - programmation dynamique
+  - recherche textuelle
+  - arbres
+  - graphes
+- Bases de données
+- Architecture
+  - processus
+  - sécurisation des échanges
+  - routage
+  - composants sur puce
+- Structures de données
+  - listes
+  - files, piles
+  - arbres
+  - graphes
+  - Programmation orientée objet
+  - Structure de donnée abstraite
+- Programmation
+  - récursion
+  - paradigme fonctionnel
+  - calculabilité
 
 ### Progression
 
-| **thème**       	| **chapitre**          	|
-|-----------------	|-----------------------	|
-| programmation   	| récursion             	|
-| base de données 	| bdd 1                 	|
-| données         	| programmation objet   	|
-| base de données 	| bdd 2                 	|
-| données         	| listes                	|
-| architecture    	| processus             	|
-| données         	| pile file             	|
-| données, algo   	| arbres                	|
-| algorithmique   	| diviser pour régner   	|
-| architecture    	| sécurisation          	|
-| algorithmique   	| programmation dynamique	|
-| données         	| graphes, sd abstrait  	|
-| algorithmique   	| recherche textuelle   	|
-| architecture    	| routage               	|
-| programmation   	| paradigme fonctionnel 	|
-| programmation   	| calculabilité         	|
-| architecture    	| composants            	|
-|                 	| projets               	|
+| **thème**       | **chapitre**            |
+| --------------- | ----------------------- |
+| programmation   | récursion               |
+| base de données | bdd 1                   |
+| données         | programmation objet     |
+| base de données | bdd 2                   |
+| données         | listes                  |
+| architecture    | processus               |
+| données         | pile file               |
+| données, algo   | arbres                  |
+| algorithmique   | diviser pour régner     |
+| architecture    | sécurisation            |
+| algorithmique   | programmation dynamique |
+| données         | graphes, sd abstrait    |
+| algorithmique   | recherche textuelle     |
+| architecture    | routage                 |
+| programmation   | paradigme fonctionnel   |
+| programmation   | calculabilité           |
+| architecture    | composants              |
+|                 | projets                 |
 
 ### Grands thèmes du programme de terminale
-
 
 Rappelons d'abord que le programme du baccalauréat est _toujours_ et
 _dans toutes les matières_ le programme de première et celui de terminale...
 
 Le programme se découpe en quatre parties inégales :
 
-* Les structures de données et les algorithmes portant sur celles-ci.
-    Nous allons étudier de nouvelles structures de données : listes, piles
-    files, arbres, graphes.
+- Les structures de données et les algorithmes portant sur celles-ci.
+  Nous allons étudier de nouvelles structures de données : listes, piles
+  files, arbres, graphes.
 
-    Pour cela nous allons introduire rapidement : la programmation récursive
-    et la programmation orientée objet.
+  Pour cela nous allons introduire rapidement : la programmation récursive
+  et la programmation orientée objet.
 
-    La programmation récursive va nous permettre d'écrire d'autres types de 
-    fonctions, qui _s'appellent elles-mêmes_
+  La programmation récursive va nous permettre d'écrire d'autres types de
+  fonctions, qui _s'appellent elles-mêmes_
 
-    La programmation orientée permet de créer de nouveaux types. Elle est
-    parfaitement adaptée à l'introduction de nouvelles structures.
+  La programmation orientée permet de créer de nouveaux types. Elle est
+  parfaitement adaptée à l'introduction de nouvelles structures.
 
-* Les algorithmes "à part" et les nouvelles méthodes de programmation
-    * Certains algorithmes n'entrent pas dans le cadre précédent.
-    * On introduit deux nouvelles méthodes de résolution de problèmes :
-        * diviser pour régner (même principe que la dichotomie)
-        * la programmation dynamique (plus générale et importante que les 
-            algorithmes gloutons)
-* Les bases de données
-    Cette partie poursuit et généralise celle de première sur les données
-    en table. 
-    Cette fois on manipule les données à l'aide d'une base de donnée : un
-    logiciel spécifique (avec ou sans serveur) qui stocke et modifie les 
-    données efficacement.
-* L'architecture matérielle
-    * La partie la plus importante concerne les algorithmes de routage
-        dans un réseau. Comment faire circuler les paquets dans un réseau ?
-        Comment relier des machines distantes ?
-    * Aussi, nous trouvons des parties plus modestes : sécurisation des
-        communications (cryptographie), composants sur puce et systèmes
-        embarqués, gestion des processus etc.
+- Les algorithmes "à part" et les nouvelles méthodes de programmation
+  - Certains algorithmes n'entrent pas dans le cadre précédent.
+  - On introduit deux nouvelles méthodes de résolution de problèmes :
+    - diviser pour régner (même principe que la dichotomie)
+    - la programmation dynamique (plus générale et importante que les
+      algorithmes gloutons)
+- Les bases de données
+  Cette partie poursuit et généralise celle de première sur les données
+  en table.
+  Cette fois on manipule les données à l'aide d'une base de donnée : un
+  logiciel spécifique (avec ou sans serveur) qui stocke et modifie les
+  données efficacement.
+- L'architecture matérielle
+  - La partie la plus importante concerne les algorithmes de routage
+    dans un réseau. Comment faire circuler les paquets dans un réseau ?
+    Comment relier des machines distantes ?
+  - Aussi, nous trouvons des parties plus modestes : sécurisation des
+    communications (cryptographie), composants sur puce et systèmes
+    embarqués, gestion des processus etc.
 
 ### Types de séances en terminale
 
@@ -134,8 +128,8 @@ Nous n'utiliserons pas les postes à chaque séance.
 
 Une grande partie de notre temps sera consacrée à la réalisation de projets.
 
-* Des projets très courts durant l'année (grosso modo des TP de fin de chapitre)
-* Des projets longs en fin d'année
+- Des projets très courts durant l'année (grosso modo des TP de fin de chapitre)
+- Des projets longs en fin d'année
 
 Cela devrait ressembler à ceux proposés en fin d'année dernière,
 l'investissement régulier en plus...
@@ -148,7 +142,6 @@ Les épreuves du contrôle continu comptent pour 30 points en tout,
 
 Les bulletins comptent pour 10 points.
 
-
 Source : [eduscol](https://cache.media.eduscol.education.fr/file/Bac2021/05/8/les_epreuves_du_nouveau_baccalaureat_general_infog_1086058.pdf)
 
 ## Épreuves
@@ -157,61 +150,48 @@ L'épreuve obligatoire de spécialité se déroule durant le troisième trimestr
 
 Nature de l'épreuve
 
-L'épreuve terminale obligatoire de spécialité est composée de deux parties : 
+L'épreuve terminale obligatoire de spécialité est composée de deux parties :
 
-* une partie écrite, comptant pour 12 points sur 20,
-* une partie pratique comptant pour 8 points sur 20.
+- une partie écrite, comptant pour 12 points sur 20,
+- une partie pratique comptant pour 8 points sur 20.
 
 La note globale de l'épreuve est donnée sur 20 points.
 
 1. **Partie écrite**\
-    Durée : 3 heures 30
+   Durée : 3 heures 30
 
-    **Modalités**\
-    _La partie écrite consiste en la résolution de trois exercices permettant
-    d'évaluer les connaissances et les capacités attendues conformément aux
-    programmes de première et de terminale de la spécialité.
-    Chaque exercice est noté sur 4 points_.
-
-    _Le sujet propose cinq exercices, parmi lesquels le candidat choisit les trois
-    qu'il traitera. Ces cinq exercices permettent d'aborder les différentes
-    rubriques du programme, sans obligation d'exhaustivité. Le sujet comprend
-    obligatoirement au moins un exercice relatif à chacune des trois rubriques
-    suivantes :_
-    * _traitement de données en tables et bases de données ;_
-    * _architectures matérielles, systèmes d'exploitation et réseaux ;_
-    * _algorithmique, langages et programmation._
+   **Modalités**\
+   Le sujet comporte trois exercices indépendants les uns des autres, qui permettent d'évaluer les connaissances et compétences des candidats.
 
 2. **Partie pratique**\
-    Durée : 1 heure
+   Durée : 1 heure
 
-    **Modalités**\
-    _La partie pratique consiste en la résolution de deux exercices sur ordinateur,
-    chacun étant noté sur 4 points._
+   **Modalités**\
+   _La partie pratique consiste en la résolution de deux exercices sur ordinateur,
+   chacun étant noté sur 4 points._
 
-    _Le candidat est évalué sur la base d'un dialogue avec un professeur examinateur.
-    Un examinateur évalue au maximum quatre élèves. L'examinateur ne peut pas
-    évaluer un élève qu'il a eu en classe durant l'année en cours._
+   _Le candidat est évalué sur la base d'un dialogue avec un professeur examinateur.
+   Un examinateur évalue au maximum quatre élèves. L'examinateur ne peut pas
+   évaluer un élève qu'il a eu en classe durant l'année en cours._
 
-    _L'évaluation de cette partie se déroule au cours du deuxième trimestre pendant
-    la période de l'épreuve écrite de spécialité._
+   _L'évaluation de cette partie se déroule au cours du deuxième trimestre pendant
+   la période de l'épreuve écrite de spécialité._
 
-    **Premier exercice**\
-    _Le premier exercice consiste à programmer un algorithme figurant explicitement
-    au programme, ne présentant pas de difficulté particulière, dont on fournit
-    une spécification. Il s'agit donc de restituer un algorithme rencontré et
-    travaillé à plusieurs reprises en cours de formation. Le sujet peut proposer
-    un jeu de test avec les réponses attendues pour permettre au candidat de
-    vérifier son travail._
+   **Premier exercice**\
+   _Le premier exercice consiste à programmer un algorithme figurant explicitement
+   au programme, ne présentant pas de difficulté particulière, dont on fournit
+   une spécification. Il s'agit donc de restituer un algorithme rencontré et
+   travaillé à plusieurs reprises en cours de formation. Le sujet peut proposer
+   un jeu de test avec les réponses attendues pour permettre au candidat de
+   vérifier son travail._
 
-    **Deuxième exercice**\
-    _Pour le second exercice, un programme est fourni au candidat. Cet exercice ne
-    demande pas l'écriture complète d'un programme, mais permet de valider des
-    compétences de programmation suivant des modalités variées : le candidat doit,
-    par exemple, compléter un programme « à trous » afin de répondre à une
-    spécification donnée, ou encore compléter un programme pour le documenter, ou
-    encore compléter un programme en ajoutant des assertions, etc._
-
+   **Deuxième exercice**\
+   _Pour le second exercice, un programme est fourni au candidat. Cet exercice ne
+   demande pas l'écriture complète d'un programme, mais permet de valider des
+   compétences de programmation suivant des modalités variées : le candidat doit,
+   par exemple, compléter un programme « à trous » afin de répondre à une
+   spécification donnée, ou encore compléter un programme pour le documenter, ou
+   encore compléter un programme en ajoutant des assertions, etc._
 
 ### Absence, dispense et aménagement de la partie pratique
 
@@ -286,14 +266,14 @@ Je vous renvoie aux
 
 résumé :
 
-* porte sur vos spécialités de terminale,
-* vous venez avec deux questions qui portent sur une spécialité ou les deux,
-* vous préparez 20 minutes,
-* Oral :
-    *   5 minutes de présentation,
-    *   10 minutes d'échange sur le sujet,
-    *   5 minutes d'échange sur le projet d'orientation
-* Vous présentez sans note et vous n'avez droit à aucun support préparé.
-* Vous pouvez créer un support papier durant la préparation remis au jury (non évalué).
+- porte sur vos spécialités de terminale,
+- vous venez avec deux questions qui portent sur une spécialité ou les deux,
+- vous préparez 20 minutes,
+- Oral :
+  - 5 minutes de présentation,
+  - 10 minutes d'échange sur le sujet,
+  - 5 minutes d'échange sur le projet d'orientation
+- Vous présentez sans note et vous n'avez droit à aucun support préparé.
+- Vous pouvez créer un support papier durant la préparation remis au jury (non évalué).
 
 Je _pense_ que nous le préparerons après les épreuves écrites.
