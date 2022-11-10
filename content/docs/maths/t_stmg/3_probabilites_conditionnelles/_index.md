@@ -39,7 +39,7 @@ Si tous les résultats ont la même probabilité d'apparaître (_équiprobabilit
 Soit $A$ et $B$ deux événements avec $P(A) \neq 0$.
 On appelle **probabilité conditionnelle** de $B$ sachant $A$ la probabilité que l'événement $B$
 se réalise sachant que l'événement $A$ est réalisé. Elle est notée $P_A(B)$ et est définie par : 
-$$P_A(B) = \dfrac{P(A \cap B)}{P(B)}$$
+$$P_A(B) = \dfrac{P(A \cap B)}{P(A)}$$
 {{< /hint >}}
 {{< /expand >}}
 
@@ -71,7 +71,7 @@ On prélève une boule au hasard dans l'urne.
    
    La probabilité de l'événement : "La boule est marquée sachant qu'elle est rouge" est :
    
-   $$P_R(V) = \dfrac{P(R \cap V)}{P(V)} = \dfrac{\frac{1}{6}}{\frac{1}{3}} = \frac{3}{6} = \frac{1}{2}$$
+   $$P_R(V) = \dfrac{P(R \cap V)}{P(R)} = \dfrac{\frac{1}{6}}{\frac{1}{3}} = \frac{3}{6} = \frac{1}{2}$$
    
    _On peut aussi inverser la condition :_ 
    {{< /expand >}}
@@ -84,7 +84,7 @@ On prélève une boule au hasard dans l'urne.
 
    La probabilité de l'événement : "La boule est rouge sachant qu'elle est marquée" est :
 
-   $$P_V(R) = \dfrac{P(R \cap V)}{P(R)} = \dfrac{\frac{1}{6}}{\frac{2}{3}} = \frac{3}{12} = \frac{1}{4}$$
+   $$P_V(R) = \dfrac{P(R \cap V)}{P(V)} = \dfrac{\frac{1}{6}}{\frac{2}{3}} = \frac{3}{12} = \frac{1}{4}$$
    {{< /expand >}}
 
 #### Propriété
