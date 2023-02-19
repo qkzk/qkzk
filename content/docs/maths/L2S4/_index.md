@@ -11,7 +11,9 @@ bookCollapseSection: true
 
 - [Séance 5 du mardi 4 mars](./L2S4_2023_s5.pdf) et [vidéo](https://www.youtube.com/watch?v=niX7Z9_E3Fw)
 
-# Séance 2, vidéo préparée avant la séance 1
+# Années antérieures
+
+## Séance 2, vidéo préparée avant la séance 1
 
 Voici un enregistrement vidéo ainsi que des corrections des exercices 7, 8, 9, 10, 11 et 12.
 Cela devrait largement couvrir les exercices traités durant la séance.
@@ -20,7 +22,7 @@ Cela devrait largement couvrir les exercices traités durant la séance.
 - [tableau blanc](./L2S4_Seance_2.pdf)
 - [Corrections tapées](./seance_2_corrections.pdf)
 
-# Séance 5 (12 mars 2022)
+## Séance 5 (12 mars 2022)
 
 Enregistrement vidéo, corrections tapées et manuscrites des exercices 24(1), 25, 26, 29 et 31.
 
@@ -28,7 +30,7 @@ Enregistrement vidéo, corrections tapées et manuscrites des exercices 24(1), 2
 - [Tableau blanc](./L2S4_seance5_2022.pdf)
 - [Corrections tapées](./seance_5_corrections.pdf)
 
-# Séance de révision (vendredi 29 avril 2022, 15h)
+## Séance de révision (vendredi 29 avril 2022, 15h)
 
 Nous allons réaliser une séance de révision en distanciel le **vendredi 29 avril 2022 à 15h**.
 
@@ -41,7 +43,7 @@ Nous allons utiliser Zoom, que vous devriez tous connaître.
 - N'ayant pas organisé de visio depuis un an, je ne sais pas si vous devrez vous connecter. Si c'est le cas, utilisez vos identifiants @univ-lille-fr
 - Afin de créer cette visio, j'ai crée un "cours" dans moodle [à cette adresse](https://moodle.univ-lille.fr/course/view.php?id=33904) que vous pouvez rejoindre anonymement avec le code : **7hwwy6**
 
-## Sujet de l'an dernier :
+## Sujet antérieurs
 
 - [page 1](./exam_2021_1.jpeg)
 - [page 2](./exam_2021_2.jpeg)
