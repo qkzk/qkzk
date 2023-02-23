@@ -10,6 +10,7 @@ bookCollapseSection: true
 # 2022-2023
 
 - [Séance 5 du mardi 4 mars](./L2S4_2023_s5.pdf) et [vidéo](https://www.youtube.com/watch?v=niX7Z9_E3Fw)
+- [Séance 6 du mardi 11 mars](./L2S4_2023_s6.pdf) et [vidéo](https://www.youtube.com/watch?v=RtNSetwet2U)
 
 # Années antérieures
 
