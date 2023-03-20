@@ -1,0 +1,20 @@
+      MOV R2, #msgBonjour
+      STR R2, .WriteString
+      LDR R0, .InputNum
+loop:
+      MOV R2, #msgSaisir
+      STR R2, .WriteString
+      LDR R1, .InputNum
+      STR R1, .WriteUnsignedNum
+      CMP R0, R1
+      BEQ victoire
+      B loop
+victoire:
+      MOV R2, #msgVictoire
+      STR R2, .WriteString
+      B end
+end:
+      HALT
+msgBonjour: .ASCIZ "Bonjour:\n" // Les chaînes doivent être terminées par \n
+msgSaisir: .ASCIZ "\nTapez votre nombre\n"
+msgVictoire: .ASCIZ "\nBravo\n"

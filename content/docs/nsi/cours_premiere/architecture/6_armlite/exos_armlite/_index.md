@@ -1,8 +1,7 @@
 ---
-title: "Exercices" 
-author: "qkzk" 
+title: "Exercices"
+author: "qkzk"
 weight: 2
-
 ---
 
 # Exercices de déroulé de code
@@ -20,8 +19,8 @@ MOV R0, #25
 ADD R1, R0, #12
 ```
 
-* `RO` contient 25
-* `R1` contient $25+12=37$
+- `RO` contient 25
+- `R1` contient $25+12=37$
 
 ## Ecrit 1 - Mnemonique
 
@@ -43,7 +42,7 @@ Quels sont les états des registres ?
 
 ## Ecrit 2 - Dérouler et traduire
 
-Dérouler le programme suivant, noter les états finaux des variables `x, y, z` puis le traduire en assembleur 
+Dérouler le programme suivant, noter les états finaux des variables `x, y, z` puis le traduire en assembleur
 et recommencer.
 
 ```python
@@ -91,7 +90,6 @@ Fin:
  b:    .WORD 20
 ```
 
-
 Dérouler le programme suivant, on notera l'état de la mémoire et des registres au fur et à mesure.
 
 ## Ecrit 5 - Boucle
@@ -115,7 +113,7 @@ Fin:
 ```
 
 1. Dérouler le programme précédent pas à pas. Combien de fois les instructions
-  entre `Boucle:` et `Fin:` seront-elles exécutées ?
+   entre `Boucle:` et `Fin:` seront-elles exécutées ?
 2. Modifier le programme afin que 10 tours de boucle soient réalisés.
 3. Modifier le programme afin que la boucle soit infinie.
 
@@ -149,8 +147,8 @@ while capital < double:
 
 1. Combien d'années sont nécessaires ? Résoudre mathématiquement la question.
 2. Faire tourner en Python en le programmant sur votre calculatrice.
-    Ajouter les instructions nécessaires pour consulter le solde final
-    et le nombre d'années.
+   Ajouter les instructions nécessaires pour consulter le solde final
+   et le nombre d'années.
 3. Traduire ce programme en assembleur.
 
 ## Ecrit 8 - Multiplication
@@ -168,75 +166,74 @@ De toute évidence, une approche est meilleure que l'autre...
 
 1. Sans se soucier d'optimiser.
 
-  Compléter le programme suivant afin qu'il réalise le produit $3 \times 12$
+Compléter le programme suivant afin qu'il réalise le produit $3 \times 12$
 
-  R1: 3, R2: 12, R3: résultat de la multiplication, R4: nombre d'additions déjà réalisées.
+R1: 3, R2: 12, R3: résultat de la multiplication, R4: nombre d'additions déjà réalisées.
 
-  ```
-      MOV R1, #3
-      MOV R2, #12
-      MOV R3, #0
-      MOV R4, #0
-    Produit:
-      CMP R4, R2
-      BEQ Fin
-      ADD R3, R3, R1
-      ...
-      B Produit
-  Fin:
-      HALT
-  ```
+```
+    MOV R1, #3
+    MOV R2, #12
+    MOV R3, #0
+    MOV R4, #0
+  Produit:
+    CMP R4, R2
+    BEQ Fin
+    ADD R3, R3, R1
+    ...
+    B Produit
+Fin:
+    HALT
+```
 
 2. En cherchant à minimiser le nombre d'instruction
 
-  Il est préférable de réaliser $12 + 12 + 12$ que $3+ 3 + \cdots + 3$.
+Il est préférable de réaliser $12 + 12 + 12$ que $3+ 3 + \cdots + 3$.
 
-  Afin d'améliorer le temps de calcul, nous allons comparer les nombres et utiliser
-  deux registres supplémentaires.
+Afin d'améliorer le temps de calcul, nous allons comparer les nombres et utiliser
+deux registres supplémentaires.
 
-  1. On charge dans R5 le plus petit de R1 et R2,
-  2. On charge dans R6 le plus grand de R1 et R2,
-  3. On réalise `R5 * R6`
+1. On charge dans R5 le plus petit de R1 et R2,
+2. On charge dans R6 le plus grand de R1 et R2,
+3. On réalise `R5 * R6`
 
-  Mémoire :
+Mémoire :
 
-  | Adresse | Valeur |
-  |---------|--------|
-  | 200     | 3      |
-  | 201     | 12     |
+| Adresse | Valeur |
+| ------- | ------ |
+| 200     | 3      |
+| 201     | 12     |
 
+```
+// R1: a
+// R2: b
+// R3: a * b
+// R4: compteur de tour
+// R5: temp
+      LDR R1, a
+      LDR R2, b
+      MOV R3, #0
+      MOV R4, #0
+      CMP ...
+      BLT Petit
+      B Produit
+Petit:
+      ...
+      ...
+      ...
+      B Produit
+Produit:
+      CMP R4, R2
+      BEQ Fin
+      ...
+      ...
+      B Produit
+Fin:
+      HALT
+a:    .WORD 12
+b:    .WORD 3
+```
 
-  ```
-  // R1: a
-  // R2: b
-  // R3: a * b
-  // R4: compteur de tour
-  // R5: temp
-        LDR R1, a
-        LDR R2, b
-        MOV R3, #0
-        MOV R4, #0
-        CMP ...
-        BLT Petit 
-        B Produit
-  Petit:
-        ...
-        ...
-        ...
-        B Produit
- Produit:
-        CMP R4, R2
-        BEQ Fin
-        ...
-        ...
-        B Produit
- Fin:
-        HALT
- a:    .WORD 12
- b:    .WORD 3
-  ```
-
-  Compléter le programme suivant. Vérifier qu'il exécute bien l'opération optimale.
+Compléter le programme suivant. Vérifier qu'il exécute bien l'opération optimale.
 
 ## Ecrit 9 - Division Euclidienne
 
@@ -300,7 +297,7 @@ Le code suivant présente un parcours séquentiel afin de déterminer un maximum
   7|      LDR R5, [R1+R3]   // charger la valeur courante
   8|      ADD R3, R3, #4    // incrémenter le compteur de boucle
   9|      CMP R5, R4        // comparer la valeur courante au max
- 10|      BGT nouveaumax    // on a un nouveau max ! 
+ 10|      BGT nouveaumax    // on a un nouveau max !
  11|      B continuer       // doit-on continuer la boucle ?
  12|nouveaumax:
  13|      MOV R4, R5        // sauvegarder le nouveau max
@@ -322,16 +319,16 @@ Le code suivant présente un parcours séquentiel afin de déterminer un maximum
 
 L'étape importante est en trois temps :
 
-* d'abord ligne 1, on charge une _adresse_,
-* ensuite ligne 3 on mesure le nombre d'octets, vu qu'on doit donner une adresse dans cette unité,
-* enfin ligne 7 `[R1+R3]` va nous donner la position du nombre courant.
+- d'abord ligne 1, on charge une _adresse_,
+- ensuite ligne 3 on mesure le nombre d'octets, vu qu'on doit donner une adresse dans cette unité,
+- enfin ligne 7 `[R1+R3]` va nous donner la position du nombre courant.
 
 1. Faire tourner ce programme à la main
 2. Que changer pour un tableau de 20 éléments ?
 3. L'adapter proprement pour déterminer :
 
-    a. le minimum des éléments,
-    b. la somme des éléments.
+   a. le minimum des éléments,
+   b. la somme des éléments.
 
 # Exercices de programmation
 
@@ -364,21 +361,20 @@ print("bonjour", nom)
 
 ## Programmation 2. Opérations courantes
 
-
 1. Exécutez le code python suivant (Thonny, sublime text etc.)
 
-    ```python
-    a = 0b10011111
-    b = 0b00110011
+   ```python
+   a = 0b10011111
+   b = 0b00110011
 
-    print(a + b)
-    print(a - b)
-    print(a & b)
-    print(a | b)
-    print(a ^ b)
-    print(a >> 2)
-    print(b << 2)
-    ```
+   print(a + b)
+   print(a - b)
+   print(a & b)
+   print(a | b)
+   print(a ^ b)
+   print(a >> 2)
+   print(b << 2)
+   ```
 
 2. Le traduire en ARMlite et vérifier les résultats obtenus.
 
@@ -386,7 +382,7 @@ print("bonjour", nom)
 
 On place 1000€ sur un compte.
 
-Chaque années on dépose 250€. 
+Chaque années on dépose 250€.
 
 Comptez à l'aide d'ARMlite le nombre d'années nécessaires pour doubler le capital initial.
 
@@ -400,43 +396,46 @@ Les [caractères imprimables à l'écran de la table ASCII](/docs/nsi/cours_prem
 
 1. Affichez les tous à l'écran sans retour à la ligne entre les caractères à l'aide d'une boucle.
 
-    ```
-     !"#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\]^_`abcdefghijklmnopqrstuvwxyz{|}~ 
-    ```
-2. Affichez une ligne par caractère avec sa valeur numérique d'abord 
+   ```
+    !"#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\]^_`abcdefghijklmnopqrstuvwxyz{|}~
+   ```
 
-    ```
-    32 
-    33 !
-    ...
-    64 @
-    65 A
-    66 B
-    67 C
-    ...
-    ```
+2. Affichez une ligne par caractère avec sa valeur numérique d'abord
+
+   ```
+   32
+   33 !
+   ...
+   64 @
+   65 A
+   66 B
+   67 C
+   ...
+   ```
 
 ## Programmation 5. Jeu à deux joueurs, le plus ou moins.
 
 On suppose le déroulé d'une partie suivante entre A et B :
 
 A choisit un nombre entre 1 et 100
-B doit le trouver. 
+B doit le trouver.
 
 A choisit 42
 
-* B propose une valeur, disons 50, A lui répond "C'est moins"
-* B propose une valeur, disons 25, A lui répond "C'est plus"
+- B propose une valeur, disons 50, A lui répond "C'est moins"
+- B propose une valeur, disons 25, A lui répond "C'est plus"
 
 etc.
 
-* B propose une valeur, disons 42 (enfin...). A lui répond "gagné" et la partie s'arrête.
+- B propose une valeur, disons 42 (enfin...). A lui répond "gagné" et la partie s'arrête.
 
 1. **Programmer ce jeu en ARMlite.**
 
-    On supposera que A saisit sa valeur et qu'elle est inconnue de B (qui ne triche pas en lisant les valeurs à l'écran...)
+   On supposera que A saisit sa valeur et qu'elle est inconnue de B (qui ne triche pas en lisant les valeurs à l'écran...)
+
+   **Aide** On pourra s'aider de [ce point de départ](./guess_start.arm)
 
 2. Améliorer le jeu en proposant de rejouer après une partie (`Taper 1 pour rejouer`).
 
 3. **Bonus délicat** à l'aide de la documentation, remplacer le joueur A par le choix aléatoire d'un entier.
-    Pour simplifier, on utilisera des nombres entre 1 et un puissance de 2 (entre 1 et 64, par exemple).
+   Pour simplifier, on utilisera des nombres entre 1 et un puissance de 2 (entre 1 et 64, par exemple).
