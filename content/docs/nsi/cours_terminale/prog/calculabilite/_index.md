@@ -8,39 +8,43 @@ weight: 100
 
 # Calculabilité - Problème de l'arrêt en Python
 
+## Un programme en tant que donnée
+
+[Introduction de Gilles Lassus](https://glassus.github.io/terminale_nsi/T2_Programmation/2.3_Calculabilite_Decidabilite/cours/)
+
 ## Terminaison
 
 On dit qu'une fonction **termine** si elle renvoie une valeur ou si elle lève une exception (par exemple `ZeroDivisionError` si une division par zéro est tentée).
 
 Avec cette définition, seulement deux situations peuvent se présenter lorsqu'on appelle une fonction :
 
-* Elle _termine_,
+- Elle _termine_,
 
-ou 
+ou
 
-* Elle _continue de calculer indéfiniment_
+- Elle _continue de calculer indéfiniment_
 
 Ainsi, la fonction `ma_fonction` (voir ci-dessous), termine pour un entier `n` inférieur ou égal à 10 (elle renvoie `None`) et ne termine pas pour `n` strictement plus grand que 10.
 
 En outre, cette fonction termine pour une chaîne de caractères `n` (en levant l'exception `TypeError` à cause de l'opération `+`).
 
-~~~python
+```python
 def ma_fonction(n):
   while n != 10 :
     n = n + 1
-~~~
+```
 
 ## De l'utilité d'une fonction `arret`
 
-On pourrait penser qu'il serait utile d'avoir en Python une fonction arrêt : 
+On pourrait penser qu'il serait utile d'avoir en Python une fonction arrêt :
 
-* qui termine sur toutes les entrées possibles, 
-* telle que `arret(f, x)` renvoie `True` si le calcul de `f(x)` termine 
-* et `False` sinon.
+- qui termine sur toutes les entrées possibles,
+- telle que `arret(f, x)` renvoie `True` si le calcul de `f(x)` termine
+- et `False` sinon.
 
 Une telle fonction, si elle était ajoutée au langage, permettrait d'éviter les boucles infinies en faisant un simple test.
 
-Si on voulait programmer une telle fonction, il serait naturel que la fonction `arret` accède au code de la fonction `f` (ce qui est possible grâce au module  `dis`), et analyse ce code, par quelque moyen compliqué, pour en déduire si oui ou non le calcul de `f(x)` va un jour terminer.
+Si on voulait programmer une telle fonction, il serait naturel que la fonction `arret` accède au code de la fonction `f` (ce qui est possible grâce au module `dis`), et analyse ce code, par quelque moyen compliqué, pour en déduire si oui ou non le calcul de `f(x)` va un jour terminer.
 
 ## Le Problème de l'arrêt...
 
@@ -48,11 +52,11 @@ La question :
 
 > "_Est-il possible de programmer la fonction `arret` ?_"
 
-est connue sous le nom de **problème de l'arrêt**. 
+est connue sous le nom de **problème de l'arrêt**.
 
 ## C'est impossible
 
-Nous allons montrer qu'une telle fonction ne peut pas exister. 
+Nous allons montrer qu'une telle fonction ne peut pas exister.
 
 Pour cela, nous allons employer un raisonnement par l'absurde.
 
@@ -75,19 +79,18 @@ def arret(f, x) -> bool:
 
 Nous pouvons alors l'utiliser pour programmer la fonction `strange` suivante :
 
-~~~python
+```python
 def strange(f, x):
   if arret(f, x):
     while True:
       pass
-~~~
+```
 
 Cette fonction teste si le calcul de `f(x)` termine.
 
-* si `f(x)` termine, elle rentre dans une boucle infinie dans laquelle elle ne fait rien.
+- si `f(x)` termine, elle rentre dans une boucle infinie dans laquelle elle ne fait rien.
 
-* Sinon, elle ne fait rien et termine.
-
+- Sinon, elle ne fait rien et termine.
 
 **Autrement dit, `strange(f, x)` termine si et seulement si `f(x)` ne termine pas.**
 
@@ -95,10 +98,10 @@ Cette fonction teste si le calcul de `f(x)` termine.
 
 La précédente fonction nous permet d'en définir une nouvelle, la fonction `paradox`.
 
-~~~python
+```python
 def paradox(f):
   strange(f, f)
-~~~
+```
 
 Par construction, le calcul de `paradox(f)` termine si et seulement si le calcul de `f(f)` ne termine pas. Appelons (1) cette propriété.
 
@@ -110,23 +113,20 @@ Maintenant, demandons-nous si le calcul de `paradox(paradox)` termine.
 
 Pour cela, dans la propriété (1), remplaçons `f` par `paradox`.
 
-La propriété devient : 
+La propriété devient :
 
 > _Le calcul de paradox(paradox) termine si et seulement si le calcul de paradox(paradox) ne termine pas._
 
-
 Cette dernière propriété est évidemment absurde (elle se contredit elle même).
-
 
 Nous pouvons donc conclure notre raisonnement par l'absurde et affirmer qu'il est impossible de programmer la fonction `arret`.
 
 ### Remarque
 
-Le problème de l'arrêt reste impossible même si on se limite à ce que les arguments de arrêt soient une 
-fonction `f` des entiers dans les entiers et un entier `x`. 
+Le problème de l'arrêt reste impossible même si on se limite à ce que les arguments de arrêt soient une
+fonction `f` des entiers dans les entiers et un entier `x`.
 
 Pourquoi ? Simplement parce que n'importe quelle valeur de n'importe quel type sera représenté en machine par une suite d'octet, soit à peu près un entier naturel.
-
 
 ## Complément
 
