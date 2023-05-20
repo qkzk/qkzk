@@ -205,7 +205,7 @@ fonction positif(n: entier)
     retourner n >= 0
 
 filter([0, -4, 6, -2, 1], positif)
-=> [0, 4, 1]
+=> [0, 6, 1]
 ```
  
 
