@@ -1,6 +1,6 @@
 
 ---
-title: "SQL Murder Mistery"
+title: "SQL Murder Mystery"
 author: "Guillaume Connan"
 date: "2022/06/07"
 weight: 1000

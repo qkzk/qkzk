@@ -8,7 +8,7 @@ weight: 100
 
 {{< hint info >}}
 Ce TP intéractif s'exécute directement dans le navigateur... ou presque.
-Certaines questions sont "papier" et doivent être traitées à l'extérieur.
+Certaines questions sont débranchées et doivent être traitées à l'extérieur.
 
 Chaque chargement de la page réinitialise vos requêtes, pensez à sauvegarder vos requêtes au fur et à mesure.
 {{< /hint >}}
@@ -19,10 +19,10 @@ Ce TP couvre le programme... et le dépasse largement !
 
 # Première partie : Jean-Pierre Combani, un aventurier moderne.
 
-SuperDéco, un magasin souhaite augmenter son chiffre d'affaire.
+Le magasin SuperDéco souhaite augmenter son chiffre d'affaire.
 Pour cela ils envisagent d'améliorer l'enregistrement des commandes.
 
-Ils souhaitent utiliser une base de donnée et font appel à vous (personne ne rit).
+Ils souhaitent utiliser une base de donnée et font appel à vos services (personne ne rit).
 
 Voici leurs objectifs :
 
