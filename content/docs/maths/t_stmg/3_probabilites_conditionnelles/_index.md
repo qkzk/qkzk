@@ -15,7 +15,7 @@ weight: 3
 
 {{< expand "Rappels" "..." >}}
 {{< hint warning >}}
-Lorsqu'on rencontre un phénomène _aléatoire_ (appelé _expérience_) on définit des _événéments_ (ensembles de _résultats possibles_).
+Lorsqu'on rencontre un phénomène _aléatoire_ (appelé _expérience_) on définit des _événements_ (ensembles de _résultats possibles_).
 
 On mesure la _probabilité_ d'un événement comme étant la chance qu'il se réalise.
 
