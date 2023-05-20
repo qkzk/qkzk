@@ -82,7 +82,7 @@ Par exemple, si $v_{n+1} = 0.5 v_n$ et $v_0=17$, on a $v_n = 17 \times 0.5^n$.
 
 {{< expand "Réciproque" "..." >}}
 {{< hint info >}}
-Toute suite donc le terme général s'écrit sous la forme $v_n = v_0 q^n$ est géométrique de raison $q$.
+Toute suite dont le terme général s'écrit sous la forme $v_n = v_0 q^n$ est géométrique de raison $q$.
 {{< /hint >}}
 {{< /expand >}}
 

@@ -110,7 +110,7 @@ Entrée : Des objets
 Sortie : L'objet le plus petit
 
 Je prends un objet
-Pour chacune des autres:
+Pour chacun des autres:
     S'il est plus petit que l'objet choisi
       Alors j'échange.
 	Fin Si
