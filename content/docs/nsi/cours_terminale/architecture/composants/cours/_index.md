@@ -61,7 +61,7 @@ tout programme est une suite d'opérations simples qui ont toutes la même forme
 
 ### Les microprocesseurs
 
-Au niveau technique , le microprocesseur est un circuit électronique intégré
+Au niveau technique, le microprocesseur est un circuit électronique intégré
 qui effectue des opérations. Sa taille est de plus en plus réduite.
 
 Les opérations qu'est capable d'effectuer un microprocesseur sont son jeu
@@ -79,10 +79,10 @@ seconde).
 Historiquement, deux familles de microprocesseurs sont disponibles sur le
 marché, basées sur des fonctionnements opposés :
 
-* Les processeurs RISC (_Reduced Instruction Set Computer) proposent un nombre
+* Les processeurs RISC (_Reduced Instruction Set Computer_) proposent un nombre
     restreint d'instructions, qu'il est possible d'effectuer efficacement et
     très rapidement.
-* Les processeurs CISC (_Complex Instruction Set Computer) disposent d'un
+* Les processeurs CISC (_Complex Instruction Set Computer_) disposent d'un
     nombre d'instructions plus important et plus élaborées, mais sont donc
     moins rapides pour effectuer ces instructions.
 
@@ -101,23 +101,25 @@ les données.
 
 > La mémoire peut être de deux natures :
 >
-> permanente : les données sont conservées lorsque la machine est éteinte
+> - **permanente** : les données sont conservées lorsque la machine est éteinte
 >
-> volatile : les données ne sont conservées que pour la durée de leur
+> - **volatile** : les données ne sont conservées que pour la durée de leur
 > utilisation
 
 
-Dans un ordinateur plusieurs grandes familles de mémoire sont utilisées :
+Dans un ordinateur plusieurs grandes familles de mémoire sont utilisées.
 
-* La mémoire vive contient les programmes et données nécessaires au
-    microprocesseur. C'est un mémoire volatile, mais accessible très rapidement.
-* Le stockage est constitué des dispositifs qui permettent de conserver de
+Par _vitesse croissante / taille décroissante_, on peut citer :
+
+* Le **stockage** est constitué des dispositifs qui permettent de conserver de
     manière permanente toutes les données (système d'exploitation, application,
     données).
-* Le cache est une mémoire très rapide, dans laquelle sont stockées des données
+* La **mémoire vive** contient les programmes et données nécessaires au
+    microprocesseur. C'est un mémoire volatile, mais accessible très rapidement.
+* Le **cache** est une mémoire très rapide, dans laquelle sont stockées des données
     auxquelles le microprocesseur a besoin d'accéder souvent, permettant ainsi
     un gain de temps.
-* Le registre est une mémoire, de taille réduite, mais directement intégrée
+* Le **registre** est une mémoire, de taille réduite, mais directement intégrée
     dans le microprocesseur, pour un gain d'accès très important. Pour les
     microprocesseurs actuels, la taille du registre est un facteur important
     de choix et de prix.
@@ -131,7 +133,7 @@ l'idée de base est d'intégrer dans une seule puce plusieurs éléments, de
 natures et de rôles différents, pour créer un système autonome capable
 d'effectuer une tâche spécifique.
 
-Ces dispositifs portent le nom de systèmes sur puce, ou_System On a Chip_
+Ces dispositifs portent le nom de systèmes sur puce, ou _System On a Chip_
 d'où l'appellation de SoCs.
 
 **Contept :**
