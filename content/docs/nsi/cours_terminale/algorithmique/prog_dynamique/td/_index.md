@@ -39,7 +39,7 @@ les sommets 2 et 5 ne sont pas reliés.
 > Déterminer la valeur maximale de la somme des chemins traversant une pyramide
 > de nombre.
 >
-> Dans le premier exemple, le chemin `3 - 4 - 7 - 5` à pour somme 21, qui est maximale.
+> Dans le premier exemple, le chemin `3 - 4 - 7 - 5` à pour somme 19, qui est maximale.
 
 
 
