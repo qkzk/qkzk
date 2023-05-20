@@ -472,7 +472,7 @@ class Disque:
     return self.__diametre / 2
 
   def diametre(self):
-    return 2 * self.__diametre
+    return self.__diametre
 
   def perimetre(self):
     return math.pi * self.__diametre
