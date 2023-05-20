@@ -120,9 +120,16 @@ Par exemple avec $u_3$ et $u_{n+1} = 1.6 \times u_n$.
 Menu **Suites**, ajouter une suite, **Récurrente d'ordre 1**, $u_{n+1} = 1.6 \times u_{n}$
 
 ![Progression géométrique vers l'infini](./numworks_1.png)
+{{< /hint >}}
+
+#### Cas d'une raison entre plus grande que 1
+
+{{< expand "raison plus grande que 1" "..." >}}
+Lorsque la raison d'une suite géométrique est plus grande que 1, les termes _divergent_ rapidement vers $+\infty$.
+{{< /expand >}}
+
 
 Lorsqu'on trace les termes d'une suite géométrique on remarque une _progression exponentielle_.
-{{< /hint >}}
 
 
 #### Cas d'une raison entre 0 et 1
