@@ -149,8 +149,8 @@ Traitons un exemple pour mieux comprendre :
 
 
 **Solution.** Si le sac est une pile, alors `build` renvoie une copie de la
-liste `p`. Si le sac est une file, alors build renvoie une copie en ordre
-inverse de la liste `p`.
+liste `p` en ordre inverse. Si le sac est une file, alors build renvoie une copie
+de la liste `p`.
 
 Il y a un peu de vocabulaire spécifique aux piles et aux files.
 Traditionnellement, ajouter un élément dans une pile se dit empiler (`push`),
