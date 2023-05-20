@@ -110,7 +110,7 @@ source est dans le domaine public
 ## Extraction des données d'une table
 
 ```sql
-SELECT noms_colonnes_séparés_par_virgules
+SELECT noms_colonnes_separes_par_virgules
     FROM nom_table;
 ```
 
@@ -128,7 +128,7 @@ SELECT DISTINCT categorie, genre
 ```
 
 ```sql
-SELECT noms_colonnes_séparés_par_virgules
+SELECT noms_colonnes_separes_par_virgules
     FROM nom_table
     WHERE nom_colonne op_comp valeur op_bool nom_colonne op_comp valeur;
 ```
@@ -150,7 +150,7 @@ SELECT code, effectif
 
 
 ```sql
-SELECT abrev.nom_colonne AS nom_affiché
+SELECT abrev.nom_colonne AS nom_affiche
     FROM nom_table AS abrev
     ORDER BY nom_colonne [DESC];
 ```
@@ -194,8 +194,8 @@ SELECT AVG(effectif) AS Moy_employes
 ## Modification des données
 
 ```sql
-INSERT INTO nom_table (liste_nom_colonnes_à_remplir)
-    VALUES (liste_des_valeurs_à_insérer_dans_ordre_liste_colonnes);
+INSERT INTO nom_table (liste_nom_colonnes_a_remplir)
+    VALUES (liste_des_valeurs_a_inserer_dans_ordre_liste_colonnes);
 ```
 
 ```sql

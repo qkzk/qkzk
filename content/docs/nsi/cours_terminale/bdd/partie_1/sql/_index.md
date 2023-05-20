@@ -29,7 +29,7 @@ weight: 2
 
 - Contrôle des données et des transactions
   - Gestion des autorisations d'accès aux données par les différents utilisateurs
-  - Gestion de l'exécution de transactions
+  - Gestion de l'exécution des transactions
     - Transaction = suite d'opérations de modification de la base de données
 
 {{< hint info >}}
@@ -185,7 +185,7 @@ Remarquez bien les deux lignes :
 ## Extraire des données d'une table avec `SELECT`
 
 ```sql
-SELECT noms_colonnes_séparés_par_virgules
+SELECT noms_colonnes_separes_par_virgules
     FROM nom_table;
 ```
 
@@ -269,7 +269,7 @@ Qu'obtient-on sans le mot clé `DISTINCT` ?
 Sélectionne uniquement les lignes qui respectent la clause du `WHERE`
 
 ```sql
-SELECT noms_colonnes_séparés_par_virgules
+SELECT noms_colonnes_separes_par_virgules
     FROM nom_table
     WHERE nom_colonne op_comp valeur op_bool nom_colonne op_comp valeur;
 ```
@@ -330,7 +330,7 @@ Affichez toutes les infos des employés gagnant moins de 40000 ou du départemen
 Change l'affichage et le nommage des données
 
 ```sql
-SELECT abrev.nom_colonne AS nom_affiché
+SELECT abrev.nom_colonne AS nom_affiche
     FROM nom_table AS abrev
     ORDER BY nom_colonne [DESC];
 ```
@@ -461,16 +461,16 @@ On utilisera un nom de colonne pertinent.
 
 ```sql
 INSERT INTO nom_table VALUES (liste_valeurs_dans_ordre_colonnes_table);
-INSERT INTO nom_table (liste_nom_colonnes_à_remplir)
-    VALUES (liste_des_valeurs_à_insérer_dans_ordre_liste_colonnes);
+INSERT INTO nom_table (liste_nom_colonnes_a_remplir)
+    VALUES (liste_des_valeurs_a_inserer_dans_ordre_liste_colonnes);
 ```
 
 {{< /hint >}}
 
 {{< sql title="Insertion avant, après" init="init_2_tables.sql">}}
-SELECT _ FROM department;
+SELECT * FROM department;
 INSERT INTO department VALUES (5,"Comms");
-SELECT _ FROM department;
+SELECT * FROM department;
 {{< /sql >}}
 
 {{< hint danger >}}
@@ -502,7 +502,7 @@ INSERT INTO department VALUES (2,"Admin");
 INSERT INTO department VALUES (3,"IT");
 INSERT INTO department VALUES (4,"Foreign");
 
-SELECT \* FROM department;
+SELECT * FROM department;
 {{< /sql >}}
 
 {{< expand "hors programme" "..." >}}
