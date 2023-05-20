@@ -94,7 +94,7 @@ En résumé :
 
 Soit la structure en arborescence suivante:
 
-![arbo](img/url.jpg)
+![arbo](/uploads/docsnsi/ihm_web/img/url.jpg)
 
 Le contenu du fichier "`fichier7.odp`" utilise le fichier
 "`fichier5.svg`". Donnez le chemin relatif qui devra être renseigné
