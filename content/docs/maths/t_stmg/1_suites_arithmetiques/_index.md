@@ -3,7 +3,7 @@ title: "1. Suites arithmétiques"
 subtitle: "Terminale STMG"
 author: "qkzk"
 geometry: margin=1.5cm
-weight: 1
+weight: 2
 
 ---
 

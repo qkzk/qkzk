@@ -8,6 +8,10 @@ bookCollapseSection: true
 
 - [diaporama](./rentree-slides.pdf)
 
+# Cahier de texte
+
+[Cahier de texte](./cahier_texte)
+
 # Cours
 
 1. [Suites arithmetiques](1_suites_arithmetiques)

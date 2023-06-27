@@ -3,7 +3,7 @@ title: "3. Probabilités conditionnelles"
 subtitle: "Terminale STMG"
 author: "qkzk"
 geometry: margin=1.2cm
-weight: 3
+weight: 4
 
 ---
 

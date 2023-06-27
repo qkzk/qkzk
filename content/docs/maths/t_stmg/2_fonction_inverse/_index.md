@@ -3,7 +3,7 @@ title: "2. Fonction Inverse"
 subtitle: "Terminale STMG"
 author: "qkzk"
 geometry: margin=1.5cm
-weight: 2
+weight: 3
 
 ---
 

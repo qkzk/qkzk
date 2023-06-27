@@ -3,7 +3,7 @@ title: "7. Fonctions logarithme décimal"
 subtitle: "Terminale STMG"
 author: "qkzk"
 geometry: margin=1.5cm
-weight: 7
+weight: 8
 
 ---
 

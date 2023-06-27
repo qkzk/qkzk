@@ -3,7 +3,7 @@ title: "6. Variables aléatoires, Loi binomiale"
 subtitle: "Terminale STMG"
 author: "qkzk"
 geometry: margin=1.2cm
-weight: 6
+weight: 7
 
 ---
 

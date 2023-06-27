@@ -3,7 +3,7 @@ title: "4. Suites géométriques"
 subtitle: "Terminale STMG"
 author: "qkzk"
 geometry: margin=1.5cm
-weight: 4
+weight: 5
 
 ---
 

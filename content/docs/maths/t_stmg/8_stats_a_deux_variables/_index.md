@@ -3,7 +3,7 @@ title: "8. Statistiques à deux variables"
 subtitle: "Terminale STMG"
 author: "qkzk"
 geometry: margin=1.5cm
-weight: 8
+weight: 9
 
 ---
 
