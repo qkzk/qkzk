@@ -48,7 +48,7 @@ les thèmes du programme à traiter pour l’épreuve de Mars. Il s’agit des m
 entrées prépondérantes que lors de la session de 2021, l’histoire de
 l’informatique en moins.
 
-## Date prévisionnelle des épreuves écrites
+## Date des épreuves
 
 - En 2021, elles ont été remplacées par le contrôle continu,
 - En 2022, elles ont eu lieu en mai avec le programme cité plus haut,
