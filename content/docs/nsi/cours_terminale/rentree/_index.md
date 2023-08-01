@@ -23,7 +23,7 @@ Nous allons évoquer l'organisation de cette année en NSI :
 
 L'horaire en terminale est de 6h par semaine.
 
-Pour la rentrée 2021, nous devrions avoir tous les cours en salle info.
+Tous les cours devraient se dérouler en salle info.
 
 # Programme
 
@@ -103,11 +103,13 @@ Le programme se découpe en quatre parties inégales :
     - la programmation dynamique (plus générale et importante que les
       algorithmes gloutons)
 - Les bases de données.
+
   Cette partie poursuit et généralise celle de première sur les données
   en table.
   Cette fois on manipule les données à l'aide d'une base de donnée : un
   logiciel spécifique (avec ou sans serveur) qui stocke et modifie les
   données efficacement.
+
 - L'architecture matérielle
   - La partie la plus importante concerne les algorithmes de routage
     dans un réseau. Comment faire circuler les paquets dans un réseau ?
@@ -178,7 +180,9 @@ Officiellement, rien n'est anoncé et nous devons donc préparer les épreuves p
 - Si les épreuves se déroulent en mars, nous seront dans les temps.
 - Si les épreuves se déroulent en mai/juin, nous devrons simplement continuer de travailler au même rythme et nous serons dans les temps.
 
-[Entrées prépondérantes en juillet 2023](./entrees_preponderantes)
+La progression présentée plus haut permet d'être dans les temps dans les deux cas.
+
+Plus des détails sur les [entrées prépondérantes en juillet 2023.](./entrees_preponderantes)
 
 ### 1. Partie écrite Durée : 3 heures 30
 
