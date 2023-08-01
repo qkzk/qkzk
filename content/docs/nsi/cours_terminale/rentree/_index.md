@@ -1,6 +1,5 @@
 ---
-title: "Terminale - NSI"
-subtitle: "Présentation rentrée"
+title: "Présentation rentrée"
 author: "qkzk"
 date: "2022/07/06"
 theme: metropolis
