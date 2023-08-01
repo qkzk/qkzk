@@ -148,6 +148,8 @@ Source : [eduscol](https://cache.media.eduscol.education.fr/file/Bac2021/05/8/le
 
 # Épreuves
 
+## Présentation des épreuves
+
 L'épreuve obligatoire de spécialité se déroule durant le troisième trimestre.
 
 Nature de l'épreuve
@@ -159,54 +161,72 @@ L'épreuve terminale obligatoire de spécialité est composée de deux parties :
 
 La note globale de l'épreuve est donnée sur 20 points.
 
-1. **Partie écrite**\
-   Durée : 3 heures 30
+### 0. Date des épreuves
 
-   **Modalités**\
-   _La partie écrite consiste en la résolution de trois exercices permettant
-   d'évaluer les connaissances et les capacités attendues conformément aux
-   programmes de première et de terminale de la spécialité.
-   Chaque exercice est noté sur 4 points_.
+Le nouveau baccalauréat ayant été "lancé" juste avant le premier confinement, son déroulement a été adapté chaque année depuis 2020.
 
-   _Le sujet propose cinq exercices, parmi lesquels le candidat choisit les trois
-   qu'il traitera. Ces cinq exercices permettent d'aborder les différentes
-   rubriques du programme, sans obligation d'exhaustivité. Le sujet comprend
-   obligatoirement au moins un exercice relatif à chacune des trois rubriques
-   suivantes :_
+Ainsi :
 
-   - _traitement de données en tables et bases de données ;_
-   - _architectures matérielles, systèmes d'exploitation et réseaux ;_
-   - _algorithmique, langages et programmation._
+- En 2020, les épreuves ont été remplacées par le contrôle continu,
+- En 2021, elles se sont déroulées en **mai 2021** avec les entrées prépondérantes prévues pour **mars**,
+- En 2022, elles se sont déroulées en **mars 2022** avec les entrées prépondérantes prévues pour **mars**.
 
-2. **Partie pratique**\
-   Durée : 1 heure
+À ce jour (fin juillet 2023), le ministère n'exclu pas de déplacer les épreuves en mai/juin. J'_imagine_ que les entrées prépondérantes seraient alors adaptées.
 
-   **Modalités**\
-   _La partie pratique consiste en la résolution de deux exercices sur ordinateur,
-   chacun étant noté sur 4 points._
+Officiellement, rien n'est anoncé et nous devons donc préparer les épreuves pour mars avec les entrées prépondérantes de mars.
 
-   _Le candidat est évalué sur la base d'un dialogue avec un professeur examinateur.
-   Un examinateur évalue au maximum quatre élèves. L'examinateur ne peut pas
-   évaluer un élève qu'il a eu en classe durant l'année en cours._
+- Si les épreuves se déroulent en mars, nous seront dans les temps.
+- Si les épreuves se déroulent en mai/juin, nous devrons simplement continuer de travailler au même rythme et nous serons dans les temps.
 
-   _L'évaluation de cette partie se déroule au cours du deuxième trimestre pendant
-   la période de l'épreuve écrite de spécialité._
+[Entrées prépondérantes en juillet 2023](./entrees_preponderantes)
 
-   **Premier exercice**\
-   _Le premier exercice consiste à programmer un algorithme figurant explicitement
-   au programme, ne présentant pas de difficulté particulière, dont on fournit
-   une spécification. Il s'agit donc de restituer un algorithme rencontré et
-   travaillé à plusieurs reprises en cours de formation. Le sujet peut proposer
-   un jeu de test avec les réponses attendues pour permettre au candidat de
-   vérifier son travail._
+### 1. Partie écrite Durée : 3 heures 30
 
-   **Deuxième exercice**\
-   _Pour le second exercice, un programme est fourni au candidat. Cet exercice ne
-   demande pas l'écriture complète d'un programme, mais permet de valider des
-   compétences de programmation suivant des modalités variées : le candidat doit,
-   par exemple, compléter un programme « à trous » afin de répondre à une
-   spécification donnée, ou encore compléter un programme pour le documenter, ou
-   encore compléter un programme en ajoutant des assertions, etc._
+**Modalités**
+
+_La partie écrite consiste en la résolution de trois exercices permettant
+d'évaluer les connaissances et les capacités attendues conformément aux
+programmes de première et de terminale de la spécialité.
+Chaque exercice est noté sur 4 points_.
+
+_Le sujet propose cinq exercices, parmi lesquels le candidat choisit les trois
+qu'il traitera. Ces cinq exercices permettent d'aborder les différentes
+rubriques du programme, sans obligation d'exhaustivité. Le sujet comprend
+obligatoirement au moins un exercice relatif à chacune des trois rubriques
+suivantes :_
+
+- _traitement de données en tables et bases de données ;_
+- _architectures matérielles, systèmes d'exploitation et réseaux ;_
+- _algorithmique, langages et programmation._
+
+### 2. Partie pratique - Durée : 1 heure
+
+**Modalités**\
+ _La partie pratique consiste en la résolution de deux exercices sur ordinateur,
+chacun étant noté sur 4 points._
+
+_Le candidat est évalué sur la base d'un dialogue avec un professeur examinateur.
+Un examinateur évalue au maximum quatre élèves. L'examinateur ne peut pas
+évaluer un élève qu'il a eu en classe durant l'année en cours._
+
+_L'évaluation de cette partie se déroule au cours du deuxième trimestre pendant
+la période de l'épreuve écrite de spécialité._
+
+**Premier exercice**\
+ _Le premier exercice consiste à programmer un algorithme figurant explicitement
+au programme, ne présentant pas de difficulté particulière, dont on fournit
+une spécification. Il s'agit donc de restituer un algorithme rencontré et
+travaillé à plusieurs reprises en cours de formation. Le sujet peut proposer
+un jeu de test avec les réponses attendues pour permettre au candidat de
+vérifier son travail._
+
+**Deuxième exercice**\
+ _Pour le second exercice, un programme est fourni au candidat. Cet exercice ne
+demande pas l'écriture complète d'un programme, mais permet de valider des
+compétences de programmation suivant des modalités variées : le candidat doit,
+par exemple, compléter un programme « à trous » afin de répondre à une
+spécification donnée, ou encore compléter un programme pour le documenter, ou
+encore compléter un programme en ajoutant des assertions, etc._
 
 ## Absence, dispense et aménagement de la partie pratique
 
