@@ -21,9 +21,8 @@ weight: 6
 ## Un éditeur de texte parmi :
 
 * [Thonny](https://thonny.org/) Thonny est un éditeur de texte adapté aux débutants. Il ne fonctionne que pour Python.
-* [Atom](https://atom.io/) Éditeur de texte développé javascript par github. Très extensible, il fonctionne sur toutes les plateformes. C'est celui que j'utilise.
 * [Sublime Text](http://www.sublimetext.com/) Editeur de texte complet et multi plateformes (windows, osx, linux). C'est un freemium : l'acheter débloque de nouvelles fonctions (peu utiles).
-* [Visual Studio](https://code.visualstudio.com/). Le petit chouchou actuel. Très puissant.
+* [Visual Studio Code](https://code.visualstudio.com/). Un éditeur de code fonctionnant sur toutes les plateformes et très prisé. Il utilise un moteur graphique écrit en JavaScript et ses nombreuses extensions permettent de développer dans tous les langages.
 
 Citons ceux qui ont du succès : [PyCharm](https://www.jetbrains.com/pycharm/) et [vim](https://www.vim.org/)
 
