@@ -19,25 +19,23 @@ Une _fréquence_ ou une _proportion_ est un nombre réel compris entre 0 et 1. E
 
 **Exemple**
 
-> Parmi les 120 oiseaux ayant été filmés par une caméra, 30 sont des merles.
->
-> L'effectif total est 120, l'effectif des merles est 30 donc leur proportion est $\dfrac{30}{120}=0.25$.
+Parmi les 120 oiseaux ayant été filmés par une caméra, 30 sont des merles.
+
+L'effectif total est 120, l'effectif des merles est 30 donc leur proportion est $\dfrac{30}{120}=0.25$.
 
 **Questions**
 
-> On a compté 30 lapins albinos lors d'une capture. Leur proportion parmi tous les lapins est 0.15.
->
-> Combien de lapins a-t-on capturé ?
+1. On a compté 30 lapins albinos lors d'une capture. Leur proportion parmi tous les lapins est 0.15.
 
-> ---
->
-> Un sac opaque contient des billes colorées et cinq de ces billes sont bleues. Si on tire une bille au hasard, la probabilité d'obtenir une bille bleue est $\frac{1}{3}$.
->
-> Combien de billes y-a-t-il dans le sac ?
->
-> - [ ] 5
-> - [ ] 15
-> - [ ] 20
+   Combien de lapins a-t-on capturé ?
+
+2. Un sac opaque contient des billes colorées et cinq de ces billes sont bleues. Si on tire une bille au hasard, la probabilité d'obtenir une bille bleue est $\frac{1}{3}$.
+
+   Combien de billes y-a-t-il dans le sac ?
+
+   - 5
+   - 15
+   - 20
 
 ---
 
@@ -73,7 +71,9 @@ Le nombre total d’espèces peut être extrapolé à partir du nombre d’espè
 
 ### Doc.2 – Des méthodes d’étude modernes de la biodiversité : barcoding moléculaire et metabarcoding
 
-![Barcoding moléculaire](../img/doc2_1.png)
+| ![Barcoding moléculaire](../img/doc2_1.png) |
+| :-----------------------------------------: |
+|           _Barcoding moléculaire_           |
 
 Le _barcoding_ moléculaire consiste à identifier une espèce en comparant une courte séquence de son ADN à toutes les séquences connues d’ADN rassemblées dans une banque de données, comme si l’on "scannait" son code-barres génétique.
 
@@ -83,11 +83,12 @@ De 2009 à 2013, les équipes de recherche à bord du TARA ont réalisé une ét
 
 ![Abondance relative](../img/doc2_2.png)
 
-La carte ci-contre présente l’abondance relative des différents taxons dans trois des lieux étudiés.
+La carte ci-dessus présente l’abondance relative des différents taxons dans trois des lieux étudiés.
 
 ### Doc.3 – Méthodes d’analyse morphologique et recensement de planctons
 
-![3](../img/doc3_1.png){width=50%} ![4](../img/doc3_2.png){width=50%}
+| ![3](../img/doc3_1.png) | ![4](../img/doc3_2.png) |
+| ----------------------- | ----------------------- |
 
 ### Exercice n°1 :
 
@@ -103,15 +104,27 @@ La carte ci-contre présente l’abondance relative des différents taxons dans 
 
 1. Écrire les nombres suivants sous forme décimale :
 
-   a. $\frac{7}{40}\times 100$ \qquad b. $\frac{111}{200}\times 100$ \qquad c. $\frac{5}{8}\times 100$
+   a. $\frac{7}{40}\times 100$
+
+   b. $\frac{111}{200}\times 100$
+
+   c. $\frac{5}{8}\times 100$
 
 2. Déterminer dans chaque cas suivant l’entier naturel $n_E$ :
 
-   a. $0.15 = \frac{n_E}{200}$ \quad b. $0.06=\frac{n_E}{150}$ \quad c. $0.6=\frac{n_E}{40}$
+   a. $0.15 = \frac{n_E}{200}$
+
+   b. $0.06=\frac{n_E}{150}$
+
+   c. $0.6=\frac{n_E}{40}$
 
 3. Déterminer dans chaque cas suivant l’entier naturel $n$ :
 
-   a. $0.42=\frac{21}{n}$ \quad b. $0.8=\frac{1200}{n}$ \quad c. $0.25=\frac{700}{n}$
+   a. $0.42=\frac{21}{n}$
+
+   b. $0.8=\frac{1200}{n}$
+
+   c. $0.25=\frac{700}{n}$
 
 ---
 

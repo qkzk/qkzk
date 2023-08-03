@@ -26,7 +26,7 @@ Dans une population, la fréquence des allèles transmis lors de la reproduction
 
 ## Document 1
 
-$\,$![doc8](../img/doc8.png)
+![doc8](../img/doc8.png)
 
 ### Questions
 
@@ -47,7 +47,7 @@ Discipline ayant pour objet d’étude la protection des espèces, et visant à 
 
 _Outil de simulation_ : [**lien**](https://www.pedagogie.ac-nice.fr/svt/productions/derive-diplo/index.htm)
 
-$\,$![doc12](../img/doc12.png)
+![doc12](../img/doc12.png)
 
 ### Questions
 

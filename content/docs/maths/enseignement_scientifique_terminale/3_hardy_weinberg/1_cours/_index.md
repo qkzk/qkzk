@@ -40,7 +40,7 @@ $$
 
 ## 2. Document
 
-$\,$![Couleur des fleurs](../img/doc1.png)
+![Couleur des fleurs](../img/doc1.png)
 
 ### Questions :
 
@@ -78,19 +78,21 @@ où la fréquence allélique est déterminée à partir d’une génération que
 $$p = f(A//A) + \frac{1}{2}f(A//a)$$
 $$q = f(a//a) + \frac{1}{2}f(A//a)$$
 
-_Remarque_ La somme des fréquences génotypique étant nécessairement égale à 1, on a : $p^2 + 2pq + q^2=1$.
+_Remarque_ La somme des fréquences génotypique étant nécessairement égale à 1, on a :
 
-## 3. Activité
+$$p^2 + 2pq + q^2=1$$
+
+## 4. Activité
 
 ### Différentes couleurs de fourrures
 
 On a réintroduit une population de loup dans un Parc National. Cette population présente deux couleurs de fourrure : noire ou grise. On sait que la couleur de la fourrure est contrôlée par un gène qui existe sous deux formes (allèle) : A ou a. L’allèle A étant dominante sur a, les loups de génotype A//A et A//a sont noirs tandis que les loups de génotype a//a sont gris.
 
-$\,$![doc2](../img/doc2.png)
+![doc2](../img/doc2.png)
 
 ### Tableur – modélisation de l’évolution génétique
 
-$\,$![doc3](../img/doc3.png)
+![doc3](../img/doc3.png)
 
 ### Questions
 
@@ -98,16 +100,20 @@ $\,$![doc3](../img/doc3.png)
 2. Identifier les cases dans lesquelles les formules suivantes ont été utilisées :
 
    a. $\tt{=C2/E\$2}$
+
    b. $\tt{=C6+C7/2}$
+
    c. $\tt{=1-B11}$
-   d. $\tt{=2*B11*B12}$
+
+   d. $\tt{=2 * B11*B12}$
+
    e. $\tt{=B15*E\$14}$
 
 3. Justifier que l’équilibre d’Hardy-Weinberg n’était pas réalisé en génération 0. (préciser les effectifs qu’on devrait observer).
 4. On observe une stabilité des fréquences au delà de la seconde génération, montrer qu’en utilisant les fréquences génotypique d’équilibre $(f_{HW})$ les fréquences alléliques sont constantes de génération en génération (indication : utiliser que $q = 1-p$).
 5. _Pour l’exemple du cours, sur les fleurs rouges, roses et blanches :_ montrer que les effectifs relevés sont ("presque") à l’équilibre de Hardy-Weinberg.
 
-## 4. Exercices
+## 5. Exercices
 
 ### Exercice 1 : Vrai / Faux
 
@@ -120,7 +126,7 @@ D’après ce graphique :
 3. il n’existe aucune fréquence $p$ pour laquelle les fréquences des génotypes A//A et A//a sont identiques.
 4. lorsque $q$ vaut 1, il n’y a que des individus du génotype a//a.
 
-$\,$![doc4](../img/doc4.png)
+![doc4](../img/doc4.png)
 
 ### Exercice 2
 
@@ -143,9 +149,9 @@ Des recherches montrent que la fréquence relative de l’allèle a est $q = 0,0
 
 ### Exercice 4 - Entrainement
 
-$\,$![doc5](../img/doc5.png)
+![doc5](../img/doc5.png)
 
-## 5. Activité : spé maths
+## 6. Activité : spé maths
 
 _ÉVOLUTION GÉNÉTIQUE ET ÉQUILIBRE DE HARDY-WEINBERG_
 
@@ -170,7 +176,9 @@ On note :
 - AA l’évènement : « l’allèle provient d’un individu de génotype A//A »; Aa l’évènement : « l’allèle provient d’un individu de génotype A//a »;
 - aA l’évènement : « l’allèle provient d’un individu de génotype a//A »; aa l’évènement : « l’allèle provient d’un individu de génotype a//a ».
 
-On a alors pour tout entier naturel $n, P(A) = p_n, P(a) = q_n, P(AA) = u_n, P(Aa) = v_n \text{ et } P(aa) = w_n$.
+On a alors pour tout entier naturel $n$ :
+
+$$P(A) = p_n, P(a) = q_n, P(AA) = u_n, P(Aa) = v_n \text{ et } P(aa) = w_n$$
 
 1. Déterminer toutes les probabilités conditionnelles du type $P_{AA}(A), P_{AA}(a), P_{Aa}(A)$, etc.
 2. Compléter l’arbre de probabilités ci-dessous, en faisant intervenir les évènements $A, a, AA, Aa \text{ et } aa$ :

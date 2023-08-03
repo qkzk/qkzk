@@ -12,15 +12,13 @@ _Lors d’estimations de proportions les résultats résultent d’une part d’
 
 # 3. L'intervalle de confiance
 
-![img](../img/fig1_lgn.png)
-
 ## 1. Loi des grands nombres
 
 Dans une expérience aléatoire, on note $f$ la probabilité d’un évènement (ou probabilité théorique). Plus on répète cette expérience, plus la fréquence de réalisation (............................ $p$) de l’évènement .....................
 
 ![1_lgn](../img/fig1_lgn.png)
 
-L’intervalle de confiance quantifie la précision de l’estimation. Il dépend de la taille de l’échantillon :**Plus l’échantillon est grand plus l’amplitude de l’intervalle est faible.**
+L’intervalle de confiance quantifie la précision de l’estimation. Il dépend de la taille de l’échantillon : **Plus l’échantillon est grand plus l’amplitude de l’intervalle est faible.**
 
 ---
 
@@ -32,7 +30,7 @@ une marge d’erreur
 $$I_C = \left[p-\frac{1}{\sqrt{n}}; p+\frac{1}{\sqrt{n}}\right]$$
 
 $I_C$ désigne l’intervalle de confiance, $p = \frac{m}{n}$ la proportion (ou fréquence) d’individus marqués ($m$) dans l’échantillon de recapture (de taille $n$).
-$\epsilon = \dfrac{1}{\sqrt{n}}$ est la marge d’erreur.
+$\varepsilon = \dfrac{1}{\sqrt{n}}$ est la marge d’erreur.
 
 La proportion réelle dans la population totale a une probabilité de 95% de se situer dans l’intervalle de confiance encadrant la proportion estimée à partir de l’échantillon.
 
@@ -40,7 +38,7 @@ La proportion réelle dans la population totale a une probabilité de 95% de se 
 
 Cette version (il y en a d'autres...) de l'intervalle de confiance n'est valide que si :
 
-$$n\geq 30\;, n\times f \geq 5 \text{ et } n\times(1-f) \geq 5$$
+$$n\geq 30,\quad n\times f \geq 5 \quad\text{ et }\quad n\times(1-f) \geq 5$$
 
 ### Le centre de l'intervalle de confiance est $p$ et la marge d'erreur est la moitié de l'amplitude.
 
@@ -103,7 +101,7 @@ Dès leur arrivée en Nouvelle-Zélande autour de 1200, les être humains y ont 
 
 **Calcul de l'intervalle de confiance ($IC$) pour un niveau de confiance de 95%.**
 
-$$IC = [f-\epsilon;f+\epsilon] \text{ où } \epsilon = 1;96 \times \frac{f\times (1-f)}{n}$$
+$$IC = [f-\varepsilon;f+\varepsilon] \quad \text{ où } \quad \varepsilon = 1,96 \times \frac{f\times (1-f)}{n}$$
 
 $f$ : fréquence observée du caractère dans l'échantillon
 

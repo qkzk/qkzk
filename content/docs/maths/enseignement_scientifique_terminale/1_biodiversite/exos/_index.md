@@ -27,13 +27,18 @@ Trouver la valeur de $x, y$ et de $z$ du tableau des charges de quelques propri√
 | ------------------------ | ----- | ------ | ------ | ---- |
 | Montant des charges en ‚Ç¨ | 82,32 | 171,36 | 189,00 | $z$  |
 
-## Exercice 3. Calculer x dans chacun des cas :
+## Exercice 3. Calculer $x$ dans chacun des cas :
 
 1. $\dfrac{x}{1,5} = \dfrac{1,2}{9}$
+
 2. $\dfrac{0,49}{0,14} = \dfrac{2,8}{x}$
+
 3. $\dfrac{2,7}{x} = \dfrac{4,2}{14}$
+
 4. $\dfrac{x}{10} = \dfrac{10}{x}$
+
 5. $\dfrac{x}{0,35} = 5,2$
+
 6. $\dfrac{0,26}{x} = 5,2$
 
 ## Exercice 4.

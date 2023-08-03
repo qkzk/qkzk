@@ -16,9 +16,9 @@ L'intervalle de confiance au niveau de confiance de 95% pour une proportion inco
 
 ### La fréquence observée du caractère est :
 
-- [ ] 7%
-- [ ] 18%
-- [ ] 29%
+- 7%
+- 18%
+- 29%
 
 ## Exercice 2
 
@@ -30,21 +30,21 @@ On cherche à estimer la proportion de la lapins touchés par la myxomatose dans
 
 ### La taille de l'échantillon étudié est :
 
-- [ ] 12
-- [ ] 138
-- [ ] 150
+- 12
+- 138
+- 150
 
 ### La fréquence de lapins infectés par la myxomatose dans cet échantillon est égale à :
 
-- [ ] 8%
-- [ ] 8.7%
-- [ ] 92%
+- 8%
+- 8.7%
+- 92%
 
 ### La marge d'erreur étant ici de 4.3%, l'intervalle de confiance au niveau de confiance de 95% est :
 
-- [ ] $[0.037; 0.123]$
-- [ ] $[0.043; 0.086]$
-- [ ] $[0.907; 0.993]$
+- $[0.037; 0.123]$
+- $[0.043; 0.086]$
+- $[0.907; 0.993]$
 
 ## Exercice 4
 
@@ -56,7 +56,9 @@ On s'intéresse à la proportion d'un cacatère dans une population. Pour ce fai
 
 Suite à un prélèvement, on a obtenu le résultat suivant :
 
-"00101010001100111000101101001000100".
+```
+00101010001100111000101101001000100
+```
 
 1. Préciser la taille de l'échantillon $n$ et le nombre d'individus $n_E$ possédant le caractère dans cet échantillon. En déduire la fréquence observée $f_{obs}$ du caractère.
 
@@ -64,7 +66,14 @@ Suite à un prélèvement, on a obtenu le résultat suivant :
 
 3. Dans des conditions similaires, on a prélevé un autre échantillon dont voici le résultat :
 
-   "110010000001110100110001101001111010100001110001000011001000000011111000000111001011000000111000000100".
+   ```
+   11001000000111010011
+   00011010011110101000
+   01110001000011001000
+   00001111100000011100
+   10110000001110000001
+   00
+   ```
 
    Répondre aux questions 1. et 2. avec cet échantillon.
 
@@ -106,7 +115,13 @@ $$3.92\frac{\sqrt{f_{obs}(1-f_{obs})}}{\sqrt{n}}$$
 
 4. Tracer également la courbe représentative de la fonction $t\mapsto \frac{1.96}{\sqrt{t}}$ sur $]0;1200]$.
 
-   Recopier et compléter les phrases suivantes en justifiant à l'aide du graphique : "Plus la taille de l'échantillon augmente, plus la marge d'erreur ..." et "Pour diviser la marge d'erreur par deux, il faudrait multiplier la ... par ...".
+   Recopier et compléter les phrases suivantes en justifiant à l'aide du graphique :
+
+   > _"Plus la taille de l'échantillon augmente, plus la marge d'erreur ..."_
+
+   et
+
+   > _"Pour diviser la marge d'erreur par deux, il faudrait multiplier la ... par ..."._
 
    **Spé maths** justifier les phrases par des arguments algébriques.
 

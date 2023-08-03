@@ -57,7 +57,7 @@ En effet, on a $\dfrac{u(n+1)-u(n)}{u(n)} = t$, soit $u(n+1)= (1+t) \times u(n),
 
 $$u(0)\xrightarrow{\times (1+t)} u(1)\xrightarrow{\times (1+t)} u(2)\xrightarrow{\times (1+t)} u(3) \xrightarrow{\times (1+t)} \cdots$$
 
-Le nombre d'habitants s'exprime en fonction de $n$ par : $$u(n) = \phantom{U(0)+N X R .......}$$
+Le nombre d'habitants s'exprime en fonction de $n$ par : $$u(n) = \ldots\ldots$$
 
 [Vidéo](\href{https://youtu.be/4y201FhO_PE)
 
@@ -73,7 +73,7 @@ Le _temps de doublement_ est le temps nécessaire pour qu'une quantité voie sa 
 
 _Représentation obtenue sur tableur_
 
-La croissance démographique du Niger est la plus rapide du monde. De $24,2$ millions en $2020$, le Niger pourrait voir, selon la présidence du pays, sa population quasiment doubler d'ici à 2040, passant ainsi à près de 50 millions d'habitants.
+> La croissance démographique du Niger est la plus rapide du monde. De $24,2$ millions en $2020$, le Niger pourrait voir, selon la présidence du pays, sa population quasiment doubler d'ici à 2040, passant ainsi à près de 50 millions d'habitants.
 
 d'après _Le Monde_
 

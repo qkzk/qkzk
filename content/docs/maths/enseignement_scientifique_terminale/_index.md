@@ -1,5 +1,5 @@
 ---
-title: Enseignement Scientifique Terminale
+title: "Terminale : ES"
 author: qkzk
 date: 2023-08-02
 theme: metropolis
@@ -8,7 +8,7 @@ bookCollapseSection: true
 geometry: "margin=1.5cm"
 ---
 
-# Enseignement Scientifique - Terminale
+# Partie mathématiques
 
 1. [Biodiversite](./1_biodiversite)
 1. [Estimations](./2_estimation)

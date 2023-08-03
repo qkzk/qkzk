@@ -47,7 +47,7 @@ On a $u(n+1)-u(n) = r$, soit $u(n+1)= u(n) + r, \text{ pour tout } n \in \mathbb
 
 $$u(0)\xrightarrow{+r} u(1)\xrightarrow{+r} u(2)\xrightarrow{+r} u(3) \xrightarrow{+r} \cdots$$
 
-Le nombre d'habitants s'exprime en fonction de $n$ par : $$u(n) = \phantom{U(0)+N X R .......}$$
+Le nombre d'habitants s'exprime en fonction de $n$ par : $$u(n) = \ldots\ldots$$
 
 [Vidéo](https://youtu.be/Rz1GbWg0TJU) : ![0](../img/img0.png)
 
