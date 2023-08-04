@@ -15,7 +15,7 @@ header-includes: |
 
 ---
 
-[pdf](./exo_td_complement.pdf)
+[pdf](./exo_td_complement.pdf) - [d'autres exercices](./exercices_Premiere.pdf)
 
 ## 1. Vocabulaire sur les fonctions
 
