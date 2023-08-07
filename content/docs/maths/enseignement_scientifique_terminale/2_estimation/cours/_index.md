@@ -94,7 +94,7 @@ Dès leur arrivée en Nouvelle-Zélande autour de 1200, les être humains y ont 
 
 **Calcul de l'intervalle de confiance ($IC$) pour un niveau de confiance de 95%.**
 
-$$IC = [f-\varepsilon;f+\varepsilon] \quad \text{ où } \quad \varepsilon = 1,96 \times \frac{f\times (1-f)}{n}$$
+$$IC = [f-\varepsilon;f+\varepsilon] \quad \text{ où } \quad \varepsilon = 1,96 \times \sqrt{\frac{f\times (1-f)}{n}}$$
 
 $f$ : fréquence observée du caractère dans l'échantillon
 

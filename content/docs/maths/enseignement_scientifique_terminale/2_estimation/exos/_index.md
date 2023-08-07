@@ -26,7 +26,7 @@ L'estimation de la proportion d'un caractère dans une population est-elle plus 
 
 ## Exercice 3
 
-On cherche à estimer la proportion de la lapins touchés par la myxomatose dans un département. 150 lapins sont prélevés : 12 s'avèrent infectés et subiront un traitement ; les 138 autres sont vaccinés puis remis dans leur milieu.
+On cherche à estimer la proportion de lapins touchés par la myxomatose dans un département. 150 lapins sont prélevés : 12 s'avèrent infectés et subiront un traitement ; les 138 autres sont vaccinés puis remis dans leur milieu.
 
 ### La taille de l'échantillon étudié est :
 
@@ -52,7 +52,7 @@ Pour $f=0.4$ et $n=250$ calculer l'intervalle de confiance au seuil de 95%.
 
 ## Exercice 5
 
-On s'intéresse à la proportion d'un cacatère dans une population. Pour ce faire, on prélève un échantillon : si un individu possède ce caractère, alors on note "1" ; sinon on note "0".
+On s'intéresse à la proportion d'un cacatère dans une population. Pour ce faire, on prélève un échantillon : si un individu possède ce caractère, alors on note `1` ; sinon on note `0`.
 
 Suite à un prélèvement, on a obtenu le résultat suivant :
 
@@ -72,7 +72,6 @@ Suite à un prélèvement, on a obtenu le résultat suivant :
    01110001000011001000
    00001111100000011100
    10110000001110000001
-   00
    ```
 
    Répondre aux questions 1. et 2. avec cet échantillon.
