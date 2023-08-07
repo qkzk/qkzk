@@ -74,22 +74,15 @@ En France, la proportion de personnes de groupe sanguin AB serait de 10% avec un
 
 ### Exercice 4. Vaccication
 
-Le coryza du chat est une maladie virale associée à un syndrome respiratoire qui touche principalement les chatons. Pour estimerla prévalence (proportion de sa présence) dans un département, on a prélevé un échantillon de 145 chatons : 25 s'avèrent porteur de la maladie.
+Le coryza du chat est une maladie virale associée à un syndrome respiratoire qui touche principalement les chatons. Pour estimer la prévalence (proportion de sa présence) dans un département, on a prélevé un échantillon de 145 chatons : 25 s'avèrent porteur de la maladie.
 
-1. Calculer la fréquence observée de chatons porteus du coryza dans cet échantillon.
+1. Calculer la fréquence observée de chatons porteur du coryza dans cet échantillon.
 2. Calculer la marge d'erreur et déterminer l'intervalle de confiance au niveau de confiance de 95% pour l'estimation de la proportion de chatons touchés par cette maladie dans ce département.
 3. L'amplitude de cet intervalle étant trop importante, il est décidé de prélever un autre échantillon. Quelle devrait être sa taille pour que la marge d'erreur soit proche de 4% ?
 
 ### Exercice 5. La Nouvelle-Zélande face à une espèce invasive
 
 Dès leur arrivée en Nouvelle-Zélande autour de 1200, les être humains y ont introduit de nombreuses espèces. Sans prédateurs naturels, certaines pullulent. Ainsi, de nos jours, la vallée de l'Orgongorongo est confrontée à une invasion de rats noirs, que les autorités essaient de limiter. Un site de la vallée est pris pour étude.
-
-1. Déterminer la taille de la population au départ de l'étude en 2003.
-2. Déterminer la taille de la population en 2004.
-3. Le gouvernement craint une croissance de la population. À l'aide des résultats de l'étude, donner des arguments pour confirmer ou modérer cette crainte. Que conseiller d'autre ?
-4. Une ville envisage de lancer une campagne massive de dératisation. Les scientifiques veulent estimer l'impact du poison sur la mortalité au sein de la population de rats. Sur 200 rats retrouvés morts depuis le début de l'étude, 100 présentent des signes d'emoisonnement, soit 50%.
-
-   Déterminer si cette fréquence observée est précise à $\pm 3%$ avec un niveau de confance de 95%.
 
 **Résultats de CMR sur la période 2003-2004 dans la vallée de l'Orgongorongo.**
 
@@ -107,6 +100,13 @@ $f$ : fréquence observée du caractère dans l'échantillon
 
 $n$ : taille de l'échantillon
 
+1. Déterminer la taille de la population au départ de l'étude en 2003.
+2. Déterminer la taille de la population en 2004.
+3. Le gouvernement craint une croissance de la population. À l'aide des résultats de l'étude, donner des arguments pour confirmer ou modérer cette crainte. Que conseiller d'autre ?
+4. Une ville envisage de lancer une campagne massive de dératisation. Les scientifiques veulent estimer l'impact du poison sur la mortalité au sein de la population de rats. Sur 200 rats retrouvés morts depuis le début de l'étude, 100 présentent des signes d'emoisonnement, soit 50%.
+
+   Déterminer si cette fréquence observée est précise à $\pm 3%$ avec un niveau de confance de 95%.
+
 ## 4. Activité documentaire
 
 $\,$![documents](../img/fig3_doc.png)
@@ -123,16 +123,15 @@ $\,$![documents](../img/fig3_doc.png)
       _MATHS SPÉ_ : Utiliser un modèle affine afin de répondre précisément.
 
       On pourrait estimer que la proportion des marqués est sous-estimée par rapport à la réalité, expliquer
-      pourquoi un intervalle de confiance ne peut être fournie par la première formule $\left[p - \frac{1}{\sqrt{n}}; P + \frac{1}{\sqrt{n}}\right]$.
+      pourquoi un intervalle de confiance ne peut être fournie par la première formule $\left[p - \frac{1}{\sqrt{n}}; p + \frac{1}{\sqrt{n}}\right]$.
 
 2. _DOC. 1 ET 2 – Le gouvernement australien vous demande d’estimer la taille de la population d’opossums
-   dans la forêt en 2019. Pour savoir si la population contient assez de femelles pour continuer à croître, il veut connaître leur proportion le plus précisément possible. Discuter si la valeur de 49% observée est précise à $\pm 10%$._
+   dans la forêt en 2019. Pour savoir si la population contient assez de femelles pour continuer à croître, il veut connaître leur proportion le plus précisément possible. Discuter si la valeur de 49% observée est précise à $\pm 10 \\%$._
 
    1. Calculer la fréquence observée de femelles dans l’échantillon.
    2. Quelles sont les bornes inférieure et supérieure de l’IC pour un niveau de confiance de 95%? Comparer l’intervalle obtenu avec les 49±10% demandés.
    3. Vous décidez de retourner sur le terrain. Vous échantillonnez 384 individus, parmi lesquels 182 sont des femelles. Quelle marge d’erreur pouvez-vous alors annoncer sur l’estimation de la proportion de femelles au niveau de confiance de 95%?
-   4. Tracer les deux intervalles de confiances de la proportion de femelles et proposer une nouvelle estima-
-      tion de la proportion (intervalle).
+   4. Tracer les deux intervalles de confiances de la proportion de femelles et proposer une nouvelle estimation de la proportion (intervalle).
 
 $\,$![Figure](../img/fig4_pop.png)
 $\,$![Prop](../img/fig5_prop.png)
