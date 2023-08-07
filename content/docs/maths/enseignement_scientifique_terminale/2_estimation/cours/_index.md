@@ -109,7 +109,7 @@ $n$ : taille de l'échantillon
 
 ## 4. Activité documentaire
 
-$\,$![documents](../img/fig3_doc.png)
+![documents](../img/fig3_doc.png)
 
 ### Questions :
 
@@ -133,5 +133,5 @@ $\,$![documents](../img/fig3_doc.png)
    3. Vous décidez de retourner sur le terrain. Vous échantillonnez 384 individus, parmi lesquels 182 sont des femelles. Quelle marge d’erreur pouvez-vous alors annoncer sur l’estimation de la proportion de femelles au niveau de confiance de 95%?
    4. Tracer les deux intervalles de confiances de la proportion de femelles et proposer une nouvelle estimation de la proportion (intervalle).
 
-$\,$![Figure](../img/fig4_pop.png)
-$\,$![Prop](../img/fig5_prop.png)
+![Figure](../img/fig4_pop.png)
+![Prop](../img/fig5_prop.png)

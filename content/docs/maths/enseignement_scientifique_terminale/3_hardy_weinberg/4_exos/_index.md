@@ -36,6 +36,9 @@ On cherche à établir si des populations sont à l'équilibre de Hardy-Weinberg
 
 _Lamium amplexicaule_ est une plante que l'on trouve dans la région de Montpellier.
 Sa population est importante puisqu'on trouve plusieurs centaines d'individus autour de Montpellier.
+
+![lamier](https://planteset.com/wp-content/uploads/2021/11/Lamium-amplexicaule.jpg)
+
 La particularité de cette plante est qu'elle montre deux types de fleurs :
 
 - des fleurs cléstogames qui restent fermées et imposent l'autofécondation à l'intérieur des fleurs ;
@@ -46,8 +49,8 @@ Les chercheurs s'intéressent à un gène qui est neutre pour la plante, c'est-�
 Un échantillon de $N=39$ individus est prélevé aléatoirement dans cette population.
 
 | Génotypes          | Homozygote AA | Hétérozygote Aa | Homozygote aa |
-| ------------------ | ------------- | --------------- | ------------- |
-| Effectifs obesrvés | 4             | 1               | 34            |
+| ------------------ | ------------: | --------------: | ------------: |
+| Effectifs obesrvés |             4 |               1 |            34 |
 
 ### Questions
 
@@ -64,8 +67,8 @@ Soif $p$ la fréquence de l'allèle A et $q$ la fréquence de l'allèle B dans u
 **Dénombrement des drosophiles de l'échantillon**
 
 | Total analysé | rouge vif | bruns | rouge sombre |
-| ------------- | --------- | ----- | ------------ |
-| 4365          | 2801      | 560   | 1004         |
+| ------------: | --------: | ----: | -----------: |
+|          4365 |      2801 |   560 |         1004 |
 
 ### Questions
 

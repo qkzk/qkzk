@@ -25,22 +25,22 @@ _Enseignement Scientifique - Terminale_
 
 Sources : _Banque Mondiale_
 
-| Palier numéro $n$ | Année  | Population $u(n)$ | Taux de variation |
-| ----------------- | ------ | ----------------- | ----------------- |
-| $0$               | $2011$ | $17~114~761$      |                   |
-| $1$               | $2012$ | $17~795~191$      |                   |
-| $2$               | $2013$ | $18~504~255$      |                   |
-| $3$               | $2014$ | $19~240~157$      |                   |
-| $4$               | $2015$ | $20~001~663$      |                   |
-| $5$               | $2016$ | $20~788~838$      |                   |
-| $6$               | $2017$ | $21~602~472$      |                   |
-| $7$               | $2018$ | $22~442948$       |                   |
+| Palier numéro $n$ |  Année | Population $u(n)$ | Taux de variation |
+| ----------------: | -----: | ----------------: | ----------------- |
+|               $0$ | $2011$ |      $17~114~761$ |                   |
+|               $1$ | $2012$ |      $17~795~191$ |                   |
+|               $2$ | $2013$ |      $18~504~255$ |                   |
+|               $3$ | $2014$ |      $19~240~157$ |                   |
+|               $4$ | $2015$ |      $20~001~663$ |                   |
+|               $5$ | $2016$ |      $20~788~838$ |                   |
+|               $6$ | $2017$ |      $21~602~472$ |                   |
+|               $7$ | $2018$ |      $22~442~948$ |                   |
 
 Sources : _Ined_
 
 On considère une population dont l'effectif évolue par palier, passant de la valeur $u(n)$ au palier $n$ à l'effectif $u(n+1)$ au palier $n+1$.
 
-Pour $n \in \mathbb{N}$, on appelle \emph{taux de variation} le quotient $$\dfrac{u(n+1)-u(n)}{u(n)}$$
+Pour $n \in \mathbb{N}$, on appelle _taux de variation_ le quotient : $$\dfrac{u(n+1)-u(n)}{u(n)}$$
 
 | Population au 01/01/2019 | Nombre de décès en 2019 | Taux de mortalité en 2019 | Nombre de naissances en 2019 | Taux de natalité en 2019 | Population au 01/01/2020 | Taux de variation global |
 | ------------------------ | ----------------------- | ------------------------- | ---------------------------- | ------------------------ | ------------------------ | ------------------------ |
@@ -53,7 +53,10 @@ D'après l'INED, le Niger est le pays d'Afrique qui possède le plus fort taux d
 ## Doc 2 -- Boîte à outils mathématique
 
 On parle d'_évolution exponentielle_ lorsque pour une population, le **taux de variation** est (presque) **constant** d'un palier à l'autre. En notant $t$ ce taux constant, on peut modéliser l'évolution par une _suite géométrique_ de raison $q=1+t$.
-En effet, on a $\dfrac{u(n+1)-u(n)}{u(n)} = t$, soit $u(n+1)= (1+t) \times u(n), \text{ pour tout } n \in \mathbb{N}$.
+
+En effet, on a $\dfrac{u(n+1)-u(n)}{u(n)} = t$,
+
+soit $u(n+1)= (1+t) \times u(n), \text{ pour tout } n \in \mathbb{N}$.
 
 $$u(0)\xrightarrow{\times (1+t)} u(1)\xrightarrow{\times (1+t)} u(2)\xrightarrow{\times (1+t)} u(3) \xrightarrow{\times (1+t)} \cdots$$
 

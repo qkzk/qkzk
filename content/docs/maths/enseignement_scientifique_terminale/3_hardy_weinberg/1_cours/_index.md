@@ -183,7 +183,7 @@ $$P(A) = p_n, P(a) = q_n, P(AA) = u_n, P(Aa) = v_n \text{ et } P(aa) = w_n$$
 1. Déterminer toutes les probabilités conditionnelles du type $P_{AA}(A), P_{AA}(a), P_{Aa}(A)$, etc.
 2. Compléter l’arbre de probabilités ci-dessous, en faisant intervenir les évènements $A, a, AA, Aa \text{ et } aa$ :
 
-$\,$![doc6](../img/doc6.png)
+![doc6](../img/doc6.png)
 
 3. À l’aide de la formule des probabilités totales, montrer que pour tout entier naturel $n$,
 
@@ -197,7 +197,7 @@ On choisit au hasard un enfant dans la population Gn+1.
 
 1. Compléter l’arbre suivant afin de déterminer les probabilités génotypique de la génération suivante :
 
-$\,$![doc7](../img/doc7.png)
+![doc7](../img/doc7.png)
 
 2. En déduire que pour tout entier naturel $n, u_{n+1} = p_n^2, w_{n+1} = q_n^2$ puis que $v_{n+1}=2p_nq_n$
 
