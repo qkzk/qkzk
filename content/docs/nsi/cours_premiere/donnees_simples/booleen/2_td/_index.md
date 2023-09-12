@@ -2,16 +2,14 @@
 title: "Booléens : TD"
 bookCollapseSection: true
 weight: 2
-
 ---
 
-pdf : [pour impression](/uploads/docsnsi/donnees_qkzk_img/booleen_td.pdf)
+pdf : [pour impression](/uploads/docsnsi/booleens/booleen_td.pdf)
 
 # Objectifs
 
-* Construire la table de vérité d'une expression booléenne relativement simple.
-* Évaluer et construire des expressions booléennes en Python
-
+- Construire la table de vérité d'une expression booléenne relativement simple.
+- Évaluer et construire des expressions booléennes en Python
 
 ## Exercice 1
 
@@ -66,7 +64,6 @@ les égalités soient correctes
 4 + 5 * 2 + 3 == 29
 ```
 
-
 ## Exercice 9
 
 La clé de vérification utilisée en France pour les numéros de sécurité sociale
@@ -77,33 +74,30 @@ de la clé avec le reste du numéro fasse un entier divisible par 97.
 Nous allons traduire ceci en Python
 
 1. Voici le numéro de sécurité sociale de JP : `1 81 10 59 340 223`.
-    Calculer sa clé de sécurité à l'aide d'une calculatrice.
+   Calculer sa clé de sécurité à l'aide d'une calculatrice.
 2. Proposer une expression de la clé de sécurité.
 3. Écrire cette expression en Python en supposant que le numéro est noté `numero`
 
-    ```python
-    numero = 1811059340223
-    cle = ???
-    ```
+   ```python
+   numero = 1811059340223
+   cle = ???
+   ```
 
 4. Proposer une expression booléenne qui soit vraie si `cle` est bien
-    la clé de sécurité de `numero` et fausse sinon.
-
+   la clé de sécurité de `numero` et fausse sinon.
 
 ## Exercice 10 - Demi additionneur binaire
-
 
 ### Représentation graphique
 
 A chaque porte est associée une représentation graphique. Voici pour les
 portes ET et XOR :
 
-* porte ET
+- porte ET
 
 ![porte ET](/uploads/docsnsi/donnees_qkzk_img/porte-et.png)
 
-
-* Porte XOR
+- Porte XOR
 
 ![porte XOR](/uploads/docsnsi/donnees_qkzk_img/porte-xor.png)
 
@@ -111,24 +105,23 @@ portes ET et XOR :
 
 2. On considère deux entiers $A$ et $B$ représentés sur un bit.
 
-    * On les additionne et l'éventuelle retenue est perdue. Quels sont les résultats possibles ?
-      
-      Cette opération peut-elle être comparée à une des tables précédentes ?
+   - On les additionne et l'éventuelle retenue est perdue. Quels sont les résultats possibles ?
 
-    * On recommence, mais cette fois on décide de noter sur deux bits le résultat de la somme.
+     Cette opération peut-elle être comparée à une des tables précédentes ?
 
-      Dans quel cas aura-t-on une retenue à écrire ? Quelle opération booléenne sur les bits
-      permet d'obtenir ce résultat ?
+   - On recommence, mais cette fois on décide de noter sur deux bits le résultat de la somme.
+
+     Dans quel cas aura-t-on une retenue à écrire ? Quelle opération booléenne sur les bits
+     permet d'obtenir ce résultat ?
 
 ### Portes logiques
-
 
 Les opérations logiques évoquées ci-dessus sont mises en oeuvre en
 électronique sous forme de **portes logiques**.
 
 Les circuits électroniques calculent des fonctions logiques de l'algèbre de Boole.
 
-Pour chacun des opérateurs logiques évoquées ci-dessus (et d'autres) il existe donc des portes logiques appelés *porte ET*, *porte NON*, etc. Les valeurs *vrai *et *faux* sont représentées par deux niveaux de tension, *haut* et *bas*.
+Pour chacun des opérateurs logiques évoquées ci-dessus (et d'autres) il existe donc des portes logiques appelés _porte ET_, _porte NON_, etc. Les valeurs *vrai *et _faux_ sont représentées par deux niveaux de tension, _haut_ et _bas_.
 
 ## Exercice 11 - Demi additionneur
 
@@ -140,13 +133,11 @@ du ET.
 Les portes peuvent être connectées entre elles pour réaliser des
 **circuits logiques** et on peut ainsi réaliser des calculs.
 
-
 ![demi-additionneur](/uploads/docsnsi/donnees_qkzk_img/demi-additionneur.png)
 
-Il est appelé *demi-additionneur* car il réalise l'addition de 2 bits
+Il est appelé _demi-additionneur_ car il réalise l'addition de 2 bits
 ($A$ et $B$), le résultats de cette somme est représentée par $S$
 et la retenue éventuelle par $R$.
-
 
 Construisez les tables de vérité de $S$ et $R$ et comparez à celle de l'addition
 de deux bits $A$ et $B$.
@@ -158,7 +149,7 @@ de deux bits $A$ et $B$.
 On considère la table de vérité de l'expression `Z` ci-dessous
 
 | `x` | `Z(x)` |
-|-----|--------|
+| --- | ------ |
 | 0   | 0      |
 | 1   | 0      |
 
@@ -169,13 +160,13 @@ Exprimer `Z` à l'aide des fonctions booléennes et, ou, non.
 On considère la table de vérité de l'expression `U` ci-dessous
 
 | `x` | `U(x)` |
-|-----|--------|
+| --- | ------ |
 | 0   | 1      |
 | 1   | 1      |
 
 Exprimer `U` à l'aide des fonctions booléennes et, ou, non.
 
-## Exercice 14 -  Programmer une table de vérité
+## Exercice 14 - Programmer une table de vérité
 
 Partons d'un exemple avec l'expression booléenne `Non (a ET Non b)`
 
@@ -183,19 +174,18 @@ On souhaite vérifier si cette expression peut s'écrire sous la forme `Non a OU
 
 Plusieurs approches sont possibles :
 
-* démonstrations mathématique,
-* table de vérité,
-* utiliser un programme qui teste tous les cas.
+- démonstrations mathématique,
+- table de vérité,
+- utiliser un programme qui teste tous les cas.
 
 Les deux derniers points sont équivalents d'un point de vue logique mais dans
 le second on fait faire les calculs à une machine.
-
 
 **Démarche :**
 
 1. on crée une fonction pour chaque expression booléenne
 2. on crée une fonction qui prend ces expressions booléennes et teste chaque
-  valeur possible des variables.
+   valeur possible des variables.
 
 ```python
 def exp1(a, b):
@@ -214,5 +204,3 @@ def tester_egalite_2_variables(f, g):
 
 On considère deux fonctions booléennes à trois entrées (`a, b, c`),
 écrire un programme python permettant de tester leur égalité.
-
-

@@ -3,7 +3,6 @@ title: "Booléens : cours"
 bookCollapseSection: true
 author: "qkzk"
 weight: 1
-
 ---
 
 ### pdf : [diaporama](/uploads/docsnsi/booleens/booleen_cours.pdf)
@@ -16,9 +15,7 @@ En programmation, un booléen est un type de variable à deux états : _vrai_ et
 
 Ils sont nommés ainsi d'après George Boole, fondateur de l'alèbre de Boole.
 
-
 ## Booléen en Python
-
 
 En Python, les booléens sont `True` et `False`, ils sont du type `bool`
 
@@ -44,7 +41,7 @@ variable = 5    # une affectation
 ## Comparaisons des nombres
 
 | Comparaison       | Symbole | Exemple       | Résultat |
-|-------------------|---------|---------------|----------|
+| ----------------- | ------- | ------------- | -------- |
 | Égalité           | `==`    | `1 + 2 == 3`  | `True`   |
 | Différence        | `!=`    | `1 + 2 != 3`  | `False`  |
 | Supérieur         | `>`     | `4 > 3`       | `True`   |
@@ -64,11 +61,10 @@ On peut tester qu'un élément appartient à une structure avec le mot clé `in`
 
 # Opérations sur les booléens
 
-
 Les opérateurs sur les booléens sont de deux types :
 
-* opérateur unaire : prend _un_ booléen et en renvoie _un_.
-* opérateur binaire : prend _deux_ booléens et en renvoie _un_.
+- opérateur unaire : prend _un_ booléen et en renvoie _un_.
+- opérateur binaire : prend _deux_ booléens et en renvoie _un_.
 
 ## Opérateur unaire : la négation
 
@@ -84,7 +80,7 @@ not False   # s'évalue à True
 ### Table de vérité avec `True` et `False`
 
 | `a`     | `not a` |
-|---------|---------|
+| ------- | ------- |
 | `True`  | `False` |
 | `False` | `True`  |
 
@@ -92,19 +88,17 @@ not False   # s'évalue à True
 
 Les _tables de vérité_ sont abbregées en notant :
 
-* `1` pour `True`
-* `0` pour `False`
+- `1` pour `True`
+- `0` pour `False`
 
 | `a` | `not a` |
-|-----|---------|
+| --- | ------- |
 | `1` | `0`     |
 | `0` | `1`     |
 
 ## Opérateur binaire : le OU, noté `or`
 
-
 **Il est vrai si l'un des deux booléens est vrai.**
-
 
 ```python
 False or False  # False
@@ -114,20 +108,15 @@ True or True    # True
 ```
 
 | `a` | `b` | `a or b` |
-|-----|-----|:--------:|
-| 0   | 0   | 0        |
-| 0   | 1   | 1        |
-| 1   | 0   | 1        |
-| 1   | 1   | 1        |
-
-
-
+| --- | --- | :------: |
+| 0   | 0   |    0     |
+| 0   | 1   |    1     |
+| 1   | 0   |    1     |
+| 1   | 1   |    1     |
 
 ## Opérateur binaire : le ET, noté `and`
 
-
 **Il est vrai si les deux booléens sont vrais.**
-
 
 ```python
 False and False  # False
@@ -137,16 +126,15 @@ True and True    # True
 ```
 
 | `a` | `b` | `a and b` |
-|-----|-----|:--------:|
-| 0   | 0   | 0        |
-| 0   | 1   | 0        |
-| 1   | 0   | 0        |
-| 1   | 1   | 1        |
+| --- | --- | :-------: |
+| 0   | 0   |     0     |
+| 0   | 1   |     0     |
+| 1   | 0   |     0     |
+| 1   | 1   |     1     |
 
 ## Opérateur binaire : le XOR noté `^`
 
 **Il est vrai si EXACTEMENT un des deux booléens est vrai**
-
 
 ```python
 False ^ False  # False
@@ -156,11 +144,11 @@ True ^ True    # False
 ```
 
 | `a` | `b` | `a XOR b` |
-|-----|-----|:--------:|
-| 0   | 0   | 0        |
-| 0   | 1   | 1        |
-| 1   | 0   | 1        |
-| 1   | 1   | 0        |
+| --- | --- | :-------: |
+| 0   | 0   |     0     |
+| 0   | 1   |     1     |
+| 1   | 0   |     1     |
+| 1   | 1   |     0     |
 
 ## Python et les booléens
 
@@ -177,8 +165,8 @@ bool([])            # False
 bool([1, 2])        # True
 ```
 
-* 0 est faux, les autres entiers sont vrais,
-* une structure vide est fausse, les autres sont vraies.
+- 0 est faux, les autres entiers sont vrais,
+- une structure vide est fausse, les autres sont vraies.
 
 ## Complément : `None` et l'identité `is`
 
@@ -205,16 +193,15 @@ On peut chaîner les opérations booléennes pour construire une _expression boo
 Une colonne par valeur et une colonne pour l'expression :
 
 | `a` | `b` | `c` | `(a and b) or (not c)` |
-|-----|-----|-----|:----------------------:|
-| 0   | 0   | 0   |            1           |
-| 0   | 0   | 1   |            0           |
-| 0   | 1   | 0   |            1           |
-| 0   | 1   | 1   |            0           |
-| 1   | 0   | 0   |            1           |
-| 1   | 0   | 1   |            0           |
-| 1   | 1   | 0   |            1           |
-| 1   | 1   | 1   |            1           |
-
+| --- | --- | --- | :--------------------: |
+| 0   | 0   | 0   |           1            |
+| 0   | 0   | 1   |           0            |
+| 0   | 1   | 0   |           1            |
+| 0   | 1   | 1   |           0            |
+| 1   | 0   | 0   |           1            |
+| 1   | 0   | 1   |           0            |
+| 1   | 1   | 0   |           1            |
+| 1   | 1   | 1   |           1            |
 
 # Propriétés mathématiques de l'algèbre de Boole
 
@@ -223,7 +210,7 @@ nous utiliserons les notations de Python.
 
 ## Définition
 
-On considère l'ensemble `{0, 1}` ou  `{False, True}` muni de trois opérations :
+On considère l'ensemble `{0, 1}` ou `{False, True}` muni de trois opérations :
 
 la **négation** `not`, le **et logique** `and`, le **ou logique** `or`.
 
@@ -231,55 +218,22 @@ Elles sont définies par les tables de vérité présentées plus haut.
 
 ## Complémentarité
 
-* `not(not(a)) = a`
-* `a or (not a) = 1`
-* `a and (not a) = 0`
+- `not(not(a)) = a`
+- `a or (not a) = 1`
+- `a and (not a) = 0`
 
 ## Associativité
 
-* `a or (b or c) = (a or b) or c`
-* `a and (b and c) = (a and b) and c`
+- `a or (b or c) = (a or b) or c`
+- `a and (b and c) = (a and b) and c`
 
 ## Distributivité
 
-* `a or (b and c) = (a and b) or (a and c)`
-* `a and (b or c) = (a or b) and (a or c)`
+- `a or (b and c) = (a and b) or (a and c)`
+- `a and (b or c) = (a or b) and (a or c)`
 
 ## Autres tables de vérité
 
 Toutes les opérations binaires peuvent être définies à l'aide des trois opérateurs présentés plus haut.
 
 Par exemple : `a xor b = (a and not b) or (not a and b)`
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
