@@ -311,10 +311,10 @@ phrase = "je n'aime pas me lever le matin, je préfère dormir."
     Testez avec les mots "table", "exercice", "bonjour"
 
     {{< python title="voyelles" >}}
-mot1 = table
-mot2 = exercice
-mot3 = bonjour
-mot4 = ordinateur
+mot1 = "table"
+mot2 = "exercice"
+mot3 = "bonjour"
+mot4 = "ordinateur"
 voyelles = "a...."
     {{< /python >}}
 
