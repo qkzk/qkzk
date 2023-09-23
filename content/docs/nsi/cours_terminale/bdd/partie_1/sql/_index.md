@@ -222,7 +222,7 @@ SELECT *
 {{< /hint >}}
 
 {{< sql title="Séléctionner toute une table" init="init.sql">}}
-SELECT \* FROM employees;
+SELECT * FROM employees;
 {{< /sql >}}
 
 {{< hint danger >}}
@@ -551,9 +551,9 @@ UPDATE nom_table SET nom_colonne1=valeur1, nom_colonne2=valeur2
 {{< /hint >}}
 
 {{< sql title="UPDATE" init="init_2_tables.sql">}}
-SELECT _ FROM department;
+SELECT * FROM department;
 UPDATE department SET name="Foreign Affair" WHERE name="Foreign";
-SELECT _ FROM department;
+SELECT * FROM department;
 {{< /sql >}}
 
 {{< hint danger >}}
@@ -577,9 +577,9 @@ DELETE FROM nom_table
 {{< /hint >}}
 
 {{< sql title="DELETE" init="init_2_tables.sql">}}
-SELECT _ FROM department;
+SELECT * FROM department;
 DELETE FROM department WHERE name="Foreign";
-SELECT _ FROM department;
+SELECT * FROM department;
 {{< /sql >}}
 
 {{< hint danger >}}
@@ -623,9 +623,9 @@ Dans le TP précédent : Nb*total_lignes = Nb_lignes_ville * Nb*lignes_evolution
 ![](/uploads/docnsitale/bdd/fig/produit_cartesien.png)
 
 {{< sql title="Produit cartésien" init="init_2_tables.sql">}}
-SELECT \* FROM department;
+SELECT * FROM department;
 
-SELECT \* FROM department, employees
+SELECT * FROM department, employees
 {{< /sql >}}
 
 Une autre manière d'obtenir le même résultat `CROSS JOIN` :
@@ -633,9 +633,9 @@ Une autre manière d'obtenir le même résultat `CROSS JOIN` :
 `CROSS`, comme la _croix_ du produit... $2 \times 3 = 6$
 
 {{< sql title="Produit cartésien avec CROSS" init="init_2_tables.sql">}}
-SELECT \* FROM department;
+SELECT * FROM department;
 
-SELECT \* FROM department
+SELECT * FROM department
 CROSS JOIN employees
 {{< /sql >}}
 
@@ -669,7 +669,7 @@ On fait donc une jointure sur cette clé :
 
 {{< sql title="Jointure" init="init_2_tables.sql">}}
 
-SELECT \* FROM department
+SELECT * FROM department
 JOIN employees ON employees.dept=department.id;
 {{< /sql >}}
 
