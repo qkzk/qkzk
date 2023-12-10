@@ -10,7 +10,6 @@ pygmentscodefences = true
 pygmentscodefencesguesssyntax = true
 
 [params]
-author = "qkzk"
 description = "Informatique et mathématiques"
 minify = "true"
 BookTheme = 'light'
