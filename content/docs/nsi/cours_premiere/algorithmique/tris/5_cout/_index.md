@@ -2,7 +2,6 @@
 title: "Complexité, correction"
 bookCollapseSection: true
 weight: 5
-
 ---
 
 pdf : [pour impression](./5_cout.pdf)
@@ -13,12 +12,12 @@ Afin de justifier qu'un algorithme est juste on doit s'assurer de plusieurs
 choses :
 
 {{< hint warning >}}
+
 1. Qu'il termine bien.
 2. Qu'il fait ce qu'il affirme.
-{{< /hint >}}
+   {{< /hint >}}
 
 ## Variant et invariant
-
 
 {{< hint info >}}
 Un **variant** de boucle est une valeur entière positive qui décroît à chaque
@@ -46,7 +45,7 @@ Considérons la fonction `tri_select` ci-dessous.
 ```python
 def plus_petit(tableau: list, indice: int) -> int:
     '''
-    Renvoie l'indice du plus petit élément de tableau 
+    Renvoie l'indice du plus petit élément de tableau
     à partir de `indice`.
     '''
     mini = indice
@@ -95,32 +94,29 @@ tous les indices `k` entre `indice` et l'indice du dernier élément.
 
 Donc `tableau[mini]` est le plus petit élément du tableau.
 
-
 **Fonction `tri_select`**
 
-L'invariant est : 
+L'invariant est :
 
 {{< hint info >}}
 les `i` premiers éléments sont triés et sont les plus petits éléments du tableau.
 {{< /hint >}}
 
-* Elle est vraie au départ. Les `0` premiers éléments `[]` sont triés.
-* Elle reste vraie au tour suivant, puisqu'on ajoute le plus petit des éléments
+- Elle est vraie au départ. Les `0` premiers éléments `[]` sont triés.
+- Elle reste vraie au tour suivant, puisqu'on ajoute le plus petit des éléments
   de la liste.
-* **Attention c'est ici qu'il faut se réveiller**. Au second tour... on a _déjà_
+- **Attention c'est ici qu'il faut se réveiller**. Au second tour... on a _déjà_
   trié le plus petit des éléments. On ajoute un nouvel élément :
 
-    * c'est le plus petit des non triés,
-    * il est plus grand que celui déjà présent dans la liste.
-    * il arrive en position 2
+  - c'est le plus petit des non triés,
+  - il est plus grand que celui déjà présent dans la liste.
+  - il arrive en position 2
 
   Donc les deux premiers éléments sont triés et sont les deux plus petits du tableau.
 
-* À chaque tour suivant, on répète ce procédé donc la propriété reste vraie.
-
+- À chaque tour suivant, on répète ce procédé donc la propriété reste vraie.
 
 En définitive, l'invariant de boucle prouve que la liste finale est triée.
-
 
 ## Correction du tri par insertion
 
@@ -137,9 +133,7 @@ et `i`.
 Vous pouvez vérifier que cet invariant est vrai à toutes les étapes de la boucle
 interne.
 
-## Complexité 
-
-
+## Complexité
 
 {{< hint info >}}
 La _complexité_ d'un algorithme est une mesure du temps qu'il va prendre à
@@ -150,10 +144,10 @@ en entrée et la durée.
 Afin de rendre le calcul faisable, on réalise des simplifications.
 
 1. On considère que chaque opération élémentaire (ajouter, affecter, comparer etc.)
-  a une durée constante. 
+   a une durée constante.
 
-  Ce n'est pas tout à fait vrai mais ça l'est suffisamment pour donner des réponses
-  fiables.
+Ce n'est pas tout à fait vrai mais ça l'est suffisamment pour donner des réponses
+fiables.
 
 2. On ne s'intéresse généralement qu'à l'odre de grandeur du nombre d'opérations réalisé.
 
@@ -168,6 +162,7 @@ Intéressons nous au **nombre de comparaisons** effectuées dans l'algorithme.
 ### Complexité du tri par sélection
 
 {{< expand "tri par selection" "...">}}
+
 ```python
 def plus_petit(tableau: list, indice: int) -> int:
     '''renvoie l'indice du plus petit élément de tableau à partir de "indice"'''
@@ -184,8 +179,8 @@ def tri_select(tableau: list) -> None:
         mini = plus_petit(tableau, i)
         tableau[i], tableau[mini] = tableau[mini], tableau[i]
 ```
-{{< /expand >}}
 
+{{< /expand >}}
 
 Où compare-t-on ? Dans la boucle interne, en particulier, dans la fonction `plus_petit`.
 
@@ -208,7 +203,6 @@ $$C = 1 + 2 + \cdots + (n-2) + (n-1)$$
 Formule que vous connaissaissez bien (Cf _Suites arithmétiques_ en mathématiques)
 et qui vaut $$C = \dfrac{(n-1)n}{2}$$
 
-
 On reconnaît ici une expression du second degré, qu'on peut développer et simplifier :
 
 $$C = \dfrac{1}{2}(n^2 - n)$$
@@ -222,23 +216,17 @@ On note cela $$C = O(n^2)$$ et on dit que le tri par sélection et _quadratique_
 son coût (=sa complexité) se comporte comme une fonction du _second degré_, une fonction
 _quadratique_.
 
-
 ### À retenir : _Coût du tri par sélection_
-
 
 {{< hint info >}}
 Le coût du tri par sélection évolue avec le carré de la taille du tableau d'entrée.
 {{< /hint >}}
 
-
 ## Complexité du tri par insertion
-
 
 La preuve est exactement la même et le résultat similaire :
 
-
 ### À retenir : _Coût du tri par insertion_
-
 
 {{< hint info >}}
 Le coût du tri par insertion évolue avec le carré de la taille du tableau d'entrée.
@@ -248,27 +236,27 @@ Le coût du tri par insertion évolue avec le carré de la taille du tableau d'e
 
 ## Remarques finales
 
-* Les algorithmes du tri par sélection et insertion sont assez peu efficaces.
-* On étudiera en terminale un algorithme de tri beaucoup plus efficace :
+- Les algorithmes du tri par sélection et insertion sont assez peu efficaces.
+- On étudiera en terminale un algorithme de tri beaucoup plus efficace :
   le tri fusion.
-* Lorsqu'on trie des données quelconques, utiliser des _comparaisons_ est la seule
+- Lorsqu'on trie des données quelconques, utiliser des _comparaisons_ est la seule
   approche et alors le meilleur coût qu'on puisse obtenir est $O(n \log n)$
   ce qui est beaucoup mieux que $O(n^2)$
 
-    ![couts](/docs/nsi/cours_premiere/algorithmique/tris/5_cout/img/0.gif)
+  ![couts](/docs/nsi/cours_premiere/algorithmique/tris/5_cout/img/0.gif)
 
-* Lorsqu'on a beaucoup d'informations sur les objets à trier, on peut aller
+- Lorsqu'on a beaucoup d'informations sur les objets à trier, on peut aller
   plus vite. C'est en particulier le cas lorsqu'on trie des entiers de taille
   limitée.
 
-* Étuder la correciton et la complexité d'un algorithme sont des étapes
+- Étuder la correction et la complexité d'un algorithme sont des étapes
   indispensables si l'on souhaite obtenir des résultats fiables.
 
-*  Tous les algorithmes ne se valent pas et : s'ils sont trop lents ils ne servent
+- Tous les algorithmes ne se valent pas : s'ils sont trop lents ils ne servent
   à rien, s'ils sont trop difficiles à justifier, on ne peut avoir confiance en
   ce qu'ils font.
 
-* Cette approche, _par la preuve_ des algorithmes, n'est pas toujours possible.
+- Cette approche, _par la preuve_ des algorithmes, n'est pas toujours possible.
   On doit parfois se contenter d'une vérification _empirique_ de leur efficacité.
   C'est en particulier le cas des algorithmes dits _d'intelligence artificielle_,
-  comme par exemple la reconnaissance d'image.
+  comme par exemple la reconnaissance d'image ou la génération de texte.
