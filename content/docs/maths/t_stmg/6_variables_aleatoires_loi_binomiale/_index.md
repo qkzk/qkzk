@@ -4,7 +4,6 @@ subtitle: "Terminale STMG"
 author: "qkzk"
 geometry: margin=1.2cm
 weight: 7
-
 ---
 
 [pdf](./6_variables_aleatoires_loi_binomiale.pdf)
@@ -32,14 +31,13 @@ $$E(x) = x_1 P(X=x_1) + x_2 P(X=x_2) + \cdots + x_n P(X=x_n) = \sum_{i=1}^n x_i 
 {{< /hint >}}
 {{< /expand >}}
 
-
 #### Exemple
 
-On lance un dé. 
+On lance un dé.
 
-* Si tire un 6, on gagne 10€.
-* Si on tire un 5 on gagne 3€.
-* Sinon, on perd 2€.
+- Si tire un 6, on gagne 10€.
+- Si on tire un 5 on gagne 3€.
+- Sinon, on perd 2€.
 
 On note $G$ la variable correspondant au gain (positif ou négatif) du joueur.
 
@@ -49,17 +47,17 @@ On note $G$ la variable correspondant au gain (positif ou négatif) du joueur.
 {{< expand "Réponses" "..." >}}
 **Réponses**
 
-1. Les faces sont _équiprobables_, on peut leur associer un gain et une probabilité :
+1.  Les faces sont _équiprobables_, on peut leur associer un gain et une probabilité :
 
     | Face  | 1              | 2              | 3              | 4              | 5              | 6              |
-    |-------|----------------|----------------|----------------|----------------|----------------|----------------|
+    | ----- | -------------- | -------------- | -------------- | -------------- | -------------- | -------------- |
     | Gain  | -2             | -2             | -2             | -2             | 3              | 10             |
     | Proba | $\dfrac{1}{6}$ | $\dfrac{1}{6}$ | $\dfrac{1}{6}$ | $\dfrac{1}{6}$ | $\dfrac{1}{6}$ | $\dfrac{1}{6}$ |
 
     On peut maintenant regrouper les valeurs du gain :
 
     | Gain  | -2             | 3              | 10             |
-    |-------|----------------|----------------|----------------|
+    | ----- | -------------- | -------------- | -------------- |
     | Faces | 1, 2, 3, 4     | 5              | 6              |
     | Proba | $\dfrac{4}{6}$ | $\dfrac{1}{6}$ | $\dfrac{1}{6}$ |
 
@@ -67,13 +65,13 @@ On note $G$ la variable correspondant au gain (positif ou négatif) du joueur.
 
     Lorsqu'on joue à ce jeu, on a 4 chances sur 6 de perdre 2€, 1 chance sur 6 de gagner 3€ et 1 chance sur 6 de gagner 10€.
 
-2. Pour calculer l'espérance du gain $E(G)$ on applique la formule :
+2.  Pour calculer l'espérance du gain $E(G)$ on applique la formule :
 
-    $$E(G) = -2 \times \dfrac{4}{6} + 3 \times \dfrac{1}{6} + 10 \times \dfrac{1}{6} = \dfrac{-8 +3 + 10}{6} = \dfrac{5}{6} \text{€}$$
+        $$E(G) = -2 \times \dfrac{4}{6} + 3 \times \dfrac{1}{6} + 10 \times \dfrac{1}{6} = \dfrac{-8 +3 + 10}{6} = \dfrac{5}{6} \text{€}$$
 
-    En moyenne le joueur gagne $\dfrac{5}{6}$€ par partie. L'espérance du gain est _positive_ donc le jeu est profitable au joueur.
-{{< /expand >}}
+        En moyenne le joueur gagne $\dfrac{5}{6}$€ par partie. L'espérance du gain est _positive_ donc le jeu est profitable au joueur.
 
+    {{< /expand >}}
 
 ---
 
@@ -91,14 +89,15 @@ On note $p$ la probabilité du succès.
 #### Exemples
 
 {{< expand "Exemple" "..." >}}
-* Lancer une pièce : succès Pile, échec Face, $p=0.5$
-* Lancer un dé **et regarder si l'on tire 6 ou autre chose** : succès 6, échec le reste, $p=\dfrac{1}{6}$
-* Lancer un dé **et regarder si la face est 1, 2 ou autre chose** : succès 1 ou 2, échec le reste, $p=\dfrac{1}{3}$
+
+- Lancer une pièce : succès Pile, échec Face, $p=0.5$
+- Lancer un dé **et regarder si l'on tire 6 ou autre chose** : succès 6, échec le reste, $p=\dfrac{1}{6}$
+- Lancer un dé **et regarder si la face est 1, 2 ou autre chose** : succès 1 ou 2, échec le reste, $p=\dfrac{1}{3}$
 
 Par contre :
 
-* Lancer un dé **et regarder la face** _n'ést pas une épreuve de Bernoulli_ ! Il y a 6 résultats possibles et non 2.
-{{< /expand >}}
+- Lancer un dé **et regarder la face** _n'ést pas une épreuve de Bernoulli_ ! Il y a 6 résultats possibles et non 2.
+  {{< /expand >}}
 
 ### 2. Schéma de Bernoulli
 
@@ -132,8 +131,8 @@ La **loi binomiale** donne la probabilité d'obtenir $k$ succès, pour $k$ entie
 {{< expand "Exemple" "..." >}}
 On lance 20 fois un dé équilibré et on regarde si la face est un 6.
 
-* C'est un schéma de Bernoulli.
-* $n=20$ et $p=\dfrac{1}{6}$
+- C'est un schéma de Bernoulli.
+- $n=20$ et $p=\dfrac{1}{6}$
 
 La loi binomiale va nous donner la probabilité d'obtenir 0 six, 1 six, 2 six, \ldots, jusque 20 six.
 {{< /expand >}}
@@ -143,7 +142,6 @@ La loi binomiale va nous donner la probabilité d'obtenir 0 six, 1 six, 2 six, \
 {{< expand "Notation" "..." >}}
 On note $B(n, p)$ la loi binomiale de paramètres $n$ et $p$.
 {{< /expand >}}
-
 
 #### Exemple avec 3 répétitions
 
@@ -160,22 +158,22 @@ Nous allons compter les succès rencontrés aux extrémités de chaque branche (
 De haut en bas : 3 succès, 2, 2, 1, 2, 1, 1, 0.
 
 {{< expand "Exemple" "..." >}}
-On peut calculer la probabilité de chaque feuille, par exemple : 
+On peut calculer la probabilité de chaque feuille, par exemple :
 
-* $P(\text{Succès, Succès, Succès}) = p \times p \times p = p^3$
-* $P(\text{Succès, Échec, Succès}) = p \times (1 - p) \times p = p^2(1 - p)$
-* $P(\text{Échec, Succès, Succès}) = (1 - p) \times p \times p = p^2(1 - p)$
-{{< /expand >}}
+- $P(\text{Succès, Succès, Succès}) = p \times p \times p = p^3$
+- $P(\text{Succès, Échec, Succès}) = p \times (1 - p) \times p = p^2(1 - p)$
+- $P(\text{Échec, Succès, Succès}) = (1 - p) \times p \times p = p^2(1 - p)$
+  {{< /expand >}}
 
 On remarque que l'ordre n'a pas d'importance, seul compte le _nombre de succès_.
 
 Résumons
 
 {{< expand "Loi" "..." >}}
-| $k$               | 0         | 1           | 2           | 3     |
+| $k$ | 0 | 1 | 2 | 3 |
 |-------------------|:---------:|:-----------:|:-----------:|:-----:|
-| Nombre de chemins | 1         | 3           | 3           | 1     |
-| $P(X = k)$        | $(1-p)^3$ | $3p(1-p)^2$ | $3p^2(1-p)$ | $p^3$ |
+| Nombre de chemins | 1 | 3 | 3 | 1 |
+| $P(X = k)$ | $(1-p)^3$ | $3p(1-p)^2$ | $3p^2(1-p)$ | $p^3$ |
 {{< /expand >}}
 
 #### Exemple 2
@@ -186,11 +184,10 @@ On joue trois fois à ce jeu. Déterminer la probabilité de gagner exactement d
 
 {{< expand "Réponses" "..." >}}
 
-* Tirer une carte est une épreuve de Bernoulli de probabilité de succès $p=\dfrac{1}{4}$,
-* On répète 3 fois de manière identique et indépendante cette expérience : c'est un schéma de Bernoulli avec $n=3$ et $p=\dfrac{1}{4}$,
-* On note $X$ la variable aléatoire qui compte les succès. $X$ suit la loi $B\left(3, \dfrac{1}{4}\right)$.
-* La probabilité de gagner 2 fois est donnée par $P(X = 2)$
-
+- Tirer une carte est une épreuve de Bernoulli de probabilité de succès $p=\dfrac{1}{4}$,
+- On répète 3 fois de manière identique et indépendante cette expérience : c'est un schéma de Bernoulli avec $n=3$ et $p=\dfrac{1}{4}$,
+- On note $X$ la variable aléatoire qui compte les succès. $X$ suit la loi $B\left(3, \dfrac{1}{4}\right)$.
+- La probabilité de gagner 2 fois est donnée par $P(X = 2)$
 
 En rouge les feuilles avec 2 succès exactement. À nouveau il y en a 3.
 
@@ -209,7 +206,7 @@ mais nous allons utiliser la calculatrice.
 On note $X$ une variable aléatoire qui suit $B(10, 0.3)$. Déterminer $P(X = 5)$.
 
 {{< hint warning >}}
-Menu **Probabilités**, choisir **Binomiale**, saisir $n=10$ et $p=0.3$, **Suivant**. 
+Menu **Probabilités**, choisir **Binomiale**, saisir $n=10$ et $p=0.3$, **Suivant**.
 {{< /hint >}}
 
 Aller à gauche sur la **courbe orange** et choisir le **trait** (pas les zones complètes.)
@@ -222,19 +219,19 @@ On lit que $P(X=5) \approx 0.103$.
 
 ### 5. Allure de la loi binomiale
 
-On peut remarquer quelques propriétés de la figure figure précédentes, elles sont vraies pour toutes les 
+On peut remarquer quelques propriétés de la figure figure précédentes, elles sont vraies pour toutes les
 loi binomiales.
-
 
 Voici par exemple ce qu'on obtient pour $n=100$ et $p=0.3$.
 
 ![Loi binomiale : la courbe en cloche](./numworks_2.png)
 
 {{< expand "courbe en cloche" "..." >}}
-* On reconnait une _cloche_ (ça monte et ça descend)
-* Les "valeurs centrales" ont une probabilité plus élevées que les valeurs extrêmes.
-    Intuitivement, lorsqu'on fait 100 parties de pile ou face, il est plus probable d'obtenir 50 piles que 0 pile.
-{{< /expand >}}
+
+- On reconnait une _cloche_ (ça monte et ça descend)
+- Les "valeurs centrales" ont une probabilité plus élevées que les valeurs extrêmes.
+  Intuitivement, lorsqu'on fait 100 parties de pile ou face, il est plus probable d'obtenir 50 piles que 0 pile.
+  {{< /expand >}}
 
 Essayez d'autres valeurs de $p$ avec $n=100$.
 
@@ -253,9 +250,9 @@ allant de $0$ à $n$.
 
 Ensuite on saisit la formule en cellule $B2$
 
-```excel
+```
 =LOI.BINOMIALE(A2; 10; 0,3; FAUX)
-``` 
+```
 
 et on étire cette formule.
 
@@ -263,8 +260,7 @@ Enfin on insère un graphique et on choisit le diagramme en bâtons s'il n'est p
 
 La syntaxe de cette formule varie un peu d'un modèle de tableur à l'autre (Excel, Libre Office etc.)
 
-
-### 7. Espérance de la loi binomiale
+### 6. Espérance de la loi binomiale
 
 ##### Espérance
 
@@ -276,7 +272,7 @@ L'espérance d'une variable aléatoire $X$ qui suit une loi binomiale $B(n, p)$ 
 
 #### Exemple 1
 
-On joue 100 parties de pile ou face avec un pièce truquée dont la probabilité de faire Face est 0.4
+On joue 100 parties de pile ou face avec un pièce truquée dont la probabilité de faire Face est 0.3
 
 {{< expand "Exemple" "..." >}}
 En moyenne, on aura $100 \times 0.3 = 30$ faces.
@@ -284,7 +280,7 @@ En moyenne, on aura $100 \times 0.3 = 30$ faces.
 
 #### Exemple 2
 
-Un QCM comporte 10 questions. Chaque question comporte exactement une bonne réponse. On répond au hasard.
+Un QCM comporte 10 questions. Chaque question comporte quatre réponses dont exactement une bonne réponse. On répond au hasard.
 
 Combien de points peut-on espérer ?
 
@@ -299,8 +295,7 @@ Son espérance est $E(X) = 10 \times 0.25 = 2.5$. On peut espérer 2.5 points en
 
 ## 3. Coefficients binomiaux
 
-
-### 1. Combinaisons 
+### 1. Combinaisons
 
 #### Définition
 
@@ -322,10 +317,11 @@ Dans les exemples précédents on a vu que $\binom{3}{0} = 1, \binom{3}{1} = 3, 
 
 {{< expand "Loi binomiale" "..." >}}
 {{< hint info >}}
-* $\binom{n}{0} = \binom{n}{n} = 1$ : il y a toujours 1 seul chemin qui mène à 0 succès ou à $n$ succès.
-* $\binom{n}{1} = \binom{n}{n - 1} = n$ : il y a toujours n chemins qui mènent à $1$ succès ou à $n - 1$ succès.
-{{< /hint >}}
-{{< /expand >}}
+
+- $\binom{n}{0} = \binom{n}{n} = 1$ : il y a toujours 1 seul chemin qui mène à 0 succès ou à $n$ succès.
+- $\binom{n}{1} = \binom{n}{n - 1} = n$ : il y a toujours n chemins qui mènent à $1$ succès ou à $n - 1$ succès.
+  {{< /hint >}}
+  {{< /expand >}}
 
 #### Calculatrice Numworks
 
@@ -340,7 +336,7 @@ On peut représenter les coefficients binomiaux d'une manière pratique et qui p
 {{< expand "Triangle de Pascal" "..." >}}
 En _ligne_, les valeurs de $n$, en _colonne_ celles de $k$.
 
-On remarque que $20 + 15 = 35$ soit  $\binom{6}{3} + \binom{6}{4} = \binom{7}{4}$.
+On remarque que $20 + 15 = 35$ soit $\binom{6}{3} + \binom{6}{4} = \binom{7}{4}$.
 
 Cette propriété est vraie pour tout $n$ et tout $k$, à condition de supposer que les cases vides valent 0.
 {{< /expand >}}
@@ -384,11 +380,8 @@ La probabilité d'avoir 4 boules blanches est :
 $$P(X=4) = \binom{6}{4} \left(\dfrac{5}{8}\right)^4\left(1 - \dfrac{5}{8}\right)^{6-4}$$
 $$P(X=4) = \binom{6}{4} \left(\dfrac{5}{8}\right)^4\left(\dfrac{3}{8}\right)^{2}$$
 
-
 D'après le triangle de Pascal donné plus haut, $\binom{6}{4} = 15$, donc
 
 $$P(X=4) = 15 \left(\dfrac{5}{8}\right)^4\left(\dfrac{3}{8}\right)^{2} = \dfrac{84~375}{262~144} \approx 0.322$$
 
-
 {{< /expand >}}
-
