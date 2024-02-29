@@ -3,7 +3,6 @@ title: "Travaux dirigés"
 author: qkzk
 date: 2020/04/29
 weight: 2
-
 ---
 
 [pdf](./2_td_prog_dynamique.pdf)
@@ -13,15 +12,12 @@ weight: 2
 Dans ce T.D. nous allons résoudre quelques problèmes classiques
 en utilisant la **programmation dynamique**.
 
-
 ## 1. Les pyramides de nombres
-
 
 Une pyramide de nombre est un graphe donc les sommets sont des nombres.\
 Chaque sommet d'un même niveau a deux arrêtes vers le bas.\
 _Deux sommets voisins d'un même niveau sont reliés à un même sommet du niveau_
 _suivant._
-
 
 ```
 0      3
@@ -33,17 +29,12 @@ _suivant._
 Ici on peut suivre le chemin `3 - 4 - 7 - 5` mais pas `3 - 2 - 5` :
 les sommets 2 et 5 ne sont pas reliés.
 
-
 **Objectif :**
 
 > Déterminer la valeur maximale de la somme des chemins traversant une pyramide
 > de nombre.
 >
 > Dans le premier exemple, le chemin `3 - 4 - 7 - 5` à pour somme 19, qui est maximale.
-
-
-
-
 
 **Algorithme naïf :**
 
@@ -53,11 +44,9 @@ les sommets 2 et 5 ne sont pas reliés.
 >
 > Donc l'algorithme naïf est en temps exponentiel en $n$.
 
-
 ### Résoudre les pyramides de nombres avec un algorithme récursif
 
 1.  Déterminer le chemin optimal de la seconde pyramide de nombres.
-
 
     <!-- **Correction**
 
@@ -71,7 +60,6 @@ les sommets 2 et 5 ne sont pas reliés.
 
     $x$ la position, $v(x)$ la valeur, $c(x)$ la somme maximale quand on descend
     à partir de $x$.
-
 
     <!-- **Correction**
 
@@ -123,9 +111,9 @@ qu'on peut atteindre _depuis ce noeud_.
 
 Par exemple,
 
-*   partant du 6 à la dernière ligne : on peut atteindre 6.
-*   partant du 7 à la 3^ième^ ligne on peut atteindre 7 + 5 et 7 + 4.
-    La valeur maximale est 7+5+12. On inscrit 12 à cette ligne.
+- partant du 6 à la dernière ligne : on peut atteindre 6.
+- partant du 7 à la 3^ième^ ligne on peut atteindre 7 + 5 et 7 + 4.
+  La valeur maximale est 7+5=12. On inscrit 12 à cette ligne.
 
 5.  Compléter la pyramide des valeurs "sommes montantes" (il faut bien
     leur donner un nom !) du second exemple.
@@ -149,6 +137,7 @@ Par exemple,
     ```
 
     **Correction** -->
+
 6.  Proposer un algorithme calculant itérativement ces sommes montantes.
     Où la somme maximale est-elle référencée ?
 
@@ -166,8 +155,7 @@ Par exemple,
     La somme maximale est référencée tout en haut de la pyramide
     **Correction** -->
 
-8.  Combien de sommes sont-elles effectuées ?
-
+7.  Combien de sommes sont-elles effectuées ?
 
     <!-- **Correction**
 
@@ -177,8 +165,7 @@ Par exemple,
 
     **Correction** -->
 
-
-7.  Vérifier sur les exemples.
+8.  Vérifier sur les exemples.
 
     <!-- **Correction**
 
@@ -197,7 +184,7 @@ On envisage d'implémenter cet algorithme (lire : vous le ferez en TP).
 
     **Correction** -->
 
-10. **Complément pas indispensable**. On obtient bien la somme maximale, mais
+9.  **Complément pas indispensable**. On obtient bien la somme maximale, mais
     pas le chemin qui y mène. Que pourrait-on ajouter pour l'obtenir ?
 
     <!-- **Correction**
@@ -207,12 +194,10 @@ On envisage d'implémenter cet algorithme (lire : vous le ferez en TP).
 
     **Correction** -->
 
-
 _Remarque finale :_ les pyramides de nombres sont des graphes. Alors ce qu'on
 vient d'effectuer est un parcours. Il visite tous les sommets et toutes les
 arrêtes mais évite d'emprunter certains chemins. La version récursive initiale
 visitait tous les chemins, d'où sa lenteur.
-
 
 ---
 
@@ -226,13 +211,14 @@ de manière de rendre la somme $n$ ?
 
 On note $C(S, n)$ le nombre de sommes qu'on peut former.
 
-*   Par exemple si $S = [1, 2, 5]$ et $n=5$.
+- Par exemple si $S = [1, 2, 5]$ et $n=5$.
 
-    $n = 1+1+1+1+1 = 1+1+1+2 = 1+2+2 = 5$. Il existe 4 manières différentes.\
+  $n = 1+1+1+1+1 = 1+1+1+2 = 1+2+2 = 5$. Il existe 4 manières différentes.
 
-    $$C([1, 2, 5], 5) = 4$$
-*   Si $n=0$ alors il existe une manière : on ne rend rien.
-*   Si $n=1$ alors il existe une manière : on rend une pièce.
+  $$C([1, 2, 5], 5) = 4$$
+
+- Si $n=0$ alors il existe une manière : on ne rend rien.
+- Si $n=1$ alors il existe une manière : on rend une pièce.
 
 En quoi est-ce un problème de programmation dynamique ?
 
@@ -240,17 +226,17 @@ Exhibons les sous-problèmes :
 
 Pour une pièce $p$ du jeu $S$, si $p\leq n$ alors :
 
-*   Je peux décider prendre $p$, alors j'ai $S-p$ à rendre encore.
-*   Si je ne la prends pas, j'ai autant de solutions possibiles que si j'avais
-    retiré $p$ de $S$.
+- Je peux décider prendre $p$, alors j'ai $S-p$ à rendre encore.
+- Si je ne la prends pas, j'ai autant de solutions possibiles que si j'avais
+  retiré $p$ de $S$.
 
 $$C(S, n) = C(S, n - p) + C(S \setminus \{ p \}, n)$$
 
 On constate que :
 
-*   les sous-problèmes ne sont pas indépendants,
-*   les sous structures (rendre $n-p$ avec $S$ et rendre $n$ avec
-    $S\setminus \{p\})$ sont optimales.
+- les sous-problèmes ne sont pas indépendants,
+- les sous structures (rendre $n-p$ avec $S$ et rendre $n$ avec
+  $S\setminus \{p\})$ sont optimales.
 
 Donc : **c'est bien un problème de programmation dynamique et nous avons déjà**
 **la relation de récurrence.**
@@ -260,31 +246,31 @@ exemple.
 
 Le tableau ci-dessous se remplit par ligne.
 
-* La première ligne indique le montant $n$ à atteindre.
-* La première colonne indique le jeu de pièces $S$ dont on dispose
-* Les cases intérieures contiennent les valeurs de $C(S, n)$.
-* Par exemple, si je n'ai aucune pièce, $S = [\;]$.
+- La première ligne indique le montant $n$ à atteindre.
+- La première colonne indique le jeu de pièces $S$ dont on dispose
+- Les cases intérieures contiennent les valeurs de $C(S, n)$.
+- Par exemple, si je n'ai aucune pièce, $S = [\;]$.
 
-    *   Avec 0 à rendre, j'ai 1 manière de rendre la monnaie,
-    *   Avec $n=1, 2, 3, \ldots$ je n'ai aucune manière de rendre la monnaie.
-*   Avec $S = [1, 2]$.
+  - Avec 0 à rendre, j'ai 1 manière de rendre la monnaie,
+  - Avec $n=1, 2, 3, \ldots$ je n'ai aucune manière de rendre la monnaie.
 
-    *   Si $n=0$ il y a une manière.
-    *   Si $n=1$. Nous allons utiliser la relation de récurrence :
+- Avec $S = [1, 2]$.
 
-        Si je prends la pièce $1$, il me reste $0$ à rendre. Je lis la valeur $C=1$
-        dans le tableau : \
-        Si je ne prends pas la pièce 1, il me reste 1 à rendre avec $S=[\;]$. Je
-        lis la valeur $C=0$ dans le tableau.\
-        J'additionne ces deux nombres et j'écris la valeur **1** dans le tableau.
+  - Si $n=0$ il y a une manière.
+  - Si $n=1$. Nous allons utiliser la relation de récurrence :
 
+    Si je prends la pièce $1$, il me reste $0$ à rendre. Je lis la valeur $C=1$
+    dans le tableau : \
+    Si je ne prends pas la pièce 1, il me reste 1 à rendre avec $S=[\;]$. Je
+    lis la valeur $C=0$ dans le tableau.\
+    J'additionne ces deux nombres et j'écris la valeur **1** dans le tableau.
 
-    |  S `\` n             	| 0  	| 1 	  | 2 	| 3 	| 4 	| 5 	|
-    |----------------------	|----	|------ |---	|---	|---	|---	|
-    | $[\;]$               	| 1  	| 0 	  | 0 	|   	|   	|   	|
-    | $[\textbf{1}]$       	| 1  	| **1**	|   	|   	|   	|   	|
-    | $[1, \textbf{2}]$    	|    	|   	  |   	|   	|   	|   	|
-    | $[1, 2, \textbf{5}]$ 	|    	|   	  |   	|   	|   	|   	|
+  | S `\` n              | 0   | 1     | 2   | 3   | 4   | 5   |
+  | -------------------- | --- | ----- | --- | --- | --- | --- |
+  | $[\;]$               | 1   | 0     | 0   |     |     |     |
+  | $[\textbf{1}]$       | 1   | **1** |     |     |     |     |
+  | $[1, \textbf{2}]$    |     |       |     |     |     |     |
+  | $[1, 2, \textbf{5}]$ |     |       |     |     |     |     |
 
 1.  Compléter le tableau
 
@@ -331,7 +317,6 @@ parfaitement pour un système de pièces **canonique**.
 
 > La somme des $n$ premières pièces (par ordre croissant) est inférieure à la
 > pièce $n+1$
-
 
 Que se passe-t-il si le système n'est plus canonique ?
 
@@ -448,9 +433,8 @@ qui retourne toujours la solution optimale.
 
 Les _combinaisons_ sont des entiers déjà rencontrés en mathématiques qui apparaissent dans beaucoup de problèmes :
 
-* développer $(a+b)^n$ grâce à la formule du _binôme de Newton_,
-* calculer une probabilité avec une loi binomiale,
-
+- développer $(a+b)^n$ grâce à la formule du _binôme de Newton_,
+- calculer une probabilité avec une loi binomiale,
 
 **Définition** :
 
@@ -464,14 +448,14 @@ peut-on former qui comportent deux $0$ ?
 > Les mots sont : $0011, 0101, 0110, 1001, 1010$ et $1100$. Aussi $\binom{4}{2} = 6$.
 
 > Pour être certain de n'en oublier aucun il suffit de les donner par ordre
-  croissant.
+> croissant.
 
 **Propriétés élémentaires :**
 
-*   On a toujours une possibilité de choisir tous les objets ou de n'en
-    choisir aucun donc $\binom{n}{0} = \binom{n}{n} = 1$
-*   Si l'on choisit 1 objet ou si on en délaisse un, il y a $n$ tirages possibles
-    donc $\binom{n}{1} = \binom{n}{n-1} = n$
+- On a toujours une possibilité de choisir tous les objets ou de n'en
+  choisir aucun donc $\binom{n}{0} = \binom{n}{n} = 1$
+- Si l'on choisit 1 objet ou si on en délaisse un, il y a $n$ tirages possibles
+  donc $\binom{n}{1} = \binom{n}{n-1} = n$
 
 **Formule générale :**
 
@@ -489,24 +473,24 @@ La formule précédente permet, de proche en proche, de construire le **Triangle
 
 Dans le triangle ci-dessous, cela signifie :
 
-*   qu'on remplit les lignes une par une,
-*   qu'on ajoute deux valeurs voisine d'une même ligne pour obtenir celle sous
-    la valeur de droite.
+- qu'on remplit les lignes une par une,
+- qu'on ajoute deux valeurs voisine d'une même ligne pour obtenir celle sous
+  la valeur de droite.
 
 Par exemple le _3_ est obtenu en faisant _1 + 2 = 3_ (ses voisins du dessus)
 
 0.  Compléter le triangle de Pascal suivant
 
-    | `n\k` | 0 	  | 1 	  | 2 	| 3 	| 4 	| 5 	| 6 	| 7 	|
-    |-----	|---	  |-----  |---	|---	|---	|---	|---	|---	|
-    | 0   	| 1 	  |   	  |   	|   	|   	|   	|   	|   	|
-    | 1   	| 1 	  | 1 	  |   	|   	|   	|   	|   	|   	|
-    | 2   	| __1__ | __2__ | 1 	|   	|   	|   	|   	|   	|
-    | 3   	| 1 	  | __3__	|   	|   	|   	|   	|   	|   	|
-    | 4   	|   	  |   	  |   	|   	|   	|   	|   	|   	|
-    | 5   	|   	  |   	  |   	|   	|   	|   	|   	|   	|
-    | 6   	|   	  |   	  |   	|   	|   	|   	|   	|   	|
-    | 7   	|   	  |   	  |   	|   	|   	|   	|   	|   	|
+    | `n\k` | 0     | 1     | 2   | 3   | 4   | 5   | 6   | 7   |
+    | ----- | ----- | ----- | --- | --- | --- | --- | --- | --- |
+    | 0     | 1     |       |     |     |     |     |     |     |
+    | 1     | 1     | 1     |     |     |     |     |     |     |
+    | 2     | **1** | **2** | 1   |     |     |     |     |     |
+    | 3     | 1     | **3** |     |     |     |     |     |     |
+    | 4     |       |       |     |     |     |     |     |     |
+    | 5     |       |       |     |     |     |     |     |     |
+    | 6     |       |       |     |     |     |     |     |     |
+    | 7     |       |       |     |     |     |     |     |     |
 
     <!-- **Correction**
 
@@ -539,15 +523,15 @@ On utilise le triangle de Pascal pour résoudre le problème
 
 Voici les propriétés que nous allons utiliser :
 
-* $\binom{n}{k} = \binom{n-1}{k-1} + \binom{n-1}{k}$ pour $0 < k < n$,
-* $\binom{n}{0} = \binom{n}{n} = 1$
+- $\binom{n}{k} = \binom{n-1}{k-1} + \binom{n-1}{k}$ pour $0 < k < n$,
+- $\binom{n}{0} = \binom{n}{n} = 1$
 
 1. Donner une fonction récursive (en langage naturel ou en Python) qui
    calcule $\binom{n}{k}$
 
     <!-- **Correction**
     Voici l'algorithme récursif qui correspond à ça :
-
+   
     ```
     fonction c(n, k):
       si k = 0 ou si k = n, alors retourner 1
@@ -555,34 +539,33 @@ Voici les propriétés que nous allons utiliser :
     ```
     **Correction** -->
 
-2.  Construire l'arbre des appels récursifs du calcul de $\binom{5}{3}$
+2. Construire l'arbre des appels récursifs du calcul de $\binom{5}{3}$
 
-    (prévoir de la place, le nombre total d'appels récursifs est $2\binom{n}{k} - 2$).
+   (prévoir de la place, le nombre total d'appels récursifs est $2\binom{n}{k} - 2$).
 
-    <!-- **Correction**
+   <!-- **Correction**
 
-    Voici les appels récursifs de notre fonction simple pour calculer $\binom{5}{3}$
-    [appels récursifs](img/1_arbre_combinaison_recursion.png)
+   Voici les appels récursifs de notre fonction simple pour calculer $\binom{5}{3}$
+   [appels récursifs](img/1_arbre_combinaison_recursion.png)
 
-    **Correction** -->
+   **Correction** -->
 
+3. proposer un algorithme utilisant la programmation dynamique qui
+   calcule $\binom{n}{k}$ en utilisant le triangle de Pascal.
 
-4.  proposer un algorithme utilisant la programmation dynamique qui
-    calcule $\binom{n}{k}$ en utilisant le triangle de Pascal.
+4. Est-il nécessaire de mémoriser _tout_ le tableau ?
+5. Doit-on remplir entièrement chaque ligne ?
 
-5.  Est-il nécessaire de mémoriser _tout_ le tableau ?
-6.  Doit-on remplir entièrement chaque ligne ?
+   <!-- **Correction** Solution
 
-    <!-- **Correction** Solution
+   1. algorithme
 
-    1. algorithme
+       1. On remplit les $k$ premières cases de chaque ligne de haut en bas.
+       2. On arrête à la ligne $n$
+       3. Temps: $T(n,k)=O(nk)$
 
-        1. On remplit les $k$ premières cases de chaque ligne de haut en bas.
-        2. On arrête à la ligne $n$
-        3. Temps: $T(n,k)=O(nk)$
-
-    2. Seule l'avant dernière ligne doit être gardée en mémoire.
-    3. Non, on peut améliorer en ne calculant que les cases "en haut à gauche" de la case initiale. **Correction** -->
+   2. Seule l'avant dernière ligne doit être gardée en mémoire.
+   3. Non, on peut améliorer en ne calculant que les cases "en haut à gauche" de la case initiale. **Correction** -->
 
 ---
 
@@ -591,19 +574,17 @@ Voici les propriétés que nous allons utiliser :
 Lorsqu'elle reçoit en entrée une planche de longueur n, elle
 peut
 
-* soit en tirer directement le profit/prix $p_n$,
-* soit chercher à la découper en k morceaux pour en tirer plusieurs (sous)
+- soit en tirer directement le profit/prix $p_n$,
+- soit chercher à la découper en k morceaux pour en tirer plusieurs (sous)
   planches de longueur $i_1, i_2, \cdots , i_k$ (avec $i_1 + i_2 + \cdots + i_k = n$)
   et obtenir comme profit la somme $p_{i1} + p_{i2} + \cdots + p_{ik}$ des prix de vente des sous-planches.
-* Le problème de la scierie est alors de déterminer la solution qui lui garantit un profit maximal.
-
+- Le problème de la scierie est alors de déterminer la solution qui lui garantit un profit maximal.
 
 **Exemple**
 
-| longueur $i$ 	| 1 	| 2 	| 3 	| 4 	| 5  	| 6  	| 7  	| 8  	| 9  	| 10 	|
-|--------------	|---	|---	|---	|---	|----	|----	|----	|----	|----	|----	|
-| prix $p_i$   	| 1 	| 5 	| 8 	| 9 	| 10 	| 17 	| 17 	| 20 	| 24 	| 30 	|
-
+| longueur $i$ | 1   | 2   | 3   | 4   | 5   | 6   | 7   | 8   | 9   | 10  |
+| ------------ | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| prix $p_i$   | 1   | 5   | 8   | 9   | 10  | 17  | 17  | 20  | 24  | 30  |
 
 1.  énumérer tous les prix possibles pour une planche de longueur 4.
 2.  Quel est la solution optimale ?
@@ -650,22 +631,20 @@ On note $r_n$ le profit maximal que l'on peut atteindre pour une planche de long
     optimale, doit être un découpage optimal d'une planche de longueur $n-i$.
     **Correction** -->
 
+4.  Proposer une fonction récursive `coupe` qui calcule $r_n$ en fonction des
+    paramètres $p$ (le tableau des prix) et $n$ (la longueur de la planche).
 
-
-4. Proposer une fonction récursive `coupe` qui calcule $r_n$ en fonction des
-   paramètres $p$ (le tableau des prix) et $n$ (la longueur de la planche).
-
-    <!-- **Correction** Solution
-
-    ```
-    fonction coupe(p, n):
-      si n=0 alors retourner 0
-      sinon
-        q = - infini
-        pour i allant de 1 à n
-          q = max(q, p[i] + coupe(p, n-i))
-        retourner q
-    ``` **Correction** -->
+     <!-- **Correction** Solution
+    
+     ```
+     fonction coupe(p, n):
+       si n=0 alors retourner 0
+       sinon
+         q = - infini
+         pour i allant de 1 à n
+           q = max(q, p[i] + coupe(p, n-i))
+         retourner q
+     ``` **Correction** -->
 
 5.  Construire l'arbre des appels récursifs de `coupe(p, 4)`
 
