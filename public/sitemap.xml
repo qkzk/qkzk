@@ -25,7 +25,7 @@
     <loc>http://localhost:1313/docs/nsi/cours_premiere/os/0_concepts_cles/</loc>
   </url><url>
     <loc>http://localhost:1313/docs/</loc>
-    <lastmod>2023-12-10T00:00:00+00:00</lastmod>
+    <lastmod>2024-03-12T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/docs/nsi/cours_premiere/os/1_cours/</loc>
     <lastmod>2022-07-19T00:00:00+00:00</lastmod>
@@ -950,6 +950,9 @@
     <loc>http://localhost:1313/docs/nsi/cours_premiere/python/a_connaitre_par_coeur/</loc>
   </url><url>
     <loc>http://localhost:1313/docs/nsi/cours_premiere/reseaux/complements/</loc>
+  </url><url>
+    <loc>http://localhost:1313/docs/archives/maths/</loc>
+    <lastmod>2024-03-12T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/docs/archives/isn/sujets-des-projets/archives/</loc>
     <lastmod>2016-07-02T13:34:30+00:00</lastmod>
