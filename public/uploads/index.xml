@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Uploads on qkzk</title>
+    <link>http://localhost:1313/uploads/</link>
+    <description>Recent content in Uploads on qkzk</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <atom:link href="http://localhost:1313/uploads/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title></title>
+      <link>http://localhost:1313/uploads/docnsitale/pile_file/tp_html_parser/data/ex1/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/uploads/docnsitale/pile_file/tp_html_parser/data/ex1/</guid>
+      <description>&lt;!DOCTYPE html&gt; Un titre un paragraphe </description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/uploads/docnsitale/pile_file/tp_html_parser/data/ex2/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/uploads/docnsitale/pile_file/tp_html_parser/data/ex2/</guid>
+      <description>&lt;!DOCTYPE html&gt; Un titre un paragraphe </description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/uploads/docnsitale/pile_file/tp_html_parser/data/ex3/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/uploads/docnsitale/pile_file/tp_html_parser/data/ex3/</guid>
+      <description>&lt;!DOCTYPE html&gt; Un titre un paragraphe </description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/uploads/docnsitale/pile_file/tp_html_parser/data/ex4/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/uploads/docnsitale/pile_file/tp_html_parser/data/ex4/</guid>
+      <description>&lt;!DOCTYPE html&gt; Un titre un paragraphe &lt;-- this is a comment --&gt; </description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/uploads/docs/doc03b/ex_html2-css/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/uploads/docs/doc03b/ex_html2-css/</guid>
+      <description>&lt;!DOCTYPE html PUBLIC &#34;-//W3C//DTD XHTML 1.0 Transitional//EN&#34; &#34;http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd&#34;&gt; ISN - Page d&#39;exemple 2 Valider sa page HTML M�me si le HTML est un langage universel, le rendu peu varier selon les navigateurs. Si la version du langage HTML utilis�e n&#39;est pas pr�cis�e dans la page, les navigateurs se mettent en quirk mode, c&#39;est-�-dire qu&#39;ils sont plus indulgents et plus permissifs sur la structure du fichier pour pouvoir lire du &#34;vieux HTML&#34;</description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/uploads/docs/doc03b/ex_html2/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/uploads/docs/doc03b/ex_html2/</guid>
+      <description>&lt;!DOCTYPE html PUBLIC &#34;-//W3C//DTD XHTML 1.0 Transitional//EN&#34; &#34;http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd&#34;&gt; ISN - Page d&#39;exemple 2 Valider sa page HTML M�me si le HTML est un langage universel, le rendu peu varier selon les navigateurs. Si la version du langage HTML utilis�e n&#39;est pas pr�cis�e dans la page, les navigateurs se mettent en quirk mode, c&#39;est-�-dire qu&#39;ils sont plus indulgents et plus permissifs sur la structure du fichier pour pouvoir lire du &#34;vieux HTML&#34;</description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/uploads/docs/doc03b/images/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/uploads/docs/doc03b/images/</guid>
+      <description>&lt;!DOCTYPE html PUBLIC &#34;-//W3C//DTD XHTML 1.0 Transitional//EN&#34; &#34;http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd&#34;&gt; ISN - Des images Des tableaux de maitres Ecole flamande Pieter Brueghel ou Bruegel dit l&#39;Ancien est un peintre braban�on n� � Bruegel (pr�s de Br�da) vers 1525 et mort le 9 septembre 1569 � Bruxelles. Avec Jan Van Eyck, J�r�me Bosch et Pierre Paul Rubens, il est consid�r� comme une des quatre grandes figures de la peinture flamande. Tableaux de Brueghel l&#39;Ancien Impressionnisme L&#39;impressionnisme est un mouvement pictural fran�ais n� de l&#39;association de quelques artistes de la seconde moiti� du XIXe si�cle.</description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/uploads/docs/doc03b/images2/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/uploads/docs/doc03b/images2/</guid>
+      <description>&lt;!DOCTYPE html PUBLIC &#34;-//W3C//DTD XHTML 1.0 Transitional//EN&#34; &#34;http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd&#34;&gt; ISN - Des images Des tableaux de maitres Ecole flamande Pieter Brueghel ou Bruegel dit l&#39;Ancien est un peintre braban�on n� � Bruegel (pr�s de Br�da) vers 1525 et mort le 9 septembre 1569 � Bruxelles. Avec Jan Van Eyck, J�r�me Bosch et Pierre Paul Rubens, il est consid�r� comme une des quatre grandes figures de la peinture flamande. Tableaux de Brueghel l&#39;Ancien Impressionnisme L&#39;impressionnisme est un mouvement pictural fran�ais n� de l&#39;association de quelques artistes de la seconde moiti� du XIXe si�cle.</description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/uploads/docs/doc04/corrections/louis/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/uploads/docs/doc04/corrections/louis/</guid>
+      <description>&lt;!DOCTYPE html PUBLIC &#34;-//W3C//DTD XHTML 1.0 Strict//EN&#34; &#34;http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd&#34;&gt; Page de test pour code Javascript Jacques Prévert - Les belles familles Louis I Louis II Louis III Louis IV Louis V Louis VI Louis VII Louis VIII Louis IX Louis X (dit le Hutin) Louis XI Louis XII Louis XIII Louis XIV Louis XV Louis XVI Louis XVII Louis XVIII et plus personne plus rien... qu&#39;est-ce que c&#39;est que ces gens-là qui ne sont pas foutus de compter jusqu&#39;à vingt ?</description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/uploads/docs/doc04/corrections/louis2/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/uploads/docs/doc04/corrections/louis2/</guid>
+      <description>&lt;!DOCTYPE html PUBLIC &#34;-//W3C//DTD XHTML 1.0 Strict//EN&#34; &#34;http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd&#34;&gt; Page de test pour code Javascript Jacques Prévert - Les belles familles I II III IV V VI VII VIII IX X (dit le Hutin) XI XII XIII XIV XV XVI XVII XVIII et plus personne plus rien... qu&#39;est-ce que c&#39;est que ces gens-là qui ne sont pas foutus de compter jusqu&#39;à vingt ? </description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/uploads/docs/doc04/corrections/louis2bis/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/uploads/docs/doc04/corrections/louis2bis/</guid>
+      <description>&lt;!DOCTYPE html PUBLIC &#34;-//W3C//DTD XHTML 1.0 Strict//EN&#34; &#34;http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd&#34;&gt; Page de test pour code Javascript Jacques Prévert - Les belles familles </description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/uploads/docs/doc04/doc/equivalences-css-javascript/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/uploads/docs/doc04/doc/equivalences-css-javascript/</guid>
+      <description>&lt;!DOCTYPE html PUBLIC &#34;-//W3C//DTD XHTML 1.0 Strict//EN&#34; &#34;http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd&#34;&gt; ISN - programmation 8 - Fonctions et événement Tables des équivalences des propriétés CSS/Javascript Rappel&amp;nbsp;: pour modifier le style d’un élément ayant comme id monElement et donner la valeur laValeur à sa propriété laPropriete il faut utiliser la syntaxe suivante&amp;nbsp;: document.getElementById(monElement).style.laPropriete = &#34;laValeur&#34;; Les propriétés CSS composées d’un seul mot ont un equivalent en javascript.&#xA;Javascript Css textDecoration text-decoration textDecorationLineThrough text-decoration: line-through textDecorationNone text-decoration: none textDecorationUnderline text-decoration: underline textDecorationOverline text-decoration: overline textIndent text-indent textTransform text-transform styleFloat float listStyle list-style listStyleImage list-style-image listStylePosition list-style-position listStyleType list-style-type paddingBottom padding-bottom paddingLeft padding-left paddingRight padding-right paddingTop padding-top pageBreakAfter page-break-after pageBreakBefore page-break-before font-family fontFamily font-size fontSize font-weight fontWeight font-variant fontVariant borderBottom border-bottom borderBottomColor border-bottom-color borderBottomStyle border-bottom-style borderBottomWidth border-bottom-width borderColor border-color borderLeft border-left borderLeftColor border-left-color borderLeftStyle border-left-style borderLeftWidth border-left-width borderRight border-right borderRightColor border-right-color borderRightStyle border-right-style borderRightWidth border-right-width borderStyle border-style borderTop border-top borderTopColor border-top-color borderTopStyle border-top-style borderTopWidth border-top-width borderWidth border-width marginBottom margin-bottom marginLeft margin-left marginRight margin-right marginTop margin-top lineHeight line-height letterSpacing letter-spacing verticalAlign vertical-align zIndex z-index backgroundAttachment background-attachment backgroundColor background-color backgroundImage background-image backgroundPosition background-position backgroundRepeat background-repeat </description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/uploads/docs/doc04/doc/monuments-version1/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/uploads/docs/doc04/doc/monuments-version1/</guid>
+      <description>&lt;!DOCTYPE html PUBLIC &#34;-//W3C//DTD XHTML 1.0 Strict//EN&#34; &#34;http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd&#34;&gt; Exemple de fonctions - version 1 Monuments Monument : La tour Eiffel Monument : Le Mont Saint-Michel Monument : Le viaduc de Millau </description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/uploads/docs/doc04/doc/monuments-version2/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/uploads/docs/doc04/doc/monuments-version2/</guid>
+      <description>&lt;!DOCTYPE html PUBLIC &#34;-//W3C//DTD XHTML 1.0 Strict//EN&#34; &#34;http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd&#34;&gt; Exemple de fonctions - version 2 Monuments </description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/uploads/docs/doc04/exemples/exemple_changetailleimage/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/uploads/docs/doc04/exemples/exemple_changetailleimage/</guid>
+      <description> Changement de taille d&#39;une image Zomm avant / Zoom arri�re ... - largeur = 300px &amp;nbsp;+ </description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/uploads/docs/doc04/exemples/exemple_event1/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/uploads/docs/doc04/exemples/exemple_event1/</guid>
+      <description>Exemple avec événement Bla bla bla Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Ut purus elit, vestibulum ut, placerat ac, adipiscing vitae, felis. Curabitur dictum gravida mauris. Nam arcu libero, nonummy eget, consectetuer id, vulputate a, magna. Donec vehicula augue eu neque. Alan Turing Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Mauris ut leo. Cras viverra metus rhoncus sem.&#xA;Cliquez ici Nulla et lectus vestibulum urna fringilla ultrices.</description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/uploads/docs/doc04/exemples/exemple_longueurchaine/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/uploads/docs/doc04/exemples/exemple_longueurchaine/</guid>
+      <description>&lt;!DOCTYPE html PUBLIC &#34;-//W3C//DTD XHTML 1.0 Strict//EN&#34; &#34;http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd&#34;&gt; _nombre de caractères d&#39;une chaîne de caractères Nombre de caractères d&#39;une chaîne Le nombre de caractères du texte&amp;nbsp; &amp;nbsp; est . </description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/uploads/docs/doc04/exemples/exemple_somme/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/uploads/docs/doc04/exemples/exemple_somme/</guid>
+      <description>&lt;!DOCTYPE html PUBLIC &#34;-//W3C//DTD XHTML 1.0 Strict//EN&#34; &#34;http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd&#34;&gt; _saisie de nombres et somme en javascript Saisie et somme de 2 entiers Le résultat de la somme de et est . </description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/uploads/docs/doc04/exemples/exemple_timer/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/uploads/docs/doc04/exemples/exemple_timer/</guid>
+      <description> Page de test pour timer Variations de la couleur du cadre (modification incrémentale des composantes RGB) toutes les 5ms une fois le timer démarré. Exemple avec timer R : | G : | B : START STOP </description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/uploads/docs/doc04/exemples/googlemap1/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/uploads/docs/doc04/exemples/googlemap1/</guid>
+      <description>&lt;!DOCTYPE html PUBLIC &#34;-//W3C//DTD XHTML 1.0 Strict//EN&#34; &#34;http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd&#34;wq&gt; Première carte Google Map API v3 Première carte API Google Map v3 </description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/uploads/docs/doc04/exemples/mystere/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/uploads/docs/doc04/exemples/mystere/</guid>
+      <description>&lt;!DOCTYPE html PUBLIC &#34;-//W3C//DTD XHTML 1.0 Strict//EN&#34; &#34;http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd&#34;&gt; Texte mystere Mystère Il y a du texte caché ici... Montrer Cacher LE MYSTERE ENFIN DEVOILE... Cliquez sur l&#39;un des &#34;boutons&#34; Montrer/Cacher ci-dessus et observer ce qui se passe. </description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/uploads/docs/doc04/exemples/prompt1/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/uploads/docs/doc04/exemples/prompt1/</guid>
+      <description>&lt;!DOCTYPE html PUBLIC &#34;-//W3C//DTD XHTML 1.0 Strict//EN&#34; &#34;http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd&#34;&gt; _prompt, chaines et nombres en javascript 2 Saisie et &#34;+&#34; sur 2 variables... Le résultat de la &#39;chaine1+chaine2&#39; est Valeur &#34;entière&#34; de la première chaîne : </description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/uploads/docs/doc04/exemples/sesame/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/uploads/docs/doc04/exemples/sesame/</guid>
+      <description>&lt;!DOCTYPE html PUBLIC &#34;-//W3C//DTD XHTML 1.0 Strict//EN&#34; &#34;http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd&#34;&gt; Sésame ouvre-toi Accès réservé </description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/uploads/docs/doc04/exemples/somme1/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/uploads/docs/doc04/exemples/somme1/</guid>
+      <description>&lt;!DOCTYPE html PUBLIC &#34;-//W3C//DTD XHTML 1.0 Strict//EN&#34; &#34;http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd&#34;&gt; _variables et somme en javascript Somme de 2 variables Le résultat de la somme est . </description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/uploads/docs/doc04/exemples/somme2/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/uploads/docs/doc04/exemples/somme2/</guid>
+      <description>&lt;!DOCTYPE html PUBLIC &#34;-//W3C//DTD XHTML 1.0 Strict//EN&#34; &#34;http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd&#34;&gt; _variables et somme en javascript 2 Somme de 2 variables Le résultat de la somme de et est . </description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/uploads/docs/doc04/exemples/temperature/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/uploads/docs/doc04/exemples/temperature/</guid>
+      <description>&lt;!DOCTYPE html PUBLIC &#34;-//W3C//DTD XHTML 1.0 Strict//EN&#34; &#34;http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd&#34;&gt; Conversion de température Conversion Fahrenheit/Celsius Fahrenheit &amp;lt;==&amp;gt; Celsius </description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/uploads/docs/doc04/exemples/temperaturecomplet/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/uploads/docs/doc04/exemples/temperaturecomplet/</guid>
+      <description>&lt;!DOCTYPE html PUBLIC &#34;-//W3C//DTD XHTML 1.0 Strict//EN&#34; &#34;http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd&#34;&gt; Conversion de température Conversion Fahrenheit/Celsius Fahrenheit &amp;lt;==&amp;gt; Celsius </description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/uploads/docs/doc05/manips/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/uploads/docs/doc05/manips/</guid>
+      <description>&lt;!DOCTYPE html PUBLIC &#34;-//W3C//DTD XHTML 1.0 Transitional//EN&#34; &#34;http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd&#34;&gt; Codage des couleurs Un carré de base Changer une couleur de manière aléatoire en cliquant Utiliser la boucle pour Création de 64 carrés Création de 64 carrés avec identifiant Enumération de 64 valeurs de 0 à 256^3 Palette de 64 valeurs (qui ne fonctionne pas) Exemple de double boucle pour Palette de 64 couleurs avec triple boucle pour </description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/uploads/docs/doc06/transparents/archi/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/uploads/docs/doc06/transparents/archi/</guid>
+      <description>&lt;?xml version=&#34;1.0&#34; encoding=&#34;UTF-8&#34;?&gt; &lt;!DOCTYPE html PUBLIC &#34;-//W3C//DTD XHTML 1.1 plus MathML 2.0//EN&#34; &#34;http://www.w3.org/Math/DTD/mathml2/xhtml-math11-f.dtd&#34;&gt; - no title specified ARCHITECTURE&#xA;ISN 2012&#xA;vue schématique de l&#39;architecture de Von Neumann&#xA;Les différents organes du système sont reliés par des voies de communication appelées bus.&#xA;Les interfaces D’entrées/sorties&#xA;Elles permettent d’assurer la communication entre le microprocesseur et les périphériques. (capteur, clavier, moniteur ou afficheur, imprimante, modem, etc…).&#xA;Interface parallèle&#xA;Interface Série&#xA;&amp;lt;numéro&amp;gt;&#xA;&amp;lt;numéro&amp;gt;&#xA;La mémoire principale</description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/uploads/docs/ecrire/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/uploads/docs/ecrire/</guid>
+      <description> m&#39;ecrire </description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/uploads/docs/grilles-competences/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/uploads/docs/grilles-competences/</guid>
+      <description>&lt;!DOCTYPE html PUBLIC &#34;-//W3C//DTD XHTML 1.0 Transitional//EN&#34; &#34;http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd&#34;&gt; ISN - fiches d&#39;activité Lycées des Flandres - 2012/2013 - ISN Grille de compétence et évaluation Le BO Bulletin officiel de l’éducation nationale n°18 du 03/05 2012 définit une grille de compétences et d’évaluation pour l’ISN .&#xA;Les compétences, au nombre de cinq, sont les suivantes&amp;nbsp;:&#xA;C1&amp;nbsp;: Décrire et expliquer une situation, un système ou un programme, C2&amp;nbsp;: Concevoir et réaliser une solution informatique en réponse à un problème, C3&amp;nbsp;: Collaborer efficacement au sein d’une équipe dans le cadre d’un projet, C4&amp;nbsp;: Communiquer à l’écrit et à l’oral, C5&amp;nbsp;: Faire un usage responsable des sciences du numérique en ayant conscience des problèmes sociétaux induits.</description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/uploads/uploads/2016/07/img/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/uploads/uploads/2016/07/img/</guid>
+      <description>&lt;!DOCTYPE html PUBLIC &#34;-//W3C//DTD XHTML 1.0 Transitional//EN&#34; &#34;http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd&#34;&gt; En images... Le logo de Wikimedia Commons que nous utilisons ici est disponible sur la page http://commons.wikimedia.org/wiki/File:Commons-logo.svg?uselang=fr.&#xA;Petites et grandes images Une image dans un texte Un texte du texte et encore du texte.&#xA;Une image autour d&#39;un paragraphe Un texte et une image qui vient sur la gauche du paragraphe. L&#39;utilisation de l&#39;option align=&#34;left&#34; permet cette mise en page. L&#39;option align=&#34;right&#34; est ausi disponible.</description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/uploads/uploads/2016/07/lien-escroc/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/uploads/uploads/2016/07/lien-escroc/</guid>
+      <description>&lt;!DOCTYPE html PUBLIC &#34;-//W3C//DTD XHTML 1.0 Transitional//EN&#34; &#34;http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd&#34;&gt; Le fabuleux monde des liens hypertextes Fournissez vos identifiants pour vous connecter sur le site de votre banque.</description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/uploads/uploads/2016/07/lien/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/uploads/uploads/2016/07/lien/</guid>
+      <description>&lt;!DOCTYPE html PUBLIC &#34;-//W3C//DTD XHTML 1.0 Transitional//EN&#34; &#34;http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd&#34;&gt; Illustration des liens hypertextes Le site Wikipedia contient une page qui traite des URLs.</description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/uploads/uploads/2016/07/map_test_trafic/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/uploads/uploads/2016/07/map_test_trafic/</guid>
+      <description>&lt;!DOCTYPE html&gt; Traffic layer </description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/uploads/uploads/2016/07/test_googlemap_bermudes/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/uploads/uploads/2016/07/test_googlemap_bermudes/</guid>
+      <description>&lt;!DOCTYPE html&gt; Polygon Arrays </description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/uploads/uploads/2016/07/test_googlemap_dropmarkers/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/uploads/uploads/2016/07/test_googlemap_dropmarkers/</guid>
+      <description>&lt;!DOCTYPE html&gt; Marker animations with &lt;code&gt;setTimeout() Drop Markers </description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/uploads/uploads/2016/07/test_googlemap_png/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/uploads/uploads/2016/07/test_googlemap_png/</guid>
+      <description>&lt;!DOCTYPE html&gt; Overlaying an image map type </description>
+    </item>
+    <item>
+      <title>Arbres binaires - 2e partie</title>
+      <link>http://localhost:1313/uploads/docnsitale/arbres/travaux/arbre2/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/uploads/docnsitale/arbres/travaux/arbre2/</guid>
+      <description>Un module de manipulation d&amp;rsquo;arbres binaires # graph LR alert(Ressource) style alert fill:orange La classe BinaryTree, définie dans le module binary_tree.py proposé ici, permet de représenter des arbres binaires.&#xA;Cette classe fournit&#xA;« deux » constructeurs : BinaryTree() et BinaryTree(data, left, right) trois accesseurs : get_data(), get_left_subtree(), et get_right_subtree() un reconnaisseur : is_empty() Essayez&#xA;import binary_tree as bt help(bt.BinaryTree) pour afficher l&amp;rsquo;aide associée à cette classe.&#xA;Ou utilisez le notebook Jupyter</description>
+    </item>
+    <item>
+      <title>NSI - Terminale</title>
+      <link>http://localhost:1313/uploads/docnsitale/bdd/bdd_td/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/uploads/docnsitale/bdd/bdd_td/</guid>
+      <description>Compétence : Savoir analyser un modèle Entités/Associations&#xA;Exercice 1 # On souhaite gérer des réservations dans une compagnie d&amp;rsquo;hôtels.&#xA;On considère donc le modèle Entités/Associations suivant :&#xA;À l&amp;rsquo;aide de ce modèle, répondre aux questions suivantes :&#xA;Peut-on avoir des clients homonymes ? Un client peut-il réserver plusieurs chambres à une date donnée ? Est-il possible de réserver une chambre sur plusieurs jours ? Peut-on savoir si une chambre est libre à une date donnée ?</description>
+    </item>
+    <item>
+      <title>NSI - Terminale</title>
+      <link>http://localhost:1313/uploads/docnsitale/bdd/sql_td/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/uploads/docnsitale/bdd/sql_td/</guid>
+      <description>Pour tous les exercices qui suivent on utilisera la base de données ci-dessous.&#xA;Elle est constituées de quatre relations :&#xA;Relation Stations&#xA;NomStation Capacite Lieu Region Tarif Tanger 350 Maroc Afrique 1200 La Bourboule 250 Auvergne Afrique 700 Victoria 200 Seychelles Océan Indient 1500 Courchevel 400 Alpes Europe 2200 Relation Activités&#xA;NomStation Libelle Prix La Bourboule Pêche 50 La Bourboule Randonnée 0 Tanger Plongée 120 Tanger Excursion 60 Victoria Plongée 130 Courchevel Ski 120 Relation Clients</description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,19 @@
+#tableEquiv {
+    border: thin solid #AAAAAA;
+    width: 500px;
+    margin: 0 50px ;
+}
+
+
+tr.titre {
+    background-color : #f2f9c2;
+}
+
+tr.fonce {
+    background-color : #e0e0e0;
+}
+
+
+tr.clair {
+    background-color : #FCFCFC;
+}

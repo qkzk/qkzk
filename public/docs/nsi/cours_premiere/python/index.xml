@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Python on qkzk</title>
+    <link>http://localhost:1313/docs/nsi/cours_premiere/python/</link>
+    <description>Recent content in Python on qkzk</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 01 Jan 0001 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/docs/nsi/cours_premiere/python/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title></title>
+      <link>http://localhost:1313/docs/nsi/cours_premiere/python/prep/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/docs/nsi/cours_premiere/python/prep/</guid>
+      <description>&lt;!DOCTYPE html&gt; Préparation DS class: center, middle # Première NSI ## Quelques rappels avant le DS --- # Instructions, Affectations ```python a = 1 # une affectation sans valeur a # une instruction dont la valeur est 1 ``` --- # Types * Toutes les instructions ont un type sont évaluées * Les types courants sont `int, float, bool, str` * Chaque type dispose de ses opérations et fonctions. Les résultats varient ```python 1 + 1 # l&#39;entier 2 &#34;</description>
+    </item>
+  </channel>
+</rss>

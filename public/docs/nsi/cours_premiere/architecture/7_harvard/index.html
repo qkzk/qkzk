@@ -1,0 +1,9201 @@
+<!DOCTYPE html>
+<html lang="en" dir=" ltr">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Comparaison d&rsquo;architectures : Von Neumann et Harvard # pdf
+Application : extrait du sujet de bac polynésie 2021, partie architecture # pdf">
+<meta name="theme-color" content="#FFFFFF">
+<meta name="color-scheme" content="light dark"><meta property="og:title" content="Harvard vs Von Neumann" />
+<meta property="og:description" content="Informatique et mathématiques" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="http://localhost:1313/docs/nsi/cours_premiere/architecture/7_harvard/" />
+
+<title>Harvard vs Von Neumann | qkzk</title>
+<link rel="manifest" href="/manifest.json">
+<link rel="icon" href="/favicon.png" type="image/x-icon">
+<link rel="stylesheet" href="/book.min.24c2b1f8dc2338e074345eec5b36f8a002aaa6d1b2e7312e14ac2d6a6958c876.css" integrity="sha256-JMKx&#43;NwjOOB0NF7sWzb4oAKqptGy5zEuFKwtamlYyHY=" crossorigin="anonymous">
+  <script defer src="/flexsearch.min.js"></script>
+  <script defer src="/en.search.min.168dcc177cbbe76d8a95874fe2f1a54bb0d759c6689b3660a10acded5e1dfc3b.js" integrity="sha256-Fo3MF3y7522KlYdP4vGlS7DXWcZomzZgoQrN7V4d/Ds=" crossorigin="anonymous"></script>
+<link rel="alternate" type="application/rss+xml" href="http://localhost:1313/docs/nsi/cours_premiere/architecture/7_harvard/index.xml" title="qkzk" />
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+    
+
+
+<script async src="https://cdnjs.cloudflare.com/ajax/libs/mermaid/10.0.2/add-html-label-3fd8c466.min.js"></script>
+
+</head>
+
+<body dir=" ltr">
+
+    <div class="white-back">
+
+        <div class="container flex content-desktop ">
+            <a id="bannerTitle" href="/">
+                <h1 id="siteTitle">
+                    Harvard vs Von Neumann
+                    
+                </h1>
+            </a>
+        </div>
+
+        <input type="checkbox" class="hidden toggle" id="menu-control" />
+        <input type="checkbox" class="hidden toggle" id="toc-control" />
+
+
+        <main class="container flex">
+            <aside class="book-menu">
+                <div class="book-menu-content">
+                    
+<nav>
+<h1 class="book-brand">
+    <link disabled id="dark-mode-theme" rel="stylesheet" href="http://localhost:1313/css/dark.css">
+    <link rel="stylesheet" href="http://localhost:1313/css/dark_theme_icons.css" type="text/css" media="screen"
+        title="no title" charset="utf-8">
+    <span>
+        <a id="dark-mode-toggle" class="toggle_dark btn" style="padding-right: 1rem;">
+            <i class="fas fa-moon" id="toggle-switch"></i>
+        </a>
+        <a href="http://localhost:1313/">
+            qkzk
+        </a>
+    </span>
+
+    <script src="http://localhost:1313/js/updatestyle.js" charset="utf-8"></script>
+    <script src="http://localhost:1313/js/darktheme_switcher.js" charset="utf-8"></script>
+
+</h1>
+
+
+<div class="book-search">
+    <input type="text" id="book-search-input" placeholder="Rechercher" aria-label=""
+        maxlength="64" />
+    <div class="book-search-spinner hidden"></div>
+    <ul id="book-search-results"></ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-20a2a666d06df730468bf11cc27df285" class="toggle"  />
+    <label for="section-20a2a666d06df730468bf11cc27df285" class="flex justify-between">
+      <a href="http://localhost:1313/docs/maths/" class="">maths</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-454e04656afdc2594e5de48783853c5c" class="toggle"  />
+    <label for="section-454e04656afdc2594e5de48783853c5c" class="flex justify-between">
+      <a href="http://localhost:1313/docs/maths/t_stmg/" class="">Terminale STMG</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://localhost:1313/docs/maths/t_stmg/cahier_texte/" class="">Cahier de texte</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://localhost:1313/docs/maths/t_stmg/1_suites_arithmetiques/" class="">1. Suites arithmétiques</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://localhost:1313/docs/maths/t_stmg/2_fonction_inverse/" class="">2. Fonction Inverse</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://localhost:1313/docs/maths/t_stmg/3_probabilites_conditionnelles/" class="">3. Probabilités conditionnelles</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://localhost:1313/docs/maths/t_stmg/4_suites_geometriques/" class="">4. Suites géométriques</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://localhost:1313/docs/maths/t_stmg/5_fonction_exponentielle/" class="">5. Fonctions exponentielles</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://localhost:1313/docs/maths/t_stmg/6_variables_aleatoires_loi_binomiale/" class="">6. Variables aléatoires, Loi binomiale</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://localhost:1313/docs/maths/t_stmg/7_fonction_log/" class="">7. Fonctions logarithme décimal</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://localhost:1313/docs/maths/t_stmg/8_stats_a_deux_variables/" class="">8. Statistiques à deux variables</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-2fd385582c0e8710f1e91b67071eda9f" class="toggle"  />
+    <label for="section-2fd385582c0e8710f1e91b67071eda9f" class="flex justify-between">
+      <a href="http://localhost:1313/docs/maths/l1s1/" class="">L1S1</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-91fb99bcdf9efc0c3ed0dcf81ab213bc" class="toggle"  />
+    <label for="section-91fb99bcdf9efc0c3ed0dcf81ab213bc" class="flex justify-between">
+      <a href="http://localhost:1313/docs/maths/l1s2/" class="">L1S2</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-28a1cf925dbacfeb676219a3e458b66c" class="toggle"  />
+    <label for="section-28a1cf925dbacfeb676219a3e458b66c" class="flex justify-between">
+      <a href="http://localhost:1313/docs/maths/l2s3/" class="">L2S3</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-cba3bde6ff780ca5a6e5545286c0791d" class="toggle"  />
+    <label for="section-cba3bde6ff780ca5a6e5545286c0791d" class="flex justify-between">
+      <a href="http://localhost:1313/docs/maths/l2s4/" class="">L2S4</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-ba1ac115fdcca00b48106f0abefa9e56" class="toggle"  />
+    <label for="section-ba1ac115fdcca00b48106f0abefa9e56" class="flex justify-between">
+      <a href="http://localhost:1313/docs/maths/enseignement_scientifique_terminale/" class="">Terminale : ES</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-137b1a50731013e6d55234728899355a" class="toggle"  />
+    <label for="section-137b1a50731013e6d55234728899355a" class="flex justify-between">
+      <a href="http://localhost:1313/docs/maths/enseignement_scientifique_terminale/1_biodiversite/" class="">Biodiversité</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-94a2bda3839d95cf2934ad1be6cf174d" class="toggle"  />
+    <label for="section-94a2bda3839d95cf2934ad1be6cf174d" class="flex justify-between">
+      <a href="http://localhost:1313/docs/maths/enseignement_scientifique_terminale/1_biodiversite/cours/" class="">Proportionnalité et méthode CMR</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-6fc04260918883887d4014439ccf4d43" class="toggle"  />
+    <label for="section-6fc04260918883887d4014439ccf4d43" class="flex justify-between">
+      <a href="http://localhost:1313/docs/maths/enseignement_scientifique_terminale/1_biodiversite/exos/" class="">Exercices : Proportionnalité</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-0e3563816054c4121399bb62bf45ca03" class="toggle"  />
+    <label for="section-0e3563816054c4121399bb62bf45ca03" class="flex justify-between">
+      <a href="http://localhost:1313/docs/maths/enseignement_scientifique_terminale/2_estimation/" class="">Estimations</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-499ee71e59ff5e74e50b70bd352bea9c" class="toggle"  />
+    <label for="section-499ee71e59ff5e74e50b70bd352bea9c" class="flex justify-between">
+      <a href="http://localhost:1313/docs/maths/enseignement_scientifique_terminale/2_estimation/cours/" class="">Estimer une proportion - Considérer les fluctuations</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://localhost:1313/docs/maths/enseignement_scientifique_terminale/2_estimation/exos/" class="">Exercices Estimation</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-7fee5b090c7fbaf4f3a491508bde9b72" class="toggle"  />
+    <label for="section-7fee5b090c7fbaf4f3a491508bde9b72" class="flex justify-between">
+      <a href="http://localhost:1313/docs/maths/enseignement_scientifique_terminale/3_hardy_weinberg/" class="">Hardy-Weinberg</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-ccdb00c882c7a09d514e198a58ebd0eb" class="toggle"  />
+    <label for="section-ccdb00c882c7a09d514e198a58ebd0eb" class="flex justify-between">
+      <a href="http://localhost:1313/docs/maths/enseignement_scientifique_terminale/3_hardy_weinberg/1_cours/" class="">Le modèle de Hardy-Weinberg</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-7f66075df8528199dc1684b2ce80d741" class="toggle"  />
+    <label for="section-7f66075df8528199dc1684b2ce80d741" class="flex justify-between">
+      <a href="http://localhost:1313/docs/maths/enseignement_scientifique_terminale/3_hardy_weinberg/2_evolution/" class="">Biodiversite et évolution</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-67cb365df1aea074bf37fbdfb25b62a3" class="toggle"  />
+    <label for="section-67cb365df1aea074bf37fbdfb25b62a3" class="flex justify-between">
+      <a href="http://localhost:1313/docs/maths/enseignement_scientifique_terminale/3_hardy_weinberg/3_limites/" class="">Écarts au modèle de Hardy-Weinberg</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-d02d31654ce5d17b342fe022c31b0d97" class="toggle"  />
+    <label for="section-d02d31654ce5d17b342fe022c31b0d97" class="flex justify-between">
+      <a href="http://localhost:1313/docs/maths/enseignement_scientifique_terminale/3_hardy_weinberg/4_exos/" class="">Exercices sur le modèle d&#39;Hardy-Weinberg</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-8b80660e1346993fd24c9471fbfa43dc" class="toggle"  />
+    <label for="section-8b80660e1346993fd24c9471fbfa43dc" class="flex justify-between">
+      <a href="http://localhost:1313/docs/maths/enseignement_scientifique_terminale/4_malthus/" class="">Modèles démographique (Malthus)</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-e7682b966967046b738e35349e701a71" class="toggle"  />
+    <label for="section-e7682b966967046b738e35349e701a71" class="flex justify-between">
+      <a href="http://localhost:1313/docs/maths/enseignement_scientifique_terminale/4_malthus/1_modeles/" class="">Modèles démographiques</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-bebafa9f6fa66e191c98949d67c9404c" class="toggle"  />
+    <label for="section-bebafa9f6fa66e191c98949d67c9404c" class="flex justify-between">
+      <a href="http://localhost:1313/docs/maths/enseignement_scientifique_terminale/4_malthus/2_expo/" class="">Modèle exponentiel</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-ea59df5093529f6d8b6a154a55c288af" class="toggle"  />
+    <label for="section-ea59df5093529f6d8b6a154a55c288af" class="flex justify-between">
+      <a href="http://localhost:1313/docs/maths/enseignement_scientifique_terminale/4_malthus/3_exercices/" class="">Exercices</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-484f61d4bebe609d8d5d1c22ce93ddac" class="toggle"  />
+    <label for="section-484f61d4bebe609d8d5d1c22ce93ddac" class="flex justify-between">
+      <a href="http://localhost:1313/docs/archives/cours-python/" class="">Python</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-5a7b33ec89d559837d39c551d070d027" class="toggle"  />
+    <label for="section-5a7b33ec89d559837d39c551d070d027" class="flex justify-between">
+      <a href="http://localhost:1313/docs/archives/cours-python/python-3-00-preambule/" class="">Python 3 - 00 préambule</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-55f48aeef1c1e105583a2948c54d7ca1" class="toggle"  />
+    <label for="section-55f48aeef1c1e105583a2948c54d7ca1" class="flex justify-between">
+      <a href="http://localhost:1313/docs/archives/cours-python/python-3-01-les-variables-les-types/" class="">Python 3 - 01 Les variables, les types</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-b2044d686b20d7f810de4e2e39fa7d3a" class="toggle"  />
+    <label for="section-b2044d686b20d7f810de4e2e39fa7d3a" class="flex justify-between">
+      <a href="http://localhost:1313/docs/archives/cours-python/python-3-02-les-conditions/" class="">Python 3 - 02 Les conditions</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-7b129b332c656a0256fc6e44faf02015" class="toggle"  />
+    <label for="section-7b129b332c656a0256fc6e44faf02015" class="flex justify-between">
+      <a href="http://localhost:1313/docs/archives/cours-python/python-3-03-les-boucles/" class="">Python 3 - 03 Les boucles</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-7f2a4fc13e975bcb0aa9b2b9871a4b13" class="toggle"  />
+    <label for="section-7f2a4fc13e975bcb0aa9b2b9871a4b13" class="flex justify-between">
+      <a href="http://localhost:1313/docs/archives/cours-python/python-3-04-les-fonctions/" class="">Python 3 - 04 Les fonctions</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-2a7190a29d4b3bf4a351de61f36ec3e6" class="toggle"  />
+    <label for="section-2a7190a29d4b3bf4a351de61f36ec3e6" class="flex justify-between">
+      <a href="http://localhost:1313/docs/archives/cours-python/python-3-05-gestion-des-exceptions/" class="">Python 3 - 05 Gestion des exceptions</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-e6e76a275545c1424e67fc89223b2210" class="toggle"  />
+    <label for="section-e6e76a275545c1424e67fc89223b2210" class="flex justify-between">
+      <a href="http://localhost:1313/docs/archives/cours-python/python-3-06-classes-et-modules/" class="">Python 3 - 06 Classes et modules</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-53b1f28c7fcff39c50a55242afc2f17e" class="toggle"  />
+    <label for="section-53b1f28c7fcff39c50a55242afc2f17e" class="flex justify-between">
+      <a href="http://localhost:1313/docs/archives/cours-python/python-3-07-interface-graphique-avec-le-module-tkinter/" class="">Python 3 - 07 Interface graphique avec le module Tkinter</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-4b299526b370d8a9c1dbb987be7664b1" class="toggle"  />
+    <label for="section-4b299526b370d8a9c1dbb987be7664b1" class="flex justify-between">
+      <a href="http://localhost:1313/docs/archives/cours-python/python-3-08-lecture-et-ecriture-dans-un-fichier/" class="">Python 3 - 08 Lecture et écriture dans un fichier</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-4af711918f7fa5b016cb7d95fd5aaded" class="toggle"  />
+    <label for="section-4af711918f7fa5b016cb7d95fd5aaded" class="flex justify-between">
+      <a href="http://localhost:1313/docs/archives/cours-python/python-3-09-python-camera/" class="">Python 3 - 09 Camera</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-35a14685302a9c541bd2871ce41fbb91" class="toggle"  />
+    <label for="section-35a14685302a9c541bd2871ce41fbb91" class="flex justify-between">
+      <a href="http://localhost:1313/docs/archives/cours-python/python-3-10-traitement-des-images/" class="">Python 3 - 10 Traitement des images</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-2c27300c74fa49ea5430bed8bd4e2553" class="toggle"  />
+    <label for="section-2c27300c74fa49ea5430bed8bd4e2553" class="flex justify-between">
+      <a href="http://localhost:1313/docs/archives/cours-python/python-3-11-debogage/" class="">Python 3 - 11 Débogage</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-2bd14603229218cfc724a7df9073b962" class="toggle"  />
+    <label for="section-2bd14603229218cfc724a7df9073b962" class="flex justify-between">
+      <a href="http://localhost:1313/docs/archives/cours-python/python-3-12-creer-un-programme-executable-avec-py2exe/" class="">Python 3 - 12 Créer un programme exécutable avec Py2exe</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-7893093160ffa6bdae3c72744156477c" class="toggle"  />
+    <label for="section-7893093160ffa6bdae3c72744156477c" class="flex justify-between">
+      <a href="http://localhost:1313/docs/archives/cours-python/python-3-13-jeux-video-avec-le-module-pygame/" class="">Python 3 - 13 Jeux vidéo avec le module Pygame</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-cc27b844430ed20f9e9069a5f15631e0" class="toggle"  />
+    <label for="section-cc27b844430ed20f9e9069a5f15631e0" class="flex justify-between">
+      <a href="http://localhost:1313/docs/archives/cours-python/python-3-14-applications-et-jeux-en-reseau/" class="">Python 3 - 14 Applications et jeux en réseau</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-9565bae3e63afc215c607d0e8c0c6cad" class="toggle"  />
+    <label for="section-9565bae3e63afc215c607d0e8c0c6cad" class="flex justify-between">
+      <a href="http://localhost:1313/docs/archives/cours-python/python-3-15-le-son-au-format-audio-wav/" class="">Python 3 - 15 Le son au format audio WAV</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-4414ec654e9bd7e9eb9a975350c455ef" class="toggle" checked />
+    <label for="section-4414ec654e9bd7e9eb9a975350c455ef" class="flex justify-between">
+      <a href="http://localhost:1313/docs/nsi/" class="">nsi</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-bbd128ac14b4eb71a5e7f9b347faf63a" class="toggle" checked />
+    <label for="section-bbd128ac14b4eb71a5e7f9b347faf63a" class="flex justify-between">
+      <a href="http://localhost:1313/docs/nsi/cours_premiere/" class="">Première</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-9912b16513345c1a0fabe30042479ff7" class="toggle"  />
+    <label for="section-9912b16513345c1a0fabe30042479ff7" class="flex justify-between">
+      <a href="http://localhost:1313/docs/nsi/cours_premiere/programmation/" class="">Programmation</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-95f9f75bbb38daaec1743e7fb4ba000d" class="toggle"  />
+    <label for="section-95f9f75bbb38daaec1743e7fb4ba000d" class="flex justify-between">
+      <a href="http://localhost:1313/docs/nsi/cours_premiere/programmation/outils/" class="">Outils pour développer</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-8b44a640f6bec76dce532f39613723f7" class="toggle"  />
+    <label for="section-8b44a640f6bec76dce532f39613723f7" class="flex justify-between">
+      <a href="http://localhost:1313/docs/nsi/cours_premiere/programmation/outils/thonny/" class="">Thonny</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-bb6de2bbd3e6abb527b841f4a9864f5e" class="toggle"  />
+    <label for="section-bb6de2bbd3e6abb527b841f4a9864f5e" class="flex justify-between">
+      <a href="http://localhost:1313/docs/nsi/cours_premiere/programmation/outils/basthon/" class="">Basthon</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-baeba74560067dc88543a7bd394a5310" class="toggle"  />
+    <label for="section-baeba74560067dc88543a7bd394a5310" class="flex justify-between">
+      <a href="http://localhost:1313/docs/nsi/cours_premiere/programmation/outils/colab/" class="">Google Colab</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-b358afb38937fa71b2602e4396920a28" class="toggle"  />
+    <label for="section-b358afb38937fa71b2602e4396920a28" class="flex justify-between">
+      <a href="http://localhost:1313/docs/nsi/cours_premiere/programmation/outils/sublime_text/" class="">Sublime Text</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-1c115cb2a492e489df6ed649b2333d07" class="toggle"  />
+    <label for="section-1c115cb2a492e489df6ed649b2333d07" class="flex justify-between">
+      <a href="http://localhost:1313/docs/nsi/cours_premiere/programmation/outils/replit/" class="">REPL.it</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-d112adabe02c8235d76069c1ee0b2bcf" class="toggle"  />
+    <label for="section-d112adabe02c8235d76069c1ee0b2bcf" class="flex justify-between">
+      <a href="http://localhost:1313/docs/nsi/cours_premiere/programmation/outils/libraries_faciles/" class="">Librairies faciles d&#39;emploi</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-de5b76f9bc7ca731f709b08085082e4e" class="toggle"  />
+    <label for="section-de5b76f9bc7ca731f709b08085082e4e" class="flex justify-between">
+      <a href="http://localhost:1313/docs/nsi/cours_premiere/programmation/outils/libraries_faciles/gpio_zero/" class="">GPIO Zero</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-6e95d80144bd214baa773fdaee01d640" class="toggle"  />
+    <label for="section-6e95d80144bd214baa773fdaee01d640" class="flex justify-between">
+      <a href="http://localhost:1313/docs/nsi/cours_premiere/programmation/outils/libraries_faciles/pygame_zero/" class="">Pygame Zero</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-1868e1ceaae28b797547522a4a1676e1" class="toggle"  />
+    <label for="section-1868e1ceaae28b797547522a4a1676e1" class="flex justify-between">
+      <a href="http://localhost:1313/docs/nsi/cours_premiere/programmation/outils/libraries_faciles/gui_zero/" class="">Gui Zero</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-f10149778c543966119258c2f8f6eda2" class="toggle"  />
+    <label for="section-f10149778c543966119258c2f8f6eda2" class="flex justify-between">
+      <a href="http://localhost:1313/docs/nsi/cours_premiere/programmation/outils/libraries_faciles/network_zero/" class="">Network Zero</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-106d4526d48d07d140cd39115a58d76d" class="toggle"  />
+    <label for="section-106d4526d48d07d140cd39115a58d76d" class="flex justify-between">
+      <a href="http://localhost:1313/docs/nsi/cours_premiere/programmation/outils/libraries_faciles/mqtt/" class="">Paho Mqtt</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-b486c319077c5cdfefba76d1d47c5b67" class="toggle"  />
+    <label for="section-b486c319077c5cdfefba76d1d47c5b67" class="flex justify-between">
+      <a href="http://localhost:1313/docs/nsi/cours_premiere/programmation/outils/libraries_faciles/flask/" class="">Flask</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-7743aecef7c6e7c92635a0eedfc9d32d" class="toggle"  />
+    <label for="section-7743aecef7c6e7c92635a0eedfc9d32d" class="flex justify-between">
+      <a href="http://localhost:1313/docs/nsi/cours_premiere/programmation/specifier/" class="">Spécifier programmes</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-e4046f1edd55974585529a9d4e83fae7" class="toggle"  />
+    <label for="section-e4046f1edd55974585529a9d4e83fae7" class="flex justify-between">
+      <a href="http://localhost:1313/docs/nsi/cours_premiere/programmation/tester/" class="">Tester ses programmes</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://localhost:1313/docs/nsi/cours_premiere/programmation/comparaison/" class="">Diversité des langages</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-8313a98cfcbd688ac7fd5ccc5543320b" class="toggle"  />
+    <label for="section-8313a98cfcbd688ac7fd5ccc5543320b" class="flex justify-between">
+      <a href="http://localhost:1313/docs/nsi/cours_premiere/programmation/activites/" class="">Activités de programmation</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-392bda230e898a59bb77f66bd262b9a4" class="toggle"  />
+    <label for="section-392bda230e898a59bb77f66bd262b9a4" class="flex justify-between">
+      <a href="http://localhost:1313/docs/nsi/cours_premiere/programmation/activites/python-3-16-turle-et-iss/" class="">Python 3 - 16 Turtle</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-ee0974f599068f3b20ad33d3865a0d92" class="toggle"  />
+    <label for="section-ee0974f599068f3b20ad33d3865a0d92" class="flex justify-between">
+      <a href="http://localhost:1313/docs/nsi/cours_premiere/python/" class="">Python</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-aad9181ec37924a425aa422f1988d026" class="toggle"  />
+    <label for="section-aad9181ec37924a425aa422f1988d026" class="flex justify-between">
+      <a href="http://localhost:1313/docs/nsi/cours_premiere/python/introduction_cours/" class="">Présentation</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-76001287be09152263bb1f834e19f327" class="toggle"  />
+    <label for="section-76001287be09152263bb1f834e19f327" class="flex justify-between">
+      <a href="http://localhost:1313/docs/nsi/cours_premiere/python/cours_python/" class="">Cours</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-3e300601b2bd7d1eef1838624ad7025b" class="toggle"  />
+    <label for="section-3e300601b2bd7d1eef1838624ad7025b" class="flex justify-between">
+      <a href="http://localhost:1313/docs/nsi/cours_premiere/python/cours_python/00_preambule/" class="">0 - Préambule</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-b9c3f9afc0c593a6e9218a76973906a8" class="toggle"  />
+    <label for="section-b9c3f9afc0c593a6e9218a76973906a8" class="flex justify-between">
+      <a href="http://localhost:1313/docs/nsi/cours_premiere/python/cours_python/01_expression/" class="">1 - Expressions</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-115abd32a150457f761bdc075885bcbf" class="toggle"  />
+    <label for="section-115abd32a150457f761bdc075885bcbf" class="flex justify-between">
+      <a href="http://localhost:1313/docs/nsi/cours_premiere/python/cours_python/02_types_simples/" class="">2 - Types simples</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-4d0501e61a55920622240294ecf5311f" class="toggle"  />
+    <label for="section-4d0501e61a55920622240294ecf5311f" class="flex justify-between">
+      <a href="http://localhost:1313/docs/nsi/cours_premiere/python/cours_python/03_structure_controle/" class="">3 - Structures de contrôle</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-4ac0146c6d7abf519d685794ae20fa4d" class="toggle"  />
+    <label for="section-4ac0146c6d7abf519d685794ae20fa4d" class="flex justify-between">
+      <a href="http://localhost:1313/docs/nsi/cours_premiere/python/cours_python/03_structure_controle/conditions/" class="">Conditions</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-bc0897bd0e8e4a10646eca9850ee57ca" class="toggle"  />
+    <label for="section-bc0897bd0e8e4a10646eca9850ee57ca" class="flex justify-between">
+      <a href="http://localhost:1313/docs/nsi/cours_premiere/python/cours_python/03_structure_controle/boucles_for/" class="">Boucles bornées</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-b44ff53431febf7afac7d583ef84cd76" class="toggle"  />
+    <label for="section-b44ff53431febf7afac7d583ef84cd76" class="flex justify-between">
+      <a href="http://localhost:1313/docs/nsi/cours_premiere/python/cours_python/03_structure_controle/boucles_while/" class="">Boucles non bornées</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-88e495ecb1dc4d2cabe04b0a551c62a2" class="toggle"  />
+    <label for="section-88e495ecb1dc4d2cabe04b0a551c62a2" class="flex justify-between">
+      <a href="http://localhost:1313/docs/nsi/cours_premiere/python/cours_python/04_fonctions/" class="">4 - Fonctions</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-9ada9a25fd761b9e53dbeca9343c667f" class="toggle"  />
+    <label for="section-9ada9a25fd761b9e53dbeca9343c667f" class="flex justify-between">
+      <a href="http://localhost:1313/docs/nsi/cours_premiere/python/cours_python/04_fonctions/partie_1/" class="">Partie 1</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-38b5d5fa1c754a004bf74898b78f9971" class="toggle"  />
+    <label for="section-38b5d5fa1c754a004bf74898b78f9971" class="flex justify-between">
+      <a href="http://localhost:1313/docs/nsi/cours_premiere/python/cours_python/04_fonctions/partie_2/" class="">Partie 2</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-0168075538717b498fb08d4855b25070" class="toggle"  />
+    <label for="section-0168075538717b498fb08d4855b25070" class="flex justify-between">
+      <a href="http://localhost:1313/docs/nsi/cours_premiere/python/cours_python/05_list_tuple/" class="">5 - Listes et tuples</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-4290535e4efbb0062dabbcd0c49bd714" class="toggle"  />
+    <label for="section-4290535e4efbb0062dabbcd0c49bd714" class="flex justify-between">
+      <a href="http://localhost:1313/docs/nsi/cours_premiere/python/cours_python/06_dict/" class="">6 - Dictionnaires</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-6017a02a9da9c6f21daaeef3cbd6ab2e" class="toggle"  />
+    <label for="section-6017a02a9da9c6f21daaeef3cbd6ab2e" class="flex justify-between">
+      <a href="http://localhost:1313/docs/nsi/cours_premiere/python/cours_python/07_comprehension/" class="">7 - Compréhension</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-d459688c39f877e72df34f9241866c81" class="toggle"  />
+    <label for="section-d459688c39f877e72df34f9241866c81" class="flex justify-between">
+      <a href="http://localhost:1313/docs/nsi/cours_premiere/python/cours_python/08_exception/" class="">8 - Exceptions</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-0d2fb0061c913952cd4cd3608cf183aa" class="toggle"  />
+    <label for="section-0d2fb0061c913952cd4cd3608cf183aa" class="flex justify-between">
+      <a href="http://localhost:1313/docs/nsi/cours_premiere/python/cours_python/09_importer/" class="">9 - Importer</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-c950cd0d86bc54926a0fd6d5311cbf3b" class="toggle"  />
+    <label for="section-c950cd0d86bc54926a0fd6d5311cbf3b" class="flex justify-between">
+      <a href="http://localhost:1313/docs/nsi/cours_premiere/python/introduction_td/" class="">TP introduction</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-ac4b70d5bcad4551cb64e311d3f1de2f" class="toggle"  />
+    <label for="section-ac4b70d5bcad4551cb64e311d3f1de2f" class="flex justify-between">
+      <a href="http://localhost:1313/docs/nsi/cours_premiere/python/tp_suite/" class="">TD compléments</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-efacf84e86073d133520aac396a7a5a7" class="toggle"  />
+    <label for="section-efacf84e86073d133520aac396a7a5a7" class="flex justify-between">
+      <a href="http://localhost:1313/docs/nsi/cours_premiere/python/resume_python/" class="">Résumé</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-bcc8d3b3d8a012891f8700398405b418" class="toggle"  />
+    <label for="section-bcc8d3b3d8a012891f8700398405b418" class="flex justify-between">
+      <a href="http://localhost:1313/docs/nsi/cours_premiere/python/a_connaitre_par_coeur/" class="">Fiche : À retenir</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://localhost:1313/docs/nsi/cours_premiere/python/prep/" class="">Prep</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-6d818216351f46aa136c0bb1bbcc4979" class="toggle"  />
+    <label for="section-6d818216351f46aa136c0bb1bbcc4979" class="flex justify-between">
+      <a href="http://localhost:1313/docs/nsi/cours_premiere/algorithmique/" class="">Algorithmique</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-38894f247ff4c22c17606643a503b3a7" class="toggle"  />
+    <label for="section-38894f247ff4c22c17606643a503b3a7" class="flex justify-between">
+      <a href="http://localhost:1313/docs/nsi/cours_premiere/algorithmique/sequentiel/" class="">Parcours séquentiel</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://localhost:1313/docs/nsi/cours_premiere/algorithmique/sequentiel/cours/" class="">Cours</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://localhost:1313/docs/nsi/cours_premiere/algorithmique/sequentiel/td/" class="">Td</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://localhost:1313/docs/nsi/cours_premiere/algorithmique/sequentiel/revisions/" class="">Révisions</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-d93ef2e42f314fe589cbb5d1829f4e3a" class="toggle"  />
+    <label for="section-d93ef2e42f314fe589cbb5d1829f4e3a" class="flex justify-between">
+      <a href="http://localhost:1313/docs/nsi/cours_premiere/algorithmique/tris/" class="">Tris</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-edd2be238d8959989d842eff2ddb9a4e" class="toggle"  />
+    <label for="section-edd2be238d8959989d842eff2ddb9a4e" class="flex justify-between">
+      <a href="http://localhost:1313/docs/nsi/cours_premiere/algorithmique/tris/1_select/" class="">Intro - selection</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-3084d8a53572ac5dffb22631474ff367" class="toggle"  />
+    <label for="section-3084d8a53572ac5dffb22631474ff367" class="flex justify-between">
+      <a href="http://localhost:1313/docs/nsi/cours_premiere/algorithmique/tris/2_td_select/" class="">TD - tri sélection</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-9dcd5cffd385149f723f40a15044bb85" class="toggle"  />
+    <label for="section-9dcd5cffd385149f723f40a15044bb85" class="flex justify-between">
+      <a href="http://localhost:1313/docs/nsi/cours_premiere/algorithmique/tris/3_insert/" class="">Insertion, sorted</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-7319cc9f5ee6e70288b886eecd71c5cd" class="toggle"  />
+    <label for="section-7319cc9f5ee6e70288b886eecd71c5cd" class="flex justify-between">
+      <a href="http://localhost:1313/docs/nsi/cours_premiere/algorithmique/tris/4_td_insert_sorted/" class="">TD - insertion</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-b31cc22bc6ced2ed938d6b5b8e8344e7" class="toggle"  />
+    <label for="section-b31cc22bc6ced2ed938d6b5b8e8344e7" class="flex justify-between">
+      <a href="http://localhost:1313/docs/nsi/cours_premiere/algorithmique/tris/5_cout/" class="">Complexité, correction</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-265276ed93ae907b20c8022e5a2183f4" class="toggle"  />
+    <label for="section-265276ed93ae907b20c8022e5a2183f4" class="flex justify-between">
+      <a href="http://localhost:1313/docs/nsi/cours_premiere/algorithmique/tris/6_td_cout/" class="">TD : Complexité</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-1a0ae8d5717c88c28aff47647302484a" class="toggle"  />
+    <label for="section-1a0ae8d5717c88c28aff47647302484a" class="flex justify-between">
+      <a href="http://localhost:1313/docs/nsi/cours_premiere/algorithmique/tris/7_bilan/" class="">7 Bilan</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-5cbf29bdbee9512dfb487498bf7192c0" class="toggle"  />
+    <label for="section-5cbf29bdbee9512dfb487498bf7192c0" class="flex justify-between">
+      <a href="http://localhost:1313/docs/nsi/cours_premiere/algorithmique/dichotomie/" class="">Dichotomie</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-a908309b5e10ed10b2bc2b05f144b0bb" class="toggle"  />
+    <label for="section-a908309b5e10ed10b2bc2b05f144b0bb" class="flex justify-between">
+      <a href="http://localhost:1313/docs/nsi/cours_premiere/algorithmique/dichotomie/1_cours/" class="">Cours : dichotomie</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-ffde95e8f2d892e24e198d6ee6bbaf2c" class="toggle"  />
+    <label for="section-ffde95e8f2d892e24e198d6ee6bbaf2c" class="flex justify-between">
+      <a href="http://localhost:1313/docs/nsi/cours_premiere/algorithmique/dichotomie/2_td/" class="">TD : dichotomie</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-a00e67b34d7cb340fc456eaaba6bc5cf" class="toggle"  />
+    <label for="section-a00e67b34d7cb340fc456eaaba6bc5cf" class="flex justify-between">
+      <a href="http://localhost:1313/docs/nsi/cours_premiere/algorithmique/glouton/" class="">Gloutons</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-d4facddb5d94a17be11b8f42f1803415" class="toggle"  />
+    <label for="section-d4facddb5d94a17be11b8f42f1803415" class="flex justify-between">
+      <a href="http://localhost:1313/docs/nsi/cours_premiere/algorithmique/glouton/1_cours/" class="">1. Cours</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-f697deb8ac6b7d4c842fa4ec4c9a9523" class="toggle"  />
+    <label for="section-f697deb8ac6b7d4c842fa4ec4c9a9523" class="flex justify-between">
+      <a href="http://localhost:1313/docs/nsi/cours_premiere/algorithmique/glouton/2_td/" class="">2. TD</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-73e54c5236d4fe16d1b810fdf1d538c2" class="toggle"  />
+    <label for="section-73e54c5236d4fe16d1b810fdf1d538c2" class="flex justify-between">
+      <a href="http://localhost:1313/docs/nsi/cours_premiere/algorithmique/glouton/3_tp/" class="">3. TP : Étagères</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-ee1722a0674a03f4ea27437c94bb801d" class="toggle"  />
+    <label for="section-ee1722a0674a03f4ea27437c94bb801d" class="flex justify-between">
+      <a href="http://localhost:1313/docs/nsi/cours_premiere/algorithmique/glouton/4_cours/" class="">4. Cours</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-97db685b7dba2e372611cde5fa38a65a" class="toggle"  />
+    <label for="section-97db685b7dba2e372611cde5fa38a65a" class="flex justify-between">
+      <a href="http://localhost:1313/docs/nsi/cours_premiere/algorithmique/glouton/5_td/" class="">5. TD</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-11b00bb3f7f9be39edf4c6cd000df446" class="toggle"  />
+    <label for="section-11b00bb3f7f9be39edf4c6cd000df446" class="flex justify-between">
+      <a href="http://localhost:1313/docs/nsi/cours_premiere/algorithmique/glouton/6_tp/" class="">6. TP : TSP</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-3f2d67684682097339bbf3188ccbc1d6" class="toggle"  />
+    <label for="section-3f2d67684682097339bbf3188ccbc1d6" class="flex justify-between">
+      <a href="http://localhost:1313/docs/nsi/cours_premiere/algorithmique/glouton/7_activites/" class="">7. Planification</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-ba618d656bd228907c2e713ca4240963" class="toggle"  />
+    <label for="section-ba618d656bd228907c2e713ca4240963" class="flex justify-between">
+      <a href="http://localhost:1313/docs/nsi/cours_premiere/algorithmique/knn/" class="">k plus proches voisins</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://localhost:1313/docs/nsi/cours_premiere/algorithmique/knn/1_cours/" class="">1. Cours - kNN</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-76960b26b4d888ddac68447af25d868b" class="toggle"  />
+    <label for="section-76960b26b4d888ddac68447af25d868b" class="flex justify-between">
+      <a href="http://localhost:1313/docs/nsi/cours_premiere/algorithmique/knn/2_td/" class="">2. TD - kNN</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-805078faea191562956fb1cf4e125b90" class="toggle"  />
+    <label for="section-805078faea191562956fb1cf4e125b90" class="flex justify-between">
+      <a href="http://localhost:1313/docs/nsi/cours_premiere/algorithmique/resumes/" class="">Résumés</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://localhost:1313/docs/nsi/cours_premiere/algorithmique/resumes/intro/" class="">Intro</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://localhost:1313/docs/nsi/cours_premiere/algorithmique/resumes/tris/" class="">Tris</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-8b513984a0ffe79d8fdffe9b053bed98" class="toggle"  />
+    <label for="section-8b513984a0ffe79d8fdffe9b053bed98" class="flex justify-between">
+      <a href="http://localhost:1313/docs/nsi/cours_premiere/donnees_simples/" class="">Données simples</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://localhost:1313/docs/nsi/cours_premiere/donnees_simples/intro_historique/" class="">Intro Historique</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-929950c5402b4ab36e0546c03c369cae" class="toggle"  />
+    <label for="section-929950c5402b4ab36e0546c03c369cae" class="flex justify-between">
+      <a href="http://localhost:1313/docs/nsi/cours_premiere/donnees_simples/binaire/" class="">Binaire</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-7eec830b182796d66461a5104dddb83c" class="toggle"  />
+    <label for="section-7eec830b182796d66461a5104dddb83c" class="flex justify-between">
+      <a href="http://localhost:1313/docs/nsi/cours_premiere/donnees_simples/binaire/1_cours/" class="">binaire - cours</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-e10ee3eb86d5848ebd1dd467d41bbe9c" class="toggle"  />
+    <label for="section-e10ee3eb86d5848ebd1dd467d41bbe9c" class="flex justify-between">
+      <a href="http://localhost:1313/docs/nsi/cours_premiere/donnees_simples/binaire/2_td/" class="">binaire - TD</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-a14c1795e635a41c3534b5eeaed0c4fc" class="toggle"  />
+    <label for="section-a14c1795e635a41c3534b5eeaed0c4fc" class="flex justify-between">
+      <a href="http://localhost:1313/docs/nsi/cours_premiere/donnees_simples/booleen/" class="">Booléens</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-5b650df83dbda5869703670e4c235114" class="toggle"  />
+    <label for="section-5b650df83dbda5869703670e4c235114" class="flex justify-between">
+      <a href="http://localhost:1313/docs/nsi/cours_premiere/donnees_simples/booleen/1_cours/" class="">Booléens : cours</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-906b42630a9df92658f1687ade8db4c5" class="toggle"  />
+    <label for="section-906b42630a9df92658f1687ade8db4c5" class="flex justify-between">
+      <a href="http://localhost:1313/docs/nsi/cours_premiere/donnees_simples/booleen/2_td/" class="">Booléens : TD</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-e878f7ecdf7f357ee2eb5aad52b298b0" class="toggle"  />
+    <label for="section-e878f7ecdf7f357ee2eb5aad52b298b0" class="flex justify-between">
+      <a href="http://localhost:1313/docs/nsi/cours_premiere/donnees_simples/chaines_caracteres/" class="">Chaînes de caractères</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-e85f4617e4c5d0bb903642592a2a663a" class="toggle"  />
+    <label for="section-e85f4617e4c5d0bb903642592a2a663a" class="flex justify-between">
+      <a href="http://localhost:1313/docs/nsi/cours_premiere/donnees_simples/chaines_caracteres/1_cours/" class="">Chaines : Cours</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-244501fd4c92dbee4b2892422bab60c1" class="toggle"  />
+    <label for="section-244501fd4c92dbee4b2892422bab60c1" class="flex justify-between">
+      <a href="http://localhost:1313/docs/nsi/cours_premiere/donnees_simples/chaines_caracteres/2_td/" class="">Chaînes : TD</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-c6525a48bd343e10cada8d7afe2fd65e" class="toggle"  />
+    <label for="section-c6525a48bd343e10cada8d7afe2fd65e" class="flex justify-between">
+      <a href="http://localhost:1313/docs/nsi/cours_premiere/donnees_simples/hexadecimal/" class="">Hexadécimal</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-0fcd8ecde149cf6b3078607500300a8a" class="toggle"  />
+    <label for="section-0fcd8ecde149cf6b3078607500300a8a" class="flex justify-between">
+      <a href="http://localhost:1313/docs/nsi/cours_premiere/donnees_simples/hexadecimal/1_cours/" class="">Hexa : Cours</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-f4549a56e854de0263a0fa0b11e6db46" class="toggle"  />
+    <label for="section-f4549a56e854de0263a0fa0b11e6db46" class="flex justify-between">
+      <a href="http://localhost:1313/docs/nsi/cours_premiere/donnees_simples/hexadecimal/2_td/" class="">Hexa : TD</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-f570bc180a7baac7f8a1ffb0c836df7e" class="toggle"  />
+    <label for="section-f570bc180a7baac7f8a1ffb0c836df7e" class="flex justify-between">
+      <a href="http://localhost:1313/docs/nsi/cours_premiere/donnees_simples/flottants/" class="">Flottants</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-6d9741dcffdb80c8d9eb584e147edff1" class="toggle"  />
+    <label for="section-6d9741dcffdb80c8d9eb584e147edff1" class="flex justify-between">
+      <a href="http://localhost:1313/docs/nsi/cours_premiere/donnees_simples/flottants/1_cours/" class="">Flottants : Cours</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-3863f919bca3993b324095edd43e19b0" class="toggle"  />
+    <label for="section-3863f919bca3993b324095edd43e19b0" class="flex justify-between">
+      <a href="http://localhost:1313/docs/nsi/cours_premiere/donnees_simples/flottants/2_td/" class="">Flottants : TD</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-1c4e1438bddd61c1390387690aa40952" class="toggle"  />
+    <label for="section-1c4e1438bddd61c1390387690aa40952" class="flex justify-between">
+      <a href="http://localhost:1313/docs/nsi/cours_premiere/donnees_simples/complement_a_deux/" class="">Complément à deux</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-1bd5c7c52889f9d35124c02a07f99dee" class="toggle"  />
+    <label for="section-1bd5c7c52889f9d35124c02a07f99dee" class="flex justify-between">
+      <a href="http://localhost:1313/docs/nsi/cours_premiere/donnees_simples/complement_a_deux/1_cours/" class="">Cours</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-263da5b30c5b454fe229ec3c7ca872c5" class="toggle"  />
+    <label for="section-263da5b30c5b454fe229ec3c7ca872c5" class="flex justify-between">
+      <a href="http://localhost:1313/docs/nsi/cours_premiere/donnees_simples/complement_a_deux/2_td/" class="">Travaux dirigés</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-cb7a2266e82191811a054b29c67cc204" class="toggle"  />
+    <label for="section-cb7a2266e82191811a054b29c67cc204" class="flex justify-between">
+      <a href="http://localhost:1313/docs/nsi/cours_premiere/donnees_simples/resume_donnees_simples/" class="">résumé</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-d21b1969974f099e376da290e9d78a56" class="toggle"  />
+    <label for="section-d21b1969974f099e376da290e9d78a56" class="flex justify-between">
+      <a href="http://localhost:1313/docs/nsi/cours_premiere/os/" class="">Système d&#39;exploitation</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-9a8b8bad8980e115118fae6c6eb0ed0f" class="toggle"  />
+    <label for="section-9a8b8bad8980e115118fae6c6eb0ed0f" class="flex justify-between">
+      <a href="http://localhost:1313/docs/nsi/cours_premiere/os/0_concepts_cles/" class="">OS : trois concepts clés</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-559bbb6aeef3026122efbf23974c4ab5" class="toggle"  />
+    <label for="section-559bbb6aeef3026122efbf23974c4ab5" class="flex justify-between">
+      <a href="http://localhost:1313/docs/nsi/cours_premiere/os/1_cours/" class="">Linux Introduction</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-9a3545560f75ab5bdd78d65e4caa3800" class="toggle"  />
+    <label for="section-9a3545560f75ab5bdd78d65e4caa3800" class="flex justify-between">
+      <a href="http://localhost:1313/docs/nsi/cours_premiere/os/2_complements/" class="">Linux Compléments</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-76a566fdf98c3a5e08ced8799637d36c" class="toggle"  />
+    <label for="section-76a566fdf98c3a5e08ced8799637d36c" class="flex justify-between">
+      <a href="http://localhost:1313/docs/nsi/cours_premiere/os/3_td/" class="">TD Linux</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-2e330e825487211e5ecd111fb2c72ac9" class="toggle"  />
+    <label for="section-2e330e825487211e5ecd111fb2c72ac9" class="flex justify-between">
+      <a href="http://localhost:1313/docs/nsi/cours_premiere/os/4_tp_debian/" class="">TP debian</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-adfa3bd1ec1614be6c45a910c077c554" class="toggle"  />
+    <label for="section-adfa3bd1ec1614be6c45a910c077c554" class="flex justify-between">
+      <a href="http://localhost:1313/docs/nsi/cours_premiere/os/5_cle_linux/" class="">Créer une clé Linux</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-c7ba49f9b6b628669a2441a901dafae5" class="toggle"  />
+    <label for="section-c7ba49f9b6b628669a2441a901dafae5" class="flex justify-between">
+      <a href="http://localhost:1313/docs/nsi/cours_premiere/os/6_bash_resume/" class="">Résumé du bash</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-b4d04c6e39b5f196a750360f1b29fb38" class="toggle"  />
+    <label for="section-b4d04c6e39b5f196a750360f1b29fb38" class="flex justify-between">
+      <a href="http://localhost:1313/docs/nsi/cours_premiere/os/7_terminus/" class="">Terminus</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-883655b138d811804c8281cfac79bdfc" class="toggle"  />
+    <label for="section-883655b138d811804c8281cfac79bdfc" class="flex justify-between">
+      <a href="http://localhost:1313/docs/nsi/cours_premiere/donnees_structurees/" class="">Données Structurées</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-78e4f871820efb6c8074161f9edafda7" class="toggle"  />
+    <label for="section-78e4f871820efb6c8074161f9edafda7" class="flex justify-between">
+      <a href="http://localhost:1313/docs/nsi/cours_premiere/donnees_structurees/types_construits/" class="">Types construits</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-49622d8683ef3fe0d67cb9d570db21c3" class="toggle"  />
+    <label for="section-49622d8683ef3fe0d67cb9d570db21c3" class="flex justify-between">
+      <a href="http://localhost:1313/docs/nsi/cours_premiere/donnees_structurees/types_construits/1_cours/" class="">Cours</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-15661c146c6cba1fd5520a0e8bb4c740" class="toggle"  />
+    <label for="section-15661c146c6cba1fd5520a0e8bb4c740" class="flex justify-between">
+      <a href="http://localhost:1313/docs/nsi/cours_premiere/donnees_structurees/types_construits/2_td/" class="">TD</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-b86fa982fa939cd6c9d7f22572176d2c" class="toggle"  />
+    <label for="section-b86fa982fa939cd6c9d7f22572176d2c" class="flex justify-between">
+      <a href="http://localhost:1313/docs/nsi/cours_premiere/donnees_structurees/tableaux_2d/" class="">Structure imbriquées et compréhension</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-956fdf5e295f9c47ea12bd7933a20c77" class="toggle"  />
+    <label for="section-956fdf5e295f9c47ea12bd7933a20c77" class="flex justify-between">
+      <a href="http://localhost:1313/docs/nsi/cours_premiere/donnees_structurees/tableaux_2d/cours/" class="">Cours</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-92c195c1dbd7cf184faea48a37b8f471" class="toggle"  />
+    <label for="section-92c195c1dbd7cf184faea48a37b8f471" class="flex justify-between">
+      <a href="http://localhost:1313/docs/nsi/cours_premiere/donnees_structurees/tableaux_2d/td_intro/" class="">Intro</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-d0517cfc23670d91fd2fb4adf013ad9e" class="toggle"  />
+    <label for="section-d0517cfc23670d91fd2fb4adf013ad9e" class="flex justify-between">
+      <a href="http://localhost:1313/docs/nsi/cours_premiere/donnees_structurees/tableaux_2d/td/" class="">TD</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-cb7d29d155c494502786ce8dd99dcf7e" class="toggle"  />
+    <label for="section-cb7d29d155c494502786ce8dd99dcf7e" class="flex justify-between">
+      <a href="http://localhost:1313/docs/nsi/cours_premiere/donnees_structurees/table/" class="">Données en tables, fichiers csv</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-d9e183172031d43cf2b81cf9c55061db" class="toggle"  />
+    <label for="section-d9e183172031d43cf2b81cf9c55061db" class="flex justify-between">
+      <a href="http://localhost:1313/docs/nsi/cours_premiere/donnees_structurees/table/1_cours/" class="">1. Cours : introduction</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-77e93c6e4ee10cb6f36d5e64a9393e68" class="toggle"  />
+    <label for="section-77e93c6e4ee10cb6f36d5e64a9393e68" class="flex justify-between">
+      <a href="http://localhost:1313/docs/nsi/cours_premiere/donnees_structurees/table/2_td/" class="">2. TD : importer, exporter, trier</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-7605686b36e1df49c7ee8167cd6b46c0" class="toggle"  />
+    <label for="section-7605686b36e1df49c7ee8167cd6b46c0" class="flex justify-between">
+      <a href="http://localhost:1313/docs/nsi/cours_premiere/donnees_structurees/table/3_tp/" class="">3. TP : importer, exporter, trier</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-e23155f382f222a001fdc4e1717feccc" class="toggle"  />
+    <label for="section-e23155f382f222a001fdc4e1717feccc" class="flex justify-between">
+      <a href="http://localhost:1313/docs/nsi/cours_premiere/donnees_structurees/table/4_cours/" class="">4. Cours : trier, fusionner</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-00ff6cf566e963eca08f1b1c3a957218" class="toggle"  />
+    <label for="section-00ff6cf566e963eca08f1b1c3a957218" class="flex justify-between">
+      <a href="http://localhost:1313/docs/nsi/cours_premiere/donnees_structurees/table/5_td/" class="">5. Travaux dirigés</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-7a17f9234e9055e3bc027d0ad4d2141d" class="toggle"  />
+    <label for="section-7a17f9234e9055e3bc027d0ad4d2141d" class="flex justify-between">
+      <a href="http://localhost:1313/docs/nsi/cours_premiere/donnees_structurees/table/6_tp/" class="">6. TP : fusion et tris</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-3efcb0d8684e68587ae0f1fa58adb74f" class="toggle"  />
+    <label for="section-3efcb0d8684e68587ae0f1fa58adb74f" class="flex justify-between">
+      <a href="http://localhost:1313/docs/nsi/cours_premiere/donnees_structurees/table/7_revisions_pays/" class="">7. Rappels - les pays</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-96e7291153c573666c5119c9e5739af0" class="toggle" checked />
+    <label for="section-96e7291153c573666c5119c9e5739af0" class="flex justify-between">
+      <a href="http://localhost:1313/docs/nsi/cours_premiere/architecture/" class="">Architecture</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://localhost:1313/docs/nsi/cours_premiere/architecture/1_intro/" class="">Modèle de Von Neumann</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://localhost:1313/docs/nsi/cours_premiere/architecture/2_composants/" class="">Composants d&#39;un processeur</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://localhost:1313/docs/nsi/cours_premiere/architecture/3_performances/" class="">Evolution des performances</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://localhost:1313/docs/nsi/cours_premiere/architecture/4_assembleur/" class="">Initiation assembleur</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-854a1e3119254c65e70250d3cf3951b1" class="toggle"  />
+    <label for="section-854a1e3119254c65e70250d3cf3951b1" class="flex justify-between">
+      <a href="http://localhost:1313/docs/nsi/cours_premiere/architecture/5_aqa/" class="">Simulateur AQA</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-1d79d578138f59911c97b5e93773a14c" class="toggle"  />
+    <label for="section-1d79d578138f59911c97b5e93773a14c" class="flex justify-between">
+      <a href="http://localhost:1313/docs/nsi/cours_premiere/architecture/5_aqa/5_assembleur_td/" class="">Assembleur Exercices</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-34e74bf061b64a3e2b52ae584a281b1b" class="toggle"  />
+    <label for="section-34e74bf061b64a3e2b52ae584a281b1b" class="flex justify-between">
+      <a href="http://localhost:1313/docs/nsi/cours_premiere/architecture/5_aqa/6_assembleur_aqa_intro/" class="">Simulation CPU assembleur AQA</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-61babe10d82a562dce96caf62af8d8f4" class="toggle"  />
+    <label for="section-61babe10d82a562dce96caf62af8d8f4" class="flex justify-between">
+      <a href="http://localhost:1313/docs/nsi/cours_premiere/architecture/5_aqa/7_assembleur_aqa_tp/" class="">Assembleur AQA - Travaux dirigés</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-adc551fd06aee0dd550adba0fcb09fce" class="toggle"  />
+    <label for="section-adc551fd06aee0dd550adba0fcb09fce" class="flex justify-between">
+      <a href="http://localhost:1313/docs/nsi/cours_premiere/architecture/5_aqa/8_doc_aqa/" class="">Documentation Assembleur AQA</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-7b590f48a72b6b924898b94c924c90d1" class="toggle"  />
+    <label for="section-7b590f48a72b6b924898b94c924c90d1" class="flex justify-between">
+      <a href="http://localhost:1313/docs/nsi/cours_premiere/architecture/6_armlite/" class="">Simulateur Armlite</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://localhost:1313/docs/nsi/cours_premiere/architecture/6_armlite/doc_armlite/" class="">Documentation</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://localhost:1313/docs/nsi/cours_premiere/architecture/6_armlite/exos_armlite/" class="">Exercices</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://localhost:1313/docs/nsi/cours_premiere/architecture/6_armlite/fiche_resume/" class="">Résumé des mnémoniques ARMLite</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://localhost:1313/docs/nsi/cours_premiere/architecture/6_armlite/livre_from_metal/" class="">L&#39;informatique à partir du métal</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://localhost:1313/docs/nsi/cours_premiere/architecture/7_harvard/" class=" active">Harvard vs Von Neumann</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://localhost:1313/docs/nsi/cours_premiere/architecture/8_resume/" class="">Von Neumann - Résumé</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-38e184cd6350be32ca20c3e5535a715f" class="toggle"  />
+    <label for="section-38e184cd6350be32ca20c3e5535a715f" class="flex justify-between">
+      <a href="http://localhost:1313/docs/nsi/cours_premiere/ihm_web/" class="">IHM sur le Web</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-f1279ea45407d945185968667394afcb" class="toggle"  />
+    <label for="section-f1279ea45407d945185968667394afcb" class="flex justify-between">
+      <a href="http://localhost:1313/docs/nsi/cours_premiere/ihm_web/web/" class="">cours: Le web</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-6c9fc22377abc434934cc256824b5004" class="toggle"  />
+    <label for="section-6c9fc22377abc434934cc256824b5004" class="flex justify-between">
+      <a href="http://localhost:1313/docs/nsi/cours_premiere/ihm_web/url/" class="">cours: Les URL</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-f11c8cf30d0c56066e08095f76fbbdf8" class="toggle"  />
+    <label for="section-f11c8cf30d0c56066e08095f76fbbdf8" class="flex justify-between">
+      <a href="http://localhost:1313/docs/nsi/cours_premiere/ihm_web/html_css_cours/" class="">cours: HTML et CSS</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-ac806f81c48d4438b427cca3a9577eb8" class="toggle"  />
+    <label for="section-ac806f81c48d4438b427cca3a9577eb8" class="flex justify-between">
+      <a href="http://localhost:1313/docs/nsi/cours_premiere/ihm_web/clsv/" class="">cours : Modèle Client-Server</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-ec448199d110810492f7936fbbdf91e9" class="toggle"  />
+    <label for="section-ec448199d110810492f7936fbbdf91e9" class="flex justify-between">
+      <a href="http://localhost:1313/docs/nsi/cours_premiere/ihm_web/js_td/" class="">TD : JavaScript</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-037f5f1b6653f71b0c804efd7edf3798" class="toggle"  />
+    <label for="section-037f5f1b6653f71b0c804efd7edf3798" class="flex justify-between">
+      <a href="http://localhost:1313/docs/nsi/cours_premiere/ihm_web/html_css/" class="">TP : HTML et CSS</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-1028550992baeb648b93748c75acf7c8" class="toggle"  />
+    <label for="section-1028550992baeb648b93748c75acf7c8" class="flex justify-between">
+      <a href="http://localhost:1313/docs/nsi/cours_premiere/ihm_web/js/" class="">TP : JavaScript</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-8ef6d593e28fa45d26285dbfc118c879" class="toggle"  />
+    <label for="section-8ef6d593e28fa45d26285dbfc118c879" class="flex justify-between">
+      <a href="http://localhost:1313/docs/nsi/cours_premiere/ihm_web/http/" class="">TP : Protocole HTTP</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-1a257523d2522d566f65c3da78eae4ca" class="toggle"  />
+    <label for="section-1a257523d2522d566f65c3da78eae4ca" class="flex justify-between">
+      <a href="http://localhost:1313/docs/nsi/cours_premiere/ihm_web/http_td/" class="">TD : HTTP</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-9183b04981fdb8a49e68cf6dd959a840" class="toggle"  />
+    <label for="section-9183b04981fdb8a49e68cf6dd959a840" class="flex justify-between">
+      <a href="http://localhost:1313/docs/nsi/cours_premiere/ihm_web/flask/" class="">TP : Formulaire d&#39;une page web</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-13e0cf1f94828c14206b62fd9e99508a" class="toggle"  />
+    <label for="section-13e0cf1f94828c14206b62fd9e99508a" class="flex justify-between">
+      <a href="http://localhost:1313/docs/nsi/cours_premiere/ihm_web/cookies/" class="">Cookies</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://localhost:1313/docs/nsi/cours_premiere/ihm_web/projet_html_css/" class="">Projet : CSS</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-91ec8431be10e30cd4587037932b4cb0" class="toggle"  />
+    <label for="section-91ec8431be10e30cd4587037932b4cb0" class="flex justify-between">
+      <a href="http://localhost:1313/docs/nsi/cours_premiere/ihm_web/projet_serveur_meteo/" class="">Projet : Serveur méteo</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-fef10403427e41704ff554aad4104d00" class="toggle"  />
+    <label for="section-fef10403427e41704ff554aad4104d00" class="flex justify-between">
+      <a href="http://localhost:1313/docs/nsi/cours_premiere/ihm_web/resumes/" class="">Résumés IHM sur le Web</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-f194c1276762612e3633fcc23fa2a177" class="toggle"  />
+    <label for="section-f194c1276762612e3633fcc23fa2a177" class="flex justify-between">
+      <a href="http://localhost:1313/docs/nsi/cours_premiere/ihm_web/resumes/resume_html_css/" class="">Résumé HTML - CSS</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-b92cf5ac5b8d1b7c9309c76371566cb8" class="toggle"  />
+    <label for="section-b92cf5ac5b8d1b7c9309c76371566cb8" class="flex justify-between">
+      <a href="http://localhost:1313/docs/nsi/cours_premiere/ihm_web/resumes/resume_javascript/" class="">Résumé JavaScript</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-f280c34c42963fdd33369fc11f5ea2f0" class="toggle"  />
+    <label for="section-f280c34c42963fdd33369fc11f5ea2f0" class="flex justify-between">
+      <a href="http://localhost:1313/docs/nsi/cours_premiere/ihm_web/resumes/resume_url_http/" class="">URL et HTTP</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-62ae8ade12b9c11f1284ca712d5b2585" class="toggle"  />
+    <label for="section-62ae8ade12b9c11f1284ca712d5b2585" class="flex justify-between">
+      <a href="http://localhost:1313/docs/nsi/cours_premiere/ihm_web/td_complet/" class="">TD complet</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-6a116239b66b4bfeb349bc0f04c1a3d5" class="toggle"  />
+    <label for="section-6a116239b66b4bfeb349bc0f04c1a3d5" class="flex justify-between">
+      <a href="http://localhost:1313/docs/nsi/cours_premiere/reseaux/" class="">Réseaux</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-7011e20c1f9db647131226a5e965c737" class="toggle"  />
+    <label for="section-7011e20c1f9db647131226a5e965c737" class="flex justify-between">
+      <a href="http://localhost:1313/docs/nsi/cours_premiere/reseaux/rappels/" class="">Rappels</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-ef64f64c28b66345f045c7862b29bb27" class="toggle"  />
+    <label for="section-ef64f64c28b66345f045c7862b29bb27" class="flex justify-between">
+      <a href="http://localhost:1313/docs/nsi/cours_premiere/reseaux/cours/" class="">Cours</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-cdaf31d941b87196a100b1555a920702" class="toggle"  />
+    <label for="section-cdaf31d941b87196a100b1555a920702" class="flex justify-between">
+      <a href="http://localhost:1313/docs/nsi/cours_premiere/reseaux/resume_complet/" class="">Résumé</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-0e15b5a6e8046a15f5067682af32cc15" class="toggle"  />
+    <label for="section-0e15b5a6e8046a15f5067682af32cc15" class="flex justify-between">
+      <a href="http://localhost:1313/docs/nsi/cours_premiere/reseaux/td_reseau/" class="">TD: Réseau</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-f26039888942d1f18340670fa5a7f64f" class="toggle"  />
+    <label for="section-f26039888942d1f18340670fa5a7f64f" class="flex justify-between">
+      <a href="http://localhost:1313/docs/nsi/cours_premiere/reseaux/tp_1/" class="">TP: Simulation 1</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-8b96ecfe1c5fa300668d06968f9ad819" class="toggle"  />
+    <label for="section-8b96ecfe1c5fa300668d06968f9ad819" class="flex justify-between">
+      <a href="http://localhost:1313/docs/nsi/cours_premiere/reseaux/tp_2/" class="">TP: Simulation 2</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-7e5b296ee6ab5e5af5b7b66294ae96c9" class="toggle"  />
+    <label for="section-7e5b296ee6ab5e5af5b7b66294ae96c9" class="flex justify-between">
+      <a href="http://localhost:1313/docs/nsi/cours_premiere/reseaux/complements/" class="">Compléments</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-43cf8fcd58291befda088ea3c19f2108" class="toggle"  />
+    <label for="section-43cf8fcd58291befda088ea3c19f2108" class="flex justify-between">
+      <a href="http://localhost:1313/docs/nsi/cours_premiere/reseaux/complements/cours_complet/" class="">Cours complet</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-26913f51ac218794c7a9dd8aa53bc8e8" class="toggle"  />
+    <label for="section-26913f51ac218794c7a9dd8aa53bc8e8" class="flex justify-between">
+      <a href="http://localhost:1313/docs/nsi/cours_premiere/reseaux/complements/modele_tcp_ip/" class="">Le modèle TCP/IP</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-adfec36553bd3a0966271cd9d926df24" class="toggle"  />
+    <label for="section-adfec36553bd3a0966271cd9d926df24" class="flex justify-between">
+      <a href="http://localhost:1313/docs/nsi/cours_premiere/reseaux/complements/tcp_ip/" class="">Protocoles TCP et IP</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-b07e1487be968793e5f2b1996bac39f6" class="toggle"  />
+    <label for="section-b07e1487be968793e5f2b1996bac39f6" class="flex justify-between">
+      <a href="http://localhost:1313/docs/nsi/cours_premiere/reseaux/complements/bit_alterne/" class="">Protocole du bit alterné</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-853c893a81a2a374496b7f1561514d88" class="toggle"  />
+    <label for="section-853c893a81a2a374496b7f1561514d88" class="flex justify-between">
+      <a href="http://localhost:1313/docs/nsi/cours_premiere/projets/" class="">Projets</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-184d32ad468cc2e179ab596f5fc0e801" class="toggle"  />
+    <label for="section-184d32ad468cc2e179ab596f5fc0e801" class="flex justify-between">
+      <a href="http://localhost:1313/docs/nsi/cours_premiere/projets/turtle/" class="">le module Turtle</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://localhost:1313/docs/nsi/cours_premiere/projets/pgzero_snake/" class="">pgzero snake</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://localhost:1313/docs/nsi/cours_premiere/projets/space_invaders/" class="">pgzero invaders</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-a2debc7c7de2cd2831034093252ef1cf" class="toggle"  />
+    <label for="section-a2debc7c7de2cd2831034093252ef1cf" class="flex justify-between">
+      <a href="http://localhost:1313/docs/nsi/cours_premiere/projets/bbc_microbit/" class="">BBC Micro:bit</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-899f1b13508f9dc0a52b16893c1916e4" class="toggle"  />
+    <label for="section-899f1b13508f9dc0a52b16893c1916e4" class="flex justify-between">
+      <a href="http://localhost:1313/docs/nsi/cours_premiere/projets/bbc_microbit/introduction/" class="">introduction</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-3d40c7141f498e5ba144486f9990a516" class="toggle"  />
+    <label for="section-3d40c7141f498e5ba144486f9990a516" class="flex justify-between">
+      <a href="http://localhost:1313/docs/nsi/cours_premiere/projets/bbc_microbit/grove/" class="">Module Grove</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-41e1df2c23c3b8983c7eeb816f817a82" class="toggle"  />
+    <label for="section-41e1df2c23c3b8983c7eeb816f817a82" class="flex justify-between">
+      <a href="http://localhost:1313/docs/nsi/cours_premiere/projets/ocr_knn/" class="">OCR avec kNN</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-e117a5faa078013b9fad387e688aa141" class="toggle"  />
+    <label for="section-e117a5faa078013b9fad387e688aa141" class="flex justify-between">
+      <a href="http://localhost:1313/docs/nsi/cours_premiere/projets/dodger/" class="">pgzero Dodger</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://localhost:1313/docs/nsi/cours_premiere/projets/pygame_snake/" class="">pygame snake</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-22b16c9fd7c56f75d943ec16cadf671a" class="toggle"  />
+    <label for="section-22b16c9fd7c56f75d943ec16cadf671a" class="flex justify-between">
+      <a href="http://localhost:1313/docs/nsi/cours_premiere/projets/timberman/" class="">pygame Timberman</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-f449845ee5a2c0720ae20dec9c59376b" class="toggle"  />
+    <label for="section-f449845ee5a2c0720ae20dec9c59376b" class="flex justify-between">
+      <a href="http://localhost:1313/docs/nsi/cours_premiere/devoirs_premiere/" class="">Devoirs de première</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-3e7ce26a80b1bb80001388327323dd18" class="toggle"  />
+    <label for="section-3e7ce26a80b1bb80001388327323dd18" class="flex justify-between">
+      <a href="http://localhost:1313/docs/nsi/cours_premiere/presse/" class="">presse</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-242b462766d465d8f10bac2407df7178" class="toggle"  />
+    <label for="section-242b462766d465d8f10bac2407df7178" class="flex justify-between">
+      <a href="http://localhost:1313/docs/nsi/cours_premiere/presse/amazon_flex/" class="">Amazon Flex</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-806b1466c4820e0a0ea065eb58fbdcdc" class="toggle"  />
+    <label for="section-806b1466c4820e0a0ea065eb58fbdcdc" class="flex justify-between">
+      <a href="http://localhost:1313/docs/nsi/cours_terminale/" class="">Terminale</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-3bbb13e0172de8ae1e72e1670d726a8c" class="toggle"  />
+    <label for="section-3bbb13e0172de8ae1e72e1670d726a8c" class="flex justify-between">
+      <a href="http://localhost:1313/docs/nsi/cours_terminale/rentree/" class="">Présentation rentrée</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-60d3a6bdc906778394173d2ed9d3ab45" class="toggle"  />
+    <label for="section-60d3a6bdc906778394173d2ed9d3ab45" class="flex justify-between">
+      <a href="http://localhost:1313/docs/nsi/cours_terminale/rentree/entrees_preponderantes/" class="">Entrées prépondérentes du programme</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-13d1f90a479fc8d499e70a19b7c9783f" class="toggle"  />
+    <label for="section-13d1f90a479fc8d499e70a19b7c9783f" class="flex justify-between">
+      <a href="http://localhost:1313/docs/nsi/cours_terminale/algorithmique/" class="">Algorithmique</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-02027b4decff9eb730d6dd917680ad13" class="toggle"  />
+    <label for="section-02027b4decff9eb730d6dd917680ad13" class="flex justify-between">
+      <a href="http://localhost:1313/docs/nsi/cours_terminale/algorithmique/diviser_pour_regner/" class="">Diviser pour régner.</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-9c0be67385269729d1f73ed2fb3ee7ae" class="toggle"  />
+    <label for="section-9c0be67385269729d1f73ed2fb3ee7ae" class="flex justify-between">
+      <a href="http://localhost:1313/docs/nsi/cours_terminale/algorithmique/diviser_pour_regner/tri_fusion/" class="">Tri fusion</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-78c792ab59831acb8a6254ad608f4641" class="toggle"  />
+    <label for="section-78c792ab59831acb8a6254ad608f4641" class="flex justify-between">
+      <a href="http://localhost:1313/docs/nsi/cours_terminale/algorithmique/prog_dynamique/" class="">Programmation dynamique.</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://localhost:1313/docs/nsi/cours_terminale/algorithmique/prog_dynamique/cours/" class="">Cours</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://localhost:1313/docs/nsi/cours_terminale/algorithmique/prog_dynamique/td/" class="">Travaux dirigés</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://localhost:1313/docs/nsi/cours_terminale/algorithmique/prog_dynamique/resume/" class="">Resume</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-3c2e20cd264697b70f365eab02644dc9" class="toggle"  />
+    <label for="section-3c2e20cd264697b70f365eab02644dc9" class="flex justify-between">
+      <a href="http://localhost:1313/docs/nsi/cours_terminale/algorithmique/recherche_textuelle/" class="">Recherche textuelle</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-902172b3621058e57e3bf0e322929eb9" class="toggle"  />
+    <label for="section-902172b3621058e57e3bf0e322929eb9" class="flex justify-between">
+      <a href="http://localhost:1313/docs/nsi/cours_terminale/algorithmique/recherche_textuelle/cours/" class="">Cours</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://localhost:1313/docs/nsi/cours_terminale/algorithmique/recherche_textuelle/resume/" class="">Resume</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-f8cef40ee532f132b682249496446c66" class="toggle"  />
+    <label for="section-f8cef40ee532f132b682249496446c66" class="flex justify-between">
+      <a href="http://localhost:1313/docs/nsi/cours_terminale/architecture/" class="">Architecture</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-9fae82e9bcd37b2be4a1bd6ad229dbca" class="toggle"  />
+    <label for="section-9fae82e9bcd37b2be4a1bd6ad229dbca" class="flex justify-between">
+      <a href="http://localhost:1313/docs/nsi/cours_terminale/architecture/routage/" class="">Routage</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-7b813bd1233121b1b4648a6254159005" class="toggle"  />
+    <label for="section-7b813bd1233121b1b4648a6254159005" class="flex justify-between">
+      <a href="http://localhost:1313/docs/nsi/cours_terminale/architecture/routage/cours/" class="">Protocoles de routage</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-56985b3517f60826709c9f7f8f12e801" class="toggle"  />
+    <label for="section-56985b3517f60826709c9f7f8f12e801" class="flex justify-between">
+      <a href="http://localhost:1313/docs/nsi/cours_terminale/architecture/routage/td/" class="">Routage TD</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-5cda1aab69b5d0eafc80bad13fda0fde" class="toggle"  />
+    <label for="section-5cda1aab69b5d0eafc80bad13fda0fde" class="flex justify-between">
+      <a href="http://localhost:1313/docs/nsi/cours_terminale/architecture/processus/" class="">Processus</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-44270da6e42d70c76a20ed1e0ef279a4" class="toggle"  />
+    <label for="section-44270da6e42d70c76a20ed1e0ef279a4" class="flex justify-between">
+      <a href="http://localhost:1313/docs/nsi/cours_terminale/architecture/processus/1_os_intro/" class="">Rappels</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-47a427912650d7c9dc6790e66a2ff5b1" class="toggle"  />
+    <label for="section-47a427912650d7c9dc6790e66a2ff5b1" class="flex justify-between">
+      <a href="http://localhost:1313/docs/nsi/cours_terminale/architecture/processus/2_processus_etats/" class="">États des processus</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-93ddc03a49d64fe20d0542b8dc3b096e" class="toggle"  />
+    <label for="section-93ddc03a49d64fe20d0542b8dc3b096e" class="flex justify-between">
+      <a href="http://localhost:1313/docs/nsi/cours_terminale/architecture/processus/3_interblocage/" class="">Interblocage</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-8995a54371e5ef5fa0329746daa94f19" class="toggle"  />
+    <label for="section-8995a54371e5ef5fa0329746daa94f19" class="flex justify-between">
+      <a href="http://localhost:1313/docs/nsi/cours_terminale/architecture/processus/4_ordonnancement/" class="">Ordonnancement</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-a7e1b32c58d08652ce3a7483c0feb32e" class="toggle"  />
+    <label for="section-a7e1b32c58d08652ce3a7483c0feb32e" class="flex justify-between">
+      <a href="http://localhost:1313/docs/nsi/cours_terminale/architecture/processus/5_td/" class="">Processus - TD</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-2d63823683af0f04786b1f77776f7500" class="toggle"  />
+    <label for="section-2d63823683af0f04786b1f77776f7500" class="flex justify-between">
+      <a href="http://localhost:1313/docs/nsi/cours_terminale/architecture/processus/old/" class="">Anciens cours</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://localhost:1313/docs/nsi/cours_terminale/architecture/processus/old/processus_complet/" class="">Processus Complet</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-ceaed0881a9b37f1665a951ff225ab80" class="toggle"  />
+    <label for="section-ceaed0881a9b37f1665a951ff225ab80" class="flex justify-between">
+      <a href="http://localhost:1313/docs/nsi/cours_terminale/architecture/processus/old/processus/" class="">processus, système de fichiers, shell</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-232aec87da492f75151c62b7d5c65904" class="toggle"  />
+    <label for="section-232aec87da492f75151c62b7d5c65904" class="flex justify-between">
+      <a href="http://localhost:1313/docs/nsi/cours_terminale/architecture/processus/old/resume/" class="">processus - résumé</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-db5ef731429a7638bfa086b3e9bce45a" class="toggle"  />
+    <label for="section-db5ef731429a7638bfa086b3e9bce45a" class="flex justify-between">
+      <a href="http://localhost:1313/docs/nsi/cours_terminale/architecture/processus/old/td/" class="">Processus - TD</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-d842407bb9858e2bc3eb7da3e76ec03f" class="toggle"  />
+    <label for="section-d842407bb9858e2bc3eb7da3e76ec03f" class="flex justify-between">
+      <a href="http://localhost:1313/docs/nsi/cours_terminale/architecture/processus/old/race_condition/" class="">race condition</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-db7d117ae455dd67cd87d332c5114aa6" class="toggle"  />
+    <label for="section-db7d117ae455dd67cd87d332c5114aa6" class="flex justify-between">
+      <a href="http://localhost:1313/docs/nsi/cours_terminale/architecture/securisation/" class="">Sécurisation</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-2c03a31950525ce5a12166ccc0653cf9" class="toggle"  />
+    <label for="section-2c03a31950525ce5a12166ccc0653cf9" class="flex justify-between">
+      <a href="http://localhost:1313/docs/nsi/cours_terminale/architecture/securisation/introduction/" class="">Introduction</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-4713697d4b63b4b52703d7097603cd70" class="toggle"  />
+    <label for="section-4713697d4b63b4b52703d7097603cd70" class="flex justify-between">
+      <a href="http://localhost:1313/docs/nsi/cours_terminale/architecture/securisation/asymetrique/" class="">Chiffrement asymétrique</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-044325b11fabe6423c58068f3038e447" class="toggle"  />
+    <label for="section-044325b11fabe6423c58068f3038e447" class="flex justify-between">
+      <a href="http://localhost:1313/docs/nsi/cours_terminale/architecture/securisation/diffie_hellman/" class="">Diffie-Hellman</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-d373814199901321e49cc448ac05a903" class="toggle"  />
+    <label for="section-d373814199901321e49cc448ac05a903" class="flex justify-between">
+      <a href="http://localhost:1313/docs/nsi/cours_terminale/architecture/securisation/https/" class="">HTTPS</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-ec1fba27847c5ad88b9168d6fa906312" class="toggle"  />
+    <label for="section-ec1fba27847c5ad88b9168d6fa906312" class="flex justify-between">
+      <a href="http://localhost:1313/docs/nsi/cours_terminale/architecture/securisation/aes/" class="">AES</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-3c4205a398be9efcdc2e7b162672fa66" class="toggle"  />
+    <label for="section-3c4205a398be9efcdc2e7b162672fa66" class="flex justify-between">
+      <a href="http://localhost:1313/docs/nsi/cours_terminale/architecture/securisation/resumes/" class="">Sécurisation : résumé</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-3491f42cc1c410faca3c9e704ad805e5" class="toggle"  />
+    <label for="section-3491f42cc1c410faca3c9e704ad805e5" class="flex justify-between">
+      <a href="http://localhost:1313/docs/nsi/cours_terminale/architecture/composants/" class="">Composants</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-c4559f3c53af9169226737bb19a303f8" class="toggle"  />
+    <label for="section-c4559f3c53af9169226737bb19a303f8" class="flex justify-between">
+      <a href="http://localhost:1313/docs/nsi/cours_terminale/architecture/composants/cours/" class="">Cours</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-a352377447a8dbc3812657695af6d754" class="toggle"  />
+    <label for="section-a352377447a8dbc3812657695af6d754" class="flex justify-between">
+      <a href="http://localhost:1313/docs/nsi/cours_terminale/architecture/composants/tp/" class="">TP</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-e8317269339c1613fdc393392b709022" class="toggle"  />
+    <label for="section-e8317269339c1613fdc393392b709022" class="flex justify-between">
+      <a href="http://localhost:1313/docs/nsi/cours_terminale/architecture/composants/cache/" class="">complément : Mémoire cache</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-389ea44b7001b55e6029b61e2c8a7f0c" class="toggle"  />
+    <label for="section-389ea44b7001b55e6029b61e2c8a7f0c" class="flex justify-between">
+      <a href="http://localhost:1313/docs/nsi/cours_terminale/prog/" class="">Programmation</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-948eca0134bf28e705b08df016e9046b" class="toggle"  />
+    <label for="section-948eca0134bf28e705b08df016e9046b" class="flex justify-between">
+      <a href="http://localhost:1313/docs/nsi/cours_terminale/prog/recursivite/" class="">Récursivité</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-1b0da6222e527aedc9737ed224848d60" class="toggle"  />
+    <label for="section-1b0da6222e527aedc9737ed224848d60" class="flex justify-between">
+      <a href="http://localhost:1313/docs/nsi/cours_terminale/prog/recursivite/cours/" class="">Cours</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-4a65b182094038ccd91fc0faf32e961c" class="toggle"  />
+    <label for="section-4a65b182094038ccd91fc0faf32e961c" class="flex justify-between">
+      <a href="http://localhost:1313/docs/nsi/cours_terminale/prog/recursivite/td/" class="">Travaux dirigés</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-68da5388516e389407d099e997e1743c" class="toggle"  />
+    <label for="section-68da5388516e389407d099e997e1743c" class="flex justify-between">
+      <a href="http://localhost:1313/docs/nsi/cours_terminale/prog/recursivite/resume/" class="">NSI Terminale Récursivité - résumé</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-7f164542f78ea01ba218a0c7ef3063e4" class="toggle"  />
+    <label for="section-7f164542f78ea01ba218a0c7ef3063e4" class="flex justify-between">
+      <a href="http://localhost:1313/docs/nsi/cours_terminale/prog/paradigmes/" class="">Paradigmes de programmation</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-504aaf570b7dfc40b6c16ebc6625b788" class="toggle"  />
+    <label for="section-504aaf570b7dfc40b6c16ebc6625b788" class="flex justify-between">
+      <a href="http://localhost:1313/docs/nsi/cours_terminale/prog/paradigmes/paradigmes/" class="">Paradigmes de programmation</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-9e2ccf04eeba17280a293f0c5d091698" class="toggle"  />
+    <label for="section-9e2ccf04eeba17280a293f0c5d091698" class="flex justify-between">
+      <a href="http://localhost:1313/docs/nsi/cours_terminale/prog/paradigmes/fonctionnel/" class="">Paradigme fonctionnel</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-65fc859d1717513148e45830a50d0ba3" class="toggle"  />
+    <label for="section-65fc859d1717513148e45830a50d0ba3" class="flex justify-between">
+      <a href="http://localhost:1313/docs/nsi/cours_terminale/prog/calculabilite/" class="">Problème de l&#39;arrêt en Python</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-659cc2e29fbb291c5165d11c8ab76836" class="toggle"  />
+    <label for="section-659cc2e29fbb291c5165d11c8ab76836" class="flex justify-between">
+      <a href="http://localhost:1313/docs/nsi/cours_terminale/structures_donnees/" class="">Structures de données</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-9a4349565a2f31556d753fc9721cc018" class="toggle"  />
+    <label for="section-9a4349565a2f31556d753fc9721cc018" class="flex justify-between">
+      <a href="http://localhost:1313/docs/nsi/cours_terminale/structures_donnees/dictionnaire/" class="">Dictionnaire</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-465f983a8311edd4a9c9cdbc077fc27b" class="toggle"  />
+    <label for="section-465f983a8311edd4a9c9cdbc077fc27b" class="flex justify-between">
+      <a href="http://localhost:1313/docs/nsi/cours_terminale/structures_donnees/poo/" class="">Programmation Orientée Objet</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-44ed5fed94c7df207f70fb4ba3adb832" class="toggle"  />
+    <label for="section-44ed5fed94c7df207f70fb4ba3adb832" class="flex justify-between">
+      <a href="http://localhost:1313/docs/nsi/cours_terminale/structures_donnees/poo/tp/" class="">TP</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://localhost:1313/docs/nsi/cours_terminale/structures_donnees/poo/cours/" class="">cours</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-902071a81490d8ae9922349b27af79a2" class="toggle"  />
+    <label for="section-902071a81490d8ae9922349b27af79a2" class="flex justify-between">
+      <a href="http://localhost:1313/docs/nsi/cours_terminale/structures_donnees/poo/td/" class="">TD</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://localhost:1313/docs/nsi/cours_terminale/structures_donnees/poo/resume/" class="">resume</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-1af03c832ba899df241d229a7b403ca3" class="toggle"  />
+    <label for="section-1af03c832ba899df241d229a7b403ca3" class="flex justify-between">
+      <a href="http://localhost:1313/docs/nsi/cours_terminale/structures_donnees/arbres/" class="">Arbres</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-9ad7d270157a1c68c269f054aac02fe2" class="toggle"  />
+    <label for="section-9ad7d270157a1c68c269f054aac02fe2" class="flex justify-between">
+      <a href="http://localhost:1313/docs/nsi/cours_terminale/structures_donnees/arbres/td/" class="">Arbres - TD 1</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-e1c201d3c622be8bfd8c034fcc65d44b" class="toggle"  />
+    <label for="section-e1c201d3c622be8bfd8c034fcc65d44b" class="flex justify-between">
+      <a href="http://localhost:1313/docs/nsi/cours_terminale/structures_donnees/arbres/td_2/" class="">Arbres - TD 2</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-efcf6570ce0002cc6e26a1cedf373c85" class="toggle"  />
+    <label for="section-efcf6570ce0002cc6e26a1cedf373c85" class="flex justify-between">
+      <a href="http://localhost:1313/docs/nsi/cours_terminale/structures_donnees/arbres/resume/" class="">Arbres - résumé</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-9692e55c398f2727c75442e86182820c" class="toggle"  />
+    <label for="section-9692e55c398f2727c75442e86182820c" class="flex justify-between">
+      <a href="http://localhost:1313/docs/nsi/cours_terminale/structures_donnees/listes/" class="">Listes</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-57f05b853aba5ebc03a2cccd72e8ebe9" class="toggle"  />
+    <label for="section-57f05b853aba5ebc03a2cccd72e8ebe9" class="flex justify-between">
+      <a href="http://localhost:1313/docs/nsi/cours_terminale/structures_donnees/listes/intro/" class="">introduction</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://localhost:1313/docs/nsi/cours_terminale/structures_donnees/listes/resume/" class="">Resume</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-4da7866218baf3f8f274ae3aca470abb" class="toggle"  />
+    <label for="section-4da7866218baf3f8f274ae3aca470abb" class="flex justify-between">
+      <a href="http://localhost:1313/docs/nsi/cours_terminale/structures_donnees/pile_file/" class="">Pile, File</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-a7ae6a315fe440c865f0ab6e9cce2515" class="toggle"  />
+    <label for="section-a7ae6a315fe440c865f0ab6e9cce2515" class="flex justify-between">
+      <a href="http://localhost:1313/docs/nsi/cours_terminale/structures_donnees/pile_file/intro/" class="">Les files et les piles</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-153b1db8d7291494956999a46cafe501" class="toggle"  />
+    <label for="section-153b1db8d7291494956999a46cafe501" class="flex justify-between">
+      <a href="http://localhost:1313/docs/nsi/cours_terminale/structures_donnees/pile_file/tp_html_parser/" class="">Parser HTML</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://localhost:1313/docs/nsi/cours_terminale/structures_donnees/pile_file/resume/" class="">Resume</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-d8032d33959e548ae12df1664d53f623" class="toggle"  />
+    <label for="section-d8032d33959e548ae12df1664d53f623" class="flex justify-between">
+      <a href="http://localhost:1313/docs/nsi/cours_terminale/structures_donnees/pile_file/td_structures_lineaires/" class="">Structures de données linéaires : TD</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-b81d90460647a907ba4054e7b45cb95c" class="toggle"  />
+    <label for="section-b81d90460647a907ba4054e7b45cb95c" class="flex justify-between">
+      <a href="http://localhost:1313/docs/nsi/cours_terminale/structures_donnees/graphes/" class="">Graphes</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-b771965b378dc02ee18bdb2d9f6575e1" class="toggle"  />
+    <label for="section-b771965b378dc02ee18bdb2d9f6575e1" class="flex justify-between">
+      <a href="http://localhost:1313/docs/nsi/cours_terminale/structures_donnees/graphes/intro/" class="">Introduction</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-3437a17b15252667e925f8ec580fd98d" class="toggle"  />
+    <label for="section-3437a17b15252667e925f8ec580fd98d" class="flex justify-between">
+      <a href="http://localhost:1313/docs/nsi/cours_terminale/structures_donnees/graphes/cours_sd/" class="">Structure de données</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-3258ba227a0b66b7db0c002f6f932bc1" class="toggle"  />
+    <label for="section-3258ba227a0b66b7db0c002f6f932bc1" class="flex justify-between">
+      <a href="http://localhost:1313/docs/nsi/cours_terminale/structures_donnees/graphes/td_1/" class="">TD 1</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-7c201cf830d382a6d3231c2ac4e002c0" class="toggle"  />
+    <label for="section-7c201cf830d382a6d3231c2ac4e002c0" class="flex justify-between">
+      <a href="http://localhost:1313/docs/nsi/cours_terminale/structures_donnees/graphes/td_2/" class="">TD 2</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-e2d948db940a4199ad05c200bc459c54" class="toggle"  />
+    <label for="section-e2d948db940a4199ad05c200bc459c54" class="flex justify-between">
+      <a href="http://localhost:1313/docs/nsi/cours_terminale/structures_donnees/graphes/td_3/" class="">TD 3</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://localhost:1313/docs/nsi/cours_terminale/structures_donnees/graphes/cours_algo/" class="">Parcours, chemins, cycles</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-faee82023fe17fe6947914959d5de1da" class="toggle"  />
+    <label for="section-faee82023fe17fe6947914959d5de1da" class="flex justify-between">
+      <a href="http://localhost:1313/docs/nsi/cours_terminale/structures_donnees/graphes/td_4/" class="">TD 4</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://localhost:1313/docs/nsi/cours_terminale/structures_donnees/graphes/resume/" class="">Resume</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-cebb19461a4d507a9016e77501e3f05f" class="toggle"  />
+    <label for="section-cebb19461a4d507a9016e77501e3f05f" class="flex justify-between">
+      <a href="http://localhost:1313/docs/nsi/cours_terminale/bdd/" class="">Bases de données</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-5488e8b3c60b648513d5f871b684cbd0" class="toggle"  />
+    <label for="section-5488e8b3c60b648513d5f871b684cbd0" class="flex justify-between">
+      <a href="http://localhost:1313/docs/nsi/cours_terminale/bdd/partie_1/" class="">Cours - partie 1</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-49b378f464dd82f58a135791a91c9892" class="toggle"  />
+    <label for="section-49b378f464dd82f58a135791a91c9892" class="flex justify-between">
+      <a href="http://localhost:1313/docs/nsi/cours_terminale/bdd/partie_1/intro/" class="">Introduction</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-ba585c5fc9b0bffb95beeeeca8378eae" class="toggle"  />
+    <label for="section-ba585c5fc9b0bffb95beeeeca8378eae" class="flex justify-between">
+      <a href="http://localhost:1313/docs/nsi/cours_terminale/bdd/partie_1/sql/" class="">SQL</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-532d922524b02bba29de2284a2641503" class="toggle"  />
+    <label for="section-532d922524b02bba29de2284a2641503" class="flex justify-between">
+      <a href="http://localhost:1313/docs/nsi/cours_terminale/bdd/partie_1/resume/" class="">Résumé</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-f3367716842dce449920b84808c96993" class="toggle"  />
+    <label for="section-f3367716842dce449920b84808c96993" class="flex justify-between">
+      <a href="http://localhost:1313/docs/nsi/cours_terminale/bdd/partie_2/" class="">Cours - partie 2</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-bf894d6204aaf5393c621a550542937f" class="toggle"  />
+    <label for="section-bf894d6204aaf5393c621a550542937f" class="flex justify-between">
+      <a href="http://localhost:1313/docs/nsi/cours_terminale/bdd/td/" class="">Travaux dirigés</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-cbda14d60ce945e8ec8bd7fc3fbe0c74" class="toggle"  />
+    <label for="section-cbda14d60ce945e8ec8bd7fc3fbe0c74" class="flex justify-between">
+      <a href="http://localhost:1313/docs/nsi/cours_terminale/bdd/td/td_sql/" class="">Langage SQL</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-83b2c27f7783dba2bc985e0511509848" class="toggle"  />
+    <label for="section-83b2c27f7783dba2bc985e0511509848" class="flex justify-between">
+      <a href="http://localhost:1313/docs/nsi/cours_terminale/bdd/td/td_bdd/" class="">Modèle relationnel</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-b58fa07aa197c80cf959d538c54e9aa9" class="toggle"  />
+    <label for="section-b58fa07aa197c80cf959d538c54e9aa9" class="flex justify-between">
+      <a href="http://localhost:1313/docs/nsi/cours_terminale/bdd/tp/" class="">Travaux pratiques</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://localhost:1313/docs/nsi/cours_terminale/bdd/tp/commandes/" class="">TP Commandes</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://localhost:1313/docs/nsi/cours_terminale/bdd/sqljs/" class="">Editeur SQL</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://localhost:1313/docs/nsi/cours_terminale/bdd/murder_mystery/" class="">SQL Murder Mystery</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-60cd8fedd98883eaa3637a6c1befc819" class="toggle"  />
+    <label for="section-60cd8fedd98883eaa3637a6c1befc819" class="flex justify-between">
+      <a href="http://localhost:1313/docs/nsi/cours_terminale/projets/" class="">Projets</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-5527e95791680ea5df19a6fdcd51a07d" class="toggle"  />
+    <label for="section-5527e95791680ea5df19a6fdcd51a07d" class="flex justify-between">
+      <a href="http://localhost:1313/docs/nsi/cours_terminale/projets/nn/" class="">Réseau de Neurones</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-c30aced088ebdee4330c473c8bff95d2" class="toggle"  />
+    <label for="section-c30aced088ebdee4330c473c8bff95d2" class="flex justify-between">
+      <a href="http://localhost:1313/docs/nsi/cours_terminale/projets/nn/partie_1/" class="">NN - partie 1</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-e997cce2634b3c20345a6eaad5124090" class="toggle"  />
+    <label for="section-e997cce2634b3c20345a6eaad5124090" class="flex justify-between">
+      <a href="http://localhost:1313/docs/nsi/cours_terminale/projets/nn/partie_2/" class="">NN - partie 2</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-424ac2916c469a140f420d2c3adc3690" class="toggle"  />
+    <label for="section-424ac2916c469a140f420d2c3adc3690" class="flex justify-between">
+      <a href="http://localhost:1313/docs/nsi/cours_terminale/projets/nn/partie_3/" class="">NN - partie 3</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-908ed9430fcfabc26db57f15bbc95ac1" class="toggle"  />
+    <label for="section-908ed9430fcfabc26db57f15bbc95ac1" class="flex justify-between">
+      <a href="http://localhost:1313/docs/nsi/cours_terminale/projets/roguetuto/" class="">Tutoriel RogueLike</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-b1e7b59ce1da2aea00e53e98e204c548" class="toggle"  />
+    <label for="section-b1e7b59ce1da2aea00e53e98e204c548" class="flex justify-between">
+      <a href="http://localhost:1313/docs/nsi/cours_terminale/organisation/" class="">Organisation</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-1c6561d03e4a562c3419a6b53f2424fd" class="toggle"  />
+    <label for="section-1c6561d03e4a562c3419a6b53f2424fd" class="flex justify-between">
+      <a href="http://localhost:1313/docs/nsi/cours_terminale/organisation/presentation_rentree/" class="">Généralités</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-7898fb5c8d206a625953ca3e10497507" class="toggle"  />
+    <label for="section-7898fb5c8d206a625953ca3e10497507" class="flex justify-between">
+      <a href="http://localhost:1313/docs/nsi/cours_terminale/organisation/github/" class="">Github</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-106b02b319a57cba37a6992f3f1cf819" class="toggle"  />
+    <label for="section-106b02b319a57cba37a6992f3f1cf819" class="flex justify-between">
+      <a href="http://localhost:1313/docs/archives/maths/seconde/" class="">seconde</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://localhost:1313/docs/archives/maths/seconde/chapitres/" class="">Chapitres</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://localhost:1313/docs/archives/maths/seconde/chapitres/affines/" class="">Fonctions affines</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://localhost:1313/docs/archives/maths/seconde/chapitres/echantillonnage/echantionnage_2022/" class="">Échantillonnage</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-1bf889a6a8db27cd60853b1eb7889208" class="toggle"  />
+    <label for="section-1bf889a6a8db27cd60853b1eb7889208" class="flex justify-between">
+      <a href="http://localhost:1313/docs/archives/isn/" class="">isn</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-8a85f3ef2876cc394021dbae34b33251" class="toggle"  />
+    <label for="section-8a85f3ef2876cc394021dbae34b33251" class="flex justify-between">
+      <a href="http://localhost:1313/docs/archives/isn/isn-travaux-pratiques/" class="">Travaux pratiques</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-e3cb49a371a4b393f3794d562c79ad1f" class="toggle"  />
+    <label for="section-e3cb49a371a4b393f3794d562c79ad1f" class="flex justify-between">
+      <a href="http://localhost:1313/docs/archives/isn/isn-travaux-pratiques/0-introduction/" class="">0. introduction</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-e1821a1a869d928cf320a6b79dc0cb6a" class="toggle"  />
+    <label for="section-e1821a1a869d928cf320a6b79dc0cb6a" class="flex justify-between">
+      <a href="http://localhost:1313/docs/archives/isn/isn-travaux-pratiques/1-html/" class="">1. html</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-a3c229966f0018a62369fd2e30e835ad" class="toggle"  />
+    <label for="section-a3c229966f0018a62369fd2e30e835ad" class="flex justify-between">
+      <a href="http://localhost:1313/docs/archives/isn/isn-travaux-pratiques/2-reseaux/" class="">2. Réseaux</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-ef89365be1cef3bf4d50f951768227c6" class="toggle"  />
+    <label for="section-ef89365be1cef3bf4d50f951768227c6" class="flex justify-between">
+      <a href="http://localhost:1313/docs/archives/isn/isn-travaux-pratiques/3-codage-de-linformation/" class="">3. Codage de l&#39;information</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-6ab687c5966e7a7917739621d52234a0" class="toggle"  />
+    <label for="section-6ab687c5966e7a7917739621d52234a0" class="flex justify-between">
+      <a href="http://localhost:1313/docs/archives/isn/isn-travaux-pratiques/3-codage-de-linformation/3-1-representation-binaire/" class="">3.1 Représentation binaire</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-780bba988d96b2e286f0643d77205e36" class="toggle"  />
+    <label for="section-780bba988d96b2e286f0643d77205e36" class="flex justify-between">
+      <a href="http://localhost:1313/docs/archives/isn/isn-travaux-pratiques/3-codage-de-linformation/3-2-codage-des-caracteres/" class="">3.2 Codage des caractères</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-e869f9d3423d637b15996e31b6650387" class="toggle"  />
+    <label for="section-e869f9d3423d637b15996e31b6650387" class="flex justify-between">
+      <a href="http://localhost:1313/docs/archives/isn/isn-travaux-pratiques/3-codage-de-linformation/3-3-codage-des-couleurs/" class="">3.3 Codage des couleurs</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-13844df65fbf97530367a4914faf3b61" class="toggle"  />
+    <label for="section-13844df65fbf97530367a4914faf3b61" class="flex justify-between">
+      <a href="http://localhost:1313/docs/archives/isn/isn-travaux-pratiques/3-codage-de-linformation/3-4-structure-des-pages-html/" class="">3.4 Structure des pages HTML</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-981699633176b2b1320699f61c6292e6" class="toggle"  />
+    <label for="section-981699633176b2b1320699f61c6292e6" class="flex justify-between">
+      <a href="http://localhost:1313/docs/archives/isn/isn-travaux-pratiques/3-bis-css/" class="">3.bis CSS</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-8262d20f70531d9de2ca656a0dada959" class="toggle"  />
+    <label for="section-8262d20f70531d9de2ca656a0dada959" class="flex justify-between">
+      <a href="http://localhost:1313/docs/archives/isn/isn-travaux-pratiques/3-bis-css/3b-1-separation-contenu-forme/" class="">3b.1 Séparation contenu / forme</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-513eafcf9b1dc2bb21f37dbd8230ead4" class="toggle"  />
+    <label for="section-513eafcf9b1dc2bb21f37dbd8230ead4" class="flex justify-between">
+      <a href="http://localhost:1313/docs/archives/isn/isn-travaux-pratiques/3-bis-css/3b-2/" class="">3b.2 CSS intro</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-4124538658c3f35e40396f1ca3c356f5" class="toggle"  />
+    <label for="section-4124538658c3f35e40396f1ca3c356f5" class="flex justify-between">
+      <a href="http://localhost:1313/docs/archives/isn/isn-travaux-pratiques/3-bis-css/3b-3-css-suite/" class="">3b.3 CSS suite</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-b43fda5907656544b29085697d304f21" class="toggle"  />
+    <label for="section-b43fda5907656544b29085697d304f21" class="flex justify-between">
+      <a href="http://localhost:1313/docs/archives/isn/isn-travaux-pratiques/4-programmation/" class="">4. Programmation</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-57b68ccdf8f131818a04ea0581f8dae1" class="toggle"  />
+    <label for="section-57b68ccdf8f131818a04ea0581f8dae1" class="flex justify-between">
+      <a href="http://localhost:1313/docs/archives/isn/isn-travaux-pratiques/4-programmation/4-1-introduction/" class="">4.01 Introduction</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-b59e78011a1544a1c0b3c2cba00922f9" class="toggle"  />
+    <label for="section-b59e78011a1544a1c0b3c2cba00922f9" class="flex justify-between">
+      <a href="http://localhost:1313/docs/archives/isn/isn-travaux-pratiques/4-programmation/4-2-javascript-les-variables/" class="">4.02 Javascript, les variables</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-289f2374c6db93463be721288b1d0f2b" class="toggle"  />
+    <label for="section-289f2374c6db93463be721288b1d0f2b" class="flex justify-between">
+      <a href="http://localhost:1313/docs/archives/isn/isn-travaux-pratiques/4-programmation/4-3-types-de-donnees/" class="">4.03 Types de données</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-512248682c21fff4f8d6b5f9f545efa0" class="toggle"  />
+    <label for="section-512248682c21fff4f8d6b5f9f545efa0" class="flex justify-between">
+      <a href="http://localhost:1313/docs/archives/isn/isn-travaux-pratiques/4-programmation/4-4-fonctions/" class="">4.04 Fonctions</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-89cf9991f6ebb38ff3eb0522f2e4e4f1" class="toggle"  />
+    <label for="section-89cf9991f6ebb38ff3eb0522f2e4e4f1" class="flex justify-between">
+      <a href="http://localhost:1313/docs/archives/isn/isn-travaux-pratiques/4-programmation/4-5-exemples-de-fonctions/" class="">4.05 Exemples de Fonctions</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-c0d3977c5767b82349f450d6706142ba" class="toggle"  />
+    <label for="section-c0d3977c5767b82349f450d6706142ba" class="flex justify-between">
+      <a href="http://localhost:1313/docs/archives/isn/isn-travaux-pratiques/4-programmation/4-6-creation-de-fonctions/" class="">4.06 Création de fonctions</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-c1908420bf7b46ec1247867c74e643d9" class="toggle"  />
+    <label for="section-c1908420bf7b46ec1247867c74e643d9" class="flex justify-between">
+      <a href="http://localhost:1313/docs/archives/isn/isn-travaux-pratiques/4-programmation/4-7-fonctions-et-environnement/" class="">4.07 Fonctions et environnement</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-0d52ce2f61b20f886ea75a44a5c65119" class="toggle"  />
+    <label for="section-0d52ce2f61b20f886ea75a44a5c65119" class="flex justify-between">
+      <a href="http://localhost:1313/docs/archives/isn/isn-travaux-pratiques/4-programmation/4-8-fonctions-et-evenements/" class="">4.08 Fonctions et événements</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-12e1b6af4a5e05e21b918807ab95d075" class="toggle"  />
+    <label for="section-12e1b6af4a5e05e21b918807ab95d075" class="flex justify-between">
+      <a href="http://localhost:1313/docs/archives/isn/isn-travaux-pratiques/4-programmation/4-9-lapi-google-map/" class="">4.09 L&#39;api Google Map</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-4443f095eb69cec24b78cb7f33fb27c6" class="toggle"  />
+    <label for="section-4443f095eb69cec24b78cb7f33fb27c6" class="flex justify-between">
+      <a href="http://localhost:1313/docs/archives/isn/isn-travaux-pratiques/4-programmation/4-10-structure-conditionnelle/" class="">4.10 Structure conditionnelle</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-52ec996976691453debbfdf9a21c937d" class="toggle"  />
+    <label for="section-52ec996976691453debbfdf9a21c937d" class="flex justify-between">
+      <a href="http://localhost:1313/docs/archives/isn/isn-travaux-pratiques/4-programmation/4-11-un-diaporama/" class="">4.11 Un diaporama</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-82f1e2976ebaee624c1225c94e865cb2" class="toggle"  />
+    <label for="section-82f1e2976ebaee624c1225c94e865cb2" class="flex justify-between">
+      <a href="http://localhost:1313/docs/archives/isn/isn-travaux-pratiques/4-programmation/4-12-tutoriel-pong-en-javascript/" class="">4.12 Tutoriel pong en javascript</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-0b14506dd7c4ee371c27dcb0427bd76f" class="toggle"  />
+    <label for="section-0b14506dd7c4ee371c27dcb0427bd76f" class="flex justify-between">
+      <a href="http://localhost:1313/docs/archives/isn/isn-travaux-pratiques/4-bis-la-programmation-recursive/" class="">4.bis : La programmation récursive</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-90a4ab78930e4b114469703f9b66a5f1" class="toggle"  />
+    <label for="section-90a4ab78930e4b114469703f9b66a5f1" class="flex justify-between">
+      <a href="http://localhost:1313/docs/archives/isn/isn-travaux-pratiques/4-ter-algorithmie-trier-parcourir-un-graphe/" class="">4.ter Algorithmie : deux problèmes classiques</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-d2e5450590fbc81faa6f56d0e3da0e54" class="toggle"  />
+    <label for="section-d2e5450590fbc81faa6f56d0e3da0e54" class="flex justify-between">
+      <a href="http://localhost:1313/docs/archives/isn/isn-travaux-pratiques/4-ter-algorithmie-trier-parcourir-un-graphe/4-ter-1-les-tris/" class="">4.ter - 1 : Les tris</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-9a12581c0cc33bc7fa44f906f7e3686a" class="toggle"  />
+    <label for="section-9a12581c0cc33bc7fa44f906f7e3686a" class="flex justify-between">
+      <a href="http://localhost:1313/docs/archives/isn/isn-travaux-pratiques/4-ter-algorithmie-trier-parcourir-un-graphe/4-ter-2-parcourir-un-graphe/" class="">4.ter - 2 : parcourir un graphe</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-7028c33975e91dc7b181ad8113712929" class="toggle"  />
+    <label for="section-7028c33975e91dc7b181ad8113712929" class="flex justify-between">
+      <a href="http://localhost:1313/docs/archives/isn/isn-travaux-pratiques/5-dessiner-une-palette-de-couleurs/" class="">5. Dessiner une palette de couleurs</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-38db843c3414d772ea5311ace9490741" class="toggle"  />
+    <label for="section-38db843c3414d772ea5311ace9490741" class="flex justify-between">
+      <a href="http://localhost:1313/docs/archives/isn/isn-travaux-pratiques/6-architecture/" class="">6. Architecture</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-6717a630f4c3795f9a0a227a620104c2" class="toggle"  />
+    <label for="section-6717a630f4c3795f9a0a227a620104c2" class="flex justify-between">
+      <a href="http://localhost:1313/docs/archives/isn/isn-travaux-pratiques/7-steganographie/" class="">7. Stéganographie</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-4f371ccf83e3a26262d4276d3d003275" class="toggle"  />
+    <label for="section-4f371ccf83e3a26262d4276d3d003275" class="flex justify-between">
+      <a href="http://localhost:1313/docs/archives/isn/isn-projets-textes-officiels-et-conseils-generaux/" class="">Projets : contraintes, documents officiels, conseils</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-4eb941bee39204e87e6b0f4d6bf6bd14" class="toggle"  />
+    <label for="section-4eb941bee39204e87e6b0f4d6bf6bd14" class="flex justify-between">
+      <a href="http://localhost:1313/docs/archives/isn/sujets-des-projets/" class="">Sujets des mini projets - Liste des projets</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-7976b3d89f43eb77955b9afd840d03e2" class="toggle"  />
+    <label for="section-7976b3d89f43eb77955b9afd840d03e2" class="flex justify-between">
+      <a href="http://localhost:1313/docs/archives/isn/sujets-des-projets/2048-projet/" class="">2048 - projet</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-062f666b54b4edd94191a1286c23256b" class="toggle"  />
+    <label for="section-062f666b54b4edd94191a1286c23256b" class="flex justify-between">
+      <a href="http://localhost:1313/docs/archives/isn/sujets-des-projets/bowling-elastique/" class="">Bowling elastique</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-2c91da7db27e8d948bc9a5d5e49c7afc" class="toggle"  />
+    <label for="section-2c91da7db27e8d948bc9a5d5e49c7afc" class="flex justify-between">
+      <a href="http://localhost:1313/docs/archives/isn/sujets-des-projets/bowling-paralaxe/" class="">Bowling Parallaxe</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-941102a6b03fed04c295c04dd6671f49" class="toggle"  />
+    <label for="section-941102a6b03fed04c295c04dd6671f49" class="flex justify-between">
+      <a href="http://localhost:1313/docs/archives/isn/sujets-des-projets/domotique-et-raspberry-pi/" class="">Domotique et raspberry pi</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-410adb4c4e815fcdd99dece5d2ef97ff" class="toggle"  />
+    <label for="section-410adb4c4e815fcdd99dece5d2ef97ff" class="flex justify-between">
+      <a href="http://localhost:1313/docs/archives/isn/sujets-des-projets/chemins_hamiltoniens_polyedres/" class="">Chemins Hamiltoniens sur les Polyèdres</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-69cc0ee63667c9eb299395dd1da17201" class="toggle"  />
+    <label for="section-69cc0ee63667c9eb299395dd1da17201" class="flex justify-between">
+      <a href="http://localhost:1313/docs/archives/isn/sujets-des-projets/labyrinthe/" class="">Labyrinthe</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-3aa019d9a2206aff32ec4e211a6ccedf" class="toggle"  />
+    <label for="section-3aa019d9a2206aff32ec4e211a6ccedf" class="flex justify-between">
+      <a href="http://localhost:1313/docs/archives/isn/sujets-des-projets/jeu-de-la-vie/" class="">Jeu de la vie</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-13538af103ac085713185b64daa39c08" class="toggle"  />
+    <label for="section-13538af103ac085713185b64daa39c08" class="flex justify-between">
+      <a href="http://localhost:1313/docs/archives/isn/sujets-des-projets/mastermind-js/" class="">Mastermind (js)</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-f21d882a245c1555f31fd0b12b5fc297" class="toggle"  />
+    <label for="section-f21d882a245c1555f31fd0b12b5fc297" class="flex justify-between">
+      <a href="http://localhost:1313/docs/archives/isn/sujets-des-projets/othello-reversi/" class="">Othello / Reversi</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-4a172e9517b4bb98c43a192866249dc2" class="toggle"  />
+    <label for="section-4a172e9517b4bb98c43a192866249dc2" class="flex justify-between">
+      <a href="http://localhost:1313/docs/archives/isn/sujets-des-projets/papy-panic-rpi-python/" class="">Papy Panic (RPI, Python)</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-c750ee860a753568c8f39b6c86c6c669" class="toggle"  />
+    <label for="section-c750ee860a753568c8f39b6c86c6c669" class="flex justify-between">
+      <a href="http://localhost:1313/docs/archives/isn/sujets-des-projets/puissance-4-js/" class="">Puissance 4 (js)</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-00822ce0e0bf277fdd70a392d8ea166d" class="toggle"  />
+    <label for="section-00822ce0e0bf277fdd70a392d8ea166d" class="flex justify-between">
+      <a href="http://localhost:1313/docs/archives/isn/sujets-des-projets/roguelike/" class="">RogueLike</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-35b0312da2131d325066067caac14885" class="toggle"  />
+    <label for="section-35b0312da2131d325066067caac14885" class="flex justify-between">
+      <a href="http://localhost:1313/docs/archives/isn/sujets-des-projets/smartcity/" class="">Smart City</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-b7d441378dd81a99431742bf7562070b" class="toggle"  />
+    <label for="section-b7d441378dd81a99431742bf7562070b" class="flex justify-between">
+      <a href="http://localhost:1313/docs/archives/isn/sujets-des-projets/sandpiles/" class="">Sandpiles</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-3d76c71a04df5c3ff62eeb4040196a04" class="toggle"  />
+    <label for="section-3d76c71a04df5c3ff62eeb4040196a04" class="flex justify-between">
+      <a href="http://localhost:1313/docs/archives/isn/sujets-des-projets/serveur-meteo/" class="">Serveur méteo</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-1aa255bbb4ee0141aa6a1c45d3984316" class="toggle"  />
+    <label for="section-1aa255bbb4ee0141aa6a1c45d3984316" class="flex justify-between">
+      <a href="http://localhost:1313/docs/archives/isn/sujets-des-projets/snake-js-canvas/" class="">Snake (js, canvas)</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-c445a2a4b39238042117e4cffd53370f" class="toggle"  />
+    <label for="section-c445a2a4b39238042117e4cffd53370f" class="flex justify-between">
+      <a href="http://localhost:1313/docs/archives/isn/sujets-des-projets/space-orbit/" class="">Space orbit</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-be5eadf25898fde27619d302c678cdcd" class="toggle"  />
+    <label for="section-be5eadf25898fde27619d302c678cdcd" class="flex justify-between">
+      <a href="http://localhost:1313/docs/archives/isn/sujets-des-projets/stack/" class="">Stack</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-c7c45c55c503dd841a375e9802a5bd03" class="toggle"  />
+    <label for="section-c7c45c55c503dd841a375e9802a5bd03" class="flex justify-between">
+      <a href="http://localhost:1313/docs/archives/isn/sujets-des-projets/video-surveillance-rpi-python/" class="">Vidéo Surveillance (RPI, Python)</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-2584c440a8cae8fbe1584a866957b005" class="toggle"  />
+    <label for="section-2584c440a8cae8fbe1584a866957b005" class="flex justify-between">
+      <a href="http://localhost:1313/docs/archives/isn/sujets-des-projets/yt-chat/" class="">YT Chat</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-efa6dc3fe7bc9fc2fb3f444ef469c882" class="toggle"  />
+    <label for="section-efa6dc3fe7bc9fc2fb3f444ef469c882" class="flex justify-between">
+      <a href="http://localhost:1313/docs/archives/isn/sujets-des-projets/zagzig-js-canvas/" class="">Zagzig (js, canvas)</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-c6f61433e6cf1d249f66f9ce3e42a3c1" class="toggle"  />
+    <label for="section-c6f61433e6cf1d249f66f9ce3e42a3c1" class="flex justify-between">
+      <a href="http://localhost:1313/docs/archives/isn/sujets-des-projets/archives/" class="">Archives</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-b1a1908f14933ff81824111f5ead025d" class="toggle"  />
+    <label for="section-b1a1908f14933ff81824111f5ead025d" class="flex justify-between">
+      <a href="http://localhost:1313/docs/archives/isn/sujets-des-projets/archives/tetris/" class="">Tetris</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-a183e2907b556f58c2b93d04bdb0145f" class="toggle"  />
+    <label for="section-a183e2907b556f58c2b93d04bdb0145f" class="flex justify-between">
+      <a href="http://localhost:1313/docs/archives/isn/sujets-des-projets/archives/site-marchand/" class="">Site marchand</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-1736e05a3266154e4b6e4444967950fa" class="toggle"  />
+    <label for="section-1736e05a3266154e4b6e4444967950fa" class="flex justify-between">
+      <a href="http://localhost:1313/docs/archives/isn/sujets-des-projets/archives/pendu/" class="">Pendu</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-52c67410fe8093e49014d728659bd749" class="toggle"  />
+    <label for="section-52c67410fe8093e49014d728659bd749" class="flex justify-between">
+      <a href="http://localhost:1313/docs/archives/isn/sujets-des-projets/archives/calcul-mental/" class="">Calcul mental</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-174d0b4e7320d61df8999027d4ca6489" class="toggle"  />
+    <label for="section-174d0b4e7320d61df8999027d4ca6489" class="flex justify-between">
+      <a href="http://localhost:1313/docs/archives/isn/sujets-des-projets/archives/station-meteo/" class="">Station météo</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-ca94ee274f1e483339e428b6cada9036" class="toggle"  />
+    <label for="section-ca94ee274f1e483339e428b6cada9036" class="flex justify-between">
+      <a href="http://localhost:1313/docs/archives/isn/sujets-des-projets/archives/wolfram-alpha-like/" class="">Wolfram Alpha like</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-abce1bfd7e3708b9ee88a373b0e608e0" class="toggle"  />
+    <label for="section-abce1bfd7e3708b9ee88a373b0e608e0" class="flex justify-between">
+      <a href="http://localhost:1313/docs/archives/isn/sujets-des-projets/archives/raspberry-pi-version-2015/" class="">Raspberry Pi (version 2015)</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-5a0d7232a6eea18417708f83a8ff1385" class="toggle"  />
+    <label for="section-5a0d7232a6eea18417708f83a8ff1385" class="flex justify-between">
+      <a href="http://localhost:1313/docs/archives/isn/sujets-des-projets/archives/le-compte-est-bon/" class="">Le compte est bon</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-7ae8c2c533bbeebd861f6fbddc3b662e" class="toggle"  />
+    <label for="section-7ae8c2c533bbeebd861f6fbddc3b662e" class="flex justify-between">
+      <a href="http://localhost:1313/docs/archives/icn/" class="">icn</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-b7d61144961dcddc9d37c03ce7de20de" class="toggle"  />
+    <label for="section-b7d61144961dcddc9d37c03ce7de20de" class="flex justify-between">
+      <a href="http://localhost:1313/docs/archives/icn/module-1/" class="">module 1 : échanger</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-eef1be89f77b4763db62cbdd0c151b88" class="toggle"  />
+    <label for="section-eef1be89f77b4763db62cbdd0c151b88" class="flex justify-between">
+      <a href="http://localhost:1313/docs/archives/icn/module-2/" class="">module 2 : web</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-d2b965265dc856938fcacd5d5756d512" class="toggle"  />
+    <label for="section-d2b965265dc856938fcacd5d5756d512" class="flex justify-between">
+      <a href="http://localhost:1313/docs/archives/icn/module-5-raspberry-pi/" class="">module 5 : raspberry pi</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-38a9188507436368611ae1ea271f0152" class="toggle"  />
+    <label for="section-38a9188507436368611ae1ea271f0152" class="flex justify-between">
+      <a href="http://localhost:1313/docs/archives/icn/module-5-raspberry-pi/partie-1-prise-en-main-du-raspberry-pi/" class="">partie 1 - Prise en main du raspberry pi</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-e50325f3479bba43adfdd4cd6cd7006a" class="toggle"  />
+    <label for="section-e50325f3479bba43adfdd4cd6cd7006a" class="flex justify-between">
+      <a href="http://localhost:1313/docs/archives/icn/module-5-raspberry-pi/partie-4-dautres-composants-classiques/" class="">partie 4 - d&#39;autres composants classiques</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-a53ff4e536f4c1368eca13abfd7615dd" class="toggle"  />
+    <label for="section-a53ff4e536f4c1368eca13abfd7615dd" class="flex justify-between">
+      <a href="http://localhost:1313/docs/archives/icn/module-5-raspberry-pi/partie-3-quelques-montages-electroniques/" class="">partie 3 - Quelques montages électroniques simples</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-1dbc3eabe3586728a4061c738dc993ca" class="toggle"  />
+    <label for="section-1dbc3eabe3586728a4061c738dc993ca" class="flex justify-between">
+      <a href="http://localhost:1313/docs/archives/icn/module-5-raspberry-pi/module-5-partie-2-raspberry-et-electronique/" class="">partie 2 - Raspberry Pi et electronique : une introduction</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-eb81f38a4942f615a80f538344a905cd" class="toggle"  />
+    <label for="section-eb81f38a4942f615a80f538344a905cd" class="flex justify-between">
+      <a href="http://localhost:1313/docs/archives/icn/0-reseau-internet-et-protocole-http/" class="">00. Réseau : internet et protocole HTTP</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-5ecbfecd4097aee4cd4a9f22c30251f2" class="toggle"  />
+    <label for="section-5ecbfecd4097aee4cd4a9f22c30251f2" class="flex justify-between">
+      <a href="http://localhost:1313/docs/archives/icn/1-lexicometrie/" class="">01. Lexicométrie</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-b22203eab25c790de06754baeda1810a" class="toggle"  />
+    <label for="section-b22203eab25c790de06754baeda1810a" class="flex justify-between">
+      <a href="http://localhost:1313/docs/archives/icn/2-cryptographie/" class="">02. Cryptographie</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-b789694d930f68ba8afe3c2cbe5f57bc" class="toggle"  />
+    <label for="section-b789694d930f68ba8afe3c2cbe5f57bc" class="flex justify-between">
+      <a href="http://localhost:1313/docs/archives/icn/3-casser-un-code-secret/" class="">03. Casser un code secret</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-90e78090ad050422ca4f0c7583265b07" class="toggle"  />
+    <label for="section-90e78090ad050422ca4f0c7583265b07" class="flex justify-between">
+      <a href="http://localhost:1313/docs/archives/icn/4-images-couleurs/" class="">04. Images, couleurs</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-5f8c322e85e0f8db2be915a72f8d80e2" class="toggle"  />
+    <label for="section-5f8c322e85e0f8db2be915a72f8d80e2" class="flex justify-between">
+      <a href="http://localhost:1313/docs/archives/icn/5-bis-popart-2/" class="">05. bis - popart</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-0301d1e37c6a471271b93eab389af5d1" class="toggle"  />
+    <label for="section-0301d1e37c6a471271b93eab389af5d1" class="flex justify-between">
+      <a href="http://localhost:1313/docs/archives/icn/5-traitement-des-images-matricielles/" class="">05. Traitement des images matricielles</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-60abdd82993e14ecbdfa3a3078456360" class="toggle"  />
+    <label for="section-60abdd82993e14ecbdfa3a3078456360" class="flex justify-between">
+      <a href="http://localhost:1313/docs/archives/icn/6-creation-dimages-vectorielles/" class="">06. Création d&#39;images vectorielles</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-62c8f382d06c3c22f078bcd2689e8e49" class="toggle"  />
+    <label for="section-62c8f382d06c3c22f078bcd2689e8e49" class="flex justify-between">
+      <a href="http://localhost:1313/docs/archives/icn/7-cartographie/" class="">07. Cartographie</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-025b0f8f229cb08d96395f293acaf548" class="toggle"  />
+    <label for="section-025b0f8f229cb08d96395f293acaf548" class="flex justify-between">
+      <a href="http://localhost:1313/docs/archives/icn/8-les-donnees-csv-json-et-geojson/" class="">08. Les données CSV, JSON et GeoJSON</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-5b86b7f6945d1b1d41c14a03d1eb84d4" class="toggle"  />
+    <label for="section-5b86b7f6945d1b1d41c14a03d1eb84d4" class="flex justify-between">
+      <a href="http://localhost:1313/docs/archives/icn/9-python-camera/" class="">09. Computer vision : manipulation en live du flux d&#39;une camera</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-699ac153ba3204ab05dc88798146f41f" class="toggle"  />
+    <label for="section-699ac153ba3204ab05dc88798146f41f" class="flex justify-between">
+      <a href="http://localhost:1313/docs/archives/icn/10-un-jeu-complet-en-pygame-dodger/" class="">10. Un jeu complet en pygame : dodger</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-54c449e358ea531ac3e18386bb0f5f7e" class="toggle"  />
+    <label for="section-54c449e358ea531ac3e18386bb0f5f7e" class="flex justify-between">
+      <a href="http://localhost:1313/docs/archives/icn/11.pygame-et-la-camera-introduction-du-module/" class="">11. Pygame et la camera : introduction du module</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-62a6ef3b6f695974ac2bb1f80ea049e0" class="toggle"  />
+    <label for="section-62a6ef3b6f695974ac2bb1f80ea049e0" class="flex justify-between">
+      <a href="http://localhost:1313/docs/archives/icn/11.pygame-et-la-camera-introduction-du-module/tutoriel_python_camera/" class="">tutoriel_python_camera</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-7ed24d5af0e94defb0147a4a023d6d67" class="toggle"  />
+    <label for="section-7ed24d5af0e94defb0147a4a023d6d67" class="flex justify-between">
+      <a href="http://localhost:1313/docs/archives/icn/annexe-logiciels-libres-les-bonnes-pratiques/" class="">Annexe : Logiciels libres, les bonnes pratiques</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-1c38a042df0d296181ae048e75d16e72" class="toggle"  />
+    <label for="section-1c38a042df0d296181ae048e75d16e72" class="flex justify-between">
+      <a href="http://localhost:1313/docs/archives/icn/revue-de-projet/" class="">devoir : Vacances de Noël - Revue de projet</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-d5f20c334b4da6718317a07a46c2c72f" class="toggle"  />
+    <label for="section-d5f20c334b4da6718317a07a46c2c72f" class="flex justify-between">
+      <a href="http://localhost:1313/docs/archives/icn/devoir-vacances-de-toussaint-construct-2/" class="">devoir : vacances de Toussaint - Construct 2</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-7a7dadc5429aa143a81a2878e806359f" class="toggle"  />
+    <label for="section-7a7dadc5429aa143a81a2878e806359f" class="flex justify-between">
+      <a href="http://localhost:1313/docs/archives/icn/internet-of-objects-iot/" class="">Internet of Objects : IoT</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-8c56b57bd99268bef9ef455632108111" class="toggle"  />
+    <label for="section-8c56b57bd99268bef9ef455632108111" class="flex justify-between">
+      <a href="http://localhost:1313/docs/archives/collegues/" class="">collègues</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-9e23cb281dc8f24d8032a72b8bcb6784" class="toggle"  />
+    <label for="section-9e23cb281dc8f24d8032a72b8bcb6784" class="flex justify-between">
+      <a href="http://localhost:1313/docs/ressources/" class="">ressources</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-055ed574b02df96f8ae62d3b726b4e19" class="toggle"  />
+    <label for="section-055ed574b02df96f8ae62d3b726b4e19" class="flex justify-between">
+      <a href="http://localhost:1313/docs/ressources/qcm/" class="">qcm qkzk</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-25bf67d92cc666e2f2622296ffdf64b7" class="toggle"  />
+    <label for="section-25bf67d92cc666e2f2622296ffdf64b7" class="flex justify-between">
+      <a href="http://localhost:1313/docs/ressources/hugo/" class="">Hugo</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-b4bde21c49d0d7ea22e2b0b2b1ac8dfe" class="toggle"  />
+    <label for="section-b4bde21c49d0d7ea22e2b0b2b1ac8dfe" class="flex justify-between">
+      <a href="http://localhost:1313/docs/ressources/shortcodes/" class="">Shortcodes</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://localhost:1313/docs/ressources/viz/" class="">viz.js</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://localhost:1313/docs/ressources/svg_file/" class="">svg from file</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://localhost:1313/docs/ressources/python/" class="">Python worker</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+
+
+
+                    
+                </div>
+            </aside>
+
+            <div class="book-page">
+                <header class="book-header">
+                    
+<div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <strong>Harvard vs Von Neumann</strong>
+
+  <label for="toc-control">
+    
+    <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+
+<aside class="hidden clearfix">
+    
+
+<h1>Table des matières</h1>
+<nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#comparaison-darchitectures--von-neumann-et-harvard">Comparaison d&rsquo;architectures : Von Neumann et Harvard</a></li>
+        <li><a href="#application--extrait-du-sujet-de-bac-polynésie-2021-partie-architecture">Application : extrait du sujet de bac polynésie 2021, partie architecture</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+
+</aside>
+
+
+                    
+                </header>
+
+                
+                
+<article class="markdown"><h3 id="comparaison-darchitectures--von-neumann-et-harvard">
+  Comparaison d&rsquo;architectures : Von Neumann et Harvard
+  <a class="anchor" href="#comparaison-darchitectures--von-neumann-et-harvard">#</a>
+</h3>
+<p><a href="./comparaison_archi.pdf">pdf</a></p>
+<h3 id="application--extrait-du-sujet-de-bac-polynésie-2021-partie-architecture">
+  Application : extrait du sujet de bac polynésie 2021, partie architecture
+  <a class="anchor" href="#application--extrait-du-sujet-de-bac-polyn%c3%a9sie-2021-partie-architecture">#</a>
+</h3>
+<p><a href="./polynesie_2021_archi.pdf">pdf</a></p>
+</article>
+
+                
+
+                <div class="backtotop">
+                    <a href="#" class="center" title="top" accesskey="t" id="link_top">↑</a>
+                </div>
+
+                
+
+                <footer class="book-footer">
+                    
+<div class="flex flex-wrap justify-between">
+
+
+
+
+
+</div>
+
+
+
+  <script>(function(){function e(e){const t=window.getSelection(),n=document.createRange();n.selectNodeContents(e),t.removeAllRanges(),t.addRange(n)}document.querySelectorAll("pre code").forEach(t=>{t.addEventListener("click",function(){e(t.parentElement),navigator.clipboard&&navigator.clipboard.writeText(t.parentElement.textContent)})})})()</script>
+
+
+
+
+                    
+                    <div class="footer-qkzk">
+  <h3 class="footer-title">
+    Informatique et mathématiques
+  </h3>
+  <p class="footer-text">
+    RGPD : Aucune donnée n'est conservée.
+  </p>
+
+</div>
+
+
+                </footer>
+
+                
+
+<div class="book-comments">
+
+</div>
+
+
+                
+
+                <label for="menu-control" class="hidden book-menu-overlay"></label>
+            </div>
+
+            
+            <aside class="book-toc">
+                <div class="book-toc-content">
+                    
+
+<h1>Table des matières</h1>
+<nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#comparaison-darchitectures--von-neumann-et-harvard">Comparaison d&rsquo;architectures : Von Neumann et Harvard</a></li>
+        <li><a href="#application--extrait-du-sujet-de-bac-polynésie-2021-partie-architecture">Application : extrait du sujet de bac polynésie 2021, partie architecture</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+
+                    
+                </div>
+            </aside>
+            
+        </main>
+
+        
+    </div>
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

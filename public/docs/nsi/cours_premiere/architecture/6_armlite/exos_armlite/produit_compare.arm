@@ -1,0 +1,22 @@
+      LDR R1, a
+      LDR R2, b
+      MOV R3, #0
+      MOV R4, #0
+      CMP R1, R2
+      BLT Petit 
+      B Produit
+Petit:
+      MOV R6, R2
+      MOV R2, R1
+      MOV R1, R6
+      B Produit
+Produit:
+      CMP R4, R2
+      BEQ Fin
+      ADD R3, R3, R1
+      ADD R4, R4, #1
+      B Produit
+Fin:
+      HALT
+a:    .WORD 12
+b:    .WORD 3

@@ -65,7 +65,7 @@ Dans cette population, l’allèle $A$ a une fréquence $p$ et l’allèle a une
 |                      | Allèle A (fréq. $p$) | Allèle a (fréq $q$) |
 | -------------------- | -------------------- | ------------------- |
 | Allèle A (fréq. $p$) | A//A $(p^2)$         | A//a $(pq)$         |
-| Allèle a (fréq. $a$) | a//A $(pq)$          | a//a $(q^2)$        |
+| Allèle a (fréq. $q$) | a//A $(pq)$          | a//a $(q^2)$        |
 
 Quelle que soit la répartition des génotypes dans la population de départ, cette répartition devient **stable dès la 2e génération**. (_voir activité spé Maths_).
 
@@ -134,7 +134,7 @@ D’après ce graphique :
 
    | Génotype  | AA   | Aa   | aa   |
    | --------- | ---- | ---- | ---- |
-   | Fréquence | 0.36 | 0.48 | 0.36 |
+   | Fréquence | 0.36 | 0.48 | 0.16 |
 
 2. Pour un gène possédant deux allèles A et a, avec $f (A) = 0,6$, à l’équilibre de Hardy-Weinberg, quelle est la proportion d’hétérozygotes Aa ?
 

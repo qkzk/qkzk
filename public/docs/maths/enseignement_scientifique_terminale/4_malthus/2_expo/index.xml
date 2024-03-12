@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Modèle exponentiel on qkzk</title>
+    <link>http://localhost:1313/docs/maths/enseignement_scientifique_terminale/4_malthus/2_expo/</link>
+    <description>Recent content in Modèle exponentiel on qkzk</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <atom:link href="http://localhost:1313/docs/maths/enseignement_scientifique_terminale/4_malthus/2_expo/index.xml" rel="self" type="application/rss+xml" />
+  </channel>
+</rss>

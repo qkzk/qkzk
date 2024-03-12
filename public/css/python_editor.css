@@ -1,0 +1,49 @@
+a.book-btn {
+  margin-top: 5px;
+}
+
+.CodeMirror {
+  border: 1px solid #222;
+  height: auto;
+  font-size: 12px;
+}
+
+pre.CodeMirror-line {
+  font-size: 1em;
+}
+
+.CodeMirror-scroll {
+  overflow-y: hidden;
+  overflow-x: auto;
+}
+
+.CodeMirror-fullscreen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: auto;
+  z-index: 9;
+}
+
+.python_error,
+.worker_error,
+.python_output {
+  font-size: 12px;
+  transition: 0.5s;
+  overflow: hidden;
+  margin: 15px;
+}
+
+.python_error {
+  color: red;
+}
+
+.worker_error {
+  color: blue;
+}
+
+label {
+  font-size: 1rem;
+}

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Modèle de Von Neumann on qkzk</title>
+    <link>http://localhost:1313/docs/nsi/cours_premiere/architecture/1_intro/</link>
+    <description>Recent content in Modèle de Von Neumann on qkzk</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <atom:link href="http://localhost:1313/docs/nsi/cours_premiere/architecture/1_intro/index.xml" rel="self" type="application/rss+xml" />
+  </channel>
+</rss>
