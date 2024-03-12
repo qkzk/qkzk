@@ -84,6 +84,6 @@ On peut alors ajuster le nuage de points par une droite d'équation $y=ax+b$, pa
 
 1. **Doc. 1 --** Calculer les variations absolues et compléter la colonne 4 du tableau. Commentez.
 1. **Doc. 2 --** Indiquer comment reconnaître une évolution dite linéaire.
-1. **Doc. 2 --** Compléter la formule encadrée.
+1. **Doc. 2 --** Retrouver et justifier l'équation de la droite orange.
 1. **Doc. 1 et 3 --** Pourquoi avoir choisi $r=1,5$ dans le modèle 1 ? Le modèle linéaire est-il adapté ?
 1. **Doc. 3 --** En exploitant les modèlisations, estimer le nombre d'habitants en France en 2030. En 2100.
