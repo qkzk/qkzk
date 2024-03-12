@@ -21,7 +21,7 @@ Déterminer un chemin est ce qu&rsquo;on fait pour trouver la sortie d&rsquo;un 
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/book.min.24c2b1f8dc2338e074345eec5b36f8a002aaa6d1b2e7312e14ac2d6a6958c876.css" integrity="sha256-JMKx&#43;NwjOOB0NF7sWzb4oAKqptGy5zEuFKwtamlYyHY=" crossorigin="anonymous">
   <script defer src="/flexsearch.min.js"></script>
-  <script defer src="/en.search.min.168dcc177cbbe76d8a95874fe2f1a54bb0d759c6689b3660a10acded5e1dfc3b.js" integrity="sha256-Fo3MF3y7522KlYdP4vGlS7DXWcZomzZgoQrN7V4d/Ds=" crossorigin="anonymous"></script>
+  <script defer src="/en.search.min.19a516a7dadda71dcf38b9d03a0c4a75b6032224df77983daf01e01ee62790b9.js" integrity="sha256-GaUWp9rdpx3POLnQOgxKdbYDIiTfd5g9rwHgHuYnkLk=" crossorigin="anonymous"></script>
 <link rel="alternate" type="application/rss+xml" href="http://localhost:1313/docs/nsi/cours_terminale/structures_donnees/graphes/cours_algo/index.xml" title="qkzk" />
 <!--
 Made with Book Theme
@@ -9128,6 +9128,7 @@ MathJax.Hub.Config({
         <li><a href="#parcours">Parcours</a></li>
         <li><a href="#présence-dun-cycle">Présence d&rsquo;un cycle</a></li>
         <li><a href="#complexité-des-algorithmes">Complexité des algorithmes</a></li>
+        <li><a href="#présence-dun-_circuit_-dans-un-graphe-_orienté_">Présence d&rsquo;un <em>circuit</em> dans un graphe <em>orienté</em></a></li>
       </ul>
     </li>
   </ul>
@@ -9225,7 +9226,7 @@ Les drapeaux sont faciles à généraliser à la recherche de la présence d&rsq
 </span></span><span style="display:flex;"><span>                                    sommet)
 </span></span></code></pre></div><p>Dans le tableau <code>drapeaux</code>, si un sommet est d&rsquo;indice 2,</p>
 <p><code>drapeaux[2] = -1</code> signifie qu&rsquo;on ne l&rsquo;a <strong>pas encore ajouté</strong> à la file.<br>
-<code>drapeaux[2] = 0</code>  signifie qu&rsquo;on l&rsquo;a <strong>déjà ajouté</strong> à la file.</p>
+<code>drapeaux[2] = 0</code> signifie qu&rsquo;on l&rsquo;a <strong>déjà ajouté</strong> à la file.</p>
 <p><strong>Parcours en largeur :</strong></p>
 <div class="highlight"><pre tabindex="0" style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>Changer le drapeau de la source à 0.
 </span></span><span style="display:flex;"><span>
@@ -9453,8 +9454,8 @@ a un cycle) et &ldquo;Faux&rdquo; pour le second: il n&rsquo;en a pas.</p>
 </span></span><span style="display:flex;"><span>                                    sommet)
 </span></span></code></pre></div><p>Dans le tableau <code>drapeaux</code>, si un sommet est d&rsquo;indice 2,</p>
 <p><code>drapeaux[2] = -1</code> signifie qu&rsquo;on ne l&rsquo;a <strong>pas encore ajouté</strong> à la file.<br>
-<code>drapeaux[2] = 0</code>  signifie qu&rsquo;on l&rsquo;a <strong>déjà ajouté</strong> à la file mais pas encore <strong>visité</strong>.<br>
-<code>drapeaux[2] = 1</code>  signifie qu&rsquo;on l&rsquo;a <strong>déjà visité</strong> le sommet.</p>
+<code>drapeaux[2] = 0</code> signifie qu&rsquo;on l&rsquo;a <strong>déjà ajouté</strong> à la file mais pas encore <strong>visité</strong>.<br>
+<code>drapeaux[2] = 1</code> signifie qu&rsquo;on l&rsquo;a <strong>déjà visité</strong> le sommet.</p>
 <p><strong>Parcours en largeur :</strong></p>
 <div class="highlight"><pre tabindex="0" style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>Fonction Contient un cycle (graphe)
 </span></span><span style="display:flex;"><span>
@@ -9541,6 +9542,17 @@ C&rsquo;est donc un cycle.</p>
 complexité est donc $O(|E| + |V|) (par exemple un arbre).</p>
 <p>où, rappelons, $V$ est l&rsquo;ensemble des sommets, $E$ est l&rsquo;ensemble des arêtes.
 et $|K|$ désigne le nombre d&rsquo;éléments d&rsquo;un ensemble $K$.</p>
+<h3 id="présence-dun-_circuit_-dans-un-graphe-_orienté_">
+  Présence d&rsquo;un <em>circuit</em> dans un graphe <em>orienté</em>
+  <a class="anchor" href="#pr%c3%a9sence-dun-_circuit_-dans-un-graphe-_orient%c3%a9_">#</a>
+</h3>
+<p>L&rsquo;algorithme présenté plus haut ne fonctionne pas pour rechercher un circuit dans un graphe orienté.</p>
+<ul>
+<li>un <em>chemin</em> est une succession de sommet pour lesquels il existe un arc reliant chaque paire.</li>
+<li>un <em>circuit</em> est un chemin pour lequel la source (le sommet de départ) et la destination (sommet d&rsquo;arrivée) sont identiques et qui comporte au moins un arc.
+Cette seconde précision permet de dire que $A-A$ n&rsquo;est pas un circuit.</li>
+</ul>
+<p>Un algorithme est présenté en TD (sur le dépôt git).</p>
 </article>
 
                 
@@ -9633,6 +9645,7 @@ et $|K|$ désigne le nombre d&rsquo;éléments d&rsquo;un ensemble $K$.</p>
         <li><a href="#parcours">Parcours</a></li>
         <li><a href="#présence-dun-cycle">Présence d&rsquo;un cycle</a></li>
         <li><a href="#complexité-des-algorithmes">Complexité des algorithmes</a></li>
+        <li><a href="#présence-dun-_circuit_-dans-un-graphe-_orienté_">Présence d&rsquo;un <em>circuit</em> dans un graphe <em>orienté</em></a></li>
       </ul>
     </li>
   </ul>

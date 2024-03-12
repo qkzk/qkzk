@@ -3,10 +3,9 @@ title: Parcours, chemins, cycles
 date: 2020/05/02
 author: qkzk
 theme:
-- metropolis
+  - metropolis
 geometry: margin=1.5cm
 weight: 15
-
 ---
 
 **pdf [pour impression](/uploads/docnsitale/graphes/6_cours_algos_graphes.pdf)**
@@ -15,25 +14,25 @@ weight: 15
 
 Nous allons présenter différents algorithmes sur les graphes :
 
-* **parcours en largeur d'abord,**
-* **parcours en profondeur d'abord,**
+- **parcours en largeur d'abord,**
+- **parcours en profondeur d'abord,**
 
 Et deux algorithmes qui utilisent les parcours :
 
-* **recherche d'un chemin entre deux sommets,**
-* **détection de la présence d'un cycle dans un graphe.**
+- **recherche d'un chemin entre deux sommets,**
+- **détection de la présence d'un cycle dans un graphe.**
 
 Les applications sont nombreuses :
 
-*   Si un problème s'exprime avec un graphe, le _parcourir_ permet
-    de trouver une solution.
+- Si un problème s'exprime avec un graphe, le _parcourir_ permet
+  de trouver une solution.
 
-*   Déterminer un chemin est ce qu'on fait pour trouver la sortie d'un
-    labyrinthe.
+- Déterminer un chemin est ce qu'on fait pour trouver la sortie d'un
+  labyrinthe.
 
-*   Détecter un cycle dans un graphe est une étape préalable à de nombreux
-    algorithmes (choix d'une route optimale sur une carte, par exemple) qui
-    exigent parfois _qu'il n'y ait pas de cycle_ dans le graphe.
+- Détecter un cycle dans un graphe est une étape préalable à de nombreux
+  algorithmes (choix d'une route optimale sur une carte, par exemple) qui
+  exigent parfois _qu'il n'y ait pas de cycle_ dans le graphe.
 
 ## Parcourir un graphe simple
 
@@ -101,7 +100,7 @@ drapeaux : [-1, -1, etc., -1]       (un tableau avec -1 pour chaque indice de
 Dans le tableau `drapeaux`, si un sommet est d'indice 2,
 
 `drapeaux[2] = -1` signifie qu'on ne l'a **pas encore ajouté** à la file.\
-`drapeaux[2] = 0`  signifie qu'on l'a **déjà ajouté** à la file.
+`drapeaux[2] = 0` signifie qu'on l'a **déjà ajouté** à la file.
 
 **Parcours en largeur :**
 
@@ -122,7 +121,6 @@ Tant que la file n'est pas vide faire :
 ### Exemple
 
 Disons que notre action "visiter" est d'afficher le numéro du sommet courant.
-
 
 Sur le graphe précédent :
 
@@ -154,9 +152,7 @@ C'est bien un parcours en largeur d'abord.
 
 **On explore tous les voisins avant d'avancer d'un niveau.**
 
-
 ---
-
 
 ### Algorithme : parcours en profondeur dans un graphe simple
 
@@ -305,11 +301,11 @@ Fonction créer un chemin (prédécesseurs, source, destination)
   On retourne chemin
 ```
 
-_Remarques_ 
+_Remarques_
 
-* La source est forcement dans le dictionnaire des prédécesseurs,
-    donc la boucle s'arrête toujours.
-* La construction finale du chemin peut être grandement optimisée
+- La source est forcement dans le dictionnaire des prédécesseurs,
+  donc la boucle s'arrête toujours.
+- La construction finale du chemin peut être grandement optimisée
 
 ---
 
@@ -338,7 +334,6 @@ chemin = [0, 2, 3, 4], 0 est la source, on a terminé.
 
 Elle retourne alors : `[0, 2, 3, 4]`
 
-
 ## Recherche de la présence de cycle dans un graphe simple
 
 **Un cycle est un chemin dont la source et la destination sont égales.**
@@ -349,12 +344,10 @@ Par exemple le graphe ci-dessous contient un cycle `[0, 1, 2]` :
 
 ![graph_002.svg](graph_002.svg)
 
-
 Si on enlève simplement l'arête entre (1, 2) on obtient un graphe qui n'a
 plus de cycle :
 
 ![graphe sans cycle](sans_cycle.png)
-
 
 On souhaite créer une fonction qui réponde "Vrai" pour le premier graphe (il
 a un cycle) et "Faux" pour le second: il n'en a pas.
@@ -369,12 +362,11 @@ La différence est le **tableau des drapeaux**.
 
 Cette fois, lorsqu'on dépile, on ajoute la règle suivante :
 
-* **lorsqu'on dépile un élément, on passe le drapeau à 1.**
+- **lorsqu'on dépile un élément, on passe le drapeau à 1.**
 
 Et lorsqu'on cherche à empiler les voisins, on ajoute la règle suivante :
 
-* **si un voisin rencontré a un drapeau à 0, c'est qu'il y a un cycle.**
-
+- **si un voisin rencontré a un drapeau à 0, c'est qu'il y a un cycle.**
 
 ### Algorithme complet
 
@@ -388,8 +380,8 @@ drapeaux : [-1, -1, etc., -1]       (un tableau avec -1 pour chaque indice de
 Dans le tableau `drapeaux`, si un sommet est d'indice 2,
 
 `drapeaux[2] = -1` signifie qu'on ne l'a **pas encore ajouté** à la file.\
-`drapeaux[2] = 0`  signifie qu'on l'a **déjà ajouté** à la file mais pas encore **visité**.\
-`drapeaux[2] = 1`  signifie qu'on l'a **déjà visité** le sommet.
+`drapeaux[2] = 0` signifie qu'on l'a **déjà ajouté** à la file mais pas encore **visité**.\
+`drapeaux[2] = 1` signifie qu'on l'a **déjà visité** le sommet.
 
 **Parcours en largeur :**
 
@@ -489,3 +481,13 @@ complexité est donc $O(|E| + |V|) (par exemple un arbre).
 
 où, rappelons, $V$ est l'ensemble des sommets, $E$ est l'ensemble des arêtes.
 et $|K|$ désigne le nombre d'éléments d'un ensemble $K$.
+
+### Présence d'un _circuit_ dans un graphe _orienté_
+
+L'algorithme présenté plus haut ne fonctionne pas pour rechercher un circuit dans un graphe orienté.
+
+- un _chemin_ est une succession de sommet pour lesquels il existe un arc reliant chaque paire.
+- un _circuit_ est un chemin pour lequel la source (le sommet de départ) et la destination (sommet d'arrivée) sont identiques et qui comporte au moins un arc.
+  Cette seconde précision permet de dire que $A-A$ n'est pas un circuit.
+
+Un algorithme est présenté en TD (sur le dépôt git).
