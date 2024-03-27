@@ -1,246 +1,426 @@
 ---
-title: "Cours : dichotomie"
-bookCollapseSection: true
-author: qkzk
+title: Cours
+theme: metropolis
 weight: 1
-
+bookCollapseSection: true
 ---
 
-# Recherche dichotomique dans un tableau
-
-pdf [présentation](/uploads/docsnsi/algo/dicho/dicho_exemple-Article.pdf) et [slides](/uploads/docsnsi/algo/dicho/dicho_exemple-Beamer.pdf)
-
-## Présentation
+Le tableau `T` contient-il `x` ? À quelle position ?
 
 {{< hint info >}}
-La _recherche dichotomique dans un tableau trié_ est un algorithme efficace
-qui permet de répondre à différentes questions :
-
-* Ce tableau trié contient-il cet élément ?
-
-ou
-
-* Quel est l'indice de cet élément dans ce tableau trié ?
+_C'est un problème déjà rencontré lors des parcours séquentiels. Nous allons étudier un algorithme beaucoup plus rapide... mais qui ne s'applique qu'aux tableaux **triés**_.
 {{< /hint >}}
 
+## Introduction : recherche par balayage
 
-## Dichotomie vs recherche séquentielle
+Déjà abordé lors des _[parcours séquentiels](/docs/nsi/cours_premiere/algorithmique/sequentiel/cours/#algorithmes-sur-les-tableaux-1)_
 
-Bien sûr, on sait déjà comment répondre à une telle question :
-
-on regarde les éléments un par un avec une boucle `for` et lorsqu'on rencontre l'élément, on fait quelque chose.
-
-C'est une recherche séquentielle qui fonctionne parfaitement mais qui est beaucoup plus lente que la recherche
-dichotomique.
-
-
-{{< hint info >}}
-La recherche _séquentielle_ s'applique à tous les tableaux.
-
-La recherche _dichotomique_ ne s'applique qu'aux tableaux **triés** mais est **beaucoup plus rapide**.
-{{< /hint >}}
-
-## Principe
-
-Il est similaire à la méthode efficace pour gagner au "plus ou moins".
-
-{{< expand "Le jeu du plus ou moins" "...">}}
-Votre adversaire a choisi un nombre entre 1 et 100 et vous devez le déviner.
-
-Il ne peut répondre que par "c'est plus", "c'est moins" ou "gagné".
-
-Une approche qui gagne toujours consiste à partir de 1 et augmenter de 1 en 1 :
-
-* 1 ? C'est plus,
-* 2 ? C'est plus, etc.
-
-Elle termine toujours et trouve toujours la réponse. Pourquoi s'embêter ?
-
-Parce qu'on peut gagner en 7 coups alors qu'il en faut 100 si l'adversaire choisit 100...
-
-Comment gagner en 7 coups ?
-
-**Choisir la valeur centrale parmi les valeurs restantes.**
-
-Et c'est tout.
-
-
-* La première approche (1, 2, 3...) est _séquentielle_, 
-* La seconde approche (50, 25, 12...) est _dichotomique_.
-{{< /expand >}}
-
-
-## Contexte
-
-* Un tableau trié : `T = [0, 1, 2, ... ,9]`
-
-* L'élément 3 est-il dans le tableau ?
-
-* L'objectif : répondre Oui ou Non en réalisant **le moins d'opérations** possibles.
-
-
-
-## Dichotomie
-
-* À chaque étape on teste la valeur centrale du tableau considéré
-* Si c'est l'élément cherché, on a trouvé et la réponse est Oui.
-* Si la valeur centrale est supérieure à l'élément cherché on recommence avec
-    la partie gauche
-* Sinon on recommence avec la partie droite.
-* Si la partie gauche ou la partie droite est vide, l'élément n'est pas dans le
-    tableau et la réponse est : Non.
-
-
-## Déroulé sur l'exemple, à la main.
-
-`T=[0,1,2,...,9]`. On cherche 3.
-
-1. On propose : 4.
-
-    4 > 3 donc on recommence avec la partie avant 4 : `T1 = [0,1,2,3]`
-
-2. On propose : 2
-
-    2 < 3 donc on recommence avec la partie après 2 : `T2 = [3]`
-
-3. On propose : 3
-
-    3 = 3 donc **on a trouvé l'élément et la réponse est : Oui, 3 est dans T.**
-
-## L'algorithme
-
-
-{{< hint info >}}
 ```python
-rechercheDicho(liste, clé)
-  bas = 0
-  haut = longueur(liste) - 1
-  Tant que (bas < haut) :
-      med = (bas + haut) // 2
-      si clé == liste[med]:
-          bas = med
-          haut = med
-      sinon si clé > liste[med]: bas = med + 1
-      sinon: haut = med - 1
-  si cle == liste[bas]: renvoyer Vrai
-  sinon: renvoyer Faux
+x = 5
+T = [11,  7,  9,  5, 15, 13,  3,  1]
+      0   1   2   3   4   5   6   7
+                  ^
 ```
+
+{{< hint info >}}
+
+```python
+def recherche(T, x):
+    Pour i allant de 0 à len(T) - 1:
+        Si x == T[i]:
+            renvoyer i
+    renvoyer -1
+```
+
 {{< /hint >}}
 
-## Même exemple, avec les variables
+{{< python title="Recherche par balayage">}}
+def recherche(T: list, x: int):
+    for i in range(len(T)):
+        if x == T[i]:
+            return i
+    return -1
 
+x = 5
+T = [11, 7, 9, 5, 15, 13, 3, 1]
 
-Voici un déroulé de l'algorithme à la main.
-
-Notre tableau `T` est `[0, 1, 2, ..., 9]` et on cherche `3`.
-
-On dispose des variables :
-
-* `début`, `milieu`, `fin` qui sont des éléments du tableau
-* `trouvé` qui est un booléen (vrai / faux)
-* et `val > milieu` (booléen, qui va nous aider à choisir)
-
-On présent les éléments dans une table :
-
+print(recherche(T, x))
+{{< /python >}}
 
 ### Déroulé
 
-Voici un déroulé de l'algorithme à la main.
+```python
+i = 0           5 != 11
+i = 1           5 != 7
+i = 2           5 != 9
+i = 3           5 == 5
+```
 
-Notre tableau `T` est `[0, 1, 2, ..., 9]` et on cherche `3`.
+### Remarques
 
-* **Avant la boucle.** début, fin et trouvé sont initialisées (0, 9, faux). La variable milieu et le booléen `val > milieu` n'existent pas encore.
+{{< hint warning >}}
+
+1. La boucle étant bornée (`for`), l'algorithme termine toujours.
+
+2. **Au pire `len(T)` étapes**. La coût calculatoire d'un parcours séquentiel est _linéaire_.
+   {{< /hint >}}
+
+## Recherche dichotomique
+
+### Présentation
+
+{{< hint info >}}
+On suppose maintenant que le tableau `T` est **trié** par ordre croissant
+
+```python
+x = 5
+T = [ 1,  3,  5,  7,  9, 11, 13, 15]
+      0   1   2   3   4   5   6   7
+```
+
+{{< /hint >}}
+
+**Stratégie du Jeu de "+ ou -"** : viser le centre des éléments restant et éliminer la moitié des nombres à chaque étape.
+
+{{< hint info >}}
+Donc : comparer la valeur centrale à `x` et **éliminer la moitié des valeurs restantes**
+{{< /hint >}}
+
+### Déroulé
+
+1. Premier tour
+
+   ```python
+   x = 5
+   T = [ 1,  3,  5,  7,  9, 11, 13, 15]
+         g           ^               d
+   ```
+
+   ```python
+   g = 0, d = 7
+   m = (g + d) // 2 = (0 + 7) // 2 = 3
+       x = 5 < T[3] = 7    =>   Chercher à gauche
+   ```
+
+   On recommence avec
+
+   - `d = m - 1 = 2`
+   - `g` inchangé
+
+2. Second tour
+
+   ```python
+   x = 5
+   T = [ 1,  3,  5,  7,  9, 11, 13, 15]
+         g   ^   d
+   ```
+
+   ```python
+   g = 0, d = 2
+   m = (g + d) // 2 = (0 + 2) // 2 = 1
+       x = 5 > T[1] = 3    =>   Chercher à droite
+   ```
+
+   On recommence avec
+
+   - `d` inchangé
+   - `g = m + 1 = 2`
+
+3. Troisième tour
+
+   ```python
+   x = 5
+   T = [ 1,  3,  5,  7,  9, 11, 13, 15]
+            g=d
+   ```
+
+   ```python
+   g = 2, d = 2
+   m = (g + d) // 2 = (2 + 2) // 2 = 2
+       x = 5 == T[2] = 5    =>   Trouvé !
+   ```
+
+   On peut renvoyer `2`.
+
+## Construction de l'algorithme
+
+{{< expand "" "Construction de l'algorithme" >}}
 
 
+{{< columns >}}
+**Précondition**\
+**Plusieurs étapes**\
+**Nombre inconnu d'étapes**\
+**Arrêt**
+<--->
 
-| Tour            	| début 	| milieu 	| fin 	| trouvé 	    | `val > milieu` 	|
-|-----------------	|-------	|--------	|-----	|------------	|----------------	|
-| Avant la boucle 	| 0     	| /      	| 9   	| faux   	    | /              	|
+`T` un tableau trié par ordre croissant\
+Il faut une boucle\
+Boucle non bornée (`while`)\
+`g > d` donc `while g <= d:`\
+ {{< /columns >}}
+
+**Corps de la boucle**
+
+`m = (g + d) // 2`
+
+3 cas :
+
+- Si `x == T[m]` $\quad\quad\Rightarrow\quad$ `return m`
+
+- Si `x < m` $\quad\quad\qquad\Rightarrow\quad$ `d = m - 1`
+
+- Si `x > m` $\quad\quad\qquad\Rightarrow\quad$ `d = m + 1`
+
+**Et si la boucle termine ?**
+
+- `T` ne contient pas `x` $\Rightarrow\quad$ `return -1`
+
+{{< /expand >}}
+
+## Codes à compléter
+
+### Exemples pour tester votre fonction
+
+{{< expand "" "..." >}}
+```python
+# tableau vide
+assert not contient_dichotomique([], 0)
+
+# tableau à 1 élément
+assert not contient_dichotomique([1], 0)
+assert contient_dichotomique([1], 1)
+assert not contient_dichotomique([1], 2)
+
+# tableau plus grand
+tableau = [0, 2, 4, 6, 8, 10]
+for cle in tableau:
+    assert contient_dichotomique(tableau, cle)
+
+for cle in [-1, 1, 3, 5, 7, 9, 11]:
+    assert not contient_dichotomique(tableau, cle)
+```
+{{< /expand >}}
+
+### Fonction à compléter
+
+{{< tabs "uniqueid" >}}
+{{< tab "Difficile" >}}
+
+```python
+def recherche_dichotomique(T: list, x: list) -> int:
+    """
+    Renvoie l'indice de `x` dans `T`.
+    Renvoie -1 si `x` n'est pas dans `T`.
+
+    Précondition : `T` est trié par ordre croissant
+    """
+    ...
+```
+
+{{< /tab >}}
+
+{{< tab "Moyen" >}}
+
+```python
+def recherche_dichotomique(T: list, x: list) -> int:
+    """
+    Renvoie l'indice de `x` dans `T`.
+    Renvoie -1 si `x` n'est pas dans `T`.
+
+    Précondition : `T` est trié par ordre croissant
+    """
+    g = ...
+    d = ...
+    while ...:
+        m = ...
+        if x == ...:
+            return ...
+        elif x > ...:
+            ...
+        else:
+            ...
+    return ...
+```
+
+{{< /tab >}}
+{{< tab "Facile" >}}
+
+```python
+def recherche_dichotomique(T: list, x: list) -> int:
+    """
+    Renvoie l'indice de `x` dans `T`.
+    Renvoie -1 si `x` n'est pas dans `T`.
+
+    Précondition : `T` est trié par ordre croissant
+    """
+    g = 0
+    d = len(T) - 1
+    while g <= d:
+        m = ...
+        if x == ...:
+            return m
+        elif x > ...:
+            g = ...
+        else:
+            d = ...
+    return -1
+```
+
+{{< /tab >}}
+{{< /tabs >}}
 
 
+{{< python title="Recherche dichotomique">}}
+def recherche_dichotomique(T: list, x: int):
+     ...
 
+x = 5
+T = [1,  3,  5,  7,  9, 11, 13, 15]
 
+print(recherche_dichotomique(T, x))
+{{< /python >}}
 
-Notre tableau `T` est `[0, 1, 2, ..., 9]` et on cherche `3`.
+## Algorithme
 
-1. **Premier tour.** On descend début et fin.
+{{< expand "" "..." >}}
 
-    On calcule milieu (0+9)/2 = 4.5 dont la partie entière est 4. Donc milieu = 4.
+```python
+def recherche_dichotomique(T: list, x: list) -> int:
+    """
+    Renvoie l'indice de `x` dans `T`.
+    Renvoie -1 si `x` n'est pas dans `T`.
 
-    Est-ce que 3==4 ? Faux.
+    Précondition : `T` est trié par ordre croissant
+    """
+    g = 0
+    d = len(T) - 1
+    while g <= d:
+        m = (g + d) // 2
+        if x == T[m]:
+            return m
+        elif x > T[m]:
+            g = m + 1
+        else:
+            d = m - 1
+    return -1
+```
 
-    Est-ce-que "3>4" ? Faux. Dans ce cas, c'est `fin` qui prend la valeur de `milieu`
+{{< /expand >}}
 
+## Déroulé de l'algorithme
 
+```python
+x = 5
+T = [ 1,  3,  5,  7,  9, 11, 13, 15]
+```
 
-    | Tour            	| début 	| milieu 	| fin 	| trouvé 	    | `val > milieu` 	|
-    |-----------------	|-------	|--------	|-----	|------------	|----------------	|
-    | Avant la boucle 	| 0     	| /      	| 9   	| faux   	    | /              	|
-    | 1er tour        	| 0     	| 4      	| 9   	| faux   	    | 3 > 4 : faux   	|
+On débute avec `g = 0` et `d = 8 - 1 = 7`.
 
+1. `[1,  3,  5,  7,  9, 11, 13, 15]`
 
+   `g = 0 <= d = 7`
 
-2. **Second tour.** On a descendu début, on donne à fin la valeur précédente de milieu (4). Et on calcule les nouveaux éléments. milieu = (0+4)/2 = 2 (entier).
+   `m = (0 + 7) // 2 = 3`
 
-    Est-ce-que 3==2 ? Faux.
+   `5 < 7 => d = 3 - 1 = 2`
 
-    Est-ce-que 3>2 ? Vrai. Dans ce cas, c'est début qui change et prend la valeur de milieu + 1.
+2. `[1,  3,  5]`
 
+   `g = 0 <= d = 2`
 
+   `m = (0 + 2) // 2 = 1`
 
+   `5 > 3 => g = 1 + 1 = 2`
 
-    | Tour            	| début 	| milieu 	| fin 	| trouvé 	    | `val > milieu` 	|
-    |-----------------	|-------	|--------	|-----	|------------	|----------------	|
-    | Avant la boucle 	| 0     	| /      	| 9   	| faux   	    | /              	|
-    | 1er tour        	| 0     	| 4      	| 9   	| faux   	    | 3 > 4 : faux   	|
-    | 2ème tour       	| 0     	| 2      	| 4   	| faux   	    | 3 > 2 : vrai   	|
+3. `[5]`
 
+   `g = 2 <= d = 2`
 
+   `m = (2 + 2) // 2 = 2`
 
-3. **Troisième tour**. On a descendu la valeur de fin et donné à début l'ancienne valeur de milieu + 1 (3). Et on recommence.
+   `5 == 5 => return 2`
 
-    Milieu = (3 + 4)/2 = 3.5 dont la partie entière est 3. Est-ce-que 3==3 ? Oui.
+## Remarques
 
+{{< hint danger >}}
 
+### Précondition
 
-    | Tour            	| début 	| milieu 	| fin 	| trouvé 	    | `val > milieu` 	|
-    |-----------------	|-------	|--------	|-----	|------------	|----------------	|
-    | Avant la boucle 	| 0     	| /      	| 9   	| faux   	    | /              	|
-    | 1er tour        	| 0     	| 4      	| 9   	| faux   	    | 3 > 4 : faux   	|
-    | 2ème tour       	| 0     	| 2      	| 4   	| faux   	    | 3 > 2 : vrai   	|
-    | 3ème tour       	| 3     	| 3      	| 4   	| **vrai**   	| /              	|
+**`T` doit être trié par ordre croissant**
 
+{{< /hint >}}
 
-L'algorithme est terminé et la sortie est "VRAI". Le nombre 3 est bien un élément du tableau [0, 1, **3**, 4, 5, ..., 9].
+### Terminaison
 
+- `while g <= d:` la boucle s'arrête lorsque `g` devient plus grand que `d`.
 
+- `d - g` décroit strictement à chaque étape (`d = m - 1` ou `g = m + 1` avec `g <= m <= d`)
 
-### Complexité
+- En nombre fini d'étapes, on arrive à `d > g` et l'algorithme s'arrête
 
-* **parcours séquentiel** : autant que d'éléments dans le tableau dans le pire des cas.
-  Le parcours séquentiel prend (dans le pire des cas) $n$ étapes.
-* **recherche dichotomique** (après le tri) : $\log_2 n$ étapes.
-    $\log_2 n$ est (grosso modo) la taille de l'entier représenté en base 2 (= son nombre de bits).
+{{< hint info >}}
+
+### Coût
+
+- `d - g` est _grossièrement_ divisé par deux à chaque étape
+- Autrement dit, **si le tableau double de taille, il ne faut qu'une étape supplémentaire.**
+
+- Ex. Si `len(T)` $= 16 = 2 ^ 4$, il faut **~4 étapes**.\
+   Dans ce cas, la _recherche par balayage_ demande au pire 16 étapes.
+
+- Ex. En partant d'un tableau _trié_ contenant 10 milliards d'éléments, il faut au plus 34 étapes pour trouver un de ses éléments : $2^{34} > 10^{10}$\
+   Une recherche par balayage demande au pire... 10 milliards d'étapes.
+
+  {{< /hint >}}
 
 ## Conclusion
 
-{{< hint info >}}
-* La recherche dichotomique permet de gagner beaucoup d'étape par rapport au parcours
-séquentiel du tableau.
+- La recherche dichotomique permet de gagner beaucoup d'étapes par rapport au parcours séquentiel du tableau.
 
-* Elle nécessite d'avoir un tableau **trié** sans quoi on ne peut l'appliquer.
+- Elle nécessite d'avoir un tableau **trié** sans quoi on ne peut l'appliquer.
 
-* Une recherche séquentielle dans un tableau de taille $n$ demande jusqu'à $n$ étapes,
-* Une recherche dichotomique dans un tableau trié de taille $n$ demande $\log_2(n)$ étapes.
-{{< /hint >}}
+### Algorithme
 
----
+{{< expand "" "..." >}}
 
-### Meilleure stratégie : recherche séquentielle ou tri + recherche dichotomique ?
+```python
+def recherche_dichotomique(T: list, x: list) -> int:
+    """
+    Renvoie l'indice de `x` dans `T`.
+    Renvoie -1 si `x` n'est pas dans `T`.
 
-Supposons partir d'un tableau _non trié_. Est-il plus efficace de le trier avant de faire une recherche ?
+    Précondition : `T` est trié par ordre croissant
+    """
+    g = 0
+    d = len(T) - 1
+    while g <= d:
+        m = (g + d) // 2
+        if x == T[m]:
+            return m
+        elif x > T[m]:
+            g = m + 1
+        else:
+            d = m - 1
+    return -1
+```
 
-* Si on ne souhaite l'appliquer qu'_une_ seule fois, il n'est pas intéressant de trier avant de chercher. C'est trop long.
+{{< /expand >}}
 
-* Mais si on doit effectuer beaucoup de recherches dans le tableau et qu'il ne change pas, alors c'est plus envisageable.
+### Remarques sur le coût
 
+- Si on ne souhaite l'appliquer qu'une seule fois, il n'est pas intéressant de trier le tableau pour chercher. C'est généralement trop long.
+- Mais si on doit souvent effectuer des recherches dans le tableau, alors c'est efficace.
+
+### Nombre d'étapes
+
+- **parcours séquentiel** : autant que d'éléments dans le tableau dans le pire des cas.
+
+  Le parcours séquentiel prend (dans le pire des cas) $n$ étapes.
+
+- **recherche dichotomique** : $\log_2 n$ étapes.
+
+  $\log_2 n \approx$ le nombre de divisions entières de $n$ par 2 qu'on peut effectuer
+  avant de trouver un quotient nul
+
+  $\log_2 n \approx$ le nombre de bits de $n$ en binaire.

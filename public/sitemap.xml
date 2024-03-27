@@ -129,6 +129,8 @@
   </url><url>
     <loc>http://localhost:1313/docs/nsi/cours_premiere/python/cours_python/03_structure_controle/conditions/</loc>
   </url><url>
+    <loc>http://localhost:1313/docs/nsi/cours_premiere/algorithmique/dichotomie/v2_cours/</loc>
+  </url><url>
     <loc>http://localhost:1313/docs/nsi/cours_premiere/donnees_simples/complement_a_deux/1_cours/</loc>
   </url><url>
     <loc>http://localhost:1313/docs/nsi/cours_premiere/donnees_structurees/tableaux_2d/cours/</loc>
@@ -975,6 +977,9 @@
     <loc>http://localhost:1313/docs/ressources/python/</loc>
   </url><url>
     <loc>http://localhost:1313/docs/nsi/cours_premiere/architecture/8_resume/</loc>
+  </url><url>
+    <loc>http://localhost:1313/docs/archives/</loc>
+    <lastmod>2024-03-12T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/docs/archives/icn/module-5-raspberry-pi/partie-1-prise-en-main-du-raspberry-pi/</loc>
     <lastmod>2017-06-20T13:41:39+00:00</lastmod>

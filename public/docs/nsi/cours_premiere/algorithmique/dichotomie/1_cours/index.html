@@ -4,23 +4,21 @@
 <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
     <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Recherche dichotomique dans un tableau # pdf présentation et slides
-Présentation # La recherche dichotomique dans un tableau trié est un algorithme efficace qui permet de répondre à différentes questions :
-Ce tableau trié contient-il cet élément ? ou
-Quel est l&rsquo;indice de cet élément dans ce tableau trié ? Dichotomie vs recherche séquentielle # Bien sûr, on sait déjà comment répondre à une telle question :
-on regarde les éléments un par un avec une boucle for et lorsqu&rsquo;on rencontre l&rsquo;élément, on fait quelque chose.">
+<meta name="description" content="Le tableau T contient-il x ? À quelle position ?
+C&rsquo;est un problème déjà rencontré lors des parcours séquentiels. Nous allons étudier un algorithme beaucoup plus rapide&hellip; mais qui ne s&rsquo;applique qu&rsquo;aux tableaux triés. Introduction : recherche par balayage # Déjà abordé lors des parcours séquentiels
+x = 5 T = [11, 7, 9, 5, 15, 13, 3, 1] 0 1 2 3 4 5 6 7 ^ def recherche(T, x): Pour i allant de 0 à len(T) - 1: Si x == T[i]: renvoyer i renvoyer -1 Recherche par balayage # def recherche(T: list, x: int): for i in range(len(T)): if x == T[i]: return i return -1 x = 5 T = [11, 7, 9, 5, 15, 13, 3, 1] print(recherche(T, x)) Run Reset Download Stop Résultat Déroulé # i = 0 5 !">
 <meta name="theme-color" content="#FFFFFF">
-<meta name="color-scheme" content="light dark"><meta property="og:title" content="Cours : dichotomie" />
+<meta name="color-scheme" content="light dark"><meta property="og:title" content="Cours" />
 <meta property="og:description" content="Informatique et mathématiques" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="http://localhost:1313/docs/nsi/cours_premiere/algorithmique/dichotomie/1_cours/" />
 
-<title>Cours : dichotomie | qkzk</title>
+<title>Cours | qkzk</title>
 <link rel="manifest" href="/manifest.json">
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/book.min.24c2b1f8dc2338e074345eec5b36f8a002aaa6d1b2e7312e14ac2d6a6958c876.css" integrity="sha256-JMKx&#43;NwjOOB0NF7sWzb4oAKqptGy5zEuFKwtamlYyHY=" crossorigin="anonymous">
   <script defer src="/flexsearch.min.js"></script>
-  <script defer src="/en.search.min.07cbd2c54d1f238ada97cf439790f27abcaea9901aa19c6dc37204d253843c05.js" integrity="sha256-B8vSxU0fI4ral89Dl5DyeryuqZAaoZxtw3IE0lOEPAU=" crossorigin="anonymous"></script>
+  <script defer src="/en.search.min.face669dbd929bbadccb1ae86304ffcfd9efe37085285033b8bc29349ac17701.js" integrity="sha256-&#43;s5mnb2Sm7rcyxroYwT/z9nv43CFKFAzuLwpNJrBdwE=" crossorigin="anonymous"></script>
 <link rel="alternate" type="application/rss+xml" href="http://localhost:1313/docs/nsi/cours_premiere/algorithmique/dichotomie/1_cours/index.xml" title="qkzk" />
 <!--
 Made with Book Theme
@@ -58,7 +56,7 @@ MathJax.Hub.Config({
         <div class="container flex content-desktop ">
             <a id="bannerTitle" href="/">
                 <h1 id="siteTitle">
-                    Cours : dichotomie
+                    Cours
                     
                 </h1>
             </a>
@@ -728,363 +726,6 @@ MathJax.Hub.Config({
 
         </li>
       
-    
-  </ul>
-
-        </li>
-      
-    
-  </ul>
-
-        </li>
-      
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <input type="checkbox" id="section-484f61d4bebe609d8d5d1c22ce93ddac" class="toggle"  />
-    <label for="section-484f61d4bebe609d8d5d1c22ce93ddac" class="flex justify-between">
-      <a href="http://localhost:1313/docs/archives/cours-python/" class="">Python</a>
-    </label>
-  
-
-          
-  <ul>
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <input type="checkbox" id="section-5a7b33ec89d559837d39c551d070d027" class="toggle"  />
-    <label for="section-5a7b33ec89d559837d39c551d070d027" class="flex justify-between">
-      <a href="http://localhost:1313/docs/archives/cours-python/python-3-00-preambule/" class="">Python 3 - 00 préambule</a>
-    </label>
-  
-
-          
-  <ul>
-    
-  </ul>
-
-        </li>
-      
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <input type="checkbox" id="section-55f48aeef1c1e105583a2948c54d7ca1" class="toggle"  />
-    <label for="section-55f48aeef1c1e105583a2948c54d7ca1" class="flex justify-between">
-      <a href="http://localhost:1313/docs/archives/cours-python/python-3-01-les-variables-les-types/" class="">Python 3 - 01 Les variables, les types</a>
-    </label>
-  
-
-          
-  <ul>
-    
-  </ul>
-
-        </li>
-      
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <input type="checkbox" id="section-b2044d686b20d7f810de4e2e39fa7d3a" class="toggle"  />
-    <label for="section-b2044d686b20d7f810de4e2e39fa7d3a" class="flex justify-between">
-      <a href="http://localhost:1313/docs/archives/cours-python/python-3-02-les-conditions/" class="">Python 3 - 02 Les conditions</a>
-    </label>
-  
-
-          
-  <ul>
-    
-  </ul>
-
-        </li>
-      
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <input type="checkbox" id="section-7b129b332c656a0256fc6e44faf02015" class="toggle"  />
-    <label for="section-7b129b332c656a0256fc6e44faf02015" class="flex justify-between">
-      <a href="http://localhost:1313/docs/archives/cours-python/python-3-03-les-boucles/" class="">Python 3 - 03 Les boucles</a>
-    </label>
-  
-
-          
-  <ul>
-    
-  </ul>
-
-        </li>
-      
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <input type="checkbox" id="section-7f2a4fc13e975bcb0aa9b2b9871a4b13" class="toggle"  />
-    <label for="section-7f2a4fc13e975bcb0aa9b2b9871a4b13" class="flex justify-between">
-      <a href="http://localhost:1313/docs/archives/cours-python/python-3-04-les-fonctions/" class="">Python 3 - 04 Les fonctions</a>
-    </label>
-  
-
-          
-  <ul>
-    
-  </ul>
-
-        </li>
-      
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <input type="checkbox" id="section-2a7190a29d4b3bf4a351de61f36ec3e6" class="toggle"  />
-    <label for="section-2a7190a29d4b3bf4a351de61f36ec3e6" class="flex justify-between">
-      <a href="http://localhost:1313/docs/archives/cours-python/python-3-05-gestion-des-exceptions/" class="">Python 3 - 05 Gestion des exceptions</a>
-    </label>
-  
-
-          
-  <ul>
-    
-  </ul>
-
-        </li>
-      
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <input type="checkbox" id="section-e6e76a275545c1424e67fc89223b2210" class="toggle"  />
-    <label for="section-e6e76a275545c1424e67fc89223b2210" class="flex justify-between">
-      <a href="http://localhost:1313/docs/archives/cours-python/python-3-06-classes-et-modules/" class="">Python 3 - 06 Classes et modules</a>
-    </label>
-  
-
-          
-  <ul>
-    
-  </ul>
-
-        </li>
-      
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <input type="checkbox" id="section-53b1f28c7fcff39c50a55242afc2f17e" class="toggle"  />
-    <label for="section-53b1f28c7fcff39c50a55242afc2f17e" class="flex justify-between">
-      <a href="http://localhost:1313/docs/archives/cours-python/python-3-07-interface-graphique-avec-le-module-tkinter/" class="">Python 3 - 07 Interface graphique avec le module Tkinter</a>
-    </label>
-  
-
-          
-  <ul>
-    
-  </ul>
-
-        </li>
-      
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <input type="checkbox" id="section-4b299526b370d8a9c1dbb987be7664b1" class="toggle"  />
-    <label for="section-4b299526b370d8a9c1dbb987be7664b1" class="flex justify-between">
-      <a href="http://localhost:1313/docs/archives/cours-python/python-3-08-lecture-et-ecriture-dans-un-fichier/" class="">Python 3 - 08 Lecture et écriture dans un fichier</a>
-    </label>
-  
-
-          
-  <ul>
-    
-  </ul>
-
-        </li>
-      
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <input type="checkbox" id="section-4af711918f7fa5b016cb7d95fd5aaded" class="toggle"  />
-    <label for="section-4af711918f7fa5b016cb7d95fd5aaded" class="flex justify-between">
-      <a href="http://localhost:1313/docs/archives/cours-python/python-3-09-python-camera/" class="">Python 3 - 09 Camera</a>
-    </label>
-  
-
-          
-  <ul>
-    
-  </ul>
-
-        </li>
-      
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <input type="checkbox" id="section-35a14685302a9c541bd2871ce41fbb91" class="toggle"  />
-    <label for="section-35a14685302a9c541bd2871ce41fbb91" class="flex justify-between">
-      <a href="http://localhost:1313/docs/archives/cours-python/python-3-10-traitement-des-images/" class="">Python 3 - 10 Traitement des images</a>
-    </label>
-  
-
-          
-  <ul>
-    
-  </ul>
-
-        </li>
-      
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <input type="checkbox" id="section-2c27300c74fa49ea5430bed8bd4e2553" class="toggle"  />
-    <label for="section-2c27300c74fa49ea5430bed8bd4e2553" class="flex justify-between">
-      <a href="http://localhost:1313/docs/archives/cours-python/python-3-11-debogage/" class="">Python 3 - 11 Débogage</a>
-    </label>
-  
-
-          
-  <ul>
-    
-  </ul>
-
-        </li>
-      
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <input type="checkbox" id="section-2bd14603229218cfc724a7df9073b962" class="toggle"  />
-    <label for="section-2bd14603229218cfc724a7df9073b962" class="flex justify-between">
-      <a href="http://localhost:1313/docs/archives/cours-python/python-3-12-creer-un-programme-executable-avec-py2exe/" class="">Python 3 - 12 Créer un programme exécutable avec Py2exe</a>
-    </label>
-  
-
-          
-  <ul>
-    
-  </ul>
-
-        </li>
-      
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <input type="checkbox" id="section-7893093160ffa6bdae3c72744156477c" class="toggle"  />
-    <label for="section-7893093160ffa6bdae3c72744156477c" class="flex justify-between">
-      <a href="http://localhost:1313/docs/archives/cours-python/python-3-13-jeux-video-avec-le-module-pygame/" class="">Python 3 - 13 Jeux vidéo avec le module Pygame</a>
-    </label>
-  
-
-          
-  <ul>
-    
-  </ul>
-
-        </li>
-      
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <input type="checkbox" id="section-cc27b844430ed20f9e9069a5f15631e0" class="toggle"  />
-    <label for="section-cc27b844430ed20f9e9069a5f15631e0" class="flex justify-between">
-      <a href="http://localhost:1313/docs/archives/cours-python/python-3-14-applications-et-jeux-en-reseau/" class="">Python 3 - 14 Applications et jeux en réseau</a>
-    </label>
-  
-
-          
-  <ul>
-    
-  </ul>
-
-        </li>
-      
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <input type="checkbox" id="section-9565bae3e63afc215c607d0e8c0c6cad" class="toggle"  />
-    <label for="section-9565bae3e63afc215c607d0e8c0c6cad" class="flex justify-between">
-      <a href="http://localhost:1313/docs/archives/cours-python/python-3-15-le-son-au-format-audio-wav/" class="">Python 3 - 15 Le son au format audio WAV</a>
-    </label>
-  
-
-          
-  <ul>
     
   </ul>
 
@@ -2283,7 +1924,7 @@ MathJax.Hub.Config({
   
     <input type="checkbox" id="section-a908309b5e10ed10b2bc2b05f144b0bb" class="toggle" checked />
     <label for="section-a908309b5e10ed10b2bc2b05f144b0bb" class="flex justify-between">
-      <a href="http://localhost:1313/docs/nsi/cours_premiere/algorithmique/dichotomie/1_cours/" class="active">Cours : dichotomie</a>
+      <a href="http://localhost:1313/docs/nsi/cours_premiere/algorithmique/dichotomie/1_cours/" class="active">Cours</a>
     </label>
   
 
@@ -2304,7 +1945,7 @@ MathJax.Hub.Config({
   
     <input type="checkbox" id="section-ffde95e8f2d892e24e198d6ee6bbaf2c" class="toggle"  />
     <label for="section-ffde95e8f2d892e24e198d6ee6bbaf2c" class="flex justify-between">
-      <a href="http://localhost:1313/docs/nsi/cours_premiere/algorithmique/dichotomie/2_td/" class="">TD : dichotomie</a>
+      <a href="http://localhost:1313/docs/nsi/cours_premiere/algorithmique/dichotomie/2_td/" class="">TD</a>
     </label>
   
 
@@ -6888,1959 +6529,6 @@ MathJax.Hub.Config({
   
 
   
-    <input type="checkbox" id="section-1bf889a6a8db27cd60853b1eb7889208" class="toggle"  />
-    <label for="section-1bf889a6a8db27cd60853b1eb7889208" class="flex justify-between">
-      <a href="http://localhost:1313/docs/archives/isn/" class="">isn</a>
-    </label>
-  
-
-          
-  <ul>
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <input type="checkbox" id="section-8a85f3ef2876cc394021dbae34b33251" class="toggle"  />
-    <label for="section-8a85f3ef2876cc394021dbae34b33251" class="flex justify-between">
-      <a href="http://localhost:1313/docs/archives/isn/isn-travaux-pratiques/" class="">Travaux pratiques</a>
-    </label>
-  
-
-          
-  <ul>
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <input type="checkbox" id="section-e3cb49a371a4b393f3794d562c79ad1f" class="toggle"  />
-    <label for="section-e3cb49a371a4b393f3794d562c79ad1f" class="flex justify-between">
-      <a href="http://localhost:1313/docs/archives/isn/isn-travaux-pratiques/0-introduction/" class="">0. introduction</a>
-    </label>
-  
-
-          
-  <ul>
-    
-  </ul>
-
-        </li>
-      
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <input type="checkbox" id="section-e1821a1a869d928cf320a6b79dc0cb6a" class="toggle"  />
-    <label for="section-e1821a1a869d928cf320a6b79dc0cb6a" class="flex justify-between">
-      <a href="http://localhost:1313/docs/archives/isn/isn-travaux-pratiques/1-html/" class="">1. html</a>
-    </label>
-  
-
-          
-  <ul>
-    
-  </ul>
-
-        </li>
-      
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <input type="checkbox" id="section-a3c229966f0018a62369fd2e30e835ad" class="toggle"  />
-    <label for="section-a3c229966f0018a62369fd2e30e835ad" class="flex justify-between">
-      <a href="http://localhost:1313/docs/archives/isn/isn-travaux-pratiques/2-reseaux/" class="">2. Réseaux</a>
-    </label>
-  
-
-          
-  <ul>
-    
-  </ul>
-
-        </li>
-      
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <input type="checkbox" id="section-ef89365be1cef3bf4d50f951768227c6" class="toggle"  />
-    <label for="section-ef89365be1cef3bf4d50f951768227c6" class="flex justify-between">
-      <a href="http://localhost:1313/docs/archives/isn/isn-travaux-pratiques/3-codage-de-linformation/" class="">3. Codage de l&#39;information</a>
-    </label>
-  
-
-          
-  <ul>
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <input type="checkbox" id="section-6ab687c5966e7a7917739621d52234a0" class="toggle"  />
-    <label for="section-6ab687c5966e7a7917739621d52234a0" class="flex justify-between">
-      <a href="http://localhost:1313/docs/archives/isn/isn-travaux-pratiques/3-codage-de-linformation/3-1-representation-binaire/" class="">3.1 Représentation binaire</a>
-    </label>
-  
-
-          
-  <ul>
-    
-  </ul>
-
-        </li>
-      
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <input type="checkbox" id="section-780bba988d96b2e286f0643d77205e36" class="toggle"  />
-    <label for="section-780bba988d96b2e286f0643d77205e36" class="flex justify-between">
-      <a href="http://localhost:1313/docs/archives/isn/isn-travaux-pratiques/3-codage-de-linformation/3-2-codage-des-caracteres/" class="">3.2 Codage des caractères</a>
-    </label>
-  
-
-          
-  <ul>
-    
-  </ul>
-
-        </li>
-      
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <input type="checkbox" id="section-e869f9d3423d637b15996e31b6650387" class="toggle"  />
-    <label for="section-e869f9d3423d637b15996e31b6650387" class="flex justify-between">
-      <a href="http://localhost:1313/docs/archives/isn/isn-travaux-pratiques/3-codage-de-linformation/3-3-codage-des-couleurs/" class="">3.3 Codage des couleurs</a>
-    </label>
-  
-
-          
-  <ul>
-    
-  </ul>
-
-        </li>
-      
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <input type="checkbox" id="section-13844df65fbf97530367a4914faf3b61" class="toggle"  />
-    <label for="section-13844df65fbf97530367a4914faf3b61" class="flex justify-between">
-      <a href="http://localhost:1313/docs/archives/isn/isn-travaux-pratiques/3-codage-de-linformation/3-4-structure-des-pages-html/" class="">3.4 Structure des pages HTML</a>
-    </label>
-  
-
-          
-  <ul>
-    
-  </ul>
-
-        </li>
-      
-    
-  </ul>
-
-        </li>
-      
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <input type="checkbox" id="section-981699633176b2b1320699f61c6292e6" class="toggle"  />
-    <label for="section-981699633176b2b1320699f61c6292e6" class="flex justify-between">
-      <a href="http://localhost:1313/docs/archives/isn/isn-travaux-pratiques/3-bis-css/" class="">3.bis CSS</a>
-    </label>
-  
-
-          
-  <ul>
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <input type="checkbox" id="section-8262d20f70531d9de2ca656a0dada959" class="toggle"  />
-    <label for="section-8262d20f70531d9de2ca656a0dada959" class="flex justify-between">
-      <a href="http://localhost:1313/docs/archives/isn/isn-travaux-pratiques/3-bis-css/3b-1-separation-contenu-forme/" class="">3b.1 Séparation contenu / forme</a>
-    </label>
-  
-
-          
-  <ul>
-    
-  </ul>
-
-        </li>
-      
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <input type="checkbox" id="section-513eafcf9b1dc2bb21f37dbd8230ead4" class="toggle"  />
-    <label for="section-513eafcf9b1dc2bb21f37dbd8230ead4" class="flex justify-between">
-      <a href="http://localhost:1313/docs/archives/isn/isn-travaux-pratiques/3-bis-css/3b-2/" class="">3b.2 CSS intro</a>
-    </label>
-  
-
-          
-  <ul>
-    
-  </ul>
-
-        </li>
-      
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <input type="checkbox" id="section-4124538658c3f35e40396f1ca3c356f5" class="toggle"  />
-    <label for="section-4124538658c3f35e40396f1ca3c356f5" class="flex justify-between">
-      <a href="http://localhost:1313/docs/archives/isn/isn-travaux-pratiques/3-bis-css/3b-3-css-suite/" class="">3b.3 CSS suite</a>
-    </label>
-  
-
-          
-  <ul>
-    
-  </ul>
-
-        </li>
-      
-    
-  </ul>
-
-        </li>
-      
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <input type="checkbox" id="section-b43fda5907656544b29085697d304f21" class="toggle"  />
-    <label for="section-b43fda5907656544b29085697d304f21" class="flex justify-between">
-      <a href="http://localhost:1313/docs/archives/isn/isn-travaux-pratiques/4-programmation/" class="">4. Programmation</a>
-    </label>
-  
-
-          
-  <ul>
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <input type="checkbox" id="section-57b68ccdf8f131818a04ea0581f8dae1" class="toggle"  />
-    <label for="section-57b68ccdf8f131818a04ea0581f8dae1" class="flex justify-between">
-      <a href="http://localhost:1313/docs/archives/isn/isn-travaux-pratiques/4-programmation/4-1-introduction/" class="">4.01 Introduction</a>
-    </label>
-  
-
-          
-  <ul>
-    
-  </ul>
-
-        </li>
-      
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <input type="checkbox" id="section-b59e78011a1544a1c0b3c2cba00922f9" class="toggle"  />
-    <label for="section-b59e78011a1544a1c0b3c2cba00922f9" class="flex justify-between">
-      <a href="http://localhost:1313/docs/archives/isn/isn-travaux-pratiques/4-programmation/4-2-javascript-les-variables/" class="">4.02 Javascript, les variables</a>
-    </label>
-  
-
-          
-  <ul>
-    
-  </ul>
-
-        </li>
-      
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <input type="checkbox" id="section-289f2374c6db93463be721288b1d0f2b" class="toggle"  />
-    <label for="section-289f2374c6db93463be721288b1d0f2b" class="flex justify-between">
-      <a href="http://localhost:1313/docs/archives/isn/isn-travaux-pratiques/4-programmation/4-3-types-de-donnees/" class="">4.03 Types de données</a>
-    </label>
-  
-
-          
-  <ul>
-    
-  </ul>
-
-        </li>
-      
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <input type="checkbox" id="section-512248682c21fff4f8d6b5f9f545efa0" class="toggle"  />
-    <label for="section-512248682c21fff4f8d6b5f9f545efa0" class="flex justify-between">
-      <a href="http://localhost:1313/docs/archives/isn/isn-travaux-pratiques/4-programmation/4-4-fonctions/" class="">4.04 Fonctions</a>
-    </label>
-  
-
-          
-  <ul>
-    
-  </ul>
-
-        </li>
-      
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <input type="checkbox" id="section-89cf9991f6ebb38ff3eb0522f2e4e4f1" class="toggle"  />
-    <label for="section-89cf9991f6ebb38ff3eb0522f2e4e4f1" class="flex justify-between">
-      <a href="http://localhost:1313/docs/archives/isn/isn-travaux-pratiques/4-programmation/4-5-exemples-de-fonctions/" class="">4.05 Exemples de Fonctions</a>
-    </label>
-  
-
-          
-  <ul>
-    
-  </ul>
-
-        </li>
-      
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <input type="checkbox" id="section-c0d3977c5767b82349f450d6706142ba" class="toggle"  />
-    <label for="section-c0d3977c5767b82349f450d6706142ba" class="flex justify-between">
-      <a href="http://localhost:1313/docs/archives/isn/isn-travaux-pratiques/4-programmation/4-6-creation-de-fonctions/" class="">4.06 Création de fonctions</a>
-    </label>
-  
-
-          
-  <ul>
-    
-  </ul>
-
-        </li>
-      
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <input type="checkbox" id="section-c1908420bf7b46ec1247867c74e643d9" class="toggle"  />
-    <label for="section-c1908420bf7b46ec1247867c74e643d9" class="flex justify-between">
-      <a href="http://localhost:1313/docs/archives/isn/isn-travaux-pratiques/4-programmation/4-7-fonctions-et-environnement/" class="">4.07 Fonctions et environnement</a>
-    </label>
-  
-
-          
-  <ul>
-    
-  </ul>
-
-        </li>
-      
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <input type="checkbox" id="section-0d52ce2f61b20f886ea75a44a5c65119" class="toggle"  />
-    <label for="section-0d52ce2f61b20f886ea75a44a5c65119" class="flex justify-between">
-      <a href="http://localhost:1313/docs/archives/isn/isn-travaux-pratiques/4-programmation/4-8-fonctions-et-evenements/" class="">4.08 Fonctions et événements</a>
-    </label>
-  
-
-          
-  <ul>
-    
-  </ul>
-
-        </li>
-      
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <input type="checkbox" id="section-12e1b6af4a5e05e21b918807ab95d075" class="toggle"  />
-    <label for="section-12e1b6af4a5e05e21b918807ab95d075" class="flex justify-between">
-      <a href="http://localhost:1313/docs/archives/isn/isn-travaux-pratiques/4-programmation/4-9-lapi-google-map/" class="">4.09 L&#39;api Google Map</a>
-    </label>
-  
-
-          
-  <ul>
-    
-  </ul>
-
-        </li>
-      
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <input type="checkbox" id="section-4443f095eb69cec24b78cb7f33fb27c6" class="toggle"  />
-    <label for="section-4443f095eb69cec24b78cb7f33fb27c6" class="flex justify-between">
-      <a href="http://localhost:1313/docs/archives/isn/isn-travaux-pratiques/4-programmation/4-10-structure-conditionnelle/" class="">4.10 Structure conditionnelle</a>
-    </label>
-  
-
-          
-  <ul>
-    
-  </ul>
-
-        </li>
-      
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <input type="checkbox" id="section-52ec996976691453debbfdf9a21c937d" class="toggle"  />
-    <label for="section-52ec996976691453debbfdf9a21c937d" class="flex justify-between">
-      <a href="http://localhost:1313/docs/archives/isn/isn-travaux-pratiques/4-programmation/4-11-un-diaporama/" class="">4.11 Un diaporama</a>
-    </label>
-  
-
-          
-  <ul>
-    
-  </ul>
-
-        </li>
-      
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <input type="checkbox" id="section-82f1e2976ebaee624c1225c94e865cb2" class="toggle"  />
-    <label for="section-82f1e2976ebaee624c1225c94e865cb2" class="flex justify-between">
-      <a href="http://localhost:1313/docs/archives/isn/isn-travaux-pratiques/4-programmation/4-12-tutoriel-pong-en-javascript/" class="">4.12 Tutoriel pong en javascript</a>
-    </label>
-  
-
-          
-  <ul>
-    
-  </ul>
-
-        </li>
-      
-    
-  </ul>
-
-        </li>
-      
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <input type="checkbox" id="section-0b14506dd7c4ee371c27dcb0427bd76f" class="toggle"  />
-    <label for="section-0b14506dd7c4ee371c27dcb0427bd76f" class="flex justify-between">
-      <a href="http://localhost:1313/docs/archives/isn/isn-travaux-pratiques/4-bis-la-programmation-recursive/" class="">4.bis : La programmation récursive</a>
-    </label>
-  
-
-          
-  <ul>
-    
-  </ul>
-
-        </li>
-      
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <input type="checkbox" id="section-90a4ab78930e4b114469703f9b66a5f1" class="toggle"  />
-    <label for="section-90a4ab78930e4b114469703f9b66a5f1" class="flex justify-between">
-      <a href="http://localhost:1313/docs/archives/isn/isn-travaux-pratiques/4-ter-algorithmie-trier-parcourir-un-graphe/" class="">4.ter Algorithmie : deux problèmes classiques</a>
-    </label>
-  
-
-          
-  <ul>
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <input type="checkbox" id="section-d2e5450590fbc81faa6f56d0e3da0e54" class="toggle"  />
-    <label for="section-d2e5450590fbc81faa6f56d0e3da0e54" class="flex justify-between">
-      <a href="http://localhost:1313/docs/archives/isn/isn-travaux-pratiques/4-ter-algorithmie-trier-parcourir-un-graphe/4-ter-1-les-tris/" class="">4.ter - 1 : Les tris</a>
-    </label>
-  
-
-          
-  <ul>
-    
-  </ul>
-
-        </li>
-      
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <input type="checkbox" id="section-9a12581c0cc33bc7fa44f906f7e3686a" class="toggle"  />
-    <label for="section-9a12581c0cc33bc7fa44f906f7e3686a" class="flex justify-between">
-      <a href="http://localhost:1313/docs/archives/isn/isn-travaux-pratiques/4-ter-algorithmie-trier-parcourir-un-graphe/4-ter-2-parcourir-un-graphe/" class="">4.ter - 2 : parcourir un graphe</a>
-    </label>
-  
-
-          
-  <ul>
-    
-  </ul>
-
-        </li>
-      
-    
-  </ul>
-
-        </li>
-      
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <input type="checkbox" id="section-7028c33975e91dc7b181ad8113712929" class="toggle"  />
-    <label for="section-7028c33975e91dc7b181ad8113712929" class="flex justify-between">
-      <a href="http://localhost:1313/docs/archives/isn/isn-travaux-pratiques/5-dessiner-une-palette-de-couleurs/" class="">5. Dessiner une palette de couleurs</a>
-    </label>
-  
-
-          
-  <ul>
-    
-  </ul>
-
-        </li>
-      
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <input type="checkbox" id="section-38db843c3414d772ea5311ace9490741" class="toggle"  />
-    <label for="section-38db843c3414d772ea5311ace9490741" class="flex justify-between">
-      <a href="http://localhost:1313/docs/archives/isn/isn-travaux-pratiques/6-architecture/" class="">6. Architecture</a>
-    </label>
-  
-
-          
-  <ul>
-    
-  </ul>
-
-        </li>
-      
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <input type="checkbox" id="section-6717a630f4c3795f9a0a227a620104c2" class="toggle"  />
-    <label for="section-6717a630f4c3795f9a0a227a620104c2" class="flex justify-between">
-      <a href="http://localhost:1313/docs/archives/isn/isn-travaux-pratiques/7-steganographie/" class="">7. Stéganographie</a>
-    </label>
-  
-
-          
-  <ul>
-    
-  </ul>
-
-        </li>
-      
-    
-  </ul>
-
-        </li>
-      
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <input type="checkbox" id="section-4f371ccf83e3a26262d4276d3d003275" class="toggle"  />
-    <label for="section-4f371ccf83e3a26262d4276d3d003275" class="flex justify-between">
-      <a href="http://localhost:1313/docs/archives/isn/isn-projets-textes-officiels-et-conseils-generaux/" class="">Projets : contraintes, documents officiels, conseils</a>
-    </label>
-  
-
-          
-  <ul>
-    
-  </ul>
-
-        </li>
-      
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <input type="checkbox" id="section-4eb941bee39204e87e6b0f4d6bf6bd14" class="toggle"  />
-    <label for="section-4eb941bee39204e87e6b0f4d6bf6bd14" class="flex justify-between">
-      <a href="http://localhost:1313/docs/archives/isn/sujets-des-projets/" class="">Sujets des mini projets - Liste des projets</a>
-    </label>
-  
-
-          
-  <ul>
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <input type="checkbox" id="section-7976b3d89f43eb77955b9afd840d03e2" class="toggle"  />
-    <label for="section-7976b3d89f43eb77955b9afd840d03e2" class="flex justify-between">
-      <a href="http://localhost:1313/docs/archives/isn/sujets-des-projets/2048-projet/" class="">2048 - projet</a>
-    </label>
-  
-
-          
-  <ul>
-    
-  </ul>
-
-        </li>
-      
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <input type="checkbox" id="section-062f666b54b4edd94191a1286c23256b" class="toggle"  />
-    <label for="section-062f666b54b4edd94191a1286c23256b" class="flex justify-between">
-      <a href="http://localhost:1313/docs/archives/isn/sujets-des-projets/bowling-elastique/" class="">Bowling elastique</a>
-    </label>
-  
-
-          
-  <ul>
-    
-  </ul>
-
-        </li>
-      
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <input type="checkbox" id="section-2c91da7db27e8d948bc9a5d5e49c7afc" class="toggle"  />
-    <label for="section-2c91da7db27e8d948bc9a5d5e49c7afc" class="flex justify-between">
-      <a href="http://localhost:1313/docs/archives/isn/sujets-des-projets/bowling-paralaxe/" class="">Bowling Parallaxe</a>
-    </label>
-  
-
-          
-  <ul>
-    
-  </ul>
-
-        </li>
-      
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <input type="checkbox" id="section-941102a6b03fed04c295c04dd6671f49" class="toggle"  />
-    <label for="section-941102a6b03fed04c295c04dd6671f49" class="flex justify-between">
-      <a href="http://localhost:1313/docs/archives/isn/sujets-des-projets/domotique-et-raspberry-pi/" class="">Domotique et raspberry pi</a>
-    </label>
-  
-
-          
-  <ul>
-    
-  </ul>
-
-        </li>
-      
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <input type="checkbox" id="section-410adb4c4e815fcdd99dece5d2ef97ff" class="toggle"  />
-    <label for="section-410adb4c4e815fcdd99dece5d2ef97ff" class="flex justify-between">
-      <a href="http://localhost:1313/docs/archives/isn/sujets-des-projets/chemins_hamiltoniens_polyedres/" class="">Chemins Hamiltoniens sur les Polyèdres</a>
-    </label>
-  
-
-          
-  <ul>
-    
-  </ul>
-
-        </li>
-      
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <input type="checkbox" id="section-69cc0ee63667c9eb299395dd1da17201" class="toggle"  />
-    <label for="section-69cc0ee63667c9eb299395dd1da17201" class="flex justify-between">
-      <a href="http://localhost:1313/docs/archives/isn/sujets-des-projets/labyrinthe/" class="">Labyrinthe</a>
-    </label>
-  
-
-          
-  <ul>
-    
-  </ul>
-
-        </li>
-      
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <input type="checkbox" id="section-3aa019d9a2206aff32ec4e211a6ccedf" class="toggle"  />
-    <label for="section-3aa019d9a2206aff32ec4e211a6ccedf" class="flex justify-between">
-      <a href="http://localhost:1313/docs/archives/isn/sujets-des-projets/jeu-de-la-vie/" class="">Jeu de la vie</a>
-    </label>
-  
-
-          
-  <ul>
-    
-  </ul>
-
-        </li>
-      
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <input type="checkbox" id="section-13538af103ac085713185b64daa39c08" class="toggle"  />
-    <label for="section-13538af103ac085713185b64daa39c08" class="flex justify-between">
-      <a href="http://localhost:1313/docs/archives/isn/sujets-des-projets/mastermind-js/" class="">Mastermind (js)</a>
-    </label>
-  
-
-          
-  <ul>
-    
-  </ul>
-
-        </li>
-      
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <input type="checkbox" id="section-f21d882a245c1555f31fd0b12b5fc297" class="toggle"  />
-    <label for="section-f21d882a245c1555f31fd0b12b5fc297" class="flex justify-between">
-      <a href="http://localhost:1313/docs/archives/isn/sujets-des-projets/othello-reversi/" class="">Othello / Reversi</a>
-    </label>
-  
-
-          
-  <ul>
-    
-  </ul>
-
-        </li>
-      
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <input type="checkbox" id="section-4a172e9517b4bb98c43a192866249dc2" class="toggle"  />
-    <label for="section-4a172e9517b4bb98c43a192866249dc2" class="flex justify-between">
-      <a href="http://localhost:1313/docs/archives/isn/sujets-des-projets/papy-panic-rpi-python/" class="">Papy Panic (RPI, Python)</a>
-    </label>
-  
-
-          
-  <ul>
-    
-  </ul>
-
-        </li>
-      
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <input type="checkbox" id="section-c750ee860a753568c8f39b6c86c6c669" class="toggle"  />
-    <label for="section-c750ee860a753568c8f39b6c86c6c669" class="flex justify-between">
-      <a href="http://localhost:1313/docs/archives/isn/sujets-des-projets/puissance-4-js/" class="">Puissance 4 (js)</a>
-    </label>
-  
-
-          
-  <ul>
-    
-  </ul>
-
-        </li>
-      
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <input type="checkbox" id="section-00822ce0e0bf277fdd70a392d8ea166d" class="toggle"  />
-    <label for="section-00822ce0e0bf277fdd70a392d8ea166d" class="flex justify-between">
-      <a href="http://localhost:1313/docs/archives/isn/sujets-des-projets/roguelike/" class="">RogueLike</a>
-    </label>
-  
-
-          
-  <ul>
-    
-  </ul>
-
-        </li>
-      
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <input type="checkbox" id="section-35b0312da2131d325066067caac14885" class="toggle"  />
-    <label for="section-35b0312da2131d325066067caac14885" class="flex justify-between">
-      <a href="http://localhost:1313/docs/archives/isn/sujets-des-projets/smartcity/" class="">Smart City</a>
-    </label>
-  
-
-          
-  <ul>
-    
-  </ul>
-
-        </li>
-      
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <input type="checkbox" id="section-b7d441378dd81a99431742bf7562070b" class="toggle"  />
-    <label for="section-b7d441378dd81a99431742bf7562070b" class="flex justify-between">
-      <a href="http://localhost:1313/docs/archives/isn/sujets-des-projets/sandpiles/" class="">Sandpiles</a>
-    </label>
-  
-
-          
-  <ul>
-    
-  </ul>
-
-        </li>
-      
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <input type="checkbox" id="section-3d76c71a04df5c3ff62eeb4040196a04" class="toggle"  />
-    <label for="section-3d76c71a04df5c3ff62eeb4040196a04" class="flex justify-between">
-      <a href="http://localhost:1313/docs/archives/isn/sujets-des-projets/serveur-meteo/" class="">Serveur méteo</a>
-    </label>
-  
-
-          
-  <ul>
-    
-  </ul>
-
-        </li>
-      
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <input type="checkbox" id="section-1aa255bbb4ee0141aa6a1c45d3984316" class="toggle"  />
-    <label for="section-1aa255bbb4ee0141aa6a1c45d3984316" class="flex justify-between">
-      <a href="http://localhost:1313/docs/archives/isn/sujets-des-projets/snake-js-canvas/" class="">Snake (js, canvas)</a>
-    </label>
-  
-
-          
-  <ul>
-    
-  </ul>
-
-        </li>
-      
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <input type="checkbox" id="section-c445a2a4b39238042117e4cffd53370f" class="toggle"  />
-    <label for="section-c445a2a4b39238042117e4cffd53370f" class="flex justify-between">
-      <a href="http://localhost:1313/docs/archives/isn/sujets-des-projets/space-orbit/" class="">Space orbit</a>
-    </label>
-  
-
-          
-  <ul>
-    
-  </ul>
-
-        </li>
-      
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <input type="checkbox" id="section-be5eadf25898fde27619d302c678cdcd" class="toggle"  />
-    <label for="section-be5eadf25898fde27619d302c678cdcd" class="flex justify-between">
-      <a href="http://localhost:1313/docs/archives/isn/sujets-des-projets/stack/" class="">Stack</a>
-    </label>
-  
-
-          
-  <ul>
-    
-  </ul>
-
-        </li>
-      
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <input type="checkbox" id="section-c7c45c55c503dd841a375e9802a5bd03" class="toggle"  />
-    <label for="section-c7c45c55c503dd841a375e9802a5bd03" class="flex justify-between">
-      <a href="http://localhost:1313/docs/archives/isn/sujets-des-projets/video-surveillance-rpi-python/" class="">Vidéo Surveillance (RPI, Python)</a>
-    </label>
-  
-
-          
-  <ul>
-    
-  </ul>
-
-        </li>
-      
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <input type="checkbox" id="section-2584c440a8cae8fbe1584a866957b005" class="toggle"  />
-    <label for="section-2584c440a8cae8fbe1584a866957b005" class="flex justify-between">
-      <a href="http://localhost:1313/docs/archives/isn/sujets-des-projets/yt-chat/" class="">YT Chat</a>
-    </label>
-  
-
-          
-  <ul>
-    
-  </ul>
-
-        </li>
-      
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <input type="checkbox" id="section-efa6dc3fe7bc9fc2fb3f444ef469c882" class="toggle"  />
-    <label for="section-efa6dc3fe7bc9fc2fb3f444ef469c882" class="flex justify-between">
-      <a href="http://localhost:1313/docs/archives/isn/sujets-des-projets/zagzig-js-canvas/" class="">Zagzig (js, canvas)</a>
-    </label>
-  
-
-          
-  <ul>
-    
-  </ul>
-
-        </li>
-      
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <input type="checkbox" id="section-c6f61433e6cf1d249f66f9ce3e42a3c1" class="toggle"  />
-    <label for="section-c6f61433e6cf1d249f66f9ce3e42a3c1" class="flex justify-between">
-      <a href="http://localhost:1313/docs/archives/isn/sujets-des-projets/archives/" class="">Archives</a>
-    </label>
-  
-
-          
-  <ul>
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <input type="checkbox" id="section-b1a1908f14933ff81824111f5ead025d" class="toggle"  />
-    <label for="section-b1a1908f14933ff81824111f5ead025d" class="flex justify-between">
-      <a href="http://localhost:1313/docs/archives/isn/sujets-des-projets/archives/tetris/" class="">Tetris</a>
-    </label>
-  
-
-          
-  <ul>
-    
-  </ul>
-
-        </li>
-      
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <input type="checkbox" id="section-a183e2907b556f58c2b93d04bdb0145f" class="toggle"  />
-    <label for="section-a183e2907b556f58c2b93d04bdb0145f" class="flex justify-between">
-      <a href="http://localhost:1313/docs/archives/isn/sujets-des-projets/archives/site-marchand/" class="">Site marchand</a>
-    </label>
-  
-
-          
-  <ul>
-    
-  </ul>
-
-        </li>
-      
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <input type="checkbox" id="section-1736e05a3266154e4b6e4444967950fa" class="toggle"  />
-    <label for="section-1736e05a3266154e4b6e4444967950fa" class="flex justify-between">
-      <a href="http://localhost:1313/docs/archives/isn/sujets-des-projets/archives/pendu/" class="">Pendu</a>
-    </label>
-  
-
-          
-  <ul>
-    
-  </ul>
-
-        </li>
-      
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <input type="checkbox" id="section-52c67410fe8093e49014d728659bd749" class="toggle"  />
-    <label for="section-52c67410fe8093e49014d728659bd749" class="flex justify-between">
-      <a href="http://localhost:1313/docs/archives/isn/sujets-des-projets/archives/calcul-mental/" class="">Calcul mental</a>
-    </label>
-  
-
-          
-  <ul>
-    
-  </ul>
-
-        </li>
-      
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <input type="checkbox" id="section-174d0b4e7320d61df8999027d4ca6489" class="toggle"  />
-    <label for="section-174d0b4e7320d61df8999027d4ca6489" class="flex justify-between">
-      <a href="http://localhost:1313/docs/archives/isn/sujets-des-projets/archives/station-meteo/" class="">Station météo</a>
-    </label>
-  
-
-          
-  <ul>
-    
-  </ul>
-
-        </li>
-      
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <input type="checkbox" id="section-ca94ee274f1e483339e428b6cada9036" class="toggle"  />
-    <label for="section-ca94ee274f1e483339e428b6cada9036" class="flex justify-between">
-      <a href="http://localhost:1313/docs/archives/isn/sujets-des-projets/archives/wolfram-alpha-like/" class="">Wolfram Alpha like</a>
-    </label>
-  
-
-          
-  <ul>
-    
-  </ul>
-
-        </li>
-      
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <input type="checkbox" id="section-abce1bfd7e3708b9ee88a373b0e608e0" class="toggle"  />
-    <label for="section-abce1bfd7e3708b9ee88a373b0e608e0" class="flex justify-between">
-      <a href="http://localhost:1313/docs/archives/isn/sujets-des-projets/archives/raspberry-pi-version-2015/" class="">Raspberry Pi (version 2015)</a>
-    </label>
-  
-
-          
-  <ul>
-    
-  </ul>
-
-        </li>
-      
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <input type="checkbox" id="section-5a0d7232a6eea18417708f83a8ff1385" class="toggle"  />
-    <label for="section-5a0d7232a6eea18417708f83a8ff1385" class="flex justify-between">
-      <a href="http://localhost:1313/docs/archives/isn/sujets-des-projets/archives/le-compte-est-bon/" class="">Le compte est bon</a>
-    </label>
-  
-
-          
-  <ul>
-    
-  </ul>
-
-        </li>
-      
-    
-  </ul>
-
-        </li>
-      
-    
-  </ul>
-
-        </li>
-      
-    
-  </ul>
-
-        </li>
-      
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <input type="checkbox" id="section-7ae8c2c533bbeebd861f6fbddc3b662e" class="toggle"  />
-    <label for="section-7ae8c2c533bbeebd861f6fbddc3b662e" class="flex justify-between">
-      <a href="http://localhost:1313/docs/archives/icn/" class="">icn</a>
-    </label>
-  
-
-          
-  <ul>
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <input type="checkbox" id="section-b7d61144961dcddc9d37c03ce7de20de" class="toggle"  />
-    <label for="section-b7d61144961dcddc9d37c03ce7de20de" class="flex justify-between">
-      <a href="http://localhost:1313/docs/archives/icn/module-1/" class="">module 1 : échanger</a>
-    </label>
-  
-
-          
-  <ul>
-    
-  </ul>
-
-        </li>
-      
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <input type="checkbox" id="section-eef1be89f77b4763db62cbdd0c151b88" class="toggle"  />
-    <label for="section-eef1be89f77b4763db62cbdd0c151b88" class="flex justify-between">
-      <a href="http://localhost:1313/docs/archives/icn/module-2/" class="">module 2 : web</a>
-    </label>
-  
-
-          
-  <ul>
-    
-  </ul>
-
-        </li>
-      
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <input type="checkbox" id="section-d2b965265dc856938fcacd5d5756d512" class="toggle"  />
-    <label for="section-d2b965265dc856938fcacd5d5756d512" class="flex justify-between">
-      <a href="http://localhost:1313/docs/archives/icn/module-5-raspberry-pi/" class="">module 5 : raspberry pi</a>
-    </label>
-  
-
-          
-  <ul>
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <input type="checkbox" id="section-38a9188507436368611ae1ea271f0152" class="toggle"  />
-    <label for="section-38a9188507436368611ae1ea271f0152" class="flex justify-between">
-      <a href="http://localhost:1313/docs/archives/icn/module-5-raspberry-pi/partie-1-prise-en-main-du-raspberry-pi/" class="">partie 1 - Prise en main du raspberry pi</a>
-    </label>
-  
-
-          
-  <ul>
-    
-  </ul>
-
-        </li>
-      
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <input type="checkbox" id="section-e50325f3479bba43adfdd4cd6cd7006a" class="toggle"  />
-    <label for="section-e50325f3479bba43adfdd4cd6cd7006a" class="flex justify-between">
-      <a href="http://localhost:1313/docs/archives/icn/module-5-raspberry-pi/partie-4-dautres-composants-classiques/" class="">partie 4 - d&#39;autres composants classiques</a>
-    </label>
-  
-
-          
-  <ul>
-    
-  </ul>
-
-        </li>
-      
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <input type="checkbox" id="section-a53ff4e536f4c1368eca13abfd7615dd" class="toggle"  />
-    <label for="section-a53ff4e536f4c1368eca13abfd7615dd" class="flex justify-between">
-      <a href="http://localhost:1313/docs/archives/icn/module-5-raspberry-pi/partie-3-quelques-montages-electroniques/" class="">partie 3 - Quelques montages électroniques simples</a>
-    </label>
-  
-
-          
-  <ul>
-    
-  </ul>
-
-        </li>
-      
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <input type="checkbox" id="section-1dbc3eabe3586728a4061c738dc993ca" class="toggle"  />
-    <label for="section-1dbc3eabe3586728a4061c738dc993ca" class="flex justify-between">
-      <a href="http://localhost:1313/docs/archives/icn/module-5-raspberry-pi/module-5-partie-2-raspberry-et-electronique/" class="">partie 2 - Raspberry Pi et electronique : une introduction</a>
-    </label>
-  
-
-          
-  <ul>
-    
-  </ul>
-
-        </li>
-      
-    
-  </ul>
-
-        </li>
-      
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <input type="checkbox" id="section-eb81f38a4942f615a80f538344a905cd" class="toggle"  />
-    <label for="section-eb81f38a4942f615a80f538344a905cd" class="flex justify-between">
-      <a href="http://localhost:1313/docs/archives/icn/0-reseau-internet-et-protocole-http/" class="">00. Réseau : internet et protocole HTTP</a>
-    </label>
-  
-
-          
-  <ul>
-    
-  </ul>
-
-        </li>
-      
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <input type="checkbox" id="section-5ecbfecd4097aee4cd4a9f22c30251f2" class="toggle"  />
-    <label for="section-5ecbfecd4097aee4cd4a9f22c30251f2" class="flex justify-between">
-      <a href="http://localhost:1313/docs/archives/icn/1-lexicometrie/" class="">01. Lexicométrie</a>
-    </label>
-  
-
-          
-  <ul>
-    
-  </ul>
-
-        </li>
-      
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <input type="checkbox" id="section-b22203eab25c790de06754baeda1810a" class="toggle"  />
-    <label for="section-b22203eab25c790de06754baeda1810a" class="flex justify-between">
-      <a href="http://localhost:1313/docs/archives/icn/2-cryptographie/" class="">02. Cryptographie</a>
-    </label>
-  
-
-          
-  <ul>
-    
-  </ul>
-
-        </li>
-      
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <input type="checkbox" id="section-b789694d930f68ba8afe3c2cbe5f57bc" class="toggle"  />
-    <label for="section-b789694d930f68ba8afe3c2cbe5f57bc" class="flex justify-between">
-      <a href="http://localhost:1313/docs/archives/icn/3-casser-un-code-secret/" class="">03. Casser un code secret</a>
-    </label>
-  
-
-          
-  <ul>
-    
-  </ul>
-
-        </li>
-      
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <input type="checkbox" id="section-90e78090ad050422ca4f0c7583265b07" class="toggle"  />
-    <label for="section-90e78090ad050422ca4f0c7583265b07" class="flex justify-between">
-      <a href="http://localhost:1313/docs/archives/icn/4-images-couleurs/" class="">04. Images, couleurs</a>
-    </label>
-  
-
-          
-  <ul>
-    
-  </ul>
-
-        </li>
-      
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <input type="checkbox" id="section-5f8c322e85e0f8db2be915a72f8d80e2" class="toggle"  />
-    <label for="section-5f8c322e85e0f8db2be915a72f8d80e2" class="flex justify-between">
-      <a href="http://localhost:1313/docs/archives/icn/5-bis-popart-2/" class="">05. bis - popart</a>
-    </label>
-  
-
-          
-  <ul>
-    
-  </ul>
-
-        </li>
-      
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <input type="checkbox" id="section-0301d1e37c6a471271b93eab389af5d1" class="toggle"  />
-    <label for="section-0301d1e37c6a471271b93eab389af5d1" class="flex justify-between">
-      <a href="http://localhost:1313/docs/archives/icn/5-traitement-des-images-matricielles/" class="">05. Traitement des images matricielles</a>
-    </label>
-  
-
-          
-  <ul>
-    
-  </ul>
-
-        </li>
-      
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <input type="checkbox" id="section-60abdd82993e14ecbdfa3a3078456360" class="toggle"  />
-    <label for="section-60abdd82993e14ecbdfa3a3078456360" class="flex justify-between">
-      <a href="http://localhost:1313/docs/archives/icn/6-creation-dimages-vectorielles/" class="">06. Création d&#39;images vectorielles</a>
-    </label>
-  
-
-          
-  <ul>
-    
-  </ul>
-
-        </li>
-      
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <input type="checkbox" id="section-62c8f382d06c3c22f078bcd2689e8e49" class="toggle"  />
-    <label for="section-62c8f382d06c3c22f078bcd2689e8e49" class="flex justify-between">
-      <a href="http://localhost:1313/docs/archives/icn/7-cartographie/" class="">07. Cartographie</a>
-    </label>
-  
-
-          
-  <ul>
-    
-  </ul>
-
-        </li>
-      
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <input type="checkbox" id="section-025b0f8f229cb08d96395f293acaf548" class="toggle"  />
-    <label for="section-025b0f8f229cb08d96395f293acaf548" class="flex justify-between">
-      <a href="http://localhost:1313/docs/archives/icn/8-les-donnees-csv-json-et-geojson/" class="">08. Les données CSV, JSON et GeoJSON</a>
-    </label>
-  
-
-          
-  <ul>
-    
-  </ul>
-
-        </li>
-      
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <input type="checkbox" id="section-5b86b7f6945d1b1d41c14a03d1eb84d4" class="toggle"  />
-    <label for="section-5b86b7f6945d1b1d41c14a03d1eb84d4" class="flex justify-between">
-      <a href="http://localhost:1313/docs/archives/icn/9-python-camera/" class="">09. Computer vision : manipulation en live du flux d&#39;une camera</a>
-    </label>
-  
-
-          
-  <ul>
-    
-  </ul>
-
-        </li>
-      
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <input type="checkbox" id="section-699ac153ba3204ab05dc88798146f41f" class="toggle"  />
-    <label for="section-699ac153ba3204ab05dc88798146f41f" class="flex justify-between">
-      <a href="http://localhost:1313/docs/archives/icn/10-un-jeu-complet-en-pygame-dodger/" class="">10. Un jeu complet en pygame : dodger</a>
-    </label>
-  
-
-          
-  <ul>
-    
-  </ul>
-
-        </li>
-      
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <input type="checkbox" id="section-54c449e358ea531ac3e18386bb0f5f7e" class="toggle"  />
-    <label for="section-54c449e358ea531ac3e18386bb0f5f7e" class="flex justify-between">
-      <a href="http://localhost:1313/docs/archives/icn/11.pygame-et-la-camera-introduction-du-module/" class="">11. Pygame et la camera : introduction du module</a>
-    </label>
-  
-
-          
-  <ul>
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <input type="checkbox" id="section-62a6ef3b6f695974ac2bb1f80ea049e0" class="toggle"  />
-    <label for="section-62a6ef3b6f695974ac2bb1f80ea049e0" class="flex justify-between">
-      <a href="http://localhost:1313/docs/archives/icn/11.pygame-et-la-camera-introduction-du-module/tutoriel_python_camera/" class="">tutoriel_python_camera</a>
-    </label>
-  
-
-          
-  <ul>
-    
-  </ul>
-
-        </li>
-      
-    
-  </ul>
-
-        </li>
-      
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <input type="checkbox" id="section-7ed24d5af0e94defb0147a4a023d6d67" class="toggle"  />
-    <label for="section-7ed24d5af0e94defb0147a4a023d6d67" class="flex justify-between">
-      <a href="http://localhost:1313/docs/archives/icn/annexe-logiciels-libres-les-bonnes-pratiques/" class="">Annexe : Logiciels libres, les bonnes pratiques</a>
-    </label>
-  
-
-          
-  <ul>
-    
-  </ul>
-
-        </li>
-      
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <input type="checkbox" id="section-1c38a042df0d296181ae048e75d16e72" class="toggle"  />
-    <label for="section-1c38a042df0d296181ae048e75d16e72" class="flex justify-between">
-      <a href="http://localhost:1313/docs/archives/icn/revue-de-projet/" class="">devoir : Vacances de Noël - Revue de projet</a>
-    </label>
-  
-
-          
-  <ul>
-    
-  </ul>
-
-        </li>
-      
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <input type="checkbox" id="section-d5f20c334b4da6718317a07a46c2c72f" class="toggle"  />
-    <label for="section-d5f20c334b4da6718317a07a46c2c72f" class="flex justify-between">
-      <a href="http://localhost:1313/docs/archives/icn/devoir-vacances-de-toussaint-construct-2/" class="">devoir : vacances de Toussaint - Construct 2</a>
-    </label>
-  
-
-          
-  <ul>
-    
-  </ul>
-
-        </li>
-      
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <input type="checkbox" id="section-7a7dadc5429aa143a81a2878e806359f" class="toggle"  />
-    <label for="section-7a7dadc5429aa143a81a2878e806359f" class="flex justify-between">
-      <a href="http://localhost:1313/docs/archives/icn/internet-of-objects-iot/" class="">Internet of Objects : IoT</a>
-    </label>
-  
-
-          
-  <ul>
-    
-  </ul>
-
-        </li>
-      
-    
-  </ul>
-
-        </li>
-      
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <input type="checkbox" id="section-8c56b57bd99268bef9ef455632108111" class="toggle"  />
-    <label for="section-8c56b57bd99268bef9ef455632108111" class="flex justify-between">
-      <a href="http://localhost:1313/docs/archives/collegues/" class="">collègues</a>
-    </label>
-  
-
-          
-  <ul>
-    
-  </ul>
-
-        </li>
-      
-    
-      
-        <li>
-          
-  
-  
-
-  
     <input type="checkbox" id="section-9e23cb281dc8f24d8032a72b8bcb6784" class="toggle"  />
     <label for="section-9e23cb281dc8f24d8032a72b8bcb6784" class="flex justify-between">
       <a href="http://localhost:1313/docs/ressources/" class="">ressources</a>
@@ -8972,97 +6660,6 @@ MathJax.Hub.Config({
         </li>
       
     
-      
-        <li>
-          
-  
-  
-
-  
-    <input type="checkbox" id="section-caf7d08c668e83c3a189a611b7c68944" class="toggle"  />
-    <label for="section-caf7d08c668e83c3a189a611b7c68944" class="flex justify-between">
-      <a href="http://localhost:1313/docs/archives/maths/" class="">maths</a>
-    </label>
-  
-
-          
-  <ul>
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <input type="checkbox" id="section-106b02b319a57cba37a6992f3f1cf819" class="toggle"  />
-    <label for="section-106b02b319a57cba37a6992f3f1cf819" class="flex justify-between">
-      <a href="http://localhost:1313/docs/archives/maths/seconde/" class="">seconde</a>
-    </label>
-  
-
-          
-  <ul>
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <a href="http://localhost:1313/docs/archives/maths/seconde/chapitres/" class="">Chapitres</a>
-  
-
-          
-  <ul>
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <a href="http://localhost:1313/docs/archives/maths/seconde/chapitres/affines/" class="">Fonctions affines</a>
-  
-
-          
-  <ul>
-    
-  </ul>
-
-        </li>
-      
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <a href="http://localhost:1313/docs/archives/maths/seconde/chapitres/echantillonnage/echantionnage_2022/" class="">Échantillonnage</a>
-  
-
-        </li>
-      
-    
-  </ul>
-
-        </li>
-      
-    
-  </ul>
-
-        </li>
-      
-    
-  </ul>
-
-        </li>
-      
-    
   </ul>
 
 
@@ -9100,7 +6697,7 @@ MathJax.Hub.Config({
     <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
   </label>
 
-  <strong>Cours : dichotomie</strong>
+  <strong>Cours</strong>
 
   <label for="toc-control">
     
@@ -9117,22 +6714,37 @@ MathJax.Hub.Config({
 <h1>Table des matières</h1>
 <nav id="TableOfContents">
   <ul>
-    <li><a href="#présentation">Présentation</a></li>
-    <li><a href="#dichotomie-vs-recherche-séquentielle">Dichotomie vs recherche séquentielle</a></li>
-    <li><a href="#principe">Principe</a></li>
-    <li><a href="#contexte">Contexte</a></li>
-    <li><a href="#dichotomie">Dichotomie</a></li>
-    <li><a href="#déroulé-sur-lexemple-à-la-main">Déroulé sur l&rsquo;exemple, à la main.</a></li>
-    <li><a href="#lalgorithme">L&rsquo;algorithme</a></li>
-    <li><a href="#même-exemple-avec-les-variables">Même exemple, avec les variables</a>
+    <li><a href="#introduction--recherche-par-balayage">Introduction : recherche par balayage</a>
       <ul>
         <li><a href="#déroulé">Déroulé</a></li>
-        <li><a href="#complexité">Complexité</a></li>
+        <li><a href="#remarques">Remarques</a></li>
+      </ul>
+    </li>
+    <li><a href="#recherche-dichotomique">Recherche dichotomique</a>
+      <ul>
+        <li><a href="#présentation">Présentation</a></li>
+        <li><a href="#déroulé-1">Déroulé</a></li>
+      </ul>
+    </li>
+    <li><a href="#construction-de-lalgorithme">Construction de l&rsquo;algorithme</a></li>
+    <li><a href="#codes-à-compléter">Codes à compléter</a>
+      <ul>
+        <li><a href="#exemples-pour-tester-votre-fonction">Exemples pour tester votre fonction</a></li>
+        <li><a href="#fonction-à-compléter">Fonction à compléter</a></li>
+      </ul>
+    </li>
+    <li><a href="#algorithme">Algorithme</a></li>
+    <li><a href="#déroulé-de-lalgorithme">Déroulé de l&rsquo;algorithme</a></li>
+    <li><a href="#remarques-1">Remarques</a>
+      <ul>
+        <li><a href="#terminaison">Terminaison</a></li>
       </ul>
     </li>
     <li><a href="#conclusion">Conclusion</a>
       <ul>
-        <li><a href="#meilleure-stratégie--recherche-séquentielle-ou-tri--recherche-dichotomique-">Meilleure stratégie : recherche séquentielle ou tri + recherche dichotomique ?</a></li>
+        <li><a href="#algorithme-1">Algorithme</a></li>
+        <li><a href="#remarques-sur-le-coût">Remarques sur le coût</a></li>
+        <li><a href="#nombre-détapes">Nombre d&rsquo;étapes</a></li>
       </ul>
     </li>
   </ul>
@@ -9148,358 +6760,536 @@ MathJax.Hub.Config({
 
                 
                 
-<article class="markdown"><h1 id="recherche-dichotomique-dans-un-tableau">
-  Recherche dichotomique dans un tableau
-  <a class="anchor" href="#recherche-dichotomique-dans-un-tableau">#</a>
-</h1>
-<p>pdf <a href="/uploads/docsnsi/algo/dicho/dicho_exemple-Article.pdf">présentation</a> et <a href="/uploads/docsnsi/algo/dicho/dicho_exemple-Beamer.pdf">slides</a></p>
-<h2 id="présentation">
+<article class="markdown"><p>Le tableau <code>T</code> contient-il <code>x</code> ? À quelle position ?</p>
+<blockquote class="book-hint info">
+  <em>C&rsquo;est un problème déjà rencontré lors des parcours séquentiels. Nous allons étudier un algorithme beaucoup plus rapide&hellip; mais qui ne s&rsquo;applique qu&rsquo;aux tableaux <strong>triés</strong></em>.
+</blockquote>
+
+<h2 id="introduction--recherche-par-balayage">
+  Introduction : recherche par balayage
+  <a class="anchor" href="#introduction--recherche-par-balayage">#</a>
+</h2>
+<p>Déjà abordé lors des <em><a href="/docs/nsi/cours_premiere/algorithmique/sequentiel/cours/#algorithmes-sur-les-tableaux-1">parcours séquentiels</a></em></p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>x <span style="color:#555">=</span> <span style="color:#f60">5</span>
+</span></span><span style="display:flex;"><span>T <span style="color:#555">=</span> [<span style="color:#f60">11</span>,  <span style="color:#f60">7</span>,  <span style="color:#f60">9</span>,  <span style="color:#f60">5</span>, <span style="color:#f60">15</span>, <span style="color:#f60">13</span>,  <span style="color:#f60">3</span>,  <span style="color:#f60">1</span>]
+</span></span><span style="display:flex;"><span>      <span style="color:#f60">0</span>   <span style="color:#f60">1</span>   <span style="color:#f60">2</span>   <span style="color:#f60">3</span>   <span style="color:#f60">4</span>   <span style="color:#f60">5</span>   <span style="color:#f60">6</span>   <span style="color:#f60">7</span>
+</span></span><span style="display:flex;"><span>                  <span style="color:#555">^</span>
+</span></span></code></pre></div><blockquote class="book-hint info">
+  <div class="highlight"><pre tabindex="0" style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#069;font-weight:bold">def</span> <span style="color:#c0f">recherche</span>(T, x):
+</span></span><span style="display:flex;"><span>    Pour i allant de <span style="color:#f60">0</span> à <span style="color:#366">len</span>(T) <span style="color:#555">-</span> <span style="color:#f60">1</span>:
+</span></span><span style="display:flex;"><span>        Si x <span style="color:#555">==</span> T[i]:
+</span></span><span style="display:flex;"><span>            renvoyer i
+</span></span><span style="display:flex;"><span>    renvoyer <span style="color:#555">-</span><span style="color:#f60">1</span>
+</span></span></code></pre></div>
+</blockquote>
+
+<script src="http://localhost:1313/coi-serviceworker.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.63.3/codemirror.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.63.3/theme/idea.css">
+<link rel="stylesheet" href="http://localhost:1313/css/python_editor.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.63.3/codemirror.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.63.3/mode/python/python.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.63.3/addon/comment/comment.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.63.3/addon/display/fullscreen.js"></script>
+
+
+    <h3 id="recherche-par-balayage">
+  Recherche par balayage
+  <a class="anchor" href="#recherche-par-balayage">#</a>
+</h3>
+
+
+
+<main>
+    <div id="python_ide_2">
+        <textarea id="commands_2" class="commands">
+
+def recherche(T: list, x: int):
+    for i in range(len(T)):
+        if x == T[i]:
+            return i
+    return -1
+
+x = 5
+T = [11, 7, 9, 5, 15, 13, 3, 1]
+
+print(recherche(T, x))
+
+        </textarea>
+        <a class="execute book-btn" title="Ctrl+Enter">Run</a>
+        <a class="reset book-btn" title="Ctrl+R">Reset</a>
+        <a class="download book-btn" title="Ctrl+S">Download</a>
+        <a class="stop book-btn" title="Ctrl+D">Stop</a>
+        <pre class="python_output" style="display: none;">Résultat</pre>
+        <pre class="python_error" style="display: none;"></pre>
+        <pre class="worker_error" style="display: none;"></pre>
+    </div>
+</main>
+<script type="module">
+    import { onElementLoaded, init_worker } from "http:\/\/localhost:1313\/js/pyodide_consumer.js";
+
+    const url = "http:\/\/localhost:1313\/js/pyodide_webworker.js";
+
+    async function start_worker(ide) {
+        
+        let initfile = null;
+        
+        init_worker(ide, url, initfile);
+    }
+
+
+    onElementLoaded("div#python_ide_2").then(() => {
+        const ide = document.querySelector("div#python_ide_2");
+        start_worker(ide);
+    }).catch(() => { });
+</script>
+
+<h3 id="déroulé">
+  Déroulé
+  <a class="anchor" href="#d%c3%a9roul%c3%a9">#</a>
+</h3>
+<div class="highlight"><pre tabindex="0" style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>i <span style="color:#555">=</span> <span style="color:#f60">0</span>           <span style="color:#f60">5</span> <span style="color:#555">!=</span> <span style="color:#f60">11</span>
+</span></span><span style="display:flex;"><span>i <span style="color:#555">=</span> <span style="color:#f60">1</span>           <span style="color:#f60">5</span> <span style="color:#555">!=</span> <span style="color:#f60">7</span>
+</span></span><span style="display:flex;"><span>i <span style="color:#555">=</span> <span style="color:#f60">2</span>           <span style="color:#f60">5</span> <span style="color:#555">!=</span> <span style="color:#f60">9</span>
+</span></span><span style="display:flex;"><span>i <span style="color:#555">=</span> <span style="color:#f60">3</span>           <span style="color:#f60">5</span> <span style="color:#555">==</span> <span style="color:#f60">5</span>
+</span></span></code></pre></div><h3 id="remarques">
+  Remarques
+  <a class="anchor" href="#remarques">#</a>
+</h3>
+<blockquote class="book-hint warning">
+  <ol>
+<li>
+<p>La boucle étant bornée (<code>for</code>), l&rsquo;algorithme termine toujours.</p>
+</li>
+<li>
+<p><strong>Au pire <code>len(T)</code> étapes</strong>. La coût calculatoire d&rsquo;un parcours séquentiel est <em>linéaire</em>.</p>
+</li>
+</ol>
+
+</blockquote>
+
+<h2 id="recherche-dichotomique">
+  Recherche dichotomique
+  <a class="anchor" href="#recherche-dichotomique">#</a>
+</h2>
+<h3 id="présentation">
   Présentation
   <a class="anchor" href="#pr%c3%a9sentation">#</a>
-</h2>
+</h3>
 <blockquote class="book-hint info">
-  <p>La <em>recherche dichotomique dans un tableau trié</em> est un algorithme efficace
-qui permet de répondre à différentes questions :</p>
-<ul>
-<li>Ce tableau trié contient-il cet élément ?</li>
-</ul>
-<p>ou</p>
-<ul>
-<li>Quel est l&rsquo;indice de cet élément dans ce tableau trié ?</li>
-</ul>
-
+  <p>On suppose maintenant que le tableau <code>T</code> est <strong>trié</strong> par ordre croissant</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>x <span style="color:#555">=</span> <span style="color:#f60">5</span>
+</span></span><span style="display:flex;"><span>T <span style="color:#555">=</span> [ <span style="color:#f60">1</span>,  <span style="color:#f60">3</span>,  <span style="color:#f60">5</span>,  <span style="color:#f60">7</span>,  <span style="color:#f60">9</span>, <span style="color:#f60">11</span>, <span style="color:#f60">13</span>, <span style="color:#f60">15</span>]
+</span></span><span style="display:flex;"><span>      <span style="color:#f60">0</span>   <span style="color:#f60">1</span>   <span style="color:#f60">2</span>   <span style="color:#f60">3</span>   <span style="color:#f60">4</span>   <span style="color:#f60">5</span>   <span style="color:#f60">6</span>   <span style="color:#f60">7</span>
+</span></span></code></pre></div>
 </blockquote>
 
-<h2 id="dichotomie-vs-recherche-séquentielle">
-  Dichotomie vs recherche séquentielle
-  <a class="anchor" href="#dichotomie-vs-recherche-s%c3%a9quentielle">#</a>
-</h2>
-<p>Bien sûr, on sait déjà comment répondre à une telle question :</p>
-<p>on regarde les éléments un par un avec une boucle <code>for</code> et lorsqu&rsquo;on rencontre l&rsquo;élément, on fait quelque chose.</p>
-<p>C&rsquo;est une recherche séquentielle qui fonctionne parfaitement mais qui est beaucoup plus lente que la recherche
-dichotomique.</p>
+<p><strong>Stratégie du Jeu de &ldquo;+ ou -&rdquo;</strong> : viser le centre des éléments restant et éliminer la moitié des nombres à chaque étape.</p>
 <blockquote class="book-hint info">
-  <p>La recherche <em>séquentielle</em> s&rsquo;applique à tous les tableaux.</p>
-<p>La recherche <em>dichotomique</em> ne s&rsquo;applique qu&rsquo;aux tableaux <strong>triés</strong> mais est <strong>beaucoup plus rapide</strong>.</p>
-
+  Donc : comparer la valeur centrale à <code>x</code> et <strong>éliminer la moitié des valeurs restantes</strong>
 </blockquote>
 
-<h2 id="principe">
-  Principe
-  <a class="anchor" href="#principe">#</a>
+<h3 id="déroulé-1">
+  Déroulé
+  <a class="anchor" href="#d%c3%a9roul%c3%a9-1">#</a>
+</h3>
+<ol>
+<li>
+<p>Premier tour</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>x <span style="color:#555">=</span> <span style="color:#f60">5</span>
+</span></span><span style="display:flex;"><span>T <span style="color:#555">=</span> [ <span style="color:#f60">1</span>,  <span style="color:#f60">3</span>,  <span style="color:#f60">5</span>,  <span style="color:#f60">7</span>,  <span style="color:#f60">9</span>, <span style="color:#f60">11</span>, <span style="color:#f60">13</span>, <span style="color:#f60">15</span>]
+</span></span><span style="display:flex;"><span>      g           <span style="color:#555">^</span>               d
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>g <span style="color:#555">=</span> <span style="color:#f60">0</span>, d <span style="color:#555">=</span> <span style="color:#f60">7</span>
+</span></span><span style="display:flex;"><span>m <span style="color:#555">=</span> (g <span style="color:#555">+</span> d) <span style="color:#555">//</span> <span style="color:#f60">2</span> <span style="color:#555">=</span> (<span style="color:#f60">0</span> <span style="color:#555">+</span> <span style="color:#f60">7</span>) <span style="color:#555">//</span> <span style="color:#f60">2</span> <span style="color:#555">=</span> <span style="color:#f60">3</span>
+</span></span><span style="display:flex;"><span>    x <span style="color:#555">=</span> <span style="color:#f60">5</span> <span style="color:#555">&lt;</span> T[<span style="color:#f60">3</span>] <span style="color:#555">=</span> <span style="color:#f60">7</span>    <span style="color:#555">=&gt;</span>   Chercher à gauche
+</span></span></code></pre></div><p>On recommence avec</p>
+<ul>
+<li><code>d = m - 1 = 2</code></li>
+<li><code>g</code> inchangé</li>
+</ul>
+</li>
+<li>
+<p>Second tour</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>x <span style="color:#555">=</span> <span style="color:#f60">5</span>
+</span></span><span style="display:flex;"><span>T <span style="color:#555">=</span> [ <span style="color:#f60">1</span>,  <span style="color:#f60">3</span>,  <span style="color:#f60">5</span>,  <span style="color:#f60">7</span>,  <span style="color:#f60">9</span>, <span style="color:#f60">11</span>, <span style="color:#f60">13</span>, <span style="color:#f60">15</span>]
+</span></span><span style="display:flex;"><span>      g   <span style="color:#555">^</span>   d
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>g <span style="color:#555">=</span> <span style="color:#f60">0</span>, d <span style="color:#555">=</span> <span style="color:#f60">2</span>
+</span></span><span style="display:flex;"><span>m <span style="color:#555">=</span> (g <span style="color:#555">+</span> d) <span style="color:#555">//</span> <span style="color:#f60">2</span> <span style="color:#555">=</span> (<span style="color:#f60">0</span> <span style="color:#555">+</span> <span style="color:#f60">2</span>) <span style="color:#555">//</span> <span style="color:#f60">2</span> <span style="color:#555">=</span> <span style="color:#f60">1</span>
+</span></span><span style="display:flex;"><span>    x <span style="color:#555">=</span> <span style="color:#f60">5</span> <span style="color:#555">&gt;</span> T[<span style="color:#f60">1</span>] <span style="color:#555">=</span> <span style="color:#f60">3</span>    <span style="color:#555">=&gt;</span>   Chercher à droite
+</span></span></code></pre></div><p>On recommence avec</p>
+<ul>
+<li><code>d</code> inchangé</li>
+<li><code>g = m + 1 = 2</code></li>
+</ul>
+</li>
+<li>
+<p>Troisième tour</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>x <span style="color:#555">=</span> <span style="color:#f60">5</span>
+</span></span><span style="display:flex;"><span>T <span style="color:#555">=</span> [ <span style="color:#f60">1</span>,  <span style="color:#f60">3</span>,  <span style="color:#f60">5</span>,  <span style="color:#f60">7</span>,  <span style="color:#f60">9</span>, <span style="color:#f60">11</span>, <span style="color:#f60">13</span>, <span style="color:#f60">15</span>]
+</span></span><span style="display:flex;"><span>         g<span style="color:#555">=</span>d
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>g <span style="color:#555">=</span> <span style="color:#f60">2</span>, d <span style="color:#555">=</span> <span style="color:#f60">2</span>
+</span></span><span style="display:flex;"><span>m <span style="color:#555">=</span> (g <span style="color:#555">+</span> d) <span style="color:#555">//</span> <span style="color:#f60">2</span> <span style="color:#555">=</span> (<span style="color:#f60">2</span> <span style="color:#555">+</span> <span style="color:#f60">2</span>) <span style="color:#555">//</span> <span style="color:#f60">2</span> <span style="color:#555">=</span> <span style="color:#f60">2</span>
+</span></span><span style="display:flex;"><span>    x <span style="color:#555">=</span> <span style="color:#f60">5</span> <span style="color:#555">==</span> T[<span style="color:#f60">2</span>] <span style="color:#555">=</span> <span style="color:#f60">5</span>    <span style="color:#555">=&gt;</span>   Trouvé <span style="color:#a00;background-color:#faa">!</span>
+</span></span></code></pre></div><p>On peut renvoyer <code>2</code>.</p>
+</li>
+</ol>
+<h2 id="construction-de-lalgorithme">
+  Construction de l&rsquo;algorithme
+  <a class="anchor" href="#construction-de-lalgorithme">#</a>
 </h2>
-<p>Il est similaire à la méthode efficace pour gagner au &ldquo;plus ou moins&rdquo;.</p>
 <details  class="no-outline"><summary class="no-outline"></summary>
     <div class="markdown-inner">
-        <p>Votre adversaire a choisi un nombre entre 1 et 100 et vous devez le déviner.</p>
-<p>Il ne peut répondre que par &ldquo;c&rsquo;est plus&rdquo;, &ldquo;c&rsquo;est moins&rdquo; ou &ldquo;gagné&rdquo;.</p>
-<p>Une approche qui gagne toujours consiste à partir de 1 et augmenter de 1 en 1 :</p>
+        <div class="book-columns flex flex-wrap">
+  <div class="flex-even markdown-inner">
+    <strong>Précondition</strong><br>
+<strong>Plusieurs étapes</strong><br>
+<strong>Nombre inconnu d&rsquo;étapes</strong><br>
+<strong>Arrêt</strong>
+  </div>
+  <div class="flex-even markdown-inner">
+    <code>T</code> un tableau trié par ordre croissant<br>
+Il faut une boucle<br>
+Boucle non bornée (<code>while</code>)<br>
+<code>g &gt; d</code> donc <code>while g &lt;= d:</code>\
+  </div>
+</div>
+<p><strong>Corps de la boucle</strong></p>
+<p><code>m = (g + d) // 2</code></p>
+<p>3 cas :</p>
 <ul>
-<li>1 ? C&rsquo;est plus,</li>
-<li>2 ? C&rsquo;est plus, etc.</li>
+<li>
+<p>Si <code>x == T[m]</code> $\quad\quad\Rightarrow\quad$ <code>return m</code></p>
+</li>
+<li>
+<p>Si <code>x &lt; m</code> $\quad\quad\qquad\Rightarrow\quad$ <code>d = m - 1</code></p>
+</li>
+<li>
+<p>Si <code>x &gt; m</code> $\quad\quad\qquad\Rightarrow\quad$ <code>d = m + 1</code></p>
+</li>
 </ul>
-<p>Elle termine toujours et trouve toujours la réponse. Pourquoi s&rsquo;embêter ?</p>
-<p>Parce qu&rsquo;on peut gagner en 7 coups alors qu&rsquo;il en faut 100 si l&rsquo;adversaire choisit 100&hellip;</p>
-<p>Comment gagner en 7 coups ?</p>
-<p><strong>Choisir la valeur centrale parmi les valeurs restantes.</strong></p>
-<p>Et c&rsquo;est tout.</p>
+<p><strong>Et si la boucle termine ?</strong></p>
 <ul>
-<li>La première approche (1, 2, 3&hellip;) est <em>séquentielle</em>,</li>
-<li>La seconde approche (50, 25, 12&hellip;) est <em>dichotomique</em>.</li>
+<li><code>T</code> ne contient pas <code>x</code> $\Rightarrow\quad$ <code>return -1</code></li>
 </ul>
 
     </div>
 </details>
 
-<h2 id="contexte">
-  Contexte
-  <a class="anchor" href="#contexte">#</a>
+<h2 id="codes-à-compléter">
+  Codes à compléter
+  <a class="anchor" href="#codes-%c3%a0-compl%c3%a9ter">#</a>
 </h2>
-<ul>
-<li>
-<p>Un tableau trié : <code>T = [0, 1, 2, ... ,9]</code></p>
-</li>
-<li>
-<p>L&rsquo;élément 3 est-il dans le tableau ?</p>
-</li>
-<li>
-<p>L&rsquo;objectif : répondre Oui ou Non en réalisant <strong>le moins d&rsquo;opérations</strong> possibles.</p>
-</li>
-</ul>
-<h2 id="dichotomie">
-  Dichotomie
-  <a class="anchor" href="#dichotomie">#</a>
+<h3 id="exemples-pour-tester-votre-fonction">
+  Exemples pour tester votre fonction
+  <a class="anchor" href="#exemples-pour-tester-votre-fonction">#</a>
+</h3>
+<details  class="no-outline"><summary class="no-outline"></summary>
+    <div class="markdown-inner">
+        <div class="highlight"><pre tabindex="0" style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#09f;font-style:italic"># tableau vide</span>
+</span></span><span style="display:flex;"><span><span style="color:#069;font-weight:bold">assert</span> <span style="color:#000;font-weight:bold">not</span> contient_dichotomique([], <span style="color:#f60">0</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#09f;font-style:italic"># tableau à 1 élément</span>
+</span></span><span style="display:flex;"><span><span style="color:#069;font-weight:bold">assert</span> <span style="color:#000;font-weight:bold">not</span> contient_dichotomique([<span style="color:#f60">1</span>], <span style="color:#f60">0</span>)
+</span></span><span style="display:flex;"><span><span style="color:#069;font-weight:bold">assert</span> contient_dichotomique([<span style="color:#f60">1</span>], <span style="color:#f60">1</span>)
+</span></span><span style="display:flex;"><span><span style="color:#069;font-weight:bold">assert</span> <span style="color:#000;font-weight:bold">not</span> contient_dichotomique([<span style="color:#f60">1</span>], <span style="color:#f60">2</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#09f;font-style:italic"># tableau plus grand</span>
+</span></span><span style="display:flex;"><span>tableau <span style="color:#555">=</span> [<span style="color:#f60">0</span>, <span style="color:#f60">2</span>, <span style="color:#f60">4</span>, <span style="color:#f60">6</span>, <span style="color:#f60">8</span>, <span style="color:#f60">10</span>]
+</span></span><span style="display:flex;"><span><span style="color:#069;font-weight:bold">for</span> cle <span style="color:#000;font-weight:bold">in</span> tableau:
+</span></span><span style="display:flex;"><span>    <span style="color:#069;font-weight:bold">assert</span> contient_dichotomique(tableau, cle)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#069;font-weight:bold">for</span> cle <span style="color:#000;font-weight:bold">in</span> [<span style="color:#555">-</span><span style="color:#f60">1</span>, <span style="color:#f60">1</span>, <span style="color:#f60">3</span>, <span style="color:#f60">5</span>, <span style="color:#f60">7</span>, <span style="color:#f60">9</span>, <span style="color:#f60">11</span>]:
+</span></span><span style="display:flex;"><span>    <span style="color:#069;font-weight:bold">assert</span> <span style="color:#000;font-weight:bold">not</span> contient_dichotomique(tableau, cle)
+</span></span></code></pre></div>
+    </div>
+</details>
+
+<h3 id="fonction-à-compléter">
+  Fonction à compléter
+  <a class="anchor" href="#fonction-%c3%a0-compl%c3%a9ter">#</a>
+</h3>
+
+
+
+
+<div class="book-tabs"><input type="radio" class="toggle" name="tabs-uniqueid" id="tabs-uniqueid-0" checked="checked" />
+  <label for="tabs-uniqueid-0">Difficile</label>
+  <div class="book-tabs-content markdown-inner"><div class="highlight"><pre tabindex="0" style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#069;font-weight:bold">def</span> <span style="color:#c0f">recherche_dichotomique</span>(T: <span style="color:#366">list</span>, x: <span style="color:#366">list</span>) <span style="color:#555">-&gt;</span> <span style="color:#366">int</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#c30">&#34;&#34;&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#c30">    Renvoie l&#39;indice de `x` dans `T`.
+</span></span></span><span style="display:flex;"><span><span style="color:#c30">    Renvoie -1 si `x` n&#39;est pas dans `T`.
+</span></span></span><span style="display:flex;"><span><span style="color:#c30">
+</span></span></span><span style="display:flex;"><span><span style="color:#c30">    Précondition : `T` est trié par ordre croissant
+</span></span></span><span style="display:flex;"><span><span style="color:#c30">    &#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#555">...</span>
+</span></span></code></pre></div></div><input type="radio" class="toggle" name="tabs-uniqueid" id="tabs-uniqueid-1"  />
+  <label for="tabs-uniqueid-1">Moyen</label>
+  <div class="book-tabs-content markdown-inner"><div class="highlight"><pre tabindex="0" style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#069;font-weight:bold">def</span> <span style="color:#c0f">recherche_dichotomique</span>(T: <span style="color:#366">list</span>, x: <span style="color:#366">list</span>) <span style="color:#555">-&gt;</span> <span style="color:#366">int</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#c30">&#34;&#34;&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#c30">    Renvoie l&#39;indice de `x` dans `T`.
+</span></span></span><span style="display:flex;"><span><span style="color:#c30">    Renvoie -1 si `x` n&#39;est pas dans `T`.
+</span></span></span><span style="display:flex;"><span><span style="color:#c30">
+</span></span></span><span style="display:flex;"><span><span style="color:#c30">    Précondition : `T` est trié par ordre croissant
+</span></span></span><span style="display:flex;"><span><span style="color:#c30">    &#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>    g <span style="color:#555">=</span> <span style="color:#555">...</span>
+</span></span><span style="display:flex;"><span>    d <span style="color:#555">=</span> <span style="color:#555">...</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#069;font-weight:bold">while</span> <span style="color:#555">...</span>:
+</span></span><span style="display:flex;"><span>        m <span style="color:#555">=</span> <span style="color:#555">...</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#069;font-weight:bold">if</span> x <span style="color:#555">==</span> <span style="color:#555">...</span>:
+</span></span><span style="display:flex;"><span>            <span style="color:#069;font-weight:bold">return</span> <span style="color:#555">...</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#069;font-weight:bold">elif</span> x <span style="color:#555">&gt;</span> <span style="color:#555">...</span>:
+</span></span><span style="display:flex;"><span>            <span style="color:#555">...</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#069;font-weight:bold">else</span>:
+</span></span><span style="display:flex;"><span>            <span style="color:#555">...</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#069;font-weight:bold">return</span> <span style="color:#555">...</span>
+</span></span></code></pre></div></div><input type="radio" class="toggle" name="tabs-uniqueid" id="tabs-uniqueid-2"  />
+  <label for="tabs-uniqueid-2">Facile</label>
+  <div class="book-tabs-content markdown-inner"><div class="highlight"><pre tabindex="0" style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#069;font-weight:bold">def</span> <span style="color:#c0f">recherche_dichotomique</span>(T: <span style="color:#366">list</span>, x: <span style="color:#366">list</span>) <span style="color:#555">-&gt;</span> <span style="color:#366">int</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#c30">&#34;&#34;&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#c30">    Renvoie l&#39;indice de `x` dans `T`.
+</span></span></span><span style="display:flex;"><span><span style="color:#c30">    Renvoie -1 si `x` n&#39;est pas dans `T`.
+</span></span></span><span style="display:flex;"><span><span style="color:#c30">
+</span></span></span><span style="display:flex;"><span><span style="color:#c30">    Précondition : `T` est trié par ordre croissant
+</span></span></span><span style="display:flex;"><span><span style="color:#c30">    &#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>    g <span style="color:#555">=</span> <span style="color:#f60">0</span>
+</span></span><span style="display:flex;"><span>    d <span style="color:#555">=</span> <span style="color:#366">len</span>(T) <span style="color:#555">-</span> <span style="color:#f60">1</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#069;font-weight:bold">while</span> g <span style="color:#555">&lt;=</span> d:
+</span></span><span style="display:flex;"><span>        m <span style="color:#555">=</span> <span style="color:#555">...</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#069;font-weight:bold">if</span> x <span style="color:#555">==</span> <span style="color:#555">...</span>:
+</span></span><span style="display:flex;"><span>            <span style="color:#069;font-weight:bold">return</span> m
+</span></span><span style="display:flex;"><span>        <span style="color:#069;font-weight:bold">elif</span> x <span style="color:#555">&gt;</span> <span style="color:#555">...</span>:
+</span></span><span style="display:flex;"><span>            g <span style="color:#555">=</span> <span style="color:#555">...</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#069;font-weight:bold">else</span>:
+</span></span><span style="display:flex;"><span>            d <span style="color:#555">=</span> <span style="color:#555">...</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#069;font-weight:bold">return</span> <span style="color:#555">-</span><span style="color:#f60">1</span>
+</span></span></code></pre></div></div></div>
+
+<script src="http://localhost:1313/coi-serviceworker.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.63.3/codemirror.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.63.3/theme/idea.css">
+<link rel="stylesheet" href="http://localhost:1313/css/python_editor.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.63.3/codemirror.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.63.3/mode/python/python.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.63.3/addon/comment/comment.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.63.3/addon/display/fullscreen.js"></script>
+
+
+    <h3 id="recherche-dichotomique">
+  Recherche dichotomique
+  <a class="anchor" href="#recherche-dichotomique">#</a>
+</h3>
+
+
+
+<main>
+    <div id="python_ide_9">
+        <textarea id="commands_9" class="commands">
+
+def recherche_dichotomique(T: list, x: int):
+     ...
+
+x = 5
+T = [1,  3,  5,  7,  9, 11, 13, 15]
+
+print(recherche_dichotomique(T, x))
+
+        </textarea>
+        <a class="execute book-btn" title="Ctrl+Enter">Run</a>
+        <a class="reset book-btn" title="Ctrl+R">Reset</a>
+        <a class="download book-btn" title="Ctrl+S">Download</a>
+        <a class="stop book-btn" title="Ctrl+D">Stop</a>
+        <pre class="python_output" style="display: none;">Résultat</pre>
+        <pre class="python_error" style="display: none;"></pre>
+        <pre class="worker_error" style="display: none;"></pre>
+    </div>
+</main>
+<script type="module">
+    import { onElementLoaded, init_worker } from "http:\/\/localhost:1313\/js/pyodide_consumer.js";
+
+    const url = "http:\/\/localhost:1313\/js/pyodide_webworker.js";
+
+    async function start_worker(ide) {
+        
+        let initfile = null;
+        
+        init_worker(ide, url, initfile);
+    }
+
+
+    onElementLoaded("div#python_ide_9").then(() => {
+        const ide = document.querySelector("div#python_ide_9");
+        start_worker(ide);
+    }).catch(() => { });
+</script>
+
+<h2 id="algorithme">
+  Algorithme
+  <a class="anchor" href="#algorithme">#</a>
 </h2>
-<ul>
-<li>À chaque étape on teste la valeur centrale du tableau considéré</li>
-<li>Si c&rsquo;est l&rsquo;élément cherché, on a trouvé et la réponse est Oui.</li>
-<li>Si la valeur centrale est supérieure à l&rsquo;élément cherché on recommence avec
-la partie gauche</li>
-<li>Sinon on recommence avec la partie droite.</li>
-<li>Si la partie gauche ou la partie droite est vide, l&rsquo;élément n&rsquo;est pas dans le
-tableau et la réponse est : Non.</li>
-</ul>
-<h2 id="déroulé-sur-lexemple-à-la-main">
-  Déroulé sur l&rsquo;exemple, à la main.
-  <a class="anchor" href="#d%c3%a9roul%c3%a9-sur-lexemple-%c3%a0-la-main">#</a>
+<details  class="no-outline"><summary class="no-outline"></summary>
+    <div class="markdown-inner">
+        <div class="highlight"><pre tabindex="0" style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#069;font-weight:bold">def</span> <span style="color:#c0f">recherche_dichotomique</span>(T: <span style="color:#366">list</span>, x: <span style="color:#366">list</span>) <span style="color:#555">-&gt;</span> <span style="color:#366">int</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#c30">&#34;&#34;&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#c30">    Renvoie l&#39;indice de `x` dans `T`.
+</span></span></span><span style="display:flex;"><span><span style="color:#c30">    Renvoie -1 si `x` n&#39;est pas dans `T`.
+</span></span></span><span style="display:flex;"><span><span style="color:#c30">
+</span></span></span><span style="display:flex;"><span><span style="color:#c30">    Précondition : `T` est trié par ordre croissant
+</span></span></span><span style="display:flex;"><span><span style="color:#c30">    &#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>    g <span style="color:#555">=</span> <span style="color:#f60">0</span>
+</span></span><span style="display:flex;"><span>    d <span style="color:#555">=</span> <span style="color:#366">len</span>(T) <span style="color:#555">-</span> <span style="color:#f60">1</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#069;font-weight:bold">while</span> g <span style="color:#555">&lt;=</span> d:
+</span></span><span style="display:flex;"><span>        m <span style="color:#555">=</span> (g <span style="color:#555">+</span> d) <span style="color:#555">//</span> <span style="color:#f60">2</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#069;font-weight:bold">if</span> x <span style="color:#555">==</span> T[m]:
+</span></span><span style="display:flex;"><span>            <span style="color:#069;font-weight:bold">return</span> m
+</span></span><span style="display:flex;"><span>        <span style="color:#069;font-weight:bold">elif</span> x <span style="color:#555">&gt;</span> T[m]:
+</span></span><span style="display:flex;"><span>            g <span style="color:#555">=</span> m <span style="color:#555">+</span> <span style="color:#f60">1</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#069;font-weight:bold">else</span>:
+</span></span><span style="display:flex;"><span>            d <span style="color:#555">=</span> m <span style="color:#555">-</span> <span style="color:#f60">1</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#069;font-weight:bold">return</span> <span style="color:#555">-</span><span style="color:#f60">1</span>
+</span></span></code></pre></div>
+    </div>
+</details>
+
+<h2 id="déroulé-de-lalgorithme">
+  Déroulé de l&rsquo;algorithme
+  <a class="anchor" href="#d%c3%a9roul%c3%a9-de-lalgorithme">#</a>
 </h2>
-<p><code>T=[0,1,2,...,9]</code>. On cherche 3.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>x <span style="color:#555">=</span> <span style="color:#f60">5</span>
+</span></span><span style="display:flex;"><span>T <span style="color:#555">=</span> [ <span style="color:#f60">1</span>,  <span style="color:#f60">3</span>,  <span style="color:#f60">5</span>,  <span style="color:#f60">7</span>,  <span style="color:#f60">9</span>, <span style="color:#f60">11</span>, <span style="color:#f60">13</span>, <span style="color:#f60">15</span>]
+</span></span></code></pre></div><p>On débute avec <code>g = 0</code> et <code>d = 8 - 1 = 7</code>.</p>
 <ol>
 <li>
-<p>On propose : 4.</p>
-<p>4 &gt; 3 donc on recommence avec la partie avant 4 : <code>T1 = [0,1,2,3]</code></p>
+<p><code>[1,  3,  5,  7,  9, 11, 13, 15]</code></p>
+<p><code>g = 0 &lt;= d = 7</code></p>
+<p><code>m = (0 + 7) // 2 = 3</code></p>
+<p><code>5 &lt; 7 =&gt; d = 3 - 1 = 2</code></p>
 </li>
 <li>
-<p>On propose : 2</p>
-<p>2 &lt; 3 donc on recommence avec la partie après 2 : <code>T2 = [3]</code></p>
+<p><code>[1,  3,  5]</code></p>
+<p><code>g = 0 &lt;= d = 2</code></p>
+<p><code>m = (0 + 2) // 2 = 1</code></p>
+<p><code>5 &gt; 3 =&gt; g = 1 + 1 = 2</code></p>
 </li>
 <li>
-<p>On propose : 3</p>
-<p>3 = 3 donc <strong>on a trouvé l&rsquo;élément et la réponse est : Oui, 3 est dans T.</strong></p>
+<p><code>[5]</code></p>
+<p><code>g = 2 &lt;= d = 2</code></p>
+<p><code>m = (2 + 2) // 2 = 2</code></p>
+<p><code>5 == 5 =&gt; return 2</code></p>
 </li>
 </ol>
-<h2 id="lalgorithme">
-  L&rsquo;algorithme
-  <a class="anchor" href="#lalgorithme">#</a>
+<h2 id="remarques-1">
+  Remarques
+  <a class="anchor" href="#remarques-1">#</a>
 </h2>
-<blockquote class="book-hint info">
-  <div class="highlight"><pre tabindex="0" style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>rechercheDicho(liste, clé)
-</span></span><span style="display:flex;"><span>  bas <span style="color:#555">=</span> <span style="color:#f60">0</span>
-</span></span><span style="display:flex;"><span>  haut <span style="color:#555">=</span> longueur(liste) <span style="color:#555">-</span> <span style="color:#f60">1</span>
-</span></span><span style="display:flex;"><span>  Tant que (bas <span style="color:#555">&lt;</span> haut) :
-</span></span><span style="display:flex;"><span>      med <span style="color:#555">=</span> (bas <span style="color:#555">+</span> haut) <span style="color:#555">//</span> <span style="color:#f60">2</span>
-</span></span><span style="display:flex;"><span>      si clé <span style="color:#555">==</span> liste[med]:
-</span></span><span style="display:flex;"><span>          bas <span style="color:#555">=</span> med
-</span></span><span style="display:flex;"><span>          haut <span style="color:#555">=</span> med
-</span></span><span style="display:flex;"><span>      sinon si clé <span style="color:#555">&gt;</span> liste[med]: bas <span style="color:#555">=</span> med <span style="color:#555">+</span> <span style="color:#f60">1</span>
-</span></span><span style="display:flex;"><span>      sinon: haut <span style="color:#555">=</span> med <span style="color:#555">-</span> <span style="color:#f60">1</span>
-</span></span><span style="display:flex;"><span>  si cle <span style="color:#555">==</span> liste[bas]: renvoyer Vrai
-</span></span><span style="display:flex;"><span>  sinon: renvoyer Faux
-</span></span></code></pre></div>
+<blockquote class="book-hint danger">
+  <h3 id="précondition">
+  Précondition
+  <a class="anchor" href="#pr%c3%a9condition">#</a>
+</h3>
+<p><strong><code>T</code> doit être trié par ordre croissant</strong></p>
 </blockquote>
 
-<h2 id="même-exemple-avec-les-variables">
-  Même exemple, avec les variables
-  <a class="anchor" href="#m%c3%aame-exemple-avec-les-variables">#</a>
-</h2>
-<p>Voici un déroulé de l&rsquo;algorithme à la main.</p>
-<p>Notre tableau <code>T</code> est <code>[0, 1, 2, ..., 9]</code> et on cherche <code>3</code>.</p>
-<p>On dispose des variables :</p>
-<ul>
-<li><code>début</code>, <code>milieu</code>, <code>fin</code> qui sont des éléments du tableau</li>
-<li><code>trouvé</code> qui est un booléen (vrai / faux)</li>
-<li>et <code>val &gt; milieu</code> (booléen, qui va nous aider à choisir)</li>
-</ul>
-<p>On présent les éléments dans une table :</p>
-<h3 id="déroulé">
-  Déroulé
-  <a class="anchor" href="#d%c3%a9roul%c3%a9">#</a>
-</h3>
-<p>Voici un déroulé de l&rsquo;algorithme à la main.</p>
-<p>Notre tableau <code>T</code> est <code>[0, 1, 2, ..., 9]</code> et on cherche <code>3</code>.</p>
-<ul>
-<li><strong>Avant la boucle.</strong> début, fin et trouvé sont initialisées (0, 9, faux). La variable milieu et le booléen <code>val &gt; milieu</code> n&rsquo;existent pas encore.</li>
-</ul>
-<table>
-<thead>
-<tr>
-<th>Tour</th>
-<th>début</th>
-<th>milieu</th>
-<th>fin</th>
-<th>trouvé</th>
-<th><code>val &gt; milieu</code></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Avant la boucle</td>
-<td>0</td>
-<td>/</td>
-<td>9</td>
-<td>faux</td>
-<td>/</td>
-</tr>
-</tbody>
-</table>
-<p>Notre tableau <code>T</code> est <code>[0, 1, 2, ..., 9]</code> et on cherche <code>3</code>.</p>
-<ol>
-<li>
-<p><strong>Premier tour.</strong> On descend début et fin.</p>
-<p>On calcule milieu (0+9)/2 = 4.5 dont la partie entière est 4. Donc milieu = 4.</p>
-<p>Est-ce que 3==4 ? Faux.</p>
-<p>Est-ce-que &ldquo;3&gt;4&rdquo; ? Faux. Dans ce cas, c&rsquo;est <code>fin</code> qui prend la valeur de <code>milieu</code></p>
-<table>
-<thead>
-<tr>
-<th>Tour</th>
-<th>début</th>
-<th>milieu</th>
-<th>fin</th>
-<th>trouvé</th>
-<th><code>val &gt; milieu</code></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Avant la boucle</td>
-<td>0</td>
-<td>/</td>
-<td>9</td>
-<td>faux</td>
-<td>/</td>
-</tr>
-<tr>
-<td>1er tour</td>
-<td>0</td>
-<td>4</td>
-<td>9</td>
-<td>faux</td>
-<td>3 &gt; 4 : faux</td>
-</tr>
-</tbody>
-</table>
-</li>
-<li>
-<p><strong>Second tour.</strong> On a descendu début, on donne à fin la valeur précédente de milieu (4). Et on calcule les nouveaux éléments. milieu = (0+4)/2 = 2 (entier).</p>
-<p>Est-ce-que 3==2 ? Faux.</p>
-<p>Est-ce-que 3&gt;2 ? Vrai. Dans ce cas, c&rsquo;est début qui change et prend la valeur de milieu + 1.</p>
-<table>
-<thead>
-<tr>
-<th>Tour</th>
-<th>début</th>
-<th>milieu</th>
-<th>fin</th>
-<th>trouvé</th>
-<th><code>val &gt; milieu</code></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Avant la boucle</td>
-<td>0</td>
-<td>/</td>
-<td>9</td>
-<td>faux</td>
-<td>/</td>
-</tr>
-<tr>
-<td>1er tour</td>
-<td>0</td>
-<td>4</td>
-<td>9</td>
-<td>faux</td>
-<td>3 &gt; 4 : faux</td>
-</tr>
-<tr>
-<td>2ème tour</td>
-<td>0</td>
-<td>2</td>
-<td>4</td>
-<td>faux</td>
-<td>3 &gt; 2 : vrai</td>
-</tr>
-</tbody>
-</table>
-</li>
-<li>
-<p><strong>Troisième tour</strong>. On a descendu la valeur de fin et donné à début l&rsquo;ancienne valeur de milieu + 1 (3). Et on recommence.</p>
-<p>Milieu = (3 + 4)/2 = 3.5 dont la partie entière est 3. Est-ce-que 3==3 ? Oui.</p>
-<table>
-<thead>
-<tr>
-<th>Tour</th>
-<th>début</th>
-<th>milieu</th>
-<th>fin</th>
-<th>trouvé</th>
-<th><code>val &gt; milieu</code></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Avant la boucle</td>
-<td>0</td>
-<td>/</td>
-<td>9</td>
-<td>faux</td>
-<td>/</td>
-</tr>
-<tr>
-<td>1er tour</td>
-<td>0</td>
-<td>4</td>
-<td>9</td>
-<td>faux</td>
-<td>3 &gt; 4 : faux</td>
-</tr>
-<tr>
-<td>2ème tour</td>
-<td>0</td>
-<td>2</td>
-<td>4</td>
-<td>faux</td>
-<td>3 &gt; 2 : vrai</td>
-</tr>
-<tr>
-<td>3ème tour</td>
-<td>3</td>
-<td>3</td>
-<td>4</td>
-<td><strong>vrai</strong></td>
-<td>/</td>
-</tr>
-</tbody>
-</table>
-</li>
-</ol>
-<p>L&rsquo;algorithme est terminé et la sortie est &ldquo;VRAI&rdquo;. Le nombre 3 est bien un élément du tableau [0, 1, <strong>3</strong>, 4, 5, &hellip;, 9].</p>
-<h3 id="complexité">
-  Complexité
-  <a class="anchor" href="#complexit%c3%a9">#</a>
+<h3 id="terminaison">
+  Terminaison
+  <a class="anchor" href="#terminaison">#</a>
 </h3>
 <ul>
-<li><strong>parcours séquentiel</strong> : autant que d&rsquo;éléments dans le tableau dans le pire des cas.
-Le parcours séquentiel prend (dans le pire des cas) $n$ étapes.</li>
-<li><strong>recherche dichotomique</strong> (après le tri) : $\log_2 n$ étapes.
-$\log_2 n$ est (grosso modo) la taille de l&rsquo;entier représenté en base 2 (= son nombre de bits).</li>
+<li>
+<p><code>while g &lt;= d:</code> la boucle s&rsquo;arrête lorsque <code>g</code> devient plus grand que <code>d</code>.</p>
+</li>
+<li>
+<p><code>d - g</code> décroit strictement à chaque étape (<code>d = m - 1</code> ou <code>g = m + 1</code> avec <code>g &lt;= m &lt;= d</code>)</p>
+</li>
+<li>
+<p>En nombre fini d&rsquo;étapes, on arrive à <code>d &gt; g</code> et l&rsquo;algorithme s&rsquo;arrête</p>
+</li>
 </ul>
+<blockquote class="book-hint info">
+  <h3 id="coût">
+  Coût
+  <a class="anchor" href="#co%c3%bbt">#</a>
+</h3>
+<ul>
+<li>
+<p><code>d - g</code> est <em>grossièrement</em> divisé par deux à chaque étape</p>
+</li>
+<li>
+<p>Autrement dit, <strong>si le tableau double de taille, il ne faut qu&rsquo;une étape supplémentaire.</strong></p>
+</li>
+<li>
+<p>Ex. Si <code>len(T)</code> $= 16 = 2 ^ 4$, il faut <strong>~4 étapes</strong>.<br>
+Dans ce cas, la <em>recherche par balayage</em> demande au pire 16 étapes.</p>
+</li>
+<li>
+<p>Ex. En partant d&rsquo;un tableau <em>trié</em> contenant 10 milliards d&rsquo;éléments, il faut au plus 34 étapes pour trouver un de ses éléments : $2^{34} &gt; 10^{10}$<br>
+Une recherche par balayage demande au pire&hellip; 10 milliards d&rsquo;étapes.</p>
+</li>
+</ul>
+
+</blockquote>
+
 <h2 id="conclusion">
   Conclusion
   <a class="anchor" href="#conclusion">#</a>
 </h2>
-<blockquote class="book-hint info">
-  <ul>
+<ul>
 <li>
-<p>La recherche dichotomique permet de gagner beaucoup d&rsquo;étape par rapport au parcours
-séquentiel du tableau.</p>
+<p>La recherche dichotomique permet de gagner beaucoup d&rsquo;étapes par rapport au parcours séquentiel du tableau.</p>
 </li>
 <li>
 <p>Elle nécessite d&rsquo;avoir un tableau <strong>trié</strong> sans quoi on ne peut l&rsquo;appliquer.</p>
 </li>
-<li>
-<p>Une recherche séquentielle dans un tableau de taille $n$ demande jusqu&rsquo;à $n$ étapes,</p>
-</li>
-<li>
-<p>Une recherche dichotomique dans un tableau trié de taille $n$ demande $\log_2(n)$ étapes.</p>
-</li>
 </ul>
-
-</blockquote>
-
-<hr>
-<h3 id="meilleure-stratégie--recherche-séquentielle-ou-tri--recherche-dichotomique-">
-  Meilleure stratégie : recherche séquentielle ou tri + recherche dichotomique ?
-  <a class="anchor" href="#meilleure-strat%c3%a9gie--recherche-s%c3%a9quentielle-ou-tri--recherche-dichotomique-">#</a>
+<h3 id="algorithme-1">
+  Algorithme
+  <a class="anchor" href="#algorithme-1">#</a>
 </h3>
-<p>Supposons partir d&rsquo;un tableau <em>non trié</em>. Est-il plus efficace de le trier avant de faire une recherche ?</p>
+<details  class="no-outline"><summary class="no-outline"></summary>
+    <div class="markdown-inner">
+        <div class="highlight"><pre tabindex="0" style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#069;font-weight:bold">def</span> <span style="color:#c0f">recherche_dichotomique</span>(T: <span style="color:#366">list</span>, x: <span style="color:#366">list</span>) <span style="color:#555">-&gt;</span> <span style="color:#366">int</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#c30">&#34;&#34;&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#c30">    Renvoie l&#39;indice de `x` dans `T`.
+</span></span></span><span style="display:flex;"><span><span style="color:#c30">    Renvoie -1 si `x` n&#39;est pas dans `T`.
+</span></span></span><span style="display:flex;"><span><span style="color:#c30">
+</span></span></span><span style="display:flex;"><span><span style="color:#c30">    Précondition : `T` est trié par ordre croissant
+</span></span></span><span style="display:flex;"><span><span style="color:#c30">    &#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>    g <span style="color:#555">=</span> <span style="color:#f60">0</span>
+</span></span><span style="display:flex;"><span>    d <span style="color:#555">=</span> <span style="color:#366">len</span>(T) <span style="color:#555">-</span> <span style="color:#f60">1</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#069;font-weight:bold">while</span> g <span style="color:#555">&lt;=</span> d:
+</span></span><span style="display:flex;"><span>        m <span style="color:#555">=</span> (g <span style="color:#555">+</span> d) <span style="color:#555">//</span> <span style="color:#f60">2</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#069;font-weight:bold">if</span> x <span style="color:#555">==</span> T[m]:
+</span></span><span style="display:flex;"><span>            <span style="color:#069;font-weight:bold">return</span> m
+</span></span><span style="display:flex;"><span>        <span style="color:#069;font-weight:bold">elif</span> x <span style="color:#555">&gt;</span> T[m]:
+</span></span><span style="display:flex;"><span>            g <span style="color:#555">=</span> m <span style="color:#555">+</span> <span style="color:#f60">1</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#069;font-weight:bold">else</span>:
+</span></span><span style="display:flex;"><span>            d <span style="color:#555">=</span> m <span style="color:#555">-</span> <span style="color:#f60">1</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#069;font-weight:bold">return</span> <span style="color:#555">-</span><span style="color:#f60">1</span>
+</span></span></code></pre></div>
+    </div>
+</details>
+
+<h3 id="remarques-sur-le-coût">
+  Remarques sur le coût
+  <a class="anchor" href="#remarques-sur-le-co%c3%bbt">#</a>
+</h3>
+<ul>
+<li>Si on ne souhaite l&rsquo;appliquer qu&rsquo;une seule fois, il n&rsquo;est pas intéressant de trier le tableau pour chercher. C&rsquo;est généralement trop long.</li>
+<li>Mais si on doit souvent effectuer des recherches dans le tableau, alors c&rsquo;est efficace.</li>
+</ul>
+<h3 id="nombre-détapes">
+  Nombre d&rsquo;étapes
+  <a class="anchor" href="#nombre-d%c3%a9tapes">#</a>
+</h3>
 <ul>
 <li>
-<p>Si on ne souhaite l&rsquo;appliquer qu&rsquo;<em>une</em> seule fois, il n&rsquo;est pas intéressant de trier avant de chercher. C&rsquo;est trop long.</p>
+<p><strong>parcours séquentiel</strong> : autant que d&rsquo;éléments dans le tableau dans le pire des cas.</p>
+<p>Le parcours séquentiel prend (dans le pire des cas) $n$ étapes.</p>
 </li>
 <li>
-<p>Mais si on doit effectuer beaucoup de recherches dans le tableau et qu&rsquo;il ne change pas, alors c&rsquo;est plus envisageable.</p>
+<p><strong>recherche dichotomique</strong> : $\log_2 n$ étapes.</p>
+<p>$\log_2 n \approx$ le nombre de divisions entières de $n$ par 2 qu&rsquo;on peut effectuer
+avant de trouver un quotient nul</p>
+<p>$\log_2 n \approx$ le nombre de bits de $n$ en binaire.</p>
 </li>
 </ul>
 </article>
@@ -9563,22 +7353,37 @@ séquentiel du tableau.</p>
 <h1>Table des matières</h1>
 <nav id="TableOfContents">
   <ul>
-    <li><a href="#présentation">Présentation</a></li>
-    <li><a href="#dichotomie-vs-recherche-séquentielle">Dichotomie vs recherche séquentielle</a></li>
-    <li><a href="#principe">Principe</a></li>
-    <li><a href="#contexte">Contexte</a></li>
-    <li><a href="#dichotomie">Dichotomie</a></li>
-    <li><a href="#déroulé-sur-lexemple-à-la-main">Déroulé sur l&rsquo;exemple, à la main.</a></li>
-    <li><a href="#lalgorithme">L&rsquo;algorithme</a></li>
-    <li><a href="#même-exemple-avec-les-variables">Même exemple, avec les variables</a>
+    <li><a href="#introduction--recherche-par-balayage">Introduction : recherche par balayage</a>
       <ul>
         <li><a href="#déroulé">Déroulé</a></li>
-        <li><a href="#complexité">Complexité</a></li>
+        <li><a href="#remarques">Remarques</a></li>
+      </ul>
+    </li>
+    <li><a href="#recherche-dichotomique">Recherche dichotomique</a>
+      <ul>
+        <li><a href="#présentation">Présentation</a></li>
+        <li><a href="#déroulé-1">Déroulé</a></li>
+      </ul>
+    </li>
+    <li><a href="#construction-de-lalgorithme">Construction de l&rsquo;algorithme</a></li>
+    <li><a href="#codes-à-compléter">Codes à compléter</a>
+      <ul>
+        <li><a href="#exemples-pour-tester-votre-fonction">Exemples pour tester votre fonction</a></li>
+        <li><a href="#fonction-à-compléter">Fonction à compléter</a></li>
+      </ul>
+    </li>
+    <li><a href="#algorithme">Algorithme</a></li>
+    <li><a href="#déroulé-de-lalgorithme">Déroulé de l&rsquo;algorithme</a></li>
+    <li><a href="#remarques-1">Remarques</a>
+      <ul>
+        <li><a href="#terminaison">Terminaison</a></li>
       </ul>
     </li>
     <li><a href="#conclusion">Conclusion</a>
       <ul>
-        <li><a href="#meilleure-stratégie--recherche-séquentielle-ou-tri--recherche-dichotomique-">Meilleure stratégie : recherche séquentielle ou tri + recherche dichotomique ?</a></li>
+        <li><a href="#algorithme-1">Algorithme</a></li>
+        <li><a href="#remarques-sur-le-coût">Remarques sur le coût</a></li>
+        <li><a href="#nombre-détapes">Nombre d&rsquo;étapes</a></li>
       </ul>
     </li>
   </ul>

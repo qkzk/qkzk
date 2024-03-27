@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>TD : dichotomie on qkzk</title>
+    <title>TD on qkzk</title>
     <link>http://localhost:1313/docs/nsi/cours_premiere/algorithmique/dichotomie/2_td/</link>
-    <description>Recent content in TD : dichotomie on qkzk</description>
+    <description>Recent content in TD on qkzk</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <atom:link href="http://localhost:1313/docs/nsi/cours_premiere/algorithmique/dichotomie/2_td/index.xml" rel="self" type="application/rss+xml" />
