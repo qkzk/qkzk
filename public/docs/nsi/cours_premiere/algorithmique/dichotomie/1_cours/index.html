@@ -4,7 +4,8 @@
 <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
     <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Le tableau T contient-il x ? À quelle position ?
+<meta name="description" content="Documents : diapos &amp; imprimable
+Le tableau T contient-il x ? À quelle position ?
 C&rsquo;est un problème déjà rencontré lors des parcours séquentiels. Nous allons étudier un algorithme beaucoup plus rapide&hellip; mais qui ne s&rsquo;applique qu&rsquo;aux tableaux triés. Introduction : recherche par balayage # Déjà abordé lors des parcours séquentiels
 x = 5 T = [11, 7, 9, 5, 15, 13, 3, 1] 0 1 2 3 4 5 6 7 ^ def recherche(T, x): Pour i allant de 0 à len(T) - 1: Si x == T[i]: renvoyer i renvoyer -1 Recherche par balayage # def recherche(T: list, x: int): for i in range(len(T)): if x == T[i]: return i return -1 x = 5 T = [11, 7, 9, 5, 15, 13, 3, 1] print(recherche(T, x)) Run Reset Download Stop Résultat Déroulé # i = 0 5 !">
 <meta name="theme-color" content="#FFFFFF">
@@ -18,7 +19,7 @@ x = 5 T = [11, 7, 9, 5, 15, 13, 3, 1] 0 1 2 3 4 5 6 7 ^ def recherche(T, x): Pou
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/book.min.24c2b1f8dc2338e074345eec5b36f8a002aaa6d1b2e7312e14ac2d6a6958c876.css" integrity="sha256-JMKx&#43;NwjOOB0NF7sWzb4oAKqptGy5zEuFKwtamlYyHY=" crossorigin="anonymous">
   <script defer src="/flexsearch.min.js"></script>
-  <script defer src="/en.search.min.face669dbd929bbadccb1ae86304ffcfd9efe37085285033b8bc29349ac17701.js" integrity="sha256-&#43;s5mnb2Sm7rcyxroYwT/z9nv43CFKFAzuLwpNJrBdwE=" crossorigin="anonymous"></script>
+  <script defer src="/en.search.min.5d1e0205f08b516e34dacb239ee38cdd14f4a403cbe1f4d0e2d36637e1150dd6.js" integrity="sha256-XR4CBfCLUW402ssjnuOM3RT0pAPL4fTQ4tNmN&#43;EVDdY=" crossorigin="anonymous"></script>
 <link rel="alternate" type="application/rss+xml" href="http://localhost:1313/docs/nsi/cours_premiere/algorithmique/dichotomie/1_cours/index.xml" title="qkzk" />
 <!--
 Made with Book Theme
@@ -6760,7 +6761,9 @@ MathJax.Hub.Config({
 
                 
                 
-<article class="markdown"><p>Le tableau <code>T</code> contient-il <code>x</code> ? À quelle position ?</p>
+<article class="markdown"><p><strong>Documents :</strong> <a href="dicho_slides.pdf">diapos</a> &amp; <a href="dicho_cours.pdf">imprimable</a></p>
+<hr>
+<p>Le tableau <code>T</code> contient-il <code>x</code> ? À quelle position ?</p>
 <blockquote class="book-hint info">
   <em>C&rsquo;est un problème déjà rencontré lors des parcours séquentiels. Nous allons étudier un algorithme beaucoup plus rapide&hellip; mais qui ne s&rsquo;applique qu&rsquo;aux tableaux <strong>triés</strong></em>.
 </blockquote>

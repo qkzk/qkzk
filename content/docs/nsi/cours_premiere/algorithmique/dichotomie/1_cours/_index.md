@@ -5,6 +5,10 @@ weight: 1
 bookCollapseSection: true
 ---
 
+**Documents :** [diapos](dicho_slides.pdf) & [imprimable](dicho_cours.pdf)
+
+---
+
 Le tableau `T` contient-il `x` ? À quelle position ?
 
 {{< hint info >}}

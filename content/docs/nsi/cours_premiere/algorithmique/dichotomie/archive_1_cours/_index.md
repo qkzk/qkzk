@@ -2,7 +2,7 @@
 title: "Cours : dichotomie"
 bookCollapseSection: true
 author: qkzk
-weight: 1000
+weight: 1
 bookHidden: true
 ---
 

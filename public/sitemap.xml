@@ -129,7 +129,7 @@
   </url><url>
     <loc>http://localhost:1313/docs/nsi/cours_premiere/python/cours_python/03_structure_controle/conditions/</loc>
   </url><url>
-    <loc>http://localhost:1313/docs/nsi/cours_premiere/algorithmique/dichotomie/v2_cours/</loc>
+    <loc>http://localhost:1313/docs/nsi/cours_premiere/algorithmique/dichotomie/1_cours/</loc>
   </url><url>
     <loc>http://localhost:1313/docs/nsi/cours_premiere/donnees_simples/complement_a_deux/1_cours/</loc>
   </url><url>
@@ -144,8 +144,6 @@
     <loc>http://localhost:1313/docs/nsi/cours_terminale/prog/recursivite/cours/</loc>
   </url><url>
     <loc>http://localhost:1313/docs/nsi/cours_terminale/bdd/partie_1/</loc>
-  </url><url>
-    <loc>http://localhost:1313/docs/nsi/cours_premiere/algorithmique/dichotomie/1_cours/</loc>
   </url><url>
     <loc>http://localhost:1313/docs/nsi/cours_premiere/reseaux/complements/cours_complet/</loc>
   </url><url>
@@ -354,11 +352,11 @@
   </url><url>
     <loc>http://localhost:1313/docs/nsi/cours_terminale/structures_donnees/graphes/cours_sd/</loc>
   </url><url>
+    <loc>http://localhost:1313/docs/nsi/cours_premiere/algorithmique/dichotomie/2_td/</loc>
+  </url><url>
     <loc>http://localhost:1313/docs/nsi/cours_premiere/donnees_structurees/types_construits/2_td/</loc>
   </url><url>
     <loc>http://localhost:1313/docs/nsi/cours_premiere/algorithmique/tris/2_td_select/</loc>
-  </url><url>
-    <loc>http://localhost:1313/docs/nsi/cours_premiere/algorithmique/dichotomie/2_td/</loc>
   </url><url>
     <loc>http://localhost:1313/docs/nsi/cours_premiere/donnees_simples/complement_a_deux/2_td/</loc>
   </url><url>
@@ -960,6 +958,8 @@
     <lastmod>2016-07-02T13:34:30+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/docs/nsi/cours_premiere/donnees_structurees/table/7_revisions_pays/</loc>
+  </url><url>
+    <loc>http://localhost:1313/docs/nsi/cours_premiere/algorithmique/dichotomie/archive_1_cours/</loc>
   </url><url>
     <loc>http://localhost:1313/docs/nsi/cours_terminale/bdd/sqljs/</loc>
   </url><url>
