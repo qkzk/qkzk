@@ -189,20 +189,20 @@ Boucle non bornée (`while`)\
 {{< expand "" "..." >}}
 ```python
 # tableau vide
-assert not contient_dichotomique([], 0)
+assert recherche_dichotomique([], 0) == -1
 
 # tableau à 1 élément
-assert not contient_dichotomique([1], 0)
-assert contient_dichotomique([1], 1)
-assert not contient_dichotomique([1], 2)
+assert recherche_dichotomique([1], 0) == -1
+assert recherche_dichotomique([1], 1) == 0
+assert recherche_dichotomique([1], 2) == -1
 
 # tableau plus grand
 tableau = [0, 2, 4, 6, 8, 10]
 for cle in tableau:
-    assert contient_dichotomique(tableau, cle)
+    assert recherche_dichotomique(tableau, cle) == cle // 2
 
 for cle in [-1, 1, 3, 5, 7, 9, 11]:
-    assert not contient_dichotomique(tableau, cle)
+    assert recherche_dichotomique(tableau, cle) == -1
 ```
 {{< /expand >}}
 

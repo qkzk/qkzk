@@ -145,6 +145,8 @@
   </url><url>
     <loc>http://localhost:1313/docs/nsi/cours_terminale/bdd/partie_1/</loc>
   </url><url>
+    <loc>http://localhost:1313/docs/nsi/cours_premiere/algorithmique/dichotomie/archive_1_cours/</loc>
+  </url><url>
     <loc>http://localhost:1313/docs/nsi/cours_premiere/reseaux/complements/cours_complet/</loc>
   </url><url>
     <loc>http://localhost:1313/docs/nsi/cours_premiere/ihm_web/web/</loc>
@@ -958,8 +960,6 @@
     <lastmod>2016-07-02T13:34:30+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/docs/nsi/cours_premiere/donnees_structurees/table/7_revisions_pays/</loc>
-  </url><url>
-    <loc>http://localhost:1313/docs/nsi/cours_premiere/algorithmique/dichotomie/archive_1_cours/</loc>
   </url><url>
     <loc>http://localhost:1313/docs/nsi/cours_terminale/bdd/sqljs/</loc>
   </url><url>
