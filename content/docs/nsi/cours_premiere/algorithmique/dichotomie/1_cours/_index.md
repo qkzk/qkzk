@@ -285,32 +285,7 @@ T = [1,  3,  5,  7,  9, 11, 13, 15]
 print(recherche_dichotomique(T, x))
 {{< /python >}}
 
-## Algorithme
 
-{{< expand "" "..." >}}
-
-```python
-def recherche_dichotomique(T: list, x: list) -> int:
-    """
-    Renvoie l'indice de `x` dans `T`.
-    Renvoie -1 si `x` n'est pas dans `T`.
-
-    Précondition : `T` est trié par ordre croissant
-    """
-    g = 0
-    d = len(T) - 1
-    while g <= d:
-        m = (g + d) // 2
-        if x == T[m]:
-            return m
-        elif x > T[m]:
-            g = m + 1
-        else:
-            d = m - 1
-    return -1
-```
-
-{{< /expand >}}
 
 ## Déroulé de l'algorithme
 

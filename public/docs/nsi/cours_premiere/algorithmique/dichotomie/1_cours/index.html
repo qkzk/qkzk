@@ -19,7 +19,7 @@ x = 5 T = [11, 7, 9, 5, 15, 13, 3, 1] 0 1 2 3 4 5 6 7 ^ def recherche(T, x): Pou
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/book.min.24c2b1f8dc2338e074345eec5b36f8a002aaa6d1b2e7312e14ac2d6a6958c876.css" integrity="sha256-JMKx&#43;NwjOOB0NF7sWzb4oAKqptGy5zEuFKwtamlYyHY=" crossorigin="anonymous">
   <script defer src="/flexsearch.min.js"></script>
-  <script defer src="/en.search.min.5d1e0205f08b516e34dacb239ee38cdd14f4a403cbe1f4d0e2d36637e1150dd6.js" integrity="sha256-XR4CBfCLUW402ssjnuOM3RT0pAPL4fTQ4tNmN&#43;EVDdY=" crossorigin="anonymous"></script>
+  <script defer src="/en.search.min.9686ea940159992a40464d1ab79f1ae68397e52fff924beeb6ef5fed2704d0cb.js" integrity="sha256-lobqlAFZmSpARk0at58a5oOX5S//kkvutu9f7ScE0Ms=" crossorigin="anonymous"></script>
 <link rel="alternate" type="application/rss+xml" href="http://localhost:1313/docs/nsi/cours_premiere/algorithmique/dichotomie/1_cours/index.xml" title="qkzk" />
 <!--
 Made with Book Theme
@@ -6734,7 +6734,6 @@ MathJax.Hub.Config({
         <li><a href="#fonction-à-compléter">Fonction à compléter</a></li>
       </ul>
     </li>
-    <li><a href="#algorithme">Algorithme</a></li>
     <li><a href="#déroulé-de-lalgorithme">Déroulé de l&rsquo;algorithme</a></li>
     <li><a href="#remarques-1">Remarques</a>
       <ul>
@@ -6743,7 +6742,7 @@ MathJax.Hub.Config({
     </li>
     <li><a href="#conclusion">Conclusion</a>
       <ul>
-        <li><a href="#algorithme-1">Algorithme</a></li>
+        <li><a href="#algorithme">Algorithme</a></li>
         <li><a href="#remarques-sur-le-coût">Remarques sur le coût</a></li>
         <li><a href="#nombre-détapes">Nombre d&rsquo;étapes</a></li>
       </ul>
@@ -7125,34 +7124,6 @@ print(recherche_dichotomique(T, x))
     }).catch(() => { });
 </script>
 
-<h2 id="algorithme">
-  Algorithme
-  <a class="anchor" href="#algorithme">#</a>
-</h2>
-<details  class="no-outline"><summary class="no-outline"></summary>
-    <div class="markdown-inner">
-        <div class="highlight"><pre tabindex="0" style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#069;font-weight:bold">def</span> <span style="color:#c0f">recherche_dichotomique</span>(T: <span style="color:#366">list</span>, x: <span style="color:#366">list</span>) <span style="color:#555">-&gt;</span> <span style="color:#366">int</span>:
-</span></span><span style="display:flex;"><span>    <span style="color:#c30">&#34;&#34;&#34;
-</span></span></span><span style="display:flex;"><span><span style="color:#c30">    Renvoie l&#39;indice de `x` dans `T`.
-</span></span></span><span style="display:flex;"><span><span style="color:#c30">    Renvoie -1 si `x` n&#39;est pas dans `T`.
-</span></span></span><span style="display:flex;"><span><span style="color:#c30">
-</span></span></span><span style="display:flex;"><span><span style="color:#c30">    Précondition : `T` est trié par ordre croissant
-</span></span></span><span style="display:flex;"><span><span style="color:#c30">    &#34;&#34;&#34;</span>
-</span></span><span style="display:flex;"><span>    g <span style="color:#555">=</span> <span style="color:#f60">0</span>
-</span></span><span style="display:flex;"><span>    d <span style="color:#555">=</span> <span style="color:#366">len</span>(T) <span style="color:#555">-</span> <span style="color:#f60">1</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#069;font-weight:bold">while</span> g <span style="color:#555">&lt;=</span> d:
-</span></span><span style="display:flex;"><span>        m <span style="color:#555">=</span> (g <span style="color:#555">+</span> d) <span style="color:#555">//</span> <span style="color:#f60">2</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#069;font-weight:bold">if</span> x <span style="color:#555">==</span> T[m]:
-</span></span><span style="display:flex;"><span>            <span style="color:#069;font-weight:bold">return</span> m
-</span></span><span style="display:flex;"><span>        <span style="color:#069;font-weight:bold">elif</span> x <span style="color:#555">&gt;</span> T[m]:
-</span></span><span style="display:flex;"><span>            g <span style="color:#555">=</span> m <span style="color:#555">+</span> <span style="color:#f60">1</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#069;font-weight:bold">else</span>:
-</span></span><span style="display:flex;"><span>            d <span style="color:#555">=</span> m <span style="color:#555">-</span> <span style="color:#f60">1</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#069;font-weight:bold">return</span> <span style="color:#555">-</span><span style="color:#f60">1</span>
-</span></span></code></pre></div>
-    </div>
-</details>
-
 <h2 id="déroulé-de-lalgorithme">
   Déroulé de l&rsquo;algorithme
   <a class="anchor" href="#d%c3%a9roul%c3%a9-de-lalgorithme">#</a>
@@ -7243,9 +7214,9 @@ Une recherche par balayage demande au pire&hellip; 10 milliards d&rsquo;étapes.
 <p>Elle nécessite d&rsquo;avoir un tableau <strong>trié</strong> sans quoi on ne peut l&rsquo;appliquer.</p>
 </li>
 </ul>
-<h3 id="algorithme-1">
+<h3 id="algorithme">
   Algorithme
-  <a class="anchor" href="#algorithme-1">#</a>
+  <a class="anchor" href="#algorithme">#</a>
 </h3>
 <details  class="no-outline"><summary class="no-outline"></summary>
     <div class="markdown-inner">
@@ -7375,7 +7346,6 @@ avant de trouver un quotient nul</p>
         <li><a href="#fonction-à-compléter">Fonction à compléter</a></li>
       </ul>
     </li>
-    <li><a href="#algorithme">Algorithme</a></li>
     <li><a href="#déroulé-de-lalgorithme">Déroulé de l&rsquo;algorithme</a></li>
     <li><a href="#remarques-1">Remarques</a>
       <ul>
@@ -7384,7 +7354,7 @@ avant de trouver un quotient nul</p>
     </li>
     <li><a href="#conclusion">Conclusion</a>
       <ul>
-        <li><a href="#algorithme-1">Algorithme</a></li>
+        <li><a href="#algorithme">Algorithme</a></li>
         <li><a href="#remarques-sur-le-coût">Remarques sur le coût</a></li>
         <li><a href="#nombre-détapes">Nombre d&rsquo;étapes</a></li>
       </ul>
