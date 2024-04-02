@@ -10,7 +10,8 @@ weight: 100
 
 ## Un programme en tant que donnée
 
-[Introduction de Gilles Lassus](https://glassus.github.io/terminale_nsi/T2_Programmation/2.3_Calculabilite_Decidabilite/cours/)
+1. [Introduction de "numerique-sciences-informatiques.fr"](https://www.numerique-sciences-informatiques.fr/terminale_nsi/cours_langage_decidabilite.php)
+2. [Introduction de Gilles Lassus](https://glassus.github.io/terminale_nsi/T2_Programmation/2.3_Calculabilite_Decidabilite/cours/)
 
 ## Terminaison
 
