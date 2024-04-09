@@ -202,21 +202,21 @@ Toujours avec la consommation des ménages on a lu $y=-0.09x + 197.564$
 3.  Cette fois, il faut faire attention ! Ce 15% est une _ordonnée_. On part donc de $y=15$ et
     on cherche l'abscisse correspondant sur la droite.
 
-        * _Graphiquement_
+    - _Graphiquement_
 
-            La figure précédente ne fait pas apparaître ce point, on peut changer les axes :
+      La figure précédente ne fait pas apparaître ce point, on peut changer les axes :
 
-            ![Après changement d'axes](./numworks_4_edited.png)
+      ![Après changement d'axes](./numworks_4_edited.png)
 
-            On lit $x=2028$ et $y=15$.
+      On lit $x=2028$ et $y=15$.
 
-        * _Par le calcul_,
+    - _Par le calcul_,
 
-            on résout :
-            $$-0.09x + 197.564 = 15 \Longleftrightarrow -0.09x = 15 - 197.564$$
-            $$\Longleftrightarrow -0.09x=-182.564 \Longleftrightarrow x= \dfrac{-182.564}{-0.09} \approx 2028.48$$
+      on résout :
+      $$-0.09x + 197.564 = 15 \Longleftrightarrow -0.09x = 15 - 197.564$$
+      $$\Longleftrightarrow -0.09x=-182.564 \Longleftrightarrow x= \dfrac{-182.564}{-0.09} \approx 2028.48$$
 
-            C'est bien entre 2028 et 2029 que la part de l'alimentaire dans la consommation des ménages devrait passer sous les 15%.
+      C'est bien entre 2028 et 2029 que la part de l'alimentaire dans la consommation des ménages devrait passer sous les 15%.
 
     {{< /expand >}}
 
