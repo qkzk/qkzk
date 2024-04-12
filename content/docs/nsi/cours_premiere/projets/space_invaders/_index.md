@@ -1,12 +1,9 @@
 ---
-title:
-    pgzero invaders
-author:
-  qkzk
-date:
-  2020-01-18
-weight:
-  100
+title: pgzero invaders
+author: qkzk
+date: 2020-01-18
+weight: 100
+bookHidden: true
 ---
 
 # Space Invaders - Pygame Zero
@@ -21,10 +18,10 @@ exercice pour découvrir la syntaxe et les fonctions d'un langage.
 
 Ce tutoriel sera découpé en deux parties :
 
-* Dans la première on construit une version de base du jeu Invaders avec des
+- Dans la première on construit une version de base du jeu Invaders avec des
   aliens, des lasers, des bases de défense et un score.
 
-* La seconde partie ajoutera les éléments supplémentaires de la version des bornes
+- La seconde partie ajoutera les éléments supplémentaires de la version des bornes
   d'arcades des années 70.
 
 ## Débuter la programmation d'un invaders avec Pygame Zero
@@ -47,7 +44,7 @@ décompressez les dans un dossier `images`
 
 À la racine, créez un fichier `invaders.py`. Voici votre arborescence :
 
-~~~
+```
 ├── images
 │   ├── alien1b.png
 │   ├── alien1.png
@@ -62,13 +59,13 @@ décompressez les dans un dossier `images`
 │   ├── laser2.png
 │   └── player.png
 └── invaders.py
-~~~
+```
 
 Et le contenu du fichier `invaders.py`
 
 [invaders_00.py](https://github.com/qkzk/data_colab/blob/master/nsi/prog/space_invaders/invaders_00.py)
 
-~~~python
+```python
 import pgzrun
 
 def draw():
@@ -79,7 +76,7 @@ def update():
 
 
 pgzrun.go()
-~~~
+```
 
 Tout ce que nous ferons maintenant est d'écrire dans le fichier `invaders.py`
 
@@ -99,9 +96,9 @@ disposer d'un jeu complet.
 
 Ces fonctions sont `draw()`, `update()`
 
-* `draw` contient l'ordre dans lequel les éléments doivent être dessinés
-    à chaque tour de la boucle
-* `update` contient les mises à jour à chaque tour de la boucle. Événéments
+- `draw` contient l'ordre dans lequel les éléments doivent être dessinés
+  à chaque tour de la boucle
+- `update` contient les mises à jour à chaque tour de la boucle. Événéments
   clavier, collisions, nouveaux élément à l'écran etc.
 
 ## Le joueur
@@ -115,9 +112,9 @@ fenêtre noire, aussi nous pouvons ajouter un fond à notre fonction `draw()`.
 Si nous la dessinons en premier, tout ce qui suit sera dessiné par dessus.
 Nous pouvons le dessiner en utilisant la fonction `blit()` en écrivant
 
-~~~python
+```python
 screen.blit('background', (0, 0))
-~~~
+```
 
 cela suppose d'avoir appelé notre fond : `background.png`. Ajoutons
 `player.draw()` juste après pour faire apparaître le joueur.
@@ -125,7 +122,6 @@ cela suppose d'avoir appelé notre fond : `background.png`. Ajoutons
 **Voici votre code complet à l'issue de cette étape :**
 
 [invaders_01.py](https://github.com/qkzk/data_colab/blob/master/nsi/prog/space_invaders/invaders_01.py)
-
 
 ## Déplacer le vaisseau du joueur
 
@@ -150,7 +146,6 @@ Vérifiez que votre vaisseau se déplace maintenant correctement.
 
 [invaders_02.py](https://github.com/qkzk/data_colab/blob/master/nsi/prog/space_invaders/invaders_02.py)
 
-
 ## Un concept d'alien
 
 Nous voulons maintenant créer une formation d'aliens. Vous pouvez les disposer
@@ -167,17 +162,18 @@ nous appelerons toutes les autres fonctions de réglage.
 Voilà comment procéder :
 
 1. Créez la fonction `init` si elle n'existe pas déjà.\
-    Dans cette fonction, appelez `initAliens()`
+   Dans cette fonction, appelez `initAliens()`
 2. Créez la fonction `initAliens`.\
-    Elle contient :
-    1. la déclaration de la variable aliens comme globale : `global aliens`
-    2. l'initialisation de la liste `aliens = []`
-    3. la boucle qui crée les éléments, pour l'instant :
+   Elle contient :
 
-        ~~~python
-        for a in range(18):
-          pass
-        ~~~
+   1. la déclaration de la variable aliens comme globale : `global aliens`
+   2. l'initialisation de la liste `aliens = []`
+   3. la boucle qui crée les éléments, pour l'instant :
+
+      ```python
+      for a in range(18):
+        pass
+      ```
 
 ## Un peu de mathématiques
 
@@ -213,19 +209,18 @@ liste. On dit qu'on a _linéarisé_ le tableau.
 Afin de voir vos aliens (pour l'instant immobiles) ajoutez une boucle à
 votre fonction `draw` :
 
-~~~python
+```python
 def draw():
   ...
   for alien in aliens:
       alien.draw()
-~~~
+```
 
 **Attention, cette boucle sera bientôt supprimée**
 
 Et voici le code complet à cette étape.
 
 [invaders_03.py](https://github.com/qkzk/data_colab/blob/master/nsi/prog/space_invaders/invaders_03.py)
-
 
 ## Croire aux choses étranges
 
@@ -255,7 +250,7 @@ quand ils arrivent au bord.
 
 Voici ce que contienent les fonctions modifiées à cette étape :
 
-~~~python
+```python
 def updateAliens():
     global aliens
     pass
@@ -274,7 +269,7 @@ def init():
     moveDelay = 30
     moveCounter = 0
     moveSequence = 0
-~~~
+```
 
 Remarquez aussi qu'on ajoute une variable globale `moveSequence` dont on
 va parler immédiatement.
@@ -282,7 +277,6 @@ va parler immédiatement.
 **Le code complet à cette étape :**
 
 [invaders_04.py](https://github.com/qkzk/data_colab/blob/master/nsi/prog/space_invaders/invaders_04.py)
-
 
 ## Mettre les aliens à jour
 
@@ -304,7 +298,7 @@ changer les pattes.
 Pensez à jouter `from random import randint` tout en haut pour utiliser
 la fonction `randint`
 
-~~~python
+```python
 def updateAliens():
     global moveSequence, moveDelay
     movex = movey = 0
@@ -324,9 +318,7 @@ def updateAliens():
     moveSequence += 1
     if moveSequence == 40:
         moveSequence = 0
-~~~
-
-
+```
 
 ## All your base are belong to us
 
@@ -352,7 +344,7 @@ Lisez le code suivant pour comprendre la manière dont cette nouvelle fonction
 est écrite et ajoutée à la variable hauteur. Cela signifie qu'on peut appeler
 cette fonction pour chaque acteur d'une base avec `base.drawClipped`.
 
-~~~python
+```python
 
 def drawClipped(self):
     screen.surface.blit(self._surf, (self.x - 32, self.y-self.height + 30),
@@ -372,13 +364,11 @@ def initBases():
 def drawBases():
     for base in bases:
         base.drawClipped()
-~~~
-
+```
 
 **Le code complet à l'issue de cette étape :**
 
 [invaders_05.py](https://github.com/qkzk/data_colab/blob/master/nsi/prog/space_invaders/invaders_05.py)
-
 
 ## Est-ce que je peux tirer sur quelque chose maintenant ?
 
@@ -406,7 +396,7 @@ Remarquez les appels à une fonction `listCleanup` dont nous parlerons plus tard
 Pensez à ajouter une variable `DIFFICULTY = 1` tout en haut juste après les
 imports ainsi qu'à appeler les fonctions nouvellement crées.
 
-~~~python
+```python
 def checkKeys():
     global player, lasers
     ... # ici la partie déjà saisie de checkKeys
@@ -432,13 +422,11 @@ def updateLasers():
             if lasers[l].y < 10: lasers[l].status = 1
     lasers = listCleanup(lasers)
     aliens = listCleanup(aliens)
-~~~
-
+```
 
 **Code complet à cette étape :**
 
 [invaders_06.py](https://github.com/qkzk/data_colab/blob/master/nsi/prog/space_invaders/invaders_06.py)
-
 
 ## Collisions
 
@@ -451,7 +439,6 @@ un drapeau "à effacer". Cela évite des soucis lors des boucles qui parcourent
 ces listes, sans quoi il va manquer des éléments dans les listes et nous aurons
 des erreurs. Nous leur donnons donc un drapeau et les effaçons après avec
 `listCleanup`.
-
 
 ![flow de space invaders](/docs/nsi/cours_premiere/projets/space_invaders/img/0.jpg)
 
@@ -470,7 +457,7 @@ dans notre fonction `updateLasers`
 
 Voici ce qu'on peut ajouter à `updateAliens`
 
-~~~python
+```python
 def updateAliens():
     global moveSequence, moveDelay
     ...
@@ -483,7 +470,7 @@ def updateAliens():
     moveSequence += 1
     if moveSequence == 40:
         moveSequence = 0
-~~~
+```
 
 ## Assurer les arrières
 
@@ -502,7 +489,6 @@ on réduit sa hauteur.
 
 [invaders_07](https://github.com/qkzk/data_colab/blob/master/nsi/prog/space_invaders/invaders_07.py)
 
-
 ## Un peu trop de lasers
 
 On remarque vite que les aliens tirent trop vite... mais cela est contré
@@ -510,7 +496,7 @@ parce que notre vaisseau peut tirer en continu tant que la touche espace est
 enfoncée. Non seulement c'est trop facile mais en plus cela ralenti le jeu.
 Nous devons établir des limites à la vitesse de tir et nous pouvons le faire en
 utilisant un autre objet natif de Pygame Zero : l'horloge. Si on ajoute une
-variable `laserActive` à notre Actor joueur  et le passons à 0, on peut
+variable `laserActive` à notre Actor joueur et le passons à 0, on peut
 appeler `clock.schedule(makeLaserActive, 1.0)` pour appeler la fonction
 `makeLaserActive` après une seconde.
 
@@ -537,7 +523,7 @@ crée une fonction `init` qu'on peut appeler pour lancer le jeu. On peut aussi
 l'appeler pour reset tous les éléments et redémarrer le jeu.
 Si on inclut tous les éléments abordés plus haut, cela donne quelque chose comme
 
-~~~python
+```python
 def init():
     global lasers, score, player, moveSequence, moveCounter, moveDelay
     initAliens()
@@ -547,7 +533,7 @@ def init():
     moveDelay = 30
     player.images = ["player","explosion1","explosion2", "explosion3","explosion4","explosion5"]
     player.laserActive = 1
-~~~
+```
 
 **Code complet du jeu à cette étape :**
 
@@ -571,7 +557,8 @@ les niveaux, les vies, les sons, les aliens bonus et un tableau des scores.
 **Ci-dessous le code complet à cette étape.**
 
 [invaders_09](https://github.com/qkzk/data_colab/blob/master/nsi/prog/space_invaders/invaders_09.py)
-~~~python
+
+```python
 import pgzrun
 import math
 from random import randint
@@ -780,7 +767,7 @@ def checkLaserHit(l):
 
 init()
 pgzrun.go()
-~~~
+```
 
 ## Conclusion
 
