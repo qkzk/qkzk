@@ -4,7 +4,7 @@ body{font-family:Open Sans; color:#555555; background-color: #7c7f5a;}
 .container { width: 100%; margin: 0 auto; }
 .container .row { float: left; clear: both; width: 100%; }
 .container .col { float: left; margin: 0 0 1.2em; padding-right: 1.2em; padding-left: 1.2em; }
-.container .col.four, .container .col.six, { width: 100%; }
+.container .col.four, .container .col.six { width: 100%; }
 
 
 @media screen and (min-width: 767px) {
@@ -65,6 +65,8 @@ table.center {
   border-width: 5px;
   border-color: #6b4832;
   background: white;
+  display: table;
+  vertical-align: inherit;
 }
 
 td {
