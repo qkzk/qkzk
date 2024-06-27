@@ -1,11 +1,10 @@
 ---
-title: 'maths'
+title: "maths"
 bookCollapseSection: true
 author: qu3nt1n
 date: 2019-08-02 08:47:43+00:00
 draft: false
 weight: 1
-
 ---
 
 # Mathématiques
@@ -13,7 +12,7 @@ weight: 1
 Cette page contient les liens vers les cours de
 mathématiques utilisés cette année
 
-## [Terminale STMG](t_stmg/)
+## [Seconde](/docs/maths/seconde)
 
 ## [L1S1](/docs/maths/l1s1)
 

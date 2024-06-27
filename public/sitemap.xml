@@ -127,6 +127,8 @@
   </url><url>
     <loc>http://localhost:1313/docs/archives/maths/seconde/chapitres/</loc>
   </url><url>
+    <loc>http://localhost:1313/docs/maths/seconde/chapitres/</loc>
+  </url><url>
     <loc>http://localhost:1313/docs/nsi/cours_premiere/python/cours_python/03_structure_controle/conditions/</loc>
   </url><url>
     <loc>http://localhost:1313/docs/nsi/cours_premiere/algorithmique/dichotomie/1_cours/</loc>
@@ -216,6 +218,8 @@
     <loc>http://localhost:1313/docs/nsi/cours_terminale/architecture/routage/</loc>
   </url><url>
     <loc>http://localhost:1313/docs/archives/maths/seconde/</loc>
+  </url><url>
+    <loc>http://localhost:1313/docs/maths/seconde/</loc>
   </url><url>
     <loc>http://localhost:1313/docs/maths/t_stmg/</loc>
   </url><url>
@@ -636,6 +640,8 @@
   </url><url>
     <loc>http://localhost:1313/docs/archives/maths/seconde/chapitres/affines/</loc>
   </url><url>
+    <loc>http://localhost:1313/docs/maths/seconde/chapitres/affines/</loc>
+  </url><url>
     <loc>http://localhost:1313/docs/nsi/cours_premiere/os/6_bash_resume/</loc>
   </url><url>
     <loc>http://localhost:1313/docs/nsi/cours_premiere/architecture/6_armlite/</loc>
@@ -823,6 +829,8 @@
     <lastmod>2019-12-10T07:08:58+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/docs/archives/maths/seconde/chapitres/echantillonnage/echantionnage_2022/</loc>
+  </url><url>
+    <loc>http://localhost:1313/docs/maths/seconde/chapitres/echantillonnage/echantionnage_2022/</loc>
   </url><url>
     <loc>http://localhost:1313/docs/nsi/cours_premiere/programmation/activites/python-3-16-turle-et-iss/</loc>
   </url><url>
