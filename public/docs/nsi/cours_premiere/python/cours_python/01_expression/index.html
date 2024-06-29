@@ -27,7 +27,7 @@ python Dans le second cas, on arrive devant l’interpréteur. On le sait parce 
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/book.min.24c2b1f8dc2338e074345eec5b36f8a002aaa6d1b2e7312e14ac2d6a6958c876.css" integrity="sha256-JMKx&#43;NwjOOB0NF7sWzb4oAKqptGy5zEuFKwtamlYyHY=" crossorigin="anonymous">
   <script defer src="/flexsearch.min.js"></script>
-  <script defer src="/en.search.min.3b3701fa723d52cce977fde9e160b8735d69ed453673d8ca70b26a7b63b4e663.js" integrity="sha256-OzcB&#43;nI9Uszpd/3p4WC4c11p7UU2c9jKcLJqe2O05mM=" crossorigin="anonymous"></script>
+  <script defer src="/en.search.min.a382df473ff0637aee0017db56403b42e35eae9f1f03d615825c6ba10c37dbc2.js" integrity="sha256-o4LfRz/wY3ruABfbVkA7QuNerp8fA9YVglxroQw328I=" crossorigin="anonymous"></script>
 
 <link rel="alternate" type="application/rss+xml" href="http://localhost:1313/docs/nsi/cours_premiere/python/cours_python/01_expression/index.xml" title="qkzk" />
 <!--
@@ -151,7 +151,7 @@ MathJax.Hub.Config({
   
     <input type="checkbox" id="section-eaa4cedb326329a983f97f48625ee2ca" class="toggle"  />
     <label for="section-eaa4cedb326329a983f97f48625ee2ca" class="flex justify-between">
-      <a href="http://localhost:1313/docs/maths/seconde/" class="">seconde</a>
+      <a href="http://localhost:1313/docs/maths/seconde/" class="">Seconde</a>
     </label>
   
 
@@ -6799,10 +6799,11 @@ MathJax.Hub.Config({
     </li>
     <li><a href="#types-dune-variable">Types d&rsquo;une variable</a>
       <ul>
-        <li><a href="#exercice-4----reconnaître-un-type">Exercice 4  - reconnaître un type</a></li>
+        <li><a href="#exercice-4---reconnaître-un-type">Exercice 4 - reconnaître un type</a></li>
         <li><a href="#exercice-5">Exercice 5</a></li>
       </ul>
     </li>
+    <li><a href="#instruction-et-expression">Instruction et expression</a></li>
   </ul>
 </nav>
 
@@ -6828,7 +6829,7 @@ MathJax.Hub.Config({
 <div class="highlight"><pre tabindex="0" style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>python
 </span></span></code></pre></div><p>Dans le second cas, on arrive devant l&rsquo;<em>interpréteur</em>. On le sait
 parce qu&rsquo;il présente chaque ligne avec trois chevrons :</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#555">&gt;&gt;&gt;</span> 
+<div class="highlight"><pre tabindex="0" style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#555">&gt;&gt;&gt;</span>
 </span></span></code></pre></div><p>Le code que vous lirez sera soit tiré d&rsquo;un fichier python (.py) soit de l&rsquo;interpréteur.</p>
 <ul>
 <li>
@@ -7040,7 +7041,7 @@ est la <em>valeur</em> de cette expression.</p>
 <p>Ce qui permet facilement de la repérer.</p>
 <p>Les erreurs courantes sont :</p>
 <ul>
-<li><code>TypeError</code> :  une opération non définie exemple : <code>3 + &quot;Super&quot;</code>,</li>
+<li><code>TypeError</code> : une opération non définie exemple : <code>3 + &quot;Super&quot;</code>,</li>
 <li><code>ZeroDivisionError</code> : division par zéro,</li>
 <li><code>ValueError</code> : erreur générique lorsqu&rsquo;une expression est du bon type mais
 pas de la bonne valeur.</li>
@@ -7170,9 +7171,9 @@ print(prenom)
 </h2>
 <p>En Python, toutes les valeurs ont un type. <code>12</code> est du type <code>int</code>, <code>True</code> est du tyle <code>bool</code> etc.</p>
 <p>On verra souvent &ldquo;<em>le type de la variable</em>&rdquo;, on devrait dire : <em>type de la valeur associée à la variable</em> ou <em>type de la valeur de l&rsquo;expression</em>, c&rsquo;est un abus de langage.</p>
-<h3 id="exercice-4----reconnaître-un-type">
-  Exercice 4  - reconnaître un type
-  <a class="anchor" href="#exercice-4----reconna%c3%aetre-un-type">#</a>
+<h3 id="exercice-4---reconnaître-un-type">
+  Exercice 4 - reconnaître un type
+  <a class="anchor" href="#exercice-4---reconna%c3%aetre-un-type">#</a>
 </h3>
 <p>Déterminer <em>de tête</em> le type des variables suivantes puis vérifier dans l&rsquo;interpréteur.</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>age <span style="color:#555">=</span> <span style="color:#f60">121</span>
@@ -7246,6 +7247,23 @@ a = 12 / 13
     }).catch(() => { });
 </script>
 
+<h2 id="instruction-et-expression">
+  Instruction et expression
+  <a class="anchor" href="#instruction-et-expression">#</a>
+</h2>
+<ul>
+<li>Une <em>epression</em> est un calcul qui a une <em>valeur</em>.</li>
+<li>Une <em>instruction</em> est un ordre qui change l&rsquo;état de la machine.</li>
+</ul>
+<p>Dans l&rsquo;exemple ci-dessous :</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>a <span style="color:#555">=</span> <span style="color:#f60">3</span> <span style="color:#555">*</span> <span style="color:#f60">3</span> <span style="color:#555">+</span> <span style="color:#f60">2</span>
+</span></span><span style="display:flex;"><span><span style="color:#f60">2</span> <span style="color:#555">*</span> a <span style="color:#555">+</span> <span style="color:#f60">5</span>
+</span></span><span style="display:flex;"><span><span style="color:#366">print</span>(<span style="color:#f60">4</span> <span style="color:#555">*</span> a)
+</span></span></code></pre></div><ol>
+<li>La première ligne affecte une valeur à <code>a</code>, c&rsquo;est une <em>instruction</em>. Elle contient une <em>expression</em> : <code>3 * 3 + 2</code>.</li>
+<li>La seconde ligne calcule une valeur et n&rsquo;en fait rien. <code>2 * a + 5</code> est une <em>expression</em>.</li>
+<li>La troisième ligne affiche la valeur de l&rsquo;<em>expression</em> <code>4 * a</code>, c&rsquo;est une <em>instruction</em>.</li>
+</ol>
 </article>
 
                 
@@ -7330,10 +7348,11 @@ a = 12 / 13
     </li>
     <li><a href="#types-dune-variable">Types d&rsquo;une variable</a>
       <ul>
-        <li><a href="#exercice-4----reconnaître-un-type">Exercice 4  - reconnaître un type</a></li>
+        <li><a href="#exercice-4---reconnaître-un-type">Exercice 4 - reconnaître un type</a></li>
         <li><a href="#exercice-5">Exercice 5</a></li>
       </ul>
     </li>
+    <li><a href="#instruction-et-expression">Instruction et expression</a></li>
   </ul>
 </nav>
 

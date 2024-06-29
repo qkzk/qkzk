@@ -2,9 +2,13 @@
 title: "1 - Expressions"
 bookCollapseSection: true
 author: "qkzk"
-date: "2021/04/19"
+date: "2024/06/29"
 weight: 2
-
+geometry: "margin=1.5cm"
+header-includes: |
+  \usepackage{tcolorbox}
+  \newtcolorbox{myquote}{colback=teal!10!white, colframe=teal!55!black}
+  \renewenvironment{Shaded}{\begin{myquote}}{\end{myquote}}
 ---
 
 pdf: [pour impression](./expressions.pdf)
@@ -29,32 +33,30 @@ Dans le second cas, on arrive devant l'_interpréteur_. On le sait
 parce qu'il présente chaque ligne avec trois chevrons :
 
 ```python
->>> 
+>>>
 ```
 
 Le code que vous lirez sera soit tiré d'un fichier python (.py) soit de l'interpréteur.
 
-* Dans le premier cas, le code est écrit directement.
-    
-    ```python
-    a = 2
-    print(a)
-    ```
+- Dans le premier cas, le code est écrit directement.
 
-* Dans le second les instructions sont précédées de trois chevrons
+  ```python
+  a = 2
+  print(a)
+  ```
 
-    ```python
-    >>> a = 2
-    >>> a
-    2
-    ```
-    L'interpéteur affiche le valeur de la dernière expression.
+- Dans le second les instructions sont précédées de trois chevrons
 
-    Le nombre `2` qu'on voit apparaître n'a pas été tapé à la main mais
-    est la valeur de la variable 2.
+  ```python
+  >>> a = 2
+  >>> a
+  2
+  ```
 
+  L'interpéteur affiche le valeur de la dernière expression.
 
-
+  Le nombre `2` qu'on voit apparaître n'a pas été tapé à la main mais
+  est la valeur de la variable 2.
 
 ## Expressions
 
@@ -82,8 +84,8 @@ C'est un commentaire.
 
 Les commentaires ont plusieurs usages :
 
-* permettre d'informer le lecteur sur le déroulement d'un programme,
-* rendre un morceau de code inopérant le temps de sa correction.
+- permettre d'informer le lecteur sur le déroulement d'un programme,
+- rendre un morceau de code inopérant le temps de sa correction.
 
 ```python
 # 34 == 4
@@ -99,7 +101,7 @@ Les expressions ont toute un _type_ sur lequel nous reviendrons plus tard.
 ## Opérations mathématiques courantes
 
 | Opération          | symbole | exemple   |   résultat |
-|--------------------|---------|-----------|-----------:|
+| ------------------ | ------- | --------- | ---------: |
 | addition           | `+`     | `2 + 5`   |        `7` |
 | soustraction       | `-`     | `5 - 6`   |       `-1` |
 | multiplication     | `*`     | `3.1 * 2` |      `6.2` |
@@ -114,7 +116,7 @@ C'est un sujet délicat auquel nous consacrerons plusieurs chapitres mais déjà
 
 > En programmation informatique, un **type de donnée**, ou simplement un **type**, définit la nature des valeurs que peut prendre une donnée, ainsi que les opérateurs qui peuvent lui être appliqués.
 
-Donc c'est un type c'est : 
+Donc c'est un type c'est :
 
 1. un ensemble de valeurs possibles,
 2. un ensemble d'opérations possibles sur ces valeurs.
@@ -123,10 +125,10 @@ Par exemple `1` est du type `int`, on peut réaliser certaines opérations _arit
 
 En Python, tous les objets ont un type.
 
-### Types élémentaires 
+### Types élémentaires
 
 | Type       | Description                   | Exemple                                       |
-|------------|-------------------------------|-----------------------------------------------|
+| ---------- | ----------------------------- | --------------------------------------------- |
 | `int`      | Entiers positifs ou négatifs  | `0`, `1234`, `-32`                            |
 | `float`    | Nombres à virgule             | `0.234`, `-43.483`                            |
 | `bool`     | Booléens (Vrai ou Faux)       | `True`, `False` (seules valeurs)              |
@@ -146,14 +148,11 @@ On accède au type d'une expression avec la fonction `type` :
 
 Nous travaillerons avec d'autres types mais une chose à la fois.
 
-
-
 ## Exercices
 
 #### Exercice 1 - évaluer des expressions
 
 Évaluer de tête les expressions suivantes, _ensuite_ vérifiez les dans l'interpréteur
-
 
 ```python
 34 // 3
@@ -196,12 +195,12 @@ Ce qui permet facilement de la repérer.
 
 Les erreurs courantes sont :
 
-* `TypeError` :  une opération non définie exemple : `3 + "Super"`,
-* `ZeroDivisionError` : division par zéro,
-* `ValueError` : erreur générique lorsqu'une expression est du bon type mais
-    pas de la bonne valeur.
-* `IndexError` : erreur d'indice pour une `list`
-* `KeyError` : erreur avec une clé de dictionnaire. etc.
+- `TypeError` : une opération non définie exemple : `3 + "Super"`,
+- `ZeroDivisionError` : division par zéro,
+- `ValueError` : erreur générique lorsqu'une expression est du bon type mais
+  pas de la bonne valeur.
+- `IndexError` : erreur d'indice pour une `list`
+- `KeyError` : erreur avec une clé de dictionnaire. etc.
 
 ### Exercice 3 - affichage
 
@@ -228,8 +227,8 @@ Ce sont bien les valeurs des expressions demandées.
 
 Comprenez bien qu'un affichage ne sert qu'à l'utilisateur...
 
-* L'expression `1 + 2 == 5` vaut `False`
-* L'expression `print(1 + 2 == 5)` vaut `None`
+- L'expression `1 + 2 == 5` vaut `False`
+- L'expression `print(1 + 2 == 5)` vaut `None`
 
 1. Vérifier ces deux affirmations
 
@@ -250,9 +249,6 @@ Lors de l'affichage, ils sont d'abord évalués puis séparés par des espaces.
 Mon nom est Bond, James Bond.
 ```
 
-
-
-
 ## Affecter :
 
 > attribuer une valeur à une variable.
@@ -264,7 +260,6 @@ Variable :
 **Affecter, c'est donc donner un _nom_ à une _valeur_.**
 
 Ainsi qu'on l'a déjà vu, il est possible de changer la valeur associée à ce nom.
-
 
 ```python
 prenom = "Raoul"
@@ -281,7 +276,6 @@ print(prenom)
 
 Ajoutez une ligne `print(prenom)` entre les affectations si n'êtes pas sûr d'avoir compris.
 
-
 ### Exercice 3 - affectation
 
 1. Créer une variable `somme` contenant la somme des entiers de 1 à 10.
@@ -290,7 +284,7 @@ Ajoutez une ligne `print(prenom)` entre les affectations si n'êtes pas sûr d'a
 4. A-t-on l'égalité entre `somme` et `deuxeme_somme` après cette étape ?
 5. Vérifier l'état des variables dans Thonny ou [Pythontutor](http://pythontutor.com/visualize.html#mode=edit).
 6. Afficher la taille en octets puis en bits d'un fichier de 536ko.
-    _On donne : 1ko (1 kilooctet) = 1000 octets et 1 octet = 8 bits._
+   _On donne : 1ko (1 kilooctet) = 1000 octets et 1 octet = 8 bits._
 
 ## Types d'une variable
 
@@ -298,8 +292,7 @@ En Python, toutes les valeurs ont un type. `12` est du type `int`, `True` est du
 
 On verra souvent "_le type de la variable_", on devrait dire : _type de la valeur associée à la variable_ ou _type de la valeur de l'expression_, c'est un abus de langage.
 
-
-### Exercice 4  - reconnaître un type
+### Exercice 4 - reconnaître un type
 
 Déterminer _de tête_ le type des variables suivantes puis vérifier dans l'interpréteur.
 
@@ -310,7 +303,6 @@ taille = 30 / 3
 pays = "France"
 ville = "bour" * 2 + "g"
 ```
-
 
 Les variables python peuvent changer de valeur durant l'exécution d'un programme (on dit qu'elles sont _mutables_)
 elles peuvent aussi changer de type (le typage est dit _dynamique_). C'est impossible dans beaucoup d'autres langages.
@@ -333,3 +325,20 @@ a = 123
 a = "SUPER"
 a = 12 / 13
 {{< /python >}}
+
+## Instruction et expression
+
+- Une _epression_ est un calcul qui a une _valeur_.
+- Une _instruction_ est un ordre qui change l'état de la machine.
+
+Dans l'exemple ci-dessous :
+
+```python
+a = 3 * 3 + 2
+2 * a + 5
+print(4 * a)
+```
+
+1. La première ligne affecte une valeur à `a`, c'est une _instruction_. Elle contient une _expression_ : `3 * 3 + 2`.
+2. La seconde ligne calcule une valeur et n'en fait rien. `2 * a + 5` est une _expression_.
+3. La troisième ligne affiche la valeur de l'_expression_ `4 * a`, c'est une _instruction_.
