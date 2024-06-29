@@ -27,7 +27,7 @@ les câbles ethernet munis de port RJ45 les réseaux domestiques Wi-Fi (Wireless
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/book.min.24c2b1f8dc2338e074345eec5b36f8a002aaa6d1b2e7312e14ac2d6a6958c876.css" integrity="sha256-JMKx&#43;NwjOOB0NF7sWzb4oAKqptGy5zEuFKwtamlYyHY=" crossorigin="anonymous">
   <script defer src="/flexsearch.min.js"></script>
-  <script defer src="/en.search.min.a382df473ff0637aee0017db56403b42e35eae9f1f03d615825c6ba10c37dbc2.js" integrity="sha256-o4LfRz/wY3ruABfbVkA7QuNerp8fA9YVglxroQw328I=" crossorigin="anonymous"></script>
+  <script defer src="/en.search.min.89ea76c45b992e2c8dd60b19b32b5cca454eccd06f2344462ec6366ae1c95a15.js" integrity="sha256-iep2xFuZLiyN1gsZsytcykVOzNBvI0RGLsY2auHJWhU=" crossorigin="anonymous"></script>
 
 <link rel="alternate" type="application/rss+xml" href="http://localhost:1313/docs/nsi/cours_premiere/reseaux/cours/index.xml" title="qkzk" />
 <!--
@@ -6782,8 +6782,6 @@ MathJax.Hub.Config({
       <ul>
         <li><a href="#ipv4-ipv6">IPv4, IPv6</a></li>
         <li><a href="#partie-réseau-partie-machine">Partie réseau, partie machine</a></li>
-        <li><a href="#masque-de-sous-réseau">Masque de sous réseau</a></li>
-        <li><a href="#épuisement-des-adresses-ipv4">Épuisement des adresses IPv4</a></li>
         <li><a href="#ipv6">IPv6</a></li>
         <li><a href="#réseaux-publics-et-privés">Réseaux publics et privés</a></li>
       </ul>
@@ -6798,10 +6796,8 @@ MathJax.Hub.Config({
         <li><a href="#encapsulation">Encapsulation</a></li>
         <li><a href="#tcp">TCP</a></li>
         <li><a href="#trajet-sur-le-réseau">Trajet sur le réseau</a></li>
-        <li><a href="#ports">Ports</a></li>
         <li><a href="#modèle-osi">Modèle OSI</a></li>
         <li><a href="#principes">Principes</a></li>
-        <li><a href="#les-grandes-règles-du-modèle-osi">Les grandes règles du modèle OSI</a></li>
         <li><a href="#chaque-couche-est-indépendante">Chaque couche est indépendante</a></li>
         <li><a href="#chaque-couche-ne-peut-communiquer-quavec-une-couche-adjacente">Chaque couche ne peut communiquer qu&rsquo;avec une couche adjacente</a></li>
       </ul>
@@ -6812,8 +6808,8 @@ MathJax.Hub.Config({
         <li><a href="#smtp">SMTP</a></li>
         <li><a href="#udp">UDP</a></li>
         <li><a href="#dns">DNS</a></li>
-        <li><a href="#blocage-dns">Blocage DNS</a></li>
         <li><a href="#icmp">ICMP</a></li>
+        <li><a href="#les-adresses-sur-un-réseau">Les adresses sur un réseau</a></li>
       </ul>
     </li>
     <li><a href="#commandes-réseau-de-base">Commandes réseau de base</a>
@@ -6896,10 +6892,10 @@ différentes. En pratique un peu moins, certaines adresses étant réservées.</
 </ul>
 <p>Cela devient plus complexe avec une adresse réseau occupant un autre nombre. On
 utilise alors un <strong>masque de sous réseau</strong>.</p>
-<h3 id="masque-de-sous-réseau">
+<h4 id="masque-de-sous-réseau">
   Masque de sous réseau
   <a class="anchor" href="#masque-de-sous-r%c3%a9seau">#</a>
-</h3>
+</h4>
 <p>Traitons rapidement le cas d&rsquo;une adresse en <code>/22</code></p>
 <p>La partie réseau occupe 22 bits et la partie machine 10 bits.</p>
 <p>Par exemple pour <code>122.34.170.45/22</code></p>
@@ -6918,10 +6914,10 @@ bits à 0 :</p>
 <p>Et ceci nous donne l&rsquo;adresse réseau.</p>
 <p>De toute évidence, ce n&rsquo;est pas difficile à programmer, c&rsquo;est plus difficile
 pour un humain.</p>
-<h3 id="épuisement-des-adresses-ipv4">
+<h4 id="épuisement-des-adresses-ipv4">
   Épuisement des adresses IPv4
   <a class="anchor" href="#%c3%a9puisement-des-adresses-ipv4">#</a>
-</h3>
+</h4>
 <p>C&rsquo;est une difficulté majeure, on ne dispose que de 4 milliards d&rsquo;adresses, moins
 qu&rsquo;il n&rsquo;existe de machines actuellement connectées à internet.</p>
 <p>Aussi, il faut trouver des solutions pour reconnaître les machines
@@ -6936,8 +6932,7 @@ pour donner une adresse unique à chaque machine.</p>
 <p>Il y a donc $2^{128}$ adresses IPv6 disponibles&hellip;</p>
 <p>La partie réseau occupe toujours les 64 premiers bits et la partie machine les
 64 derniers bits.</p>
-<p>Les adresses IPv6 sont généralement données en hexadécimal : <code>fe81::b097:2eb5:47e3:fb4d:1ef3:98d3:90b4</code></p>
-<p>Vérifions rapidement : 8 blocs de 4 chiffres hexadécimaux = 32 chiffres hexadécimaux donc $16^{32} = 2^{4 \times 32} = 2^{128}$ adresses différentes. Le compte est bon&hellip;</p>
+<p>Les adresses IPv6 sont généralement données en hexadécimal : <code>43:2f:5b:df:b2:f4</code></p>
 <h3 id="réseaux-publics-et-privés">
   Réseaux publics et privés
   <a class="anchor" href="#r%c3%a9seaux-publics-et-priv%c3%a9s">#</a>
@@ -7109,15 +7104,15 @@ accusé de réception de la machine B vers la machine A.</p>
 le protocole IP. Les paquets n&rsquo;empruntent pas forcément le même chemin
 et n&rsquo;arrivent pas forcément dans l&rsquo;ordre.</p>
 <p>Une fois décapsulées, elles sont réordonnées par TCP.</p>
-<h3 id="ports">
+<h4 id="ports">
   Ports
   <a class="anchor" href="#ports">#</a>
-</h3>
+</h4>
 <p>Une machine peut établir plusieurs connexions TCP en même temps. Afin de
 les distinguer on ajoute une information supplémentaire, le <strong>port réseau.</strong></p>
 <p>TCP n&rsquo;est pas le seul protocole à utiliser ces ports.</p>
 <p>Les ports sont des nombres sur 16 bits, généralement notés en décimal, entre 0 et $2^{16} = 65536$</p>
-<p>Ils sont généralement ajoutés à la fin de l&rsquo;adresse IP  après le symbole <code>:</code> (deux points)</p>
+<p>Ils sont généralement ajoutés à la fin de l&rsquo;adresse IP après le symbole <code>:</code> (deux points)</p>
 <p><code>192.168.1.2:80</code></p>
 <p>Remarquez bien la différence avec le masque, qu&rsquo;on indique avec un slash.</p>
 <p>Chaque fois que vous ouvrez deux onglets dans le navigateur, celui-ci établi une
@@ -7137,10 +7132,10 @@ ne sont pas parvenus à s&rsquo;entendre sur ce sujet.</p>
   Principes
   <a class="anchor" href="#principes">#</a>
 </h3>
-<h3 id="les-grandes-règles-du-modèle-osi">
+<h4 id="les-grandes-règles-du-modèle-osi">
   Les grandes règles du modèle OSI
   <a class="anchor" href="#les-grandes-r%c3%a8gles-du-mod%c3%a8le-osi">#</a>
-</h3>
+</h4>
 <ul>
 <li>Chaque couche est indépendante</li>
 <li>Chaque couche ne peut communiquer qu&rsquo;avec une couche adjacente</li>
@@ -7236,10 +7231,10 @@ en une adresse IP : <code>2a00:1450:4007:811::200e</code></p>
 (de droite à gauche en lisant l&rsquo;adresse).</p>
 <p>Par exemple pour <code>www.wikipedia.org</code> :</p>
 <p>$;$<img src="./dns.png" alt="dns" /></p>
-<h3 id="blocage-dns">
+<h4 id="blocage-dns">
   Blocage DNS
   <a class="anchor" href="#blocage-dns">#</a>
-</h3>
+</h4>
 <p>DNS permet ainsi facilement de bloquer certaines adresses.
 Par exemple pour bloquer &ldquo;phishing.pirate.com&rdquo; pointant vers l&rsquo;adresse
 fictive <code>1.2.3.4</code>, le DNS ne répond pas lorsqu&rsquo;on lui demande l&rsquo;adresse.</p>
@@ -7252,8 +7247,7 @@ afin de contourner certains blocages.</p>
 <p>ICMP pour <em>internet control message protocol</em> est un protocole utilisé pour
 assurer qu&rsquo;il existe une laison entre deux machines.</p>
 <p>C&rsquo;est un protocole qui utilise IP.</p>
-<p>Il est utilisé par deux
-applications principalement : <code>ping</code> et <code>traceroute</code>. Ce sont des applications
+<p>Il est utilisé par deux applications principalement : <code>ping</code> et <code>traceroute</code>. Ce sont des applications
 CLI (command line interface = la console).</p>
 <ul>
 <li>
@@ -7264,12 +7258,28 @@ aller retour.</p>
 <p><code>traceroute</code> permet de connaître les routeurs empruntés lors d&rsquo;un trajet.</p>
 </li>
 </ul>
+<h3 id="les-adresses-sur-un-réseau">
+  Les adresses sur un réseau
+  <a class="anchor" href="#les-adresses-sur-un-r%c3%a9seau">#</a>
+</h3>
+<p>En particulier, les adresses IP (<em>Internet Protocol</em>) et l&rsquo;adresse MAC (<em>Media Access Control</em>).</p>
+<p>Toutes deux servent à identifier des appareils sur un réseau mais elles le font à des niveau différents et pour des usages différents.</p>
+<h4 id="adresse-mac">
+  Adresse MAC
+  <a class="anchor" href="#adresse-mac">#</a>
+</h4>
+<p>Chaque interface réseau (carte réseau Ethernet ou Wi-Fi) possède une adresse MAC unique et définitive attribuée par le constructeur lors de sa création. Elle sert à identifier cette interface sur le réseau local qui contient cette interface.</p>
+<h4 id="adresse-ip-1">
+  Adresse IP
+  <a class="anchor" href="#adresse-ip-1">#</a>
+</h4>
+<p>Comme on l&rsquo;a dit, il existe deux normes concurrentes pour les adresses IP, IPv4 (192.168.1.1) et IPv6 (3a01:afbb:1234:2200:7e06:1075:fe2d:f32a). Elles servent à identifier une machine sur un réseau qui utilise le protocole Internet.</p>
+<p>La transmission de l&rsquo;information sur un réseau est découpé en couche (voir modèle OSI). L&rsquo;adresse MAC correspond à la couche &ldquo;liaison&rdquo;, niveau 2. L&rsquo;adresse IP correspond à la couche &ldquo;réseau&rdquo;, niveau 3. Elles sont donc complémentaires.</p>
+<p>En pratique, le switch sur lequel est raccordé l&rsquo;interface retient les adresses MAC de ses machines et leur adresse les messages qui leur sont destinées. Le routeur, lui, connaît les adresses IP.</p>
 <h2 id="commandes-réseau-de-base">
   Commandes réseau de base
   <a class="anchor" href="#commandes-r%c3%a9seau-de-base">#</a>
 </h2>
-<p>Il existe de nombreuses commandes UNIX permettant de configurer et vérifier
-le bon fonctionnement d&rsquo;un réseau. Nous allons présenter les plus courantes.</p>
 <h3 id="comment-reproduire-ces-commandes-">
   Comment reproduire ces commandes ?
   <a class="anchor" href="#comment-reproduire-ces-commandes-">#</a>
@@ -7279,7 +7289,6 @@ le bon fonctionnement d&rsquo;un réseau. Nous allons présenter les plus couran
 <li>Si vous disposez d&rsquo;une machine sous Linux raccordée à un réseau, elle <em>devrait</em>
 être équippée des logiciels nécessaires.</li>
 <li>Sous windows, toutes les machines disposent de <code>ping</code> et <code>ipconfig</code>. Généralement elles disposent aussi de <code>tracert</code>.</li>
-<li>En ligne vous pouvez utiliser la machine virtuelle crée par <a href="https://bellard.org/jslinux/">Fabrice Bellard</a></li>
 </ul>
 <p>Attention ! Dans un réseau particulier, comme celui du lycée, il se peut que
 les commandes soient bloquées&hellip;</p>
@@ -7313,6 +7322,8 @@ les commandes soient bloquées&hellip;</p>
   Consulter et manipuler le réseau depuis la ligne de commande
   <a class="anchor" href="#consulter-et-manipuler-le-r%c3%a9seau-depuis-la-ligne-de-commande">#</a>
 </h3>
+<p>Il existe de nombreuses commandes UNIX permettant de configurer et vérifier
+le bon fonctionnement d&rsquo;un réseau. Nous allons présenter les plus courantes.</p>
 <h3 id="ip-a-et-ifconfig-ou-ipconfig-sous-windows">
   <code>ip a</code> et <code>ifconfig</code> ou <code>ipconfig</code> sous windows.
   <a class="anchor" href="#ip-a-et-ifconfig-ou-ipconfig-sous-windows">#</a>
@@ -7394,7 +7405,7 @@ interface <code>wlan0</code> <code>Wireless Local Area Network 0</code> : l&rsqu
 </h3>
 <p>Cette commande est employée pour s&rsquo;assurer qu&rsquo;une liaison existe avec une machine
 distante et connaître la durée d&rsquo;un trajet aller retour.</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ ping google.com 
+<div class="highlight"><pre tabindex="0" style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ ping google.com
 </span></span><span style="display:flex;"><span>PING google.com<span style="color:#555">(</span>par21s17-in-x0e.1e100.net <span style="color:#555">(</span>2a00:1450:4007:808::200e<span style="color:#555">))</span> <span style="color:#f60">56</span> data bytes
 </span></span><span style="display:flex;"><span><span style="color:#f60">64</span> bytes from par21s17-in.1e100.net <span style="color:#555">(</span>2a00:1450:4007:808::200e<span style="color:#555">)</span>: <span style="color:#033">icmp_seq</span><span style="color:#555">=</span><span style="color:#f60">1</span> <span style="color:#033">ttl</span><span style="color:#555">=</span><span style="color:#f60">116</span> <span style="color:#033">time</span><span style="color:#555">=</span>10.1 ms
 </span></span><span style="display:flex;"><span><span style="color:#f60">64</span> bytes from par21s17-in.1e100.net <span style="color:#555">(</span>2a00:1450:4007:808::200e<span style="color:#555">)</span>: <span style="color:#033">icmp_seq</span><span style="color:#555">=</span><span style="color:#f60">2</span> <span style="color:#033">ttl</span><span style="color:#555">=</span><span style="color:#f60">116</span> <span style="color:#033">time</span><span style="color:#555">=</span>10.5 ms
@@ -7433,10 +7444,10 @@ puis transmet. Le second routeur répond et abandonne.</li>
 </span></span><span style="display:flex;"><span> <span style="color:#f60">4</span>  ae42-0.nrlil102.rbci.orange.net <span style="color:#555">(</span>193.252.160.201<span style="color:#555">)</span>  3.122 ms  3.113 ms  3.194 ms
 </span></span><span style="display:flex;"><span> <span style="color:#f60">5</span>  ae41-0.nolil102.rbci.orange.net <span style="color:#555">(</span>81.253.129.9<span style="color:#555">)</span>  2.913 ms  2.997 ms  3.168 ms
 </span></span><span style="display:flex;"><span> <span style="color:#f60">6</span>  be102.rbx-5-a72.fr.eu <span style="color:#555">(</span>94.23.122.225<span style="color:#555">)</span>  7.391 ms  7.339 ms  7.211 ms
-</span></span><span style="display:flex;"><span> <span style="color:#f60">7</span>  be106.rbx-g1-nc5.fr.eu <span style="color:#555">(</span>94.23.122.236<span style="color:#555">)</span>  10.203 ms be106.rbx-g2-nc5.fr.eu 
+</span></span><span style="display:flex;"><span> <span style="color:#f60">7</span>  be106.rbx-g1-nc5.fr.eu <span style="color:#555">(</span>94.23.122.236<span style="color:#555">)</span>  10.203 ms be106.rbx-g2-nc5.fr.eu
 </span></span><span style="display:flex;"><span>    <span style="color:#555">(</span>94.23.122.238<span style="color:#555">)</span>  9.459 ms be106.rbx- g4-nc5.fr.eu <span style="color:#555">(</span>91.121.131.29<span style="color:#555">)</span>  6.193 ms
 </span></span><span style="display:flex;"><span> <span style="color:#f60">8</span>  lon-drch-sbb1-nc5.uk.eu <span style="color:#555">(</span>54.36.50.230<span style="color:#555">)</span>  10.658 ms  10.830 ms  10.731 ms
-</span></span><span style="display:flex;"><span> <span style="color:#f60">9</span>  be103.gra-g1-nc5.fr.eu <span style="color:#555">(</span>91.121.215.178<span style="color:#555">)</span>  11.439 ms  11.524 ms 
+</span></span><span style="display:flex;"><span> <span style="color:#f60">9</span>  be103.gra-g1-nc5.fr.eu <span style="color:#555">(</span>91.121.215.178<span style="color:#555">)</span>  11.439 ms  11.524 ms
 </span></span><span style="display:flex;"><span>    be103.gra-g2-nc5.fr.eu <span style="color:#555">(</span>213.251.128.64<span style="color:#555">)</span>  11.425
 </span></span><span style="display:flex;"><span> ms
 </span></span><span style="display:flex;"><span><span style="color:#f60">10</span>  * * *
@@ -7539,8 +7550,6 @@ connexion.</p>
       <ul>
         <li><a href="#ipv4-ipv6">IPv4, IPv6</a></li>
         <li><a href="#partie-réseau-partie-machine">Partie réseau, partie machine</a></li>
-        <li><a href="#masque-de-sous-réseau">Masque de sous réseau</a></li>
-        <li><a href="#épuisement-des-adresses-ipv4">Épuisement des adresses IPv4</a></li>
         <li><a href="#ipv6">IPv6</a></li>
         <li><a href="#réseaux-publics-et-privés">Réseaux publics et privés</a></li>
       </ul>
@@ -7555,10 +7564,8 @@ connexion.</p>
         <li><a href="#encapsulation">Encapsulation</a></li>
         <li><a href="#tcp">TCP</a></li>
         <li><a href="#trajet-sur-le-réseau">Trajet sur le réseau</a></li>
-        <li><a href="#ports">Ports</a></li>
         <li><a href="#modèle-osi">Modèle OSI</a></li>
         <li><a href="#principes">Principes</a></li>
-        <li><a href="#les-grandes-règles-du-modèle-osi">Les grandes règles du modèle OSI</a></li>
         <li><a href="#chaque-couche-est-indépendante">Chaque couche est indépendante</a></li>
         <li><a href="#chaque-couche-ne-peut-communiquer-quavec-une-couche-adjacente">Chaque couche ne peut communiquer qu&rsquo;avec une couche adjacente</a></li>
       </ul>
@@ -7569,8 +7576,8 @@ connexion.</p>
         <li><a href="#smtp">SMTP</a></li>
         <li><a href="#udp">UDP</a></li>
         <li><a href="#dns">DNS</a></li>
-        <li><a href="#blocage-dns">Blocage DNS</a></li>
         <li><a href="#icmp">ICMP</a></li>
+        <li><a href="#les-adresses-sur-un-réseau">Les adresses sur un réseau</a></li>
       </ul>
     </li>
     <li><a href="#commandes-réseau-de-base">Commandes réseau de base</a>
