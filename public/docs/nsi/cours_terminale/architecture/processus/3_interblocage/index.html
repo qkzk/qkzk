@@ -5,25 +5,25 @@
     <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="pdf
-L&rsquo;interblocage # Nous avons dits précédemment que des processus peuvent avoir besoin de la même ressource.
+Les interblocages # Nous avons dits précédemment que des processus peuvent avoir besoin de la même ressource.
 Dans de nombreuses situations, deux processus (ou davantage) peuvent souhaiter accéder à la même donnée sur le disque dur :
 Les deux processus ont uniquement besoin de lire la donnée : celle-ci est alors partagée, sans problème complexe. Les deux processus ont besoin de la donnée de manière exclusive, pour la modifier, par exemple.">
 <meta name="theme-color" content="#FFFFFF">
 <meta name="color-scheme" content="light dark"><meta property="og:url" content="http://localhost:1313/docs/nsi/cours_terminale/architecture/processus/3_interblocage/">
   <meta property="og:site_name" content="qkzk">
-  <meta property="og:title" content="Interblocage">
+  <meta property="og:title" content="NSI - Terminale">
   <meta property="og:description" content="pdf
-L’interblocage # Nous avons dits précédemment que des processus peuvent avoir besoin de la même ressource.
+Les interblocages # Nous avons dits précédemment que des processus peuvent avoir besoin de la même ressource.
 Dans de nombreuses situations, deux processus (ou davantage) peuvent souhaiter accéder à la même donnée sur le disque dur :
 Les deux processus ont uniquement besoin de lire la donnée : celle-ci est alors partagée, sans problème complexe. Les deux processus ont besoin de la donnée de manière exclusive, pour la modifier, par exemple.">
   <meta property="og:locale" content="en_us">
   <meta property="og:type" content="website">
-<title>Interblocage | qkzk</title>
+<title>NSI - Terminale | qkzk</title>
 <link rel="manifest" href="/manifest.json">
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/book.min.24c2b1f8dc2338e074345eec5b36f8a002aaa6d1b2e7312e14ac2d6a6958c876.css" integrity="sha256-JMKx&#43;NwjOOB0NF7sWzb4oAKqptGy5zEuFKwtamlYyHY=" crossorigin="anonymous">
   <script defer src="/flexsearch.min.js"></script>
-  <script defer src="/en.search.min.a382df473ff0637aee0017db56403b42e35eae9f1f03d615825c6ba10c37dbc2.js" integrity="sha256-o4LfRz/wY3ruABfbVkA7QuNerp8fA9YVglxroQw328I=" crossorigin="anonymous"></script>
+  <script defer src="/en.search.min.fa57167e7a3b5b0a3ac1b4132fe7ace2d3a423f56445db6f25c8b0028421dcdc.js" integrity="sha256-&#43;lcWfno7Wwo6wbQTL&#43;es4tOkI/VkRdtvJciwAoQh3Nw=" crossorigin="anonymous"></script>
 
 <link rel="alternate" type="application/rss+xml" href="http://localhost:1313/docs/nsi/cours_terminale/architecture/processus/3_interblocage/index.xml" title="qkzk" />
 <!--
@@ -62,7 +62,7 @@ MathJax.Hub.Config({
         <div class="container flex content-desktop ">
             <a id="bannerTitle" href="/">
                 <h1 id="siteTitle">
-                    Interblocage
+                    NSI - Terminale
                     
                 </h1>
             </a>
@@ -4938,27 +4938,6 @@ MathJax.Hub.Config({
   
 
   
-    <input type="checkbox" id="section-93ddc03a49d64fe20d0542b8dc3b096e" class="toggle" checked />
-    <label for="section-93ddc03a49d64fe20d0542b8dc3b096e" class="flex justify-between">
-      <a href="http://localhost:1313/docs/nsi/cours_terminale/architecture/processus/3_interblocage/" class="active">Interblocage</a>
-    </label>
-  
-
-          
-  <ul>
-    
-  </ul>
-
-        </li>
-      
-    
-      
-        <li>
-          
-  
-  
-
-  
     <input type="checkbox" id="section-8995a54371e5ef5fa0329746daa94f19" class="toggle"  />
     <label for="section-8995a54371e5ef5fa0329746daa94f19" class="flex justify-between">
       <a href="http://localhost:1313/docs/nsi/cours_terminale/architecture/processus/4_ordonnancement/" class="">Ordonnancement</a>
@@ -5111,6 +5090,24 @@ MathJax.Hub.Config({
 
         </li>
       
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://localhost:1313/docs/nsi/cours_terminale/architecture/processus/3_interblocage/" class=" active">NSI - Terminale</a>
+  
+
+          
+  <ul>
     
   </ul>
 
@@ -6755,7 +6752,7 @@ MathJax.Hub.Config({
     <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
   </label>
 
-  <strong>Interblocage</strong>
+  <strong>NSI - Terminale</strong>
 
   <label for="toc-control">
     
@@ -6772,17 +6769,12 @@ MathJax.Hub.Config({
 <h1>Table des matières</h1>
 <nav id="TableOfContents">
   <ul>
-    <li><a href="#linterblocage">L&rsquo;interblocage</a>
-      <ul>
-        <li><a href="#détecter-une-situation-dinterblocage">Détecter une situation d&rsquo;interblocage</a></li>
-      </ul>
-    </li>
+    <li><a href="#détecter-une-situation-dinterblocage">Détecter une situation d&rsquo;interblocage</a></li>
     <li><a href="#race-condition-_situation-de-compétition_---hp">Race condition (<em>situation de compétition</em>) - HP</a>
       <ul>
-        <li><a href="#un-exemple">Un exemple</a></li>
+        <li><a href="#threads-vs-processus">Threads vs Processus</a></li>
       </ul>
     </li>
-    <li><a href="#threads-vs-processus">Threads vs Processus</a></li>
   </ul>
 </nav>
 
@@ -6797,10 +6789,10 @@ MathJax.Hub.Config({
                 
                 
 <article class="markdown"><p><a href="./3_interblocage.pdf">pdf</a></p>
-<h2 id="linterblocage">
-  L&rsquo;interblocage
-  <a class="anchor" href="#linterblocage">#</a>
-</h2>
+<h1 id="les-interblocages">
+  Les interblocages
+  <a class="anchor" href="#les-interblocages">#</a>
+</h1>
 <p>Nous avons dits précédemment que des processus peuvent avoir besoin de la
 même ressource.</p>
 <p>Dans de nombreuses situations, deux processus (ou davantage) peuvent souhaiter
@@ -6820,25 +6812,25 @@ D lui est alloué par le système d&rsquo;exploitation. Lorsque P2 souhaite acc�
 D, la ressource n&rsquo;est pas disponible : P2 est alors bloqué jusqu&rsquo;à la fin de
 l&rsquo;utilisation de D par P1.</p>
 <p><strong>Exemple 2</strong></p>
-<p>Deux processus P1 et P2 ont tous les besoin de deux données, D1 et D2.<br>
+<p>Deux processus P1 et P2 ont tous les besoin de deux ressources, R1 et R2.<br>
 Chaque processus bloque une donnée et doit attendre d&rsquo;avoir accès à la seconde
 pour se terminer et les libérer.</p>
 <p>Si la chronologie est la suivante :</p>
 <ul>
-<li>P1 bloque D1</li>
-<li>P2 bloque D2</li>
-<li>P1 attend D2</li>
-<li>P2 attend D1</li>
+<li>P1 demande R1 et l&rsquo;aquiert</li>
+<li>P2 demande R2 et l&rsquo;aquiert</li>
+<li>P1 demande R2 et l&rsquo;attend</li>
+<li>P2 demande R1 et l&rsquo;attend</li>
 </ul>
 <p>Alors aucun des deux processus ne pourra avancer. C&rsquo;est <strong>l&rsquo;interblocage</strong>.
-Sans une intervention extérieure, la situation est figée.</p>
-<p>Face à cette problématique la plupart des systèmes d&rsquo;exploitation ont choisi
+Rien ne pourra avancer sans une intervention extérieure.</p>
+<p>Face à cette problématique la plupart des systèmes d&rsquo;exploitation ont choisir
 de ne pas essayer d&rsquo;éviter les interblocages mais de les détecter s&rsquo;ils
 surviennent et de les solutionner.</p>
-<h3 id="détecter-une-situation-dinterblocage">
+<h2 id="détecter-une-situation-dinterblocage">
   Détecter une situation d&rsquo;interblocage
   <a class="anchor" href="#d%c3%a9tecter-une-situation-dinterblocage">#</a>
-</h3>
+</h2>
 <p>Afin de résoudre <em>conceptuellement</em> ce problème on peut utiliser un graphe orienté.</p>
 <ul>
 <li>On sépare les processus et les ressources : ce sont les noeuds du graphe.</li>
@@ -6852,32 +6844,15 @@ ressource vers le processus. On efface l&rsquo;arc dans l&rsquo;autre sens s&rsq
 <p>Ce graphe présente un cycle et les processus sont bloqués.</p>
 <p><img src="graph_001.svg" alt="graph_001.svg" /></p>
 <p>Ce graphe ne présente pas ce cycle, il n&rsquo;y a pas d&rsquo;interblocage.</p>
-<p>En pratique, P1 possède les deux ressources dont il a besoin et va terminer en premier.
-Ensuite P2 va acquérir les ressources et terminer.</p>
-<hr>
-<p>Il existe d&rsquo;autres situations critiques lorsqu&rsquo;on exécute plusieurs processus
-en même temps. En voici une :</p>
 <h2 id="race-condition-_situation-de-compétition_---hp">
   Race condition (<em>situation de compétition</em>) - HP
   <a class="anchor" href="#race-condition-_situation-de-comp%c3%a9tition_---hp">#</a>
 </h2>
 <p>C&rsquo;est une situation dans laquelle le résultat d&rsquo;une série d&rsquo;opération
-dépend de <em>l&rsquo;ordre</em> dans lequel celles-ci sont effectuées.</p>
+dépend de <em>l&rsquo;ordre</em> dans lequel celles-ci sont effectuées&hellip;</p>
 <p>Lorsque un processus principal crée plusieurs processus fils, il ne contrôle
 pas l&rsquo;ordre dans lequel ils sont exécutés. S&rsquo;il a besoin des résultats de ceux
 ci, il ne pourra pas prédire le résultat final.</p>
-<h3 id="un-exemple">
-  Un exemple
-  <a class="anchor" href="#un-exemple">#</a>
-</h3>
-<p><code>hello</code> et <code>bonjour</code> sont deux processus indépendants qui partagent une même ressource.</p>
-<p>Afin d&rsquo;illustrer on se contente de les faire écrire dans la console. En pratique
-ils écriraient dans le même fichier.</p>
-<p>À l&rsquo;aide de Python nous allons les lancer l&rsquo;un après l&rsquo;autre et attendre
-qu&rsquo;ils aient terminé tous les deux.</p>
-<p>Le système d&rsquo;exploitation se charge de leur exécution et leur donne la main
-selon un ordre difficile (<em>quasi impossible</em>) à prédire.</p>
-<p>Leur résultat commun est donc la sortie console.</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#069;font-weight:bold">from</span> <span style="color:#0cf;font-weight:bold">multiprocessing</span> <span style="color:#069;font-weight:bold">import</span> Process
 </span></span><span style="display:flex;"><span><span style="color:#069;font-weight:bold">from</span> <span style="color:#0cf;font-weight:bold">random</span> <span style="color:#069;font-weight:bold">import</span> random
 </span></span><span style="display:flex;"><span><span style="color:#069;font-weight:bold">from</span> <span style="color:#0cf;font-weight:bold">time</span> <span style="color:#069;font-weight:bold">import</span> sleep
@@ -7005,37 +6980,19 @@ est 124&hellip;</p>
 ou des <code>lock</code> qui vérouillent une exécution tant que le <code>mutex</code> n&rsquo;est pas acquis.</p>
 <p>C&rsquo;est la raison pour laquelle on ne travaille pas avec des threads en NSI,
 vous verrez ça plus tard :) !</p>
-<h2 id="threads-vs-processus">
+<h3 id="threads-vs-processus">
   Threads vs Processus
   <a class="anchor" href="#threads-vs-processus">#</a>
-</h2>
-<p>Lorsqu&rsquo;on exécute un programme simple, il se déroule sur un seul coeur de processeur.
-Or&hellip; ajouter des coeurs de processeurs est la seule solution réaliste qu&rsquo;on ait trouvé
-pour accélérer les machines depuis 15 ans.</p>
-<p>Un programme devant s&rsquo;exécuter vite n&rsquo;a pas le choix, il doit utiliser au maximum les ressources
-de la machine et donc <em>le parallélisme</em>.</p>
-<p>On a donc crée deux manières d&rsquo;exécuter plusieurs séquences d&rsquo;instructions en parallèle : les <em>threads</em> (fils d&rsquo;exécutions) et les <em>processus</em>.</p>
+</h3>
 <p>Ce sont des séquences d&rsquo;instructions indépendantes.</p>
 <ul>
 <li>Un thread s&rsquo;exécute dans le même processus que le processus parent, il partage la mémoire du processus.</li>
 <li>Un processus fils est un autre processus, dépendant du parent, qui dispose de sa propre mémoire.</li>
 </ul>
-<p>Un processus est plus <em>lourd</em> pour le système qu&rsquo;un thread&hellip; mais peut facilement être isolé
-et son exécution est déléguée à l&rsquo;OS, d&rsquo;autre part un processus dispose de son propre expace
-mémoire et ses erreurs ne risquent pas de compromettre l&rsquo;ensemble du programme.</p>
-<p>D&rsquo;autres nuances existent et selon les besoins on choisira l&rsquo;un ou l&rsquo;autre.</p>
-<p>Ces thèmes étant largement hors programme, je vous laisse vous documenter <a href="https://www.geeksforgeeks.org/difference-between-process-and-thread/">ici en anglais</a>.</p>
-<p>D&rsquo;autres précisions plus formelles sur la nuance <em>thead vs process</em> :</p>
-<blockquote>
-<p>A process is an address space with some open files and other resources, plus some number of threads.</p>
-<p>A thread is a set of registers and a stack and a program counter, that runs in an address space.</p>
-<p>Threads in the same process share the address space, and the threads have a consistent (coherent) view of the contents of memory, subject to memory ordering rules.</p>
-<p>So in current processors, you can run the threads of a process on any core, because modern machines all have coherent memory.</p>
-<p>It wasn’t always so. There were multiprocessors in the 80’s and 90’s where the different cores did not necessarily have coherent views of memory. On those systems, including some built by Silicon Graphics I think, you could not have multiple threads from the same process running on different cores.</p>
-<p>I am not sure those machines even had threads, but if they did, all the threads for a process would have to be scheduled on the same core.</p>
-<p>Threads like that would still be useful, because threads are useful as programming conveniences as well as for parallel execution. Programmers often use threads to call synchronous I/O functions where they block waiting for events. Programmers think this is easier than using event driven programming with a single thread or using asynchronous I/O. I am not sure I agree, but that’s what folks do.</p>
-<p><a href="https://www.quora.com/Could-process-threads-always-be-shared-between-cores">source quora</a></p>
-</blockquote>
+<p>Un processus est plus <em>lourd</em> pour le système qu&rsquo;un thread&hellip; mais peut s&rsquo;exécuter
+sur un coeur de processeur différent et donc en parallèle.</p>
+<p>Un thread est généralement cantoné au processeur sur lequel s&rsquo;exécute le processus
+qui l&rsquo;a crée.</p>
 </article>
 
                 
@@ -7097,17 +7054,12 @@ mémoire et ses erreurs ne risquent pas de compromettre l&rsquo;ensemble du prog
 <h1>Table des matières</h1>
 <nav id="TableOfContents">
   <ul>
-    <li><a href="#linterblocage">L&rsquo;interblocage</a>
-      <ul>
-        <li><a href="#détecter-une-situation-dinterblocage">Détecter une situation d&rsquo;interblocage</a></li>
-      </ul>
-    </li>
+    <li><a href="#détecter-une-situation-dinterblocage">Détecter une situation d&rsquo;interblocage</a></li>
     <li><a href="#race-condition-_situation-de-compétition_---hp">Race condition (<em>situation de compétition</em>) - HP</a>
       <ul>
-        <li><a href="#un-exemple">Un exemple</a></li>
+        <li><a href="#threads-vs-processus">Threads vs Processus</a></li>
       </ul>
     </li>
-    <li><a href="#threads-vs-processus">Threads vs Processus</a></li>
   </ul>
 </nav>
 
