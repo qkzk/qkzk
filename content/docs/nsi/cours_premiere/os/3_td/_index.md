@@ -7,8 +7,6 @@ theme: metropolis
 geometry: margin=1.5cm
 ---
 
-[pdf](./linux_td.pdf)
-
 [python]: https://docs.python.org/3/tutorial/datastructures.html
 [python-tutor]: http://pythontutor.com/visualize.html#mode=edit
 [laurent bloch]: https://laurentbloch.net/MySpip3/IMG/pdf/histsys-screen-20200727.pdf
@@ -46,14 +44,14 @@ geometry: margin=1.5cm
 
 Observer l'arborescence suivante :
 
-$\;$![tree](./tree.jpg){width=40%}
+![tree](./tree.jpg)
 
 1. Proposer une commande qui permette de se déplacer du répertoire HOME de
    Alice à celui de Bob :
    a. en utilisant un chemin relatif ;
    b. en utilisant un chemin absolu.
 2. Alice est à la racine `/`. Proposer trois commandes qui peuvent lui
-   permettre de se déplace dans sont répertoire d'accueil (HOME).
+   permettre de se déplacer dans son répertoire d'accueil (HOME).
 3. Bob est dans son HOME. Aidez-le à :
    a. lister le contenu de son HOME ;
    b. lister le contenu de son HOME y compris les fichiers et répertoires cachés.
@@ -168,7 +166,7 @@ Pour chacun des fichiers suivants, répondre aux deux questions :
 ## 8. Rendre exécutable plusieurs fichiers
 
 1. Rappeler comment on accède à la liste des arguments d'un script.
-2. Ceomment parcourir cette liste dans un script ?
+2. Comment parcourir cette liste dans un script ?
 3. Utiliser ce parcours pour proposer un script `ajouteDroits.sh` qui attend
    en entrée une liste de fichiers et les rend tous exécutables (si besoin).
 
@@ -177,21 +175,19 @@ Pour chacun des fichiers suivants, répondre aux deux questions :
 Sans toucher le clavier, décrire l'effet de chacune des commandes suivantes, en supposant qu'elles sont enchaînées dans l'ordre :
 
 ```shell
-junier@fredportable:~$ cd ~
-junier@fredportable:~$ mkdir sandbox
-junier@fredportable:~$ cd sandbox/
-junier@fredportable:~/sandbox$ mkdir nsi
-junier@fredportable:~/sandbox$ cd nsi
-junier@fredportable:~/sandbox/nsi$ touch TP_shell
-junier@fredportable:~/sandbox/nsi$ chmod ugo=rw-rw-rw- TP_shell
-junier@fredportable:~/sandbox/nsi$ cd ..
-junier@fredportable:~/sandbox$ mkdir maths
-junier@fredportable:~/sandbox$ mkdir maths/premiere
-junier@fredportable:~/sandbox$ touch maths/TP_proba
-junier@fredportable:~/sandbox$ ls maths
+user:~$ cd ~
+user:~$ mkdir sandbox
+user:~$ cd sandbox/
+user:~/sandbox$ mkdir nsi
+user:~/sandbox$ cd nsi
+user:~/sandbox/nsi$ touch TP_shell
+user:~/sandbox/nsi$ chmod ugo=rw-rw-rw- TP_shell
+user:~/sandbox/nsi$ cd ..
+user:~/sandbox$ mkdir maths
+user:~/sandbox$ mkdir maths/premiere
+user:~/sandbox$ touch maths/TP_proba
+user:~/sandbox$ ls maths
 ```
-
-:::
 
 ## 10. Arborescence, bis
 
@@ -200,19 +196,17 @@ _exercice du manuel de première NSI chez Ellipses_
 Sans toucher le clavier dessiner l'arborescence du répertoire `~/test` après l'exécution dans l'ordre de la séquence de commandes ci-dessous :
 
 ```shell
-junier@fredportable:~$ mkdir sandbox
-junier@fredportable:~$ cd sandbox/
-junier@fredportable:~/sandbox$ mkdir a b c d
-junier@fredportable:~/sandbox$ touch a/t.txt d/foo.txt
-junier@fredportable:~/sandbox$ cd c
-junier@fredportable:~/sandbox/c$ mkdir ../b/e f g
-junier@fredportable:~/sandbox/c$ cd ..
-junier@fredportable:~/sandbox$
-junier@fredportable:~/sandbox$ cp */*.txt c/g
-junier@fredportable:~/sandbox$ rm -rf d
+user:~$ mkdir sandbox
+user:~$ cd sandbox/
+user:~/sandbox$ mkdir a b c d
+user:~/sandbox$ touch a/t.txt d/foo.txt
+user:~/sandbox$ cd c
+user:~/sandbox/c$ mkdir ../b/e f g
+user:~/sandbox/c$ cd ..
+user:~/sandbox$
+user:~/sandbox$ cp */*.txt c/g
+user:~/sandbox$ rm -rf d
 ```
-
-:::
 
 ## 11. _QCM de type E3C 2_
 
@@ -220,155 +214,153 @@ junier@fredportable:~/sandbox$ rm -rf d
    répertoires `documents` et `sauvegardes`. On se trouve dans le répertoire
    documents où figure un fichier `NSI.txt`.
 
-Quelle commande permet de créer une copie nommée `NSI2.txt` de ce fichier
-dans le répertoire sauvegardes ?
+   Quelle commande permet de créer une copie nommée `NSI2.txt` de ce fichier
+   dans le répertoire sauvegardes ?
 
-**Réponses**
+   **Réponses**
 
-**A)** `cp NSI.txt NSI2.txt`
+   **A)** `cp NSI.txt NSI2.txt`
 
-**B)** `cp NSI.txt sauvegardes/NSI2.txt`
+   **B)** `cp NSI.txt sauvegardes/NSI2.txt`
 
-**C)** `cp NSI.txt ../NSI2.txt`
+   **C)** `cp NSI.txt ../NSI2.txt`
 
-**D)** `cp NSI.txt ../sauvegardes/NSI2.txt`
+   **D)** `cp NSI.txt ../sauvegardes/NSI2.txt`
 
 2. À partir du dossier `~/Doc/QCM`, quelle commande permet de rejoindre le
    dossier `~/Hack/Reponses` ?
 
-**_Réponses_**
+   **Réponses**
 
-**A)** `cd Hack/Reponses`
+   **A)** `cd Hack/Reponses`
 
-**B)** `cd /Hack/Reponses`
+   **B)** `cd /Hack/Reponses`
 
-**C)** `cd ~/Hack/Reponses`
+   **C)** `cd ~/Hack/Reponses`
 
-**D)** `cd ../../Hack/Reponses`
+   **D)** `cd ../../Hack/Reponses`
 
 3. Sous Linux, les droits d'accès à un fichier dont le propriétaire est
    Joseph sont les suivants : `-rwxr-xr--`
 
-Laquelle des affirmations suivantes est **fausse** ?
+   Laquelle des affirmations suivantes est **fausse** ?
 
-**Réponses**
+   **Réponses**
 
-**A)** Joseph a l'autorisation de lire ce fichier
+   **A)** Joseph a l'autorisation de lire ce fichier
 
-**B)** les membres du groupe de Joseph ont l'autorisation de lire ce fichier
+   **B)** les membres du groupe de Joseph ont l'autorisation de lire ce fichier
 
-**C)** tous les utilisateurs ont l'autorisation de lire ce fichier
+   **C)** tous les utilisateurs ont l'autorisation de lire ce fichier
 
-**D)** les membres du groupe de Joseph ont l'autorisation de modifier ce
-fichier
+   **D)** les membres du groupe de Joseph ont l'autorisation de modifier ce
+   fichier
 
 4. Dans la console Linux, quelle commande faut-il exécuter pour effacer le
    fichier `test0.csv` ?
 
-**Réponses**
+   **Réponses**
 
-**A)** `rm test0.csv`
+   **A)** `rm test0.csv`
 
-**B)** `cp test0.csv`
+   **B)** `cp test0.csv`
 
-**C)** `ls test0.csv`
+   **C)** `ls test0.csv`
 
-**D)** `mv test0.csv`
+   **D)** `mv test0.csv`
 
 5. Dans un terminal, on exécute la suite de commandes système suivante :
 
-```shell
-cd ~
-cd seances/tp
-mv exercice.txt ./../../exercice.txt
-```
+   ```shell
+   cd ~
+   cd seances/tp
+   mv exercice.txt ./../../exercice.txt
+   ```
 
-Où se trouve finalement placé le fichier exercice.txt ?
+   Où se trouve finalement placé le fichier exercice.txt ?
 
-**Réponses**
+   **Réponses**
 
-**A)** dans le répertoire `~/seance/tp`
+   **A)** dans le répertoire `~/seance/tp`
 
-**B)** dans le répertoire `~/seance`
+   **B)** dans le répertoire `~/seance`
 
-**C)** dans le répertoire `~`
+   **C)** dans le répertoire `~`
 
-**D)** dans le répertoire `/home`
+   **D)** dans le répertoire `/home`
 
 6. Pour renommer un fichier `text1.txt` en `text1.old` dans un même répertoire,
    quelle commande faut-il utiliser ?
 
-**_Réponses_**
+   **Réponses**
 
-**A)** mv text1.txt ../text1.old
+   **A)** mv text1.txt ../text1.old
 
-**B)** mv text1.txt text1.old
+   **B)** mv text1.txt text1.old
 
-**C)** cp text1.txt text1.old
+   **C)** cp text1.txt text1.old
 
-**D)** lns text1.txt text1.old
+   **D)** lns text1.txt text1.old
 
 7. Sous Unix, que fait la commande suivante ? `ls --a /home/pi >> toto.txt`
 
-**_Réponses_**
+   **Réponses**
 
-**A)** elle liste uniquement les répertoires cachés du répertoire /home/pi
+   **A)** elle liste uniquement les répertoires cachés du répertoire /home/pi
 
-**B)** elle liste tous les fichiers du répertoire /home/pi et enregistre le
-résultat dans un fichier toto.txt
+   **B)** elle liste tous les fichiers du répertoire /home/pi et enregistre le
+   résultat dans un fichier toto.txt
 
-**C)** elle liste tous les fichiers des répertoires de /home/pi et de
-toto.txt
+   **C)** elle liste tous les fichiers des répertoires de /home/pi et de
+   toto.txt
 
-**D)** elle liste tous les fichiers du répertoire courant et enregistre le
-résultat dans un fichier /home/pi/toto.txt
+   **D)** elle liste tous les fichiers du répertoire courant et enregistre le
+   résultat dans un fichier /home/pi/toto.txt
 
 8. Par quelle ligne de commande peut-on créer, sous le système
    d'exploitation Linux, trois répertoires nommés : JAVA, PYTHON et PHP ?
 
-**_Réponses_**
+   **Réponses**
 
-**A)** `mkdir JAVA, PYTHON, PHP`
+   **A)** `mkdir JAVA, PYTHON, PHP`
 
-**B)** `mk -dir JAVA PYTHON PHP`
+   **B)** `mk -dir JAVA PYTHON PHP`
 
-**C)** `mkdir JAVA PYTHON PHP`
+   **C)** `mkdir JAVA PYTHON PHP`
 
-**D)** `mk dir JAVA PYTHON PHP`
-
-**Question E.6**
+   **D)** `mk dir JAVA PYTHON PHP`
 
 9. À partir du répertoire `~/Perso/Doc` quelle commande permet de rejoindre
    le répertoire `~/Public` ?
 
-**Réponses**
+   **Réponses**
 
-**A)** `cd ./Public`
+   **A)** `cd ./Public`
 
-**B)** `cd ../Public`
+   **B)** `cd ../Public`
 
-**C)** `cd ././Public`
+   **C)** `cd ././Public`
 
-**D)** `cd ../../Public`
+   **D)** `cd ../../Public`
 
 10. Dans la console Linux, quelle commande faut-il exécuter pour obtenir la
     documentation sur la commande `pwd` ?
 
-**Réponses**
+    **Réponses**
 
-**A)** man pwd
+    **A)** man pwd
 
-**B)** cd pwd
+    **B)** cd pwd
 
-**C)** mkdir pwd
+    **C)** mkdir pwd
 
 ## 11. _Exercice du livre Parlez-vous Shell ? de Thomas Hugel chez Ellipses_
 
-![europe](./graphe-europe.png){width=60%}\
+![europe](./graphe-europe.png)
 
 On se place dans le répertoire personnel de l'utilisateur représenté par le raccourci `~`.
 
-1. Dans son répertoire personnel, créer le répertoire `TP-SHELL` pyus entrer dans ce répertoire.
+1. Dans son répertoire personnel, créer le répertoire `TP-SHELL` puis entrer dans ce répertoire.
 2. Créer le répertoire `Europe` et changer de répertoire courant pour `Europe`.
 3. Écrire une suite de commandes qui permet de construire l'arborescence ci-dessus sans quitter le répertoire `Europe`. Les fichiers apparaissant avec des rectangles sont des répertoires et les autres sont des fichiers.
 4. Créer dans `~` une copie de tout le répertoire `Europe` avec ses sous-répertoires et nommer cette copie `Vieille-Europe`. Les modifications qui suivent devront être faites dans `Europe`.
@@ -391,46 +383,53 @@ On se place dans le répertoire personnel de l'utilisateur représenté par le r
 
 | Opérateur | Redirection                       |
 | --------- | --------------------------------- |
-| >         | sortie standard                   |
-| >>        | sortie standard en ajout à la fin |
-| <         | entrée standard                   |
+| `>`       | sortie standard                   |
+| `>>`      | sortie standard en ajout à la fin |
+| `<`       | entrée standard                   |
 
 - Par exemple, si on veut écrire le contenu du répertoire courant dans un fichier `contenu.txt`, on redirige la sortie standard de `ls` vers un fichier `contenu.txt` au lieu de l'écran du terminal :
 
-          junier@fredportable:~$ ls > contenu.txt
+  ```sh
+  user:~$ ls > contenu.txt
+  ```
 
 - Et si on veut compter le nombre de mots dans un texte, on redirige son entrée standard vers le contenu de `texte.txt` au lieu du clavier :
 
-         junier@fredportable:~$ wc -m < texte.txt
+  ```sh
+  user:~$ wc -m < texte.txt
+  ```
 
 - On peut enchaîner les commandes en _pipeline_ : la sortie standard d'une commande est raccordée à l'entrée standard d'une commande suivante à l'aide d'un _pip_ symbolisé par le caractère `|` :
 
-            commande_debut | commande_fin
+  ```sh
+  commande_debut | commande_fin
+  ```
 
 - Si on veut intercaler une commande entre les deux, elle doit envoyer son entrée standard sur sa sortie standard : de telles commandes qui servent de traitements intermédiaires entre le début et la fin d'un pipeline sont appelées _filtres_. On peut ainsi réaliser en un une ligne de commande des traitements complexes.
 
-            commande_debut | filtre1 | filtre2 | ... | commande_fin
+  ```sh
+  commande_debut | filtre1 | filtre2 | ... | commande_fin
+  ```
 
 - Le tableau ci-dessous donne quelques exemples de filtres, d'autres options sont disponibles pour chaque commande.
-  :::
 
-| Commande      | Action                                                                                           |
-| ------------- | ------------------------------------------------------------------------------------------------ |
-| cat           | copie son entrée standard sur sa sortie standard sans modification                               |
-| sort          | trie les lignes de son entrée standard par ordre alphabétique                                    |
-| sort -r       | trie les lignes de son entrée standard par ordre alphabétique inverse                            |
-| sort -n       | trie les lignes de son entrée standard par ordre numérique                                       |
-| cut -d : -f 5 | sélectionne le 5 eme champ de chaque ligne de son entrée standard découpée selon le délimiteur : |
-| wc -l         | compte les lignes de son entrée standard                                                         |
-| wc -w         | compte les mots de son entrée standard                                                           |
-| wc -m         | compte les caractères de son entrée standard                                                     |
-| uniq          | supprime les lignes considérées comme des doublons                                               |
-| head -n5      | affiche les cinq premières lignes de son entrée standard                                         |
-| head -n-5     | affiche tout sauf les cinq dernières lignes de son entrée standard                               |
-| tail -n5      | affiche les cinq dernières lignes de son entrée standard                                         |
-| tail -n+5     | affiche tout sauf les cinq premières lignes de son entrée standard                               |
+  | Commande        | Action                                                                                           |
+  | --------------- | ------------------------------------------------------------------------------------------------ |
+  | `cat`           | copie son entrée standard sur sa sortie standard sans modification                               |
+  | `sort`          | trie les lignes de son entrée standard par ordre alphabétique                                    |
+  | `sort -r`       | trie les lignes de son entrée standard par ordre alphabétique inverse                            |
+  | `sort -n`       | trie les lignes de son entrée standard par ordre numérique                                       |
+  | `cut -d : -f 5` | sélectionne le 5 eme champ de chaque ligne de son entrée standard découpée selon le délimiteur : |
+  | `wc -l`         | compte les lignes de son entrée standard                                                         |
+  | `wc -w`         | compte les mots de son entrée standard                                                           |
+  | `wc -m`         | compte les caractères de son entrée standard                                                     |
+  | `uniq`          | supprime les lignes considérées comme des doublons                                               |
+  | `head -n5`      | affiche les cinq premières lignes de son entrée standard                                         |
+  | `head -n-5`     | affiche tout sauf les cinq dernières lignes de son entrée standard                               |
+  | `tail -n5`      | affiche les cinq dernières lignes de son entrée standard                                         |
+  | `tail -n+5`     | affiche tout sauf les cinq premières lignes de son entrée standard                               |
 
-![flux](https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/Stdstreams-notitle.svg/640px-Stdstreams-notitle.svg.png){width=50%}\
+![flux](std_streams.png)
 
 ## 13. _Exercice du manuel de première NSI de Thibault Balabonski chez Ellipses_
 
@@ -438,7 +437,7 @@ Le fichier `/etc/passwd` contient la liste des utilisateurs locaux de la machine
 Pour chaque question, on recherchera éventuellement dans le manuel avec la commande `man command` les options pertinentes des commandes proposées.
 
 1. Afficher les 5 premières lignes du fichier `/etc/passwd`.
-2. Afficher la page du manuel de la commande `tac` puis utiliser cette commande pour afficher `tac` à l'envers.
+2. Afficher la page du manuel de la commande `tac` puis utiliser cette commande pour afficher `/etc/passwd` à l'envers.
 3. Trier le fichier `/etc/passwd` avec la commande `sort`. Quel ordre est utilisé ?
 4. Les champs de chaque ligne de `/etc/passwd` sont séparées par le caractère `:`. Trier le fichier selon le troisième champ. Quel ordre est utilisé ?
 5. Trier `/etc/passwd` selon le troisième champ avec l'ordre numérique.
@@ -464,32 +463,36 @@ Le _shell_ [BASH][bash] fournit de nombreuses commandes pour rechercher des info
 
 - Pour une recherche sur les fichiers, on peut utiliser la commande `find` qui permet d'effectuer une recherche par nom parmi de nombreuses options :
 
-| Commande                       | Action                                                                                                             |
-| ------------------------------ | ------------------------------------------------------------------------------------------------------------------ |
-| find -name photo.png           | recherche les fichiers nommés photo.png dans le répertoire courant et tous ses sous-répertoires                    |
-| find -iname photo.png          | idem mais insensible à la casse                                                                                    |
-| find -name photo.png ~/sandbox | recherche les fichiers nommés photo.png dans le répertoire ~/sandbox et tous ses sous-répertoires                  |
-| find -name '\*.png' ~/sandbox  | recherche les fichiers dont le nom se termine par `.png` dans le répertoire ~/sandbox et tous ses sous-répertoires |
+  | Commande                         | Action                                                                                                             |
+  | -------------------------------- | ------------------------------------------------------------------------------------------------------------------ |
+  | `find -name photo.png`           | recherche les fichiers nommés photo.png dans le répertoire courant et tous ses sous-répertoires                    |
+  | `find -iname photo.png`          | idem mais insensible à la casse                                                                                    |
+  | `find -name photo.png ~/sandbox` | recherche les fichiers nommés photo.png dans le répertoire ~/sandbox et tous ses sous-répertoires                  |
+  | `find -name '\*.png' ~/sandbox`  | recherche les fichiers dont le nom se termine par `.png` dans le répertoire ~/sandbox et tous ses sous-répertoires |
 
 - Par exemple, si on veut rechercher le fichier 'ducotedechezswann.txt' dans son répertoire personnel :
 
-          junier@fredportable:~$ find -name 'ducotedechezswann.txt'
-          ./Git/Gitlab/frederic-junier/Premiere-NSI/ducotedechezswann.txt
-          ./NSI/TP/ressources/ducotedechezswann.txt
+  ```sh
+  user:~$ find -name 'ducotedechezswann.txt'
+  ./Git/Gitlab/frederic-junier/Premiere-NSI/ducotedechezswann.txt
+  ./NSI/TP/ressources/ducotedechezswann.txt
+  ```
 
 - Pour une recherche sur un contenu de fichier, on peut utiliser la commande `grep` qui permet d'effectuer une recherche d'un fragment de texte dans les fichiers donnés en argument. Par défaut `grep` affiche chaque ligne de fichier où le fragment apparaît.
 
-| Commande                           | Action                                                                                           |
-| ---------------------------------- | ------------------------------------------------------------------------------------------------ |
-| grep 'fragment texte' fichier      | recherche les occurences de 'fragment texte' dans fichier                                        |
-| grep -c 'fragment texte' fichier   | affiche juste le nombre d'occurences de 'fragment texte' dans fichier                            |
-| grep -r 'fragment texte' rep       | recherche les occurences de 'fragment texte' dans le répertoire rep et tous ses sous-répertoires |
-| grep -r -l -i 'fragment texte' rep | idem mais n'affiche que les noms de fichiers et insensible à la casse                            |
+  | Commande                             | Action                                                                                           |
+  | ------------------------------------ | ------------------------------------------------------------------------------------------------ |
+  | `grep 'fragment texte' fichier`      | recherche les occurences de 'fragment texte' dans fichier                                        |
+  | `grep -c 'fragment texte' fichier`   | affiche juste le nombre d'occurences de 'fragment texte' dans fichier                            |
+  | `grep -r 'fragment texte' rep`       | recherche les occurences de 'fragment texte' dans le répertoire rep et tous ses sous-répertoires |
+  | `grep -r -l -i 'fragment texte' rep` | idem mais n'affiche que les noms de fichiers et insensible à la casse                            |
 
 - Par exemple si on veut compter le nombre d'occurences de 'swann' dans le texte 'unamourdeswann.txt' :
 
-              junier@fredportable:~$ grep -i -c 'swann' ducotedechezswann.txt
-              685
+  ```sh
+  user:~$ grep -i -c 'swann' ducotedechezswann.txt
+  685
+  ```
 
 ## 16. find
 
@@ -514,26 +517,29 @@ Le texte brut du "Tour du monde en 80 jours" écrit par Jules Verne est disponib
 2.  Créer un un répertoire `Phileas` puis entrer dans ce répertoire.
 3.  Consulter l'aide de la commande `wget` avec `wget --help` ou `man wget` puis télécharger le fichier contenant le texte du "Tour du monde en 80 jours" au format `txt`.
 
-        junier@fredportable:~/TP-SHELL/Phileas$ ls
-        800.txt.utf-8
+    ```sh
+    user:~/TP-SHELL/Phileas$ ls
+    800.txt.utf-8
+    ```
 
 4.  Renommer le fichier en `tour-du-monde-80-jours.txt`.
 
-        junier@fredportable:~/TP-SHELL/Phileas$ ls
-        tour-du-monde-80-jours.txt
+    ```sh
+    user:~/TP-SHELL/Phileas$ ls
+    tour-du-monde-80-jours.txt
+    ```
 
 5.  Afficher le nombre de lignes, le nombre de mots, le nombre de caractères et le nombre d'octets de `tour-du-monde-80-jours.txt` avec des options bien choisies de la commande `wc`. Comment peut-on expliquer que le nombre de caractères est inférieur au nombre d'octets ? Vérifier l'encodage du fichier avec la commande `file tour-du-monde-80-jours.txt`.
 6.  Les commandes `du` et `zip` permettent respectivement d'afficher la taille d'un fichier et de compresser un fichier. Consulter leurs pages de manuel avec `man du | less` et `man zip | less`. La commande `less` est un _pager_ qui permet d'afficher une page à la fois dans le terminal.
 
-- Afficher la taille du fichier en kilo-octets avec la commande `du -h tour-du-monde-80-jours.txt`.
-- Compresser la fichier avec la commande `zip`. Quel est le taux de compression ?
-- Avec la commande `head`, afficher les dix premières lignes des fichiers `tour-du-monde-80-jours.txt` et `tour-du-monde-80-jours.zip`. Que peut-on remarquer ?
+    - Afficher la taille du fichier en kilo-octets avec la commande `du -h tour-du-monde-80-jours.txt`.
+    - Compresser la fichier avec la commande `zip`. Quel est le taux de compression ?
+    - Avec la commande `head`, afficher les dix premières lignes des fichiers `tour-du-monde-80-jours.txt` et `tour-du-monde-80-jours.zip`. Que peut-on remarquer ?
 
-7. Consulter la page de manuel de la commande `tac` avec `man | less tac`. En une seule commande, créer un fichier `tour-du-monde-80-jours-inverse.txt` où toutes les lignes du fichier initial sont recopiées à l'envers.
-8. Dans `tour-du-monde-80-jours.txt`, avec la commande `grep` et des options bien choisies :
+7.  Consulter la page de manuel de la commande `tac` avec `man | less tac`. En une seule commande, créer un fichier `tour-du-monde-80-jours-inverse.txt` où toutes les lignes du fichier initial sont recopiées à l'envers.
+8.  Dans `tour-du-monde-80-jours.txt`, avec la commande `grep` et des options bien choisies :
 
-- Compter le nombre d'occurences du mot `phileas`. On doit trouver 330.
-- Afficher le numéro de ligne du fragment de texte "\*\*\* START OF". Vérifier avec un éditeur de textes.
-- Afficher le numéro de ligne du fragment de texte "\*\*\* END OF". Vérifier avec un éditeur de textes.
-- En une seule commande, créer un fichier texte `tour-du-monde-80-jours-brut.txt` qui contient toutes les lignes comprises entre celles commençant par `*** START OF` et `*** END OF`, les deux bornes exclues.
-  :::
+    - Compter le nombre d'occurences du mot `phileas`. On doit trouver 330.
+    - Afficher le numéro de ligne du fragment de texte "\*\*\* START OF". Vérifier avec un éditeur de textes.
+    - Afficher le numéro de ligne du fragment de texte "\*\*\* END OF". Vérifier avec un éditeur de textes.
+    - En une seule commande, créer un fichier texte `tour-du-monde-80-jours-brut.txt` qui contient toutes les lignes comprises entre celles commençant par `*** START OF` et `*** END OF`, les deux bornes exclues.

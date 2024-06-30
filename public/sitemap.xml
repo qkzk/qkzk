@@ -453,8 +453,6 @@
   </url><url>
     <loc>http://localhost:1313/docs/nsi/cours_premiere/algorithmique/tris/3_insert/</loc>
   </url><url>
-    <loc>http://localhost:1313/docs/nsi/cours_terminale/architecture/processus/3_interblocage/</loc>
-  </url><url>
     <loc>http://localhost:1313/docs/maths/l1s2/</loc>
   </url><url>
     <loc>http://localhost:1313/docs/nsi/cours_terminale/structures_donnees/pile_file/</loc>
@@ -1117,6 +1115,8 @@
     <loc>http://localhost:1313/categories/</loc>
   </url><url>
     <loc>http://localhost:1313/layouts/</loc>
+  </url><url>
+    <loc>http://localhost:1313/docs/nsi/cours_terminale/architecture/processus/3_interblocage/</loc>
   </url><url>
     <loc>http://localhost:1313/uploads/docnsitale/bdd/bdd_td/</loc>
   </url><url>
