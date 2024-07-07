@@ -25,7 +25,10 @@
     <loc>http://localhost:1313/docs/nsi/cours_premiere/os/0_concepts_cles/</loc>
   </url><url>
     <loc>http://localhost:1313/docs/</loc>
-    <lastmod>2024-03-12T00:00:00+00:00</lastmod>
+    <lastmod>2024-07-07T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/docs/snt/codage_information/</loc>
+    <lastmod>2024-07-07T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/docs/nsi/cours_premiere/os/1_cours/</loc>
     <lastmod>2022-07-19T00:00:00+00:00</lastmod>
@@ -618,9 +621,6 @@
     <loc>http://localhost:1313/docs/archives/isn/sujets-des-projets/othello-reversi/</loc>
     <lastmod>2018-08-18T09:35:52+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/docs/ressources/</loc>
-    <lastmod>2017-06-22T08:47:43+00:00</lastmod>
-  </url><url>
     <loc>http://localhost:1313/docs/archives/icn/6-creation-dimages-vectorielles/</loc>
     <lastmod>2016-07-07T09:09:18+00:00</lastmod>
   </url><url>
@@ -861,6 +861,7 @@
     <loc>http://localhost:1313/docs/nsi/cours_premiere/ihm_web/projet_html_css/</loc>
   </url><url>
     <loc>http://localhost:1313/docs/snt/</loc>
+    <lastmod>2024-07-07T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/docs/nsi/cours_premiere/ihm_web/projet_serveur_meteo/</loc>
   </url><url>
@@ -880,6 +881,9 @@
   </url><url>
     <loc>http://localhost:1313/docs/nsi/cours_terminale/projets/nn/</loc>
     <lastmod>2019-05-04T11:17:30+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/docs/ressources/</loc>
+    <lastmod>2017-06-22T08:47:43+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/docs/archives/icn/revue-de-projet/</loc>
     <lastmod>2017-01-04T07:06:55+00:00</lastmod>
