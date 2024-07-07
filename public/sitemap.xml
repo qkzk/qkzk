@@ -24,10 +24,13 @@
   </url><url>
     <loc>http://localhost:1313/docs/nsi/cours_premiere/os/0_concepts_cles/</loc>
   </url><url>
+    <loc>http://localhost:1313/docs/snt/codage_information/</loc>
+    <lastmod>2024-07-07T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>http://localhost:1313/docs/</loc>
     <lastmod>2024-07-07T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/docs/snt/codage_information/</loc>
+    <loc>http://localhost:1313/docs/snt/codage_information/1_texte/</loc>
     <lastmod>2024-07-07T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/docs/nsi/cours_premiere/os/1_cours/</loc>
@@ -233,6 +236,9 @@
     <loc>http://localhost:1313/docs/nsi/cours_terminale/algorithmique/diviser_pour_regner/tri_fusion/</loc>
   </url><url>
     <loc>http://localhost:1313/docs/nsi/cours_premiere/donnees_structurees/types_construits/</loc>
+  </url><url>
+    <loc>http://localhost:1313/docs/snt/codage_information/2_image/</loc>
+    <lastmod>2024-07-07T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/docs/maths/enseignement_scientifique_terminale/1_biodiversite/</loc>
     <lastmod>2023-08-02T00:00:00+00:00</lastmod>
@@ -475,6 +481,8 @@
     <loc>http://localhost:1313/docs/nsi/cours_premiere/os/3_td/</loc>
   </url><url>
     <loc>http://localhost:1313/docs/nsi/cours_premiere/python/introduction_td/</loc>
+  </url><url>
+    <loc>http://localhost:1313/docs/snt/codage_information/3_unites/</loc>
   </url><url>
     <loc>http://localhost:1313/docs/nsi/cours_premiere/ihm_web/resumes/resume_url_http/</loc>
   </url><url>
