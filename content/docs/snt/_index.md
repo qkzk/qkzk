@@ -1,5 +1,5 @@
 ---
-title: SNT
+title: snt
 theme: metropolis
 weight: 25
 bookCollapseSection: true

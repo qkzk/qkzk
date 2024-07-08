@@ -187,6 +187,8 @@
   </url><url>
     <loc>http://localhost:1313/docs/nsi/cours_terminale/structures_donnees/graphes/intro/</loc>
   </url><url>
+    <loc>http://localhost:1313/docs/snt/photographie/0_historique/</loc>
+  </url><url>
     <loc>http://localhost:1313/docs/nsi/cours_terminale/bdd/td/td_sql/</loc>
   </url><url>
     <loc>http://localhost:1313/docs/maths/enseignement_scientifique_terminale/3_hardy_weinberg/1_cours/</loc>
@@ -238,6 +240,9 @@
     <loc>http://localhost:1313/docs/nsi/cours_premiere/donnees_structurees/types_construits/</loc>
   </url><url>
     <loc>http://localhost:1313/docs/snt/codage_information/2_image/</loc>
+    <lastmod>2024-07-07T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/docs/snt/photographie/</loc>
     <lastmod>2024-07-07T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/docs/maths/enseignement_scientifique_terminale/1_biodiversite/</loc>
@@ -559,6 +564,8 @@
     <loc>http://localhost:1313/docs/nsi/cours_premiere/algorithmique/tris/4_td_insert_sorted/</loc>
   </url><url>
     <loc>http://localhost:1313/docs/nsi/cours_premiere/os/4_tp_debian/</loc>
+  </url><url>
+    <loc>http://localhost:1313/docs/snt/codage_information/4_unicode/</loc>
   </url><url>
     <loc>http://localhost:1313/docs/nsi/cours_premiere/programmation/outils/libraries_faciles/mqtt/</loc>
     <lastmod>2019-12-10T07:08:58+00:00</lastmod>
@@ -1145,8 +1152,6 @@
     <loc>http://localhost:1313/docs/nsi/cours_premiere/projets/timberman/</loc>
   </url><url>
     <loc>http://localhost:1313/docs/nsi/cours_terminale/architecture/processus/old/race_condition/</loc>
-  </url><url>
-    <loc>http://localhost:1313/docs/snt/codage_information/4_unicode/</loc>
   </url><url>
     <loc>http://localhost:1313/tags/</loc>
   </url><url>
