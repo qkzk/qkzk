@@ -459,6 +459,8 @@
   </url><url>
     <loc>http://localhost:1313/docs/nsi/cours_premiere/ihm_web/html_css_cours/</loc>
   </url><url>
+    <loc>http://localhost:1313/docs/snt/photographie/2_creation/</loc>
+  </url><url>
     <loc>http://localhost:1313/docs/nsi/cours_terminale/architecture/securisation/diffie_hellman/</loc>
   </url><url>
     <loc>http://localhost:1313/docs/nsi/cours_premiere/donnees_simples/</loc>
@@ -481,8 +483,6 @@
   </url><url>
     <loc>http://localhost:1313/docs/nsi/cours_premiere/algorithmique/sequentiel/revisions/</loc>
   </url><url>
-    <loc>http://localhost:1313/docs/snt/photographie/2_creation/</loc>
-  </url><url>
     <loc>http://localhost:1313/docs/ressources/shortcodes/</loc>
   </url><url>
     <loc>http://localhost:1313/docs/nsi/cours_premiere/donnees_structurees/tableaux_2d/td/</loc>
@@ -490,6 +490,8 @@
     <loc>http://localhost:1313/docs/nsi/cours_premiere/os/3_td/</loc>
   </url><url>
     <loc>http://localhost:1313/docs/nsi/cours_premiere/python/introduction_td/</loc>
+  </url><url>
+    <loc>http://localhost:1313/docs/snt/photographie/3_traitement/</loc>
   </url><url>
     <loc>http://localhost:1313/docs/snt/codage_information/3_unites/</loc>
   </url><url>
