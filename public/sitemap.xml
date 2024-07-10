@@ -543,6 +543,8 @@
   </url><url>
     <loc>http://localhost:1313/docs/nsi/cours_premiere/donnees_structurees/table/4_cours/</loc>
   </url><url>
+    <loc>http://localhost:1313/docs/snt/photographie/4_capture/</loc>
+  </url><url>
     <loc>http://localhost:1313/docs/nsi/cours_premiere/donnees_simples/chaines_caracteres/</loc>
   </url><url>
     <loc>http://localhost:1313/docs/nsi/cours_premiere/ihm_web/clsv/</loc>
@@ -560,8 +562,6 @@
     <loc>http://localhost:1313/docs/maths/l2s3/</loc>
   </url><url>
     <loc>http://localhost:1313/docs/nsi/cours_terminale/architecture/processus/4_ordonnancement/</loc>
-  </url><url>
-    <loc>http://localhost:1313/docs/snt/photographie/4_capture/</loc>
   </url><url>
     <loc>http://localhost:1313/docs/nsi/cours_premiere/programmation/specifier/</loc>
   </url><url>
@@ -625,6 +625,8 @@
     <loc>http://localhost:1313/docs/nsi/cours_premiere/os/5_cle_linux/</loc>
   </url><url>
     <loc>http://localhost:1313/docs/nsi/cours_terminale/structures_donnees/graphes/</loc>
+  </url><url>
+    <loc>http://localhost:1313/docs/snt/photographie/5_metadonnees/</loc>
   </url><url>
     <loc>http://localhost:1313/docs/nsi/cours_terminale/architecture/processus/5_td/</loc>
   </url><url>
