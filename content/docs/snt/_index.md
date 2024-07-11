@@ -7,3 +7,5 @@ geometry: "margin=1.5cm"
 ---
 
 # SNT
+
+_Ces cours sont issus des travaux de nombreux collègues, principalement ceux de l'établissement. Certains sont originaux._
