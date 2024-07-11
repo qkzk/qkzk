@@ -189,6 +189,8 @@
   </url><url>
     <loc>http://localhost:1313/docs/nsi/cours_terminale/structures_donnees/graphes/intro/</loc>
   </url><url>
+    <loc>http://localhost:1313/docs/snt/web/0_introduction/presentation/</loc>
+  </url><url>
     <loc>http://localhost:1313/docs/nsi/cours_terminale/bdd/td/td_sql/</loc>
   </url><url>
     <loc>http://localhost:1313/docs/maths/enseignement_scientifique_terminale/3_hardy_weinberg/1_cours/</loc>
@@ -502,6 +504,9 @@
   </url><url>
     <loc>http://localhost:1313/docs/maths/enseignement_scientifique_terminale/4_malthus/</loc>
     <lastmod>2023-08-02T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/docs/snt/web/</loc>
+    <lastmod>2023-07-07T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/docs/nsi/cours_premiere/os/</loc>
     <lastmod>2022-07-19T00:00:00+00:00</lastmod>
