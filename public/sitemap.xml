@@ -320,6 +320,8 @@
   </url><url>
     <loc>http://localhost:1313/docs/nsi/cours_terminale/architecture/securisation/asymetrique/</loc>
   </url><url>
+    <loc>http://localhost:1313/docs/snt/web/1_creation/</loc>
+  </url><url>
     <loc>http://localhost:1313/docs/nsi/cours_premiere/architecture/2_composants/</loc>
   </url><url>
     <loc>http://localhost:1313/docs/nsi/cours_terminale/structures_donnees/poo/cours/</loc>
@@ -487,6 +489,8 @@
     <loc>http://localhost:1313/docs/nsi/cours_premiere/ihm_web/resumes/resume_javascript/</loc>
   </url><url>
     <loc>http://localhost:1313/docs/nsi/cours_premiere/algorithmique/sequentiel/revisions/</loc>
+  </url><url>
+    <loc>http://localhost:1313/docs/snt/web/2_http/</loc>
   </url><url>
     <loc>http://localhost:1313/docs/ressources/shortcodes/</loc>
   </url><url>
