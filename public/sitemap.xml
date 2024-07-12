@@ -209,6 +209,8 @@
   </url><url>
     <loc>http://localhost:1313/docs/nsi/cours_premiere/python/introduction_cours/</loc>
   </url><url>
+    <loc>http://localhost:1313/docs/snt/reseaux_sociaux/1_presentation/</loc>
+  </url><url>
     <loc>http://localhost:1313/docs/nsi/cours_terminale/rentree/</loc>
   </url><url>
     <loc>http://localhost:1313/docs/nsi/cours_terminale/architecture/processus/old/processus/</loc>
@@ -373,6 +375,8 @@
     <loc>http://localhost:1313/docs/nsi/cours_terminale/algorithmique/prog_dynamique/</loc>
   </url><url>
     <loc>http://localhost:1313/docs/nsi/cours_premiere/ihm_web/resumes/resume_html_css/</loc>
+  </url><url>
+    <loc>http://localhost:1313/docs/snt/reseaux_sociaux/2_droit_oubli/</loc>
   </url><url>
     <loc>http://localhost:1313/docs/nsi/cours_terminale/bdd/partie_1/sql/</loc>
   </url><url>
@@ -685,8 +689,6 @@
     <loc>http://localhost:1313/docs/maths/seconde/chapitres/affines/</loc>
   </url><url>
     <loc>http://localhost:1313/docs/nsi/cours_premiere/os/6_bash_resume/</loc>
-  </url><url>
-    <loc>http://localhost:1313/docs/snt/reseaux_sociaux/1_presentation/</loc>
   </url><url>
     <loc>http://localhost:1313/docs/nsi/cours_premiere/architecture/6_armlite/</loc>
   </url><url>
