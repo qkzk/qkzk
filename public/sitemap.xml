@@ -577,8 +577,6 @@
   </url><url>
     <loc>http://localhost:1313/docs/nsi/cours_terminale/architecture/processus/4_ordonnancement/</loc>
   </url><url>
-    <loc>http://localhost:1313/docs/snt/web/4_confidentialite/</loc>
-  </url><url>
     <loc>http://localhost:1313/docs/nsi/cours_premiere/programmation/specifier/</loc>
   </url><url>
     <loc>http://localhost:1313/docs/nsi/cours_premiere/donnees_structurees/tableaux_2d/</loc>
@@ -638,6 +636,8 @@
   </url><url>
     <loc>http://localhost:1313/docs/nsi/cours_premiere/algorithmique/tris/5_cout/</loc>
   </url><url>
+    <loc>http://localhost:1313/docs/snt/web/4_confidentialite/</loc>
+  </url><url>
     <loc>http://localhost:1313/docs/nsi/cours_premiere/os/5_cle_linux/</loc>
   </url><url>
     <loc>http://localhost:1313/docs/nsi/cours_terminale/structures_donnees/graphes/</loc>
@@ -682,6 +682,8 @@
     <loc>http://localhost:1313/docs/maths/seconde/chapitres/affines/</loc>
   </url><url>
     <loc>http://localhost:1313/docs/nsi/cours_premiere/os/6_bash_resume/</loc>
+  </url><url>
+    <loc>http://localhost:1313/docs/snt/web/5_tache_finale/</loc>
   </url><url>
     <loc>http://localhost:1313/docs/nsi/cours_premiere/architecture/6_armlite/</loc>
   </url><url>
