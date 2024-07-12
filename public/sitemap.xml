@@ -589,6 +589,9 @@
   </url><url>
     <loc>http://localhost:1313/docs/snt/codage_information/4_unicode/</loc>
   </url><url>
+    <loc>http://localhost:1313/docs/snt/reseaux_sociaux/</loc>
+    <lastmod>2023-07-07T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>http://localhost:1313/docs/nsi/cours_premiere/programmation/outils/libraries_faciles/mqtt/</loc>
     <lastmod>2019-12-10T07:08:58+00:00</lastmod>
   </url><url>
@@ -683,11 +686,13 @@
   </url><url>
     <loc>http://localhost:1313/docs/nsi/cours_premiere/os/6_bash_resume/</loc>
   </url><url>
-    <loc>http://localhost:1313/docs/snt/web/5_tache_finale/</loc>
+    <loc>http://localhost:1313/docs/snt/reseaux_sociaux/1_presentation/</loc>
   </url><url>
     <loc>http://localhost:1313/docs/nsi/cours_premiere/architecture/6_armlite/</loc>
   </url><url>
     <loc>http://localhost:1313/docs/nsi/cours_premiere/architecture/5_aqa/6_assembleur_aqa_intro/</loc>
+  </url><url>
+    <loc>http://localhost:1313/docs/snt/web/5_tache_finale/</loc>
   </url><url>
     <loc>http://localhost:1313/docs/nsi/cours_premiere/algorithmique/tris/6_td_cout/</loc>
   </url><url>
