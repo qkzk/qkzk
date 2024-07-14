@@ -484,6 +484,8 @@
   </url><url>
     <loc>http://localhost:1313/docs/maths/l1s2/</loc>
   </url><url>
+    <loc>http://localhost:1313/docs/snt/reseaux_sociaux/3_graphes/</loc>
+  </url><url>
     <loc>http://localhost:1313/docs/nsi/cours_terminale/structures_donnees/pile_file/</loc>
   </url><url>
     <loc>http://localhost:1313/docs/nsi/cours_terminale/prog/</loc>
@@ -495,8 +497,6 @@
     <loc>http://localhost:1313/docs/nsi/cours_premiere/ihm_web/resumes/resume_javascript/</loc>
   </url><url>
     <loc>http://localhost:1313/docs/nsi/cours_premiere/algorithmique/sequentiel/revisions/</loc>
-  </url><url>
-    <loc>http://localhost:1313/docs/snt/reseaux_sociaux/3_graphes/</loc>
   </url><url>
     <loc>http://localhost:1313/docs/ressources/shortcodes/</loc>
   </url><url>
@@ -578,6 +578,8 @@
     <loc>http://localhost:1313/docs/nsi/cours_premiere/architecture/4_assembleur/</loc>
   </url><url>
     <loc>http://localhost:1313/docs/maths/l2s3/</loc>
+  </url><url>
+    <loc>http://localhost:1313/docs/snt/reseaux_sociaux/4_petit_monde/</loc>
   </url><url>
     <loc>http://localhost:1313/docs/snt/web/3_moteurs/</loc>
   </url><url>
