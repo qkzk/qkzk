@@ -189,6 +189,8 @@
   </url><url>
     <loc>http://localhost:1313/docs/nsi/cours_terminale/structures_donnees/graphes/intro/</loc>
   </url><url>
+    <loc>http://localhost:1313/docs/snt/cartographie/1_introduction/</loc>
+  </url><url>
     <loc>http://localhost:1313/docs/snt/web/0_introduction/</loc>
   </url><url>
     <loc>http://localhost:1313/docs/nsi/cours_terminale/bdd/td/td_sql/</loc>
@@ -662,6 +664,9 @@
     <loc>http://localhost:1313/docs/nsi/cours_premiere/architecture/5_aqa/</loc>
   </url><url>
     <loc>http://localhost:1313/docs/nsi/cours_premiere/programmation/tester/</loc>
+  </url><url>
+    <loc>http://localhost:1313/docs/snt/cartographie/</loc>
+    <lastmod>2024-07-07T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/docs/nsi/cours_premiere/ihm_web/</loc>
     <lastmod>2023-12-10T00:00:00+00:00</lastmod>
