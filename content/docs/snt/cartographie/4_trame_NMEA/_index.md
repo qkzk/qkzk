@@ -14,7 +14,8 @@ header-includes: |
 
 
 
-[pdf](./_index.md)
+[pdf](./4_trame_nmea.pdf)
+
 ## I. Le protocole NMEA
 
 Pour permettre à des périphériques informatiques de « dialoguer » entre eux, en réseau, il faut que les messages échangés respectent une syntaxe commune. 
