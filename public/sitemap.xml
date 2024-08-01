@@ -1187,6 +1187,8 @@
   </url><url>
     <loc>http://localhost:1313/categories/</loc>
   </url><url>
+    <loc>http://localhost:1313/docs/maths/l1s1/exercices/</loc>
+  </url><url>
     <loc>http://localhost:1313/layouts/</loc>
   </url><url>
     <loc>http://localhost:1313/docs/nsi/cours_terminale/architecture/processus/3_interblocage/</loc>

@@ -317,6 +317,13 @@
       <description>Un module de manipulation d&amp;rsquo;arbres binaires # graph LR alert(Ressource) style alert fill:orange La classe BinaryTree, définie dans le module binary_tree.py proposé ici, permet de représenter des arbres binaires.&#xA;Cette classe fournit&#xA;« deux » constructeurs : BinaryTree() et BinaryTree(data, left, right) trois accesseurs : get_data(), get_left_subtree(), et get_right_subtree() un reconnaisseur : is_empty() Essayez&#xA;import binary_tree as bt help(bt.BinaryTree) pour afficher l&amp;rsquo;aide associée à cette classe.&#xA;Ou utilisez le notebook Jupyter</description>
     </item>
     <item>
+      <title>Exercices</title>
+      <link>http://localhost:1313/docs/maths/l1s1/exercices/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/docs/maths/l1s1/exercices/</guid>
+      <description>pdf&#xA;Chapitre 1: Outils et techniques calculatoires # Exercice 1.1 # Effectuer les opérations suivantes et simplifier au maximum&#xA;$\dfrac{2}{3} + \dfrac{1}{6}$ $\dfrac{2}{3} \times \dfrac{1}{6}$ $3 \times \dfrac{5}{12}$ $\dfrac{1}{5} - \dfrac{1}{3}$ $3 - \dfrac{3}{10}$ $\dfrac{1}{5} + \dfrac{2}{3} - \dfrac{4}{15}$ $\left( \dfrac{1}{2} + \dfrac{2}{5} \right) \times \dfrac{2}{3}$ $1 + \dfrac{1}{6} - \dfrac{1}{4}$ $\dfrac{3}{\dfrac{3}{2}}$ $\dfrac{\dfrac{3}{5} + \dfrac{1}{3}}{ \dfrac{2}{3} + \dfrac{6}{5}}$ $\dfrac{\dfrac{2}{7} + \dfrac{5}{21}}{\dfrac{6}{7}}$ $\dfrac{\dfrac{2}{3}}{ \dfrac{1}{6}}$ $\dfrac{3}{5} \times \dfrac{12}{21}$ $\dfrac{5}{21} + \dfrac{1}{7} - \dfrac{5}{3}$ $\dfrac{2}{3} \left( \dfrac{1}{5} - \dfrac{1}{2} \right)$ Exercice 1.</description>
+    </item>
+    <item>
       <title>NSI - Terminale</title>
       <link>http://localhost:1313/uploads/docnsitale/bdd/bdd_td/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
