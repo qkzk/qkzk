@@ -127,11 +127,9 @@
   </url><url>
     <loc>http://localhost:1313/docs/nsi/cours_premiere/donnees_simples/booleen/1_cours/</loc>
   </url><url>
-    <loc>http://localhost:1313/docs/maths/t_stmg/cahier_texte/</loc>
+    <loc>http://localhost:1313/docs/archives/maths/t_stmg/cahier_texte/</loc>
   </url><url>
     <loc>http://localhost:1313/docs/nsi/cours_premiere/donnees_simples/chaines_caracteres/1_cours/</loc>
-  </url><url>
-    <loc>http://localhost:1313/docs/archives/maths/seconde/chapitres/</loc>
   </url><url>
     <loc>http://localhost:1313/docs/maths/seconde/chapitres/</loc>
   </url><url>
@@ -167,7 +165,7 @@
   </url><url>
     <loc>http://localhost:1313/docs/nsi/cours_terminale/rentree/entrees_preponderantes/</loc>
   </url><url>
-    <loc>http://localhost:1313/docs/maths/enseignement_scientifique_terminale/2_estimation/cours/</loc>
+    <loc>http://localhost:1313/docs/archives/maths/enseignement_scientifique_terminale/2_estimation/cours/</loc>
   </url><url>
     <loc>http://localhost:1313/docs/nsi/cours_premiere/donnees_simples/flottants/1_cours/</loc>
   </url><url>
@@ -195,13 +193,13 @@
   </url><url>
     <loc>http://localhost:1313/docs/nsi/cours_terminale/bdd/td/td_sql/</loc>
   </url><url>
-    <loc>http://localhost:1313/docs/maths/enseignement_scientifique_terminale/3_hardy_weinberg/1_cours/</loc>
+    <loc>http://localhost:1313/docs/archives/maths/enseignement_scientifique_terminale/3_hardy_weinberg/1_cours/</loc>
   </url><url>
     <loc>http://localhost:1313/docs/nsi/cours_terminale/structures_donnees/pile_file/intro/</loc>
   </url><url>
     <loc>http://localhost:1313/docs/nsi/cours_premiere/architecture/1_intro/</loc>
   </url><url>
-    <loc>http://localhost:1313/docs/maths/enseignement_scientifique_terminale/4_malthus/1_modeles/</loc>
+    <loc>http://localhost:1313/docs/archives/maths/enseignement_scientifique_terminale/4_malthus/1_modeles/</loc>
   </url><url>
     <loc>http://localhost:1313/docs/nsi/cours_terminale/prog/paradigmes/paradigmes/</loc>
   </url><url>
@@ -219,7 +217,7 @@
   </url><url>
     <loc>http://localhost:1313/docs/nsi/cours_terminale/structures_donnees/poo/</loc>
   </url><url>
-    <loc>http://localhost:1313/docs/maths/enseignement_scientifique_terminale/1_biodiversite/cours/</loc>
+    <loc>http://localhost:1313/docs/archives/maths/enseignement_scientifique_terminale/1_biodiversite/cours/</loc>
   </url><url>
     <loc>http://localhost:1313/docs/nsi/cours_terminale/architecture/routage/cours/</loc>
   </url><url>
@@ -231,11 +229,9 @@
   </url><url>
     <loc>http://localhost:1313/docs/nsi/cours_terminale/architecture/routage/</loc>
   </url><url>
-    <loc>http://localhost:1313/docs/archives/maths/seconde/</loc>
-  </url><url>
     <loc>http://localhost:1313/docs/maths/seconde/</loc>
   </url><url>
-    <loc>http://localhost:1313/docs/maths/t_stmg/</loc>
+    <loc>http://localhost:1313/docs/archives/maths/t_stmg/</loc>
   </url><url>
     <loc>http://localhost:1313/docs/nsi/cours_premiere/programmation/outils/thonny/</loc>
   </url><url>
@@ -248,7 +244,7 @@
     <loc>http://localhost:1313/docs/snt/codage_information/2_image/</loc>
     <lastmod>2024-07-07T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/docs/maths/enseignement_scientifique_terminale/1_biodiversite/</loc>
+    <loc>http://localhost:1313/docs/archives/maths/enseignement_scientifique_terminale/1_biodiversite/</loc>
     <lastmod>2023-08-02T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/docs/snt/photographie/</loc>
@@ -298,7 +294,7 @@
   </url><url>
     <loc>http://localhost:1313/docs/nsi/cours_premiere/python/cours_python/01_expression/</loc>
   </url><url>
-    <loc>http://localhost:1313/docs/maths/t_stmg/1_suites_arithmetiques/</loc>
+    <loc>http://localhost:1313/docs/archives/maths/t_stmg/1_suites_arithmetiques/</loc>
   </url><url>
     <loc>http://localhost:1313/docs/nsi/cours_premiere/algorithmique/glouton/2_td/</loc>
   </url><url>
@@ -312,7 +308,7 @@
   </url><url>
     <loc>http://localhost:1313/docs/nsi/cours_premiere/donnees_simples/binaire/2_td/</loc>
   </url><url>
-    <loc>http://localhost:1313/docs/maths/enseignement_scientifique_terminale/3_hardy_weinberg/2_evolution/</loc>
+    <loc>http://localhost:1313/docs/archives/maths/enseignement_scientifique_terminale/3_hardy_weinberg/2_evolution/</loc>
   </url><url>
     <loc>http://localhost:1313/docs/nsi/cours_premiere/donnees_simples/booleen/</loc>
   </url><url>
@@ -340,9 +336,9 @@
   </url><url>
     <loc>http://localhost:1313/docs/nsi/cours_premiere/architecture/6_armlite/exos_armlite/</loc>
   </url><url>
-    <loc>http://localhost:1313/docs/maths/enseignement_scientifique_terminale/1_biodiversite/exos/</loc>
+    <loc>http://localhost:1313/docs/archives/maths/enseignement_scientifique_terminale/1_biodiversite/exos/</loc>
   </url><url>
-    <loc>http://localhost:1313/docs/maths/enseignement_scientifique_terminale/2_estimation/exos/</loc>
+    <loc>http://localhost:1313/docs/archives/maths/enseignement_scientifique_terminale/2_estimation/exos/</loc>
   </url><url>
     <loc>http://localhost:1313/docs/nsi/cours_premiere/donnees_simples/flottants/2_td/</loc>
   </url><url>
@@ -362,7 +358,7 @@
   </url><url>
     <loc>http://localhost:1313/docs/nsi/cours_terminale/structures_donnees/listes/</loc>
   </url><url>
-    <loc>http://localhost:1313/docs/maths/enseignement_scientifique_terminale/4_malthus/2_expo/</loc>
+    <loc>http://localhost:1313/docs/archives/maths/enseignement_scientifique_terminale/4_malthus/2_expo/</loc>
   </url><url>
     <loc>http://localhost:1313/docs/nsi/cours_terminale/bdd/td/td_bdd/</loc>
   </url><url>
@@ -398,13 +394,13 @@
   </url><url>
     <loc>http://localhost:1313/docs/nsi/cours_premiere/algorithmique/tris/</loc>
   </url><url>
-    <loc>http://localhost:1313/docs/maths/enseignement_scientifique_terminale/2_estimation/</loc>
+    <loc>http://localhost:1313/docs/archives/maths/enseignement_scientifique_terminale/2_estimation/</loc>
     <lastmod>2023-08-02T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/docs/maths/enseignement_scientifique_terminale/4_malthus/3_exercices/</loc>
+    <loc>http://localhost:1313/docs/archives/maths/enseignement_scientifique_terminale/4_malthus/3_exercices/</loc>
     <lastmod>2023-08-02T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/docs/maths/enseignement_scientifique_terminale/3_hardy_weinberg/</loc>
+    <loc>http://localhost:1313/docs/archives/maths/enseignement_scientifique_terminale/3_hardy_weinberg/</loc>
     <lastmod>2023-08-02T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/docs/snt/programmation/</loc>
@@ -454,7 +450,7 @@
   </url><url>
     <loc>http://localhost:1313/docs/nsi/cours_premiere/python/cours_python/02_types_simples/</loc>
   </url><url>
-    <loc>http://localhost:1313/docs/maths/t_stmg/2_fonction_inverse/</loc>
+    <loc>http://localhost:1313/docs/archives/maths/t_stmg/2_fonction_inverse/</loc>
   </url><url>
     <loc>http://localhost:1313/docs/nsi/cours_premiere/algorithmique/glouton/3_tp/</loc>
   </url><url>
@@ -478,7 +474,7 @@
   </url><url>
     <loc>http://localhost:1313/docs/nsi/cours_premiere/donnees_simples/</loc>
   </url><url>
-    <loc>http://localhost:1313/docs/maths/enseignement_scientifique_terminale/3_hardy_weinberg/3_limites/</loc>
+    <loc>http://localhost:1313/docs/archives/maths/enseignement_scientifique_terminale/3_hardy_weinberg/3_limites/</loc>
   </url><url>
     <loc>http://localhost:1313/docs/nsi/cours_premiere/architecture/3_performances/</loc>
   </url><url>
@@ -516,7 +512,7 @@
   </url><url>
     <loc>http://localhost:1313/docs/nsi/cours_premiere/ihm_web/resumes/resume_url_http/</loc>
   </url><url>
-    <loc>http://localhost:1313/docs/maths/enseignement_scientifique_terminale/4_malthus/</loc>
+    <loc>http://localhost:1313/docs/archives/maths/enseignement_scientifique_terminale/4_malthus/</loc>
     <lastmod>2023-08-02T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/docs/snt/web/</loc>
@@ -559,7 +555,7 @@
   </url><url>
     <loc>http://localhost:1313/docs/nsi/cours_premiere/python/cours_python/03_structure_controle/</loc>
   </url><url>
-    <loc>http://localhost:1313/docs/maths/t_stmg/3_probabilites_conditionnelles/</loc>
+    <loc>http://localhost:1313/docs/archives/maths/t_stmg/3_probabilites_conditionnelles/</loc>
   </url><url>
     <loc>http://localhost:1313/docs/nsi/cours_premiere/algorithmique/glouton/4_cours/</loc>
   </url><url>
@@ -575,7 +571,7 @@
   </url><url>
     <loc>http://localhost:1313/docs/nsi/cours_premiere/donnees_structurees/</loc>
   </url><url>
-    <loc>http://localhost:1313/docs/maths/enseignement_scientifique_terminale/3_hardy_weinberg/4_exos/</loc>
+    <loc>http://localhost:1313/docs/archives/maths/enseignement_scientifique_terminale/3_hardy_weinberg/4_exos/</loc>
   </url><url>
     <loc>http://localhost:1313/docs/nsi/cours_premiere/donnees_simples/hexadecimal/</loc>
   </url><url>
@@ -635,11 +631,11 @@
   </url><url>
     <loc>http://localhost:1313/docs/nsi/cours_premiere/python/cours_python/04_fonctions/</loc>
   </url><url>
-    <loc>http://localhost:1313/docs/maths/t_stmg/4_suites_geometriques/</loc>
+    <loc>http://localhost:1313/docs/archives/maths/t_stmg/4_suites_geometriques/</loc>
   </url><url>
     <loc>http://localhost:1313/docs/nsi/cours_premiere/python/cours_python/05_list_tuple/</loc>
   </url><url>
-    <loc>http://localhost:1313/docs/maths/t_stmg/5_fonction_exponentielle/</loc>
+    <loc>http://localhost:1313/docs/archives/maths/t_stmg/5_fonction_exponentielle/</loc>
   </url><url>
     <loc>http://localhost:1313/docs/nsi/cours_premiere/algorithmique/glouton/5_td/</loc>
   </url><url>
@@ -701,8 +697,6 @@
   </url><url>
     <loc>http://localhost:1313/docs/nsi/cours_premiere/algorithmique/glouton/6_tp/</loc>
   </url><url>
-    <loc>http://localhost:1313/docs/archives/maths/seconde/chapitres/affines/</loc>
-  </url><url>
     <loc>http://localhost:1313/docs/maths/seconde/chapitres/affines/</loc>
   </url><url>
     <loc>http://localhost:1313/docs/nsi/cours_premiere/os/6_bash_resume/</loc>
@@ -736,7 +730,7 @@
     <loc>http://localhost:1313/docs/archives/isn/sujets-des-projets/papy-panic-rpi-python/</loc>
     <lastmod>2016-07-01T13:29:12+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/docs/maths/t_stmg/6_variables_aleatoires_loi_binomiale/</loc>
+    <loc>http://localhost:1313/docs/archives/maths/t_stmg/6_variables_aleatoires_loi_binomiale/</loc>
   </url><url>
     <loc>http://localhost:1313/docs/nsi/cours_premiere/architecture/5_aqa/7_assembleur_aqa_tp/</loc>
   </url><url>
@@ -766,7 +760,7 @@
   </url><url>
     <loc>http://localhost:1313/docs/nsi/cours_premiere/python/cours_python/07_comprehension/</loc>
   </url><url>
-    <loc>http://localhost:1313/docs/maths/t_stmg/7_fonction_log/</loc>
+    <loc>http://localhost:1313/docs/archives/maths/t_stmg/7_fonction_log/</loc>
   </url><url>
     <loc>http://localhost:1313/docs/nsi/cours_premiere/reseaux/resume_complet/</loc>
   </url><url>
@@ -790,7 +784,7 @@
   </url><url>
     <loc>http://localhost:1313/docs/nsi/cours_premiere/python/cours_python/08_exception/</loc>
   </url><url>
-    <loc>http://localhost:1313/docs/maths/t_stmg/8_stats_a_deux_variables/</loc>
+    <loc>http://localhost:1313/docs/archives/maths/t_stmg/8_stats_a_deux_variables/</loc>
   </url><url>
     <loc>http://localhost:1313/docs/nsi/cours_premiere/programmation/comparaison/</loc>
   </url><url>
@@ -892,8 +886,6 @@
   </url><url>
     <loc>http://localhost:1313/docs/nsi/cours_premiere/programmation/outils/libraries_faciles/</loc>
     <lastmod>2019-12-10T07:08:58+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/docs/archives/maths/seconde/chapitres/echantillonnage/echantionnage_2022/</loc>
   </url><url>
     <loc>http://localhost:1313/docs/maths/seconde/chapitres/echantillonnage/echantionnage_2022/</loc>
   </url><url>
@@ -1048,7 +1040,7 @@
   </url><url>
     <loc>http://localhost:1313/docs/nsi/cours_terminale/bdd/murder_mystery/</loc>
   </url><url>
-    <loc>http://localhost:1313/docs/maths/enseignement_scientifique_terminale/</loc>
+    <loc>http://localhost:1313/docs/archives/maths/enseignement_scientifique_terminale/</loc>
     <lastmod>2023-08-02T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/docs/nsi/cours_premiere/architecture/6_armlite/livre_from_metal/</loc>

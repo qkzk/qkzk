@@ -8,6 +8,8 @@ geometry: "margin=1.5cm"
 
 [pdf](./exercices.pdf)
 
+_Ces exercices sont ceux donnés dans les autres sections._
+
 ## Chapitre 1: Outils et techniques calculatoires
 
 ### Exercice 1.1
