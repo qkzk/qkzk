@@ -89,7 +89,7 @@ Lorsque une carte d’un nombre binaire n’est pas visible, elle est représent
 
     (d) À l’aide du fichier ouvert dans hexed.it, compléter le tableau suivant donnant le code ASCII, le code binaire et hexadécimal associé aux lettres "s minuscule", "S", "N" et "T".
 
-    | Lettre        | S   | S   | N   | T   |
+    | Lettre        | s   | S   | N   | T   |
     | ------------- | --- | --- | --- | --- |
     | ASCII Décimal |     |     |     |     |
     | ASCII Hexa.   |     |     |     |     |
