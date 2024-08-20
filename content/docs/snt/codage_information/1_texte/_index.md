@@ -122,3 +122,7 @@ Lorsque une carte d’un nombre binaire n’est pas visible, elle est représent
     ```
 
     <!---  [74, 101, 32, 115, 97, 105, 115, 32, 101, 110, 99, 111, 100, 101, 114, 32, 101, 110, 32, 65, 83, 67, 73, 73] --->
+
+## 4. Pour les plus rapides...
+
+Voici un [script Python](./decoder_encoder.py) qui permet d'encoder et de décoder un message. Vous pouvez l'ouvrir avec Thonny et l'exécuter pour tester ce qu'il fait.
