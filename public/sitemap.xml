@@ -24,10 +24,10 @@
   </url><url>
     <loc>http://localhost:1313/docs/nsi/cours_premiere/os/0_concepts_cles/</loc>
   </url><url>
-    <loc>http://localhost:1313/docs/snt/codage_information/</loc>
-    <lastmod>2024-07-07T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>http://localhost:1313/docs/</loc>
+    <lastmod>2024-08-23T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/docs/snt/codage_information/</loc>
     <lastmod>2024-07-07T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/docs/snt/codage_information/1_texte/</loc>
@@ -599,6 +599,9 @@
   </url><url>
     <loc>http://localhost:1313/docs/snt/codage_information/4_unicode/</loc>
   </url><url>
+    <loc>http://localhost:1313/docs/nsi/cours_terminale/bdd/</loc>
+    <lastmod>2024-08-23T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>http://localhost:1313/docs/snt/reseaux_sociaux/</loc>
     <lastmod>2023-07-07T00:00:00+00:00</lastmod>
   </url><url>
@@ -644,8 +647,6 @@
     <loc>http://localhost:1313/docs/nsi/cours_premiere/architecture/</loc>
   </url><url>
     <loc>http://localhost:1313/docs/nsi/cours_premiere/architecture/5_aqa/5_assembleur_td/</loc>
-  </url><url>
-    <loc>http://localhost:1313/docs/nsi/cours_terminale/bdd/</loc>
   </url><url>
     <loc>http://localhost:1313/docs/nsi/cours_premiere/algorithmique/tris/5_cout/</loc>
   </url><url>
@@ -1039,6 +1040,9 @@
     <loc>http://localhost:1313/docs/nsi/cours_terminale/organisation/</loc>
   </url><url>
     <loc>http://localhost:1313/docs/nsi/cours_terminale/bdd/murder_mystery/</loc>
+  </url><url>
+    <loc>http://localhost:1313/docs/nsi/cours_terminale/bdd/sql_island/</loc>
+    <lastmod>2024-08-23T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/docs/archives/maths/enseignement_scientifique_terminale/</loc>
     <lastmod>2023-08-02T00:00:00+00:00</lastmod>
