@@ -6,6 +6,8 @@ geometry: "margin=1.5cm"
 weight: 4
 ---
 
+[pdf](./4_unicode.pdf)
+
 ## Unicode
 
 Unicode est un standard informatique conçu pour permettre le codage, la représentation et la gestion cohérente de texte exprimé dans la plupart des systèmes d'écriture du monde. Son objectif principal est de fournir un numéro unique pour chaque caractère, indépendamment de la plateforme, du programme ou de la langue.
@@ -91,3 +93,7 @@ Quelle est la longueur du texte ...
 ### Exercice 5
 
 Expliquer la "blague" de l'image de Martine présentée plus haut.
+
+## Compléments pour les plus rapides
+
+Vous pouvez traiter la partie 3 de [ce document](codage.pdf), portant sur les codes correcteurs d'erreurs.
