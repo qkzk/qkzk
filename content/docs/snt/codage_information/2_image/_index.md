@@ -30,7 +30,9 @@ _Répondre aux questions dans le document réponse._
 3. Création d’une image noir et blanc et décodage.
 
    (a) Ouvrir le logiciel GIMP, dans le menu "Fichier", la création d’une "nouvelle image" permet de choisir la hauteur et la largeur de notre image. Créer une image de petite dimension par exemple 10×10.
+
    (b) À l’aide de l’outil crayon -taille : 1 pixel, couleur : noire-, créer des lignes horizontales de façon irrégulière. Enregistrer le document, puis l’exporter au format PBM. À la question "Formatage des données", répondre en cochant la case "Ascii".
+
    (c) Ouvrir le fichier pbm avec SublimeText et observer son contenu. Où lit-on la taille de l’image ? Compter le nombre de 0 et 1. À quoi correspondent-ils ?
 
    L’information à mémoriser pour un pixel noir ou blanc est élémentaire. Un bit suffit : 1 pour noir, 0 pour blanc (ou le contraire, c’est seulement une convention).
@@ -40,6 +42,7 @@ _Répondre aux questions dans le document réponse._
 4. Photo Noir et blanc.
 
    (a) Ouvrir de nouveau le fichier **[lion.jpg](./lion.jpg)** avec GIMP. L’exporter au format PBM-ASCII.
+
    (b) Visualiser le résultat en ouvrant le fichier PBM. Que constate-t-on ? Pourquoi ?
 
    En photographie noir et blanc, c’est un peu plus subtil que noir ou blanc :
@@ -48,6 +51,8 @@ _Répondre aux questions dans le document réponse._
 
    - profondeur = 8 bits = ... couleurs possibles
    - Le noir sera codé par ... et le blanc par ...
+
+   _Effectuer le calcul et répondre sur le document réponse_
 
 ## 2. Codage en couleur : le système RGB
 
@@ -64,11 +69,14 @@ Le RGB utilise les trois couleurs des luminophores ou photophores, des "petites 
 2.  Codage sur 3 bits
 
     (a) Combien de nombres peut-on former sur tois bits ?
-    (a) Combien de couleurs différentes peut-on obtenir avec un codage RGB sur 3 bits ? Lesquelles ?
+
+    (b) Combien de couleurs différentes peut-on obtenir avec un codage RGB sur 3 bits ? Lesquelles ?
 
 3.  Codage sur 3 octets
     Dans le cas général, on code les couleurs sur 24 bits soit 3 octets (1 octet respectivement pour chaque nuance de rouge, vert, bleu)
+
     (a) Avec un tel codage, combien de nuances de couleurs sont possibles ?
+
     (b) Déterminer les noms des couleurs associées aux représentations RGB suivantes :
 
     ```python
@@ -94,7 +102,7 @@ Le RGB utilise les trois couleurs des luminophores ou photophores, des "petites 
     - gris foncé
     - violet foncé
 
-    (d) On affirme parfois que le marron n'est que de "l'orange foncé". Expliquer.
+    (d) On affirme parfois que _"le marron n'est que de l'orange foncé"_. Expliquer.
 
 En cas de difficulté, vous pouvez utiliser le site [http://www.proftnj.com/RGB3.htm](http://www.proftnj.com/RGB3.htm)
 
