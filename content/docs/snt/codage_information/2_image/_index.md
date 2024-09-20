@@ -108,7 +108,7 @@ En cas de difficulté, vous pouvez utiliser le site [http://www.proftnj.com/RGB3
 
 ## 3. Codage d’une image bitmap
 
-![metadonnées](./img/img-2024-07-07-15-06.png)
+![metadonnées](img-2024-07-07-15-06.png)
 
 Plus d'informations sur le [Portable Pixmap](https://fr.wikipedia.org/wiki/Portable_pixmap) et le [Window Bitmap](https://fr.wikipedia.org/wiki/Windows_bitmap)
 
@@ -118,7 +118,13 @@ Plus d'informations sur le [Portable Pixmap](https://fr.wikipedia.org/wiki/Porta
 
 3. Ouvrir le fichier **[8px.bmp](./8px.bmp)** à l’aide du site [https://hexed.it](https://hexed.it). Recueillir les informations et compléter la feuille de route suivante (la taille de l’image étant petite, il n’y a pas dans ce cas de séparation de lignes).
 
-   ![img](img-2024-07-07-15-07.png)
+   - Type de fichier ?
+   - Taille du fichier en octets ?
+   - Largeur et hauteur de l'image en pixels ?
+   - Taille de l'entete ?
+   - Nombre de bits par pixel ?
+
+   Compléter le code l'image
 
    ![img](img-2024-07-07-15-08.png)
 
