@@ -10,7 +10,7 @@ theme: metropolis
 ## 1 Vidéos histoire
 
 - [Introduction](https://youtu.be/QFCoCo99N88)
-- [Du sténopé à la photographie](https://youtu.be/Kkx-7fDIb)
+- [Du sténopé à la photographie](https://youtu.be/p25T7cB9N6A)
 - [La naissance d’une invention](https://youtu.be/q2awCruG7UI)
 
 ## 2 Camera obscura
