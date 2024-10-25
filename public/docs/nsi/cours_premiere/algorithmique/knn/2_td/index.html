@@ -4,14 +4,22 @@
 <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
     <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="2. TD &ndash; kNN # pdf : pour impression
-1. Trouver la classe avec les k plus proches voisins # Supposons que l’on a un problème de classification qui consiste à déterminer la classe d’appartenance de nouvelles instances $X_i$. Le domaine de valeurs des classes possibles est ${1, 2, 3}$.
+<meta name="description" content="
+  2. TD &ndash; kNN
+  #
+
+pdf : pour impression
+
+  1. Trouver la classe avec les k plus proches voisins
+  #
+
+Supposons que l’on a un problème de classification qui consiste à déterminer la classe d’appartenance de nouvelles instances $X_i$. Le domaine de valeurs des classes possibles est ${1, 2, 3}$.
 Selon la base de connaissance suivante, déterminez à la main (ou à l&rsquo;aide d&rsquo;un tableur) la classe de l’instance $X_6$, dont les valeurs pour les attributs numériques $A1$ à $A5$ sont $&lt;3, 12, 4, 7, 8&gt;$, à l’aide de l’algorithme des k-voisins les plus proches (K-NN) avec $K=1$ puis $K=3$.">
 <meta name="theme-color" content="#FFFFFF">
 <meta name="color-scheme" content="light dark"><meta property="og:url" content="http://localhost:1313/docs/nsi/cours_premiere/algorithmique/knn/2_td/">
   <meta property="og:site_name" content="qkzk">
   <meta property="og:title" content="2. TD - kNN">
-  <meta property="og:description" content="2. TD – kNN # pdf : pour impression
+  <meta property="og:description" content=" 2. TD – kNN # pdf : pour impression
 1. Trouver la classe avec les k plus proches voisins # Supposons que l’on a un problème de classification qui consiste à déterminer la classe d’appartenance de nouvelles instances $X_i$. Le domaine de valeurs des classes possibles est ${1, 2, 3}$.
 Selon la base de connaissance suivante, déterminez à la main (ou à l’aide d’un tableur) la classe de l’instance $X_6$, dont les valeurs pour les attributs numériques $A1$ à $A5$ sont $&lt;3, 12, 4, 7, 8&gt;$, à l’aide de l’algorithme des k-voisins les plus proches (K-NN) avec $K=1$ puis $K=3$.">
   <meta property="og:locale" content="en_us">
@@ -21,8 +29,7 @@ Selon la base de connaissance suivante, déterminez à la main (ou à l’aide d
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/book.min.24c2b1f8dc2338e074345eec5b36f8a002aaa6d1b2e7312e14ac2d6a6958c876.css" integrity="sha256-JMKx&#43;NwjOOB0NF7sWzb4oAKqptGy5zEuFKwtamlYyHY=" crossorigin="anonymous">
   <script defer src="/flexsearch.min.js"></script>
-  <script defer src="/en.search.min.41edfc0344c578feffc8ba5e94e6f59bfed684cf40d08bf18134f4a240cd0e15.js" integrity="sha256-Qe38A0TFeP7/yLpelOb1m/7WhM9A0IvxgTT0okDNDhU=" crossorigin="anonymous"></script>
-
+  <script defer src="/en.search.min.ad90ed54c2fb2ebca6bf92dc494821802bb5913fb4ded7c7ce215de203590daa.js" integrity="sha256-rZDtVML7Lrymv5LcSUghgCu1kT&#43;03tfHziFd4gNZDao=" crossorigin="anonymous"></script>
 <link rel="alternate" type="application/rss+xml" href="http://localhost:1313/docs/nsi/cours_premiere/algorithmique/knn/2_td/index.xml" title="qkzk" />
 <!--
 Made with Book Theme
@@ -6993,64 +7000,64 @@ MathJax.Hub.Config({
 <p>Selon la base de connaissance suivante, déterminez à la main (ou à l&rsquo;aide d&rsquo;un tableur) la classe de l’instance $X_6$, dont les valeurs pour les attributs numériques $A1$ à $A5$ sont $&lt;3, 12, 4, 7, 8&gt;$, à l’aide de l’algorithme des k-voisins les plus proches (K-NN) avec $K=1$ puis $K=3$.</p>
 <p>Montrez tous les calculs.</p>
 <table>
-<thead>
-<tr>
-<th>Instances</th>
-<th>A1</th>
-<th>A2</th>
-<th>A3</th>
-<th>A4</th>
-<th>A5</th>
-<th>Classe</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>$X_1$</td>
-<td>3</td>
-<td>5</td>
-<td>4</td>
-<td>6</td>
-<td>1</td>
-<td>1</td>
-</tr>
-<tr>
-<td>$X_2$</td>
-<td>4</td>
-<td>6</td>
-<td>10</td>
-<td>3</td>
-<td>2</td>
-<td>2</td>
-</tr>
-<tr>
-<td>$X_3$</td>
-<td>8</td>
-<td>3</td>
-<td>4</td>
-<td>2</td>
-<td>6</td>
-<td>3</td>
-</tr>
-<tr>
-<td>$X_4$</td>
-<td>2</td>
-<td>1</td>
-<td>4</td>
-<td>3</td>
-<td>6</td>
-<td>3</td>
-</tr>
-<tr>
-<td>$X_5$</td>
-<td>2</td>
-<td>5</td>
-<td>1</td>
-<td>4</td>
-<td>8</td>
-<td>2</td>
-</tr>
-</tbody>
+  <thead>
+      <tr>
+          <th style="text-align: left">Instances</th>
+          <th style="text-align: left">A1</th>
+          <th style="text-align: left">A2</th>
+          <th style="text-align: left">A3</th>
+          <th style="text-align: left">A4</th>
+          <th style="text-align: left">A5</th>
+          <th style="text-align: left">Classe</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left">$X_1$</td>
+          <td style="text-align: left">3</td>
+          <td style="text-align: left">5</td>
+          <td style="text-align: left">4</td>
+          <td style="text-align: left">6</td>
+          <td style="text-align: left">1</td>
+          <td style="text-align: left">1</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">$X_2$</td>
+          <td style="text-align: left">4</td>
+          <td style="text-align: left">6</td>
+          <td style="text-align: left">10</td>
+          <td style="text-align: left">3</td>
+          <td style="text-align: left">2</td>
+          <td style="text-align: left">2</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">$X_3$</td>
+          <td style="text-align: left">8</td>
+          <td style="text-align: left">3</td>
+          <td style="text-align: left">4</td>
+          <td style="text-align: left">2</td>
+          <td style="text-align: left">6</td>
+          <td style="text-align: left">3</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">$X_4$</td>
+          <td style="text-align: left">2</td>
+          <td style="text-align: left">1</td>
+          <td style="text-align: left">4</td>
+          <td style="text-align: left">3</td>
+          <td style="text-align: left">6</td>
+          <td style="text-align: left">3</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">$X_5$</td>
+          <td style="text-align: left">2</td>
+          <td style="text-align: left">5</td>
+          <td style="text-align: left">1</td>
+          <td style="text-align: left">4</td>
+          <td style="text-align: left">8</td>
+          <td style="text-align: left">2</td>
+      </tr>
+  </tbody>
 </table>
 <h2 id="2-autre-exemple-simple">
   2. Autre exemple simple
@@ -7072,55 +7079,55 @@ MathJax.Hub.Config({
 <p>On cherche à prédire la couleur d’un fruit en fonction de sa largeur ($L$) et de sa hauteur ($H$). <br>
 On dispose des données d’apprentissage suivantes :</p>
 <table>
-<thead>
-<tr>
-<th>largeur</th>
-<th>hauteur</th>
-<th>couleur</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>2</td>
-<td>6</td>
-<td>red</td>
-</tr>
-<tr>
-<td>5</td>
-<td>6</td>
-<td>yellow</td>
-</tr>
-<tr>
-<td>2</td>
-<td>5</td>
-<td>orange</td>
-</tr>
-<tr>
-<td>6</td>
-<td>5</td>
-<td>purple</td>
-</tr>
-<tr>
-<td>1</td>
-<td>2</td>
-<td>red</td>
-</tr>
-<tr>
-<td>4</td>
-<td>2</td>
-<td>blue</td>
-</tr>
-<tr>
-<td>2</td>
-<td>1</td>
-<td>violet</td>
-</tr>
-<tr>
-<td>6</td>
-<td>1</td>
-<td>green</td>
-</tr>
-</tbody>
+  <thead>
+      <tr>
+          <th style="text-align: left">largeur</th>
+          <th style="text-align: left">hauteur</th>
+          <th style="text-align: left">couleur</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left">2</td>
+          <td style="text-align: left">6</td>
+          <td style="text-align: left">red</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">5</td>
+          <td style="text-align: left">6</td>
+          <td style="text-align: left">yellow</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">2</td>
+          <td style="text-align: left">5</td>
+          <td style="text-align: left">orange</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">6</td>
+          <td style="text-align: left">5</td>
+          <td style="text-align: left">purple</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">1</td>
+          <td style="text-align: left">2</td>
+          <td style="text-align: left">red</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">4</td>
+          <td style="text-align: left">2</td>
+          <td style="text-align: left">blue</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">2</td>
+          <td style="text-align: left">1</td>
+          <td style="text-align: left">violet</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">6</td>
+          <td style="text-align: left">1</td>
+          <td style="text-align: left">green</td>
+      </tr>
+  </tbody>
 </table>
 <p>Ces données sont placées dans un repère ($L$ en abscisse, $H$ en ordonnée).</p>
 <p><img src="./img/fruit-color.png" alt="" /></p>
@@ -7140,73 +7147,73 @@ Comparez vos résultats à ceux de la question 2.</li>
 </h2>
 <p>Arrivé dans la cantina de la planète Tatooine, Han Solo décide de donner des indications à Luke pour qu’il ne provoque pas les extraterrestres belliqueux. Il repère quelques caractéristiques et vous demande de l’aider à fournir des éléments à Luke pour ne pas créer de problèmes et donc pouvoir définir un extraterrestre belliqueux.</p>
 <table>
-<thead>
-<tr>
-<th><em>Couleur</em></th>
-<th><em>Taille</em></th>
-<th><em>Poids</em></th>
-<th><em>Yeux par pair ?</em></th>
-<th><em>Belliqueux</em></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>jaune</td>
-<td>moyenne</td>
-<td>léger</td>
-<td>non</td>
-<td>non</td>
-</tr>
-<tr>
-<td>jaune</td>
-<td>grande</td>
-<td>moyen</td>
-<td>oui</td>
-<td>oui</td>
-</tr>
-<tr>
-<td>vert</td>
-<td>petite</td>
-<td>moyen</td>
-<td>oui</td>
-<td>oui</td>
-</tr>
-<tr>
-<td>jaune</td>
-<td>petite</td>
-<td>moyen</td>
-<td>non</td>
-<td>non</td>
-</tr>
-<tr>
-<td>rouge</td>
-<td>moyenne</td>
-<td>lourd</td>
-<td>non</td>
-<td>non</td>
-</tr>
-<tr>
-<td>vert</td>
-<td>grande</td>
-<td>lourd</td>
-<td>non</td>
-<td>oui</td>
-</tr>
-<tr>
-<td>vert</td>
-<td>moyenne</td>
-<td>lourd</td>
-<td>non</td>
-<td>oui</td>
-</tr>
-<tr>
-<td>jaune</td>
-<td>petite</td>
-<td>léger</td>
-<td>oui</td>
-<td>oui</td>
-</tr>
-</tbody>
+  <thead>
+      <tr>
+          <th style="text-align: left"><em>Couleur</em></th>
+          <th style="text-align: left"><em>Taille</em></th>
+          <th style="text-align: left"><em>Poids</em></th>
+          <th style="text-align: left"><em>Yeux par pair ?</em></th>
+          <th style="text-align: left"><em>Belliqueux</em></th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left">jaune</td>
+          <td style="text-align: left">moyenne</td>
+          <td style="text-align: left">léger</td>
+          <td style="text-align: left">non</td>
+          <td style="text-align: left">non</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">jaune</td>
+          <td style="text-align: left">grande</td>
+          <td style="text-align: left">moyen</td>
+          <td style="text-align: left">oui</td>
+          <td style="text-align: left">oui</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">vert</td>
+          <td style="text-align: left">petite</td>
+          <td style="text-align: left">moyen</td>
+          <td style="text-align: left">oui</td>
+          <td style="text-align: left">oui</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">jaune</td>
+          <td style="text-align: left">petite</td>
+          <td style="text-align: left">moyen</td>
+          <td style="text-align: left">non</td>
+          <td style="text-align: left">non</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">rouge</td>
+          <td style="text-align: left">moyenne</td>
+          <td style="text-align: left">lourd</td>
+          <td style="text-align: left">non</td>
+          <td style="text-align: left">non</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">vert</td>
+          <td style="text-align: left">grande</td>
+          <td style="text-align: left">lourd</td>
+          <td style="text-align: left">non</td>
+          <td style="text-align: left">oui</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">vert</td>
+          <td style="text-align: left">moyenne</td>
+          <td style="text-align: left">lourd</td>
+          <td style="text-align: left">non</td>
+          <td style="text-align: left">oui</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">jaune</td>
+          <td style="text-align: left">petite</td>
+          <td style="text-align: left">léger</td>
+          <td style="text-align: left">oui</td>
+          <td style="text-align: left">oui</td>
+      </tr>
+  </tbody>
 </table>
 <p>Élaborez une distance pour pouvoir mettre en œuvre KNN sur cet exemple.</p>
 <h2 id="6-distance-sur-des-données-mixtes">

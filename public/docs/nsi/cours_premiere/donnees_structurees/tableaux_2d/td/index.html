@@ -5,10 +5,40 @@
     <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="pdf pour impression
-Tableaux à deux dimensions # 1. Coordonnées dans une grille # On considère une grille rectangulaire représentée en mémoire par un tableau à deux dimension :
-grille = [[1, 2, 1, 5], [2, 1, 4, 3], [1, 4, 5, 1]] Chaque élément de la grille est un entier.
+
+  Tableaux à deux dimensions
+  #
+
+
+  1. Coordonnées dans une grille
+  #
+
+On considère une grille rectangulaire représentée en mémoire par un tableau
+à deux dimension :
+grille = [[1, 2, 1, 5],
+          [2, 1, 4, 3],
+          [1, 4, 5, 1]]
+Chaque élément de la grille est un entier.
 L&rsquo;algorithme, incomplet, qui suit permet de cumuler les éléments de la grille :
-somme = 0 pour chaque ligne de la grille faire : pour chaque cellule d&#39;une ligne faire : COMPLÉTER fin du pour fin du pour Compléter l&rsquo;algorithme Combien d&rsquo;additions sont réalisées lorsqu&rsquo;on applique l&rsquo;algorithme à la grille donnée en exemple ?">
+somme = 0
+pour chaque ligne de la grille faire :
+    pour chaque cellule d&#39;une ligne faire :
+        COMPLÉTER
+    fin du pour
+fin du pour
+
+Compléter l&rsquo;algorithme
+Combien d&rsquo;additions sont réalisées lorsqu&rsquo;on applique l&rsquo;algorithme à la
+grille donnée en exemple ? Pour une grille contenant $L$ lignes et $C$
+colonnes ?
+Traduire cet algorithme dans une fonction python cumul_grille
+
+
+  2. Élément extrême
+  #
+
+On a relevé dans un tableau  appelé temperatures les températures à midi
+de chaque jour de la semaine.">
 <meta name="theme-color" content="#FFFFFF">
 <meta name="color-scheme" content="light dark"><meta property="og:url" content="http://localhost:1313/docs/nsi/cours_premiere/donnees_structurees/tableaux_2d/td/">
   <meta property="og:site_name" content="qkzk">
@@ -17,7 +47,7 @@ somme = 0 pour chaque ligne de la grille faire : pour chaque cellule d&#39;une l
 Tableaux à deux dimensions # 1. Coordonnées dans une grille # On considère une grille rectangulaire représentée en mémoire par un tableau à deux dimension :
 grille = [[1, 2, 1, 5], [2, 1, 4, 3], [1, 4, 5, 1]] Chaque élément de la grille est un entier.
 L’algorithme, incomplet, qui suit permet de cumuler les éléments de la grille :
-somme = 0 pour chaque ligne de la grille faire : pour chaque cellule d&#39;une ligne faire : COMPLÉTER fin du pour fin du pour Compléter l’algorithme Combien d’additions sont réalisées lorsqu’on applique l’algorithme à la grille donnée en exemple ?">
+somme = 0 pour chaque ligne de la grille faire : pour chaque cellule d&#39;une ligne faire : COMPLÉTER fin du pour fin du pour Compléter l’algorithme Combien d’additions sont réalisées lorsqu’on applique l’algorithme à la grille donnée en exemple ? Pour une grille contenant $L$ lignes et $C$ colonnes ? Traduire cet algorithme dans une fonction python cumul_grille 2. Élément extrême # On a relevé dans un tableau appelé temperatures les températures à midi de chaque jour de la semaine.">
   <meta property="og:locale" content="en_us">
   <meta property="og:type" content="website">
 <title>TD | qkzk</title>
@@ -25,8 +55,7 @@ somme = 0 pour chaque ligne de la grille faire : pour chaque cellule d&#39;une l
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/book.min.24c2b1f8dc2338e074345eec5b36f8a002aaa6d1b2e7312e14ac2d6a6958c876.css" integrity="sha256-JMKx&#43;NwjOOB0NF7sWzb4oAKqptGy5zEuFKwtamlYyHY=" crossorigin="anonymous">
   <script defer src="/flexsearch.min.js"></script>
-  <script defer src="/en.search.min.41edfc0344c578feffc8ba5e94e6f59bfed684cf40d08bf18134f4a240cd0e15.js" integrity="sha256-Qe38A0TFeP7/yLpelOb1m/7WhM9A0IvxgTT0okDNDhU=" crossorigin="anonymous"></script>
-
+  <script defer src="/en.search.min.ad90ed54c2fb2ebca6bf92dc494821802bb5913fb4ded7c7ce215de203590daa.js" integrity="sha256-rZDtVML7Lrymv5LcSUghgCu1kT&#43;03tfHziFd4gNZDao=" crossorigin="anonymous"></script>
 <link rel="alternate" type="application/rss+xml" href="http://localhost:1313/docs/nsi/cours_premiere/donnees_structurees/tableaux_2d/td/index.xml" title="qkzk" />
 <!--
 Made with Book Theme
@@ -7094,38 +7123,38 @@ Certains langages ne permettent pas de construire des listes de listes.
 À la suite d&rsquo;un enregistrement en mémoire, le tableau ci-dessous a été
 enregistré dans une longue liste Python :</p>
 <table>
-<thead>
-<tr>
-<th>Lundi</th>
-<th>Mardi</th>
-<th>Mercredi</th>
-<th>Jeudi</th>
-<th>Vendredi</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>1</td>
-<td>3</td>
-<td>2</td>
-<td>3</td>
-<td>2</td>
-</tr>
-<tr>
-<td>2</td>
-<td>4</td>
-<td>2</td>
-<td>6</td>
-<td>4</td>
-</tr>
-<tr>
-<td>1</td>
-<td>3</td>
-<td>2</td>
-<td>1</td>
-<td>4</td>
-</tr>
-</tbody>
+  <thead>
+      <tr>
+          <th style="text-align: left">Lundi</th>
+          <th style="text-align: left">Mardi</th>
+          <th style="text-align: left">Mercredi</th>
+          <th style="text-align: left">Jeudi</th>
+          <th style="text-align: left">Vendredi</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left">1</td>
+          <td style="text-align: left">3</td>
+          <td style="text-align: left">2</td>
+          <td style="text-align: left">3</td>
+          <td style="text-align: left">2</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">2</td>
+          <td style="text-align: left">4</td>
+          <td style="text-align: left">2</td>
+          <td style="text-align: left">6</td>
+          <td style="text-align: left">4</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">1</td>
+          <td style="text-align: left">3</td>
+          <td style="text-align: left">2</td>
+          <td style="text-align: left">1</td>
+          <td style="text-align: left">4</td>
+      </tr>
+  </tbody>
 </table>
 <div class="highlight"><pre tabindex="0" style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>naissances <span style="color:#555">=</span> [<span style="color:#f60">1</span>, <span style="color:#f60">3</span>, <span style="color:#f60">2</span>, <span style="color:#f60">3</span>, <span style="color:#f60">2</span>, <span style="color:#f60">2</span>, <span style="color:#f60">4</span>, <span style="color:#f60">2</span>, <span style="color:#f60">6</span>, <span style="color:#f60">4</span>, <span style="color:#f60">1</span>, <span style="color:#f60">3</span>, <span style="color:#f60">2</span>, <span style="color:#f60">1</span>, <span style="color:#f60">4</span>]
 </span></span></code></pre></div><p>Lorsqu&rsquo;on manipule de telles données, il est courant d&rsquo;utiliser 2 indices :</p>

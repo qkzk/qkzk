@@ -5,11 +5,32 @@
     <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="pdf : pour impression
-Se tester # 1. Manipulation de fichiers CSV # Un enregistrement est représenté en Python par :
-a. une liste b. un dictionnaire c. un p-uplet d. un ensemble
+
+  Se tester
+  #
+
+
+  1. Manipulation de fichiers CSV
+  #
+
+
+
+Un enregistrement est représenté en Python par :
+a. une liste
+b. un dictionnaire
+c. un p-uplet
+d. un ensemble
+
+
 Dans un fichier CSV, les attributs sont séparés par :
-a. des virgules b. des points-virgules c. des tabulations d. des espaces
-On dispose d&rsquo;une table de données Table représentée par une liste de dictionnaires. En entrant Table[0] on obtient :">
+a. des virgules
+b. des points-virgules
+c. des tabulations
+d. des espaces
+
+
+On dispose d&rsquo;une table de données Table représentée par une liste de
+dictionnaires. En entrant Table[0] on obtient :">
 <meta name="theme-color" content="#FFFFFF">
 <meta name="color-scheme" content="light dark"><meta property="og:url" content="http://localhost:1313/docs/nsi/cours_premiere/donnees_structurees/table/5_td/">
   <meta property="og:site_name" content="qkzk">
@@ -27,8 +48,7 @@ On dispose d’une table de données Table représentée par une liste de dictio
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/book.min.24c2b1f8dc2338e074345eec5b36f8a002aaa6d1b2e7312e14ac2d6a6958c876.css" integrity="sha256-JMKx&#43;NwjOOB0NF7sWzb4oAKqptGy5zEuFKwtamlYyHY=" crossorigin="anonymous">
   <script defer src="/flexsearch.min.js"></script>
-  <script defer src="/en.search.min.41edfc0344c578feffc8ba5e94e6f59bfed684cf40d08bf18134f4a240cd0e15.js" integrity="sha256-Qe38A0TFeP7/yLpelOb1m/7WhM9A0IvxgTT0okDNDhU=" crossorigin="anonymous"></script>
-
+  <script defer src="/en.search.min.ad90ed54c2fb2ebca6bf92dc494821802bb5913fb4ded7c7ce215de203590daa.js" integrity="sha256-rZDtVML7Lrymv5LcSUghgCu1kT&#43;03tfHziFd4gNZDao=" crossorigin="anonymous"></script>
 <link rel="alternate" type="application/rss+xml" href="http://localhost:1313/docs/nsi/cours_premiere/donnees_structurees/table/5_td/index.xml" title="qkzk" />
 <!--
 Made with Book Theme
@@ -7019,34 +7039,34 @@ c. une cellule</p>
 </h2>
 <p>On dispose de la table <code>T</code> représentant les notes d&rsquo;élèves dans trois matières :</p>
 <table>
-<thead>
-<tr>
-<th>Nom</th>
-<th>Maths</th>
-<th>Anglais</th>
-<th>Informatique</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Joe</td>
-<td>16</td>
-<td>17</td>
-<td>18</td>
-</tr>
-<tr>
-<td>Zoé</td>
-<td>19</td>
-<td>15</td>
-<td>17</td>
-</tr>
-<tr>
-<td>Max</td>
-<td>14</td>
-<td>19</td>
-<td>13</td>
-</tr>
-</tbody>
+  <thead>
+      <tr>
+          <th style="text-align: left">Nom</th>
+          <th style="text-align: left">Maths</th>
+          <th style="text-align: left">Anglais</th>
+          <th style="text-align: left">Informatique</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left">Joe</td>
+          <td style="text-align: left">16</td>
+          <td style="text-align: left">17</td>
+          <td style="text-align: left">18</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">Zoé</td>
+          <td style="text-align: left">19</td>
+          <td style="text-align: left">15</td>
+          <td style="text-align: left">17</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">Max</td>
+          <td style="text-align: left">14</td>
+          <td style="text-align: left">19</td>
+          <td style="text-align: left">13</td>
+      </tr>
+  </tbody>
 </table>
 <ol>
 <li>
@@ -7068,25 +7088,25 @@ d. avec trois lignes</p>
 <li>
 <p>Soit <code>U</code> la table suivante :</p>
 <table>
-<thead>
-<tr>
-<th>Nom</th>
-<th>Âge</th>
-<th>Courriel</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Joe</td>
-<td>16</td>
-<td><a href="mailto:joe@info.fr">joe@info.fr</a></td>
-</tr>
-<tr>
-<td>Zoe</td>
-<td>15</td>
-<td><a href="mailto:zoe@info.fr">zoe@info.fr</a></td>
-</tr>
-</tbody>
+  <thead>
+      <tr>
+          <th style="text-align: left">Nom</th>
+          <th style="text-align: left">Âge</th>
+          <th style="text-align: left">Courriel</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left">Joe</td>
+          <td style="text-align: left">16</td>
+          <td style="text-align: left"><a href="mailto:joe@info.fr">joe@info.fr</a></td>
+      </tr>
+      <tr>
+          <td style="text-align: left">Zoe</td>
+          <td style="text-align: left">15</td>
+          <td style="text-align: left"><a href="mailto:zoe@info.fr">zoe@info.fr</a></td>
+      </tr>
+  </tbody>
 </table>
 <p>Selon la définition ci-dessous <code>jointure(T, U, 'Nom')</code> renvoie une table
 ayant :</p>
@@ -7186,34 +7206,34 @@ tableur.</li>
 <p>On dispose de la table suivante au format CSV dans le répertoire courant sous le
 nom : <code>'./Groupe1.csv'</code></p>
 <table>
-<thead>
-<tr>
-<th>Nom</th>
-<th>Anglais</th>
-<th>Info</th>
-<th>Maths</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Joe</td>
-<td>17</td>
-<td>18</td>
-<td>16</td>
-</tr>
-<tr>
-<td>Zoé</td>
-<td>15</td>
-<td>17</td>
-<td>19</td>
-</tr>
-<tr>
-<td>Max</td>
-<td>19</td>
-<td>13</td>
-<td>14</td>
-</tr>
-</tbody>
+  <thead>
+      <tr>
+          <th style="text-align: left">Nom</th>
+          <th style="text-align: left">Anglais</th>
+          <th style="text-align: left">Info</th>
+          <th style="text-align: left">Maths</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left">Joe</td>
+          <td style="text-align: left">17</td>
+          <td style="text-align: left">18</td>
+          <td style="text-align: left">16</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">Zoé</td>
+          <td style="text-align: left">15</td>
+          <td style="text-align: left">17</td>
+          <td style="text-align: left">19</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">Max</td>
+          <td style="text-align: left">19</td>
+          <td style="text-align: left">13</td>
+          <td style="text-align: left">14</td>
+      </tr>
+  </tbody>
 </table>
 <p>On donne la fonction ci-dessous :</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#069;font-weight:bold">import</span> <span style="color:#0cf;font-weight:bold">csv</span>
@@ -7233,45 +7253,45 @@ informatique et 19 en anglais.</p>
 <p>On voudrait ajouter une colonne contenant les moyennes de chaque élève afin
 d&rsquo;obtenir le tableau suivant :</p>
 <table>
-<thead>
-<tr>
-<th>Nom</th>
-<th>Anglais</th>
-<th>Info</th>
-<th>Maths</th>
-<th>Moyenne</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Joe</td>
-<td>17</td>
-<td>18</td>
-<td>16</td>
-<td>17.0</td>
-</tr>
-<tr>
-<td>Zoé</td>
-<td>15</td>
-<td>17</td>
-<td>19</td>
-<td>17.0</td>
-</tr>
-<tr>
-<td>Max</td>
-<td>19</td>
-<td>13</td>
-<td>14</td>
-<td>15.3</td>
-</tr>
-<tr>
-<td>Rose</td>
-<td>19</td>
-<td>18</td>
-<td>17</td>
-<td>18.0</td>
-</tr>
-</tbody>
+  <thead>
+      <tr>
+          <th style="text-align: left">Nom</th>
+          <th style="text-align: left">Anglais</th>
+          <th style="text-align: left">Info</th>
+          <th style="text-align: left">Maths</th>
+          <th style="text-align: left">Moyenne</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left">Joe</td>
+          <td style="text-align: left">17</td>
+          <td style="text-align: left">18</td>
+          <td style="text-align: left">16</td>
+          <td style="text-align: left">17.0</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">Zoé</td>
+          <td style="text-align: left">15</td>
+          <td style="text-align: left">17</td>
+          <td style="text-align: left">19</td>
+          <td style="text-align: left">17.0</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">Max</td>
+          <td style="text-align: left">19</td>
+          <td style="text-align: left">13</td>
+          <td style="text-align: left">14</td>
+          <td style="text-align: left">15.3</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">Rose</td>
+          <td style="text-align: left">19</td>
+          <td style="text-align: left">18</td>
+          <td style="text-align: left">17</td>
+          <td style="text-align: left">18.0</td>
+      </tr>
+  </tbody>
 </table>
 <p>On doit renvoyer une nouvelle table qui ne modifie pas la table d&rsquo;origine.
 Pour effectuer une copie d&rsquo;une liste d&rsquo;objets complexes (ici une liste
@@ -7295,52 +7315,52 @@ Par exemple :</p>
 Vous devez obtenir la table suivante :</li>
 </ol>
 <table>
-<thead>
-<tr>
-<th>Nom</th>
-<th>Anglais</th>
-<th>Info</th>
-<th>Maths</th>
-<th>Moyenne</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Joe</td>
-<td>17</td>
-<td>18</td>
-<td>16</td>
-<td>17.0</td>
-</tr>
-<tr>
-<td>Zoé</td>
-<td>15</td>
-<td>17</td>
-<td>19</td>
-<td>17.0</td>
-</tr>
-<tr>
-<td>Max</td>
-<td>19</td>
-<td>13</td>
-<td>14</td>
-<td>15.3</td>
-</tr>
-<tr>
-<td>Rose</td>
-<td>19</td>
-<td>18</td>
-<td>17</td>
-<td>18.0</td>
-</tr>
-<tr>
-<td>Moyenne</td>
-<td>17.5</td>
-<td>16.5</td>
-<td>16.5</td>
-<td>16.83</td>
-</tr>
-</tbody>
+  <thead>
+      <tr>
+          <th style="text-align: left">Nom</th>
+          <th style="text-align: left">Anglais</th>
+          <th style="text-align: left">Info</th>
+          <th style="text-align: left">Maths</th>
+          <th style="text-align: left">Moyenne</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left">Joe</td>
+          <td style="text-align: left">17</td>
+          <td style="text-align: left">18</td>
+          <td style="text-align: left">16</td>
+          <td style="text-align: left">17.0</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">Zoé</td>
+          <td style="text-align: left">15</td>
+          <td style="text-align: left">17</td>
+          <td style="text-align: left">19</td>
+          <td style="text-align: left">17.0</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">Max</td>
+          <td style="text-align: left">19</td>
+          <td style="text-align: left">13</td>
+          <td style="text-align: left">14</td>
+          <td style="text-align: left">15.3</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">Rose</td>
+          <td style="text-align: left">19</td>
+          <td style="text-align: left">18</td>
+          <td style="text-align: left">17</td>
+          <td style="text-align: left">18.0</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">Moyenne</td>
+          <td style="text-align: left">17.5</td>
+          <td style="text-align: left">16.5</td>
+          <td style="text-align: left">16.5</td>
+          <td style="text-align: left">16.83</td>
+      </tr>
+  </tbody>
 </table>
 </li>
 </ol>
@@ -7350,97 +7370,97 @@ Vous devez obtenir la table suivante :</li>
 </h2>
 <p>On dispose de la table <code>BaseAgents</code></p>
 <table>
-<thead>
-<tr>
-<th>NomAgent</th>
-<th>VilleAgent</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Branno</td>
-<td>Terminus</td>
-</tr>
-<tr>
-<td>Darell</td>
-<td>Terminus</td>
-</tr>
-<tr>
-<td>Demerzel</td>
-<td>Terminus</td>
-</tr>
-<tr>
-<td>Seldon</td>
-<td>Uco</td>
-</tr>
-<tr>
-<td>Dornick</td>
-<td>Terminus</td>
-</tr>
-<tr>
-<td>Hardin</td>
-<td>Kalgan</td>
-</tr>
-<tr>
-<td>Trevize</td>
-<td>Terminus</td>
-</tr>
-<tr>
-<td>Pelorat</td>
-<td>Kalgan</td>
-</tr>
-<tr>
-<td>Riose</td>
-<td>Terminus</td>
-</tr>
-</tbody>
+  <thead>
+      <tr>
+          <th style="text-align: left">NomAgent</th>
+          <th style="text-align: left">VilleAgent</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left">Branno</td>
+          <td style="text-align: left">Terminus</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">Darell</td>
+          <td style="text-align: left">Terminus</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">Demerzel</td>
+          <td style="text-align: left">Terminus</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">Seldon</td>
+          <td style="text-align: left">Uco</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">Dornick</td>
+          <td style="text-align: left">Terminus</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">Hardin</td>
+          <td style="text-align: left">Kalgan</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">Trevize</td>
+          <td style="text-align: left">Terminus</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">Pelorat</td>
+          <td style="text-align: left">Kalgan</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">Riose</td>
+          <td style="text-align: left">Terminus</td>
+      </tr>
+  </tbody>
 </table>
 <p>On a aussi la table <code>BaseGardiens</code> :</p>
 <table>
-<thead>
-<tr>
-<th>NoCabine</th>
-<th>NomAgent</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>1</td>
-<td>Branno</td>
-</tr>
-<tr>
-<td>2</td>
-<td>Darell</td>
-</tr>
-<tr>
-<td>3</td>
-<td>Demerzel</td>
-</tr>
-<tr>
-<td>4</td>
-<td>Seldon</td>
-</tr>
-<tr>
-<td>5</td>
-<td>Dornick</td>
-</tr>
-<tr>
-<td>6</td>
-<td>Hardin</td>
-</tr>
-<tr>
-<td>7</td>
-<td>Trevize</td>
-</tr>
-<tr>
-<td>8</td>
-<td>Pelorat</td>
-</tr>
-<tr>
-<td>9</td>
-<td>Riose</td>
-</tr>
-</tbody>
+  <thead>
+      <tr>
+          <th style="text-align: left">NoCabine</th>
+          <th style="text-align: left">NomAgent</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left">1</td>
+          <td style="text-align: left">Branno</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">2</td>
+          <td style="text-align: left">Darell</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">3</td>
+          <td style="text-align: left">Demerzel</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">4</td>
+          <td style="text-align: left">Seldon</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">5</td>
+          <td style="text-align: left">Dornick</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">6</td>
+          <td style="text-align: left">Hardin</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">7</td>
+          <td style="text-align: left">Trevize</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">8</td>
+          <td style="text-align: left">Pelorat</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">9</td>
+          <td style="text-align: left">Riose</td>
+      </tr>
+  </tbody>
 </table>
 <ol>
 <li>Renvoyer BaseTerminus, une table extraite de BaseAgents ne contenant que
@@ -7479,320 +7499,320 @@ résumant les informations essentielles sur les extraterrestres et les gardiens.
 <p><strong>Table 1.</strong> La table <code>BaseAliens</code> donne des renseignements sur les
 extraterrestres</p>
 <table>
-<thead>
-<tr>
-<th>NoCabine</th>
-<th>NomAlien</th>
-<th>Planete</th>
-<th>Sexe</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>1</td>
-<td>Zorglub</td>
-<td>Trantor</td>
-<td>M</td>
-</tr>
-<tr>
-<td>2</td>
-<td>Blorx</td>
-<td>Euterpe</td>
-<td>M</td>
-</tr>
-<tr>
-<td>3</td>
-<td>Urxiz</td>
-<td>Aurora</td>
-<td>M</td>
-</tr>
-<tr>
-<td>4</td>
-<td>Zbleurdite</td>
-<td>Trantor</td>
-<td>F</td>
-</tr>
-<tr>
-<td>5</td>
-<td>Darnerane</td>
-<td>Trantor</td>
-<td>M</td>
-</tr>
-<tr>
-<td>6</td>
-<td>Mulzo</td>
-<td>Helicon</td>
-<td>M</td>
-</tr>
-<tr>
-<td>7</td>
-<td>Zzzzzzzz</td>
-<td>Aurora</td>
-<td>F</td>
-</tr>
-<tr>
-<td>8</td>
-<td>Arghh</td>
-<td>Nexon</td>
-<td>M</td>
-</tr>
-<tr>
-<td>9</td>
-<td>Joranum</td>
-<td>Euterpe</td>
-<td>F</td>
-</tr>
-</tbody>
+  <thead>
+      <tr>
+          <th style="text-align: left">NoCabine</th>
+          <th style="text-align: left">NomAlien</th>
+          <th style="text-align: left">Planete</th>
+          <th style="text-align: left">Sexe</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left">1</td>
+          <td style="text-align: left">Zorglub</td>
+          <td style="text-align: left">Trantor</td>
+          <td style="text-align: left">M</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">2</td>
+          <td style="text-align: left">Blorx</td>
+          <td style="text-align: left">Euterpe</td>
+          <td style="text-align: left">M</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">3</td>
+          <td style="text-align: left">Urxiz</td>
+          <td style="text-align: left">Aurora</td>
+          <td style="text-align: left">M</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">4</td>
+          <td style="text-align: left">Zbleurdite</td>
+          <td style="text-align: left">Trantor</td>
+          <td style="text-align: left">F</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">5</td>
+          <td style="text-align: left">Darnerane</td>
+          <td style="text-align: left">Trantor</td>
+          <td style="text-align: left">M</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">6</td>
+          <td style="text-align: left">Mulzo</td>
+          <td style="text-align: left">Helicon</td>
+          <td style="text-align: left">M</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">7</td>
+          <td style="text-align: left">Zzzzzzzz</td>
+          <td style="text-align: left">Aurora</td>
+          <td style="text-align: left">F</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">8</td>
+          <td style="text-align: left">Arghh</td>
+          <td style="text-align: left">Nexon</td>
+          <td style="text-align: left">M</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">9</td>
+          <td style="text-align: left">Joranum</td>
+          <td style="text-align: left">Euterpe</td>
+          <td style="text-align: left">F</td>
+      </tr>
+  </tbody>
 </table>
 <p><strong>Table 2.</strong> La table <code>BaseAgents</code> donne le nom et la ville des agents</p>
 <table>
-<thead>
-<tr>
-<th>NomAgent</th>
-<th>VilleAgent</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Branno</td>
-<td>Terminus</td>
-</tr>
-<tr>
-<td>Darell</td>
-<td>Terminus</td>
-</tr>
-<tr>
-<td>Demerzel</td>
-<td>Terminus</td>
-</tr>
-<tr>
-<td>Seldon</td>
-<td>Uco</td>
-</tr>
-<tr>
-<td>Dornick</td>
-<td>Terminus</td>
-</tr>
-<tr>
-<td>Hardin</td>
-<td>Kalgan</td>
-</tr>
-<tr>
-<td>Trevize</td>
-<td>Terminus</td>
-</tr>
-<tr>
-<td>Pelorat</td>
-<td>Kalgan</td>
-</tr>
-<tr>
-<td>Riose</td>
-<td>Terminus</td>
-</tr>
-<tr>
-<td>Palver</td>
-<td>Siwenna</td>
-</tr>
-<tr>
-<td>Amaryl</td>
-<td>Arcturus</td>
-</tr>
-</tbody>
+  <thead>
+      <tr>
+          <th style="text-align: left">NomAgent</th>
+          <th style="text-align: left">VilleAgent</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left">Branno</td>
+          <td style="text-align: left">Terminus</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">Darell</td>
+          <td style="text-align: left">Terminus</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">Demerzel</td>
+          <td style="text-align: left">Terminus</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">Seldon</td>
+          <td style="text-align: left">Uco</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">Dornick</td>
+          <td style="text-align: left">Terminus</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">Hardin</td>
+          <td style="text-align: left">Kalgan</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">Trevize</td>
+          <td style="text-align: left">Terminus</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">Pelorat</td>
+          <td style="text-align: left">Kalgan</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">Riose</td>
+          <td style="text-align: left">Terminus</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">Palver</td>
+          <td style="text-align: left">Siwenna</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">Amaryl</td>
+          <td style="text-align: left">Arcturus</td>
+      </tr>
+  </tbody>
 </table>
 <p><strong>Table 3.</strong> La table <code>BaseGardiens</code> affecte à chaque cabine un gardien.</p>
 <table>
-<thead>
-<tr>
-<th>NoCabine</th>
-<th>NomAgent</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>1</td>
-<td>Branno</td>
-</tr>
-<tr>
-<td>2</td>
-<td>Darell</td>
-</tr>
-<tr>
-<td>3</td>
-<td>Demerzel</td>
-</tr>
-<tr>
-<td>4</td>
-<td>Seldon</td>
-</tr>
-<tr>
-<td>5</td>
-<td>Dornick</td>
-</tr>
-<tr>
-<td>6</td>
-<td>Hardin</td>
-</tr>
-<tr>
-<td>7</td>
-<td>Trevize</td>
-</tr>
-<tr>
-<td>8</td>
-<td>Pelorat</td>
-</tr>
-<tr>
-<td>9</td>
-<td>Riose</td>
-</tr>
-</tbody>
+  <thead>
+      <tr>
+          <th style="text-align: left">NoCabine</th>
+          <th style="text-align: left">NomAgent</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left">1</td>
+          <td style="text-align: left">Branno</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">2</td>
+          <td style="text-align: left">Darell</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">3</td>
+          <td style="text-align: left">Demerzel</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">4</td>
+          <td style="text-align: left">Seldon</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">5</td>
+          <td style="text-align: left">Dornick</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">6</td>
+          <td style="text-align: left">Hardin</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">7</td>
+          <td style="text-align: left">Trevize</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">8</td>
+          <td style="text-align: left">Pelorat</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">9</td>
+          <td style="text-align: left">Riose</td>
+      </tr>
+  </tbody>
 </table>
 <p><strong>Table 4.</strong> la table <code>BaseMiams</code> donne l&rsquo;aliment à servir à chaque
 extraterrestre.</p>
 <table>
-<thead>
-<tr>
-<th>Aliment</th>
-<th>NomAlien</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Bortsch</td>
-<td>Zorglub</td>
-</tr>
-<tr>
-<td>Bortsch</td>
-<td>Blorx</td>
-</tr>
-<tr>
-<td>Zoumise</td>
-<td>Urxiz</td>
-</tr>
-<tr>
-<td>Bortsch</td>
-<td>Zbleurdite</td>
-</tr>
-<tr>
-<td>Schwanstucke</td>
-<td>Darnerane</td>
-</tr>
-<tr>
-<td>Kashpir</td>
-<td>Mulzo</td>
-</tr>
-<tr>
-<td>Kashpir</td>
-<td>Zzzzzzzz</td>
-</tr>
-<tr>
-<td>Zoumise</td>
-<td>Arghh</td>
-</tr>
-<tr>
-<td>Bortsch</td>
-<td>Joranum</td>
-</tr>
-</tbody>
+  <thead>
+      <tr>
+          <th style="text-align: left">Aliment</th>
+          <th style="text-align: left">NomAlien</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left">Bortsch</td>
+          <td style="text-align: left">Zorglub</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">Bortsch</td>
+          <td style="text-align: left">Blorx</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">Zoumise</td>
+          <td style="text-align: left">Urxiz</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">Bortsch</td>
+          <td style="text-align: left">Zbleurdite</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">Schwanstucke</td>
+          <td style="text-align: left">Darnerane</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">Kashpir</td>
+          <td style="text-align: left">Mulzo</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">Kashpir</td>
+          <td style="text-align: left">Zzzzzzzz</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">Zoumise</td>
+          <td style="text-align: left">Arghh</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">Bortsch</td>
+          <td style="text-align: left">Joranum</td>
+      </tr>
+  </tbody>
 </table>
 <p><strong>Table 5.</strong> La table <code>BaseCabines</code> précise dans quelle allée se trouve
 chaque cabine.</p>
 <table>
-<thead>
-<tr>
-<th>NoAllee</th>
-<th>NoCabine</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>1</td>
-<td>1</td>
-</tr>
-<tr>
-<td>1</td>
-<td>2</td>
-</tr>
-<tr>
-<td>2</td>
-<td>3</td>
-</tr>
-<tr>
-<td>1</td>
-<td>4</td>
-</tr>
-<tr>
-<td>2</td>
-<td>5</td>
-</tr>
-<tr>
-<td>2</td>
-<td>6</td>
-</tr>
-<tr>
-<td>2</td>
-<td>7</td>
-</tr>
-<tr>
-<td>1</td>
-<td>8</td>
-</tr>
-<tr>
-<td>1</td>
-<td>9</td>
-</tr>
-</tbody>
+  <thead>
+      <tr>
+          <th style="text-align: left">NoAllee</th>
+          <th style="text-align: left">NoCabine</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left">1</td>
+          <td style="text-align: left">1</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">1</td>
+          <td style="text-align: left">2</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">2</td>
+          <td style="text-align: left">3</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">1</td>
+          <td style="text-align: left">4</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">2</td>
+          <td style="text-align: left">5</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">2</td>
+          <td style="text-align: left">6</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">2</td>
+          <td style="text-align: left">7</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">1</td>
+          <td style="text-align: left">8</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">1</td>
+          <td style="text-align: left">9</td>
+      </tr>
+  </tbody>
 </table>
 <p><strong>Table 6.</strong> La table <code>BaseResponsables</code> précise l&rsquo;agent responsable de chaque
 allée.</p>
 <table>
-<thead>
-<tr>
-<th>NoAllee</th>
-<th>NomAgent</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>1</td>
-<td>Seldon</td>
-</tr>
-<tr>
-<td>2</td>
-<td>Pelorat</td>
-</tr>
-</tbody>
+  <thead>
+      <tr>
+          <th style="text-align: left">NoAllee</th>
+          <th style="text-align: left">NomAgent</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left">1</td>
+          <td style="text-align: left">Seldon</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">2</td>
+          <td style="text-align: left">Pelorat</td>
+      </tr>
+  </tbody>
 </table>
 <p><strong>Table 7.</strong> La table <code>BaseVilles</code> précise la planète sur laquelle se trouve
 chaque ville.</p>
 <table>
-<thead>
-<tr>
-<th>Planete</th>
-<th>Ville</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Trantor</td>
-<td>Terminus</td>
-</tr>
-<tr>
-<td>Euterpe</td>
-<td>Arcturus</td>
-</tr>
-<tr>
-<td>Helicon</td>
-<td>Kalgan</td>
-</tr>
-<tr>
-<td>Euterpe</td>
-<td>Hesperos</td>
-</tr>
-<tr>
-<td>Gaia</td>
-<td>Siwenna</td>
-</tr>
-</tbody>
+  <thead>
+      <tr>
+          <th style="text-align: left">Planete</th>
+          <th style="text-align: left">Ville</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left">Trantor</td>
+          <td style="text-align: left">Terminus</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">Euterpe</td>
+          <td style="text-align: left">Arcturus</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">Helicon</td>
+          <td style="text-align: left">Kalgan</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">Euterpe</td>
+          <td style="text-align: left">Hesperos</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">Gaia</td>
+          <td style="text-align: left">Siwenna</td>
+      </tr>
+  </tbody>
 </table>
 <p><strong>À noter</strong><br>
 <em>Dans tout l&rsquo;exercice on pourra utiliser les fonctions introduites dans le

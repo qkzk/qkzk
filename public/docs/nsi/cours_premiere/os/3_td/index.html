@@ -4,20 +4,43 @@
 <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
     <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Se tester # 1. BASH # Que fait la commande ls -al ?
+<meta name="description" content="
+  Se tester
+  #
+
+
+  1. BASH
+  #
+
+
+
+Que fait la commande ls -al ?
+
+
 Que fait la commande mv ?
+
+
 La commande ls -l toto.sh affiche :
--r-x-r--r-- 1 john staff 128 18 mai 11:56 toto.sh a. À qui appartient ce fichier ? b. Qui peut écrire dans le fichier ? c. Qui peut le lire ? d. Qui peut l&rsquo;exécuter ?
-Logé sous Linux, dans un terminal on tape cd pour se placer dans HOME.">
+-r-x-r--r-- 1   john    staff   128     18 mai 11:56 toto.sh
+a. À qui appartient ce fichier ?
+b. Qui peut écrire dans le fichier ?
+c. Qui peut le lire ?
+d. Qui peut l&rsquo;exécuter ?
+
+
+Logé sous Linux, dans un terminal on tape cd pour se placer dans HOME.
+Quelle commande doit-on ensuite taper pour déplacer dans le répertoire
+courant le fichier exo1.py qui se trouve dans Documents/python sachant
+que Documents est dans HOME ?">
 <meta name="theme-color" content="#FFFFFF">
 <meta name="color-scheme" content="light dark"><meta property="og:url" content="http://localhost:1313/docs/nsi/cours_premiere/os/3_td/">
   <meta property="og:site_name" content="qkzk">
   <meta property="og:title" content="TD Linux">
-  <meta property="og:description" content="Se tester # 1. BASH # Que fait la commande ls -al ?
+  <meta property="og:description" content=" Se tester # 1. BASH # Que fait la commande ls -al ?
 Que fait la commande mv ?
 La commande ls -l toto.sh affiche :
 -r-x-r--r-- 1 john staff 128 18 mai 11:56 toto.sh a. À qui appartient ce fichier ? b. Qui peut écrire dans le fichier ? c. Qui peut le lire ? d. Qui peut l’exécuter ?
-Logé sous Linux, dans un terminal on tape cd pour se placer dans HOME.">
+Logé sous Linux, dans un terminal on tape cd pour se placer dans HOME. Quelle commande doit-on ensuite taper pour déplacer dans le répertoire courant le fichier exo1.py qui se trouve dans Documents/python sachant que Documents est dans HOME ?">
   <meta property="og:locale" content="en_us">
   <meta property="og:type" content="website">
 <title>TD Linux | qkzk</title>
@@ -25,8 +48,7 @@ Logé sous Linux, dans un terminal on tape cd pour se placer dans HOME.">
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/book.min.24c2b1f8dc2338e074345eec5b36f8a002aaa6d1b2e7312e14ac2d6a6958c876.css" integrity="sha256-JMKx&#43;NwjOOB0NF7sWzb4oAKqptGy5zEuFKwtamlYyHY=" crossorigin="anonymous">
   <script defer src="/flexsearch.min.js"></script>
-  <script defer src="/en.search.min.41edfc0344c578feffc8ba5e94e6f59bfed684cf40d08bf18134f4a240cd0e15.js" integrity="sha256-Qe38A0TFeP7/yLpelOb1m/7WhM9A0IvxgTT0okDNDhU=" crossorigin="anonymous"></script>
-
+  <script defer src="/en.search.min.ad90ed54c2fb2ebca6bf92dc494821802bb5913fb4ded7c7ce215de203590daa.js" integrity="sha256-rZDtVML7Lrymv5LcSUghgCu1kT&#43;03tfHziFd4gNZDao=" crossorigin="anonymous"></script>
 <link rel="alternate" type="application/rss+xml" href="http://localhost:1313/docs/nsi/cours_premiere/os/3_td/index.xml" title="qkzk" />
 <!--
 Made with Book Theme
@@ -7364,26 +7386,26 @@ Revenir dans <code>Europe</code> et renommer <code>Prusse</code>en <code>Allemag
 </li>
 </ul>
 <table>
-<thead>
-<tr>
-<th>Opérateur</th>
-<th>Redirection</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>&gt;</code></td>
-<td>sortie standard</td>
-</tr>
-<tr>
-<td><code>&gt;&gt;</code></td>
-<td>sortie standard en ajout à la fin</td>
-</tr>
-<tr>
-<td><code>&lt;</code></td>
-<td>entrée standard</td>
-</tr>
-</tbody>
+  <thead>
+      <tr>
+          <th style="text-align: left">Opérateur</th>
+          <th style="text-align: left">Redirection</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left"><code>&gt;</code></td>
+          <td style="text-align: left">sortie standard</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><code>&gt;&gt;</code></td>
+          <td style="text-align: left">sortie standard en ajout à la fin</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><code>&lt;</code></td>
+          <td style="text-align: left">entrée standard</td>
+      </tr>
+  </tbody>
 </table>
 <ul>
 <li>
@@ -7405,66 +7427,66 @@ Revenir dans <code>Europe</code> et renommer <code>Prusse</code>en <code>Allemag
 <li>
 <p>Le tableau ci-dessous donne quelques exemples de filtres, d&rsquo;autres options sont disponibles pour chaque commande.</p>
 <table>
-<thead>
-<tr>
-<th>Commande</th>
-<th>Action</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>cat</code></td>
-<td>copie son entrée standard sur sa sortie standard sans modification</td>
-</tr>
-<tr>
-<td><code>sort</code></td>
-<td>trie les lignes de son entrée standard par ordre alphabétique</td>
-</tr>
-<tr>
-<td><code>sort -r</code></td>
-<td>trie les lignes de son entrée standard par ordre alphabétique inverse</td>
-</tr>
-<tr>
-<td><code>sort -n</code></td>
-<td>trie les lignes de son entrée standard par ordre numérique</td>
-</tr>
-<tr>
-<td><code>cut -d : -f 5</code></td>
-<td>sélectionne le 5 eme champ de chaque ligne de son entrée standard découpée selon le délimiteur :</td>
-</tr>
-<tr>
-<td><code>wc -l</code></td>
-<td>compte les lignes de son entrée standard</td>
-</tr>
-<tr>
-<td><code>wc -w</code></td>
-<td>compte les mots de son entrée standard</td>
-</tr>
-<tr>
-<td><code>wc -m</code></td>
-<td>compte les caractères de son entrée standard</td>
-</tr>
-<tr>
-<td><code>uniq</code></td>
-<td>supprime les lignes considérées comme des doublons</td>
-</tr>
-<tr>
-<td><code>head -n5</code></td>
-<td>affiche les cinq premières lignes de son entrée standard</td>
-</tr>
-<tr>
-<td><code>head -n-5</code></td>
-<td>affiche tout sauf les cinq dernières lignes de son entrée standard</td>
-</tr>
-<tr>
-<td><code>tail -n5</code></td>
-<td>affiche les cinq dernières lignes de son entrée standard</td>
-</tr>
-<tr>
-<td><code>tail -n+5</code></td>
-<td>affiche tout sauf les cinq premières lignes de son entrée standard</td>
-</tr>
-</tbody>
+  <thead>
+      <tr>
+          <th style="text-align: left">Commande</th>
+          <th style="text-align: left">Action</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left"><code>cat</code></td>
+          <td style="text-align: left">copie son entrée standard sur sa sortie standard sans modification</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><code>sort</code></td>
+          <td style="text-align: left">trie les lignes de son entrée standard par ordre alphabétique</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><code>sort -r</code></td>
+          <td style="text-align: left">trie les lignes de son entrée standard par ordre alphabétique inverse</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><code>sort -n</code></td>
+          <td style="text-align: left">trie les lignes de son entrée standard par ordre numérique</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><code>cut -d : -f 5</code></td>
+          <td style="text-align: left">sélectionne le 5 eme champ de chaque ligne de son entrée standard découpée selon le délimiteur :</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><code>wc -l</code></td>
+          <td style="text-align: left">compte les lignes de son entrée standard</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><code>wc -w</code></td>
+          <td style="text-align: left">compte les mots de son entrée standard</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><code>wc -m</code></td>
+          <td style="text-align: left">compte les caractères de son entrée standard</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><code>uniq</code></td>
+          <td style="text-align: left">supprime les lignes considérées comme des doublons</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><code>head -n5</code></td>
+          <td style="text-align: left">affiche les cinq premières lignes de son entrée standard</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><code>head -n-5</code></td>
+          <td style="text-align: left">affiche tout sauf les cinq dernières lignes de son entrée standard</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><code>tail -n5</code></td>
+          <td style="text-align: left">affiche les cinq dernières lignes de son entrée standard</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><code>tail -n+5</code></td>
+          <td style="text-align: left">affiche tout sauf les cinq premières lignes de son entrée standard</td>
+      </tr>
+  </tbody>
 </table>
 </li>
 </ul>
@@ -7526,30 +7548,30 @@ On consultera la page de manuel de la commande <code>uniq</code> pour sélection
 <li>
 <p>Pour une recherche sur les fichiers, on peut utiliser la commande <code>find</code> qui permet d&rsquo;effectuer une recherche par nom parmi de nombreuses options :</p>
 <table>
-<thead>
-<tr>
-<th>Commande</th>
-<th>Action</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>find -name photo.png</code></td>
-<td>recherche les fichiers nommés photo.png dans le répertoire courant et tous ses sous-répertoires</td>
-</tr>
-<tr>
-<td><code>find -iname photo.png</code></td>
-<td>idem mais insensible à la casse</td>
-</tr>
-<tr>
-<td><code>find -name photo.png ~/sandbox</code></td>
-<td>recherche les fichiers nommés photo.png dans le répertoire ~/sandbox et tous ses sous-répertoires</td>
-</tr>
-<tr>
-<td><code>find -name '\*.png' ~/sandbox</code></td>
-<td>recherche les fichiers dont le nom se termine par <code>.png</code> dans le répertoire ~/sandbox et tous ses sous-répertoires</td>
-</tr>
-</tbody>
+  <thead>
+      <tr>
+          <th style="text-align: left">Commande</th>
+          <th style="text-align: left">Action</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left"><code>find -name photo.png</code></td>
+          <td style="text-align: left">recherche les fichiers nommés photo.png dans le répertoire courant et tous ses sous-répertoires</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><code>find -iname photo.png</code></td>
+          <td style="text-align: left">idem mais insensible à la casse</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><code>find -name photo.png ~/sandbox</code></td>
+          <td style="text-align: left">recherche les fichiers nommés photo.png dans le répertoire ~/sandbox et tous ses sous-répertoires</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><code>find -name '\*.png' ~/sandbox</code></td>
+          <td style="text-align: left">recherche les fichiers dont le nom se termine par <code>.png</code> dans le répertoire ~/sandbox et tous ses sous-répertoires</td>
+      </tr>
+  </tbody>
 </table>
 </li>
 <li>
@@ -7561,30 +7583,30 @@ On consultera la page de manuel de la commande <code>uniq</code> pour sélection
 <li>
 <p>Pour une recherche sur un contenu de fichier, on peut utiliser la commande <code>grep</code> qui permet d&rsquo;effectuer une recherche d&rsquo;un fragment de texte dans les fichiers donnés en argument. Par défaut <code>grep</code> affiche chaque ligne de fichier où le fragment apparaît.</p>
 <table>
-<thead>
-<tr>
-<th>Commande</th>
-<th>Action</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>grep 'fragment texte' fichier</code></td>
-<td>recherche les occurences de &lsquo;fragment texte&rsquo; dans fichier</td>
-</tr>
-<tr>
-<td><code>grep -c 'fragment texte' fichier</code></td>
-<td>affiche juste le nombre d&rsquo;occurences de &lsquo;fragment texte&rsquo; dans fichier</td>
-</tr>
-<tr>
-<td><code>grep -r 'fragment texte' rep</code></td>
-<td>recherche les occurences de &lsquo;fragment texte&rsquo; dans le répertoire rep et tous ses sous-répertoires</td>
-</tr>
-<tr>
-<td><code>grep -r -l -i 'fragment texte' rep</code></td>
-<td>idem mais n&rsquo;affiche que les noms de fichiers et insensible à la casse</td>
-</tr>
-</tbody>
+  <thead>
+      <tr>
+          <th style="text-align: left">Commande</th>
+          <th style="text-align: left">Action</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left"><code>grep 'fragment texte' fichier</code></td>
+          <td style="text-align: left">recherche les occurences de &lsquo;fragment texte&rsquo; dans fichier</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><code>grep -c 'fragment texte' fichier</code></td>
+          <td style="text-align: left">affiche juste le nombre d&rsquo;occurences de &lsquo;fragment texte&rsquo; dans fichier</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><code>grep -r 'fragment texte' rep</code></td>
+          <td style="text-align: left">recherche les occurences de &lsquo;fragment texte&rsquo; dans le répertoire rep et tous ses sous-répertoires</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><code>grep -r -l -i 'fragment texte' rep</code></td>
+          <td style="text-align: left">idem mais n&rsquo;affiche que les noms de fichiers et insensible à la casse</td>
+      </tr>
+  </tbody>
 </table>
 </li>
 <li>

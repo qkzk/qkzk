@@ -5,15 +5,27 @@
     <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="pdf : pour impression
-Dans cette partie nous allons étudier les opérations de tri selon une colonne, la notion de domaine de valeur et la fusion de tables.
-1. Tri d&rsquo;une table selon une colonne # Puisqu&rsquo;une table est représentée par une liste, on peut la trier en utilisant la fonction de tri sorted qui dispose d&rsquo;un argument key permettant de préciser selon quel critère une liste doit être triée (qui doit être une fonction de variables les objets à trier).">
+Dans cette partie nous allons étudier les opérations de tri selon une colonne,
+la notion de domaine de valeur et la fusion de tables.
+
+  1. Tri d&rsquo;une table selon une colonne
+  #
+
+
+
+Puisqu&rsquo;une table est représentée par une liste, on peut la trier en utilisant
+la fonction de tri sorted qui dispose d&rsquo;un argument key permettant de
+préciser selon quel critère une liste doit être triée (qui doit être une
+fonction de variables les objets à trier). Un troisième argument, reverse
+(un booléen), permet de préciser si l&rsquo;on veut le résultat par ordre
+croissant (par défaut) ou décroissant (en précisant reverse=True).">
 <meta name="theme-color" content="#FFFFFF">
 <meta name="color-scheme" content="light dark"><meta property="og:url" content="http://localhost:1313/docs/nsi/cours_premiere/donnees_structurees/table/4_cours/">
   <meta property="og:site_name" content="qkzk">
   <meta property="og:title" content="4. Cours : trier, fusionner">
   <meta property="og:description" content="pdf : pour impression
 Dans cette partie nous allons étudier les opérations de tri selon une colonne, la notion de domaine de valeur et la fusion de tables.
-1. Tri d’une table selon une colonne # Puisqu’une table est représentée par une liste, on peut la trier en utilisant la fonction de tri sorted qui dispose d’un argument key permettant de préciser selon quel critère une liste doit être triée (qui doit être une fonction de variables les objets à trier).">
+1. Tri d’une table selon une colonne # Puisqu’une table est représentée par une liste, on peut la trier en utilisant la fonction de tri sorted qui dispose d’un argument key permettant de préciser selon quel critère une liste doit être triée (qui doit être une fonction de variables les objets à trier). Un troisième argument, reverse (un booléen), permet de préciser si l’on veut le résultat par ordre croissant (par défaut) ou décroissant (en précisant reverse=True).">
   <meta property="og:locale" content="en_us">
   <meta property="og:type" content="website">
 <title>4. Cours : trier, fusionner | qkzk</title>
@@ -21,8 +33,7 @@ Dans cette partie nous allons étudier les opérations de tri selon une colonne,
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/book.min.24c2b1f8dc2338e074345eec5b36f8a002aaa6d1b2e7312e14ac2d6a6958c876.css" integrity="sha256-JMKx&#43;NwjOOB0NF7sWzb4oAKqptGy5zEuFKwtamlYyHY=" crossorigin="anonymous">
   <script defer src="/flexsearch.min.js"></script>
-  <script defer src="/en.search.min.41edfc0344c578feffc8ba5e94e6f59bfed684cf40d08bf18134f4a240cd0e15.js" integrity="sha256-Qe38A0TFeP7/yLpelOb1m/7WhM9A0IvxgTT0okDNDhU=" crossorigin="anonymous"></script>
-
+  <script defer src="/en.search.min.ad90ed54c2fb2ebca6bf92dc494821802bb5913fb4ded7c7ce215de203590daa.js" integrity="sha256-rZDtVML7Lrymv5LcSUghgCu1kT&#43;03tfHziFd4gNZDao=" crossorigin="anonymous"></script>
 <link rel="alternate" type="application/rss+xml" href="http://localhost:1313/docs/nsi/cours_premiere/donnees_structurees/table/4_cours/index.xml" title="qkzk" />
 <!--
 Made with Book Theme
@@ -7000,38 +7011,38 @@ les notes de maths, on fera :</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#555">&gt;&gt;&gt;</span> tri(Table1, <span style="color:#c30">&#39;Maths&#39;</span>, <span style="color:#069;font-weight:bold">True</span>)
 </span></span></code></pre></div><p>Qui donne :</p>
 <table>
-<thead>
-<tr>
-<th></th>
-<th>Nom</th>
-<th>Maths</th>
-<th>Info</th>
-<th>Anglais</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>0</td>
-<td>Zoé</td>
-<td>19</td>
-<td>17</td>
-<td>15</td>
-</tr>
-<tr>
-<td>1</td>
-<td>Joe</td>
-<td>16</td>
-<td>18</td>
-<td>17</td>
-</tr>
-<tr>
-<td>2</td>
-<td>Max</td>
-<td>14</td>
-<td>13</td>
-<td>19</td>
-</tr>
-</tbody>
+  <thead>
+      <tr>
+          <th style="text-align: left"></th>
+          <th style="text-align: left">Nom</th>
+          <th style="text-align: left">Maths</th>
+          <th style="text-align: left">Info</th>
+          <th style="text-align: left">Anglais</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left">0</td>
+          <td style="text-align: left">Zoé</td>
+          <td style="text-align: left">19</td>
+          <td style="text-align: left">17</td>
+          <td style="text-align: left">15</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">1</td>
+          <td style="text-align: left">Joe</td>
+          <td style="text-align: left">16</td>
+          <td style="text-align: left">18</td>
+          <td style="text-align: left">17</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">2</td>
+          <td style="text-align: left">Max</td>
+          <td style="text-align: left">14</td>
+          <td style="text-align: left">13</td>
+          <td style="text-align: left">19</td>
+      </tr>
+  </tbody>
 </table>
 </li>
 </ul>
@@ -7052,101 +7063,101 @@ l&rsquo;attribut choisi.</p>
 <li>
 <p>Reprenons le tableau <code>Table1</code> des parties précédentes :</p>
 <table>
-<thead>
-<tr>
-<th></th>
-<th>Nom</th>
-<th>Anglais</th>
-<th>Info</th>
-<th>Maths</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>0</td>
-<td>Joe</td>
-<td>17</td>
-<td>18</td>
-<td>16</td>
-</tr>
-<tr>
-<td>1</td>
-<td>Zoé</td>
-<td>15</td>
-<td>17</td>
-<td>19</td>
-</tr>
-<tr>
-<td>2</td>
-<td>Max</td>
-<td>19</td>
-<td>13</td>
-<td>14</td>
-</tr>
-</tbody>
+  <thead>
+      <tr>
+          <th style="text-align: left"></th>
+          <th style="text-align: left">Nom</th>
+          <th style="text-align: left">Anglais</th>
+          <th style="text-align: left">Info</th>
+          <th style="text-align: left">Maths</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left">0</td>
+          <td style="text-align: left">Joe</td>
+          <td style="text-align: left">17</td>
+          <td style="text-align: left">18</td>
+          <td style="text-align: left">16</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">1</td>
+          <td style="text-align: left">Zoé</td>
+          <td style="text-align: left">15</td>
+          <td style="text-align: left">17</td>
+          <td style="text-align: left">19</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">2</td>
+          <td style="text-align: left">Max</td>
+          <td style="text-align: left">19</td>
+          <td style="text-align: left">13</td>
+          <td style="text-align: left">14</td>
+      </tr>
+  </tbody>
 </table>
 <p>Définissons une seconde table, <code>Table2</code> donnant l&rsquo;âge et le courriel de
 certains élèves :</p>
 <table>
-<thead>
-<tr>
-<th></th>
-<th>Nom</th>
-<th>Age</th>
-<th>Courriel</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>0</td>
-<td>Joe</td>
-<td>16</td>
-<td><a href="mailto:joe@info.fr">joe@info.fr</a></td>
-</tr>
-<tr>
-<td>1</td>
-<td>Zoé</td>
-<td>15</td>
-<td><a href="mailto:zoe@info.fr">zoe@info.fr</a></td>
-</tr>
-</tbody>
+  <thead>
+      <tr>
+          <th style="text-align: left"></th>
+          <th style="text-align: left">Nom</th>
+          <th style="text-align: left">Age</th>
+          <th style="text-align: left">Courriel</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left">0</td>
+          <td style="text-align: left">Joe</td>
+          <td style="text-align: left">16</td>
+          <td style="text-align: left"><a href="mailto:joe@info.fr">joe@info.fr</a></td>
+      </tr>
+      <tr>
+          <td style="text-align: left">1</td>
+          <td style="text-align: left">Zoé</td>
+          <td style="text-align: left">15</td>
+          <td style="text-align: left"><a href="mailto:zoe@info.fr">zoe@info.fr</a></td>
+      </tr>
+  </tbody>
 </table>
 </li>
 <li>
 <p>On voudrait regrouper les données des deux tables. Elles ont l&rsquo;attribut <code>Nom</code>
 en commun. On veut obtenir la table suivante :</p>
 <table>
-<thead>
-<tr>
-<th></th>
-<th>Nom</th>
-<th>Age</th>
-<th>Courriel</th>
-<th>Anglais</th>
-<th>Info</th>
-<th>Maths</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>0</td>
-<td>Joe</td>
-<td>16</td>
-<td><a href="mailto:joe@info.fr">joe@info.fr</a></td>
-<td>17</td>
-<td>18</td>
-<td>16</td>
-</tr>
-<tr>
-<td>1</td>
-<td>Zoé</td>
-<td>15</td>
-<td><a href="mailto:zoe@info.fr">zoe@info.fr</a></td>
-<td>15</td>
-<td>17</td>
-<td>19</td>
-</tr>
-</tbody>
+  <thead>
+      <tr>
+          <th style="text-align: left"></th>
+          <th style="text-align: left">Nom</th>
+          <th style="text-align: left">Age</th>
+          <th style="text-align: left">Courriel</th>
+          <th style="text-align: left">Anglais</th>
+          <th style="text-align: left">Info</th>
+          <th style="text-align: left">Maths</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left">0</td>
+          <td style="text-align: left">Joe</td>
+          <td style="text-align: left">16</td>
+          <td style="text-align: left"><a href="mailto:joe@info.fr">joe@info.fr</a></td>
+          <td style="text-align: left">17</td>
+          <td style="text-align: left">18</td>
+          <td style="text-align: left">16</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">1</td>
+          <td style="text-align: left">Zoé</td>
+          <td style="text-align: left">15</td>
+          <td style="text-align: left"><a href="mailto:zoe@info.fr">zoe@info.fr</a></td>
+          <td style="text-align: left">15</td>
+          <td style="text-align: left">17</td>
+          <td style="text-align: left">19</td>
+      </tr>
+  </tbody>
 </table>
 <p>On chosit d&rsquo;exclure la ligne concernant <code>Max</code> car il n&rsquo;est pas présent
 dans la seconde table.</p>
@@ -7165,37 +7176,37 @@ fournie plus bas.</p>
 <p>Cependant dans certaines tables, l&rsquo;attribut commun peut avoir une autre
 appellation. Par exemple la seconde table peut aussi exister sous la forme :</p>
 <table>
-<thead>
-<tr>
-<th></th>
-<th>Name</th>
-<th>Age</th>
-<th>Email</th>
-<th>English</th>
-<th>CS</th>
-<th>Maths</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>0</td>
-<td>Joe</td>
-<td>16</td>
-<td><a href="mailto:joe@info.fr">joe@info.fr</a></td>
-<td>17</td>
-<td>18</td>
-<td>16</td>
-</tr>
-<tr>
-<td>1</td>
-<td>Zoé</td>
-<td>15</td>
-<td><a href="mailto:zoe@info.fr">zoe@info.fr</a></td>
-<td>15</td>
-<td>17</td>
-<td>19</td>
-</tr>
-</tbody>
+  <thead>
+      <tr>
+          <th style="text-align: left"></th>
+          <th style="text-align: left">Name</th>
+          <th style="text-align: left">Age</th>
+          <th style="text-align: left">Email</th>
+          <th style="text-align: left">English</th>
+          <th style="text-align: left">CS</th>
+          <th style="text-align: left">Maths</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left">0</td>
+          <td style="text-align: left">Joe</td>
+          <td style="text-align: left">16</td>
+          <td style="text-align: left"><a href="mailto:joe@info.fr">joe@info.fr</a></td>
+          <td style="text-align: left">17</td>
+          <td style="text-align: left">18</td>
+          <td style="text-align: left">16</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">1</td>
+          <td style="text-align: left">Zoé</td>
+          <td style="text-align: left">15</td>
+          <td style="text-align: left"><a href="mailto:zoe@info.fr">zoe@info.fr</a></td>
+          <td style="text-align: left">15</td>
+          <td style="text-align: left">17</td>
+          <td style="text-align: left">19</td>
+      </tr>
+  </tbody>
 </table>
 </li>
 <li>
@@ -7246,69 +7257,69 @@ la jointure donnée en exemple s&rsquo;écrira :</em></p>
 <p>On considère les deux tables <code>seconde</code> et <code>première</code> dont voici des extraits :</p>
 <p><strong>seconde</strong></p>
 <table>
-<thead>
-<tr>
-<th>Nom</th>
-<th>Prénom</th>
-<th>moyenne</th>
-<th>avis</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Duchmol</td>
-<td>Robert</td>
-<td>3</td>
-<td>nul</td>
-</tr>
-<tr>
-<td>Lemeilleur</td>
-<td>Franky</td>
-<td>19</td>
-<td>moyen</td>
-</tr>
-<tr>
-<td>Poivre</td>
-<td>Jacques</td>
-<td>12</td>
-<td>méchant</td>
-</tr>
-</tbody>
+  <thead>
+      <tr>
+          <th style="text-align: left">Nom</th>
+          <th style="text-align: left">Prénom</th>
+          <th style="text-align: left">moyenne</th>
+          <th style="text-align: left">avis</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left">Duchmol</td>
+          <td style="text-align: left">Robert</td>
+          <td style="text-align: left">3</td>
+          <td style="text-align: left">nul</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">Lemeilleur</td>
+          <td style="text-align: left">Franky</td>
+          <td style="text-align: left">19</td>
+          <td style="text-align: left">moyen</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">Poivre</td>
+          <td style="text-align: left">Jacques</td>
+          <td style="text-align: left">12</td>
+          <td style="text-align: left">méchant</td>
+      </tr>
+  </tbody>
 </table>
 <p><strong>première</strong></p>
 <table>
-<thead>
-<tr>
-<th>Nom</th>
-<th>Prénom</th>
-<th>DS1</th>
-<th>DS2</th>
-<th>moyenne</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Durant</td>
-<td>Martine</td>
-<td>1</td>
-<td>5</td>
-<td>3</td>
-</tr>
-<tr>
-<td>Philonard</td>
-<td>Albert</td>
-<td>16</td>
-<td>12</td>
-<td>14</td>
-</tr>
-<tr>
-<td>Pommier</td>
-<td>Fanny</td>
-<td>13</td>
-<td>14</td>
-<td>12</td>
-</tr>
-</tbody>
+  <thead>
+      <tr>
+          <th style="text-align: left">Nom</th>
+          <th style="text-align: left">Prénom</th>
+          <th style="text-align: left">DS1</th>
+          <th style="text-align: left">DS2</th>
+          <th style="text-align: left">moyenne</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left">Durant</td>
+          <td style="text-align: left">Martine</td>
+          <td style="text-align: left">1</td>
+          <td style="text-align: left">5</td>
+          <td style="text-align: left">3</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">Philonard</td>
+          <td style="text-align: left">Albert</td>
+          <td style="text-align: left">16</td>
+          <td style="text-align: left">12</td>
+          <td style="text-align: left">14</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">Pommier</td>
+          <td style="text-align: left">Fanny</td>
+          <td style="text-align: left">13</td>
+          <td style="text-align: left">14</td>
+          <td style="text-align: left">12</td>
+      </tr>
+  </tbody>
 </table>
 <p><strong>domaine de valeur</strong> :</p>
 <blockquote>

@@ -4,7 +4,10 @@
 <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
     <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Voici quelques exemples et une résolution (rectifiée&hellip;) proposés par ChatGPT pour illustrer un exemple classique : la planification des tâches avec un algorithme glouton ainsi qu&rsquo;une recherche exhaustive.
+<meta name="description" content="Voici quelques exemples et une résolution (rectifiée&hellip;)
+proposés par ChatGPT pour illustrer un exemple classique :
+la planification des tâches avec un algorithme glouton ainsi
+qu&rsquo;une recherche exhaustive.
 pdf - Script accompagnant ces exemples
 Un exemple classique de choix d&rsquo;activité à planifier qui peut être résolu par un algorithme glouton est le problème de sélection d&rsquo;activités.
 Supposons qu&rsquo;il y ait un ensemble d&rsquo;activités à planifier, chacune ayant une heure de début et une heure de fin.">
@@ -23,8 +26,7 @@ Supposons qu’il y ait un ensemble d’activités à planifier, chacune ayant u
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/book.min.24c2b1f8dc2338e074345eec5b36f8a002aaa6d1b2e7312e14ac2d6a6958c876.css" integrity="sha256-JMKx&#43;NwjOOB0NF7sWzb4oAKqptGy5zEuFKwtamlYyHY=" crossorigin="anonymous">
   <script defer src="/flexsearch.min.js"></script>
-  <script defer src="/en.search.min.41edfc0344c578feffc8ba5e94e6f59bfed684cf40d08bf18134f4a240cd0e15.js" integrity="sha256-Qe38A0TFeP7/yLpelOb1m/7WhM9A0IvxgTT0okDNDhU=" crossorigin="anonymous"></script>
-
+  <script defer src="/en.search.min.ad90ed54c2fb2ebca6bf92dc494821802bb5913fb4ded7c7ce215de203590daa.js" integrity="sha256-rZDtVML7Lrymv5LcSUghgCu1kT&#43;03tfHziFd4gNZDao=" crossorigin="anonymous"></script>
 <link rel="alternate" type="application/rss+xml" href="http://localhost:1313/docs/nsi/cours_premiere/algorithmique/glouton/7_activites/index.xml" title="qkzk" />
 <!--
 Made with Book Theme
@@ -6983,135 +6985,135 @@ qu&rsquo;une recherche exhaustive.</em></p>
 </h2>
 <p>Voici un exemple de jeu de données d&rsquo;activités :</p>
 <table>
-<thead>
-<tr>
-<th>Activité</th>
-<th>Heure de début</th>
-<th>Heure de fin</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>A</td>
-<td>9h00</td>
-<td>10h00</td>
-</tr>
-<tr>
-<td>B</td>
-<td>9h30</td>
-<td>11h30</td>
-</tr>
-<tr>
-<td>C</td>
-<td>10h00</td>
-<td>11h00</td>
-</tr>
-<tr>
-<td>D</td>
-<td>11h00</td>
-<td>12h00</td>
-</tr>
-</tbody>
+  <thead>
+      <tr>
+          <th style="text-align: left">Activité</th>
+          <th style="text-align: left">Heure de début</th>
+          <th style="text-align: left">Heure de fin</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left">A</td>
+          <td style="text-align: left">9h00</td>
+          <td style="text-align: left">10h00</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">B</td>
+          <td style="text-align: left">9h30</td>
+          <td style="text-align: left">11h30</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">C</td>
+          <td style="text-align: left">10h00</td>
+          <td style="text-align: left">11h00</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">D</td>
+          <td style="text-align: left">11h00</td>
+          <td style="text-align: left">12h00</td>
+      </tr>
+  </tbody>
 </table>
 <p>Pour résoudre ce problème par un algorithme glouton, nous pouvons trier les activités par heure de fin croissante. Ensuite, nous sélectionnons la première activité de la liste, qui a l&rsquo;heure de fin la plus basse. Nous ajoutons ensuite toutes les activités suivantes qui ont une heure de début supérieure à l&rsquo;heure de fin de l&rsquo;activité sélectionnée précédemment. Nous répétons ce processus jusqu&rsquo;à ce qu&rsquo;il n&rsquo;y ait plus d&rsquo;activités restantes.</p>
 <p>Voici les étapes de l&rsquo;algorithme glouton :</p>
 <p>Trier les activités par heure de fin croissante.</p>
 <table>
-<thead>
-<tr>
-<th>Activité</th>
-<th>Heure de début</th>
-<th>Heure de fin</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>A</td>
-<td>9h00</td>
-<td>10h00</td>
-</tr>
-<tr>
-<td>C</td>
-<td>10h00</td>
-<td>11h00</td>
-</tr>
-<tr>
-<td>B</td>
-<td>9h30</td>
-<td>11h30</td>
-</tr>
-<tr>
-<td>D</td>
-<td>11h00</td>
-<td>12h00</td>
-</tr>
-</tbody>
+  <thead>
+      <tr>
+          <th style="text-align: left">Activité</th>
+          <th style="text-align: left">Heure de début</th>
+          <th style="text-align: left">Heure de fin</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left">A</td>
+          <td style="text-align: left">9h00</td>
+          <td style="text-align: left">10h00</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">C</td>
+          <td style="text-align: left">10h00</td>
+          <td style="text-align: left">11h00</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">B</td>
+          <td style="text-align: left">9h30</td>
+          <td style="text-align: left">11h30</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">D</td>
+          <td style="text-align: left">11h00</td>
+          <td style="text-align: left">12h00</td>
+      </tr>
+  </tbody>
 </table>
 <p>Sélectionner la première activité, A.</p>
 <table>
-<thead>
-<tr>
-<th>Activité sélectionnée</th>
-<th>Heure de début</th>
-<th>Heure de fin</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>A</td>
-<td>9h00</td>
-<td>10h00</td>
-</tr>
-</tbody>
+  <thead>
+      <tr>
+          <th style="text-align: left">Activité sélectionnée</th>
+          <th style="text-align: left">Heure de début</th>
+          <th style="text-align: left">Heure de fin</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left">A</td>
+          <td style="text-align: left">9h00</td>
+          <td style="text-align: left">10h00</td>
+      </tr>
+  </tbody>
 </table>
 <p>Ajouter toutes les activités suivantes qui ont une heure de début supérieure à l&rsquo;heure de fin de A. Dans ce cas, la prochaine activité qui respecte cette condition est C.</p>
 <table>
-<thead>
-<tr>
-<th>Activités sélectionnées</th>
-<th>Heure de début</th>
-<th>Heure de fin</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>A</td>
-<td>9h00</td>
-<td>10h00</td>
-</tr>
-<tr>
-<td>C</td>
-<td>10h00</td>
-<td>11h00</td>
-</tr>
-</tbody>
+  <thead>
+      <tr>
+          <th style="text-align: left">Activités sélectionnées</th>
+          <th style="text-align: left">Heure de début</th>
+          <th style="text-align: left">Heure de fin</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left">A</td>
+          <td style="text-align: left">9h00</td>
+          <td style="text-align: left">10h00</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">C</td>
+          <td style="text-align: left">10h00</td>
+          <td style="text-align: left">11h00</td>
+      </tr>
+  </tbody>
 </table>
 <p>Continuer à ajouter des activités jusqu&rsquo;à ce qu&rsquo;il n&rsquo;y en ait plus de compatibles. Dans ce cas, l&rsquo;activité suivante compatible est D.</p>
 <table>
-<thead>
-<tr>
-<th>Activités sélectionnées</th>
-<th>Heure de début</th>
-<th>Heure de fin</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>A</td>
-<td>9h00</td>
-<td>10h00</td>
-</tr>
-<tr>
-<td>C</td>
-<td>10h00</td>
-<td>11h00</td>
-</tr>
-<tr>
-<td>D</td>
-<td>11h00</td>
-<td>12h00</td>
-</tr>
-</tbody>
+  <thead>
+      <tr>
+          <th style="text-align: left">Activités sélectionnées</th>
+          <th style="text-align: left">Heure de début</th>
+          <th style="text-align: left">Heure de fin</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left">A</td>
+          <td style="text-align: left">9h00</td>
+          <td style="text-align: left">10h00</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">C</td>
+          <td style="text-align: left">10h00</td>
+          <td style="text-align: left">11h00</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">D</td>
+          <td style="text-align: left">11h00</td>
+          <td style="text-align: left">12h00</td>
+      </tr>
+  </tbody>
 </table>
 <p>Ainsi, l&rsquo;algorithme glouton a sélectionné trois activités : A, C et D, qui ne se chevauchent pas. L&rsquo;activité B a été écartée car elle se chevauche avec C.</p>
 <h2 id="autre-exemple-avec-10-activités">
@@ -7120,169 +7122,169 @@ qu&rsquo;une recherche exhaustive.</em></p>
 </h2>
 <p>Voici un exemple de jeu de données d&rsquo;activités plus grand, avec 10 activités :</p>
 <table>
-<thead>
-<tr>
-<th>Activité</th>
-<th>Heure de début</th>
-<th>Heure de fin</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>A</td>
-<td>9h00</td>
-<td>10h30</td>
-</tr>
-<tr>
-<td>B</td>
-<td>9h00</td>
-<td>10h00</td>
-</tr>
-<tr>
-<td>C</td>
-<td>10h00</td>
-<td>11h00</td>
-</tr>
-<tr>
-<td>D</td>
-<td>10h00</td>
-<td>12h00</td>
-</tr>
-<tr>
-<td>E</td>
-<td>11h00</td>
-<td>12h30</td>
-</tr>
-<tr>
-<td>F</td>
-<td>12h30</td>
-<td>13h00</td>
-</tr>
-<tr>
-<td>G</td>
-<td>12h00</td>
-<td>14h00</td>
-</tr>
-<tr>
-<td>H</td>
-<td>13h00</td>
-<td>14h00</td>
-</tr>
-<tr>
-<td>I</td>
-<td>13h30</td>
-<td>15h00</td>
-</tr>
-<tr>
-<td>J</td>
-<td>14h00</td>
-<td>15h00</td>
-</tr>
-</tbody>
+  <thead>
+      <tr>
+          <th style="text-align: left">Activité</th>
+          <th style="text-align: left">Heure de début</th>
+          <th style="text-align: left">Heure de fin</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left">A</td>
+          <td style="text-align: left">9h00</td>
+          <td style="text-align: left">10h30</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">B</td>
+          <td style="text-align: left">9h00</td>
+          <td style="text-align: left">10h00</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">C</td>
+          <td style="text-align: left">10h00</td>
+          <td style="text-align: left">11h00</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">D</td>
+          <td style="text-align: left">10h00</td>
+          <td style="text-align: left">12h00</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">E</td>
+          <td style="text-align: left">11h00</td>
+          <td style="text-align: left">12h30</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">F</td>
+          <td style="text-align: left">12h30</td>
+          <td style="text-align: left">13h00</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">G</td>
+          <td style="text-align: left">12h00</td>
+          <td style="text-align: left">14h00</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">H</td>
+          <td style="text-align: left">13h00</td>
+          <td style="text-align: left">14h00</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">I</td>
+          <td style="text-align: left">13h30</td>
+          <td style="text-align: left">15h00</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">J</td>
+          <td style="text-align: left">14h00</td>
+          <td style="text-align: left">15h00</td>
+      </tr>
+  </tbody>
 </table>
 <p>En triant les activités par heure de fin croissante, nous obtenons :</p>
 <table>
-<thead>
-<tr>
-<th>Activité</th>
-<th>Heure de début</th>
-<th>Heure de fin</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>B</td>
-<td>9h00</td>
-<td>10h00</td>
-</tr>
-<tr>
-<td>A</td>
-<td>9h00</td>
-<td>10h30</td>
-</tr>
-<tr>
-<td>C</td>
-<td>10h00</td>
-<td>11h00</td>
-</tr>
-<tr>
-<td>D</td>
-<td>10h00</td>
-<td>12h00</td>
-</tr>
-<tr>
-<td>E</td>
-<td>11h00</td>
-<td>12h30</td>
-</tr>
-<tr>
-<td>F</td>
-<td>12h30</td>
-<td>13h00</td>
-</tr>
-<tr>
-<td>H</td>
-<td>13h00</td>
-<td>14h00</td>
-</tr>
-<tr>
-<td>G</td>
-<td>12h00</td>
-<td>14h00</td>
-</tr>
-<tr>
-<td>I</td>
-<td>13h30</td>
-<td>15h00</td>
-</tr>
-<tr>
-<td>J</td>
-<td>14h00</td>
-<td>15h00</td>
-</tr>
-</tbody>
+  <thead>
+      <tr>
+          <th style="text-align: left">Activité</th>
+          <th style="text-align: left">Heure de début</th>
+          <th style="text-align: left">Heure de fin</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left">B</td>
+          <td style="text-align: left">9h00</td>
+          <td style="text-align: left">10h00</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">A</td>
+          <td style="text-align: left">9h00</td>
+          <td style="text-align: left">10h30</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">C</td>
+          <td style="text-align: left">10h00</td>
+          <td style="text-align: left">11h00</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">D</td>
+          <td style="text-align: left">10h00</td>
+          <td style="text-align: left">12h00</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">E</td>
+          <td style="text-align: left">11h00</td>
+          <td style="text-align: left">12h30</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">F</td>
+          <td style="text-align: left">12h30</td>
+          <td style="text-align: left">13h00</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">H</td>
+          <td style="text-align: left">13h00</td>
+          <td style="text-align: left">14h00</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">G</td>
+          <td style="text-align: left">12h00</td>
+          <td style="text-align: left">14h00</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">I</td>
+          <td style="text-align: left">13h30</td>
+          <td style="text-align: left">15h00</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">J</td>
+          <td style="text-align: left">14h00</td>
+          <td style="text-align: left">15h00</td>
+      </tr>
+  </tbody>
 </table>
 <p>En appliquant l&rsquo;algorithme glouton, nous obtenons la solution suivante :</p>
 <table>
-<thead>
-<tr>
-<th>Activités</th>
-<th>sélectionnées Heure de début</th>
-<th>Heure de fin</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>B</td>
-<td>9h00</td>
-<td>10h00</td>
-</tr>
-<tr>
-<td>C</td>
-<td>10h00</td>
-<td>11h00</td>
-</tr>
-<tr>
-<td>E</td>
-<td>11h00</td>
-<td>12h30</td>
-</tr>
-<tr>
-<td>F</td>
-<td>12h30</td>
-<td>13h00</td>
-</tr>
-<tr>
-<td>H</td>
-<td>13h00</td>
-<td>14h00</td>
-</tr>
-<tr>
-<td>J</td>
-<td>14h00</td>
-<td>15h00</td>
-</tr>
-</tbody>
+  <thead>
+      <tr>
+          <th style="text-align: left">Activités</th>
+          <th style="text-align: left">sélectionnées Heure de début</th>
+          <th style="text-align: left">Heure de fin</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left">B</td>
+          <td style="text-align: left">9h00</td>
+          <td style="text-align: left">10h00</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">C</td>
+          <td style="text-align: left">10h00</td>
+          <td style="text-align: left">11h00</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">E</td>
+          <td style="text-align: left">11h00</td>
+          <td style="text-align: left">12h30</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">F</td>
+          <td style="text-align: left">12h30</td>
+          <td style="text-align: left">13h00</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">H</td>
+          <td style="text-align: left">13h00</td>
+          <td style="text-align: left">14h00</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">J</td>
+          <td style="text-align: left">14h00</td>
+          <td style="text-align: left">15h00</td>
+      </tr>
+  </tbody>
 </table>
 <p>L&rsquo;algorithme glouton ne fournit pas toujours la solution optimale, mais il
 permet souvent d&rsquo;obtenir une solution acceptable en un temps raisonnable.
@@ -7303,79 +7305,79 @@ tâches qui se chevauchent. Je l&rsquo;ai questionné sans réponse
 sur la source de ces erreurs.</em></p>
 <p>Voici un petit exemple où l&rsquo;algorithme glouton ne fournit pas la solution optimale :</p>
 <table>
-<thead>
-<tr>
-<th>Activité</th>
-<th>Heure de début</th>
-<th>Heure de fin</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>A</td>
-<td>9h00</td>
-<td>10h30</td>
-</tr>
-<tr>
-<td>B</td>
-<td>9h30</td>
-<td>14h00</td>
-</tr>
-<tr>
-<td>C</td>
-<td>10h30</td>
-<td>13h00</td>
-</tr>
-</tbody>
+  <thead>
+      <tr>
+          <th style="text-align: left">Activité</th>
+          <th style="text-align: left">Heure de début</th>
+          <th style="text-align: left">Heure de fin</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left">A</td>
+          <td style="text-align: left">9h00</td>
+          <td style="text-align: left">10h30</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">B</td>
+          <td style="text-align: left">9h30</td>
+          <td style="text-align: left">14h00</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">C</td>
+          <td style="text-align: left">10h30</td>
+          <td style="text-align: left">13h00</td>
+      </tr>
+  </tbody>
 </table>
 <p>En triant les activités par heure de fin croissante, nous obtenons :</p>
 <table>
-<thead>
-<tr>
-<th>Activité</th>
-<th>Heure de début</th>
-<th>Heure de fin</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>A</td>
-<td>9h00</td>
-<td>10h30</td>
-</tr>
-<tr>
-<td>C</td>
-<td>10h30</td>
-<td>13h00</td>
-</tr>
-<tr>
-<td>B</td>
-<td>9h30</td>
-<td>14h00</td>
-</tr>
-</tbody>
+  <thead>
+      <tr>
+          <th style="text-align: left">Activité</th>
+          <th style="text-align: left">Heure de début</th>
+          <th style="text-align: left">Heure de fin</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left">A</td>
+          <td style="text-align: left">9h00</td>
+          <td style="text-align: left">10h30</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">C</td>
+          <td style="text-align: left">10h30</td>
+          <td style="text-align: left">13h00</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">B</td>
+          <td style="text-align: left">9h30</td>
+          <td style="text-align: left">14h00</td>
+      </tr>
+  </tbody>
 </table>
 <p>En appliquant l&rsquo;algorithme glouton, nous obtenons la solution suivante :</p>
 <table>
-<thead>
-<tr>
-<th>Activités sélectionnées</th>
-<th>Heure de début</th>
-<th>Heure de fin</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>A</td>
-<td>9h00</td>
-<td>10h30</td>
-</tr>
-<tr>
-<td>C</td>
-<td>10h30</td>
-<td>13h00</td>
-</tr>
-</tbody>
+  <thead>
+      <tr>
+          <th style="text-align: left">Activités sélectionnées</th>
+          <th style="text-align: left">Heure de début</th>
+          <th style="text-align: left">Heure de fin</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left">A</td>
+          <td style="text-align: left">9h00</td>
+          <td style="text-align: left">10h30</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">C</td>
+          <td style="text-align: left">10h30</td>
+          <td style="text-align: left">13h00</td>
+      </tr>
+  </tbody>
 </table>
 <p>La durée totale des activités sélectionnées est de 3 heures.</p>
 <p>Cependant, la solution optimale consiste à sélectionner l&rsquo;activité B dont la durée est de 4h30&hellip;</p>

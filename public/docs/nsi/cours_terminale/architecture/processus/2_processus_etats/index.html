@@ -5,9 +5,25 @@
     <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="pdf
-Système d&rsquo;exploitation # L&rsquo;OS est chargé d&rsquo;assurer la liaison entre les ressources matérielles, l&rsquo;utilisateur et les logiciels.
+
+  Système d&rsquo;exploitation
+  #
+
+L&rsquo;OS est chargé d&rsquo;assurer la liaison entre les ressources matérielles, l&rsquo;utilisateur
+et les logiciels.
 Voici les trois situations les plus courantes (OS seul, microcontroleur, virtualisation)
-Dans le premier cas, l&rsquo;OS fonctionne normalement et sert d&rsquo;interface unique à l&rsquo;utilisateur Dans le cas du microcontroleur, il n&rsquo;y a pas d&rsquo;OS ! Les programmes s&rsquo;exécutent directement sur le matériel Dans le cas de la virtualisation, l&rsquo;hyperviseur permet de faire fonctionner simultanément plusieurs OS sur une même machine.">
+
+
+Dans le premier cas, l&rsquo;OS fonctionne normalement et sert d&rsquo;interface unique à l&rsquo;utilisateur
+Dans le cas du microcontroleur, il n&rsquo;y a pas d&rsquo;OS ! Les programmes s&rsquo;exécutent directement sur le matériel
+Dans le cas de la virtualisation, l&rsquo;hyperviseur permet de faire fonctionner simultanément plusieurs OS sur
+une même machine. Les utilisateurs (généralement en réseau&hellip;) peuvent utiliseur l&rsquo;un ou l&rsquo;autre.
+
+
+  Rôles
+  #
+
+Les rôles principaux d&rsquo;un OS sont :">
 <meta name="theme-color" content="#FFFFFF">
 <meta name="color-scheme" content="light dark"><meta property="og:url" content="http://localhost:1313/docs/nsi/cours_terminale/architecture/processus/2_processus_etats/">
   <meta property="og:site_name" content="qkzk">
@@ -15,7 +31,7 @@ Dans le premier cas, l&rsquo;OS fonctionne normalement et sert d&rsquo;interface
   <meta property="og:description" content="pdf
 Système d’exploitation # L’OS est chargé d’assurer la liaison entre les ressources matérielles, l’utilisateur et les logiciels.
 Voici les trois situations les plus courantes (OS seul, microcontroleur, virtualisation)
-Dans le premier cas, l’OS fonctionne normalement et sert d’interface unique à l’utilisateur Dans le cas du microcontroleur, il n’y a pas d’OS ! Les programmes s’exécutent directement sur le matériel Dans le cas de la virtualisation, l’hyperviseur permet de faire fonctionner simultanément plusieurs OS sur une même machine.">
+Dans le premier cas, l’OS fonctionne normalement et sert d’interface unique à l’utilisateur Dans le cas du microcontroleur, il n’y a pas d’OS ! Les programmes s’exécutent directement sur le matériel Dans le cas de la virtualisation, l’hyperviseur permet de faire fonctionner simultanément plusieurs OS sur une même machine. Les utilisateurs (généralement en réseau…) peuvent utiliseur l’un ou l’autre. Rôles # Les rôles principaux d’un OS sont :">
   <meta property="og:locale" content="en_us">
   <meta property="og:type" content="website">
 <title>États des processus | qkzk</title>
@@ -23,8 +39,7 @@ Dans le premier cas, l’OS fonctionne normalement et sert d’interface unique 
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/book.min.24c2b1f8dc2338e074345eec5b36f8a002aaa6d1b2e7312e14ac2d6a6958c876.css" integrity="sha256-JMKx&#43;NwjOOB0NF7sWzb4oAKqptGy5zEuFKwtamlYyHY=" crossorigin="anonymous">
   <script defer src="/flexsearch.min.js"></script>
-  <script defer src="/en.search.min.41edfc0344c578feffc8ba5e94e6f59bfed684cf40d08bf18134f4a240cd0e15.js" integrity="sha256-Qe38A0TFeP7/yLpelOb1m/7WhM9A0IvxgTT0okDNDhU=" crossorigin="anonymous"></script>
-
+  <script defer src="/en.search.min.ad90ed54c2fb2ebca6bf92dc494821802bb5913fb4ded7c7ce215de203590daa.js" integrity="sha256-rZDtVML7Lrymv5LcSUghgCu1kT&#43;03tfHziFd4gNZDao=" crossorigin="anonymous"></script>
 <link rel="alternate" type="application/rss+xml" href="http://localhost:1313/docs/nsi/cours_terminale/architecture/processus/2_processus_etats/index.xml" title="qkzk" />
 <!--
 Made with Book Theme
@@ -7055,108 +7070,108 @@ un script. Le shell le plus couramment utilisé est BASH.</li>
 </h3>
 <p><strong>Bureau et portable</strong></p>
 <table>
-<thead>
-<tr>
-<th>OS</th>
-<th>Part</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Windows</td>
-<td>78%</td>
-</tr>
-<tr>
-<td>OS X</td>
-<td>17%</td>
-</tr>
-<tr>
-<td>Unix like</td>
-<td>3%</td>
-</tr>
-<tr>
-<td>Autres</td>
-<td>2%</td>
-</tr>
-</tbody>
+  <thead>
+      <tr>
+          <th style="text-align: left">OS</th>
+          <th style="text-align: left">Part</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left">Windows</td>
+          <td style="text-align: left">78%</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">OS X</td>
+          <td style="text-align: left">17%</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">Unix like</td>
+          <td style="text-align: left">3%</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">Autres</td>
+          <td style="text-align: left">2%</td>
+      </tr>
+  </tbody>
 </table>
 <p><strong>Mobile</strong></p>
 <table>
-<thead>
-<tr>
-<th>OS</th>
-<th>Part</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Android (Linux)</td>
-<td>72%</td>
-</tr>
-<tr>
-<td>iOS</td>
-<td>27 %</td>
-</tr>
-<tr>
-<td>Autres</td>
-<td>1%</td>
-</tr>
-</tbody>
+  <thead>
+      <tr>
+          <th style="text-align: left">OS</th>
+          <th style="text-align: left">Part</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left">Android (Linux)</td>
+          <td style="text-align: left">72%</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">iOS</td>
+          <td style="text-align: left">27 %</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">Autres</td>
+          <td style="text-align: left">1%</td>
+      </tr>
+  </tbody>
 </table>
 <p><strong>Serveur internet</strong></p>
 <table>
-<thead>
-<tr>
-<th>OS</th>
-<th>Part</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>UNIX</td>
-<td>75%</td>
-</tr>
-<tr>
-<td>Windows</td>
-<td>25%</td>
-</tr>
-</tbody>
+  <thead>
+      <tr>
+          <th style="text-align: left">OS</th>
+          <th style="text-align: left">Part</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left">UNIX</td>
+          <td style="text-align: left">75%</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">Windows</td>
+          <td style="text-align: left">25%</td>
+      </tr>
+  </tbody>
 </table>
 <p><strong>Mainframes</strong> : utilisés pour l&rsquo;organisation des ressources et les transactions financières.</p>
 <table>
-<thead>
-<tr>
-<th>OS</th>
-<th>Part</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>z/OS (IBM UNIX)</td>
-<td>100%</td>
-</tr>
-</tbody>
+  <thead>
+      <tr>
+          <th style="text-align: left">OS</th>
+          <th style="text-align: left">Part</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left">z/OS (IBM UNIX)</td>
+          <td style="text-align: left">100%</td>
+      </tr>
+  </tbody>
 </table>
 <p>L&rsquo;utitilisation des mainframes est sur le déclin depuis 2010 mais ils jouent un
 rôle majeur dans les transactions commerciales.</p>
 <p><strong>SuperComputer</strong> :  ordinateur conçu pour atteindre les plus hautes performances possibles. Utilisés pour la météo, la modélisation d&rsquo;objets chimiques, les simulations physiques (simulations aérodynamiques, calculs de résistance des matériaux, simulation d&rsquo;explosion d&rsquo;arme nucléaire, étude de la fusion nucléaire, etc.), la cryptanalyse ou les simulations en finance et en assurance.</p>
 <table>
-<thead>
-<tr>
-<th>OS</th>
-<th>Part</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Linux</td>
-<td>99%</td>
-</tr>
-<tr>
-<td>UNIX (autres)</td>
-<td>&lt;1%</td>
-</tr>
-</tbody>
+  <thead>
+      <tr>
+          <th style="text-align: left">OS</th>
+          <th style="text-align: left">Part</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left">Linux</td>
+          <td style="text-align: left">99%</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">UNIX (autres)</td>
+          <td style="text-align: left">&lt;1%</td>
+      </tr>
+  </tbody>
 </table>
 <p>Cette évolution est récente, en 1996, UNIX équippait 100% des super calculateurs</p>
 <p><strong>IOT</strong> (<em>Internet Of Things</em>) : les objets embarqués.</p>
@@ -7206,20 +7221,20 @@ de fond et on récupère la main sur le terminal.</p>
 <p>Chaque système d&rsquo;exploitation dispose de son propre format pour rendre un fichier
 exécutable.</p>
 <table>
-<thead>
-<tr>
-<th>Windows</th>
-<th>UNIX</th>
-<th>OS X</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>PE</td>
-<td>ELF</td>
-<td>Mach-O</td>
-</tr>
-</tbody>
+  <thead>
+      <tr>
+          <th style="text-align: left">Windows</th>
+          <th style="text-align: left">UNIX</th>
+          <th style="text-align: left">OS X</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left">PE</td>
+          <td style="text-align: left">ELF</td>
+          <td style="text-align: left">Mach-O</td>
+      </tr>
+  </tbody>
 </table>
 <p>ELF (Executable and Linkable Format, est un format de fichier binaire utilisé pour l&rsquo;enregistrement de code compilé.</p>
 <p>Chaque fichier ELF est constitué d&rsquo;un en-tête fixe, puis de segments et de sections. Les segments contiennent les informations nécessaires à l&rsquo;exécution du programme contenu dans le fichier.</p>
@@ -7342,25 +7357,25 @@ cet état pour récupérer les ressources.</li>
 <p>On peut souhaiter consulter une liste statique plus ou moins riche d&rsquo;informations
 ou un tableau dynamique.</p>
 <table>
-<thead>
-<tr>
-<th></th>
-<th>Windows</th>
-<th>UNIX</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Liste statique</td>
-<td><code>tasklist</code></td>
-<td><code>ps</code></td>
-</tr>
-<tr>
-<td>Liste dynamique</td>
-<td>Gestionnaire de tâches</td>
-<td><code>top</code></td>
-</tr>
-</tbody>
+  <thead>
+      <tr>
+          <th style="text-align: left"></th>
+          <th style="text-align: left">Windows</th>
+          <th style="text-align: left">UNIX</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left">Liste statique</td>
+          <td style="text-align: left"><code>tasklist</code></td>
+          <td style="text-align: left"><code>ps</code></td>
+      </tr>
+      <tr>
+          <td style="text-align: left">Liste dynamique</td>
+          <td style="text-align: left">Gestionnaire de tâches</td>
+          <td style="text-align: left"><code>top</code></td>
+      </tr>
+  </tbody>
 </table>
 <ul>
 <li>

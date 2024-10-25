@@ -4,15 +4,34 @@
 <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
     <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Représenter des entiers en machine : le système binaire # pdf pour impression et diaporama
-Binaire # Différentes bases # Dans la vie courante on utilise la base 10.
+<meta name="description" content="
+  Représenter des entiers en machine : le système binaire
+  #
+
+pdf pour impression et diaporama
+
+  Binaire
+  #
+
+
+  Différentes bases
+  #
+
+Dans la vie courante on utilise la base 10.
 En informatique on rencontre d&rsquo;autres manières de représenter les nombres :
-binaire complément à 2 octal hexadécimal etc. nombres à virgules flottantes En quand on creuse, c&rsquo;est encore plus complexe. Par exemple le langage Rust utilise 14 types différents pour représenter les nombres !">
+
+binaire
+complément à 2
+octal
+hexadécimal etc.
+nombres à virgules flottantes
+
+En quand on creuse, c&rsquo;est encore plus complexe. Par exemple le langage Rust utilise 14 types différents pour représenter les nombres !">
 <meta name="theme-color" content="#FFFFFF">
 <meta name="color-scheme" content="light dark"><meta property="og:url" content="http://localhost:1313/docs/nsi/cours_premiere/donnees_simples/binaire/1_cours/">
   <meta property="og:site_name" content="qkzk">
   <meta property="og:title" content="binaire - cours">
-  <meta property="og:description" content="Représenter des entiers en machine : le système binaire # pdf pour impression et diaporama
+  <meta property="og:description" content=" Représenter des entiers en machine : le système binaire # pdf pour impression et diaporama
 Binaire # Différentes bases # Dans la vie courante on utilise la base 10.
 En informatique on rencontre d’autres manières de représenter les nombres :
 binaire complément à 2 octal hexadécimal etc. nombres à virgules flottantes En quand on creuse, c’est encore plus complexe. Par exemple le langage Rust utilise 14 types différents pour représenter les nombres !">
@@ -23,8 +42,7 @@ binaire complément à 2 octal hexadécimal etc. nombres à virgules flottantes 
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/book.min.24c2b1f8dc2338e074345eec5b36f8a002aaa6d1b2e7312e14ac2d6a6958c876.css" integrity="sha256-JMKx&#43;NwjOOB0NF7sWzb4oAKqptGy5zEuFKwtamlYyHY=" crossorigin="anonymous">
   <script defer src="/flexsearch.min.js"></script>
-  <script defer src="/en.search.min.41edfc0344c578feffc8ba5e94e6f59bfed684cf40d08bf18134f4a240cd0e15.js" integrity="sha256-Qe38A0TFeP7/yLpelOb1m/7WhM9A0IvxgTT0okDNDhU=" crossorigin="anonymous"></script>
-
+  <script defer src="/en.search.min.ad90ed54c2fb2ebca6bf92dc494821802bb5913fb4ded7c7ce215de203590daa.js" integrity="sha256-rZDtVML7Lrymv5LcSUghgCu1kT&#43;03tfHziFd4gNZDao=" crossorigin="anonymous"></script>
 <link rel="alternate" type="application/rss+xml" href="http://localhost:1313/docs/nsi/cours_premiere/donnees_simples/binaire/1_cours/index.xml" title="qkzk" />
 <!--
 Made with Book Theme
@@ -7093,46 +7111,46 @@ MathJax.Hub.Config({
 </h3>
 <p>Les puissances de 10 c&rsquo;est facile : 1, 10, 100, 1000 etc. mais celles de 2 demandent un effort.</p>
 <table>
-<thead>
-<tr>
-<th style="text-align:center">Exposant $n$</th>
-<th style="text-align:center">0</th>
-<th style="text-align:center">1</th>
-<th style="text-align:center">2</th>
-<th style="text-align:center">3</th>
-<th style="text-align:center">4</th>
-<th style="text-align:center">5</th>
-<th style="text-align:center">6</th>
-<th style="text-align:center">7</th>
-<th style="text-align:center">8</th>
-<th style="text-align:center">9</th>
-<th style="text-align:center">10</th>
-<th style="text-align:center">11</th>
-<th style="text-align:center">12</th>
-<th style="text-align:center">13</th>
-<th style="text-align:center">14</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center">$2^n$</td>
-<td style="text-align:center">1</td>
-<td style="text-align:center">2</td>
-<td style="text-align:center">4</td>
-<td style="text-align:center">8</td>
-<td style="text-align:center">16</td>
-<td style="text-align:center">32</td>
-<td style="text-align:center">64</td>
-<td style="text-align:center">128</td>
-<td style="text-align:center">256</td>
-<td style="text-align:center">512</td>
-<td style="text-align:center">1024</td>
-<td style="text-align:center">2048</td>
-<td style="text-align:center">4096</td>
-<td style="text-align:center">8192</td>
-<td style="text-align:center">16384</td>
-</tr>
-</tbody>
+  <thead>
+      <tr>
+          <th style="text-align: center">Exposant $n$</th>
+          <th style="text-align: center">0</th>
+          <th style="text-align: center">1</th>
+          <th style="text-align: center">2</th>
+          <th style="text-align: center">3</th>
+          <th style="text-align: center">4</th>
+          <th style="text-align: center">5</th>
+          <th style="text-align: center">6</th>
+          <th style="text-align: center">7</th>
+          <th style="text-align: center">8</th>
+          <th style="text-align: center">9</th>
+          <th style="text-align: center">10</th>
+          <th style="text-align: center">11</th>
+          <th style="text-align: center">12</th>
+          <th style="text-align: center">13</th>
+          <th style="text-align: center">14</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: center">$2^n$</td>
+          <td style="text-align: center">1</td>
+          <td style="text-align: center">2</td>
+          <td style="text-align: center">4</td>
+          <td style="text-align: center">8</td>
+          <td style="text-align: center">16</td>
+          <td style="text-align: center">32</td>
+          <td style="text-align: center">64</td>
+          <td style="text-align: center">128</td>
+          <td style="text-align: center">256</td>
+          <td style="text-align: center">512</td>
+          <td style="text-align: center">1024</td>
+          <td style="text-align: center">2048</td>
+          <td style="text-align: center">4096</td>
+          <td style="text-align: center">8192</td>
+          <td style="text-align: center">16384</td>
+      </tr>
+  </tbody>
 </table>
 <p><strong>Conseil :</strong> retenez les par coeur en jouant à <a href="https://play2048.co/">2048</a>.</p>
 <h3 id="du-binaire-au-décimal">
@@ -7281,24 +7299,24 @@ dans un octet.</p>
 <li><strong>PRODUIT</strong> : $x \times y$ occupe au plus <code>n + p</code> bits.</li>
 </ul>
 <table>
-<thead>
-<tr>
-<th>Nombre</th>
-<th>$x$</th>
-<th>$y$</th>
-<th>$x+y$</th>
-<th>$x\times y$</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Nombre de bits</td>
-<td>$n$</td>
-<td>$p$</td>
-<td>$\leq max(n, p) + 1$</td>
-<td>$\leq n + p$</td>
-</tr>
-</tbody>
+  <thead>
+      <tr>
+          <th style="text-align: left">Nombre</th>
+          <th style="text-align: left">$x$</th>
+          <th style="text-align: left">$y$</th>
+          <th style="text-align: left">$x+y$</th>
+          <th style="text-align: left">$x\times y$</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left">Nombre de bits</td>
+          <td style="text-align: left">$n$</td>
+          <td style="text-align: left">$p$</td>
+          <td style="text-align: left">$\leq max(n, p) + 1$</td>
+          <td style="text-align: left">$\leq n + p$</td>
+      </tr>
+  </tbody>
 </table>
 </blockquote>
 
@@ -7406,22 +7424,22 @@ représenter des booléens : ainsi un 0 représente la valeur <em>faux</em> et
 <p>Le NON logique d&rsquo;un booléen <em>a</em> se définit par :</p>
 <p>NON <em>a</em> vaut VRAI si et seulement si <em>a</em> vaut FAUX.</p>
 <table>
-<thead>
-<tr>
-<th>a</th>
-<th>NON a</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>0</td>
-<td>1</td>
-</tr>
-<tr>
-<td>1</td>
-<td>0</td>
-</tr>
-</tbody>
+  <thead>
+      <tr>
+          <th style="text-align: left">a</th>
+          <th style="text-align: left">NON a</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left">0</td>
+          <td style="text-align: left">1</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">1</td>
+          <td style="text-align: left">0</td>
+      </tr>
+  </tbody>
 </table>
 <h3 id="le-et-logique">
   Le ET logique
@@ -7430,35 +7448,35 @@ représenter des booléens : ainsi un 0 représente la valeur <em>faux</em> et
 <p>Le ET logique entre deux booléens <em>a</em> et <em>b</em> se définit par :</p>
 <p><em>a</em> ET <em>b</em> vaut VRAI si et seulement si <em>a</em> vaut VRAI et <em>b</em> vaut VRAI.</p>
 <table>
-<thead>
-<tr>
-<th>a</th>
-<th>b</th>
-<th>a ET b</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-</tr>
-<tr>
-<td>0</td>
-<td>1</td>
-<td>0</td>
-</tr>
-<tr>
-<td>1</td>
-<td>0</td>
-<td>0</td>
-</tr>
-<tr>
-<td>1</td>
-<td>1</td>
-<td>1</td>
-</tr>
-</tbody>
+  <thead>
+      <tr>
+          <th style="text-align: left">a</th>
+          <th style="text-align: left">b</th>
+          <th style="text-align: left">a ET b</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left">0</td>
+          <td style="text-align: left">0</td>
+          <td style="text-align: left">0</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">0</td>
+          <td style="text-align: left">1</td>
+          <td style="text-align: left">0</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">1</td>
+          <td style="text-align: left">0</td>
+          <td style="text-align: left">0</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">1</td>
+          <td style="text-align: left">1</td>
+          <td style="text-align: left">1</td>
+      </tr>
+  </tbody>
 </table>
 <h3 id="le-ou-logique">
   Le OU logique
@@ -7467,35 +7485,35 @@ représenter des booléens : ainsi un 0 représente la valeur <em>faux</em> et
 <p>Le OU logique entre deux booléens <em>a</em> et <em>b</em> se définit par :</p>
 <p><em>a</em> OU <em>b</em> vaut VRAI si et seulement si <em>a</em> vaut VRAI ou <em>b</em> vaut VRAI.</p>
 <table>
-<thead>
-<tr>
-<th>a</th>
-<th>b</th>
-<th>a OU b</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-</tr>
-<tr>
-<td>0</td>
-<td>1</td>
-<td>1</td>
-</tr>
-<tr>
-<td>1</td>
-<td>0</td>
-<td>1</td>
-</tr>
-<tr>
-<td>1</td>
-<td>1</td>
-<td>1</td>
-</tr>
-</tbody>
+  <thead>
+      <tr>
+          <th style="text-align: left">a</th>
+          <th style="text-align: left">b</th>
+          <th style="text-align: left">a OU b</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left">0</td>
+          <td style="text-align: left">0</td>
+          <td style="text-align: left">0</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">0</td>
+          <td style="text-align: left">1</td>
+          <td style="text-align: left">1</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">1</td>
+          <td style="text-align: left">0</td>
+          <td style="text-align: left">1</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">1</td>
+          <td style="text-align: left">1</td>
+          <td style="text-align: left">1</td>
+      </tr>
+  </tbody>
 </table>
 <h3 id="équivalences">
   Équivalences
@@ -7529,52 +7547,52 @@ l&rsquo;expression</p>
   <a class="anchor" href="#table-interm%c3%a9diaire">#</a>
 </h3>
 <table>
-<thead>
-<tr>
-<th>a</th>
-<th>b</th>
-<th>NON a</th>
-<th>NON b</th>
-<th>(NON a) ET (NON b)</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>x</td>
-<td>y</td>
-<td></td>
-<td></td>
-<td>x ET y</td>
-</tr>
-<tr>
-<td>0</td>
-<td>0</td>
-<td>1</td>
-<td>1</td>
-<td>1</td>
-</tr>
-<tr>
-<td>0</td>
-<td>1</td>
-<td>1</td>
-<td>0</td>
-<td>0</td>
-</tr>
-<tr>
-<td>1</td>
-<td>0</td>
-<td>0</td>
-<td>1</td>
-<td>0</td>
-</tr>
-<tr>
-<td>1</td>
-<td>1</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-</tr>
-</tbody>
+  <thead>
+      <tr>
+          <th style="text-align: left">a</th>
+          <th style="text-align: left">b</th>
+          <th style="text-align: left">NON a</th>
+          <th style="text-align: left">NON b</th>
+          <th style="text-align: left">(NON a) ET (NON b)</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left">x</td>
+          <td style="text-align: left">y</td>
+          <td style="text-align: left"></td>
+          <td style="text-align: left"></td>
+          <td style="text-align: left">x ET y</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">0</td>
+          <td style="text-align: left">0</td>
+          <td style="text-align: left">1</td>
+          <td style="text-align: left">1</td>
+          <td style="text-align: left">1</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">0</td>
+          <td style="text-align: left">1</td>
+          <td style="text-align: left">1</td>
+          <td style="text-align: left">0</td>
+          <td style="text-align: left">0</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">1</td>
+          <td style="text-align: left">0</td>
+          <td style="text-align: left">0</td>
+          <td style="text-align: left">1</td>
+          <td style="text-align: left">0</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">1</td>
+          <td style="text-align: left">1</td>
+          <td style="text-align: left">0</td>
+          <td style="text-align: left">0</td>
+          <td style="text-align: left">0</td>
+      </tr>
+  </tbody>
 </table>
 <p>On complète alors la table avec les expressions : NON ((NON <em>a</em>) ET (NON
 <em>b</em>)) et (<em>a</em> OU <em>b</em>)</p>
@@ -7583,52 +7601,52 @@ l&rsquo;expression</p>
   <a class="anchor" href="#table-finale">#</a>
 </h3>
 <table>
-<thead>
-<tr>
-<th>a</th>
-<th>b</th>
-<th>(NON a) ET (NON b)</th>
-<th>NON((NON a) ET (NON b))</th>
-<th>a OU b</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td></td>
-<td></td>
-<td>(x ET y) = z</td>
-<td>NON   z</td>
-<td></td>
-</tr>
-<tr>
-<td>0</td>
-<td>0</td>
-<td>1</td>
-<td>0</td>
-<td>0</td>
-</tr>
-<tr>
-<td>0</td>
-<td>1</td>
-<td>0</td>
-<td>1</td>
-<td>1</td>
-</tr>
-<tr>
-<td>1</td>
-<td>0</td>
-<td>0</td>
-<td>1</td>
-<td>1</td>
-</tr>
-<tr>
-<td>1</td>
-<td>1</td>
-<td>0</td>
-<td>1</td>
-<td>1</td>
-</tr>
-</tbody>
+  <thead>
+      <tr>
+          <th style="text-align: left">a</th>
+          <th style="text-align: left">b</th>
+          <th style="text-align: left">(NON a) ET (NON b)</th>
+          <th style="text-align: left">NON((NON a) ET (NON b))</th>
+          <th style="text-align: left">a OU b</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left"></td>
+          <td style="text-align: left"></td>
+          <td style="text-align: left">(x ET y) = z</td>
+          <td style="text-align: left">NON   z</td>
+          <td style="text-align: left"></td>
+      </tr>
+      <tr>
+          <td style="text-align: left">0</td>
+          <td style="text-align: left">0</td>
+          <td style="text-align: left">1</td>
+          <td style="text-align: left">0</td>
+          <td style="text-align: left">0</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">0</td>
+          <td style="text-align: left">1</td>
+          <td style="text-align: left">0</td>
+          <td style="text-align: left">1</td>
+          <td style="text-align: left">1</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">1</td>
+          <td style="text-align: left">0</td>
+          <td style="text-align: left">0</td>
+          <td style="text-align: left">1</td>
+          <td style="text-align: left">1</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">1</td>
+          <td style="text-align: left">1</td>
+          <td style="text-align: left">0</td>
+          <td style="text-align: left">1</td>
+          <td style="text-align: left">1</td>
+      </tr>
+  </tbody>
 </table>
 <p>L&rsquo;égalité des contenus des deux dernières colonnes
 démontre l&rsquo;équivalence des deux expressions.</p>
@@ -7671,35 +7689,35 @@ tables de vérité.</p>
   <a class="anchor" href="#ou-exclusif">#</a>
 </h3>
 <table>
-<thead>
-<tr>
-<th>a</th>
-<th>b</th>
-<th>a XOR b</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-</tr>
-<tr>
-<td>0</td>
-<td>1</td>
-<td>1</td>
-</tr>
-<tr>
-<td>1</td>
-<td>0</td>
-<td>1</td>
-</tr>
-<tr>
-<td>1</td>
-<td>1</td>
-<td>0</td>
-</tr>
-</tbody>
+  <thead>
+      <tr>
+          <th style="text-align: left">a</th>
+          <th style="text-align: left">b</th>
+          <th style="text-align: left">a XOR b</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left">0</td>
+          <td style="text-align: left">0</td>
+          <td style="text-align: left">0</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">0</td>
+          <td style="text-align: left">1</td>
+          <td style="text-align: left">1</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">1</td>
+          <td style="text-align: left">0</td>
+          <td style="text-align: left">1</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">1</td>
+          <td style="text-align: left">1</td>
+          <td style="text-align: left">0</td>
+      </tr>
+  </tbody>
 </table>
 <p>On rencontre également défini l&rsquo;opérateur OU-exclusif, également appelé
 XOR (pour &ldquo;eXclusive OR&rdquo;).</p>

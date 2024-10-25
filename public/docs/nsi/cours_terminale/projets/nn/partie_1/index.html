@@ -4,20 +4,28 @@
 <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
     <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Réseau de neurones - Partie 1 : un neurone très simple # Le problème # Nous allons construire un simple réseau de neurone pour résoudre un problème.
+<meta name="description" content="
+  Réseau de neurones - Partie 1 : un neurone très simple
+  #
+
+
+  Le problème
+  #
+
+Nous allons construire un simple réseau de neurone pour résoudre un problème.
 Nous en profiterons pour expliquer le fonctionnement d&rsquo;un réseau de neurones.
 Voici notre problème de départ.
 On dispose des entrées (colonnes 2, 3 et 4) qui génèrent une sortie (colonne 5).
-Par exemple, si les entrées sont [0, 0, 1] la sortie est 0.">
+Par exemple, si les entrées sont [0, 0, 1] la sortie est 0. etc.">
 <meta name="theme-color" content="#FFFFFF">
 <meta name="color-scheme" content="light dark"><meta property="og:url" content="http://localhost:1313/docs/nsi/cours_terminale/projets/nn/partie_1/">
   <meta property="og:site_name" content="qkzk">
   <meta property="og:title" content="NN - partie 1">
-  <meta property="og:description" content="Réseau de neurones - Partie 1 : un neurone très simple # Le problème # Nous allons construire un simple réseau de neurone pour résoudre un problème.
+  <meta property="og:description" content=" Réseau de neurones - Partie 1 : un neurone très simple # Le problème # Nous allons construire un simple réseau de neurone pour résoudre un problème.
 Nous en profiterons pour expliquer le fonctionnement d’un réseau de neurones.
 Voici notre problème de départ.
 On dispose des entrées (colonnes 2, 3 et 4) qui génèrent une sortie (colonne 5).
-Par exemple, si les entrées sont [0, 0, 1] la sortie est 0.">
+Par exemple, si les entrées sont [0, 0, 1] la sortie est 0. etc.">
   <meta property="og:locale" content="en_us">
   <meta property="og:type" content="website">
 <title>NN - partie 1 | qkzk</title>
@@ -25,8 +33,7 @@ Par exemple, si les entrées sont [0, 0, 1] la sortie est 0.">
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/book.min.24c2b1f8dc2338e074345eec5b36f8a002aaa6d1b2e7312e14ac2d6a6958c876.css" integrity="sha256-JMKx&#43;NwjOOB0NF7sWzb4oAKqptGy5zEuFKwtamlYyHY=" crossorigin="anonymous">
   <script defer src="/flexsearch.min.js"></script>
-  <script defer src="/en.search.min.41edfc0344c578feffc8ba5e94e6f59bfed684cf40d08bf18134f4a240cd0e15.js" integrity="sha256-Qe38A0TFeP7/yLpelOb1m/7WhM9A0IvxgTT0okDNDhU=" crossorigin="anonymous"></script>
-
+  <script defer src="/en.search.min.ad90ed54c2fb2ebca6bf92dc494821802bb5913fb4ded7c7ce215de203590daa.js" integrity="sha256-rZDtVML7Lrymv5LcSUghgCu1kT&#43;03tfHziFd4gNZDao=" crossorigin="anonymous"></script>
 <link rel="alternate" type="application/rss+xml" href="http://localhost:1313/docs/nsi/cours_terminale/projets/nn/partie_1/index.xml" title="qkzk" />
 <!--
 Made with Book Theme
@@ -7014,67 +7021,67 @@ MathJax.Hub.Config({
 <p>On dispose des entrées (colonnes 2, 3 et 4) qui génèrent une sortie (colonne 5).</p>
 <p>Par exemple, si les entrées sont <code>[0, 0, 1]</code> la sortie est <code>0</code>. etc.</p>
 <table>
-<thead>
-<tr>
-<th></th>
-<th>Input 1</th>
-<th>Input 2</th>
-<th>Input 3</th>
-<th>Outputs</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Exemple 1</td>
-<td>0</td>
-<td>0</td>
-<td>1</td>
-<td>0</td>
-</tr>
-<tr>
-<td>Exemple 2</td>
-<td>1</td>
-<td>1</td>
-<td>1</td>
-<td>1</td>
-</tr>
-<tr>
-<td>Exemple 3</td>
-<td>1</td>
-<td>0</td>
-<td>1</td>
-<td>1</td>
-</tr>
-<tr>
-<td>Exemple 4</td>
-<td>0</td>
-<td>1</td>
-<td>1</td>
-<td>0</td>
-</tr>
-</tbody>
+  <thead>
+      <tr>
+          <th style="text-align: left"></th>
+          <th style="text-align: left">Input 1</th>
+          <th style="text-align: left">Input 2</th>
+          <th style="text-align: left">Input 3</th>
+          <th style="text-align: left">Outputs</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left">Exemple 1</td>
+          <td style="text-align: left">0</td>
+          <td style="text-align: left">0</td>
+          <td style="text-align: left">1</td>
+          <td style="text-align: left">0</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">Exemple 2</td>
+          <td style="text-align: left">1</td>
+          <td style="text-align: left">1</td>
+          <td style="text-align: left">1</td>
+          <td style="text-align: left">1</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">Exemple 3</td>
+          <td style="text-align: left">1</td>
+          <td style="text-align: left">0</td>
+          <td style="text-align: left">1</td>
+          <td style="text-align: left">1</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">Exemple 4</td>
+          <td style="text-align: left">0</td>
+          <td style="text-align: left">1</td>
+          <td style="text-align: left">1</td>
+          <td style="text-align: left">0</td>
+      </tr>
+  </tbody>
 </table>
 <p>On aimerait créer un programme qui apprenne automatiquement à prédire une sortie
 pour une nouvelle entrée.</p>
 <table>
-<thead>
-<tr>
-<th></th>
-<th>Input 1</th>
-<th>Input 2</th>
-<th>Input 3</th>
-<th>Outputs</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Nouvelle situation</td>
-<td>1</td>
-<td>0</td>
-<td>0</td>
-<td>?</td>
-</tr>
-</tbody>
+  <thead>
+      <tr>
+          <th style="text-align: left"></th>
+          <th style="text-align: left">Input 1</th>
+          <th style="text-align: left">Input 2</th>
+          <th style="text-align: left">Input 3</th>
+          <th style="text-align: left">Outputs</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left">Nouvelle situation</td>
+          <td style="text-align: left">1</td>
+          <td style="text-align: left">0</td>
+          <td style="text-align: left">0</td>
+          <td style="text-align: left">?</td>
+      </tr>
+  </tbody>
 </table>
 <p><strong>Quelle devrait-être la nouvelle sortie ?</strong></p>
 <p>Prenez le temps d&rsquo;examiner les entrées pour essayer de deviner la solution&hellip;</p>
@@ -7279,45 +7286,45 @@ mêmes car le générateur est initialisé avec une racine.</p>
 <p><strong>Déception !</strong> On est loin du compte.</p>
 <p>Nos sorties sont très éloignées des nombres attendus (dernière colonne) :</p>
 <table>
-<thead>
-<tr>
-<th></th>
-<th>Input 1</th>
-<th>Input 2</th>
-<th>Input 3</th>
-<th>Outputs</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Exemple 1</td>
-<td>0</td>
-<td>0</td>
-<td>1</td>
-<td>0</td>
-</tr>
-<tr>
-<td>Exemple 2</td>
-<td>1</td>
-<td>1</td>
-<td>1</td>
-<td>1</td>
-</tr>
-<tr>
-<td>Exemple 3</td>
-<td>1</td>
-<td>0</td>
-<td>1</td>
-<td>1</td>
-</tr>
-<tr>
-<td>Exemple 4</td>
-<td>0</td>
-<td>1</td>
-<td>1</td>
-<td>0</td>
-</tr>
-</tbody>
+  <thead>
+      <tr>
+          <th style="text-align: left"></th>
+          <th style="text-align: left">Input 1</th>
+          <th style="text-align: left">Input 2</th>
+          <th style="text-align: left">Input 3</th>
+          <th style="text-align: left">Outputs</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left">Exemple 1</td>
+          <td style="text-align: left">0</td>
+          <td style="text-align: left">0</td>
+          <td style="text-align: left">1</td>
+          <td style="text-align: left">0</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">Exemple 2</td>
+          <td style="text-align: left">1</td>
+          <td style="text-align: left">1</td>
+          <td style="text-align: left">1</td>
+          <td style="text-align: left">1</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">Exemple 3</td>
+          <td style="text-align: left">1</td>
+          <td style="text-align: left">0</td>
+          <td style="text-align: left">1</td>
+          <td style="text-align: left">1</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">Exemple 4</td>
+          <td style="text-align: left">0</td>
+          <td style="text-align: left">1</td>
+          <td style="text-align: left">1</td>
+          <td style="text-align: left">0</td>
+      </tr>
+  </tbody>
 </table>
 <p>Nous allons maintenant aborder <em>l&rsquo;entraînement</em> qui nous permet d&rsquo;améliorer
 ces résultats étape après étape afin de s&rsquo;approcher des valeurs souhaitées.</p>
@@ -7328,24 +7335,24 @@ ces résultats étape après étape afin de s&rsquo;approcher des valeurs souhai
 <p>Commençons par détailler les calculs effectués.</p>
 <p>On prend notre premier exemple :</p>
 <table>
-<thead>
-<tr>
-<th></th>
-<th>Input 1</th>
-<th>Input 2</th>
-<th>Input 3</th>
-<th>Outputs</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Exemple 1</td>
-<td>0</td>
-<td>0</td>
-<td>1</td>
-<td>0</td>
-</tr>
-</tbody>
+  <thead>
+      <tr>
+          <th style="text-align: left"></th>
+          <th style="text-align: left">Input 1</th>
+          <th style="text-align: left">Input 2</th>
+          <th style="text-align: left">Input 3</th>
+          <th style="text-align: left">Outputs</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left">Exemple 1</td>
+          <td style="text-align: left">0</td>
+          <td style="text-align: left">0</td>
+          <td style="text-align: left">1</td>
+          <td style="text-align: left">0</td>
+      </tr>
+  </tbody>
 </table>
 <p>et nos poids aléatoires :</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>Poids synaptiques aléatoires:
@@ -7520,45 +7527,45 @@ entrées par le vecteur des ajustements.</li>
 </span></span><span style="display:flex;"><span> [0.00786506]]
 </span></span></code></pre></div><p>Ce qui correspond bien aux résultats espérés :</p>
 <table>
-<thead>
-<tr>
-<th></th>
-<th>Input 1</th>
-<th>Input 2</th>
-<th>Input 3</th>
-<th>Outputs</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Exemple 1</td>
-<td>0</td>
-<td>0</td>
-<td>1</td>
-<td>0</td>
-</tr>
-<tr>
-<td>Exemple 2</td>
-<td>1</td>
-<td>1</td>
-<td>1</td>
-<td>1</td>
-</tr>
-<tr>
-<td>Exemple 3</td>
-<td>1</td>
-<td>0</td>
-<td>1</td>
-<td>1</td>
-</tr>
-<tr>
-<td>Exemple 4</td>
-<td>0</td>
-<td>1</td>
-<td>1</td>
-<td>0</td>
-</tr>
-</tbody>
+  <thead>
+      <tr>
+          <th style="text-align: left"></th>
+          <th style="text-align: left">Input 1</th>
+          <th style="text-align: left">Input 2</th>
+          <th style="text-align: left">Input 3</th>
+          <th style="text-align: left">Outputs</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left">Exemple 1</td>
+          <td style="text-align: left">0</td>
+          <td style="text-align: left">0</td>
+          <td style="text-align: left">1</td>
+          <td style="text-align: left">0</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">Exemple 2</td>
+          <td style="text-align: left">1</td>
+          <td style="text-align: left">1</td>
+          <td style="text-align: left">1</td>
+          <td style="text-align: left">1</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">Exemple 3</td>
+          <td style="text-align: left">1</td>
+          <td style="text-align: left">0</td>
+          <td style="text-align: left">1</td>
+          <td style="text-align: left">1</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">Exemple 4</td>
+          <td style="text-align: left">0</td>
+          <td style="text-align: left">1</td>
+          <td style="text-align: left">1</td>
+          <td style="text-align: left">0</td>
+      </tr>
+  </tbody>
 </table>
 <p>La fonction sigmoid ne renverra jamais $0$ ou $1$ mais seulement des nombres
 très proches. Voilà pourquoi on obtient $0.00966449 \approx 0$

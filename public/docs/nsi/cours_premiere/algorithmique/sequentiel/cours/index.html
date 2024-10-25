@@ -4,15 +4,23 @@
 <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
     <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Parcours séquentiel d&rsquo;un tableau # pdf : pour impression
+<meta name="description" content="
+  Parcours séquentiel d&rsquo;un tableau
+  #
+
+pdf : pour impression
 Attendus : Écrire un algorithme de recherche d’une occurrence sur des valeurs de type quelconque. Écrire un algorithme de recherche d’un extremum, de calcul d’une moyenne.
 Commentaire : On montre que le coût est linéaire.
-Algorithmes sur les tableaux # Lorsqu&rsquo;on dispose de plusieurs données similaires (notes à un devoirs, dépenses journalières etc.) il est commode de les ranger dans un tableau.">
+
+  Algorithmes sur les tableaux
+  #
+
+Lorsqu&rsquo;on dispose de plusieurs données similaires (notes à un devoirs, dépenses journalières etc.) il est commode de les ranger dans un tableau.">
 <meta name="theme-color" content="#FFFFFF">
 <meta name="color-scheme" content="light dark"><meta property="og:url" content="http://localhost:1313/docs/nsi/cours_premiere/algorithmique/sequentiel/cours/">
   <meta property="og:site_name" content="qkzk">
   <meta property="og:title" content="qkzk">
-  <meta property="og:description" content="Parcours séquentiel d’un tableau # pdf : pour impression
+  <meta property="og:description" content=" Parcours séquentiel d’un tableau # pdf : pour impression
 Attendus : Écrire un algorithme de recherche d’une occurrence sur des valeurs de type quelconque. Écrire un algorithme de recherche d’un extremum, de calcul d’une moyenne.
 Commentaire : On montre que le coût est linéaire.
 Algorithmes sur les tableaux # Lorsqu’on dispose de plusieurs données similaires (notes à un devoirs, dépenses journalières etc.) il est commode de les ranger dans un tableau.">
@@ -23,8 +31,7 @@ Algorithmes sur les tableaux # Lorsqu’on dispose de plusieurs données similai
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/book.min.24c2b1f8dc2338e074345eec5b36f8a002aaa6d1b2e7312e14ac2d6a6958c876.css" integrity="sha256-JMKx&#43;NwjOOB0NF7sWzb4oAKqptGy5zEuFKwtamlYyHY=" crossorigin="anonymous">
   <script defer src="/flexsearch.min.js"></script>
-  <script defer src="/en.search.min.41edfc0344c578feffc8ba5e94e6f59bfed684cf40d08bf18134f4a240cd0e15.js" integrity="sha256-Qe38A0TFeP7/yLpelOb1m/7WhM9A0IvxgTT0okDNDhU=" crossorigin="anonymous"></script>
-
+  <script defer src="/en.search.min.ad90ed54c2fb2ebca6bf92dc494821802bb5913fb4ded7c7ce215de203590daa.js" integrity="sha256-rZDtVML7Lrymv5LcSUghgCu1kT&#43;03tfHziFd4gNZDao=" crossorigin="anonymous"></script>
 <link rel="alternate" type="application/rss+xml" href="http://localhost:1313/docs/nsi/cours_premiere/algorithmique/sequentiel/cours/index.xml" title="qkzk" />
 <!--
 Made with Book Theme
@@ -7256,46 +7263,46 @@ MathJax.Hub.Config({
 <div class="highlight"><pre tabindex="0" style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>T <span style="color:#555">=</span> [<span style="color:#f60">2</span>, <span style="color:#f60">5</span>, <span style="color:#555">-</span><span style="color:#f60">4</span>, <span style="color:#f60">12</span>]
 </span></span></code></pre></div><p><strong>A-t-on 9 dans le tableau ?</strong></p>
 <table>
-<thead>
-<tr>
-<th>élément</th>
-<th>2</th>
-<th>5</th>
-<th>-4</th>
-<th>12</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>élément == 9 ?</code></td>
-<td>Faux</td>
-<td>Faux</td>
-<td>Faux</td>
-<td>Faux</td>
-</tr>
-</tbody>
+  <thead>
+      <tr>
+          <th style="text-align: left">élément</th>
+          <th style="text-align: left">2</th>
+          <th style="text-align: left">5</th>
+          <th style="text-align: left">-4</th>
+          <th style="text-align: left">12</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left"><code>élément == 9 ?</code></td>
+          <td style="text-align: left">Faux</td>
+          <td style="text-align: left">Faux</td>
+          <td style="text-align: left">Faux</td>
+          <td style="text-align: left">Faux</td>
+      </tr>
+  </tbody>
 </table>
 <p>Le parcours de la boucle se termine et l&rsquo;algorithme retourne Faux.</p>
 <p><strong>A-t-on -4 dans le tableau ?</strong></p>
 <table>
-<thead>
-<tr>
-<th>élément</th>
-<th>2</th>
-<th>5</th>
-<th>-4</th>
-<th>12</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>élément == 9 ?</code></td>
-<td>Faux</td>
-<td>Faux</td>
-<td>Vrai</td>
-<td></td>
-</tr>
-</tbody>
+  <thead>
+      <tr>
+          <th style="text-align: left">élément</th>
+          <th style="text-align: left">2</th>
+          <th style="text-align: left">5</th>
+          <th style="text-align: left">-4</th>
+          <th style="text-align: left">12</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left"><code>élément == 9 ?</code></td>
+          <td style="text-align: left">Faux</td>
+          <td style="text-align: left">Faux</td>
+          <td style="text-align: left">Vrai</td>
+          <td style="text-align: left"></td>
+      </tr>
+  </tbody>
 </table>
 <p>L&rsquo;algorithme retourne Vrai. La dernière case du tableau n&rsquo;est jamais visitée !</p>
 <h2 id="coût-du-parcours-séquentiel">
@@ -7342,24 +7349,24 @@ alors il existe des algorithmes plus rapides.</p>
 </ul>
 <p>Pour le tableau <code>T = [2, 5, 9, 7]</code> cela donne :</p>
 <table>
-<thead>
-<tr>
-<th>élément <code>e</code></th>
-<th>2</th>
-<th>5</th>
-<th>9</th>
-<th>7</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>maximum</code></td>
-<td>2</td>
-<td>5</td>
-<td>9</td>
-<td>9</td>
-</tr>
-</tbody>
+  <thead>
+      <tr>
+          <th style="text-align: left">élément <code>e</code></th>
+          <th style="text-align: left">2</th>
+          <th style="text-align: left">5</th>
+          <th style="text-align: left">9</th>
+          <th style="text-align: left">7</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left"><code>maximum</code></td>
+          <td style="text-align: left">2</td>
+          <td style="text-align: left">5</td>
+          <td style="text-align: left">9</td>
+          <td style="text-align: left">9</td>
+      </tr>
+  </tbody>
 </table>
 <p>Le maximum vaut 9.</p>
 <h3 id="algorithme">
@@ -7403,31 +7410,31 @@ alors il existe des algorithmes plus rapides.</p>
 </ul>
 <p>Pour le tableau <code>T = [2, 5, 9, 8]</code> cela donne :</p>
 <table>
-<thead>
-<tr>
-<th>élément <code>e</code></th>
-<th>2</th>
-<th>5</th>
-<th>9</th>
-<th>8</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>nb_elements</code></td>
-<td>1</td>
-<td>2</td>
-<td>3</td>
-<td>4</td>
-</tr>
-<tr>
-<td><code>somme  </code></td>
-<td>2</td>
-<td>7</td>
-<td>16</td>
-<td>24</td>
-</tr>
-</tbody>
+  <thead>
+      <tr>
+          <th style="text-align: left">élément <code>e</code></th>
+          <th style="text-align: left">2</th>
+          <th style="text-align: left">5</th>
+          <th style="text-align: left">9</th>
+          <th style="text-align: left">8</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left"><code>nb_elements</code></td>
+          <td style="text-align: left">1</td>
+          <td style="text-align: left">2</td>
+          <td style="text-align: left">3</td>
+          <td style="text-align: left">4</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><code>somme  </code></td>
+          <td style="text-align: left">2</td>
+          <td style="text-align: left">7</td>
+          <td style="text-align: left">16</td>
+          <td style="text-align: left">24</td>
+      </tr>
+  </tbody>
 </table>
 <p>Le somme vaut 24 et il y a 4 éléments : la moyenne est <code>24/4 = 6</code></p>
 <h3 id="algorithme-1">
@@ -7656,65 +7663,65 @@ Ici, on le remplace par les caractères <code>', '</code> et nos éléments s&rs
 </span></span><span style="display:flex;"><span>       [<span style="color:#f60">4</span>, <span style="color:#f60">5</span>, <span style="color:#f60">0</span>, <span style="color:#f60">1</span>]]
 </span></span></code></pre></div><p>Calculons la somme de cette matrice à la main :</p>
 <table>
-<thead>
-<tr>
-<th>ligne 0</th>
-<th>élément <code>e</code></th>
-<th>3</th>
-<th>9</th>
-<th>1</th>
-<th>2</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td></td>
-<td><code>effectif</code></td>
-<td>1</td>
-<td>2</td>
-<td>3</td>
-<td>4</td>
-</tr>
-<tr>
-<td></td>
-<td><code>somme</code></td>
-<td>3</td>
-<td>12</td>
-<td>13</td>
-<td>15</td>
-</tr>
-</tbody>
+  <thead>
+      <tr>
+          <th style="text-align: left">ligne 0</th>
+          <th style="text-align: left">élément <code>e</code></th>
+          <th style="text-align: left">3</th>
+          <th style="text-align: left">9</th>
+          <th style="text-align: left">1</th>
+          <th style="text-align: left">2</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left"></td>
+          <td style="text-align: left"><code>effectif</code></td>
+          <td style="text-align: left">1</td>
+          <td style="text-align: left">2</td>
+          <td style="text-align: left">3</td>
+          <td style="text-align: left">4</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"></td>
+          <td style="text-align: left"><code>somme</code></td>
+          <td style="text-align: left">3</td>
+          <td style="text-align: left">12</td>
+          <td style="text-align: left">13</td>
+          <td style="text-align: left">15</td>
+      </tr>
+  </tbody>
 </table>
 <p>On ne réinitialise pas <code>effectif</code> et <code>somme</code> entre les lignes !</p>
 <table>
-<thead>
-<tr>
-<th>ligne 1</th>
-<th>élément <code>e</code></th>
-<th>4</th>
-<th>5</th>
-<th>0</th>
-<th>1</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td></td>
-<td><code>effectif</code></td>
-<td>5</td>
-<td>6</td>
-<td>7</td>
-<td>8</td>
-</tr>
-<tr>
-<td></td>
-<td><code>somme</code></td>
-<td>19</td>
-<td>24</td>
-<td>24</td>
-<td>25</td>
-</tr>
-</tbody>
+  <thead>
+      <tr>
+          <th style="text-align: left">ligne 1</th>
+          <th style="text-align: left">élément <code>e</code></th>
+          <th style="text-align: left">4</th>
+          <th style="text-align: left">5</th>
+          <th style="text-align: left">0</th>
+          <th style="text-align: left">1</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left"></td>
+          <td style="text-align: left"><code>effectif</code></td>
+          <td style="text-align: left">5</td>
+          <td style="text-align: left">6</td>
+          <td style="text-align: left">7</td>
+          <td style="text-align: left">8</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"></td>
+          <td style="text-align: left"><code>somme</code></td>
+          <td style="text-align: left">19</td>
+          <td style="text-align: left">24</td>
+          <td style="text-align: left">24</td>
+          <td style="text-align: left">25</td>
+      </tr>
+  </tbody>
 </table>
 <h2 id="en-python">
   En Python
@@ -7754,7 +7761,7 @@ d&rsquo;indices, mais en plus les éléments de la matrice sont atteints autreme
   dégradé obtenu
   <a class="anchor" href="#d%c3%a9grad%c3%a9-obtenu">#</a>
 </h2>
-<p><img src="/uploads/docsnsi/algo/sequentiel/degrade.jpg" alt="Degradé rouge -&amp;gt; noir" /></p>
+<p><img src="/uploads/docsnsi/algo/sequentiel/degrade.jpg" alt="Degradé rouge -&gt; noir" /></p>
 <h1 id="variants-et-invariants">
   Variants et invariants
   <a class="anchor" href="#variants-et-invariants">#</a>

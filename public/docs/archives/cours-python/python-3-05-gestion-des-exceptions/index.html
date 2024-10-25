@@ -4,20 +4,31 @@
 <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
     <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Les exceptions # Chaque fois que Python rencontre un problème dans le déroulé d&rsquo;un programme, il génère une erreur qui interrompt son exécution.
-Dans certains cas, il est possible de capturer cette erreur et de réagir autrement.
+<meta name="description" content="
+  Les exceptions
+  #
+
+Chaque fois que Python rencontre un problème dans le déroulé d&rsquo;un programme,
+il génère une erreur qui interrompt son exécution.
+Dans certains cas,  il est possible de capturer cette erreur et de
+réagir autrement.
 C&rsquo;est ce qu&rsquo;on appelle une exception.
 Vous avez deux objectifs concernant les exceptions :
-apprendre à lire les messages d&rsquo;erreur générés par Python. C&rsquo;est le seul moyen de progresser. Vous ferez toujours les mêmes erreurs si vous ne faîtes pas l&rsquo;effort de chercher à comprendre vos erreurs.">
+
+
+apprendre à lire les messages d&rsquo;erreur générés par Python.
+C&rsquo;est le seul moyen de progresser. Vous ferez toujours les mêmes erreurs
+si vous ne faîtes pas l&rsquo;effort de chercher à comprendre vos erreurs.
+C&rsquo;est un objectif de base et vous devez acquerir ce reflexe immédiatement.">
 <meta name="theme-color" content="#FFFFFF">
 <meta name="color-scheme" content="light dark"><meta property="og:url" content="http://localhost:1313/docs/archives/cours-python/python-3-05-gestion-des-exceptions/">
   <meta property="og:site_name" content="qkzk">
   <meta property="og:title" content="Python 3 - 05 Gestion des exceptions">
-  <meta property="og:description" content="Les exceptions # Chaque fois que Python rencontre un problème dans le déroulé d’un programme, il génère une erreur qui interrompt son exécution.
+  <meta property="og:description" content=" Les exceptions # Chaque fois que Python rencontre un problème dans le déroulé d’un programme, il génère une erreur qui interrompt son exécution.
 Dans certains cas, il est possible de capturer cette erreur et de réagir autrement.
 C’est ce qu’on appelle une exception.
 Vous avez deux objectifs concernant les exceptions :
-apprendre à lire les messages d’erreur générés par Python. C’est le seul moyen de progresser. Vous ferez toujours les mêmes erreurs si vous ne faîtes pas l’effort de chercher à comprendre vos erreurs.">
+apprendre à lire les messages d’erreur générés par Python. C’est le seul moyen de progresser. Vous ferez toujours les mêmes erreurs si vous ne faîtes pas l’effort de chercher à comprendre vos erreurs. C’est un objectif de base et vous devez acquerir ce reflexe immédiatement.">
   <meta property="og:locale" content="en_us">
   <meta property="og:type" content="website">
 <title>Python 3 - 05 Gestion des exceptions | qkzk</title>
@@ -25,8 +36,7 @@ apprendre à lire les messages d’erreur générés par Python. C’est le seul
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/book.min.24c2b1f8dc2338e074345eec5b36f8a002aaa6d1b2e7312e14ac2d6a6958c876.css" integrity="sha256-JMKx&#43;NwjOOB0NF7sWzb4oAKqptGy5zEuFKwtamlYyHY=" crossorigin="anonymous">
   <script defer src="/flexsearch.min.js"></script>
-  <script defer src="/en.search.min.41edfc0344c578feffc8ba5e94e6f59bfed684cf40d08bf18134f4a240cd0e15.js" integrity="sha256-Qe38A0TFeP7/yLpelOb1m/7WhM9A0IvxgTT0okDNDhU=" crossorigin="anonymous"></script>
-
+  <script defer src="/en.search.min.ad90ed54c2fb2ebca6bf92dc494821802bb5913fb4ded7c7ce215de203590daa.js" integrity="sha256-rZDtVML7Lrymv5LcSUghgCu1kT&#43;03tfHziFd4gNZDao=" crossorigin="anonymous"></script>
 <link rel="alternate" type="application/rss+xml" href="http://localhost:1313/docs/archives/cours-python/python-3-05-gestion-des-exceptions/index.xml" title="qkzk" />
 <!--
 Made with Book Theme
@@ -7110,54 +7120,54 @@ bonjour n'est pas un nombre !
 <li>Toutes les exceptions sont documentées en ligne.</li>
 </ol>
 <table>
-<thead>
-<tr>
-<th>Nom de l&rsquo;exception</th>
-<th>description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>AssertionError</td>
-<td>levée par <code>assert condition</code> avec <code>condition == False</code></td>
-</tr>
-<tr>
-<td>ZeroDivisionError</td>
-<td>division par $0$</td>
-</tr>
-<tr>
-<td>ImportError</td>
-<td>Python ne parvient pas à charger un module</td>
-</tr>
-<tr>
-<td>ModuleNotFoundError</td>
-<td>Le module demandé est introuvable</td>
-</tr>
-<tr>
-<td>NameError</td>
-<td>Une variable est appelée avant d&rsquo;avoir été définie</td>
-</tr>
-<tr>
-<td>IndexError</td>
-<td>Élément introuvable dans une liste</td>
-</tr>
-<tr>
-<td>KeyError</td>
-<td>Élément introuvable dans un dictionnaire</td>
-</tr>
-<tr>
-<td>SyntaxError</td>
-<td>La syntaxe est incorrecte. Le script s&rsquo;arrête toujours</td>
-</tr>
-<tr>
-<td>IndentationError</td>
-<td>L&rsquo;indentation est incorrecte. Le script s&rsquo;arrête toujours</td>
-</tr>
-<tr>
-<td>TypeError</td>
-<td>On appelle une méthode / fonction pour un type qu&rsquo;elle ne supporte pas</td>
-</tr>
-</tbody>
+  <thead>
+      <tr>
+          <th style="text-align: left">Nom de l&rsquo;exception</th>
+          <th style="text-align: left">description</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left">AssertionError</td>
+          <td style="text-align: left">levée par <code>assert condition</code> avec <code>condition == False</code></td>
+      </tr>
+      <tr>
+          <td style="text-align: left">ZeroDivisionError</td>
+          <td style="text-align: left">division par $0$</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">ImportError</td>
+          <td style="text-align: left">Python ne parvient pas à charger un module</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">ModuleNotFoundError</td>
+          <td style="text-align: left">Le module demandé est introuvable</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">NameError</td>
+          <td style="text-align: left">Une variable est appelée avant d&rsquo;avoir été définie</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">IndexError</td>
+          <td style="text-align: left">Élément introuvable dans une liste</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">KeyError</td>
+          <td style="text-align: left">Élément introuvable dans un dictionnaire</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">SyntaxError</td>
+          <td style="text-align: left">La syntaxe est incorrecte. Le script s&rsquo;arrête toujours</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">IndentationError</td>
+          <td style="text-align: left">L&rsquo;indentation est incorrecte. Le script s&rsquo;arrête toujours</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">TypeError</td>
+          <td style="text-align: left">On appelle une méthode / fonction pour un type qu&rsquo;elle ne supporte pas</td>
+      </tr>
+  </tbody>
 </table>
 <h2 id="exercices">
   Exercices

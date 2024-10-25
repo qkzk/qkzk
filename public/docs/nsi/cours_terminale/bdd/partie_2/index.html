@@ -4,13 +4,106 @@
 <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
     <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Concevoir une base de donnée # pdf : pour impression, diapo
-Généralités # Intérêts d&rsquo;un Système de Gestion de Base de Données (SGBD) # Assure la persistance des données Structure l&rsquo;information Permet de trouver rapidement une information Multi-utilisateurs Sécurise les données Filtre les données qu&rsquo;un groupe d&rsquo;utilisateurs peut voir Centralise la sauvegarde et la mise à jour des données Maintient la cohérence des données Non redondance Contrôle de l&rsquo;intégrité des données (lors de la saisie, de la mise à jour, de la suppression) Type de SGBD # Bases hiérarchiques (structure arborescente) ou réseau (structure de graphe) navigation entre les données Bases relationnelles Données sous forme de table, langage SQL Bases déductives Intégration d&rsquo;ensemble de règles, langage DATALOG Bases objet Données sous forme d&rsquo;objets Bases noSQL Pas de structuration des données Exemples de SGBD Relationnels (SGDBR) # Access (suite Microsoft Office) SQlite, libre PosgreSQL, libre Oracle, non libre DB2, non libre H2, libre Volumétrie # Exemple de la banque (BNP Paribas) # Grande masse d’informations $8 \times 10^6$ clients">
+<meta name="description" content="
+  Concevoir une base de donnée
+  #
+
+pdf : pour impression, diapo
+
+  Généralités
+  #
+
+
+  Intérêts d&rsquo;un Système de Gestion de Base de Données (SGBD)
+  #
+
+
+  
+Assure la persistance des données
+Structure l&rsquo;information
+Permet de trouver rapidement une information
+Multi-utilisateurs
+Sécurise les données
+
+Filtre les données qu&rsquo;un groupe d&rsquo;utilisateurs peut voir
+Centralise la sauvegarde et la mise à jour des données
+
+
+Maintient la cohérence des données
+
+Non redondance
+Contrôle de l&rsquo;intégrité des données (lors de la saisie, de la mise à jour, de la suppression)
+
+
+
+
+
+
+
+  Type de SGBD
+  #
+
+
+Bases hiérarchiques (structure arborescente) ou réseau (structure de graphe)
+
+navigation entre les données
+
+
+
+
+  
+Bases relationnelles
+
+Données sous forme de table, langage SQL
+
+
+
+
+
+
+
+Bases déductives
+
+Intégration d&rsquo;ensemble de règles, langage DATALOG
+
+
+Bases objet
+
+Données sous forme d&rsquo;objets
+
+
+Bases noSQL
+
+Pas de structuration des données
+
+
+
+
+  Exemples de SGBD Relationnels (SGDBR)
+  #
+
+
+Access (suite Microsoft Office)
+SQlite, libre
+PosgreSQL, libre
+Oracle, non libre
+DB2, non libre
+H2, libre
+
+
+  Volumétrie
+  #
+
+
+  Exemple de la banque (BNP Paribas)
+  #
+
+Grande masse d’informations $8 \times 10^6$ clients">
 <meta name="theme-color" content="#FFFFFF">
 <meta name="color-scheme" content="light dark"><meta property="og:url" content="http://localhost:1313/docs/nsi/cours_terminale/bdd/partie_2/">
   <meta property="og:site_name" content="qkzk">
   <meta property="og:title" content="Cours - partie 2">
-  <meta property="og:description" content="Concevoir une base de donnée # pdf : pour impression, diapo
+  <meta property="og:description" content=" Concevoir une base de donnée # pdf : pour impression, diapo
 Généralités # Intérêts d’un Système de Gestion de Base de Données (SGBD) # Assure la persistance des données Structure l’information Permet de trouver rapidement une information Multi-utilisateurs Sécurise les données Filtre les données qu’un groupe d’utilisateurs peut voir Centralise la sauvegarde et la mise à jour des données Maintient la cohérence des données Non redondance Contrôle de l’intégrité des données (lors de la saisie, de la mise à jour, de la suppression) Type de SGBD # Bases hiérarchiques (structure arborescente) ou réseau (structure de graphe) navigation entre les données Bases relationnelles Données sous forme de table, langage SQL Bases déductives Intégration d’ensemble de règles, langage DATALOG Bases objet Données sous forme d’objets Bases noSQL Pas de structuration des données Exemples de SGBD Relationnels (SGDBR) # Access (suite Microsoft Office) SQlite, libre PosgreSQL, libre Oracle, non libre DB2, non libre H2, libre Volumétrie # Exemple de la banque (BNP Paribas) # Grande masse d’informations $8 \times 10^6$ clients">
   <meta property="og:locale" content="en_us">
   <meta property="og:type" content="website">
@@ -19,8 +112,7 @@ Généralités # Intérêts d’un Système de Gestion de Base de Données (SGBD
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/book.min.24c2b1f8dc2338e074345eec5b36f8a002aaa6d1b2e7312e14ac2d6a6958c876.css" integrity="sha256-JMKx&#43;NwjOOB0NF7sWzb4oAKqptGy5zEuFKwtamlYyHY=" crossorigin="anonymous">
   <script defer src="/flexsearch.min.js"></script>
-  <script defer src="/en.search.min.41edfc0344c578feffc8ba5e94e6f59bfed684cf40d08bf18134f4a240cd0e15.js" integrity="sha256-Qe38A0TFeP7/yLpelOb1m/7WhM9A0IvxgTT0okDNDhU=" crossorigin="anonymous"></script>
-
+  <script defer src="/en.search.min.ad90ed54c2fb2ebca6bf92dc494821802bb5913fb4ded7c7ce215de203590daa.js" integrity="sha256-rZDtVML7Lrymv5LcSUghgCu1kT&#43;03tfHziFd4gNZDao=" crossorigin="anonymous"></script>
 <link rel="alternate" type="application/rss+xml" href="http://localhost:1313/docs/nsi/cours_terminale/bdd/partie_2/index.xml" title="qkzk" />
 <!--
 Made with Book Theme
@@ -7397,7 +7489,7 @@ MathJax.Hub.Config({
   Cas des catégories socioprofessionnelles du Nord.
   <a class="anchor" href="#cas-des-cat%c3%a9gories-socioprofessionnelles-du-nord">#</a>
 </h3>
-<p><img src="/uploads/docnsitale/bdd/fig/categorie_socio_csv.png" alt="Fichier d&amp;rsquo;origine : CSV" title="Fichier d&#39;origine : CSV"/></p>
+<p><img src="/uploads/docnsitale/bdd/fig/categorie_socio_csv.png" alt="Fichier d&rsquo;origine : CSV" title="Fichier d&#39;origine : CSV"/></p>
 <h2 id="construire-une-structure-pertinente">
   Construire une structure pertinente
   <a class="anchor" href="#construire-une-structure-pertinente">#</a>

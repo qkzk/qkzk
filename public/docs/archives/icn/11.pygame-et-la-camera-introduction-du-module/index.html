@@ -4,12 +4,45 @@
 <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
     <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Author: by Nirav Patel Contact: [nrp@eclecti.cc](mailto:nrp%40eclecti.cc) Tradution: par qkzk [Lien vers l&#39;article original](http://www.pygame.org/docs/tut/CameraIntro.html) Introduction # Remarques préliminaires : # 1. ** **Ce tutoriel est difficile, il demande de régulièrement mettre à jour un script Python et, pour cela, il faut parfaitement comprendre ce qu&#39;il fait. Voilà pourquoi une solution complète est disponible à la fin de cet article. Vous pouvez tout à fait l&#39;utiliser en première lecture ; comprenez bien que vous ne parviendrez pas à dépasser ce tutoriel si vous n&#39;en faites pas parfaitement l&#39;acquisition.">
+<meta name="description" content="
+
+
+Author:
+by Nirav Patel
+
+
+
+Contact:
+[nrp@eclecti.cc](mailto:nrp%40eclecti.cc)
+
+
+
+Tradution:
+par qkzk
+
+
+
+
+[Lien vers l&#39;article original](http://www.pygame.org/docs/tut/CameraIntro.html)
+
+  Introduction
+  #
+
+
+  Remarques préliminaires :
+  #
+
+  1. ** **Ce tutoriel est difficile, il demande de régulièrement mettre à jour un script Python et, pour cela, il faut parfaitement comprendre ce qu&#39;il fait. Voilà pourquoi une solution complète est disponible à la fin de cet article. Vous pouvez tout à fait l&#39;utiliser en première lecture ; comprenez bien que vous ne parviendrez pas à dépasser ce tutoriel si vous n&#39;en faites pas parfaitement l&#39;acquisition.
+  2. Il fonctionne sous LINUX et donc pas directement sur vos PC WINDOWS. Il faut donc l&#39;utiliser sur un raspberry pi équipé D&#39;UNE CAMERA... sur lequel Pygame est installé.
+  3. Ce tutoriel utilise **Pygame**. Il est inutile d&#39;espérer le comprendre si vous n&#39;avez jamais rien fait dans Pygame. Les manipulations élémentaires (display, window, blit, events etc.) doivent être comprises.
+  4. Pygame 1.9 supporte la gestion des camera, vous permettant de capturer des images fixes, de regarder des vidéos en live et de faire un peu de computer vision. Ce tutoriel va présenter ces situations et fournir des exemples de code sur lesquels appuyer vos jeux et applications. Vous pouvez vous appuyer sur [`reference documentation`](http://www.pygame.org/docs/ref/camera.html#module-pygame.camera) pour l&#39;API complète.
+
+**Remarque : **Dans Pygame 1.9, le module camera fournit une utilisation native de la camera pour celles qui utilisent v4l2 dans Linux. Certaines autres plateformes sont supportées en via Videocapture ou OpenCV, mais ce guide va se concentrer sur l&rsquo;utilisation native. La plupart des exemples vont fonctionner sur d&rsquo;autres plateformes, mais certains outils comme les contrôles ne fonctionneront plus. Ce module est aussi qualifié D&rsquo;EXPERIMENTAL, signifiant qu&rsquo;il peut évoluer dans les versions ultérieures.">
 <meta name="theme-color" content="#FFFFFF">
 <meta name="color-scheme" content="light dark"><meta property="og:url" content="http://localhost:1313/docs/archives/icn/11.pygame-et-la-camera-introduction-du-module/">
   <meta property="og:site_name" content="qkzk">
   <meta property="og:title" content="11. Pygame et la camera : introduction du module">
-  <meta property="og:description" content="Author: by Nirav Patel Contact: [nrp@eclecti.cc](mailto:nrp%40eclecti.cc) Tradution: par qkzk [Lien vers l&#39;article original](http://www.pygame.org/docs/tut/CameraIntro.html) Introduction # Remarques préliminaires : # 1. ** **Ce tutoriel est difficile, il demande de régulièrement mettre à jour un script Python et, pour cela, il faut parfaitement comprendre ce qu&#39;il fait. Voilà pourquoi une solution complète est disponible à la fin de cet article. Vous pouvez tout à fait l&#39;utiliser en première lecture ; comprenez bien que vous ne parviendrez pas à dépasser ce tutoriel si vous n&#39;en faites pas parfaitement l&#39;acquisition.">
+  <meta property="og:description" content=" Author: by Nirav Patel Contact: [nrp@eclecti.cc](mailto:nrp%40eclecti.cc) Tradution: par qkzk [Lien vers l&#39;article original](http://www.pygame.org/docs/tut/CameraIntro.html) Introduction # Remarques préliminaires : # 1. ** **Ce tutoriel est difficile, il demande de régulièrement mettre à jour un script Python et, pour cela, il faut parfaitement comprendre ce qu&#39;il fait. Voilà pourquoi une solution complète est disponible à la fin de cet article. Vous pouvez tout à fait l&#39;utiliser en première lecture ; comprenez bien que vous ne parviendrez pas à dépasser ce tutoriel si vous n&#39;en faites pas parfaitement l&#39;acquisition. 2. Il fonctionne sous LINUX et donc pas directement sur vos PC WINDOWS. Il faut donc l&#39;utiliser sur un raspberry pi équipé D&#39;UNE CAMERA... sur lequel Pygame est installé. 3. Ce tutoriel utilise **Pygame**. Il est inutile d&#39;espérer le comprendre si vous n&#39;avez jamais rien fait dans Pygame. Les manipulations élémentaires (display, window, blit, events etc.) doivent être comprises. 4. Pygame 1.9 supporte la gestion des camera, vous permettant de capturer des images fixes, de regarder des vidéos en live et de faire un peu de computer vision. Ce tutoriel va présenter ces situations et fournir des exemples de code sur lesquels appuyer vos jeux et applications. Vous pouvez vous appuyer sur [`reference documentation`](http://www.pygame.org/docs/ref/camera.html#module-pygame.camera) pour l&#39;API complète. **Remarque : **Dans Pygame 1.9, le module camera fournit une utilisation native de la camera pour celles qui utilisent v4l2 dans Linux. Certaines autres plateformes sont supportées en via Videocapture ou OpenCV, mais ce guide va se concentrer sur l’utilisation native. La plupart des exemples vont fonctionner sur d’autres plateformes, mais certains outils comme les contrôles ne fonctionneront plus. Ce module est aussi qualifié D’EXPERIMENTAL, signifiant qu’il peut évoluer dans les versions ultérieures.">
   <meta property="og:locale" content="en_us">
   <meta property="og:type" content="website">
 <title>11. Pygame et la camera : introduction du module | qkzk</title>
@@ -17,8 +50,7 @@
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/book.min.24c2b1f8dc2338e074345eec5b36f8a002aaa6d1b2e7312e14ac2d6a6958c876.css" integrity="sha256-JMKx&#43;NwjOOB0NF7sWzb4oAKqptGy5zEuFKwtamlYyHY=" crossorigin="anonymous">
   <script defer src="/flexsearch.min.js"></script>
-  <script defer src="/en.search.min.41edfc0344c578feffc8ba5e94e6f59bfed684cf40d08bf18134f4a240cd0e15.js" integrity="sha256-Qe38A0TFeP7/yLpelOb1m/7WhM9A0IvxgTT0okDNDhU=" crossorigin="anonymous"></script>
-
+  <script defer src="/en.search.min.ad90ed54c2fb2ebca6bf92dc494821802bb5913fb4ded7c7ce215de203590daa.js" integrity="sha256-rZDtVML7Lrymv5LcSUghgCu1kT&#43;03tfHziFd4gNZDao=" crossorigin="anonymous"></script>
 <link rel="alternate" type="application/rss+xml" href="http://localhost:1313/docs/archives/icn/11.pygame-et-la-camera-introduction-du-module/index.xml" title="qkzk" />
 <!--
 Made with Book Theme

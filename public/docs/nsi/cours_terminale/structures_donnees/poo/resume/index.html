@@ -5,8 +5,27 @@
     <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="pdf: pour impression
-Introduction à la programmation objet : Les grands principes # langage à objet # Alan Kay SmallTalk
-tout est objet chaque objet a un type chaque objet a sa propre mémoire, constituée d&rsquo;autres objets tous les objets d&rsquo;un type donné peuvent avoir les mêmes messages un programme est un regroupement d&rsquo;objets qui interagissent par envoi de messages type # c&rsquo;est quoi un type ?
+
+  Introduction à la programmation objet : Les grands principes
+  #
+
+
+  langage à objet
+  #
+
+Alan Kay SmallTalk
+
+tout est objet
+chaque objet a un type
+chaque objet a sa propre mémoire, constituée d&rsquo;autres objets
+tous les objets d&rsquo;un type donné peuvent avoir les mêmes messages
+un programme est un regroupement d&rsquo;objets qui interagissent par envoi de messages
+
+
+  type
+  #
+
+c&rsquo;est quoi un type ?
 booléen, entier, Competiteur, Temps, List, Combattant, Voiture etc.">
 <meta name="theme-color" content="#FFFFFF">
 <meta name="color-scheme" content="light dark"><meta property="og:url" content="http://localhost:1313/docs/nsi/cours_terminale/structures_donnees/poo/resume/">
@@ -23,8 +42,7 @@ booléen, entier, Competiteur, Temps, List, Combattant, Voiture etc.">
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/book.min.24c2b1f8dc2338e074345eec5b36f8a002aaa6d1b2e7312e14ac2d6a6958c876.css" integrity="sha256-JMKx&#43;NwjOOB0NF7sWzb4oAKqptGy5zEuFKwtamlYyHY=" crossorigin="anonymous">
   <script defer src="/flexsearch.min.js"></script>
-  <script defer src="/en.search.min.41edfc0344c578feffc8ba5e94e6f59bfed684cf40d08bf18134f4a240cd0e15.js" integrity="sha256-Qe38A0TFeP7/yLpelOb1m/7WhM9A0IvxgTT0okDNDhU=" crossorigin="anonymous"></script>
-
+  <script defer src="/en.search.min.ad90ed54c2fb2ebca6bf92dc494821802bb5913fb4ded7c7ce215de203590daa.js" integrity="sha256-rZDtVML7Lrymv5LcSUghgCu1kT&#43;03tfHziFd4gNZDao=" crossorigin="anonymous"></script>
 <link rel="alternate" type="application/rss+xml" href="http://localhost:1313/docs/nsi/cours_terminale/structures_donnees/poo/resume/index.xml" title="qkzk" />
 <!--
 Made with Book Theme
@@ -7199,66 +7217,66 @@ une instance.</p>
 </h2>
 <p>Permet de définir des &ldquo;opérateurs&rdquo; et de donner des propriétés aux objets :</p>
 <table>
-<thead>
-<tr>
-<th>Méthode spéciale</th>
-<th>Usage</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>__add__</code></td>
-<td><code>+</code></td>
-</tr>
-<tr>
-<td><code>__mul__</code></td>
-<td><code>*</code></td>
-</tr>
-<tr>
-<td><code>__sub__</code></td>
-<td><code>-</code></td>
-</tr>
-<tr>
-<td><code>__eq__</code></td>
-<td><code>==</code></td>
-</tr>
-<tr>
-<td><code>__ne__</code></td>
-<td><code>!=</code></td>
-</tr>
-<tr>
-<td><code>__lt__</code></td>
-<td><code>&lt;</code></td>
-</tr>
-<tr>
-<td><code>__ge__</code></td>
-<td><code>&lt;=</code></td>
-</tr>
-<tr>
-<td><code>__gt__</code></td>
-<td><code>&gt;</code></td>
-</tr>
-<tr>
-<td><code>__ge__</code></td>
-<td><code>&gt;=</code></td>
-</tr>
-<tr>
-<td><code>__repr__</code></td>
-<td>dans l&rsquo;interpréteur <code>&gt;&gt;&gt; obj</code></td>
-</tr>
-<tr>
-<td><code>__str__</code></td>
-<td><code>str(obj), print(obj)</code></td>
-</tr>
-<tr>
-<td><code>__getitem__</code></td>
-<td><code>obj[i]</code></td>
-</tr>
-<tr>
-<td><code>__iter__</code></td>
-<td><code>for v in obj</code></td>
-</tr>
-</tbody>
+  <thead>
+      <tr>
+          <th style="text-align: left">Méthode spéciale</th>
+          <th style="text-align: left">Usage</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left"><code>__add__</code></td>
+          <td style="text-align: left"><code>+</code></td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><code>__mul__</code></td>
+          <td style="text-align: left"><code>*</code></td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><code>__sub__</code></td>
+          <td style="text-align: left"><code>-</code></td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><code>__eq__</code></td>
+          <td style="text-align: left"><code>==</code></td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><code>__ne__</code></td>
+          <td style="text-align: left"><code>!=</code></td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><code>__lt__</code></td>
+          <td style="text-align: left"><code>&lt;</code></td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><code>__ge__</code></td>
+          <td style="text-align: left"><code>&lt;=</code></td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><code>__gt__</code></td>
+          <td style="text-align: left"><code>&gt;</code></td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><code>__ge__</code></td>
+          <td style="text-align: left"><code>&gt;=</code></td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><code>__repr__</code></td>
+          <td style="text-align: left">dans l&rsquo;interpréteur <code>&gt;&gt;&gt; obj</code></td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><code>__str__</code></td>
+          <td style="text-align: left"><code>str(obj), print(obj)</code></td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><code>__getitem__</code></td>
+          <td style="text-align: left"><code>obj[i]</code></td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><code>__iter__</code></td>
+          <td style="text-align: left"><code>for v in obj</code></td>
+      </tr>
+  </tbody>
 </table>
 <h3 id="exemple-dimplémentation-dune-méthode-spéciale---__add__">
   Exemple d&rsquo;implémentation d&rsquo;une méthode spéciale :  <code>__add__</code>

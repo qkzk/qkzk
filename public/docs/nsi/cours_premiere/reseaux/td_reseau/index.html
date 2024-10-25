@@ -4,16 +4,35 @@
 <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
     <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="pdf pour impression # Exercice 1. Adresse IP # Soit l&rsquo;adresse ip suivante :
+<meta name="description" content="
+  pdf pour impression
+  #
+
+
+  Exercice 1. Adresse IP
+  #
+
+Soit l&rsquo;adresse ip suivante :
 192.16.5.133/24
-Est-ce une adresse IPv4 ou IPv6 ? Justifier. Combien de bits sont utilisés pour identifier l&rsquo;adresse réseau ? Combien de bits sont utilisés pour identifier la partie hôte ? Écrire le masque de sous réseau au format décimal L&rsquo;adresse 192.16.5.130 figure-t-elle dans le même réseau ? Justifier. Exercice 2. Adresse IP : masque de taille quelconque # On considère l&rsquo;adresse IP 172.">
+
+Est-ce une adresse IPv4 ou IPv6 ? Justifier.
+Combien de bits sont utilisés pour identifier l&rsquo;adresse réseau ?
+Combien de bits sont utilisés pour identifier la partie hôte ?
+Écrire le masque de sous réseau au format décimal
+L&rsquo;adresse 192.16.5.130 figure-t-elle dans le même réseau ? Justifier.
+
+
+  Exercice 2.  Adresse IP : masque de taille quelconque
+  #
+
+On considère l&rsquo;adresse IP 172.16.31.28/22">
 <meta name="theme-color" content="#FFFFFF">
 <meta name="color-scheme" content="light dark"><meta property="og:url" content="http://localhost:1313/docs/nsi/cours_premiere/reseaux/td_reseau/">
   <meta property="og:site_name" content="qkzk">
   <meta property="og:title" content="TD: Réseau">
-  <meta property="og:description" content="pdf pour impression # Exercice 1. Adresse IP # Soit l’adresse ip suivante :
+  <meta property="og:description" content=" pdf pour impression # Exercice 1. Adresse IP # Soit l’adresse ip suivante :
 192.16.5.133/24
-Est-ce une adresse IPv4 ou IPv6 ? Justifier. Combien de bits sont utilisés pour identifier l’adresse réseau ? Combien de bits sont utilisés pour identifier la partie hôte ? Écrire le masque de sous réseau au format décimal L’adresse 192.16.5.130 figure-t-elle dans le même réseau ? Justifier. Exercice 2. Adresse IP : masque de taille quelconque # On considère l’adresse IP 172.">
+Est-ce une adresse IPv4 ou IPv6 ? Justifier. Combien de bits sont utilisés pour identifier l’adresse réseau ? Combien de bits sont utilisés pour identifier la partie hôte ? Écrire le masque de sous réseau au format décimal L’adresse 192.16.5.130 figure-t-elle dans le même réseau ? Justifier. Exercice 2. Adresse IP : masque de taille quelconque # On considère l’adresse IP 172.16.31.28/22">
   <meta property="og:locale" content="en_us">
   <meta property="og:type" content="website">
 <title>TD: Réseau | qkzk</title>
@@ -21,8 +40,7 @@ Est-ce une adresse IPv4 ou IPv6 ? Justifier. Combien de bits sont utilisés pour
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/book.min.24c2b1f8dc2338e074345eec5b36f8a002aaa6d1b2e7312e14ac2d6a6958c876.css" integrity="sha256-JMKx&#43;NwjOOB0NF7sWzb4oAKqptGy5zEuFKwtamlYyHY=" crossorigin="anonymous">
   <script defer src="/flexsearch.min.js"></script>
-  <script defer src="/en.search.min.41edfc0344c578feffc8ba5e94e6f59bfed684cf40d08bf18134f4a240cd0e15.js" integrity="sha256-Qe38A0TFeP7/yLpelOb1m/7WhM9A0IvxgTT0okDNDhU=" crossorigin="anonymous"></script>
-
+  <script defer src="/en.search.min.ad90ed54c2fb2ebca6bf92dc494821802bb5913fb4ded7c7ce215de203590daa.js" integrity="sha256-rZDtVML7Lrymv5LcSUghgCu1kT&#43;03tfHziFd4gNZDao=" crossorigin="anonymous"></script>
 <link rel="alternate" type="application/rss+xml" href="http://localhost:1313/docs/nsi/cours_premiere/reseaux/td_reseau/index.xml" title="qkzk" />
 <!--
 Made with Book Theme
@@ -7119,66 +7137,66 @@ de la machine distante 1.1.1.1 ?</li>
 </h2>
 <p>Le réseau domestique de Thibault est constitué des éléments suivants</p>
 <table>
-<thead>
-<tr>
-<th>Machine</th>
-<th>Symbole</th>
-<th>Adresse(s)</th>
-<th>Liaison</th>
-<th>Raccordé à</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Box</td>
-<td>B</td>
-<td>192.168.0.1/24 et 88.12.13.21</td>
-<td>Optique</td>
-<td>Internet</td>
-</tr>
-<tr>
-<td>SmartTV</td>
-<td>TV</td>
-<td>192.168.0.2/24</td>
-<td>Wifi</td>
-<td>Box</td>
-</tr>
-<tr>
-<td>PC</td>
-<td>PC</td>
-<td>192.168.0.3/24</td>
-<td>Ethernet</td>
-<td>Box</td>
-</tr>
-<tr>
-<td>Smartphone</td>
-<td>TEL</td>
-<td>192.168.0.4/24</td>
-<td>Wifi</td>
-<td>Box</td>
-</tr>
-<tr>
-<td>Répéteur Wifi</td>
-<td>R</td>
-<td>192.168.0.5/24 et 172.16.1.1/16</td>
-<td>Ethernet</td>
-<td>Box</td>
-</tr>
-<tr>
-<td>CameraIP</td>
-<td>CAM</td>
-<td>172.16.1.2/16</td>
-<td>Wifi</td>
-<td>R</td>
-</tr>
-<tr>
-<td>Ordinateur portable</td>
-<td>L</td>
-<td>172.16.1.3/16</td>
-<td>Wifi</td>
-<td>R</td>
-</tr>
-</tbody>
+  <thead>
+      <tr>
+          <th style="text-align: left">Machine</th>
+          <th style="text-align: left">Symbole</th>
+          <th style="text-align: left">Adresse(s)</th>
+          <th style="text-align: left">Liaison</th>
+          <th style="text-align: left">Raccordé à</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left">Box</td>
+          <td style="text-align: left">B</td>
+          <td style="text-align: left">192.168.0.1/24 et 88.12.13.21</td>
+          <td style="text-align: left">Optique</td>
+          <td style="text-align: left">Internet</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">SmartTV</td>
+          <td style="text-align: left">TV</td>
+          <td style="text-align: left">192.168.0.2/24</td>
+          <td style="text-align: left">Wifi</td>
+          <td style="text-align: left">Box</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">PC</td>
+          <td style="text-align: left">PC</td>
+          <td style="text-align: left">192.168.0.3/24</td>
+          <td style="text-align: left">Ethernet</td>
+          <td style="text-align: left">Box</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">Smartphone</td>
+          <td style="text-align: left">TEL</td>
+          <td style="text-align: left">192.168.0.4/24</td>
+          <td style="text-align: left">Wifi</td>
+          <td style="text-align: left">Box</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">Répéteur Wifi</td>
+          <td style="text-align: left">R</td>
+          <td style="text-align: left">192.168.0.5/24 et 172.16.1.1/16</td>
+          <td style="text-align: left">Ethernet</td>
+          <td style="text-align: left">Box</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">CameraIP</td>
+          <td style="text-align: left">CAM</td>
+          <td style="text-align: left">172.16.1.2/16</td>
+          <td style="text-align: left">Wifi</td>
+          <td style="text-align: left">R</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">Ordinateur portable</td>
+          <td style="text-align: left">L</td>
+          <td style="text-align: left">172.16.1.3/16</td>
+          <td style="text-align: left">Wifi</td>
+          <td style="text-align: left">R</td>
+      </tr>
+  </tbody>
 </table>
 <ol>
 <li>

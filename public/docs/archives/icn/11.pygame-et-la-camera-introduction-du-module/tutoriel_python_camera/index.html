@@ -4,12 +4,554 @@
 <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
     <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="#!/usr/bin/env python # coding=utf-8 # importer la camera dans pygame import pygame import pygame.camera from pygame.locals import * pygame.init() pygame.camera.init() # Capturer une simple image &#39;&#39;&#39; On ouvre la camera et on capture une frame comme une surface de pygame. On assume dans l&#39;exemple suivant qu&#39;il y a une camera à /dev/video0 et on l&#39;initialise en 640x480 La surface est ce que la camera voit quand get_image() est appelé &#39;&#39;&#39; # cam = pygame.">
+<meta name="description" content="#!/usr/bin/env python
+# coding=utf-8
+
+
+# importer la camera dans pygame
+
+import pygame
+import pygame.camera
+from pygame.locals import *
+
+pygame.init()
+pygame.camera.init()
+
+# Capturer une simple image
+&#39;&#39;&#39;
+On ouvre la camera et on capture une frame comme une surface
+de pygame.
+On assume dans l&#39;exemple suivant qu&#39;il y a une camera à
+/dev/video0 et on l&#39;initialise en 640x480
+La surface est ce que la camera voit quand get_image() est appelé
+&#39;&#39;&#39;
+
+# cam = pygame.camera.Camera(&quot;/dev/video0&quot;,(640,480))
+# cam.start()
+# image = cam.get_image()
+
+# Lister les cameras connectees
+&#39;&#39;&#39;
+Et si on ne connait pas le chemin de la camera ?
+On peut demander au module de fournir une liste de cameras
+raccordées à l&#39;ordi et d&#39;initialiser la premiere de la liste
+&#39;&#39;&#39;
+# camlist = pygame.camera.list_cameras()
+# if camlist:
+#     cam = pygame.camera.Camera(camlist[0],(640,480))
+
+# Utiliser les controles de la camera
+&#39;&#39;&#39;
+La plupart des cameras supportent les controles tels que
+retourner l&#39;image et changer sa luminosité.
+set_controls() et get_controls() peuvent etre utilisés
+à tout moment apres avoir utilise start()
+&#39;&#39;&#39;
+
+# cam.set_controls(hflip = True, vflip = False)
+# print cam.get_controls()
+
+
+# Capturing a Live Stream
+&#39;&#39;&#39;
+Le reste du tutoriel sera focalisé sur la capture d&#39;un
+stream en live d&#39;images.
+Pour cela, nous utiliserons la classe définie ci-dessous.
+Comme décrit, nous allons seulement blit un stream de frames
+issues de la camera sur l&#39;ecran, ce qui montrera
+la video en live.
+C&#39;est grosso-modo ce à quoi on s&#39;attend, on boucle get_image(),
+on blit sur la surface d&#39;affichage et on la retourne.
+Pour des raisons de performance, on demandera à la camera
+d&#39;utiliser toujours la meme surface.
+&#39;&#39;&#39;
+class Capture(object):
+    def __init__(self):
+        self.size = (640,480)
+        # crée une suface d&#39;affichage. comme tjrs dans pygame
+        self.display = pygame.display.set_mode(self.size, 0)
+
+        # on reprend ce qu&#39;on a fait plus tot
+        self.clist = pygame.camera.list_cameras()
+        if not self.clist:
+            raise ValueError(&quot;Sorry, no cameras detected.&quot;)
+        self.cam = pygame.camera.Camera(self.clist[0], self.size)
+        self.cam.start()
+
+        # on crée une surface sur laquelle capture. Pour des raisons
+        # de performance, les dimensions sont celles de la surface
+        # d&#39;affichage
+        self.snapshot = pygame.surface.Surface(self.size, 0, self.display)
+
+    def get_and_flip(self):
+        # Vous pouvez délier les framerates de la camera et de l&#39;application
+        # vous pouvez vérifier si la camera a une image de prete.
+        # Remarquez que cela fonctionne sur la majorite des cameras mais
+        # certaines ne répondront jamais True.
+        if self.cam.query_image():
+            self.snapshot = self.cam.get_image(self.snapshot)
+
+        # on blit l&#39;objet sur la surface d&#39;affichage. Simple !
+        self.display.blit(self.snapshot, (0,0))
+        pygame.display.flip()
+
+    def main(self):
+        going = True
+        while going:
+            events = pygame.event.get()
+            for e in events:
+                if e.type == QUIT or (e.type == KEYDOWN and e.key == K_ESCAPE):
+                    # ferme proprement la camera
+                    self.cam.stop()
+                    going = False
+
+            self.get_and_flip()
+
+
+
+
+
+&#39;&#39;&#39;
+Etant donné que get_image() est un appel bloquant cela peut
+prendre un peu de temps sur une camera lente, cet
+exemple utilise query_image() pour voir si la camera
+est prête. Cela permet de séparer le framerate de votre jeu
+de celui de la camera.
+Si vous trouvez que votre camera ne supporte pas bien
+les query_image(), c&#39;est aussi possible d&#39;avoir la camera
+qui capture des images dans un thread à part,
+pour environ le même gain de performance.
+&#39;&#39;&#39;
+
+# Computer Vision de base
+&#39;&#39;&#39;
+En utilisant la camera et les masques, pygame peut faire un peu
+de computer vision
+&#39;&#39;&#39;
+
+# Colorspaces
+&#39;&#39;&#39;
+En initilisant une camera on peut définir un parametre optionnel
+de couleur, avec &#39;RGB&#39;, &#39;YUV&#39; et &#39;HSB&#39; comme choix possibles.
+&#39;YUV&#39; et &#39;HSB&#39; sont plus utiles pour le computer vision car il est
+plus facile de filtrer par couleur, ce que nous ferons plus bas dans
+ce tutoriel.
+
+&#39;&#39;&#39;
+# pour tester remplacer self.cam = ... avec l&#39;un des trois exemples ci-dessous
+# self.cam = pygame.camera.Camera(self.clist[0], self.size, &quot;RGB&quot;)
+# self.cam = pygame.camera.Camera(self.clist[0], self.size, &quot;YUV&quot;)
+#  self.cam = pygame.camera.Camera(self.clist[0], self.size, &quot;HSV&quot;)
+
+# Thresholding = filtrage par seuil
+
+&#39;&#39;&#39;
+
+En employant la fonction threshold du module transform on peut
+isoler des objets de couleur dans une scene.
+Dans l&#39;exemple ci-dessous, on filtre l&#39;arbre vert (en l&#39;affichant) et
+on rend le reste de l&#39;image noir.
+Lisez la référence à la fonction threshold pour plus de détails.
+http://www.pygame.org/docs/ref/transform.html#pygame.transform.threshold
+&#39;&#39;&#39;
+
+# self.thresholded = pygame.surface.Surface(self.size, 0, self.display)
+# self.snapshot = self.cam.get_image(self.snapshot)
+# pygame.transform.threshold(self.thresholded,self.snapshot,(0,255,0),(90,170,170),(0,0,0),2)
+
+class CaptureThresholded(object):
+    def __init__(self):
+        self.size = (640,480)
+        # crée une suface d&#39;affichage. comme tjrs dans pygame
+        self.display = pygame.display.set_mode(self.size, 0)
+
+        # on reprend ce qu&#39;on a fait plus tot
+        self.clist = pygame.camera.list_cameras()
+        if not self.clist:
+            raise ValueError(&quot;Sorry, no cameras detected.&quot;)
+        self.cam = pygame.camera.Camera(self.clist[0], self.size)
+        self.cam.start()
+
+        # on crée une surface sur laquelle capture. Pour des raisons
+        # de performance, les dimensions sont celles de la surface
+        # d&#39;affichage
+        self.thresholded = pygame.surface.Surface(self.size, 0, self.display)
+        self.snapshot = pygame.surface.Surface(self.size, 0, self.display)
+
+    def get_and_flip(self):
+        # Vous pouvez délier les framerates de la camera et de l&#39;application
+        # vous pouvez vérifier si la camera a une image de prete.
+        # Remarquez que cela fonctionne sur la majorite des cameras mais
+        # certaines ne répondront jamais True.
+        if self.cam.query_image():
+            self.snapshot = self.cam.get_image(self.snapshot)
+            self.thresholded = pygame.surface.Surface(self.size, 0, self.display)
+            pygame.transform.threshold(self.thresholded,self.snapshot,(255,255,0),(170,170,170),(0,0,0),2)
+            # self.thresholded = self.cam.get_image(self.thresholded)
+
+
+
+        # on blit l&#39;objet sur la surface d&#39;affichage. Simple !
+        # self.display.blit(self.snapshot, (0,0))
+        self.display.blit(self.thresholded, (0,0))
+        pygame.display.flip()
+
+    def main(self):
+        going = True
+        while going:
+            events = pygame.event.get()
+            for e in events:
+                if e.type == QUIT or (e.type == KEYDOWN and e.key == K_ESCAPE):
+                    # ferme proprement la camera
+                    self.cam.stop()
+                    going = False
+
+            self.get_and_flip()
+
+
+
+
+&#39;&#39;&#39;
+
+Bien sur, ceci n&#39;est utile que si vous connaissez déjà la couleur exacte
+d&#39;un objet que vous recherchez.
+Pour éviter ce problème et rendre le filtrage par seuil utile dans
+le monde réel, on a besoin d&#39;une étape de calibrage où l&#39;on identifie
+la couleur d&#39;un obet et où on l&#39;utilise pour filtrer contre elle.
+Nous allons utiliser la fonction average_color() du module transform
+pour faire ça.
+Un exemple de fonction de calibrage est fourni ci-dessous. Vous pouvez
+la faire tourner en boucle jusqu&#39;à avoir une couleur satisfaisante et
+l&#39;arrêter par un évenement comme une pression clavier.
+La couleur dans la boite sera celle utilisée comme seuil.
+Remarquez qu&#39;on utilise les couleurs HSV
+
+&#39;&#39;&#39;
+
+# def calibrate(self):
+#     # capture the image
+#     self.snapshot = self.cam.get_image(self.snapshot)
+#     # blit it to the display surface
+#     self.display.blit(self.snapshot, (0,0))
+#     # make a rect in the middle of the screen
+#     crect = pygame.draw.rect(self.display, (255,0,0), (145,105,30,30), 4)
+#     # get the average color of the area inside the rect
+#     self.ccolor = pygame.transform.average_color(self.snapshot, crect)
+#     # fill the upper left corner with that color
+#     self.display.fill(self.ccolor, (0,0,50,50))
+#     pygame.display.flip()
+
+class CaptureCalibrate(object):
+    def __init__(self):
+        self.size = (640,480)
+        # crée une suface d&#39;affichage. comme tjrs dans pygame
+        self.display = pygame.display.set_mode(self.size, 0)
+
+        # on reprend ce qu&#39;on a fait plus tot
+        self.clist = pygame.camera.list_cameras()
+        if not self.clist:
+            raise ValueError(&quot;Sorry, no cameras detected.&quot;)
+        # mode par defaut
+        # self.cam = pygame.camera.Camera(self.clist[0], self.size)
+        # RGB
+        self.cam = pygame.camera.Camera(self.clist[0], self.size, &quot;HSV&quot;)
+        # YUV
+        # self.cam = pygame.camera.Camera(self.clist[0], self.size, &quot;YUV&quot;)
+        # HSV
+        # self.cam = pygame.camera.Camera(self.clist[0], self.size, &quot;HSV&quot;)
+        print self.cam
+        self.cam.start()
+
+        # on crée une surface sur laquelle capture. Pour des raisons
+        # de performance, les dimensions sont celles de la surface
+        # d&#39;affichage
+
+        # capture initiale normale
+        self.snapshot = pygame.surface.Surface(self.size, 0, self.display)
+
+    def get_and_flip(self):
+        # Vous pouvez délier les framerates de la camera et de l&#39;application
+        # vous pouvez vérifier si la camera a une image de prete.
+        # Remarquez que cela fonctionne sur la majorite des cameras mais
+        # certaines ne répondront jamais True.
+        if self.cam.query_image():
+
+            # thresholded
+            self.thresholded = pygame.surface.Surface(self.size, 0, self.display)
+
+            # threshold recupéré pendant le calibrage
+            pygame.transform.threshold(self.thresholded,self.snapshot,self.ccolor,(30,30,30),(0,0,0),2)
+
+            # on blit l&#39;objet sur la surface d&#39;affichage. Simple !
+
+            # thresholded
+            self.display.blit(self.thresholded, (0,0))
+
+            pygame.display.flip()
+
+    def calibrate(self):
+        # capture the image
+        self.snapshot = self.cam.get_image(self.snapshot)
+        # on la blit sur la display surface
+        self.display.blit(self.snapshot, (0,0))
+        # dessiner un rectangle au milieu de l&#39;ecran
+        crect = pygame.draw.rect(self.display, (255,0,0), (145,105,30,30), 4)
+        # recupere la couleur moyenne de la zone dans le rectangle
+        self.ccolor = pygame.transform.average_color(self.snapshot, crect)
+        # rempli le coin superieur gauche de l&#39;ecran avec cette couleur
+        self.display.fill(self.ccolor, (0,0,50,50))
+        pygame.display.flip()
+
+
+
+    def main(self):
+
+        going = True
+        # calibrate
+        # On calibre jusqu&#39;à appuyer sur espace... tant qu&#39;on n&#39;appuie pas sur espace
+        while going:
+            events = pygame.event.get()
+            for e in events:
+                if e.type == KEYDOWN and e.key == K_SPACE:
+                    going = False
+            self.calibrate()
+
+        # ensuite on affiche !
+        going = True
+        while going:
+            events = pygame.event.get()
+            for e in events:
+                if e.type == QUIT or (e.type == KEYDOWN and e.key == K_ESCAPE):
+                    # ferme proprement la camera
+                    self.cam.stop()
+                    going = False
+
+            self.get_and_flip()
+
+
+# Fond vert
+
+# Vous pouvez utiliser la meme idee pour faire un fond vert/bleu, d&#39;abord en en recuperant une image de fond et ensuite en filtrant par seuil contre elle. L&#39;exemple ci dessous pointe d&#39;abord la camera sur un mur blanc en couleur HSV
+
+
+class CaptureGreenScreen(object):
+    def __init__(self):
+        self.size = (640,480)
+        # crée une suface d&#39;affichage. comme tjrs dans pygame
+        self.display = pygame.display.set_mode(self.size, 0)
+
+        # on reprend ce qu&#39;on a fait plus tot
+        self.clist = pygame.camera.list_cameras()
+        if not self.clist:
+            raise ValueError(&quot;Sorry, no cameras detected.&quot;)
+        # mode par defaut
+        # self.cam = pygame.camera.Camera(self.clist[0], self.size)
+        # RGB
+        self.cam = pygame.camera.Camera(self.clist[0], self.size, &quot;HSV&quot;)
+        # YUV
+        # self.cam = pygame.camera.Camera(self.clist[0], self.size, &quot;YUV&quot;)
+        # HSV
+        # self.cam = pygame.camera.Camera(self.clist[0], self.size, &quot;HSV&quot;)
+        print self.cam
+        self.cam.start()
+
+        # on crée une surface sur laquelle capture. Pour des raisons
+        # de performance, les dimensions sont celles de la surface
+        # d&#39;affichage
+
+        # capture initiale normale
+        self.background = pygame.surface.Surface(self.size, 0, self.display)
+        self.snapshot = pygame.surface.Surface(self.size, 0, self.display)
+        self.thresholded = pygame.surface.Surface(self.size, 0, self.display)
+
+    def get_and_flip(self):
+        # Vous pouvez délier les framerates de la camera et de l&#39;application
+        # vous pouvez vérifier si la camera a une image de prete.
+        # Remarquez que cela fonctionne sur la majorite des cameras mais
+        # certaines ne répondront jamais True.
+        if self.cam.query_image():
+
+            # thresholded
+            self.snapshot = self.cam.get_image(self.snapshot)
+            # self.thresholded = self.cam.get_image(self.thresholded)
+            self.thresholded = pygame.surface.Surface(self.size, 0, self.display)
+            # self.snapshot = pygame.surface.Surface(self.size, 0, self.display)
+            # threshold recupéré pendant le calibrage
+            pygame.transform.threshold(self.thresholded,self.snapshot,(0,255,0),(30,30,30),(0,0,0),1,self.background)
+
+
+            # on blit l&#39;objet sur la surface d&#39;affichage. Simple !
+
+        # thresholded
+        self.display.blit(self.thresholded, (0,0))
+
+        pygame.display.flip()
+
+    def calibrate(self):
+        # capture quelques images de fond
+        bg = []
+        for i in range(0,5):
+          bg.append(self.cam.get_image(self.background))
+        # prend la moyenne pour filtrer le bruit
+        pygame.transform.average_surfaces(bg,self.background)
+        # la blit sur la surface
+        self.display.blit(self.background, (0,0))
+        pygame.display.flip()
+
+
+
+    def main(self):
+
+        # on calibre d&#39;abord l&#39;image
+        self.calibrate()
+
+        # ensuite on affiche !
+        going = True
+        while going:
+            events = pygame.event.get()
+            for e in events:
+                if e.type == QUIT or (e.type == KEYDOWN and e.key == K_ESCAPE):
+                    # ferme proprement la camera
+                    self.cam.stop()
+                    going = False
+
+            self.get_and_flip()
+
+# Utiliser le module Mask
+
+&#39;&#39;&#39;
+Les exemples ci-dessus sont très bien si vous voulez simplement afficher
+une image mais avec le module mask (http://www.pygame.org/docs/ref/mask.html#module-pygame.mask)
+vous pouvez aussi utiliser la camera comme un périphérique de jeu.
+Par exemple, en filtrant par seuil un objet particulier, on peut s&#39;en servir
+pour repérer la position d&#39;un objet specifique et l&#39;utiliser pour controler
+un autre objet sur l&#39;écran.
+&#39;&#39;&#39;
+
+class CaptureMask(object):
+    def __init__(self):
+        self.size = (640,480)
+        # crée une suface d&#39;affichage. comme tjrs dans pygame
+        self.display = pygame.display.set_mode(self.size, 0)
+
+        # on reprend ce qu&#39;on a fait plus tot
+        self.clist = pygame.camera.list_cameras()
+        if not self.clist:
+            raise ValueError(&quot;Sorry, no cameras detected.&quot;)
+        # mode par defaut
+        # self.cam = pygame.camera.Camera(self.clist[0], self.size)
+        # RGB
+        self.cam = pygame.camera.Camera(self.clist[0], self.size, &quot;HSV&quot;)
+        # YUV
+        # self.cam = pygame.camera.Camera(self.clist[0], self.size, &quot;YUV&quot;)
+        # HSV
+        # self.cam = pygame.camera.Camera(self.clist[0], self.size, &quot;HSV&quot;)
+        print self.cam
+        self.cam.start()
+
+        # on crée une surface sur laquelle capture. Pour des raisons
+        # de performance, les dimensions sont celles de la surface
+        # d&#39;affichage
+
+        # capture initiale normale
+        self.snapshot = pygame.surface.Surface(self.size, 0, self.display)
+
+    def get_and_flip(self):
+        self.snapshot = self.cam.get_image(self.snapshot)
+        # filtre contre la couleur obtenue plus tot
+        mask = pygame.mask.from_threshold(self.snapshot, self.ccolor, (30, 30, 30))
+        self.display.blit(self.snapshot,(0,0))
+        # ne garde que le plus grand blob a l&#39;ecran
+        connected = mask.connected_component()
+        # on s&#39;assure que le blob est grand, afin de filtrer le bruit
+        if mask.count() &gt; 100:
+            # trouve son centre
+            coord = mask.centroid()
+            # dessine un cercle de taille correspondant a celle du blob
+            pygame.draw.circle(self.display, (0,255,0), coord, max(min(50,mask.count()/400),5))
+        pygame.display.flip()
+
+    def calibrate(self):
+        # capture the image
+        self.snapshot = self.cam.get_image(self.snapshot)
+        # blit it to the display surface
+        self.display.blit(self.snapshot, (0,0))
+        # make a rect in the middle of the screen
+        crect = pygame.draw.rect(self.display, (255,0,0), (145,105,30,30), 4)
+        # get the average color of the area inside the rect
+        self.ccolor = pygame.transform.average_color(self.snapshot, crect)
+        # fill the upper left corner with that color
+        self.display.fill(self.ccolor, (0,0,50,50))
+        pygame.display.flip()
+
+
+
+    def main(self):
+
+        going = True
+        # calibrate
+        # On calibre jusqu&#39;à appuyer sur espace... tant qu&#39;on n&#39;appuie pas sur espace
+        while going:
+            events = pygame.event.get()
+            for e in events:
+                if e.type == KEYDOWN and e.key == K_SPACE:
+                    going = False
+            self.calibrate()
+
+        # ensuite on affiche !
+        going = True
+        while going:
+            events = pygame.event.get()
+            for e in events:
+                if e.type == QUIT or (e.type == KEYDOWN and e.key == K_ESCAPE):
+                    # ferme proprement la camera
+                    self.cam.stop()
+                    going = False
+
+            self.get_and_flip()
+
+
+# def get_and_flip(self):
+#     self.snapshot = self.cam.get_image(self.snapshot)
+#     # threshold against the color we got before
+#     mask = pygame.mask.from_threshold(self.snapshot, self.ccolor, (30, 30, 30))
+#     self.display.blit(self.snapshot,(0,0))
+#     # keep only the largest blob of that color
+#     connected = mask.connected_component()
+#     # make sure the blob is big enough that it isn&#39;t just noise
+#     if mask.count() &gt; 100:
+#         # find the center of the blob
+#         coord = mask.centroid()
+#         # draw a circle with size variable on the size of the blob
+#         pygame.draw.circle(self.display, (0,255,0), coord, max(min(50,mask.count()/400),5))
+#     pygame.display.flip()
+
+
+&#39;&#39;&#39;
+Ce ne sont que les exemples les plus simples. Vous pouvez suivre differents
+objets de couleur à l&#39;écran, déterminer les contours d&#39;objets, gérer des
+détections de collision entre le monde réel et un objet à l&#39;écran,
+déterminer les coins d&#39;un objets pour manipuler plus précisément etc. Amusez vous bien !
+
+&#39;&#39;&#39;
+if __name__ == &#39;__main__&#39;:
+    # test des differentes classes
+    # decommentez les autres exemples
+
+
+    webcam = Capture()
+    # webcam = CaptureThresholded()
+    # webcam = CaptureCalibrate()
+    # webcam = CaptureGreenScreen()
+    # webcam = CaptureMask()
+
+    webcam.main()
+">
 <meta name="theme-color" content="#FFFFFF">
 <meta name="color-scheme" content="light dark"><meta property="og:url" content="http://localhost:1313/docs/archives/icn/11.pygame-et-la-camera-introduction-du-module/tutoriel_python_camera/">
   <meta property="og:site_name" content="qkzk">
   <meta property="og:title" content="tutoriel_python_camera">
-  <meta property="og:description" content="#!/usr/bin/env python # coding=utf-8 # importer la camera dans pygame import pygame import pygame.camera from pygame.locals import * pygame.init() pygame.camera.init() # Capturer une simple image &#39;&#39;&#39; On ouvre la camera et on capture une frame comme une surface de pygame. On assume dans l&#39;exemple suivant qu&#39;il y a une camera à /dev/video0 et on l&#39;initialise en 640x480 La surface est ce que la camera voit quand get_image() est appelé &#39;&#39;&#39; # cam = pygame.">
+  <meta property="og:description" content="#!/usr/bin/env python # coding=utf-8 # importer la camera dans pygame import pygame import pygame.camera from pygame.locals import * pygame.init() pygame.camera.init() # Capturer une simple image &#39;&#39;&#39; On ouvre la camera et on capture une frame comme une surface de pygame. On assume dans l&#39;exemple suivant qu&#39;il y a une camera à /dev/video0 et on l&#39;initialise en 640x480 La surface est ce que la camera voit quand get_image() est appelé &#39;&#39;&#39; # cam = pygame.camera.Camera(&#34;/dev/video0&#34;,(640,480)) # cam.start() # image = cam.get_image() # Lister les cameras connectees &#39;&#39;&#39; Et si on ne connait pas le chemin de la camera ? On peut demander au module de fournir une liste de cameras raccordées à l&#39;ordi et d&#39;initialiser la premiere de la liste &#39;&#39;&#39; # camlist = pygame.camera.list_cameras() # if camlist: # cam = pygame.camera.Camera(camlist[0],(640,480)) # Utiliser les controles de la camera &#39;&#39;&#39; La plupart des cameras supportent les controles tels que retourner l&#39;image et changer sa luminosité. set_controls() et get_controls() peuvent etre utilisés à tout moment apres avoir utilise start() &#39;&#39;&#39; # cam.set_controls(hflip = True, vflip = False) # print cam.get_controls() # Capturing a Live Stream &#39;&#39;&#39; Le reste du tutoriel sera focalisé sur la capture d&#39;un stream en live d&#39;images. Pour cela, nous utiliserons la classe définie ci-dessous. Comme décrit, nous allons seulement blit un stream de frames issues de la camera sur l&#39;ecran, ce qui montrera la video en live. C&#39;est grosso-modo ce à quoi on s&#39;attend, on boucle get_image(), on blit sur la surface d&#39;affichage et on la retourne. Pour des raisons de performance, on demandera à la camera d&#39;utiliser toujours la meme surface. &#39;&#39;&#39; class Capture(object): def __init__(self): self.size = (640,480) # crée une suface d&#39;affichage. comme tjrs dans pygame self.display = pygame.display.set_mode(self.size, 0) # on reprend ce qu&#39;on a fait plus tot self.clist = pygame.camera.list_cameras() if not self.clist: raise ValueError(&#34;Sorry, no cameras detected.&#34;) self.cam = pygame.camera.Camera(self.clist[0], self.size) self.cam.start() # on crée une surface sur laquelle capture. Pour des raisons # de performance, les dimensions sont celles de la surface # d&#39;affichage self.snapshot = pygame.surface.Surface(self.size, 0, self.display) def get_and_flip(self): # Vous pouvez délier les framerates de la camera et de l&#39;application # vous pouvez vérifier si la camera a une image de prete. # Remarquez que cela fonctionne sur la majorite des cameras mais # certaines ne répondront jamais True. if self.cam.query_image(): self.snapshot = self.cam.get_image(self.snapshot) # on blit l&#39;objet sur la surface d&#39;affichage. Simple ! self.display.blit(self.snapshot, (0,0)) pygame.display.flip() def main(self): going = True while going: events = pygame.event.get() for e in events: if e.type == QUIT or (e.type == KEYDOWN and e.key == K_ESCAPE): # ferme proprement la camera self.cam.stop() going = False self.get_and_flip() &#39;&#39;&#39; Etant donné que get_image() est un appel bloquant cela peut prendre un peu de temps sur une camera lente, cet exemple utilise query_image() pour voir si la camera est prête. Cela permet de séparer le framerate de votre jeu de celui de la camera. Si vous trouvez que votre camera ne supporte pas bien les query_image(), c&#39;est aussi possible d&#39;avoir la camera qui capture des images dans un thread à part, pour environ le même gain de performance. &#39;&#39;&#39; # Computer Vision de base &#39;&#39;&#39; En utilisant la camera et les masques, pygame peut faire un peu de computer vision &#39;&#39;&#39; # Colorspaces &#39;&#39;&#39; En initilisant une camera on peut définir un parametre optionnel de couleur, avec &#39;RGB&#39;, &#39;YUV&#39; et &#39;HSB&#39; comme choix possibles. &#39;YUV&#39; et &#39;HSB&#39; sont plus utiles pour le computer vision car il est plus facile de filtrer par couleur, ce que nous ferons plus bas dans ce tutoriel. &#39;&#39;&#39; # pour tester remplacer self.cam = ... avec l&#39;un des trois exemples ci-dessous # self.cam = pygame.camera.Camera(self.clist[0], self.size, &#34;RGB&#34;) # self.cam = pygame.camera.Camera(self.clist[0], self.size, &#34;YUV&#34;) # self.cam = pygame.camera.Camera(self.clist[0], self.size, &#34;HSV&#34;) # Thresholding = filtrage par seuil &#39;&#39;&#39; En employant la fonction threshold du module transform on peut isoler des objets de couleur dans une scene. Dans l&#39;exemple ci-dessous, on filtre l&#39;arbre vert (en l&#39;affichant) et on rend le reste de l&#39;image noir. Lisez la référence à la fonction threshold pour plus de détails. http://www.pygame.org/docs/ref/transform.html#pygame.transform.threshold &#39;&#39;&#39; # self.thresholded = pygame.surface.Surface(self.size, 0, self.display) # self.snapshot = self.cam.get_image(self.snapshot) # pygame.transform.threshold(self.thresholded,self.snapshot,(0,255,0),(90,170,170),(0,0,0),2) class CaptureThresholded(object): def __init__(self): self.size = (640,480) # crée une suface d&#39;affichage. comme tjrs dans pygame self.display = pygame.display.set_mode(self.size, 0) # on reprend ce qu&#39;on a fait plus tot self.clist = pygame.camera.list_cameras() if not self.clist: raise ValueError(&#34;Sorry, no cameras detected.&#34;) self.cam = pygame.camera.Camera(self.clist[0], self.size) self.cam.start() # on crée une surface sur laquelle capture. Pour des raisons # de performance, les dimensions sont celles de la surface # d&#39;affichage self.thresholded = pygame.surface.Surface(self.size, 0, self.display) self.snapshot = pygame.surface.Surface(self.size, 0, self.display) def get_and_flip(self): # Vous pouvez délier les framerates de la camera et de l&#39;application # vous pouvez vérifier si la camera a une image de prete. # Remarquez que cela fonctionne sur la majorite des cameras mais # certaines ne répondront jamais True. if self.cam.query_image(): self.snapshot = self.cam.get_image(self.snapshot) self.thresholded = pygame.surface.Surface(self.size, 0, self.display) pygame.transform.threshold(self.thresholded,self.snapshot,(255,255,0),(170,170,170),(0,0,0),2) # self.thresholded = self.cam.get_image(self.thresholded) # on blit l&#39;objet sur la surface d&#39;affichage. Simple ! # self.display.blit(self.snapshot, (0,0)) self.display.blit(self.thresholded, (0,0)) pygame.display.flip() def main(self): going = True while going: events = pygame.event.get() for e in events: if e.type == QUIT or (e.type == KEYDOWN and e.key == K_ESCAPE): # ferme proprement la camera self.cam.stop() going = False self.get_and_flip() &#39;&#39;&#39; Bien sur, ceci n&#39;est utile que si vous connaissez déjà la couleur exacte d&#39;un objet que vous recherchez. Pour éviter ce problème et rendre le filtrage par seuil utile dans le monde réel, on a besoin d&#39;une étape de calibrage où l&#39;on identifie la couleur d&#39;un obet et où on l&#39;utilise pour filtrer contre elle. Nous allons utiliser la fonction average_color() du module transform pour faire ça. Un exemple de fonction de calibrage est fourni ci-dessous. Vous pouvez la faire tourner en boucle jusqu&#39;à avoir une couleur satisfaisante et l&#39;arrêter par un évenement comme une pression clavier. La couleur dans la boite sera celle utilisée comme seuil. Remarquez qu&#39;on utilise les couleurs HSV &#39;&#39;&#39; # def calibrate(self): # # capture the image # self.snapshot = self.cam.get_image(self.snapshot) # # blit it to the display surface # self.display.blit(self.snapshot, (0,0)) # # make a rect in the middle of the screen # crect = pygame.draw.rect(self.display, (255,0,0), (145,105,30,30), 4) # # get the average color of the area inside the rect # self.ccolor = pygame.transform.average_color(self.snapshot, crect) # # fill the upper left corner with that color # self.display.fill(self.ccolor, (0,0,50,50)) # pygame.display.flip() class CaptureCalibrate(object): def __init__(self): self.size = (640,480) # crée une suface d&#39;affichage. comme tjrs dans pygame self.display = pygame.display.set_mode(self.size, 0) # on reprend ce qu&#39;on a fait plus tot self.clist = pygame.camera.list_cameras() if not self.clist: raise ValueError(&#34;Sorry, no cameras detected.&#34;) # mode par defaut # self.cam = pygame.camera.Camera(self.clist[0], self.size) # RGB self.cam = pygame.camera.Camera(self.clist[0], self.size, &#34;HSV&#34;) # YUV # self.cam = pygame.camera.Camera(self.clist[0], self.size, &#34;YUV&#34;) # HSV # self.cam = pygame.camera.Camera(self.clist[0], self.size, &#34;HSV&#34;) print self.cam self.cam.start() # on crée une surface sur laquelle capture. Pour des raisons # de performance, les dimensions sont celles de la surface # d&#39;affichage # capture initiale normale self.snapshot = pygame.surface.Surface(self.size, 0, self.display) def get_and_flip(self): # Vous pouvez délier les framerates de la camera et de l&#39;application # vous pouvez vérifier si la camera a une image de prete. # Remarquez que cela fonctionne sur la majorite des cameras mais # certaines ne répondront jamais True. if self.cam.query_image(): # thresholded self.thresholded = pygame.surface.Surface(self.size, 0, self.display) # threshold recupéré pendant le calibrage pygame.transform.threshold(self.thresholded,self.snapshot,self.ccolor,(30,30,30),(0,0,0),2) # on blit l&#39;objet sur la surface d&#39;affichage. Simple ! # thresholded self.display.blit(self.thresholded, (0,0)) pygame.display.flip() def calibrate(self): # capture the image self.snapshot = self.cam.get_image(self.snapshot) # on la blit sur la display surface self.display.blit(self.snapshot, (0,0)) # dessiner un rectangle au milieu de l&#39;ecran crect = pygame.draw.rect(self.display, (255,0,0), (145,105,30,30), 4) # recupere la couleur moyenne de la zone dans le rectangle self.ccolor = pygame.transform.average_color(self.snapshot, crect) # rempli le coin superieur gauche de l&#39;ecran avec cette couleur self.display.fill(self.ccolor, (0,0,50,50)) pygame.display.flip() def main(self): going = True # calibrate # On calibre jusqu&#39;à appuyer sur espace... tant qu&#39;on n&#39;appuie pas sur espace while going: events = pygame.event.get() for e in events: if e.type == KEYDOWN and e.key == K_SPACE: going = False self.calibrate() # ensuite on affiche ! going = True while going: events = pygame.event.get() for e in events: if e.type == QUIT or (e.type == KEYDOWN and e.key == K_ESCAPE): # ferme proprement la camera self.cam.stop() going = False self.get_and_flip() # Fond vert # Vous pouvez utiliser la meme idee pour faire un fond vert/bleu, d&#39;abord en en recuperant une image de fond et ensuite en filtrant par seuil contre elle. L&#39;exemple ci dessous pointe d&#39;abord la camera sur un mur blanc en couleur HSV class CaptureGreenScreen(object): def __init__(self): self.size = (640,480) # crée une suface d&#39;affichage. comme tjrs dans pygame self.display = pygame.display.set_mode(self.size, 0) # on reprend ce qu&#39;on a fait plus tot self.clist = pygame.camera.list_cameras() if not self.clist: raise ValueError(&#34;Sorry, no cameras detected.&#34;) # mode par defaut # self.cam = pygame.camera.Camera(self.clist[0], self.size) # RGB self.cam = pygame.camera.Camera(self.clist[0], self.size, &#34;HSV&#34;) # YUV # self.cam = pygame.camera.Camera(self.clist[0], self.size, &#34;YUV&#34;) # HSV # self.cam = pygame.camera.Camera(self.clist[0], self.size, &#34;HSV&#34;) print self.cam self.cam.start() # on crée une surface sur laquelle capture. Pour des raisons # de performance, les dimensions sont celles de la surface # d&#39;affichage # capture initiale normale self.background = pygame.surface.Surface(self.size, 0, self.display) self.snapshot = pygame.surface.Surface(self.size, 0, self.display) self.thresholded = pygame.surface.Surface(self.size, 0, self.display) def get_and_flip(self): # Vous pouvez délier les framerates de la camera et de l&#39;application # vous pouvez vérifier si la camera a une image de prete. # Remarquez que cela fonctionne sur la majorite des cameras mais # certaines ne répondront jamais True. if self.cam.query_image(): # thresholded self.snapshot = self.cam.get_image(self.snapshot) # self.thresholded = self.cam.get_image(self.thresholded) self.thresholded = pygame.surface.Surface(self.size, 0, self.display) # self.snapshot = pygame.surface.Surface(self.size, 0, self.display) # threshold recupéré pendant le calibrage pygame.transform.threshold(self.thresholded,self.snapshot,(0,255,0),(30,30,30),(0,0,0),1,self.background) # on blit l&#39;objet sur la surface d&#39;affichage. Simple ! # thresholded self.display.blit(self.thresholded, (0,0)) pygame.display.flip() def calibrate(self): # capture quelques images de fond bg = [] for i in range(0,5): bg.append(self.cam.get_image(self.background)) # prend la moyenne pour filtrer le bruit pygame.transform.average_surfaces(bg,self.background) # la blit sur la surface self.display.blit(self.background, (0,0)) pygame.display.flip() def main(self): # on calibre d&#39;abord l&#39;image self.calibrate() # ensuite on affiche ! going = True while going: events = pygame.event.get() for e in events: if e.type == QUIT or (e.type == KEYDOWN and e.key == K_ESCAPE): # ferme proprement la camera self.cam.stop() going = False self.get_and_flip() # Utiliser le module Mask &#39;&#39;&#39; Les exemples ci-dessus sont très bien si vous voulez simplement afficher une image mais avec le module mask (http://www.pygame.org/docs/ref/mask.html#module-pygame.mask) vous pouvez aussi utiliser la camera comme un périphérique de jeu. Par exemple, en filtrant par seuil un objet particulier, on peut s&#39;en servir pour repérer la position d&#39;un objet specifique et l&#39;utiliser pour controler un autre objet sur l&#39;écran. &#39;&#39;&#39; class CaptureMask(object): def __init__(self): self.size = (640,480) # crée une suface d&#39;affichage. comme tjrs dans pygame self.display = pygame.display.set_mode(self.size, 0) # on reprend ce qu&#39;on a fait plus tot self.clist = pygame.camera.list_cameras() if not self.clist: raise ValueError(&#34;Sorry, no cameras detected.&#34;) # mode par defaut # self.cam = pygame.camera.Camera(self.clist[0], self.size) # RGB self.cam = pygame.camera.Camera(self.clist[0], self.size, &#34;HSV&#34;) # YUV # self.cam = pygame.camera.Camera(self.clist[0], self.size, &#34;YUV&#34;) # HSV # self.cam = pygame.camera.Camera(self.clist[0], self.size, &#34;HSV&#34;) print self.cam self.cam.start() # on crée une surface sur laquelle capture. Pour des raisons # de performance, les dimensions sont celles de la surface # d&#39;affichage # capture initiale normale self.snapshot = pygame.surface.Surface(self.size, 0, self.display) def get_and_flip(self): self.snapshot = self.cam.get_image(self.snapshot) # filtre contre la couleur obtenue plus tot mask = pygame.mask.from_threshold(self.snapshot, self.ccolor, (30, 30, 30)) self.display.blit(self.snapshot,(0,0)) # ne garde que le plus grand blob a l&#39;ecran connected = mask.connected_component() # on s&#39;assure que le blob est grand, afin de filtrer le bruit if mask.count() &gt; 100: # trouve son centre coord = mask.centroid() # dessine un cercle de taille correspondant a celle du blob pygame.draw.circle(self.display, (0,255,0), coord, max(min(50,mask.count()/400),5)) pygame.display.flip() def calibrate(self): # capture the image self.snapshot = self.cam.get_image(self.snapshot) # blit it to the display surface self.display.blit(self.snapshot, (0,0)) # make a rect in the middle of the screen crect = pygame.draw.rect(self.display, (255,0,0), (145,105,30,30), 4) # get the average color of the area inside the rect self.ccolor = pygame.transform.average_color(self.snapshot, crect) # fill the upper left corner with that color self.display.fill(self.ccolor, (0,0,50,50)) pygame.display.flip() def main(self): going = True # calibrate # On calibre jusqu&#39;à appuyer sur espace... tant qu&#39;on n&#39;appuie pas sur espace while going: events = pygame.event.get() for e in events: if e.type == KEYDOWN and e.key == K_SPACE: going = False self.calibrate() # ensuite on affiche ! going = True while going: events = pygame.event.get() for e in events: if e.type == QUIT or (e.type == KEYDOWN and e.key == K_ESCAPE): # ferme proprement la camera self.cam.stop() going = False self.get_and_flip() # def get_and_flip(self): # self.snapshot = self.cam.get_image(self.snapshot) # # threshold against the color we got before # mask = pygame.mask.from_threshold(self.snapshot, self.ccolor, (30, 30, 30)) # self.display.blit(self.snapshot,(0,0)) # # keep only the largest blob of that color # connected = mask.connected_component() # # make sure the blob is big enough that it isn&#39;t just noise # if mask.count() &gt; 100: # # find the center of the blob # coord = mask.centroid() # # draw a circle with size variable on the size of the blob # pygame.draw.circle(self.display, (0,255,0), coord, max(min(50,mask.count()/400),5)) # pygame.display.flip() &#39;&#39;&#39; Ce ne sont que les exemples les plus simples. Vous pouvez suivre differents objets de couleur à l&#39;écran, déterminer les contours d&#39;objets, gérer des détections de collision entre le monde réel et un objet à l&#39;écran, déterminer les coins d&#39;un objets pour manipuler plus précisément etc. Amusez vous bien ! &#39;&#39;&#39; if __name__ == &#39;__main__&#39;: # test des differentes classes # decommentez les autres exemples webcam = Capture() # webcam = CaptureThresholded() # webcam = CaptureCalibrate() # webcam = CaptureGreenScreen() # webcam = CaptureMask() webcam.main() ">
   <meta property="og:locale" content="en_us">
   <meta property="og:type" content="website">
 <title>tutoriel_python_camera | qkzk</title>
@@ -17,8 +559,7 @@
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/book.min.24c2b1f8dc2338e074345eec5b36f8a002aaa6d1b2e7312e14ac2d6a6958c876.css" integrity="sha256-JMKx&#43;NwjOOB0NF7sWzb4oAKqptGy5zEuFKwtamlYyHY=" crossorigin="anonymous">
   <script defer src="/flexsearch.min.js"></script>
-  <script defer src="/en.search.min.41edfc0344c578feffc8ba5e94e6f59bfed684cf40d08bf18134f4a240cd0e15.js" integrity="sha256-Qe38A0TFeP7/yLpelOb1m/7WhM9A0IvxgTT0okDNDhU=" crossorigin="anonymous"></script>
-
+  <script defer src="/en.search.min.ad90ed54c2fb2ebca6bf92dc494821802bb5913fb4ded7c7ce215de203590daa.js" integrity="sha256-rZDtVML7Lrymv5LcSUghgCu1kT&#43;03tfHziFd4gNZDao=" crossorigin="anonymous"></script>
 <link rel="alternate" type="application/rss+xml" href="http://localhost:1313/docs/archives/icn/11.pygame-et-la-camera-introduction-du-module/tutoriel_python_camera/index.xml" title="qkzk" />
 <!--
 Made with Book Theme

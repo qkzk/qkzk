@@ -5,12 +5,35 @@
     <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="PDF : pour impression, diapos
-Initiation à l&rsquo;assembleur # instructions machines # Les instructions machines sont exécutées par l&rsquo;unité de commande.
+
+  Initiation à l&rsquo;assembleur
+  #
+
+
+  instructions machines
+  #
+
+
+
+Les instructions machines sont exécutées par l&rsquo;unité de commande.
+
+
 Un programme est une suite d&rsquo;instructions.
-Le CPU est incapable d&rsquo;exécuter directement des programmes écrits en Python (ou C, java etc.).
+
+
+Le CPU est incapable d&rsquo;exécuter directement des programmes écrits en Python
+(ou C, java etc.).
 Les instructions exécutées au niveau du CPU sont donc codées en binaire.
-Langage machine : # Ensemble des instructions exécutables par le microprocesseur
-Les instructions machines sont propres à chaque processeur # Chaque processeur possède son propre jeu d&rsquo;instruction !">
+
+  Langage machine :
+  #
+
+Ensemble des instructions exécutables par le microprocesseur
+
+  Les instructions machines sont propres à chaque processeur
+  #
+
+Chaque processeur possède son propre jeu d&rsquo;instruction !">
 <meta name="theme-color" content="#FFFFFF">
 <meta name="color-scheme" content="light dark"><meta property="og:url" content="http://localhost:1313/docs/nsi/cours_premiere/architecture/4_assembleur/">
   <meta property="og:site_name" content="qkzk">
@@ -29,8 +52,7 @@ Les instructions machines sont propres à chaque processeur # Chaque processeur 
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/book.min.24c2b1f8dc2338e074345eec5b36f8a002aaa6d1b2e7312e14ac2d6a6958c876.css" integrity="sha256-JMKx&#43;NwjOOB0NF7sWzb4oAKqptGy5zEuFKwtamlYyHY=" crossorigin="anonymous">
   <script defer src="/flexsearch.min.js"></script>
-  <script defer src="/en.search.min.41edfc0344c578feffc8ba5e94e6f59bfed684cf40d08bf18134f4a240cd0e15.js" integrity="sha256-Qe38A0TFeP7/yLpelOb1m/7WhM9A0IvxgTT0okDNDhU=" crossorigin="anonymous"></script>
-
+  <script defer src="/en.search.min.ad90ed54c2fb2ebca6bf92dc494821802bb5913fb4ded7c7ce215de203590daa.js" integrity="sha256-rZDtVML7Lrymv5LcSUghgCu1kT&#43;03tfHziFd4gNZDao=" crossorigin="anonymous"></script>
 <link rel="alternate" type="application/rss+xml" href="http://localhost:1313/docs/nsi/cours_premiere/architecture/4_assembleur/index.xml" title="qkzk" />
 <!--
 Made with Book Theme
@@ -7165,28 +7187,28 @@ sinon, la prochaine instruction à exécuter est à l&rsquo;adresse mémoire 355
 <p><code>11100010100000100001000001111101 &lt;--&gt; ADD R1,R2,#125</code></p>
 <p>En fait :</p>
 <table>
-<thead>
-<tr>
-<th>Inscrution</th>
-<th>Operande 1</th>
-<th>Operande 2</th>
-<th>Operande 3</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>11100010</td>
-<td>10000010</td>
-<td>00010000</td>
-<td>01111101</td>
-</tr>
-<tr>
-<td><code>ADD</code></td>
-<td><code>R1</code></td>
-<td><code>R2</code></td>
-<td><code>#125</code></td>
-</tr>
-</tbody>
+  <thead>
+      <tr>
+          <th style="text-align: left">Inscrution</th>
+          <th style="text-align: left">Operande 1</th>
+          <th style="text-align: left">Operande 2</th>
+          <th style="text-align: left">Operande 3</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left">11100010</td>
+          <td style="text-align: left">10000010</td>
+          <td style="text-align: left">00010000</td>
+          <td style="text-align: left">01111101</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><code>ADD</code></td>
+          <td style="text-align: left"><code>R1</code></td>
+          <td style="text-align: left"><code>R2</code></td>
+          <td style="text-align: left"><code>#125</code></td>
+      </tr>
+  </tbody>
 </table>
 <h3 id="assembler-">
   Assembler :
@@ -7207,125 +7229,125 @@ sinon, la prochaine instruction à exécuter est à l&rsquo;adresse mémoire 355
   <a class="anchor" href="#d%c3%a9placements">#</a>
 </h3>
 <table>
-<thead>
-<tr>
-<th>Mnemonique</th>
-<th>Exemple</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Charger</td>
-<td><code>LDR R1,78</code></td>
-<td>Place la valeur stockée à l&rsquo;adresse mémoire 78 dans le registre R1</td>
-</tr>
-<tr>
-<td>Stocker</td>
-<td><code>STR R3,125</code></td>
-<td>Place la valeur stockée dans le registre R3 en mémoire vive à l&rsquo;adresse 125</td>
-</tr>
-<tr>
-<td>Déplacer</td>
-<td><code>MOV R1, #23</code></td>
-<td>Place 23 dans R0</td>
-</tr>
-</tbody>
+  <thead>
+      <tr>
+          <th style="text-align: left">Mnemonique</th>
+          <th style="text-align: left">Exemple</th>
+          <th style="text-align: left">Description</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left">Charger</td>
+          <td style="text-align: left"><code>LDR R1,78</code></td>
+          <td style="text-align: left">Place la valeur stockée à l&rsquo;adresse mémoire 78 dans le registre R1</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">Stocker</td>
+          <td style="text-align: left"><code>STR R3,125</code></td>
+          <td style="text-align: left">Place la valeur stockée dans le registre R3 en mémoire vive à l&rsquo;adresse 125</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">Déplacer</td>
+          <td style="text-align: left"><code>MOV R1, #23</code></td>
+          <td style="text-align: left">Place 23 dans R0</td>
+      </tr>
+  </tbody>
 </table>
 <h3 id="opérations-arithmétiques">
   Opérations arithmétiques
   <a class="anchor" href="#op%c3%a9rations-arithm%c3%a9tiques">#</a>
 </h3>
 <table>
-<thead>
-<tr>
-<th>Mnemonique</th>
-<th>Exemple</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Ajouter</td>
-<td><code>ADD R1,R0,#128</code></td>
-<td>Additionne 128 à la valeur du registre R0, place dans R1</td>
-</tr>
-<tr>
-<td>Ajouter deux registres</td>
-<td><code>ADD R0,R1,R2</code></td>
-<td>Additionne R1 à R2, place dans R0</td>
-</tr>
-<tr>
-<td>Soustraire</td>
-<td><code>SUB R1,R0,#128</code></td>
-<td>Soustrait 128 de R0, place dans R1</td>
-</tr>
-<tr>
-<td>Soustraire deux registres</td>
-<td><code>SUB R0,R1,R2</code></td>
-<td>Soustrait R2 de R1, place dans R0</td>
-</tr>
-</tbody>
+  <thead>
+      <tr>
+          <th style="text-align: left">Mnemonique</th>
+          <th style="text-align: left">Exemple</th>
+          <th style="text-align: left">Description</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left">Ajouter</td>
+          <td style="text-align: left"><code>ADD R1,R0,#128</code></td>
+          <td style="text-align: left">Additionne 128 à la valeur du registre R0, place dans R1</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">Ajouter deux registres</td>
+          <td style="text-align: left"><code>ADD R0,R1,R2</code></td>
+          <td style="text-align: left">Additionne R1 à R2, place dans R0</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">Soustraire</td>
+          <td style="text-align: left"><code>SUB R1,R0,#128</code></td>
+          <td style="text-align: left">Soustrait 128 de R0, place dans R1</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">Soustraire deux registres</td>
+          <td style="text-align: left"><code>SUB R0,R1,R2</code></td>
+          <td style="text-align: left">Soustrait R2 de R1, place dans R0</td>
+      </tr>
+  </tbody>
 </table>
 <h3 id="rupture-de-séquence-1">
   Rupture de séquence
   <a class="anchor" href="#rupture-de-s%c3%a9quence-1">#</a>
 </h3>
 <table>
-<thead>
-<tr>
-<th>Mnemonique</th>
-<th>Exemple</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Arrêter la machine</td>
-<td><code>HALT</code></td>
-<td>Arrête l&rsquo;exécution du programme</td>
-</tr>
-<tr>
-<td>Saut inconditionnel</td>
-<td><code>B 45</code></td>
-<td>La prochaine instruction se situe en mémoire à l&rsquo;adresse 45</td>
-</tr>
-<tr>
-<td>Comparer</td>
-<td><code>CMP R0, #23</code></td>
-<td>Compare R0 et le nombre 23</td>
-</tr>
-<tr>
-<td></td>
-<td></td>
-<td>CMP doit précéder</td>
-</tr>
-<tr>
-<td></td>
-<td></td>
-<td>un branchement conditionnel</td>
-</tr>
-<tr>
-<td>Saut &ldquo;Égal&rdquo;</td>
-<td><code>BEQ 78</code></td>
-<td>Si le dernier CMP est égal, saute à l&rsquo;adresse 78</td>
-</tr>
-<tr>
-<td>Saut &ldquo;Différent&rdquo;</td>
-<td><code>BNE 78</code></td>
-<td>Si le dernier CMP est différent, saute à l&rsquo;adresse 78</td>
-</tr>
-<tr>
-<td>Saut &ldquo;Plus grand&rdquo;</td>
-<td><code>BGT 78</code></td>
-<td>Si le dernier CMP est plus grand, saute à l&rsquo;adresse 78</td>
-</tr>
-<tr>
-<td>Saut &ldquo;Plus petit&rdquo;</td>
-<td><code>BLT 78</code></td>
-<td>Si le dernier CMP est plus petit, saute à l&rsquo;adresse 78</td>
-</tr>
-</tbody>
+  <thead>
+      <tr>
+          <th style="text-align: left">Mnemonique</th>
+          <th style="text-align: left">Exemple</th>
+          <th style="text-align: left">Description</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left">Arrêter la machine</td>
+          <td style="text-align: left"><code>HALT</code></td>
+          <td style="text-align: left">Arrête l&rsquo;exécution du programme</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">Saut inconditionnel</td>
+          <td style="text-align: left"><code>B 45</code></td>
+          <td style="text-align: left">La prochaine instruction se situe en mémoire à l&rsquo;adresse 45</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">Comparer</td>
+          <td style="text-align: left"><code>CMP R0, #23</code></td>
+          <td style="text-align: left">Compare R0 et le nombre 23</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"></td>
+          <td style="text-align: left"></td>
+          <td style="text-align: left">CMP doit précéder</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"></td>
+          <td style="text-align: left"></td>
+          <td style="text-align: left">un branchement conditionnel</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">Saut &ldquo;Égal&rdquo;</td>
+          <td style="text-align: left"><code>BEQ 78</code></td>
+          <td style="text-align: left">Si le dernier CMP est égal, saute à l&rsquo;adresse 78</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">Saut &ldquo;Différent&rdquo;</td>
+          <td style="text-align: left"><code>BNE 78</code></td>
+          <td style="text-align: left">Si le dernier CMP est différent, saute à l&rsquo;adresse 78</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">Saut &ldquo;Plus grand&rdquo;</td>
+          <td style="text-align: left"><code>BGT 78</code></td>
+          <td style="text-align: left">Si le dernier CMP est plus grand, saute à l&rsquo;adresse 78</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">Saut &ldquo;Plus petit&rdquo;</td>
+          <td style="text-align: left"><code>BLT 78</code></td>
+          <td style="text-align: left">Si le dernier CMP est plus petit, saute à l&rsquo;adresse 78</td>
+      </tr>
+  </tbody>
 </table>
 <h3 id="exemple">
   Exemple

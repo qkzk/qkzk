@@ -4,15 +4,27 @@
 <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
     <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="3. TP : Le problème des étagères # pdf pour impression
-La bibliothèque prévoit de refaire ses étagères. Elle comprend une collection de n livres b1,b2,... ,bn. Chaque livre bi a une largeur wi. Les livres doivent être rangés dans l’ordre fixé (par valeur de i croissante) sur des étagères de largueur L.
-À faire 1 # proposer un algorithme glouton pour le rangement des étagères.
-Votre algorithme prend en paramètres une liste des livres, dont on connaît la largeur et retourne la double liste des étagères.">
+<meta name="description" content="
+  3. TP : Le problème des étagères
+  #
+
+pdf pour impression
+La bibliothèque prévoit de refaire ses étagères. Elle comprend une collection de
+n livres b1,b2,... ,bn. Chaque livre bi a une largeur wi.
+Les livres doivent être rangés dans l’ordre fixé (par valeur de i croissante)
+sur des étagères de largueur L.
+
+  À faire 1
+  #
+
+proposer un algorithme glouton pour le rangement des étagères.
+Votre algorithme prend en paramètres une liste des livres, dont on connaît
+la largeur et retourne la double liste des étagères.">
 <meta name="theme-color" content="#FFFFFF">
 <meta name="color-scheme" content="light dark"><meta property="og:url" content="http://localhost:1313/docs/nsi/cours_premiere/algorithmique/glouton/3_tp/">
   <meta property="og:site_name" content="qkzk">
   <meta property="og:title" content="3. TP : Étagères">
-  <meta property="og:description" content="3. TP : Le problème des étagères # pdf pour impression
+  <meta property="og:description" content=" 3. TP : Le problème des étagères # pdf pour impression
 La bibliothèque prévoit de refaire ses étagères. Elle comprend une collection de n livres b1,b2,... ,bn. Chaque livre bi a une largeur wi. Les livres doivent être rangés dans l’ordre fixé (par valeur de i croissante) sur des étagères de largueur L.
 À faire 1 # proposer un algorithme glouton pour le rangement des étagères.
 Votre algorithme prend en paramètres une liste des livres, dont on connaît la largeur et retourne la double liste des étagères.">
@@ -23,8 +35,7 @@ Votre algorithme prend en paramètres une liste des livres, dont on connaît la 
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/book.min.24c2b1f8dc2338e074345eec5b36f8a002aaa6d1b2e7312e14ac2d6a6958c876.css" integrity="sha256-JMKx&#43;NwjOOB0NF7sWzb4oAKqptGy5zEuFKwtamlYyHY=" crossorigin="anonymous">
   <script defer src="/flexsearch.min.js"></script>
-  <script defer src="/en.search.min.41edfc0344c578feffc8ba5e94e6f59bfed684cf40d08bf18134f4a240cd0e15.js" integrity="sha256-Qe38A0TFeP7/yLpelOb1m/7WhM9A0IvxgTT0okDNDhU=" crossorigin="anonymous"></script>
-
+  <script defer src="/en.search.min.ad90ed54c2fb2ebca6bf92dc494821802bb5913fb4ded7c7ce215de203590daa.js" integrity="sha256-rZDtVML7Lrymv5LcSUghgCu1kT&#43;03tfHziFd4gNZDao=" crossorigin="anonymous"></script>
 <link rel="alternate" type="application/rss+xml" href="http://localhost:1313/docs/nsi/cours_premiere/algorithmique/glouton/3_tp/index.xml" title="qkzk" />
 <!--
 Made with Book Theme
@@ -6980,24 +6991,24 @@ la largeur et retourne la double liste des étagères.</p>
 <p>Chaque étagère contient donc différents livres.</p>
 <p>Par exemple avec les livres :</p>
 <table>
-<thead>
-<tr>
-<th>livre</th>
-<th>0</th>
-<th>1</th>
-<th>2</th>
-<th>3</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>largeur</td>
-<td>4</td>
-<td>6</td>
-<td>2</td>
-<td>3</td>
-</tr>
-</tbody>
+  <thead>
+      <tr>
+          <th style="text-align: left">livre</th>
+          <th style="text-align: left">0</th>
+          <th style="text-align: left">1</th>
+          <th style="text-align: left">2</th>
+          <th style="text-align: left">3</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left">largeur</td>
+          <td style="text-align: left">4</td>
+          <td style="text-align: left">6</td>
+          <td style="text-align: left">2</td>
+          <td style="text-align: left">3</td>
+      </tr>
+  </tbody>
 </table>
 <p>et la largeur d&rsquo;étagère <code>L = 9</code> :</p>
 <p>on obtient :</p>

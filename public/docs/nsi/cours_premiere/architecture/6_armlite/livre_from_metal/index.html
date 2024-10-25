@@ -4,14 +4,34 @@
 <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
     <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="L&rsquo;informatique à partir du métal # Richard Pawson &amp; Peter Higginson
+<meta name="description" content="
+  L&rsquo;informatique à partir du métal
+  #
+
+Richard Pawson &amp; Peter Higginson
 Traduction semi automatisée des premiers chapitres du livre disponible ici
-Fondamentaux du langage d&rsquo;assemblage # Chapitre 1. Introduction au langage d&rsquo;assemblage et à ARMlite # Le programme listé ci-dessous est écrit en langage assembleur – il peut vous sembler très peu familier ! Le langage d&rsquo;assemblage est un langage de programmation &ldquo;de bas niveau&rdquo;, chaque instruction (ligne de code dans ce cas) effectue une opération très simple, et il peut falloir de nombreuses instructions de ce type pour correspondre à la fonctionnalité d&rsquo;une seule ligne de code dans un langage de haut niveau (tel que Python, VB ou C#).">
+
+
+  Fondamentaux du langage d&rsquo;assemblage
+  #
+
+
+
+  Chapitre 1. Introduction au langage d&rsquo;assemblage et à ARMlite
+  #
+
+Le programme listé ci-dessous est écrit en langage assembleur – il peut vous
+sembler très peu familier ! Le langage d&rsquo;assemblage est un langage de
+programmation &ldquo;de bas niveau&rdquo;, chaque instruction (ligne de code dans ce cas)
+effectue une opération très simple, et il peut falloir de nombreuses
+instructions de ce type pour correspondre à la
+fonctionnalité d&rsquo;une seule ligne de code dans un langage de haut niveau (tel que
+Python, VB ou C#).">
 <meta name="theme-color" content="#FFFFFF">
 <meta name="color-scheme" content="light dark"><meta property="og:url" content="http://localhost:1313/docs/nsi/cours_premiere/architecture/6_armlite/livre_from_metal/">
   <meta property="og:site_name" content="qkzk">
   <meta property="og:title" content="L&#39;informatique à partir du métal">
-  <meta property="og:description" content="L’informatique à partir du métal # Richard Pawson &amp; Peter Higginson
+  <meta property="og:description" content=" L’informatique à partir du métal # Richard Pawson &amp; Peter Higginson
 Traduction semi automatisée des premiers chapitres du livre disponible ici
 Fondamentaux du langage d’assemblage # Chapitre 1. Introduction au langage d’assemblage et à ARMlite # Le programme listé ci-dessous est écrit en langage assembleur – il peut vous sembler très peu familier ! Le langage d’assemblage est un langage de programmation “de bas niveau”, chaque instruction (ligne de code dans ce cas) effectue une opération très simple, et il peut falloir de nombreuses instructions de ce type pour correspondre à la fonctionnalité d’une seule ligne de code dans un langage de haut niveau (tel que Python, VB ou C#).">
   <meta property="og:locale" content="en_us">
@@ -22,8 +42,7 @@ Fondamentaux du langage d’assemblage # Chapitre 1. Introduction au langage d�
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/book.min.24c2b1f8dc2338e074345eec5b36f8a002aaa6d1b2e7312e14ac2d6a6958c876.css" integrity="sha256-JMKx&#43;NwjOOB0NF7sWzb4oAKqptGy5zEuFKwtamlYyHY=" crossorigin="anonymous">
   <script defer src="/flexsearch.min.js"></script>
-  <script defer src="/en.search.min.41edfc0344c578feffc8ba5e94e6f59bfed684cf40d08bf18134f4a240cd0e15.js" integrity="sha256-Qe38A0TFeP7/yLpelOb1m/7WhM9A0IvxgTT0okDNDhU=" crossorigin="anonymous"></script>
-
+  <script defer src="/en.search.min.ad90ed54c2fb2ebca6bf92dc494821802bb5913fb4ded7c7ce215de203590daa.js" integrity="sha256-rZDtVML7Lrymv5LcSUghgCu1kT&#43;03tfHziFd4gNZDao=" crossorigin="anonymous"></script>
 <link rel="alternate" type="application/rss+xml" href="http://localhost:1313/docs/nsi/cours_premiere/architecture/6_armlite/livre_from_metal/index.xml" title="qkzk" />
 <!--
 Made with Book Theme
@@ -7621,34 +7640,34 @@ relancer, vous devez cliquer sur le bouton <strong>Arrêter</strong> avant <stro
 </blockquote>
 
 <table>
-<thead>
-<tr>
-<th>Instruction</th>
-<th>Interprétation</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>MOV R0,#1</code></td>
-<td>Déplacer (copier) la valeur immédiate 1 dans le registre R0</td>
-</tr>
-<tr>
-<td><code>ADD R1,R0,#8</code></td>
-<td>Ajouter 8 à la valeur actuellement dans R0 et mettre le résultat dans <code>R1</code>. Notez que <code>R1</code>, ici, est appelé le &lsquo;registre de destination&rsquo; pour cette instruction.</td>
-</tr>
-<tr>
-<td><code>ADD R2,R1,#100</code></td>
-<td>Ajouter 100 à la valeur actuellement dans <code>R1</code> et mettre le résultat dans <code>R2</code></td>
-</tr>
-<tr>
-<td><code>SUB R3,R2,#25</code></td>
-<td>Soustraire 25 de la valeur actuellement dans <code>R2</code> et mettre le résultat dans <code>R3</code></td>
-</tr>
-<tr>
-<td><code>HALT</code></td>
-<td>Arrêter (temporairement) l&rsquo;exécution du programme.</td>
-</tr>
-</tbody>
+  <thead>
+      <tr>
+          <th style="text-align: left">Instruction</th>
+          <th style="text-align: left">Interprétation</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left"><code>MOV R0,#1</code></td>
+          <td style="text-align: left">Déplacer (copier) la valeur immédiate 1 dans le registre R0</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><code>ADD R1,R0,#8</code></td>
+          <td style="text-align: left">Ajouter 8 à la valeur actuellement dans R0 et mettre le résultat dans <code>R1</code>. Notez que <code>R1</code>, ici, est appelé le &lsquo;registre de destination&rsquo; pour cette instruction.</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><code>ADD R2,R1,#100</code></td>
+          <td style="text-align: left">Ajouter 100 à la valeur actuellement dans <code>R1</code> et mettre le résultat dans <code>R2</code></td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><code>SUB R3,R2,#25</code></td>
+          <td style="text-align: left">Soustraire 25 de la valeur actuellement dans <code>R2</code> et mettre le résultat dans <code>R3</code></td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><code>HALT</code></td>
+          <td style="text-align: left">Arrêter (temporairement) l&rsquo;exécution du programme.</td>
+      </tr>
+  </tbody>
 </table>
 <blockquote class="book-hint warning">
   <h2 id="exercice-7">
@@ -7679,22 +7698,22 @@ chaque étape, comme indiqué ci-dessous :</p>
 </span></span><span style="display:flex;"><span>HALT
 </span></span></code></pre></div><p>Jusqu&rsquo;à présent, dans l&rsquo;exemple de code, l&rsquo;opérande final pour les opérations MOV, ADD et SUB a toujours été une valeur immédiate (préfixée par #). Cependant, cet opérande peut également être spécifié comme un autre registre, comme illustré dans les exemples ci-dessous :</p>
 <table>
-<thead>
-<tr>
-<th>Instruction</th>
-<th>Interprétation</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>ADD R3,R2,R1</code></td>
-<td>Additionnez les valeurs de R2 et R1, et placez le résultat dans R3</td>
-</tr>
-<tr>
-<td><code>ADD R4,#1,#2</code></td>
-<td>Cette syntaxe est invalide - seul le dernier opérande peut être une valeur immédiate</td>
-</tr>
-</tbody>
+  <thead>
+      <tr>
+          <th style="text-align: left">Instruction</th>
+          <th style="text-align: left">Interprétation</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left"><code>ADD R3,R2,R1</code></td>
+          <td style="text-align: left">Additionnez les valeurs de R2 et R1, et placez le résultat dans R3</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><code>ADD R4,#1,#2</code></td>
+          <td style="text-align: left">Cette syntaxe est invalide - seul le dernier opérande peut être une valeur immédiate</td>
+      </tr>
+  </tbody>
 </table>
 <h3 id="multiplier-et-diviser-">
   Multiplier et Diviser ?
@@ -7742,40 +7761,40 @@ spécifier</p>
 <p>Le tableau ci-dessous répertorie cinq nouvelles instructions qui manipulent des
 valeurs dans des registres.</p>
 <table>
-<thead>
-<tr>
-<th>Instruction</th>
-<th>Exemple d&rsquo;instruction</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>AND</code></td>
-<td><code>AND R2,R1,#4</code></td>
-<td>Effectue un ET logique bit à bit sur les deux valeurs d&rsquo;entrée, en résultat dans le bit équivalent du registre de destination.</td>
-</tr>
-<tr>
-<td><code>ORR</code></td>
-<td><code>ORR R1,R3,R5</code></td>
-<td>Comme ci-dessus mais en utilisant un OU logique</td>
-</tr>
-<tr>
-<td><code>EOR</code></td>
-<td><code>EOR R1,R1,#15</code></td>
-<td>Comme ci-dessus mais en utilisant un &lsquo;OU exclusif&rsquo; logique</td>
-</tr>
-<tr>
-<td><code>LSL</code></td>
-<td><code>LSL R1,R1,#3</code></td>
-<td>Décalage logique à gauche&rsquo;. Décale chaque bit de la valeur d&rsquo;entrée vers la gauche, du nombre de positions spécifié dans le troisième opérande, en perdant les bits les plus à gauche et en ajoutant des zéros à droite.</td>
-</tr>
-<tr>
-<td><code>LSR</code></td>
-<td><code>LSR R1,R1,R2</code></td>
-<td>Décalage logique vers la droite&rsquo;. Décale chaque bit de la valeur d&rsquo;entrée vers la droite , du nombre de positions spécifié dans le troisième opérande, en perdant les bits les plus à droite et en ajoutant des zéros à gauche.</td>
-</tr>
-</tbody>
+  <thead>
+      <tr>
+          <th style="text-align: left">Instruction</th>
+          <th style="text-align: left">Exemple d&rsquo;instruction</th>
+          <th style="text-align: left">Description</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left"><code>AND</code></td>
+          <td style="text-align: left"><code>AND R2,R1,#4</code></td>
+          <td style="text-align: left">Effectue un ET logique bit à bit sur les deux valeurs d&rsquo;entrée, en résultat dans le bit équivalent du registre de destination.</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><code>ORR</code></td>
+          <td style="text-align: left"><code>ORR R1,R3,R5</code></td>
+          <td style="text-align: left">Comme ci-dessus mais en utilisant un OU logique</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><code>EOR</code></td>
+          <td style="text-align: left"><code>EOR R1,R1,#15</code></td>
+          <td style="text-align: left">Comme ci-dessus mais en utilisant un &lsquo;OU exclusif&rsquo; logique</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><code>LSL</code></td>
+          <td style="text-align: left"><code>LSL R1,R1,#3</code></td>
+          <td style="text-align: left">Décalage logique à gauche&rsquo;. Décale chaque bit de la valeur d&rsquo;entrée vers la gauche, du nombre de positions spécifié dans le troisième opérande, en perdant les bits les plus à gauche et en ajoutant des zéros à droite.</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><code>LSR</code></td>
+          <td style="text-align: left"><code>LSR R1,R1,R2</code></td>
+          <td style="text-align: left">Décalage logique vers la droite&rsquo;. Décale chaque bit de la valeur d&rsquo;entrée vers la droite , du nombre de positions spécifié dans le troisième opérande, en perdant les bits les plus à droite et en ajoutant des zéros à gauche.</td>
+      </tr>
+  </tbody>
 </table>
 <p>Celles-ci sont toutes décrites comme des opérations &ldquo;bit à bit&rdquo;, car
 elles manipulent des bits individuels dans les opérandes. Ils sont mieux
@@ -7814,50 +7833,50 @@ bit ? Et par deux bits ? De même, pour un décalage logique vers la droite (<co
 </blockquote>
 
 <table>
-<thead>
-<tr>
-<th>Instruction complète</th>
-<th>Valeur décimale du registre de destination après l&rsquo;exécuton</th>
-<th>Valeur binaire du registre de destination après l&rsquo;exécution de cette instruction</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>MOV RO,</code></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td><code>HALT</code></td>
-<td></td>
-<td></td>
-</tr>
-</tbody>
+  <thead>
+      <tr>
+          <th style="text-align: left">Instruction complète</th>
+          <th style="text-align: left">Valeur décimale du registre de destination après l&rsquo;exécuton</th>
+          <th style="text-align: left">Valeur binaire du registre de destination après l&rsquo;exécution de cette instruction</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left"><code>MOV RO,</code></td>
+          <td style="text-align: left"></td>
+          <td style="text-align: left"></td>
+      </tr>
+      <tr>
+          <td style="text-align: left"></td>
+          <td style="text-align: left"></td>
+          <td style="text-align: left"></td>
+      </tr>
+      <tr>
+          <td style="text-align: left"></td>
+          <td style="text-align: left"></td>
+          <td style="text-align: left"></td>
+      </tr>
+      <tr>
+          <td style="text-align: left"></td>
+          <td style="text-align: left"></td>
+          <td style="text-align: left"></td>
+      </tr>
+      <tr>
+          <td style="text-align: left"></td>
+          <td style="text-align: left"></td>
+          <td style="text-align: left"></td>
+      </tr>
+      <tr>
+          <td style="text-align: left"></td>
+          <td style="text-align: left"></td>
+          <td style="text-align: left"></td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><code>HALT</code></td>
+          <td style="text-align: left"></td>
+          <td style="text-align: left"></td>
+      </tr>
+  </tbody>
 </table>
 <h3 id="jouer-le-jeu">
   Jouer le jeu

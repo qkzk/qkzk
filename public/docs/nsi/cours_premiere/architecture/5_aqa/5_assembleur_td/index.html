@@ -4,13 +4,146 @@
 <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
     <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="PDF pour impression # Tous les exercices utilisent l&rsquo;assembleur présenté en cours et rappelé ci-dessous.
-Déplacements # Mnemonique Exemple Description Charger LDR R1,78 Place la valeur stockée à l&rsquo;adresse mémoire 78 dans le registre R1 Stocker STR R3,125 Place la valeur stockée dans le registre R3 en mémoire vive à l&rsquo;adresse 125 Déplacer MOV R1, #23 Place 23 dans R0 Opérations arithmétiques # Mnemonique Exemple Description Ajouter ADD R1,R0,#128 Additionne 128 à la valeur du registre R0, place dans R1 Ajouter deux registres ADD R0,R1,R2 Additionne R1 à R2, place dans R0 Soustraire SUB R1,R0,#128 Soustrait 128 de R0, place dans R1 Soustraire deux registres SUB R0,R1,R2 Soustrait R2 de R1, place dans R0 Rupture de séquence # Mnemonique Exemple Description Arrêter la machine HALT Arrête l&rsquo;exécution du programme Saut inconditionnel B 45 La prochaine instruction se situe en mémoire à l&rsquo;adresse 45 Comparer CMP R0, #23 Compare R0 et le nombre 23 CMP doit précéder un branchement conditionnel Saut &ldquo;Égal&rdquo; BEQ 78 Si le dernier CMP est égal, saute à l&rsquo;adresse 78 Saut &ldquo;Différent&rdquo; BNE 78 Si le dernier CMP est différent, saute à l&rsquo;adresse 78 Saut &ldquo;Plus grand&rdquo; BGT 78 Si le dernier CMP est plus grand, saute à l&rsquo;adresse 78 Saut &ldquo;Plus petit&rdquo; BLT 78 Si le dernier CMP est plus petit, saute à l&rsquo;adresse 78 Exercice 1 # Remplacer chaque instruction suivante par son mnemonique puis dérouler le programme pas à pas.">
+<meta name="description" content="
+  PDF pour impression
+  #
+
+Tous les exercices utilisent l&rsquo;assembleur présenté en cours et rappelé ci-dessous.
+
+  Déplacements
+  #
+
+
+  
+      
+          Mnemonique
+          Exemple
+          Description
+      
+  
+  
+      
+          Charger
+          LDR R1,78
+          Place la valeur stockée à l&rsquo;adresse mémoire 78 dans le registre R1
+      
+      
+          Stocker
+          STR R3,125
+          Place la valeur stockée dans le registre R3 en mémoire vive à l&rsquo;adresse 125
+      
+      
+          Déplacer
+          MOV R1, #23
+          Place 23 dans R0
+      
+  
+
+
+  Opérations arithmétiques
+  #
+
+
+  
+      
+          Mnemonique
+          Exemple
+          Description
+      
+  
+  
+      
+          Ajouter
+          ADD R1,R0,#128
+          Additionne 128 à la valeur du registre R0, place dans R1
+      
+      
+          Ajouter deux registres
+          ADD R0,R1,R2
+          Additionne R1 à R2, place dans R0
+      
+      
+          Soustraire
+          SUB R1,R0,#128
+          Soustrait 128 de R0, place dans R1
+      
+      
+          Soustraire deux registres
+          SUB R0,R1,R2
+          Soustrait R2 de R1, place dans R0
+      
+  
+
+
+  Rupture de séquence
+  #
+
+
+  
+      
+          Mnemonique
+          Exemple
+          Description
+      
+  
+  
+      
+          Arrêter la machine
+          HALT
+          Arrête l&rsquo;exécution du programme
+      
+      
+          Saut inconditionnel
+          B 45
+          La prochaine instruction se situe en mémoire à l&rsquo;adresse 45
+      
+      
+          Comparer
+          CMP R0, #23
+          Compare R0 et le nombre 23
+      
+      
+          
+          
+          CMP doit précéder
+      
+      
+          
+          
+          un branchement conditionnel
+      
+      
+          Saut &ldquo;Égal&rdquo;
+          BEQ 78
+          Si le dernier CMP est égal, saute à l&rsquo;adresse 78
+      
+      
+          Saut &ldquo;Différent&rdquo;
+          BNE 78
+          Si le dernier CMP est différent, saute à l&rsquo;adresse 78
+      
+      
+          Saut &ldquo;Plus grand&rdquo;
+          BGT 78
+          Si le dernier CMP est plus grand, saute à l&rsquo;adresse 78
+      
+      
+          Saut &ldquo;Plus petit&rdquo;
+          BLT 78
+          Si le dernier CMP est plus petit, saute à l&rsquo;adresse 78
+      
+  
+
+
+  Exercice 1
+  #
+
+Remplacer chaque instruction suivante par son mnemonique puis dérouler le programme pas à pas.">
 <meta name="theme-color" content="#FFFFFF">
 <meta name="color-scheme" content="light dark"><meta property="og:url" content="http://localhost:1313/docs/nsi/cours_premiere/architecture/5_aqa/5_assembleur_td/">
   <meta property="og:site_name" content="qkzk">
   <meta property="og:title" content="Assembleur Exercices">
-  <meta property="og:description" content="PDF pour impression # Tous les exercices utilisent l’assembleur présenté en cours et rappelé ci-dessous.
+  <meta property="og:description" content=" PDF pour impression # Tous les exercices utilisent l’assembleur présenté en cours et rappelé ci-dessous.
 Déplacements # Mnemonique Exemple Description Charger LDR R1,78 Place la valeur stockée à l’adresse mémoire 78 dans le registre R1 Stocker STR R3,125 Place la valeur stockée dans le registre R3 en mémoire vive à l’adresse 125 Déplacer MOV R1, #23 Place 23 dans R0 Opérations arithmétiques # Mnemonique Exemple Description Ajouter ADD R1,R0,#128 Additionne 128 à la valeur du registre R0, place dans R1 Ajouter deux registres ADD R0,R1,R2 Additionne R1 à R2, place dans R0 Soustraire SUB R1,R0,#128 Soustrait 128 de R0, place dans R1 Soustraire deux registres SUB R0,R1,R2 Soustrait R2 de R1, place dans R0 Rupture de séquence # Mnemonique Exemple Description Arrêter la machine HALT Arrête l’exécution du programme Saut inconditionnel B 45 La prochaine instruction se situe en mémoire à l’adresse 45 Comparer CMP R0, #23 Compare R0 et le nombre 23 CMP doit précéder un branchement conditionnel Saut “Égal” BEQ 78 Si le dernier CMP est égal, saute à l’adresse 78 Saut “Différent” BNE 78 Si le dernier CMP est différent, saute à l’adresse 78 Saut “Plus grand” BGT 78 Si le dernier CMP est plus grand, saute à l’adresse 78 Saut “Plus petit” BLT 78 Si le dernier CMP est plus petit, saute à l’adresse 78 Exercice 1 # Remplacer chaque instruction suivante par son mnemonique puis dérouler le programme pas à pas.">
   <meta property="og:locale" content="en_us">
   <meta property="og:type" content="website">
@@ -19,8 +152,7 @@ Déplacements # Mnemonique Exemple Description Charger LDR R1,78 Place la valeur
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/book.min.24c2b1f8dc2338e074345eec5b36f8a002aaa6d1b2e7312e14ac2d6a6958c876.css" integrity="sha256-JMKx&#43;NwjOOB0NF7sWzb4oAKqptGy5zEuFKwtamlYyHY=" crossorigin="anonymous">
   <script defer src="/flexsearch.min.js"></script>
-  <script defer src="/en.search.min.41edfc0344c578feffc8ba5e94e6f59bfed684cf40d08bf18134f4a240cd0e15.js" integrity="sha256-Qe38A0TFeP7/yLpelOb1m/7WhM9A0IvxgTT0okDNDhU=" crossorigin="anonymous"></script>
-
+  <script defer src="/en.search.min.ad90ed54c2fb2ebca6bf92dc494821802bb5913fb4ded7c7ce215de203590daa.js" integrity="sha256-rZDtVML7Lrymv5LcSUghgCu1kT&#43;03tfHziFd4gNZDao=" crossorigin="anonymous"></script>
 <link rel="alternate" type="application/rss+xml" href="http://localhost:1313/docs/nsi/cours_premiere/architecture/5_aqa/5_assembleur_td/index.xml" title="qkzk" />
 <!--
 Made with Book Theme
@@ -6998,125 +7130,125 @@ MathJax.Hub.Config({
   <a class="anchor" href="#d%c3%a9placements">#</a>
 </h2>
 <table>
-<thead>
-<tr>
-<th>Mnemonique</th>
-<th>Exemple</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Charger</td>
-<td><code>LDR R1,78</code></td>
-<td>Place la valeur stockée à l&rsquo;adresse mémoire 78 dans le registre R1</td>
-</tr>
-<tr>
-<td>Stocker</td>
-<td><code>STR R3,125</code></td>
-<td>Place la valeur stockée dans le registre R3 en mémoire vive à l&rsquo;adresse 125</td>
-</tr>
-<tr>
-<td>Déplacer</td>
-<td><code>MOV R1, #23</code></td>
-<td>Place 23 dans R0</td>
-</tr>
-</tbody>
+  <thead>
+      <tr>
+          <th style="text-align: left">Mnemonique</th>
+          <th style="text-align: left">Exemple</th>
+          <th style="text-align: left">Description</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left">Charger</td>
+          <td style="text-align: left"><code>LDR R1,78</code></td>
+          <td style="text-align: left">Place la valeur stockée à l&rsquo;adresse mémoire 78 dans le registre R1</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">Stocker</td>
+          <td style="text-align: left"><code>STR R3,125</code></td>
+          <td style="text-align: left">Place la valeur stockée dans le registre R3 en mémoire vive à l&rsquo;adresse 125</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">Déplacer</td>
+          <td style="text-align: left"><code>MOV R1, #23</code></td>
+          <td style="text-align: left">Place 23 dans R0</td>
+      </tr>
+  </tbody>
 </table>
 <h2 id="opérations-arithmétiques">
   Opérations arithmétiques
   <a class="anchor" href="#op%c3%a9rations-arithm%c3%a9tiques">#</a>
 </h2>
 <table>
-<thead>
-<tr>
-<th>Mnemonique</th>
-<th>Exemple</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Ajouter</td>
-<td><code>ADD R1,R0,#128</code></td>
-<td>Additionne 128 à la valeur du registre R0, place dans R1</td>
-</tr>
-<tr>
-<td>Ajouter deux registres</td>
-<td><code>ADD R0,R1,R2</code></td>
-<td>Additionne R1 à R2, place dans R0</td>
-</tr>
-<tr>
-<td>Soustraire</td>
-<td><code>SUB R1,R0,#128</code></td>
-<td>Soustrait 128 de R0, place dans R1</td>
-</tr>
-<tr>
-<td>Soustraire deux registres</td>
-<td><code>SUB R0,R1,R2</code></td>
-<td>Soustrait R2 de R1, place dans R0</td>
-</tr>
-</tbody>
+  <thead>
+      <tr>
+          <th style="text-align: left">Mnemonique</th>
+          <th style="text-align: left">Exemple</th>
+          <th style="text-align: left">Description</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left">Ajouter</td>
+          <td style="text-align: left"><code>ADD R1,R0,#128</code></td>
+          <td style="text-align: left">Additionne 128 à la valeur du registre R0, place dans R1</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">Ajouter deux registres</td>
+          <td style="text-align: left"><code>ADD R0,R1,R2</code></td>
+          <td style="text-align: left">Additionne R1 à R2, place dans R0</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">Soustraire</td>
+          <td style="text-align: left"><code>SUB R1,R0,#128</code></td>
+          <td style="text-align: left">Soustrait 128 de R0, place dans R1</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">Soustraire deux registres</td>
+          <td style="text-align: left"><code>SUB R0,R1,R2</code></td>
+          <td style="text-align: left">Soustrait R2 de R1, place dans R0</td>
+      </tr>
+  </tbody>
 </table>
 <h2 id="rupture-de-séquence">
   Rupture de séquence
   <a class="anchor" href="#rupture-de-s%c3%a9quence">#</a>
 </h2>
 <table>
-<thead>
-<tr>
-<th>Mnemonique</th>
-<th>Exemple</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Arrêter la machine</td>
-<td><code>HALT</code></td>
-<td>Arrête l&rsquo;exécution du programme</td>
-</tr>
-<tr>
-<td>Saut inconditionnel</td>
-<td><code>B 45</code></td>
-<td>La prochaine instruction se situe en mémoire à l&rsquo;adresse 45</td>
-</tr>
-<tr>
-<td>Comparer</td>
-<td><code>CMP R0, #23</code></td>
-<td>Compare R0 et le nombre 23</td>
-</tr>
-<tr>
-<td></td>
-<td></td>
-<td>CMP doit précéder</td>
-</tr>
-<tr>
-<td></td>
-<td></td>
-<td>un branchement conditionnel</td>
-</tr>
-<tr>
-<td>Saut &ldquo;Égal&rdquo;</td>
-<td><code>BEQ 78</code></td>
-<td>Si le dernier CMP est égal, saute à l&rsquo;adresse 78</td>
-</tr>
-<tr>
-<td>Saut &ldquo;Différent&rdquo;</td>
-<td><code>BNE 78</code></td>
-<td>Si le dernier CMP est différent, saute à l&rsquo;adresse 78</td>
-</tr>
-<tr>
-<td>Saut &ldquo;Plus grand&rdquo;</td>
-<td><code>BGT 78</code></td>
-<td>Si le dernier CMP est plus grand, saute à l&rsquo;adresse 78</td>
-</tr>
-<tr>
-<td>Saut &ldquo;Plus petit&rdquo;</td>
-<td><code>BLT 78</code></td>
-<td>Si le dernier CMP est plus petit, saute à l&rsquo;adresse 78</td>
-</tr>
-</tbody>
+  <thead>
+      <tr>
+          <th style="text-align: left">Mnemonique</th>
+          <th style="text-align: left">Exemple</th>
+          <th style="text-align: left">Description</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left">Arrêter la machine</td>
+          <td style="text-align: left"><code>HALT</code></td>
+          <td style="text-align: left">Arrête l&rsquo;exécution du programme</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">Saut inconditionnel</td>
+          <td style="text-align: left"><code>B 45</code></td>
+          <td style="text-align: left">La prochaine instruction se situe en mémoire à l&rsquo;adresse 45</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">Comparer</td>
+          <td style="text-align: left"><code>CMP R0, #23</code></td>
+          <td style="text-align: left">Compare R0 et le nombre 23</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"></td>
+          <td style="text-align: left"></td>
+          <td style="text-align: left">CMP doit précéder</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"></td>
+          <td style="text-align: left"></td>
+          <td style="text-align: left">un branchement conditionnel</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">Saut &ldquo;Égal&rdquo;</td>
+          <td style="text-align: left"><code>BEQ 78</code></td>
+          <td style="text-align: left">Si le dernier CMP est égal, saute à l&rsquo;adresse 78</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">Saut &ldquo;Différent&rdquo;</td>
+          <td style="text-align: left"><code>BNE 78</code></td>
+          <td style="text-align: left">Si le dernier CMP est différent, saute à l&rsquo;adresse 78</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">Saut &ldquo;Plus grand&rdquo;</td>
+          <td style="text-align: left"><code>BGT 78</code></td>
+          <td style="text-align: left">Si le dernier CMP est plus grand, saute à l&rsquo;adresse 78</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">Saut &ldquo;Plus petit&rdquo;</td>
+          <td style="text-align: left"><code>BLT 78</code></td>
+          <td style="text-align: left">Si le dernier CMP est plus petit, saute à l&rsquo;adresse 78</td>
+      </tr>
+  </tbody>
 </table>
 <h2 id="exercice-1">
   Exercice 1
@@ -7168,30 +7300,30 @@ et recommencer.</p>
 </h2>
 <p>La mémoire contient aux adresses 200 à 210 les entiers entre 0 et 10 :</p>
 <table>
-<thead>
-<tr>
-<th>adresse</th>
-<th>valeur</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>200</td>
-<td>0</td>
-</tr>
-<tr>
-<td>201</td>
-<td>1</td>
-</tr>
-<tr>
-<td>&hellip;</td>
-<td>&hellip;</td>
-</tr>
-<tr>
-<td>210</td>
-<td>10</td>
-</tr>
-</tbody>
+  <thead>
+      <tr>
+          <th style="text-align: left">adresse</th>
+          <th style="text-align: left">valeur</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left">200</td>
+          <td style="text-align: left">0</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">201</td>
+          <td style="text-align: left">1</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">&hellip;</td>
+          <td style="text-align: left">&hellip;</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">210</td>
+          <td style="text-align: left">10</td>
+      </tr>
+  </tbody>
 </table>
 <div class="highlight"><pre tabindex="0" style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>    LDR R1, 202
 </span></span><span style="display:flex;"><span>    LDR R2, 203
@@ -7297,22 +7429,22 @@ deux registres supplémentaires.</p>
 </ol>
 <p>Mémoire :</p>
 <table>
-<thead>
-<tr>
-<th>Adresse</th>
-<th>Valeur</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>200</td>
-<td>3</td>
-</tr>
-<tr>
-<td>201</td>
-<td>12</td>
-</tr>
-</tbody>
+  <thead>
+      <tr>
+          <th style="text-align: left">Adresse</th>
+          <th style="text-align: left">Valeur</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left">200</td>
+          <td style="text-align: left">3</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">201</td>
+          <td style="text-align: left">12</td>
+      </tr>
+  </tbody>
 </table>
 <div class="highlight"><pre tabindex="0" style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>    LDR R1, 200
 </span></span><span style="display:flex;"><span>    LDR R2, 201

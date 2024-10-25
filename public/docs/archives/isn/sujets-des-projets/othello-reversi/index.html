@@ -4,12 +4,20 @@
 <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
     <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Othello # Présentation # Othello (aussi connu sous le nom Reversi) est un jeu de plateau à deux joueurs. Il se joue sur un tablier unicolore de 64 cases, 8 sur 8. Les joueurs disposent de 64 pions bicolores, noirs d&rsquo;un côté et blancs de l&rsquo;autre. En début de partie, quatre pions sont déjà placés au centre de l&rsquo;othellier : deux noirs, en e4 et d5, et deux blancs, en d4 et e5.">
+<meta name="description" content="
+  Othello
+  #
+
+
+  Présentation
+  #
+
+Othello (aussi connu sous le nom Reversi) est un jeu de plateau à deux joueurs. Il se joue sur un tablier unicolore de 64 cases, 8 sur 8. Les joueurs disposent de 64 pions bicolores, noirs d&rsquo;un côté et blancs de l&rsquo;autre. En début de partie, quatre pions sont déjà placés au centre de l&rsquo;othellier : deux noirs, en e4 et d5, et deux blancs, en d4 et e5. Chaque joueur, noir et blanc, pose l&rsquo;un après l&rsquo;autre un pion de sa couleur sur l&rsquo;othellier selon des règles précises. Le jeu s&rsquo;arrête quand les deux joueurs ne peuvent plus poser de pion. On compte alors le nombre de pions. Le joueur ayant le plus grand nombre de pions de sa couleur sur l&rsquo;othellier a gagné.">
 <meta name="theme-color" content="#FFFFFF">
 <meta name="color-scheme" content="light dark"><meta property="og:url" content="http://localhost:1313/docs/archives/isn/sujets-des-projets/othello-reversi/">
   <meta property="og:site_name" content="qkzk">
   <meta property="og:title" content="Othello / Reversi">
-  <meta property="og:description" content="Othello # Présentation # Othello (aussi connu sous le nom Reversi) est un jeu de plateau à deux joueurs. Il se joue sur un tablier unicolore de 64 cases, 8 sur 8. Les joueurs disposent de 64 pions bicolores, noirs d’un côté et blancs de l’autre. En début de partie, quatre pions sont déjà placés au centre de l’othellier : deux noirs, en e4 et d5, et deux blancs, en d4 et e5.">
+  <meta property="og:description" content=" Othello # Présentation # Othello (aussi connu sous le nom Reversi) est un jeu de plateau à deux joueurs. Il se joue sur un tablier unicolore de 64 cases, 8 sur 8. Les joueurs disposent de 64 pions bicolores, noirs d’un côté et blancs de l’autre. En début de partie, quatre pions sont déjà placés au centre de l’othellier : deux noirs, en e4 et d5, et deux blancs, en d4 et e5. Chaque joueur, noir et blanc, pose l’un après l’autre un pion de sa couleur sur l’othellier selon des règles précises. Le jeu s’arrête quand les deux joueurs ne peuvent plus poser de pion. On compte alors le nombre de pions. Le joueur ayant le plus grand nombre de pions de sa couleur sur l’othellier a gagné.">
   <meta property="og:locale" content="en_us">
   <meta property="og:type" content="website">
 <title>Othello / Reversi | qkzk</title>
@@ -17,8 +25,7 @@
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/book.min.24c2b1f8dc2338e074345eec5b36f8a002aaa6d1b2e7312e14ac2d6a6958c876.css" integrity="sha256-JMKx&#43;NwjOOB0NF7sWzb4oAKqptGy5zEuFKwtamlYyHY=" crossorigin="anonymous">
   <script defer src="/flexsearch.min.js"></script>
-  <script defer src="/en.search.min.41edfc0344c578feffc8ba5e94e6f59bfed684cf40d08bf18134f4a240cd0e15.js" integrity="sha256-Qe38A0TFeP7/yLpelOb1m/7WhM9A0IvxgTT0okDNDhU=" crossorigin="anonymous"></script>
-
+  <script defer src="/en.search.min.ad90ed54c2fb2ebca6bf92dc494821802bb5913fb4ded7c7ce215de203590daa.js" integrity="sha256-rZDtVML7Lrymv5LcSUghgCu1kT&#43;03tfHziFd4gNZDao=" crossorigin="anonymous"></script>
 <link rel="alternate" type="application/rss+xml" href="http://localhost:1313/docs/archives/isn/sujets-des-projets/othello-reversi/index.xml" title="qkzk" />
 <!--
 Made with Book Theme
@@ -6978,7 +6985,7 @@ https://github.com/alex-shpak/hugo-book
 <p>Noir commence toujours la partie. Puis les joueurs jouent à tour de rôle, chacun étant tenu de capturer des pions adverses lors de son mouvement. Si un joueur ne peut pas capturer de pion(s) adverse(s), il est forcé de passer son tour. Si aucun des deux joueurs ne peut jouer, ou si l&rsquo;othellier ne comporte plus de case vide, la partie s&rsquo;arrête. Le gagnant en fin de partie est celui qui possède le plus de pions.</p>
 <p>La capture de pions survient lorsqu&rsquo;un joueur place un de ses pions à l&rsquo;extrémité d&rsquo;un alignement de pions adverses contigus et dont l&rsquo;autre extrémité est déjà occupée par un de ses propres pions. Les alignements considérés peuvent être une colonne, une ligne, ou une diagonale. Si le pion nouvellement placé vient fermer plusieurs alignements, il capture tous les pions adverses des lignes ainsi fermées. La capture se traduit par le retournement des pions capturés. Ces retournements n&rsquo;entraînent pas d&rsquo;effet de capture en cascade : seul le pion nouvellement posé est pris en compte.</p>
 <p>Par exemple, la figure de gauche ci-dessous montre la position de départ. La figure centrale montre les 4 cases où Noir peut jouer, grâce à la capture d&rsquo;un pion Blanc. Enfin, la figure de droite montre la position résultante si Noir joue en <strong>d3</strong>. Le pion Blanc <strong>d4</strong> a été capturé (retourné), devenant ainsi un pion Noir.</p>
-<p><img src="/uploads/uploads/2018/08/othello.jpg" alt="Début d&amp;rsquo;une partie" /></p>
+<p><img src="/uploads/uploads/2018/08/othello.jpg" alt="Début d&rsquo;une partie" /></p>
 <center>_Début d'une partie d'Othello_</center>
 <p>Le texte précédent est un extrait <a href="https://fr.wikipedia.org/wiki/Othello_%28jeu%29">de wikipedia</a>.</p>
 <h2 id="cahier-des-charges">

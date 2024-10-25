@@ -4,20 +4,71 @@
 <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
     <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Les dictionnaires : le type dict # pdf: pour impression
-Python propose le type dict qui permet d&rsquo;enregistrer et de manipuler des paires de clé et valeurs.
-Le type dict # Créer un dictionnaire # Considérons un exemple simple :
-Clé Valeur Nom Duchmol Prénom Raymond age 22 Téléphone 0612345678 email rd@example.fr On peut enregistrer ces données de la manière suivante :
-personne = { &#34;nom&#34;: &#34;Duchmol&#34;, &#34;prenom&#34;: &#34;Raymond&#34;, &#34;age&#34;: 22, &#34;tel&#34;: &#34;0612345678&#34;, &#34;email&#34;: &#34;rd@example.">
+<meta name="description" content="
+  Les dictionnaires : le type dict
+  #
+
+pdf: pour impression
+Python propose le type dict qui permet d&rsquo;enregistrer et de manipuler des paires
+de clé et valeurs.
+
+  Le type dict
+  #
+
+
+  Créer un dictionnaire
+  #
+
+Considérons un exemple simple :
+
+  
+      
+          Clé
+          Valeur
+      
+  
+  
+      
+          Nom
+          Duchmol
+      
+      
+          Prénom
+          Raymond
+      
+      
+          age
+          22
+      
+      
+          Téléphone
+          0612345678
+      
+      
+          email
+          rd@example.fr
+      
+  
+
+On peut enregistrer ces données de la manière suivante :
+personne = {
+  &#34;nom&#34;: &#34;Duchmol&#34;,
+  &#34;prenom&#34;: &#34;Raymond&#34;,
+  &#34;age&#34;: 22,
+  &#34;tel&#34;: &#34;0612345678&#34;,
+  &#34;email&#34;: &#34;rd@example.fr&#34;
+}
+Les clés sont généralement des chaînes de caractères mais, grosso modo, tout
+objet non mutable peut servir de clé.">
 <meta name="theme-color" content="#FFFFFF">
 <meta name="color-scheme" content="light dark"><meta property="og:url" content="http://localhost:1313/docs/nsi/cours_premiere/python/cours_python/06_dict/">
   <meta property="og:site_name" content="qkzk">
   <meta property="og:title" content="6 - Dictionnaires">
-  <meta property="og:description" content="Les dictionnaires : le type dict # pdf: pour impression
+  <meta property="og:description" content=" Les dictionnaires : le type dict # pdf: pour impression
 Python propose le type dict qui permet d’enregistrer et de manipuler des paires de clé et valeurs.
 Le type dict # Créer un dictionnaire # Considérons un exemple simple :
 Clé Valeur Nom Duchmol Prénom Raymond age 22 Téléphone 0612345678 email rd@example.fr On peut enregistrer ces données de la manière suivante :
-personne = { &#34;nom&#34;: &#34;Duchmol&#34;, &#34;prenom&#34;: &#34;Raymond&#34;, &#34;age&#34;: 22, &#34;tel&#34;: &#34;0612345678&#34;, &#34;email&#34;: &#34;rd@example.">
+personne = { &#34;nom&#34;: &#34;Duchmol&#34;, &#34;prenom&#34;: &#34;Raymond&#34;, &#34;age&#34;: 22, &#34;tel&#34;: &#34;0612345678&#34;, &#34;email&#34;: &#34;rd@example.fr&#34; } Les clés sont généralement des chaînes de caractères mais, grosso modo, tout objet non mutable peut servir de clé.">
   <meta property="og:locale" content="en_us">
   <meta property="og:type" content="website">
 <title>6 - Dictionnaires | qkzk</title>
@@ -25,8 +76,7 @@ personne = { &#34;nom&#34;: &#34;Duchmol&#34;, &#34;prenom&#34;: &#34;Raymond&#3
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/book.min.24c2b1f8dc2338e074345eec5b36f8a002aaa6d1b2e7312e14ac2d6a6958c876.css" integrity="sha256-JMKx&#43;NwjOOB0NF7sWzb4oAKqptGy5zEuFKwtamlYyHY=" crossorigin="anonymous">
   <script defer src="/flexsearch.min.js"></script>
-  <script defer src="/en.search.min.41edfc0344c578feffc8ba5e94e6f59bfed684cf40d08bf18134f4a240cd0e15.js" integrity="sha256-Qe38A0TFeP7/yLpelOb1m/7WhM9A0IvxgTT0okDNDhU=" crossorigin="anonymous"></script>
-
+  <script defer src="/en.search.min.ad90ed54c2fb2ebca6bf92dc494821802bb5913fb4ded7c7ce215de203590daa.js" integrity="sha256-rZDtVML7Lrymv5LcSUghgCu1kT&#43;03tfHziFd4gNZDao=" crossorigin="anonymous"></script>
 <link rel="alternate" type="application/rss+xml" href="http://localhost:1313/docs/nsi/cours_premiere/python/cours_python/06_dict/index.xml" title="qkzk" />
 <!--
 Made with Book Theme
@@ -7029,34 +7079,34 @@ de <code>clé</code> et <code>valeurs</code>.</p>
 </h3>
 <p>Considérons un exemple simple :</p>
 <table>
-<thead>
-<tr>
-<th>Clé</th>
-<th>Valeur</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Nom</td>
-<td>Duchmol</td>
-</tr>
-<tr>
-<td>Prénom</td>
-<td>Raymond</td>
-</tr>
-<tr>
-<td>age</td>
-<td>22</td>
-</tr>
-<tr>
-<td>Téléphone</td>
-<td>0612345678</td>
-</tr>
-<tr>
-<td>email</td>
-<td><a href="mailto:rd@example.fr">rd@example.fr</a></td>
-</tr>
-</tbody>
+  <thead>
+      <tr>
+          <th style="text-align: left">Clé</th>
+          <th style="text-align: left">Valeur</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left">Nom</td>
+          <td style="text-align: left">Duchmol</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">Prénom</td>
+          <td style="text-align: left">Raymond</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">age</td>
+          <td style="text-align: left">22</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">Téléphone</td>
+          <td style="text-align: left">0612345678</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">email</td>
+          <td style="text-align: left"><a href="mailto:rd@example.fr">rd@example.fr</a></td>
+      </tr>
+  </tbody>
 </table>
 <p>On peut enregistrer ces données de la manière suivante :</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>personne <span style="color:#555">=</span> {
@@ -7124,34 +7174,34 @@ dictionnaire.</p>
 </h3>
 <p>On considère la ville suivante :</p>
 <table>
-<thead>
-<tr>
-<th>clé</th>
-<th>valeur</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>nom</td>
-<td>Montreal</td>
-</tr>
-<tr>
-<td>pays</td>
-<td>Canada</td>
-</tr>
-<tr>
-<td>province</td>
-<td>Quebec</td>
-</tr>
-<tr>
-<td>pop</td>
-<td>1.825.208</td>
-</tr>
-<tr>
-<td>superficie (km$^2$)</td>
-<td>315</td>
-</tr>
-</tbody>
+  <thead>
+      <tr>
+          <th style="text-align: left">clé</th>
+          <th style="text-align: left">valeur</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left">nom</td>
+          <td style="text-align: left">Montreal</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">pays</td>
+          <td style="text-align: left">Canada</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">province</td>
+          <td style="text-align: left">Quebec</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">pop</td>
+          <td style="text-align: left">1.825.208</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">superficie (km$^2$)</td>
+          <td style="text-align: left">315</td>
+      </tr>
+  </tbody>
 </table>
 <ol>
 <li>Créer un <code>dict</code> affecté à la variable <code>ville</code> contenant les données ci-dessus.</li>
@@ -7330,30 +7380,30 @@ pas avec précision les valeurs contenues.</p>
 </h2>
 <p>On considère les données suivantes, enregistrées dans le dictionnaire <code>d</code> :</p>
 <table>
-<thead>
-<tr>
-<th>Nom</th>
-<th>Téléphone</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Patrick</td>
-<td>0612345678</td>
-</tr>
-<tr>
-<td>Marie</td>
-<td>0687654321</td>
-</tr>
-<tr>
-<td>Hanae</td>
-<td>0765432198</td>
-</tr>
-<tr>
-<td>Piotr</td>
-<td>0777666555</td>
-</tr>
-</tbody>
+  <thead>
+      <tr>
+          <th style="text-align: left">Nom</th>
+          <th style="text-align: left">Téléphone</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left">Patrick</td>
+          <td style="text-align: left">0612345678</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">Marie</td>
+          <td style="text-align: left">0687654321</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">Hanae</td>
+          <td style="text-align: left">0765432198</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">Piotr</td>
+          <td style="text-align: left">0777666555</td>
+      </tr>
+  </tbody>
 </table>
 <div class="highlight"><pre tabindex="0" style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>repertoire =  {&#34;Patrick&#34; : &#34;0612345678&#34;,
 </span></span><span style="display:flex;"><span>               &#34;Marie  &#34; : &#34;0687654321&#34;,
@@ -7375,42 +7425,42 @@ pas avec précision les valeurs contenues.</p>
 tableau suivant :</li>
 </ol>
 <table>
-<thead>
-<tr>
-<th>nombre</th>
-<th>carré</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>1</td>
-<td>1</td>
-</tr>
-<tr>
-<td>2</td>
-<td>4</td>
-</tr>
-<tr>
-<td>3</td>
-<td>9</td>
-</tr>
-<tr>
-<td>4</td>
-<td>16</td>
-</tr>
-<tr>
-<td>5</td>
-<td>25</td>
-</tr>
-<tr>
-<td>6</td>
-<td>36</td>
-</tr>
-<tr>
-<td>7</td>
-<td>49</td>
-</tr>
-</tbody>
+  <thead>
+      <tr>
+          <th style="text-align: left">nombre</th>
+          <th style="text-align: left">carré</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left">1</td>
+          <td style="text-align: left">1</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">2</td>
+          <td style="text-align: left">4</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">3</td>
+          <td style="text-align: left">9</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">4</td>
+          <td style="text-align: left">16</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">5</td>
+          <td style="text-align: left">25</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">6</td>
+          <td style="text-align: left">36</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">7</td>
+          <td style="text-align: left">49</td>
+      </tr>
+  </tbody>
 </table>
 <ol start="2">
 <li>

@@ -5,11 +5,22 @@
     <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="pdf: pour impression
-Symboles utilisés pour présenter du code # On distingue deux types d&rsquo;exécution en Python
+
+  Symboles utilisés pour présenter du code
+  #
+
+On distingue deux types d&rsquo;exécution en Python
 Lorsqu&rsquo;on exécute tout un fichier avec :
-python mon_script.py et lorsqu&rsquo;on exécute Python en mode intéractif :
-python Dans le second cas, on arrive devant l&rsquo;interpréteur. On le sait parce qu&rsquo;il présente chaque ligne avec trois chevrons :
-&gt;&gt;&gt; Le code que vous lirez sera soit tiré d&rsquo;un fichier python (.py) soit de l&rsquo;interpréteur.">
+python mon_script.py
+et lorsqu&rsquo;on exécute Python en mode intéractif :
+python
+Dans le second cas, on arrive devant l&rsquo;interpréteur. On le sait
+parce qu&rsquo;il présente chaque ligne avec trois chevrons :
+&gt;&gt;&gt;
+Le code que vous lirez sera soit tiré d&rsquo;un fichier python (.py) soit de l&rsquo;interpréteur.
+
+
+Dans le premier cas, le code est écrit directement.">
 <meta name="theme-color" content="#FFFFFF">
 <meta name="color-scheme" content="light dark"><meta property="og:url" content="http://localhost:1313/docs/nsi/cours_premiere/python/cours_python/01_expression/">
   <meta property="og:site_name" content="qkzk">
@@ -19,7 +30,8 @@ Symboles utilisés pour présenter du code # On distingue deux types d’exécut
 Lorsqu’on exécute tout un fichier avec :
 python mon_script.py et lorsqu’on exécute Python en mode intéractif :
 python Dans le second cas, on arrive devant l’interpréteur. On le sait parce qu’il présente chaque ligne avec trois chevrons :
-&gt;&gt;&gt; Le code que vous lirez sera soit tiré d’un fichier python (.py) soit de l’interpréteur.">
+&gt;&gt;&gt; Le code que vous lirez sera soit tiré d’un fichier python (.py) soit de l’interpréteur.
+Dans le premier cas, le code est écrit directement.">
   <meta property="og:locale" content="en_us">
   <meta property="og:type" content="website">
 <title>1 - Expressions | qkzk</title>
@@ -27,8 +39,7 @@ python Dans le second cas, on arrive devant l’interpréteur. On le sait parce 
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/book.min.24c2b1f8dc2338e074345eec5b36f8a002aaa6d1b2e7312e14ac2d6a6958c876.css" integrity="sha256-JMKx&#43;NwjOOB0NF7sWzb4oAKqptGy5zEuFKwtamlYyHY=" crossorigin="anonymous">
   <script defer src="/flexsearch.min.js"></script>
-  <script defer src="/en.search.min.41edfc0344c578feffc8ba5e94e6f59bfed684cf40d08bf18134f4a240cd0e15.js" integrity="sha256-Qe38A0TFeP7/yLpelOb1m/7WhM9A0IvxgTT0okDNDhU=" crossorigin="anonymous"></script>
-
+  <script defer src="/en.search.min.ad90ed54c2fb2ebca6bf92dc494821802bb5913fb4ded7c7ce215de203590daa.js" integrity="sha256-rZDtVML7Lrymv5LcSUghgCu1kT&#43;03tfHziFd4gNZDao=" crossorigin="anonymous"></script>
 <link rel="alternate" type="application/rss+xml" href="http://localhost:1313/docs/nsi/cours_premiere/python/cours_python/01_expression/index.xml" title="qkzk" />
 <!--
 Made with Book Theme
@@ -7072,58 +7083,58 @@ est la <em>valeur</em> de cette expression.</p>
   <a class="anchor" href="#op%c3%a9rations-math%c3%a9matiques-courantes">#</a>
 </h2>
 <table>
-<thead>
-<tr>
-<th>Opération</th>
-<th>symbole</th>
-<th>exemple</th>
-<th style="text-align:right">résultat</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>addition</td>
-<td><code>+</code></td>
-<td><code>2 + 5</code></td>
-<td style="text-align:right"><code>7</code></td>
-</tr>
-<tr>
-<td>soustraction</td>
-<td><code>-</code></td>
-<td><code>5 - 6</code></td>
-<td style="text-align:right"><code>-1</code></td>
-</tr>
-<tr>
-<td>multiplication</td>
-<td><code>*</code></td>
-<td><code>3.1 * 2</code></td>
-<td style="text-align:right"><code>6.2</code></td>
-</tr>
-<tr>
-<td>division flottante</td>
-<td><code>/</code></td>
-<td><code>4 / 3</code></td>
-<td style="text-align:right"><code>1.333...</code></td>
-</tr>
-<tr>
-<td>division entière</td>
-<td><code>//</code></td>
-<td><code>5 // 3</code></td>
-<td style="text-align:right"><code>1</code></td>
-</tr>
-<tr>
-<td>reste (<em>modulo</em>)</td>
-<td><code>%</code></td>
-<td><code>5 % 3</code></td>
-<td style="text-align:right"><code>2</code></td>
-</tr>
-<tr>
-<td>puissance</td>
-<td><code>**</code></td>
-<td><code>3 ** 2</code></td>
-<td style="text-align:right"><code>9</code></td>
-</tr>
-</tbody>
+  <thead>
+      <tr>
+          <th style="text-align: left">Opération</th>
+          <th style="text-align: left">symbole</th>
+          <th style="text-align: left">exemple</th>
+          <th style="text-align: right">résultat</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left">addition</td>
+          <td style="text-align: left"><code>+</code></td>
+          <td style="text-align: left"><code>2 + 5</code></td>
+          <td style="text-align: right"><code>7</code></td>
+      </tr>
+      <tr>
+          <td style="text-align: left">soustraction</td>
+          <td style="text-align: left"><code>-</code></td>
+          <td style="text-align: left"><code>5 - 6</code></td>
+          <td style="text-align: right"><code>-1</code></td>
+      </tr>
+      <tr>
+          <td style="text-align: left">multiplication</td>
+          <td style="text-align: left"><code>*</code></td>
+          <td style="text-align: left"><code>3.1 * 2</code></td>
+          <td style="text-align: right"><code>6.2</code></td>
+      </tr>
+      <tr>
+          <td style="text-align: left">division flottante</td>
+          <td style="text-align: left"><code>/</code></td>
+          <td style="text-align: left"><code>4 / 3</code></td>
+          <td style="text-align: right"><code>1.333...</code></td>
+      </tr>
+      <tr>
+          <td style="text-align: left">division entière</td>
+          <td style="text-align: left"><code>//</code></td>
+          <td style="text-align: left"><code>5 // 3</code></td>
+          <td style="text-align: right"><code>1</code></td>
+      </tr>
+      <tr>
+          <td style="text-align: left">reste (<em>modulo</em>)</td>
+          <td style="text-align: left"><code>%</code></td>
+          <td style="text-align: left"><code>5 % 3</code></td>
+          <td style="text-align: right"><code>2</code></td>
+      </tr>
+      <tr>
+          <td style="text-align: left">puissance</td>
+          <td style="text-align: left"><code>**</code></td>
+          <td style="text-align: left"><code>3 ** 2</code></td>
+          <td style="text-align: right"><code>9</code></td>
+      </tr>
+  </tbody>
 </table>
 <h2 id="types">
   Types
@@ -7145,40 +7156,40 @@ est la <em>valeur</em> de cette expression.</p>
   <a class="anchor" href="#types-%c3%a9l%c3%a9mentaires">#</a>
 </h3>
 <table>
-<thead>
-<tr>
-<th>Type</th>
-<th>Description</th>
-<th>Exemple</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>int</code></td>
-<td>Entiers positifs ou négatifs</td>
-<td><code>0</code>, <code>1234</code>, <code>-32</code></td>
-</tr>
-<tr>
-<td><code>float</code></td>
-<td>Nombres à virgule</td>
-<td><code>0.234</code>, <code>-43.483</code></td>
-</tr>
-<tr>
-<td><code>bool</code></td>
-<td>Booléens (Vrai ou Faux)</td>
-<td><code>True</code>, <code>False</code> (seules valeurs)</td>
-</tr>
-<tr>
-<td><code>NoteType</code></td>
-<td>Rien, l&rsquo;absence de réponse&hellip;</td>
-<td><code>None</code> (seule valeur)</td>
-</tr>
-<tr>
-<td><code>str</code></td>
-<td>Du texte</td>
-<td><code>'Super Content'</code>, <code>&quot;James Bond&quot;</code>, <code>&quot;123.34&quot;</code></td>
-</tr>
-</tbody>
+  <thead>
+      <tr>
+          <th style="text-align: left">Type</th>
+          <th style="text-align: left">Description</th>
+          <th style="text-align: left">Exemple</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left"><code>int</code></td>
+          <td style="text-align: left">Entiers positifs ou négatifs</td>
+          <td style="text-align: left"><code>0</code>, <code>1234</code>, <code>-32</code></td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><code>float</code></td>
+          <td style="text-align: left">Nombres à virgule</td>
+          <td style="text-align: left"><code>0.234</code>, <code>-43.483</code></td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><code>bool</code></td>
+          <td style="text-align: left">Booléens (Vrai ou Faux)</td>
+          <td style="text-align: left"><code>True</code>, <code>False</code> (seules valeurs)</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><code>NoteType</code></td>
+          <td style="text-align: left">Rien, l&rsquo;absence de réponse&hellip;</td>
+          <td style="text-align: left"><code>None</code> (seule valeur)</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><code>str</code></td>
+          <td style="text-align: left">Du texte</td>
+          <td style="text-align: left"><code>'Super Content'</code>, <code>&quot;James Bond&quot;</code>, <code>&quot;123.34&quot;</code></td>
+      </tr>
+  </tbody>
 </table>
 <p>On accède au type d&rsquo;une expression avec la fonction <code>type</code> :</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#555">&gt;&gt;&gt;</span> <span style="color:#366">type</span>(<span style="color:#c30">&#34;Super Kevin&#34;</span>)

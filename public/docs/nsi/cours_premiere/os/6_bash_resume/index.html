@@ -5,13 +5,69 @@
     <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="pdf pour impression
-TP Linux &ldquo;débian&rdquo;. # Correction : liste des commandes rencontrées : # Naviguer # ls : liste les fichiers du dossier courant ls -lah : affiche aussi les fichiers cachés, avec les détails et les tailles dans des unités compréhensibles cd : change le dossier courant. cd ~ vous envoie dans votre dossier. cd .. remonte d&rsquo;un étage. cd \ vous mène à la racine. pwd : (print working directory) : affiche l&rsquo;addresse du dossier courant.">
+
+  TP Linux &ldquo;débian&rdquo;.
+  #
+
+
+  Correction : liste des commandes rencontrées :
+  #
+
+
+  Naviguer
+  #
+
+
+ls : liste les fichiers du dossier courant
+ls -lah : affiche aussi les fichiers cachés, avec les détails et les tailles dans des unités compréhensibles
+cd : change le dossier courant. cd ~ vous envoie dans votre dossier. cd .. remonte d&rsquo;un étage. cd \ vous mène à la racine.
+pwd : (print working directory) : affiche l&rsquo;addresse du dossier courant.
+
+
+  Créer, effacer
+  #
+
+
+cp : Copie un fichier de départ vers une nouvelle destination cp cassoulet.txt /home/robert/recettes/ va ajouter le fichier cassoulet.txt au dossier recettes.
+mv : Déplace un fichier. On peut le déplacer dans un dossier, ou lui attribuer un nouveau nom au passage.
+touch : Accède aux propriétés d&rsquo;un fichier. Si un fichier existant est fourni, sa date d&rsquo;édition est mise à jour. S&rsquo;il n&rsquo;existe pas il est crée.
+mkdir : &ldquo;MaKe DIRrectory&rdquo;. Crée un dossier. mkdir -p dir1/dir2/dir3 pour créer les dossiers intermédiaires si nécessaire.
+rm : Efface un dossier. Avec rm -r on efface récursivement et avec l&rsquo;option f on &ldquo;force&rdquo;. Danger : pas de confirmation sous UNIX.
+
+
+  Utilitaires
+  #
+
+
+clear : Descend la console d&rsquo;une centaine de lignes (vide le terminal&hellip;).
+cat : Concaténer. Nombreux usages, le plus courant est d&rsquo;afficher le contenu d&rsquo;un fichier dans la console.
+top : Gestinnaire de tâches. Il en existe de nombreux. Les plus connus sont htop et glances. On peut faire la même chose que dans celui de windows, mais en utilisant des racourcis clavier.
+less : Permet de &ldquo;pagigner&rdquo; un contenu. less longfichier.txt vous l&rsquo;affichera en plusieurs pages.
+
+
+  Processus
+  #
+
+
+ps : Affiche une vue instantannée des processus (!= programme) en cours. Un programme c&rsquo;est du texte. Un processus est un programme en cours d&rsquo;exécution.
+ps -ef : affiche tous les processus (Every) Formatés dans une table. Renvoie trop de lignes pour qu&rsquo;on lise facilement. On peut tuyauter vers less : ps -ef | less ou &hellip;
+grep : filtre un contenu. Utilise des expressions régulières (bac &#43;3 mais vous en verrez partout) ou de simples textes.
+ps -ef | grep bidule : affiche tous les processus qui tournent et dont une info (l&rsquo;adresse, le nom, un paramètre&hellip;) contient le mot bidule.
+kill : Arrête un processus avec son numéro (PID : Processus IDentifiant). Si la commande ci-dessus vous indique que le PID de bidule est 1234, on fait kill 1234
+
+
+  Réseau et accès distant
+  #
+
+
+
+ip a : Affiche toute la configuration réseau actuelle. On voit toutes les interfaces réseau et les adresses IP et mac">
 <meta name="theme-color" content="#FFFFFF">
 <meta name="color-scheme" content="light dark"><meta property="og:url" content="http://localhost:1313/docs/nsi/cours_premiere/os/6_bash_resume/">
   <meta property="og:site_name" content="qkzk">
   <meta property="og:title" content="Résumé du bash">
   <meta property="og:description" content="pdf pour impression
-TP Linux “débian”. # Correction : liste des commandes rencontrées : # Naviguer # ls : liste les fichiers du dossier courant ls -lah : affiche aussi les fichiers cachés, avec les détails et les tailles dans des unités compréhensibles cd : change le dossier courant. cd ~ vous envoie dans votre dossier. cd .. remonte d’un étage. cd \ vous mène à la racine. pwd : (print working directory) : affiche l’addresse du dossier courant.">
+TP Linux “débian”. # Correction : liste des commandes rencontrées : # Naviguer # ls : liste les fichiers du dossier courant ls -lah : affiche aussi les fichiers cachés, avec les détails et les tailles dans des unités compréhensibles cd : change le dossier courant. cd ~ vous envoie dans votre dossier. cd .. remonte d’un étage. cd \ vous mène à la racine. pwd : (print working directory) : affiche l’addresse du dossier courant. Créer, effacer # cp : Copie un fichier de départ vers une nouvelle destination cp cassoulet.txt /home/robert/recettes/ va ajouter le fichier cassoulet.txt au dossier recettes. mv : Déplace un fichier. On peut le déplacer dans un dossier, ou lui attribuer un nouveau nom au passage. touch : Accède aux propriétés d’un fichier. Si un fichier existant est fourni, sa date d’édition est mise à jour. S’il n’existe pas il est crée. mkdir : “MaKe DIRrectory”. Crée un dossier. mkdir -p dir1/dir2/dir3 pour créer les dossiers intermédiaires si nécessaire. rm : Efface un dossier. Avec rm -r on efface récursivement et avec l’option f on “force”. Danger : pas de confirmation sous UNIX. Utilitaires # clear : Descend la console d’une centaine de lignes (vide le terminal…). cat : Concaténer. Nombreux usages, le plus courant est d’afficher le contenu d’un fichier dans la console. top : Gestinnaire de tâches. Il en existe de nombreux. Les plus connus sont htop et glances. On peut faire la même chose que dans celui de windows, mais en utilisant des racourcis clavier. less : Permet de “pagigner” un contenu. less longfichier.txt vous l’affichera en plusieurs pages. Processus # ps : Affiche une vue instantannée des processus (!= programme) en cours. Un programme c’est du texte. Un processus est un programme en cours d’exécution. ps -ef : affiche tous les processus (Every) Formatés dans une table. Renvoie trop de lignes pour qu’on lise facilement. On peut tuyauter vers less : ps -ef | less ou … grep : filtre un contenu. Utilise des expressions régulières (bac &#43;3 mais vous en verrez partout) ou de simples textes. ps -ef | grep bidule : affiche tous les processus qui tournent et dont une info (l’adresse, le nom, un paramètre…) contient le mot bidule. kill : Arrête un processus avec son numéro (PID : Processus IDentifiant). Si la commande ci-dessus vous indique que le PID de bidule est 1234, on fait kill 1234 Réseau et accès distant # ip a : Affiche toute la configuration réseau actuelle. On voit toutes les interfaces réseau et les adresses IP et mac">
   <meta property="og:locale" content="en_us">
   <meta property="og:type" content="website">
 <title>Résumé du bash | qkzk</title>
@@ -19,8 +75,7 @@ TP Linux “débian”. # Correction : liste des commandes rencontrées : # Navi
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/book.min.24c2b1f8dc2338e074345eec5b36f8a002aaa6d1b2e7312e14ac2d6a6958c876.css" integrity="sha256-JMKx&#43;NwjOOB0NF7sWzb4oAKqptGy5zEuFKwtamlYyHY=" crossorigin="anonymous">
   <script defer src="/flexsearch.min.js"></script>
-  <script defer src="/en.search.min.41edfc0344c578feffc8ba5e94e6f59bfed684cf40d08bf18134f4a240cd0e15.js" integrity="sha256-Qe38A0TFeP7/yLpelOb1m/7WhM9A0IvxgTT0okDNDhU=" crossorigin="anonymous"></script>
-
+  <script defer src="/en.search.min.ad90ed54c2fb2ebca6bf92dc494821802bb5913fb4ded7c7ce215de203590daa.js" integrity="sha256-rZDtVML7Lrymv5LcSUghgCu1kT&#43;03tfHziFd4gNZDao=" crossorigin="anonymous"></script>
 <link rel="alternate" type="application/rss+xml" href="http://localhost:1313/docs/nsi/cours_premiere/os/6_bash_resume/index.xml" title="qkzk" />
 <!--
 Made with Book Theme

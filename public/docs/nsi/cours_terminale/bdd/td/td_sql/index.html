@@ -8,8 +8,90 @@
 Pour tous les exercices qui suivent on utilisera la base de données ci-dessous.
 Elle est constituées de quatre relations :
 Relation Stations
-NomStation Capacite Lieu Region Tarif Tanger 350 Maroc Afrique 1200 La Bourboule 250 Auvergne Afrique 700 Victoria 200 Seychelles Océan Indient 1500 Courchevel 400 Alpes Europe 2200 Relation Activités
-NomStation Libelle Prix La Bourboule Pêche 50 La Bourboule Randonnée 0 Tanger Plongée 120 Tanger Excursion 60 Victoria Plongée 130 Courchevel Ski 120 Relation Clients">
+
+  
+      
+          NomStation
+          Capacite
+          Lieu
+          Region
+          Tarif
+      
+  
+  
+      
+          Tanger
+          350
+          Maroc
+          Afrique
+          1200
+      
+      
+          La Bourboule
+          250
+          Auvergne
+          Afrique
+          700
+      
+      
+          Victoria
+          200
+          Seychelles
+          Océan Indient
+          1500
+      
+      
+          Courchevel
+          400
+          Alpes
+          Europe
+          2200
+      
+  
+
+Relation Activités
+
+  
+      
+          NomStation
+          Libelle
+          Prix
+      
+  
+  
+      
+          La Bourboule
+          Pêche
+          50
+      
+      
+          La Bourboule
+          Randonnée
+          0
+      
+      
+          Tanger
+          Plongée
+          120
+      
+      
+          Tanger
+          Excursion
+          60
+      
+      
+          Victoria
+          Plongée
+          130
+      
+      
+          Courchevel
+          Ski
+          120
+      
+  
+
+Relation Clients">
 <meta name="theme-color" content="#FFFFFF">
 <meta name="color-scheme" content="light dark"><meta property="og:url" content="http://localhost:1313/docs/nsi/cours_terminale/bdd/td/td_sql/">
   <meta property="og:site_name" content="qkzk">
@@ -27,8 +109,7 @@ NomStation Libelle Prix La Bourboule Pêche 50 La Bourboule Randonnée 0 Tanger 
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/book.min.24c2b1f8dc2338e074345eec5b36f8a002aaa6d1b2e7312e14ac2d6a6958c876.css" integrity="sha256-JMKx&#43;NwjOOB0NF7sWzb4oAKqptGy5zEuFKwtamlYyHY=" crossorigin="anonymous">
   <script defer src="/flexsearch.min.js"></script>
-  <script defer src="/en.search.min.41edfc0344c578feffc8ba5e94e6f59bfed684cf40d08bf18134f4a240cd0e15.js" integrity="sha256-Qe38A0TFeP7/yLpelOb1m/7WhM9A0IvxgTT0okDNDhU=" crossorigin="anonymous"></script>
-
+  <script defer src="/en.search.min.ad90ed54c2fb2ebca6bf92dc494821802bb5913fb4ded7c7ce215de203590daa.js" integrity="sha256-rZDtVML7Lrymv5LcSUghgCu1kT&#43;03tfHziFd4gNZDao=" crossorigin="anonymous"></script>
 <link rel="alternate" type="application/rss+xml" href="http://localhost:1313/docs/nsi/cours_terminale/bdd/td/td_sql/index.xml" title="qkzk" />
 <!--
 Made with Book Theme
@@ -6963,187 +7044,187 @@ https://github.com/alex-shpak/hugo-book
 <p>Elle est constituées de quatre relations :</p>
 <p><strong>Relation <em>Stations</em></strong></p>
 <table>
-<thead>
-<tr>
-<th style="text-align:center">NomStation</th>
-<th style="text-align:center">Capacite</th>
-<th style="text-align:center">Lieu</th>
-<th style="text-align:center">Region</th>
-<th style="text-align:right">Tarif</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center">Tanger</td>
-<td style="text-align:center">350</td>
-<td style="text-align:center">Maroc</td>
-<td style="text-align:center">Afrique</td>
-<td style="text-align:right">1200</td>
-</tr>
-<tr>
-<td style="text-align:center">La Bourboule</td>
-<td style="text-align:center">250</td>
-<td style="text-align:center">Auvergne</td>
-<td style="text-align:center">Afrique</td>
-<td style="text-align:right">700</td>
-</tr>
-<tr>
-<td style="text-align:center">Victoria</td>
-<td style="text-align:center">200</td>
-<td style="text-align:center">Seychelles</td>
-<td style="text-align:center">Océan Indient</td>
-<td style="text-align:right">1500</td>
-</tr>
-<tr>
-<td style="text-align:center">Courchevel</td>
-<td style="text-align:center">400</td>
-<td style="text-align:center">Alpes</td>
-<td style="text-align:center">Europe</td>
-<td style="text-align:right">2200</td>
-</tr>
-</tbody>
+  <thead>
+      <tr>
+          <th style="text-align: center">NomStation</th>
+          <th style="text-align: center">Capacite</th>
+          <th style="text-align: center">Lieu</th>
+          <th style="text-align: center">Region</th>
+          <th style="text-align: right">Tarif</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: center">Tanger</td>
+          <td style="text-align: center">350</td>
+          <td style="text-align: center">Maroc</td>
+          <td style="text-align: center">Afrique</td>
+          <td style="text-align: right">1200</td>
+      </tr>
+      <tr>
+          <td style="text-align: center">La Bourboule</td>
+          <td style="text-align: center">250</td>
+          <td style="text-align: center">Auvergne</td>
+          <td style="text-align: center">Afrique</td>
+          <td style="text-align: right">700</td>
+      </tr>
+      <tr>
+          <td style="text-align: center">Victoria</td>
+          <td style="text-align: center">200</td>
+          <td style="text-align: center">Seychelles</td>
+          <td style="text-align: center">Océan Indient</td>
+          <td style="text-align: right">1500</td>
+      </tr>
+      <tr>
+          <td style="text-align: center">Courchevel</td>
+          <td style="text-align: center">400</td>
+          <td style="text-align: center">Alpes</td>
+          <td style="text-align: center">Europe</td>
+          <td style="text-align: right">2200</td>
+      </tr>
+  </tbody>
 </table>
 <p><strong>Relation <em>Activités</em></strong></p>
 <table>
-<thead>
-<tr>
-<th style="text-align:center">NomStation</th>
-<th style="text-align:center">Libelle</th>
-<th style="text-align:right">Prix</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center">La Bourboule</td>
-<td style="text-align:center">Pêche</td>
-<td style="text-align:right">50</td>
-</tr>
-<tr>
-<td style="text-align:center">La Bourboule</td>
-<td style="text-align:center">Randonnée</td>
-<td style="text-align:right">0</td>
-</tr>
-<tr>
-<td style="text-align:center">Tanger</td>
-<td style="text-align:center">Plongée</td>
-<td style="text-align:right">120</td>
-</tr>
-<tr>
-<td style="text-align:center">Tanger</td>
-<td style="text-align:center">Excursion</td>
-<td style="text-align:right">60</td>
-</tr>
-<tr>
-<td style="text-align:center">Victoria</td>
-<td style="text-align:center">Plongée</td>
-<td style="text-align:right">130</td>
-</tr>
-<tr>
-<td style="text-align:center">Courchevel</td>
-<td style="text-align:center">Ski</td>
-<td style="text-align:right">120</td>
-</tr>
-</tbody>
+  <thead>
+      <tr>
+          <th style="text-align: center">NomStation</th>
+          <th style="text-align: center">Libelle</th>
+          <th style="text-align: right">Prix</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: center">La Bourboule</td>
+          <td style="text-align: center">Pêche</td>
+          <td style="text-align: right">50</td>
+      </tr>
+      <tr>
+          <td style="text-align: center">La Bourboule</td>
+          <td style="text-align: center">Randonnée</td>
+          <td style="text-align: right">0</td>
+      </tr>
+      <tr>
+          <td style="text-align: center">Tanger</td>
+          <td style="text-align: center">Plongée</td>
+          <td style="text-align: right">120</td>
+      </tr>
+      <tr>
+          <td style="text-align: center">Tanger</td>
+          <td style="text-align: center">Excursion</td>
+          <td style="text-align: right">60</td>
+      </tr>
+      <tr>
+          <td style="text-align: center">Victoria</td>
+          <td style="text-align: center">Plongée</td>
+          <td style="text-align: right">130</td>
+      </tr>
+      <tr>
+          <td style="text-align: center">Courchevel</td>
+          <td style="text-align: center">Ski</td>
+          <td style="text-align: right">120</td>
+      </tr>
+  </tbody>
 </table>
 <p><strong>Relation <em>Clients</em></strong></p>
 <table>
-<thead>
-<tr>
-<th style="text-align:center">Id</th>
-<th style="text-align:center">Nom</th>
-<th style="text-align:center">Prenom</th>
-<th style="text-align:center">Ville</th>
-<th style="text-align:center">Region</th>
-<th style="text-align:right">Solde</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center">1</td>
-<td style="text-align:center">Bauer</td>
-<td style="text-align:center">Elmut</td>
-<td style="text-align:center">Berlin</td>
-<td style="text-align:center">Europe</td>
-<td style="text-align:right">9825</td>
-</tr>
-<tr>
-<td style="text-align:center">2</td>
-<td style="text-align:center">Smith</td>
-<td style="text-align:center">John</td>
-<td style="text-align:center">Londres</td>
-<td style="text-align:center">Europe</td>
-<td style="text-align:right">12436</td>
-</tr>
-<tr>
-<td style="text-align:center">3</td>
-<td style="text-align:center">Jonhson</td>
-<td style="text-align:center">Britney</td>
-<td style="text-align:center">New York</td>
-<td style="text-align:center">Amérique</td>
-<td style="text-align:right">6721</td>
-</tr>
-</tbody>
+  <thead>
+      <tr>
+          <th style="text-align: center">Id</th>
+          <th style="text-align: center">Nom</th>
+          <th style="text-align: center">Prenom</th>
+          <th style="text-align: center">Ville</th>
+          <th style="text-align: center">Region</th>
+          <th style="text-align: right">Solde</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: center">1</td>
+          <td style="text-align: center">Bauer</td>
+          <td style="text-align: center">Elmut</td>
+          <td style="text-align: center">Berlin</td>
+          <td style="text-align: center">Europe</td>
+          <td style="text-align: right">9825</td>
+      </tr>
+      <tr>
+          <td style="text-align: center">2</td>
+          <td style="text-align: center">Smith</td>
+          <td style="text-align: center">John</td>
+          <td style="text-align: center">Londres</td>
+          <td style="text-align: center">Europe</td>
+          <td style="text-align: right">12436</td>
+      </tr>
+      <tr>
+          <td style="text-align: center">3</td>
+          <td style="text-align: center">Jonhson</td>
+          <td style="text-align: center">Britney</td>
+          <td style="text-align: center">New York</td>
+          <td style="text-align: center">Amérique</td>
+          <td style="text-align: right">6721</td>
+      </tr>
+  </tbody>
 </table>
 <p><strong>Relation <em>Séjours</em></strong></p>
 <table>
-<thead>
-<tr>
-<th style="text-align:center">IdClient</th>
-<th style="text-align:center">Station</th>
-<th style="text-align:center">Arrivée</th>
-<th style="text-align:center">NbPlaces</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center">1</td>
-<td style="text-align:center">Courchevel</td>
-<td style="text-align:center">17/02/2019</td>
-<td style="text-align:center">2</td>
-</tr>
-<tr>
-<td style="text-align:center">3</td>
-<td style="text-align:center">Tanger</td>
-<td style="text-align:center">17/11/2018</td>
-<td style="text-align:center">5</td>
-</tr>
-<tr>
-<td style="text-align:center">2</td>
-<td style="text-align:center">Courchevel</td>
-<td style="text-align:center">28/01/2018</td>
-<td style="text-align:center">4</td>
-</tr>
-<tr>
-<td style="text-align:center">3</td>
-<td style="text-align:center">La Bourboule</td>
-<td style="text-align:center">20/07/2016</td>
-<td style="text-align:center">3</td>
-</tr>
-<tr>
-<td style="text-align:center">3</td>
-<td style="text-align:center">Victoria</td>
-<td style="text-align:center">13/09/2015</td>
-<td style="text-align:center">6</td>
-</tr>
-<tr>
-<td style="text-align:center">2</td>
-<td style="text-align:center">La Bourboule</td>
-<td style="text-align:center">13/08/2019</td>
-<td style="text-align:center">3</td>
-</tr>
-<tr>
-<td style="text-align:center">3</td>
-<td style="text-align:center">Courchevel</td>
-<td style="text-align:center">27/02/2017</td>
-<td style="text-align:center">5</td>
-</tr>
-<tr>
-<td style="text-align:center">1</td>
-<td style="text-align:center">Victoria</td>
-<td style="text-align:center">05/09/2018</td>
-<td style="text-align:center">3</td>
-</tr>
-</tbody>
+  <thead>
+      <tr>
+          <th style="text-align: center">IdClient</th>
+          <th style="text-align: center">Station</th>
+          <th style="text-align: center">Arrivée</th>
+          <th style="text-align: center">NbPlaces</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: center">1</td>
+          <td style="text-align: center">Courchevel</td>
+          <td style="text-align: center">17/02/2019</td>
+          <td style="text-align: center">2</td>
+      </tr>
+      <tr>
+          <td style="text-align: center">3</td>
+          <td style="text-align: center">Tanger</td>
+          <td style="text-align: center">17/11/2018</td>
+          <td style="text-align: center">5</td>
+      </tr>
+      <tr>
+          <td style="text-align: center">2</td>
+          <td style="text-align: center">Courchevel</td>
+          <td style="text-align: center">28/01/2018</td>
+          <td style="text-align: center">4</td>
+      </tr>
+      <tr>
+          <td style="text-align: center">3</td>
+          <td style="text-align: center">La Bourboule</td>
+          <td style="text-align: center">20/07/2016</td>
+          <td style="text-align: center">3</td>
+      </tr>
+      <tr>
+          <td style="text-align: center">3</td>
+          <td style="text-align: center">Victoria</td>
+          <td style="text-align: center">13/09/2015</td>
+          <td style="text-align: center">6</td>
+      </tr>
+      <tr>
+          <td style="text-align: center">2</td>
+          <td style="text-align: center">La Bourboule</td>
+          <td style="text-align: center">13/08/2019</td>
+          <td style="text-align: center">3</td>
+      </tr>
+      <tr>
+          <td style="text-align: center">3</td>
+          <td style="text-align: center">Courchevel</td>
+          <td style="text-align: center">27/02/2017</td>
+          <td style="text-align: center">5</td>
+      </tr>
+      <tr>
+          <td style="text-align: center">1</td>
+          <td style="text-align: center">Victoria</td>
+          <td style="text-align: center">05/09/2018</td>
+          <td style="text-align: center">3</td>
+      </tr>
+  </tbody>
 </table>
 <hr>
 <p><strong>Compétence :</strong> <em>Exprimer dans le langage SQL des requêtes d&rsquo;interrogation.</em></p>
@@ -7188,35 +7269,35 @@ une colonne nommée &lsquo;Prix Moyen Activités Tanger&rsquo;.</li>
 stations suivie du lieu (en majuscule) entre parenthèses et du tarif HT
 et TTC comme le montre l&rsquo;exemple suivant :</p>
 <table>
-<thead>
-<tr>
-<th style="text-align:center">Stations</th>
-<th style="text-align:right">Tarif HT</th>
-<th style="text-align:right">Tarif TTC</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center">Tanger (MAROC)</td>
-<td style="text-align:right">1200</td>
-<td style="text-align:right">1440</td>
-</tr>
-<tr>
-<td style="text-align:center">La Bourboule (AUVERGNE)</td>
-<td style="text-align:right">700</td>
-<td style="text-align:right">880</td>
-</tr>
-<tr>
-<td style="text-align:center">Courchevel (ALPES)</td>
-<td style="text-align:right">2200</td>
-<td style="text-align:right">2640</td>
-</tr>
-<tr>
-<td style="text-align:center">Victoria (SEYCHELLES)</td>
-<td style="text-align:right">1500</td>
-<td style="text-align:right">1880</td>
-</tr>
-</tbody>
+  <thead>
+      <tr>
+          <th style="text-align: center">Stations</th>
+          <th style="text-align: right">Tarif HT</th>
+          <th style="text-align: right">Tarif TTC</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: center">Tanger (MAROC)</td>
+          <td style="text-align: right">1200</td>
+          <td style="text-align: right">1440</td>
+      </tr>
+      <tr>
+          <td style="text-align: center">La Bourboule (AUVERGNE)</td>
+          <td style="text-align: right">700</td>
+          <td style="text-align: right">880</td>
+      </tr>
+      <tr>
+          <td style="text-align: center">Courchevel (ALPES)</td>
+          <td style="text-align: right">2200</td>
+          <td style="text-align: right">2640</td>
+      </tr>
+      <tr>
+          <td style="text-align: center">Victoria (SEYCHELLES)</td>
+          <td style="text-align: right">1500</td>
+          <td style="text-align: right">1880</td>
+      </tr>
+  </tbody>
 </table>
 <p>On supposera que le Prix dans la base est le tarif HT et que le taux
 de TVA est de 20%.</p>
