@@ -24,8 +24,17 @@
   </url><url>
     <loc>http://localhost:1313/docs/nsi/cours_premiere/os/0_concepts_cles/</loc>
   </url><url>
+    <loc>http://localhost:1313/docs/maths/seconde/chapitres/</loc>
+    <lastmod>2024-11-17T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/docs/maths/seconde/chapitres/python/introduction/</loc>
+    <lastmod>2024-11-17T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>http://localhost:1313/docs/</loc>
-    <lastmod>2024-08-23T00:00:00+00:00</lastmod>
+    <lastmod>2024-11-17T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/docs/maths/seconde/</loc>
+    <lastmod>2024-11-17T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/docs/snt/codage_information/</loc>
     <lastmod>2024-07-07T00:00:00+00:00</lastmod>
@@ -131,8 +140,6 @@
   </url><url>
     <loc>http://localhost:1313/docs/nsi/cours_premiere/donnees_simples/chaines_caracteres/1_cours/</loc>
   </url><url>
-    <loc>http://localhost:1313/docs/maths/seconde/chapitres/</loc>
-  </url><url>
     <loc>http://localhost:1313/docs/nsi/cours_premiere/python/cours_python/03_structure_controle/conditions/</loc>
   </url><url>
     <loc>http://localhost:1313/docs/nsi/cours_premiere/algorithmique/dichotomie/1_cours/</loc>
@@ -228,8 +235,6 @@
     <loc>http://localhost:1313/docs/nsi/cours_terminale/prog/recursivite/</loc>
   </url><url>
     <loc>http://localhost:1313/docs/nsi/cours_terminale/architecture/routage/</loc>
-  </url><url>
-    <loc>http://localhost:1313/docs/maths/seconde/</loc>
   </url><url>
     <loc>http://localhost:1313/docs/archives/maths/t_stmg/</loc>
   </url><url>
@@ -376,6 +381,8 @@
   </url><url>
     <loc>http://localhost:1313/docs/nsi/cours_premiere/ihm_web/resumes/resume_html_css/</loc>
   </url><url>
+    <loc>http://localhost:1313/docs/maths/seconde/chapitres/python/cours/</loc>
+  </url><url>
     <loc>http://localhost:1313/docs/nsi/cours_terminale/bdd/partie_1/sql/</loc>
   </url><url>
     <loc>http://localhost:1313/docs/nsi/cours_terminale/structures_donnees/graphes/cours_sd/</loc>
@@ -497,6 +504,8 @@
     <loc>http://localhost:1313/docs/nsi/cours_premiere/ihm_web/resumes/resume_javascript/</loc>
   </url><url>
     <loc>http://localhost:1313/docs/nsi/cours_premiere/algorithmique/sequentiel/revisions/</loc>
+  </url><url>
+    <loc>http://localhost:1313/docs/maths/seconde/chapitres/python/boucles/</loc>
   </url><url>
     <loc>http://localhost:1313/docs/ressources/shortcodes/</loc>
   </url><url>
@@ -1052,6 +1061,9 @@
     <loc>http://localhost:1313/docs/ressources/python/</loc>
   </url><url>
     <loc>http://localhost:1313/docs/nsi/cours_premiere/architecture/8_resume/</loc>
+  </url><url>
+    <loc>http://localhost:1313/docs/maths/seconde/chapitres/python/</loc>
+    <lastmod>2024-11-17T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/docs/archives/</loc>
     <lastmod>2024-03-12T00:00:00+00:00</lastmod>
