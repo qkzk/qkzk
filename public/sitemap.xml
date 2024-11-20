@@ -335,6 +335,8 @@
   </url><url>
     <loc>http://localhost:1313/docs/nsi/cours_terminale/bdd/partie_2/</loc>
   </url><url>
+    <loc>http://localhost:1313/docs/maths/seconde/chapitres/python/cours/</loc>
+  </url><url>
     <loc>http://localhost:1313/docs/nsi/cours_premiere/ihm_web/url/</loc>
   </url><url>
     <loc>http://localhost:1313/docs/nsi/cours_terminale/architecture/processus/2_processus_etats/</loc>
@@ -380,8 +382,6 @@
     <loc>http://localhost:1313/docs/nsi/cours_terminale/algorithmique/prog_dynamique/</loc>
   </url><url>
     <loc>http://localhost:1313/docs/nsi/cours_premiere/ihm_web/resumes/resume_html_css/</loc>
-  </url><url>
-    <loc>http://localhost:1313/docs/maths/seconde/chapitres/python/cours/</loc>
   </url><url>
     <loc>http://localhost:1313/docs/nsi/cours_terminale/bdd/partie_1/sql/</loc>
   </url><url>
@@ -467,6 +467,8 @@
   </url><url>
     <loc>http://localhost:1313/docs/nsi/cours_terminale/architecture/</loc>
   </url><url>
+    <loc>http://localhost:1313/docs/maths/seconde/chapitres/python/boucles/</loc>
+  </url><url>
     <loc>http://localhost:1313/docs/nsi/cours_premiere/python/cours_python/03_structure_controle/boucles_while/</loc>
   </url><url>
     <loc>http://localhost:1313/docs/nsi/cours_premiere/python/cours_python/</loc>
@@ -504,8 +506,6 @@
     <loc>http://localhost:1313/docs/nsi/cours_premiere/ihm_web/resumes/resume_javascript/</loc>
   </url><url>
     <loc>http://localhost:1313/docs/nsi/cours_premiere/algorithmique/sequentiel/revisions/</loc>
-  </url><url>
-    <loc>http://localhost:1313/docs/maths/seconde/chapitres/python/boucles/</loc>
   </url><url>
     <loc>http://localhost:1313/docs/ressources/shortcodes/</loc>
   </url><url>

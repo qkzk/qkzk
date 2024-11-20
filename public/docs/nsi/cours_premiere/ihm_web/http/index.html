@@ -33,7 +33,7 @@ Le protocole (un protocole est ensemble de règles qui permettent à 2 ordinateu
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/book.min.24c2b1f8dc2338e074345eec5b36f8a002aaa6d1b2e7312e14ac2d6a6958c876.css" integrity="sha256-JMKx&#43;NwjOOB0NF7sWzb4oAKqptGy5zEuFKwtamlYyHY=" crossorigin="anonymous">
   <script defer src="/flexsearch.min.js"></script>
-  <script defer src="/en.search.min.e2429e801ede36e5784fd414c414e5528d75e2377bc7fd42ae8fcac9473af35a.js" integrity="sha256-4kKegB7eNuV4T9QUxBTlUo114jd7x/1Cro/KyUc681o=" crossorigin="anonymous"></script>
+  <script defer src="/en.search.min.95dc5d5e3d5566c2008b9729bb7d80b16f03b31b8a539b46ae5f6cfccaab34db.js" integrity="sha256-ldxdXj1VZsIAi5cpu32AsW8DsxuKU5tGrl9s/MqrNNs=" crossorigin="anonymous"></script>
 <link rel="alternate" type="application/rss+xml" href="http://localhost:1313/docs/nsi/cours_premiere/ihm_web/http/index.xml" title="qkzk" />
 <!--
 Made with Book Theme
@@ -230,10 +230,7 @@ MathJax.Hub.Config({
   
 
   
-    <input type="checkbox" id="section-1a654f072ac5b97257d48f7c612895c4" class="toggle"  />
-    <label for="section-1a654f072ac5b97257d48f7c612895c4" class="flex justify-between">
-      <a href="http://localhost:1313/docs/maths/seconde/chapitres/python/introduction/" class="">Introduction à Python</a>
-    </label>
+    <a href="http://localhost:1313/docs/maths/seconde/chapitres/python/introduction/" class="">Introduction à Python</a>
   
 
           
@@ -251,7 +248,7 @@ MathJax.Hub.Config({
   
 
   
-    <a href="http://localhost:1313/docs/maths/seconde/chapitres/python/cours/" class="">Seconde</a>
+    <a href="http://localhost:1313/docs/maths/seconde/chapitres/python/cours/" class="">Cours Python</a>
   
 
           
@@ -269,7 +266,7 @@ MathJax.Hub.Config({
   
 
   
-    <a href="http://localhost:1313/docs/maths/seconde/chapitres/python/boucles/" class="">Seconde</a>
+    <a href="http://localhost:1313/docs/maths/seconde/chapitres/python/boucles/" class="">Boucles</a>
   
 
           
@@ -7062,7 +7059,6 @@ MathJax.Hub.Config({
   <ul>
     <li><a href="#transmettre-une-information-via-une-requête-get">Transmettre une information via une requête GET</a></li>
     <li><a href="#transmettre-une-information-via-une-requête-post">Transmettre une information via une requête POST</a></li>
-    <li><a href="#exercice-3">Exercice 3</a></li>
   </ul>
 
   <ul>
@@ -7304,7 +7300,7 @@ voulues. C&rsquo;est bien Python qui a transmis cette requête.</p>
 </h2>
 <ol>
 <li>
-<p>En utilisant Thonny reproduire les commandes présentées ci-dessus pour joindre
+<p>En utilisant <del>Thonny</del> Google Colab reproduire les commandes présentées ci-dessus pour joindre
 successivement : <code>https://google.com</code> et <code>https://google.com/azeaze</code></p>
 </li>
 <li>
@@ -7325,78 +7321,58 @@ successivement : <code>https://google.com</code> et <code>https://google.com/aze
 <p>Différentes approches permettent d&rsquo;exécuter et d&rsquo;examiner des requêtes.
 En voici une qui devrait fonctionner sur un ordinateur et un téléphone.</p>
 <ol>
-<li>Rendez-vous sur le site <a href="https://httpie.io">httpie</a> et cliquez sur <strong>Try online</strong>.</li>
-<li>Vous aboutissez devant un <em>prompt</em>. Appuyez sur <strong>enter</strong>.</li>
-<li>Vous pouvez maintenant saisir une requête et examiner son contenu ainsi que
-sa réponse.</li>
-<li>Une requête <code>http -v PUT pie.dev/put API-Key:foo hello=world</code> est préremplie, exécutez la.</li>
+<li>Rendez-vous sur le site <a href="https://httpie.io/app">httpie</a></li>
+<li>Essayons une première requête :
+<ul>
+<li>adresse : <code>pie.dev/put</code></li>
+<li>choississez comme méthode HTTP : <code>PUT</code>,</li>
+<li>dans les headers : <code>API-Key</code> <code>FOO</code> et <code>hello</code> <code>world</code>.</li>
+</ul>
+</li>
+<li>&ldquo;Send&rdquo;. La réponse apparaît à droite.</li>
 </ol>
 <p>Examinons cette requête.</p>
-<ol>
-<li>On exécute la commande unix &ldquo;<code>http</code>&rdquo;, c&rsquo;est celle fournie par le site httpie.
-On peut installer cette commande sur les PC (linux / windows) et les Macs.</li>
-</ol>
-<p>Par ailleurs, ce prompt permet d&rsquo;exécuter des commandes Unix classiques (<code>ls</code>, <code>mkdir</code> etc.)</p>
-<ol start="2">
-<li>
-<p>L&rsquo;option <code>-v</code> pour &ldquo;verbose&rdquo;, <em>verbeux</em> affiche un contenu détaillé</p>
-</li>
-<li>
-<p>La méthode HTTP <code>PUT</code> a été décrite plus haut, relisez la.</p>
-</li>
-<li>
-<p>L&rsquo;adresse est <code>pie.dev/put</code></p>
-</li>
-<li>
-<p>Les informations fournies sont les paires : <code>API-Key:foo</code> et <code>hello=world</code></p>
 <p>On a transmis :</p>
 <ul>
 <li>une clé d&rsquo;API (Application Programming Interface) : <code>&quot;foo&quot;</code> permettant de s&rsquo;identifier</li>
 <li>un couple clé valeur <code>hello</code>, <code>world</code></li>
 </ul>
-</li>
-<li>
-<p>Voici le résultat obtenu :</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>~ $ http -v PUT pie.dev/put API-Key:foo hello=world
-</span></span><span style="display:flex;"><span>PUT /put HTTP/1.1
-</span></span><span style="display:flex;"><span>API-Key: foo
-</span></span><span style="display:flex;"><span>Accept: application/json, */*;q=0.5
-</span></span><span style="display:flex;"><span>Accept-Encoding: gzip, deflate
-</span></span><span style="display:flex;"><span>Connection: keep-alive
-</span></span><span style="display:flex;"><span>Content-Length: 18
-</span></span><span style="display:flex;"><span>Content-Type: application/json
-</span></span><span style="display:flex;"><span>Host: pie.dev
-</span></span><span style="display:flex;"><span>User-Agent: HTTPie/2.4.0
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>{
-</span></span><span style="display:flex;"><span>    &#34;hello&#34;: &#34;world&#34;
+<p>Voici un résultat similaire à celui obtenu :</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>  <span style="color:#309;font-weight:bold">&#34;args&#34;</span>: {},
+</span></span><span style="display:flex;"><span>  <span style="color:#309;font-weight:bold">&#34;data&#34;</span>: <span style="color:#c30">&#34;&#34;</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#309;font-weight:bold">&#34;files&#34;</span>: {},
+</span></span><span style="display:flex;"><span>  <span style="color:#309;font-weight:bold">&#34;form&#34;</span>: {},
+</span></span><span style="display:flex;"><span>  <span style="color:#309;font-weight:bold">&#34;headers&#34;</span>: {
+</span></span><span style="display:flex;"><span>    <span style="color:#309;font-weight:bold">&#34;Accept-Encoding&#34;</span>: <span style="color:#c30">&#34;gzip&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#309;font-weight:bold">&#34;Api-Key&#34;</span>: <span style="color:#c30">&#34;foo&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#309;font-weight:bold">&#34;Baggage&#34;</span>: <span style="color:#c30">&#34;sentry-environment=production,sentry-release=bbcaf558f75858405bf0ad0eddce1d33a5eda092,sentry-public_key=53fade3064084ef092f9e005bec83766,sentry-trace_id=e8b877d1079f4ab9a1424507ce6b97ba&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#309;font-weight:bold">&#34;Cdn-Loop&#34;</span>: <span style="color:#c30">&#34;cloudflare; loops=1&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#309;font-weight:bold">&#34;Cf-Connecting-Ip&#34;</span>: <span style="color:#c30">&#34;44.211.62.34&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#309;font-weight:bold">&#34;Cf-Ipcountry&#34;</span>: <span style="color:#c30">&#34;US&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#309;font-weight:bold">&#34;Cf-Ray&#34;</span>: <span style="color:#c30">&#34;8e5aa184ba93d670-FRA&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#309;font-weight:bold">&#34;Cf-Visitor&#34;</span>: <span style="color:#c30">&#34;{\&#34;scheme\&#34;:\&#34;http\&#34;}&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#309;font-weight:bold">&#34;Connection&#34;</span>: <span style="color:#c30">&#34;Keep-Alive&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#309;font-weight:bold">&#34;Content-Length&#34;</span>: <span style="color:#c30">&#34;0&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#309;font-weight:bold">&#34;Content-Type&#34;</span>: <span style="color:#c30">&#34;text/plain;charset=UTF-8&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#309;font-weight:bold">&#34;Hello&#34;</span>: <span style="color:#c30">&#34;world&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#309;font-weight:bold">&#34;Host&#34;</span>: <span style="color:#c30">&#34;pie.dev&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#309;font-weight:bold">&#34;User-Agent&#34;</span>: <span style="color:#c30">&#34;HTTPie&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#309;font-weight:bold">&#34;X-Vercel-Id&#34;</span>: <span style="color:#c30">&#34;cdg1:cdg1::8zp8g-1732128681599-2436fa82d863&#34;</span>
+</span></span><span style="display:flex;"><span>  },
+</span></span><span style="display:flex;"><span>  <span style="color:#309;font-weight:bold">&#34;json&#34;</span>: <span style="color:#069;font-weight:bold">null</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#309;font-weight:bold">&#34;origin&#34;</span>: <span style="color:#c30">&#34;44.211.62.34&#34;</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#309;font-weight:bold">&#34;url&#34;</span>: <span style="color:#c30">&#34;http://pie.dev/put&#34;</span>
 </span></span><span style="display:flex;"><span>}
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>HTTP/1.1 200 OK
-</span></span><span style="display:flex;"><span>CF-Cache-Status: DYNAMIC
-</span></span><span style="display:flex;"><span>CF-RAY: 675d5bda2e85e6cc-EWR
-</span></span><span style="display:flex;"><span>Connection: keep-alive
-</span></span><span style="display:flex;"><span>Content-Encoding: gzip
-</span></span><span style="display:flex;"><span>Content-Type: application/json
-</span></span><span style="display:flex;"><span>Date: Wed, 28 Jul 2021 10:17:37 GMT
-</span></span><span style="display:flex;"><span>NEL: {&#34;report_to&#34;:&#34;cf-nel&#34;,&#34;max_age&#34;:604800}
-</span></span><span style="display:flex;"><span>Report-To: {&#34;endpoints&#34;:[{&#34;url&#34;:&#34;https:\/\/a.nel.cloudflare.com\/report\/v3?s=By3uhsityZzSSDvUeNsGeV6ynezLsCwDAARh0fHKHQa43zCmEOLRUuEDSOPBJG8fWBbPpIqmGynSneEL5UrIwHxIo%2Bn5o6f%2BmWyJxp1P6SFoHSjFUOoVmsTJ&#34;}],&#34;group&#34;:&#34;cf-nel&#34;,&#34;max_age&#34;:604800}
-</span></span><span style="display:flex;"><span>Server: cloudflare
-</span></span><span style="display:flex;"><span>Transfer-Encoding: chunked
-</span></span><span style="display:flex;"><span>access-control-allow-credentials: true
-</span></span><span style="display:flex;"><span>access-control-allow-origin: *
-</span></span><span style="display:flex;"><span>alt-svc: h3-27=&#34;:443&#34;; ma=86400, h3-28=&#34;:443&#34;; ma=86400, h3-29=&#34;:443&#34;; ma=86400, h3=&#34;:443&#34;; ma=86400
-</span></span></code></pre></div></li>
-</ol>
-<h2 id="exercice-2">
+</span></span></code></pre></div><h2 id="exercice-2">
   Exercice 2
   <a class="anchor" href="#exercice-2">#</a>
 </h2>
 <p>Toujours depuis httpie :</p>
 <ol>
 <li>
-<p>exécuter une requête <code>GET</code> vers mon site, avec l&rsquo;option <code>-v</code></p>
+<p>exécuter une requête <code>GET</code> vers mon site.</p>
+<p><em>Contrairement à ce que le site affiche en preview, la réponse obtenue ne contient pas le css et la vingtaine de fichiers associés, seulement le contenu html. La preview est obtenue en envoyant 20 autres requêtes qui n&rsquo;apparaissent pas&hellip;</em></p>
 </li>
 <li>
 <p>Donner :</p>
@@ -7425,12 +7401,13 @@ GET.</p>
 </h2>
 <p>Lorsqu&rsquo;on transmet des informations via une requête GET, celles-ci sont transmises
 dans l&rsquo;URL directement, sous la forme de paire &ldquo;clé:valeur&rdquo; :</p>
-<p><code>https://httpbin.org/get?cle1=valeur1??cle2=valeur2</code></p>
+<p><code>https://httpbin.org/get?cle1=valeur1&amp;cle2=valeur2</code></p>
 <p>Par exemple avec httpie :</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ http -v GET https://httpbin.org/get?cle1<span style="color:#555">=</span>valeur1??cle2<span style="color:#555">=</span>valeur2
+<div class="highlight"><pre tabindex="0" style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>https://httpbin.org/get?cle1=valeur1&amp;cle2=valeur2
 </span></span></code></pre></div><p>Ainsi, on a transmis deux informations : <code>cle1: valeur1</code> et <code>cle2: valeur2</code></p>
-<p>Remarquez la syntaxe : <code>?</code> après l&rsquo;adresse, <code>cle=valeur</code> et <code>??</code> pour séparer les
+<p>Remarquez la syntaxe : <code>?</code> après l&rsquo;adresse, <code>cle=valeur</code> et <code>&amp;</code> pour séparer les
 paires.</p>
+<p>Recommencez cette requête en entrant les informations dans &ldquo;PARAMS&rdquo;</p>
 <h2 id="transmettre-une-information-via-une-requête-post">
   Transmettre une information via une requête POST
   <a class="anchor" href="#transmettre-une-information-via-une-requ%c3%aate-post">#</a>
@@ -7442,11 +7419,11 @@ sont <em>généralement</em> transmises via une requête <code>POST</code>.</p>
 <p>Les informations ne sont pas visibles directement mais elles ne sont pas chiffrées
 pour autant. Simplement, le navigateur ne les affiche pas dans la page.</p>
 <p>Considérons l&rsquo;exemple suivant :</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ http -v POST https://httpbin.org/post <span style="color:#033">hello</span><span style="color:#555">=</span>world <span style="color:#033">bonjour</span><span style="color:#555">=</span>salut
-</span></span></code></pre></div><h2 id="exercice-3">
-  Exercice 3
-  <a class="anchor" href="#exercice-3">#</a>
-</h2>
+<ul>
+<li>Adresse : <code>https://httpbin.org/post</code></li>
+<li>Methode : POST</li>
+<li>Form: <code>hello</code> <code>world</code> et <code>bonjour</code> <code>salut</code></li>
+</ul>
 <ol>
 <li>Exécuter cette requête sur httpie</li>
 <li>La requête a-t-elle été exécutée correctement ? Comment le sait-on ?</li>
@@ -7462,8 +7439,13 @@ fonctionne toujours à cette date. Espérons que ce soit bien le cas !</em></p>
 <p>Nous allons publier quelques messages sur le <a href="https://liris-ktbs01.insa-lyon.fr:8000/blogephem/">blog</a> de mon collègue.</p>
 <p>Les champs acceptés sont <code>title</code> et <code>body</code>.</p>
 <p>Lorsque le post est accepté, la réponse contient l&rsquo;url permettant de consulter le message.</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>~ $ http -v POST https://liris-ktbs01.insa-lyon.fr:8000/blogephem/ <span style="color:#033">title</span><span style="color:#555">=</span>bjour <span style="color:#033">body</span><span style="color:#555">=</span>super
-</span></span><span style="display:flex;"><span>POST /blogephem/ HTTP/1.1
+<ul>
+<li>Adresse : <a href="https://liris-ktbs01.insa-lyon.fr:8000/blogephem/">https://liris-ktbs01.insa-lyon.fr:8000/blogephem/</a></li>
+<li>Méthode : POST</li>
+<li>Body: <code>title</code> <code>bjour</code> et <code>body</code> <code>super</code></li>
+</ul>
+<p>Consultez vos messages sur l&rsquo;adresse citée plus haut !</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>POST /blogephem/ HTTP/1.1
 </span></span><span style="display:flex;"><span>Accept: application/json, */*;<span style="color:#033">q</span><span style="color:#555">=</span>0.5
 </span></span><span style="display:flex;"><span>Accept-Encoding: gzip, deflate
 </span></span><span style="display:flex;"><span>Connection: keep-alive
@@ -7587,7 +7569,6 @@ dans la base.</p>
   <ul>
     <li><a href="#transmettre-une-information-via-une-requête-get">Transmettre une information via une requête GET</a></li>
     <li><a href="#transmettre-une-information-via-une-requête-post">Transmettre une information via une requête POST</a></li>
-    <li><a href="#exercice-3">Exercice 3</a></li>
   </ul>
 
   <ul>
