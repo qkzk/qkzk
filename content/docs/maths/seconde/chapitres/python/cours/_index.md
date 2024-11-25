@@ -358,8 +358,6 @@ else:
 2. Aux états-unis, la majorité complète est atteinte à 21 ans. Comment modifier
    le script pour l'adapter à cette situation ?
 
-## Les boucles bornées avec `for`
+## Les boucles : voir le [chapitre dédié](../boucles)
 
-## Les boucles non bornées avec `hile`
-
-## Les listes : `[1, 2, 3, 4]`
+## Les listes : `[1, 2, 3, 4]` : _à venir_

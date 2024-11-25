@@ -138,21 +138,21 @@ l’aide d’une boucle.
 ## Exo 6
 
 1.  On appelle carré tout entier naturel $n$ qui peut s’écrire $n = a^2$ où $a$ est un entier naturel.
-    a) Écrire le code de la fonction compteCarrés qui renvoie le nombre de carrés compris entre deux
-    entiers naturels a et b inclus sans utiliser la fonction sqrt.
-    b) Soit un réel.
+    a) Écrire le code de la fonction compteCarrés qui renvoie le nombre de carrés compris entre deux entiers naturels a et b inclus sans utiliser la fonction sqrt.
+
+    b) Soit un réel $x$.
     On appelle _partie entière_ de $x$ et on note le plus grand entier inférieur ou égal à ;
 
-        il est codé `floor(x)`.
-        On appelle _valeur entière_ par excès de $x$ et on note  $\lceil x\rceil$ le plus petit entier supérieur ou égal à $x$;
+    il est codé `floor(x)`.
+    On appelle _valeur entière_ par excès de $x$ et on note $\lceil x\rceil$ le plus petit entier supérieur ou égal à $x$;
 
-        il est codé `ceil(x)`.
+    il est codé `ceil(x)`.
 
-        Remarque. Il faut importer la bibliothèque `math` pour utiliser ces deux fonctions
-            (`from math import *`).
+    Remarque. Il faut importer la bibliothèque `math` pour utiliser ces deux fonctions
+    (`from math import *`).
 
-        Démontrer que si $x$ et $y$ sont deux réels $x \leq y$ tels que alors le nombre d’entiers
-        $n$ compris entre $x$ et $y$ est $\lceil y\rceil - \lceil x \rceil + 1$.
+    Démontrer que si $x$ et $y$ sont deux réels $x \leq y$ tels que alors le nombre d’entiers
+    $n$ compris entre $x$ et $y$ est $\lceil y\rceil - \lceil x \rceil + 1$.
 
     c) Écrire le code de la fonction _compte_carres_ qui renvoie le nombre de carrés compris entre deux
     entiers naturels a et b inclus en utilisant les fonctions précédentes.
