@@ -2,7 +2,6 @@
 title: "Cours"
 bookCollapseSection: true
 author: "qkzk"
-date: "2020/11/22"
 weight: 1
 
 ---

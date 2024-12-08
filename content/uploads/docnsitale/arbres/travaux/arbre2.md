@@ -4,7 +4,6 @@ author: |
         | DIU Enseigner l'informatique au lycée
         | Univ. Lille
 thanks: Équipe pédagogique DIU EIL Lille. Ce document est mis à disposition selon les termes de la Licence Creative Commons (CC-BY-4.0) \protect ![](cc-by.png){width=10%}
-date: décembre 2019
 lang: fr
 ---
 

@@ -1,7 +1,6 @@
 ---
 title: "TP: Simulation 2"
 author: "David Roche"
-date: "2022/02/15"
 theme: "metropolis"
 weight: 22
 bookCollapseSection: true

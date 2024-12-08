@@ -1,7 +1,6 @@
 ---
 title: "Rappels"
 author: "David Roche"
-date: "2022/02/15"
 theme: "metropolis"
 weight: 1
 bookCollapseSection: true

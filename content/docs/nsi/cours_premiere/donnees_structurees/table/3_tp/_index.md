@@ -2,7 +2,6 @@
 title: '3. TP : importer, exporter, trier'
 bookCollapseSection: true
 author: 'qkzk'
-date: '2020/07/31'
 weight: 3
 
 ---

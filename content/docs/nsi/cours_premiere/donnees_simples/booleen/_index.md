@@ -2,7 +2,6 @@
 title: "Booléens"
 bookCollapseSection: true
 author: qkzk
-date: 2021/04/19
 weight: 2
 
 ---

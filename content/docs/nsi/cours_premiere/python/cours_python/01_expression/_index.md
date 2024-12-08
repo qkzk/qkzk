@@ -2,7 +2,6 @@
 title: "1 - Expressions"
 bookCollapseSection: true
 author: "qkzk"
-date: "2024/06/29"
 weight: 2
 geometry: "margin=1.5cm"
 header-includes: |

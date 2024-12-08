@@ -2,7 +2,6 @@
 title: "Module Grove"
 bookCollapseSection: true
 author: "qkzk"
-date: "2021/04/26"
 weight: 2
 
 ---

@@ -1,7 +1,6 @@
 ---
 title: "Présentation rentrée"
 author: "qkzk"
-date: "2022/07/06"
 theme: metropolis
 geometry: margin=1.5cm
 weight: 1

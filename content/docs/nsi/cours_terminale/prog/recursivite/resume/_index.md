@@ -2,7 +2,6 @@
 title: 'NSI Terminale Récursivité - résumé'
 bookCollapseSection: true
 author: 'qkzk'
-date: 2020/06/22
 weight: 100
 
 ---

@@ -1,6 +1,5 @@
 ---
 title: Parcours, chemins, cycles
-date: 2020/05/02
 author: qkzk
 theme:
   - metropolis

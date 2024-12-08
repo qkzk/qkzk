@@ -2,7 +2,6 @@
 title: "Hugo"
 bookCollapseSection: true
 author: "qkzk"
-date: "2021/06/26"
 weight: 2
 
 ---

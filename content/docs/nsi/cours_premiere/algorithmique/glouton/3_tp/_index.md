@@ -2,7 +2,6 @@
 title: '3. TP : Étagères'
 bookCollapseSection: true
 author: qkzk
-date: 2020/03/07
 weight: 3
 
 ---

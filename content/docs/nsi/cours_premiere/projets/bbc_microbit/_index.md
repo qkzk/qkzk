@@ -1,7 +1,6 @@
 ---
 title: "BBC Micro:bit"
 bookCollapseSection: true
-date: "2021/04/24"
 author: "qkzk"
 weight: 100
 

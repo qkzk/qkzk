@@ -36,7 +36,7 @@ Répondre aux questions ci-dessous à l’aide des trois documents situés sur l
 
 ![img](./2024-07-10-111520_807x512_scrot.png)
 
-!img](./img-2024-07-10-11-16.png)
+![img](./img-2024-07-10-11-16.png)
 
 ### c) Photoite et pixel
 

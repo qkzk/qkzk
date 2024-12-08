@@ -1,7 +1,6 @@
 ---
 title: Cours
 author: qkzk
-date: 2020/04/29
 weight: 1
 
 ---

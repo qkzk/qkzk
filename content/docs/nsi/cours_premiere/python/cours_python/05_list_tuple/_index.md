@@ -2,7 +2,6 @@
 title: "5 - Listes et tuples"
 bookCollapseSection: true
 author: "qkzk"
-date: "2021/04/22"
 weight: 5
 
 ---

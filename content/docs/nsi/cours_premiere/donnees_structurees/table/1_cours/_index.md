@@ -4,7 +4,6 @@ bookCollapseSection: true
 title: '1. Cours : introduction'
 weight: 1
 author: 'qkzk'
-date: '2021/05/25'
 theme: "metropolis"
 geometry: "margin=1.5cm"
 header-includes: |

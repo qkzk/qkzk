@@ -44,15 +44,15 @@ Le but du travail est de reconstituer les différentes étapes de la croisière 
 
 1. Dans votre dossier Travail, créer un dossier croisière et y copier les photos données plus haut.
 
-2. A l’aide du site Metapicz, trouver alors les informations suivantes pour la première photo (départ).
+2. A l’aide du site GetMetadata, trouver alors les informations suivantes pour la première photo (départ).
 
-   a. La résolution de la photo : ............................................
+   a. La résolution de la photo
 
-   b. Date et heure de la prise de vue : ........................................
+   b. Date et heure de la prise de vue
 
-   c. Marque de l’appareil et sa référence : ..............................
+   c. Marque de l’appareil et sa référence
 
-   d. Le flash a-t-il fonctionné durant la prise de vue ? ............
+   d. Le flash a-t-il fonctionné durant la prise de vue ?
 
    e. Que signifie la mention sRGB, sachant que "s" signifie standard ?
 
@@ -63,26 +63,30 @@ Le but du travail est de reconstituer les différentes étapes de la croisière 
    | Latitude  |        |         |         |         |         |         |         |         |
    | Longitude |        |         |         |         |         |         |         |         |
 
-4. Parmi toutes les escales, l’une est fictive. Justifier : ............................................
+4. Parmi toutes les escales, l’une est fictive. Justifier :
 
 5. Tracer sur la carte le parcours réel de la croisière.
 
    ![img](./img-2024-07-10-11-35.png)
 
-6. Utiliser le document ressource Géoportail pour reproduire la croisière sur le site sur une carte du monde (soit via le nom des villes ou les coordonnées géographiques) Geoportail. Déterminer une approximation de la distance parcourue pendant la croisière.
+   Ouvrez la carte avec paint et ajoutez les points, tirez des traits entre les étapes, joindre le résultat à votre compte rendu.
+
+6. Utiliser le [document ressource Géoportail](./Tuto-Geoportail-Positionner_lieux.pdf) pour reproduire la croisière sur le site sur une carte du monde (soit via le nom des villes ou les coordonnées géographiques) Geoportail. Déterminer une approximation de la distance parcourue pendant la croisière.
 
 7. A quoi servent les métadonnées EXIF ? Peut-on les trafiquer ?
 
 8. Les métadonnées des photographies sont utiles dans différents domaines. Définir quelles métadonnées pourraient être utilisées par chacune des personnes et pour quels objectifs.
 
-   a. un community manager : ............................................
+   a. un journaliste :
 
-   b. un journaliste : ............................................
+   b. un policier :
 
-   c. un policier : ............................................
+9. Testez sur votre téléphone : activez la localisation, prenez une photo et explorez les données EXIF. Peut-on localiser la prise de vue ? Recommencez avec la localisation désactivée.
 
-9. Activer/Désactiver la géolocalisation sur votre téléphone.
+   Pensez-y avant de publier...
 
 [^1]: De l’anglais Exchangeable image file format, c’est un format spécifiant les métadonnées de photographies numériques. Ce format a été défini par des constructeurs d’appareil photo.
-[^2]: [Metapicz](http://www.metapicz.com) ou encore [Get Metadata](http://get-metadata.com)
+
+[^2]: [Get Metadata](http://get-metadata.com) ou encore [Jumpl](https://jimpl.com/)
+
 [^3]: Sous Android Photo Exif Editor, sous iOS Exif Manager

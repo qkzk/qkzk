@@ -2,7 +2,6 @@
 title: "NSI - Terminale"
 subtitle: "Bases de données : Travaux dirigés - Modèle relationnel"
 author: "qkzk"
-date: "2020/10/09"
 theme: metropolis
 geometry: margin=1.5cm
 

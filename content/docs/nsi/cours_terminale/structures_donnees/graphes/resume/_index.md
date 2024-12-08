@@ -1,6 +1,5 @@
 ---
 subtitle: "Résumé : graphes"
-date: 2020/06/29
 author: qkzk
 weight: 100
 

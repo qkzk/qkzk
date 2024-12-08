@@ -2,7 +2,6 @@
 title: "Problème de l'arrêt en Python"
 bookCollapseSection: true
 author: qkzk
-date: 2020/03/03
 weight: 100
 ---
 

@@ -1,7 +1,6 @@
 ---
 title: "TD: Réseau"
 author: "qkzk"
-date: "2021/06/08"
 theme: "metropolis"
 weight: 11
 bookCollapseSection: true

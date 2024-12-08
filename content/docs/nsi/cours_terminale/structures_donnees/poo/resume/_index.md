@@ -1,7 +1,6 @@
 ---
 title : "resume"
 author: qkzk
-date: 2020/07/09
 weight: 100
 
 ---

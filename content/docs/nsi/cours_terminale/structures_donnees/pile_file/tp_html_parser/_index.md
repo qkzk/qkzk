@@ -2,7 +2,6 @@
 title: Parser HTML
 bookCollapseSection: true
 author: qkzk
-date: 2020/01/01
 weight: 2
 ---
 

@@ -2,7 +2,6 @@
 title: Protocoles de routage
 bookCollapseSection: true
 author: qkzk
-date: 2020/03/17
 weight: 1
 
 ---

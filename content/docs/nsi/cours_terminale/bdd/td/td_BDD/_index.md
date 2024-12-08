@@ -2,7 +2,6 @@
 title: "Modèle relationnel"
 bookCollapseSection: true
 author: "qkzk"
-date: "2020/10/09"
 theme: metropolis
 weight: 2
 

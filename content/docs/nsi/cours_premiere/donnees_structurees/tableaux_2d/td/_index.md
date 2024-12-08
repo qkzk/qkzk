@@ -1,7 +1,6 @@
 ---
 title: "TD"
 author: "qkzk"
-date: "2021/05/23"
 weight: 3
 bookCollapseSection: true
 

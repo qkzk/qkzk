@@ -1,7 +1,6 @@
 ---
 title: "Entrées prépondérentes du programme"
 author: "qkzk"
-date: "2021/12/21"
 theme: metropolis
 geometry: margin=1.5cm
 weight: 1

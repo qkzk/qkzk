@@ -1,7 +1,6 @@
 ---
 title: "Intro"
 author: "qkzk"
-date: "2021/12/04"
 weight: 2
 bookCollapseSection: true
 

@@ -3,7 +3,6 @@ title: "Cours"
 bookCollapseSection: true
 author: "qkzk"
 weight: 1
-date: 2020/07/25
 
 ---
 

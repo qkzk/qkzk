@@ -2,7 +2,6 @@
 title: Diviser pour régner.
 bookCollapseSection: true
 author: qkzk
-date: 2020/04/26
 weight: 1
 ---
 

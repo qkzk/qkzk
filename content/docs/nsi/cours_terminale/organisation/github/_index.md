@@ -2,7 +2,6 @@
 title: "Github"
 bookCollapseSection: true
 author: "qkzk"
-date: "2020/08/04"
 weight: 100
 
 ---

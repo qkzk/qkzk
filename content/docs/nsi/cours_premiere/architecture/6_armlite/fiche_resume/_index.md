@@ -1,6 +1,5 @@
 ---
 title: "Résumé des mnémoniques ARMLite"
-date: "2022/02/14"
 theme: "metropolis"
 geometry: "margin=1.5cm"
 weight: 100

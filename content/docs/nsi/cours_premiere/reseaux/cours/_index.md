@@ -1,7 +1,6 @@
 ---
 title: "Cours"
 author: "qkzk"
-date: "2022/02/15"
 theme: "metropolis"
 geometry: "margin=1.5cm"
 weight: 2

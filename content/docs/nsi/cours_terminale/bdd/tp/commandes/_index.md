@@ -1,7 +1,6 @@
 ---
 title: "TP Commandes"
 author: qkzk
-date: 2022/05/25
 theme: metropolis
 weight: 100
 ---

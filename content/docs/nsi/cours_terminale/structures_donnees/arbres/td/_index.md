@@ -1,7 +1,6 @@
 ---
 title: "Arbres - TD 1"
 bookCollapseSection: true
-date: novembre-décembre 2019
 weight: 1
 ---
 

@@ -1,6 +1,5 @@
 ---
 subtitle: "Résumé : files et piles"
-date: 2020/06/27
 author: qkzk
 weight: 100
 
