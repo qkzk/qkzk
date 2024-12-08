@@ -1,0 +1,24 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <title>Mon super site</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Welcome!</h1>
+    </header>
+    <main>
+        <p>Développeur en devenir. Mes passions :</p>
+        <ul>
+            <li>Les cartes Magic</li>
+            <li>Le tuning de trottinette électrique</li>
+            <li>Les photos de train</li>
+        </ul>
+        <p>
+            <a href="https://www.google.com">Accéder à Google</a>
+        </p>
+    </main>
+</body>
+</html>

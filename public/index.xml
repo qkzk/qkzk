@@ -17,6 +17,13 @@
     </item>
     <item>
       <title></title>
+      <link>http://localhost:1313/docs/nsi/cours_premiere/ihm_web/td_complet/page/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/docs/nsi/cours_premiere/ihm_web/td_complet/page/</guid>
+      <description>&lt;!DOCTYPE html&gt;&#xA;&lt;html lang=&#34;fr&#34;&gt;&#xA;&lt;head&gt;&#xA;    &lt;title&gt;Mon super site&lt;/title&gt;&#xA;    &lt;link rel=&#34;stylesheet&#34; href=&#34;style.css&#34;&gt;&#xA;&lt;/head&gt;&#xA;&lt;body&gt;&#xA;    &lt;header&gt;&#xA;        &lt;h1&gt;Welcome!&lt;/h1&gt;&#xA;    &lt;/header&gt;&#xA;    &lt;main&gt;&#xA;        &lt;p&gt;Développeur en devenir. Mes passions :&lt;/p&gt;&#xA;        &lt;ul&gt;&#xA;            &lt;li&gt;Les cartes Magic&lt;/li&gt;&#xA;            &lt;li&gt;Le tuning de trottinette électrique&lt;/li&gt;&#xA;            &lt;li&gt;Les photos de train&lt;/li&gt;&#xA;        &lt;/ul&gt;&#xA;        &lt;p&gt;&#xA;            &lt;a href=&#34;https://www.google.com&#34;&gt;Accéder à Google&lt;/a&gt;&#xA;        &lt;/p&gt;&#xA;    &lt;/main&gt;&#xA;&lt;/body&gt;&#xA;&lt;/html&gt;</description>
+    </item>
+    <item>
+      <title></title>
       <link>http://localhost:1313/docs/nsi/cours_premiere/python/prep/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/docs/nsi/cours_premiere/python/prep/</guid>
