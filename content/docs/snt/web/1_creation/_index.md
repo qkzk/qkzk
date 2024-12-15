@@ -67,7 +67,7 @@ La majorité des balises vont par paires : une balise ouvrante `<html>` et une b
 L'ordre des balises est similaire à celui des parenthèses en mathématiques :
 
 - $[(x+1)(x-3) + x^2]$ est correct comme `<html><body>texte</body></html>` ;
-- [(x-2]) est incorrect, comme `<html><body>texte</html></body>`.
+- $[(x-2])$ est incorrect, comme `<html><body>texte</html></body>`.
 
 Tout document HTML doit se conformer à la structure suivante :
 
@@ -83,7 +83,7 @@ Tout document HTML doit se conformer à la structure suivante :
 </html>
 ```
 
-- `<!doctype html>` : La toute première ligne s’appelle le doctype. Elle est indispensable car c’est elle qui indique au navigateur qu’il s’agit bien d’une page web HTML.
+- `<!doctype html>` : La toute première ligne s’appelle le _doctype_. Elle est indispensable car c’est elle qui indique au navigateur qu’il s’agit bien d’une page web HTML.
 - `<html>` `</html>` : C’est la balise principale. Elle englobe tout le code de la page.
 - `<head>` `</head>` : Entre ces balises se trouvent des informations supplémentaires qui n’apparaissent pas directement sur la page, comme par exemple les styles utilisés sur la page, le titre de l'onglet donné à la page ou l’encodage (pour la gestion des caractères spéciaux).
 - `<body>` `</body>` : Entre ces balises se trouvent la partie principale de la page. Tout ce que nous écrirons ici apparaîtra sur la page.
