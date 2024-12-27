@@ -40,10 +40,10 @@ def recherche(T, x):
 
 {{< python title="Recherche par balayage">}}
 def recherche(T: list, x: int):
-    for i in range(len(T)):
-        if x == T[i]:
-            return i
-    return -1
+for i in range(len(T)):
+if x == T[i]:
+return i
+return -1
 
 x = 5
 T = [11, 7, 9, 5, 15, 13, 3, 1]
@@ -135,7 +135,7 @@ Donc : comparer la valeur centrale à `x` et **éliminer la moitié des valeurs 
    ```python
    x = 5
    T = [ 1,  3,  5,  7,  9, 11, 13, 15]
-            g=d
+                g=d
    ```
 
    ```python
@@ -149,7 +149,6 @@ Donc : comparer la valeur centrale à `x` et **éliminer la moitié des valeurs 
 ## Construction de l'algorithme
 
 {{< expand "" "Construction de l'algorithme" >}}
-
 
 {{< columns >}}
 **Précondition**\
@@ -187,6 +186,7 @@ Boucle non bornée (`while`)\
 ### Exemples pour tester votre fonction
 
 {{< expand "" "..." >}}
+
 ```python
 # tableau vide
 assert recherche_dichotomique([], 0) == -1
@@ -204,6 +204,7 @@ for cle in tableau:
 for cle in [-1, 1, 3, 5, 7, 9, 11]:
     assert recherche_dichotomique(tableau, cle) == -1
 ```
+
 {{< /expand >}}
 
 ### Fonction à compléter
@@ -212,7 +213,7 @@ for cle in [-1, 1, 3, 5, 7, 9, 11]:
 {{< tab "Difficile" >}}
 
 ```python
-def recherche_dichotomique(T: list, x: list) -> int:
+def recherche_dichotomique(T: list, x: int) -> int:
     """
     Renvoie l'indice de `x` dans `T`.
     Renvoie -1 si `x` n'est pas dans `T`.
@@ -227,7 +228,7 @@ def recherche_dichotomique(T: list, x: list) -> int:
 {{< tab "Moyen" >}}
 
 ```python
-def recherche_dichotomique(T: list, x: list) -> int:
+def recherche_dichotomique(T: list, x: int) -> int:
     """
     Renvoie l'indice de `x` dans `T`.
     Renvoie -1 si `x` n'est pas dans `T`.
@@ -251,7 +252,7 @@ def recherche_dichotomique(T: list, x: list) -> int:
 {{< tab "Facile" >}}
 
 ```python
-def recherche_dichotomique(T: list, x: list) -> int:
+def recherche_dichotomique(T: list, x: int) -> int:
     """
     Renvoie l'indice de `x` dans `T`.
     Renvoie -1 si `x` n'est pas dans `T`.
@@ -274,18 +275,15 @@ def recherche_dichotomique(T: list, x: list) -> int:
 {{< /tab >}}
 {{< /tabs >}}
 
-
 {{< python title="Recherche dichotomique">}}
 def recherche_dichotomique(T: list, x: int):
-     ...
+...
 
 x = 5
-T = [1,  3,  5,  7,  9, 11, 13, 15]
+T = [1, 3, 5, 7, 9, 11, 13, 15]
 
 print(recherche_dichotomique(T, x))
 {{< /python >}}
-
-
 
 ## Déroulé de l'algorithme
 
@@ -364,7 +362,7 @@ On débute avec `g = 0` et `d = 8 - 1 = 7`.
 {{< expand "" "..." >}}
 
 ```python
-def recherche_dichotomique(T: list, x: list) -> int:
+def recherche_dichotomique(T: list, x: int) -> int:
     """
     Renvoie l'indice de `x` dans `T`.
     Renvoie -1 si `x` n'est pas dans `T`.
