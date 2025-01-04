@@ -58,18 +58,20 @@ URL veut dire Uniform Resource Locator, soit « localisateur uniforme de ressour
    - le chemin vers la ressource ;
    - et éventuellement des paramètres optionnels.
 
-a. Recopier le schéma de cette URL : `http://info.cern.ch/hypertext/WWW/TheProject.html`
+   1. Recopier le schéma de cette URL : `http://info.cern.ch/hypertext/WWW/TheProject.html`
 
-b. Recopier le nom du domaine : `http://info.cern.ch/hypertext/WWW/TheProject.html`
+   2. Recopier le nom du domaine : `http://info.cern.ch/hypertext/WWW/TheProject.html`
 
-c. Recopier le chemin vers la ressource : `http://info.cern.ch/hypertext/WWW/TheProject.html`
+   3. Recopier le chemin vers la ressource : `http://info.cern.ch/hypertext/WWW/TheProject.html`
 
-d. `http://info.cern.ch/hypertext/WWW/TheProject.html` veut donc dire d’aller :
+   4. Recopier et compléter le texte ci-dessous :
 
-    - sur le serveur http gérant...
-    - d’aller dans le répertoire... qui se trouve à la racine du site,
-    - puis dans le répertoire... qui se trouve dans le répertoire...,
-    - puis de demander le document... qui devrait y être stocké.
+   `http://info.cern.ch/hypertext/WWW/TheProject.html` signifie donc dire d’aller :
+
+   - sur le serveur http gérant...
+   - d’aller dans le répertoire... qui se trouve à la racine du site,
+   - puis dans le répertoire... qui se trouve dans le répertoire...,
+   - puis de demander le document... qui devrait y être stocké.
 
 3. Saisir dans la barre d’adresse du navigateur l’URL suivante et observer la page affichée.
 
@@ -86,13 +88,14 @@ d. `http://info.cern.ch/hypertext/WWW/TheProject.html` veut donc dire d’aller 
    c. Saisir `info.cern.ch`
 
 [^2]: Il s’agit de la première page web mise en ligne le 13 novembre 1990.
+
 [^3]: Il en existe plus de 250 comme par exemple `skype:`, `mailto:`, `ftp:`, `smtp:`
 
 6. Quelle différence, hormis la page qui s’affiche, entre les URL : <http://www1.ac-lille.fr/> et <https://www.education.gouv.fr/> ?
 
 7. Quelle hypothèse peut-on faire sur l’utilité de la partie recherche `?q=URL` dans l’URL <https://education.francetv.fr/recherche?q=URL> ?
 
-Reste une question : comment parvient-on à trouver le bon serveur dans l’immensité d’Internet ?
+Reste une question : _comment parvient-on à trouver le bon serveur dans l’immensité d’Internet ?_
 
 ## III Communication entre serveur et client
 
@@ -176,8 +179,11 @@ Une fois la requête reçue, le serveur va renvoyer une réponse.
     b. code de statut :
 
     c. date de transfert des données
+
     d. Caractéristique du serveur
+
     e. type de contenu du corps de la réponse
+
     f. longueur du corps de la réponse
 
 ### c) visualisation d’une requête HTTP avec Mozilla Firefox
