@@ -9,6 +9,12 @@ bookCollapseSection: true
 
 ## Sujet antérieurs
 
+### Examens 2024 
+
+- [avril](l2s4_exam_avril_2024.pdf)
+- [Correction avril](l2s4_exam_avril_2024_correction.pdf)
+- [DS et corrigé du DS](ds_corr.pdf)
+
 ### Examen final 2023
 
 - [sujet](./2023_examen.pdf)
@@ -23,15 +29,21 @@ bookCollapseSection: true
 - [correction vidéo](https://www.youtube.com/watch?v=aLrM9NmafFo)
 - [tableau blanc](./L2S4_correction_2021.pdf)
 
-# 2022-2023
+
+## 2024-2025
+
+- [Polycopié de TD](poly.pdf)
+
+## Années antérieures
+
+## 2022-2023
 
 - [Séance 5 du samedi 11 mars](./L2S4_2023_s5.pdf) et [vidéo](https://www.youtube.com/watch?v=niX7Z9_E3Fw)
 - [Séance 6 du samedi 18 mars](./L2S4_2023_s6.pdf) et [vidéo](https://www.youtube.com/watch?v=RtNSetwet2U)
 - [Séance 8 du samedi 1er avril](./L2S4_2023_s8.pdf) et [video](https://www.youtube.com/watch?v=TE4VzNiB5CI)
 
-# Années antérieures
 
-## Séance 2, vidéo préparée avant la séance 1
+### Séance 2, vidéo préparée avant la séance 1
 
 Voici un enregistrement vidéo ainsi que des corrections des exercices 7, 8, 9, 10, 11 et 12.
 Cela devrait largement couvrir les exercices traités durant la séance.
@@ -40,7 +52,7 @@ Cela devrait largement couvrir les exercices traités durant la séance.
 - [tableau blanc](./L2S4_Seance_2.pdf)
 - [Corrections tapées](./seance_2_corrections.pdf)
 
-## Séance 5 (12 mars 2022)
+### Séance 5 (12 mars 2022)
 
 Enregistrement vidéo, corrections tapées et manuscrites des exercices 24(1), 25, 26, 29 et 31.
 
@@ -48,7 +60,7 @@ Enregistrement vidéo, corrections tapées et manuscrites des exercices 24(1), 2
 - [Tableau blanc](./L2S4_seance5_2022.pdf)
 - [Corrections tapées](./seance_5_corrections.pdf)
 
-## Séance de révision (vendredi 29 avril 2022, 15h)
+### Séance de révision (vendredi 29 avril 2022, 15h)
 
 Nous allons réaliser une séance de révision en distanciel le **vendredi 29 avril 2022 à 15h**.
 
@@ -65,7 +77,7 @@ Si zoom pose trop de problème, je ferai un live sur youtube, depuis [ce channel
 
 Si c'est le cas, je l'indiquerai ici le moment venu.
 
-# Compléments et documents
+## Compléments et documents
 
 - Correction des exercices traités en TD. Une grande partie des exercices du polycopiés sont corrigés dans [ce document](./corrections.pdf).
 
