@@ -1,8 +1,8 @@
 ---
-title: "NSI - Terminale"
-subtitle: "Architecture - processus - Interblocage"
+title: "Interblocage"
 author: "qkzk"
 theme: "metropolis"
+weight: 3
 geometry: "margin=1.5cm"
 header-includes: |
   \usepackage{tcolorbox}
@@ -15,7 +15,7 @@ header-includes: |
 # Les interblocages
 
 Nous avons dits précédemment que des processus peuvent avoir besoin de la
-même ressource.
+même ressource{.}
 
 Dans de nombreuses situations, deux processus (ou davantage) peuvent souhaiter
 accéder à la même donnée sur le disque dur :
