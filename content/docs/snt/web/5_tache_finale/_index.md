@@ -29,3 +29,18 @@ geometry: "margin=1.5cm"
 8. Améliorer autant que possible votre site.
 
    Utiliser un moteur de recherche pour trouver des aides ou tutoriels.
+
+### Thèmes 
+
+Si vous manquez d'inspiration voici quelques idées possibles :
+
+1. Blog personnel – Un site simple où chaque élève partage ses passions, ses projets ou ses centres d’intérêt sous forme d’articles.
+1. Recettes de cuisine – Un site présentant des recettes faciles avec photos, instructions et astuces.
+1. Guide touristique local – Une présentation des lieux incontournables de votre ville ou de la région, avec cartes et avis.
+1. Portfolio artistique – Un site pour exposer des dessins, photos, poèmes ou autres créations personnelles.
+1. Mini encyclopédie – Un site thématique (espace, animaux, histoire, etc.) avec des articles pédagogiques illustrés.
+1. Site de club scolaire – Présentation d’un club (théâtre, éco-club, sport) avec annonces et galeries d’événements.
+1. Quiz interactif – Un site avec des quiz sur des sujets variés (culture générale, maths, musique…).
+1. Site de conseils éco-responsables – Des astuces et défis quotidiens pour réduire son empreinte écologique.
+1. Page dédiée à un livre ou un film préféré – Analyse, résumé, personnages, avis et discussions.
+1. Générateur de citations motivantes – Une page qui affiche une citation aléatoire à chaque visite [_Nécessite un peu de JavaScript]_.

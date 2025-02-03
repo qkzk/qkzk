@@ -491,6 +491,8 @@
   </url><url>
     <loc>http://localhost:1313/docs/nsi/cours_premiere/algorithmique/tris/3_insert/</loc>
   </url><url>
+    <loc>http://localhost:1313/docs/nsi/cours_terminale/architecture/processus/3_interblocage/</loc>
+  </url><url>
     <loc>http://localhost:1313/docs/maths/l1s2/</loc>
   </url><url>
     <loc>http://localhost:1313/docs/snt/reseaux_sociaux/3_graphes/</loc>
@@ -1200,8 +1202,6 @@
     <loc>http://localhost:1313/categories/</loc>
   </url><url>
     <loc>http://localhost:1313/docs/maths/l1s1/exercices/</loc>
-  </url><url>
-    <loc>http://localhost:1313/docs/nsi/cours_terminale/architecture/processus/3_interblocage/</loc>
   </url><url>
     <loc>http://localhost:1313/layouts/</loc>
   </url><url>
