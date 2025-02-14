@@ -75,7 +75,7 @@ _Ci-dessous une documentation plus complète_
 
 # ARMLite: Manuel de référence de programmation
 
-* Le simulateur [ARMLite](https://peterhigginson.co.uk/ARMlite/)
+* Le simulateur [ARMLite](https://peterhigginson.co.uk/ARMlite/) et un [mirroir](https://www.iro.umontreal.ca/~mignotte/IFT1215/APPLETS/LM_ARM/)
 * [documentation complète](https://peterhigginson.co.uk/ARMlite/Programming%20reference%20manual.pdf)
 
 ## Fenêtre

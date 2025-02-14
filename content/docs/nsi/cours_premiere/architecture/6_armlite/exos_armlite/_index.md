@@ -4,6 +4,9 @@ author: "qkzk"
 weight: 2
 ---
 
+* Le simulateur [ARMLite](https://peterhigginson.co.uk/ARMlite/) et un [mirroir](https://www.iro.umontreal.ca/~mignotte/IFT1215/APPLETS/LM_ARM/)
+* [documentation complète](https://peterhigginson.co.uk/ARMlite/Programming%20reference%20manual.pdf)
+
 # Exercices de déroulé de code
 
 Ces exercices se traitent _d'abord sur feuille_, ensuite dans l'assembleur pour vérifier.

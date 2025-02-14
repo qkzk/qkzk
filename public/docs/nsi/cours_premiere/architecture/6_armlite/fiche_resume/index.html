@@ -9,25 +9,21 @@
   Description simplifiée de l&rsquo;assembleur ARMLite
   #
 
-ARMLite est machine disposant d&rsquo;une architecture de Von Neumann qui exécute du code saisi en mnémoniques.
+ARMLite est une machine disposant d&rsquo;une architecture de Von Neumann qui exécute du code saisi en mnémoniques.
 
 Elle dispose de 13 registres généraux : R0 à R12. On les notera Rx, Ry etc.
 Les nombres littéraux sont notés #val, par exemple #20 désigne le nombre 20, vingt.
 Sa mémoire est initialisée avec le code du programme.
 Les autres registres sont utilisés pour le fonctionnement interne, quelques bits indiquent l&rsquo;état de la dernière opération
 
-
-  Instructions
-  #
-
-Les instructions les plus couramment employées sont les suivantes :">
+C&rsquo;est donc un émulateur de processeur respectant une version légère du modèle ARM. On peut lui faire exécuter des programmes et intéragir avec elle via une interface web dans laquelle on écrit de l&rsquo;assembleur et exécute les instructions.">
 <meta name="theme-color" content="#FFFFFF">
 <meta name="color-scheme" content="light dark"><meta property="og:url" content="http://localhost:1313/docs/nsi/cours_premiere/architecture/6_armlite/fiche_resume/">
   <meta property="og:site_name" content="qkzk">
   <meta property="og:title" content="Résumé des mnémoniques ARMLite">
   <meta property="og:description" content="pdf
-Description simplifiée de l’assembleur ARMLite # ARMLite est machine disposant d’une architecture de Von Neumann qui exécute du code saisi en mnémoniques.
-Elle dispose de 13 registres généraux : R0 à R12. On les notera Rx, Ry etc. Les nombres littéraux sont notés #val, par exemple #20 désigne le nombre 20, vingt. Sa mémoire est initialisée avec le code du programme. Les autres registres sont utilisés pour le fonctionnement interne, quelques bits indiquent l’état de la dernière opération Instructions # Les instructions les plus couramment employées sont les suivantes :">
+Description simplifiée de l’assembleur ARMLite # ARMLite est une machine disposant d’une architecture de Von Neumann qui exécute du code saisi en mnémoniques.
+Elle dispose de 13 registres généraux : R0 à R12. On les notera Rx, Ry etc. Les nombres littéraux sont notés #val, par exemple #20 désigne le nombre 20, vingt. Sa mémoire est initialisée avec le code du programme. Les autres registres sont utilisés pour le fonctionnement interne, quelques bits indiquent l’état de la dernière opération C’est donc un émulateur de processeur respectant une version légère du modèle ARM. On peut lui faire exécuter des programmes et intéragir avec elle via une interface web dans laquelle on écrit de l’assembleur et exécute les instructions.">
   <meta property="og:locale" content="en_us">
   <meta property="og:type" content="website">
 <title>Résumé des mnémoniques ARMLite | qkzk</title>
@@ -35,7 +31,7 @@ Elle dispose de 13 registres généraux : R0 à R12. On les notera Rx, Ry etc. L
 <link rel="icon" href="/%20favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/book.min.24c2b1f8dc2338e074345eec5b36f8a002aaa6d1b2e7312e14ac2d6a6958c876.css" integrity="sha256-JMKx&#43;NwjOOB0NF7sWzb4oAKqptGy5zEuFKwtamlYyHY=" crossorigin="anonymous">
 <script defer src="/%20flexsearch.min.js"></script>
-<script defer src="/en.search.min.f320eeece28bb4efbf9e43b4b942e6ed5ca6e669c05944c06ddc703820f20928.js" integrity="sha256-8yDu7OKLtO&#43;/nkO0uULm7Vym5mnAWUTAbdxwOCDyCSg=" crossorigin="anonymous"></script>
+<script defer src="/en.search.min.2c71023c52a028a53b9a709bd6bfc6e36774174f11fd78d03226286b0a8dae62.js" integrity="sha256-LHECPFKgKKU7mnCb1r/G42d0F08R/XjQMiYoawqNrmI=" crossorigin="anonymous"></script>
 
 <link rel="alternate" type="application/rss+xml" href="http://localhost:1313/docs/nsi/cours_premiere/architecture/6_armlite/fiche_resume/index.xml" title="qkzk" />
 <!--
@@ -43,24 +39,6 @@ Made with Book Theme
 https://github.com/alex-shpak/hugo-book
 -->
     
-
-<script src="//yihui.name/js/math-code.js"></script>
-<script id="MathJax-script" async
-    src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-
-<script type="text/x-mathjax-config">
-MathJax.Hub.Config({
-  tex2jax: {
-    inlineMath: [['$','$']],
-    displayMath: [['$$','$$']],
-    processEscapes: true,
-    processEnvironments: true,
-    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
-    TeX: { equationNumbers: { autoNumber: "AMS" },
-         extensions: ["AMSmath.js", "AMSsymbols.js"] }
-  }
-});
-</script>
 
 
 <script async src="https://cdnjs.cloudflare.com/ajax/libs/mermaid/10.0.2/add-html-label-3fd8c466.min.js"></script>
@@ -7087,12 +7065,9 @@ MathJax.Hub.Config({
 <h1>Table des matières</h1>
 <nav id="TableOfContents">
   <ul>
-    <li><a href="#description-simplifiée-de-lassembleur-armlite">Description simplifiée de l&rsquo;assembleur ARMLite</a></li>
-    <li><a href="#instructions">Instructions</a>
+    <li><a href="#description-simplifiée-de-lassembleur-armlite">Description simplifiée de l&rsquo;assembleur ARMLite</a>
       <ul>
-        <li><a href="#1-déplacement-de-contenu">1. Déplacement de contenu</a></li>
-        <li><a href="#2-opérations-arithmétiques-et-logiques">2. Opérations arithmétiques et logiques</a></li>
-        <li><a href="#3-rupture-de-séquence">3. Rupture de séquence</a></li>
+        <li><a href="#instructions">Instructions</a></li>
       </ul>
     </li>
     <li><a href="#exemple-de-programme">Exemple de programme</a></li>
@@ -7114,56 +7089,69 @@ MathJax.Hub.Config({
   Description simplifiée de l&rsquo;assembleur ARMLite
   <a class="anchor" href="#description-simplifi%c3%a9e-de-lassembleur-armlite">#</a>
 </h2>
-<p>ARMLite est <em>machine</em> disposant d&rsquo;une architecture de Von Neumann qui exécute du code saisi en mnémoniques.</p>
+<p>ARMLite est une <em>machine</em> disposant d&rsquo;une architecture de Von Neumann qui exécute du code saisi en mnémoniques.</p>
 <ul>
 <li>Elle dispose de 13 registres généraux : <code>R0 à R12</code>. On les notera <code>Rx, Ry</code> etc.</li>
 <li>Les nombres <em>littéraux</em> sont notés <code>#val</code>, par exemple <code>#20</code> désigne le nombre 20, <em>vingt</em>.</li>
 <li>Sa mémoire est initialisée avec le code du programme.</li>
 <li>Les autres registres sont utilisés pour le fonctionnement interne, quelques bits indiquent l&rsquo;état de la dernière opération</li>
 </ul>
-<h2 id="instructions">
+<p>C&rsquo;est donc un <em>émulateur</em> de processeur respectant une version légère du modèle ARM. On peut lui faire exécuter des programmes et intéragir avec elle via une interface web dans laquelle on écrit de l&rsquo;assembleur et exécute les instructions.</p>
+<h3 id="instructions">
   Instructions
   <a class="anchor" href="#instructions">#</a>
-</h2>
+</h3>
 <p>Les instructions les plus couramment employées sont les suivantes :</p>
-<h3 id="1-déplacement-de-contenu">
-  1. Déplacement de contenu
-  <a class="anchor" href="#1-d%c3%a9placement-de-contenu">#</a>
-</h3>
-<pre><code>* `MOV Rx, val` : déplace `val` dans le registre `Rx`. `val` peut-être un registre
-  ou un littéral.
-* `LDR Rx, adresse` : charge dans le registre `Rx` le contenu de l'adresse mémoire indiquée,
-* `STR Rx, adresse` : écrit le contenu du registre `Rx` à l'adresse mémoire indiquée,
-
-Attention, seules les adresses multiples de 4 sont valides. En effet, ARMLite fonctionne avec des _mots_ de 4 octets et chaque octet dispose d'une adresse.
-
-Donc `LDR R0, 40` est valide mais `LDR R0, 41` est invalide, car 41 n'est pas multiple de 4.
-</code></pre>
-<h3 id="2-opérations-arithmétiques-et-logiques">
-  2. Opérations arithmétiques et logiques
-  <a class="anchor" href="#2-op%c3%a9rations-arithm%c3%a9tiques-et-logiques">#</a>
-</h3>
-<pre><code>* `ADD Rx, Ry, val` : effectue l'addition `Ry + val` et écrit le résultat dans `Rx`. `val` peut être un registre ou un littéral.
-* Les instructions `SUB`, `AND`, `ORR`, `EOR` (respectivement soustraire, ET logique, OU logique, OU EXCLUSIF) ont un fonctionnement similaire.
-</code></pre>
-<h3 id="3-rupture-de-séquence">
-  3. Rupture de séquence
-  <a class="anchor" href="#3-rupture-de-s%c3%a9quence">#</a>
-</h3>
-<pre><code>* `CMP Rx, Ry` : effectue la comparaison entre `Rx` et `Ry`
-* `BGT label` : saute vers l'instruction précédée du nom `label` SEULEMENT si
-  la précédente comparaison était &quot;plus grand que.&quot;\
-  Par exemple : 
-
-  * si on a comparé 4 et 2, alors `BGT label` va sauter en `label`,
-  * si on a comparé 4 et 10, alors `BGT label` va passer à l'instruction suivante.
-
-* `BEQ label` : saute vers l'instruction précédée du nom `label` SEULEMENT si
-  les valeurs comparées étaient égales,
-* `BLT label` : saute seulement si la dernière comparaison était &quot;plus petit que&quot;,
-* `B label` : saute, _sans condition_ vers `label`,
-* `HALT` : arrête la machine.
-</code></pre>
+<ol>
+<li>
+<p>Déplacement de contenu</p>
+<ul>
+<li><code>MOV Rx, val</code> : déplace <code>val</code> dans le registre <code>Rx</code>. <code>val</code> peut-être un registre
+ou un littéral.</li>
+<li><code>LDR Rx, adresse</code> : charge dans le registre <code>Rx</code> le contenu de l&rsquo;adresse mémoire indiquée,</li>
+<li><code>STR Rx, adresse</code> : écrit le contenu du registre <code>Rx</code> à l&rsquo;adresse mémoire indiquée,</li>
+</ul>
+<p>Attention, seules les adresses multiples de 4 sont valides. En effet, ARMLite fonctionne avec des <em>mots</em> de 4 octets et chaque octet dispose d&rsquo;une adresse.</p>
+<p>Donc <code>LDR R0, 40</code> est valide mais <code>LDR R0, 41</code> est invalide, car 41 n&rsquo;est pas multiple de 4.</p>
+</li>
+<li>
+<p>Opérations arithmétiques et logiques</p>
+<ul>
+<li><code>ADD Rx, Ry, val</code> : effectue l&rsquo;addition <code>Ry + val</code> et écrit le résultat dans <code>Rx</code>. <code>val</code> peut être un registre ou un littéral.</li>
+<li>Les instructions <code>SUB</code>, <code>AND</code>, <code>ORR</code>, <code>EOR</code> (respectivement soustraire, ET logique, OU logique, OU EXCLUSIF) ont un fonctionnement similaire.</li>
+</ul>
+</li>
+<li>
+<p>Rupture de séquence</p>
+<ul>
+<li>
+<p><code>CMP Rx, Ry</code> : effectue la comparaison entre <code>Rx</code> et <code>Ry</code></p>
+</li>
+<li>
+<p><code>BGT label</code> : saute vers l&rsquo;instruction précédée du nom <code>label:</code> SEULEMENT si
+la précédente comparaison était &ldquo;plus grand que.&rdquo;<br>
+Par exemple :</p>
+<ul>
+<li>si on a comparé 4 et 2, alors <code>BGT label</code> va sauter en <code>label:</code>,</li>
+<li>si on a comparé 4 et 10, alors <code>BGT label</code> va passer à l&rsquo;instruction suivante.</li>
+</ul>
+</li>
+<li>
+<p><code>BEQ label</code> : saute vers l&rsquo;instruction précédée du nom <code>label:</code> SEULEMENT si
+les valeurs comparées étaient égales,</p>
+</li>
+<li>
+<p><code>BLT label</code> : saute seulement si la dernière comparaison était &ldquo;plus petit que&rdquo;,</p>
+</li>
+<li>
+<p><code>B label</code> : saute, <em>sans condition</em> vers <code>label:</code>,</p>
+</li>
+<li>
+<p><code>HALT</code> : arrête la machine.</p>
+</li>
+</ul>
+</li>
+</ol>
 <h2 id="exemple-de-programme">
   Exemple de programme
   <a class="anchor" href="#exemple-de-programme">#</a>
@@ -7239,12 +7227,9 @@ Donc `LDR R0, 40` est valide mais `LDR R0, 41` est invalide, car 41 n'est pas mu
 <h1>Table des matières</h1>
 <nav id="TableOfContents">
   <ul>
-    <li><a href="#description-simplifiée-de-lassembleur-armlite">Description simplifiée de l&rsquo;assembleur ARMLite</a></li>
-    <li><a href="#instructions">Instructions</a>
+    <li><a href="#description-simplifiée-de-lassembleur-armlite">Description simplifiée de l&rsquo;assembleur ARMLite</a>
       <ul>
-        <li><a href="#1-déplacement-de-contenu">1. Déplacement de contenu</a></li>
-        <li><a href="#2-opérations-arithmétiques-et-logiques">2. Opérations arithmétiques et logiques</a></li>
-        <li><a href="#3-rupture-de-séquence">3. Rupture de séquence</a></li>
+        <li><a href="#instructions">Instructions</a></li>
       </ul>
     </li>
     <li><a href="#exemple-de-programme">Exemple de programme</a></li>
