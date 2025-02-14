@@ -9,6 +9,13 @@ bookCollapseSection: true
 
 ---
 
+## Contient ?
+
+```python
+T = [11,  7,  9,  5, 15, 13,  3,  1]
+x = 5
+```
+
 Le tableau `T` contient-il `x` ? À quelle position ?
 
 {{< hint info >}}
@@ -40,10 +47,10 @@ def recherche(T, x):
 
 {{< python title="Recherche par balayage">}}
 def recherche(T: list, x: int):
-for i in range(len(T)):
-if x == T[i]:
-return i
-return -1
+    for i in range(len(T)):
+        if x == T[i]:
+            return i
+    return -1
 
 x = 5
 T = [11, 7, 9, 5, 15, 13, 3, 1]
@@ -277,7 +284,7 @@ def recherche_dichotomique(T: list, x: int) -> int:
 
 {{< python title="Recherche dichotomique">}}
 def recherche_dichotomique(T: list, x: int):
-...
+    ...
 
 x = 5
 T = [1, 3, 5, 7, 9, 11, 13, 15]
