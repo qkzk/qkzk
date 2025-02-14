@@ -128,8 +128,8 @@ Une cellule de mémoire doit être alimentée pour conserver son information.
 **La mémoire vive est _relativement rapide_**
 
 
-* Mémoire vive : ~10-100 ns
-* disque dur : ~1 ms ($10~000$ à $100~000$ fois plus lent...)
+* Mémoire vive : de 10 à 100 ns
+* disque dur : environ 1 ms ($10 000$ à $100 000$ fois plus lent...)
 
 **Attention** il existe de plus petites mémoires entre le processeur et la RAM (registre, cache), 
 beaucoup plus rapides.
