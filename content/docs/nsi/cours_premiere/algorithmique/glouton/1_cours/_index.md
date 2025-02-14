@@ -62,8 +62,7 @@ Comment en être certain ? Cette approche est-elle toujours efficace ?
    Utiliser un algorithme glouton consiste à optimiser la résolution d'un
   problème en utilisant l'approche suivante :
 
-      {{< hint info >}}
-
+  {{< hint info >}}
   on procède étape par étape,
   en faisant, à chaque étape, le choix qui semble le meilleur, sans jamais
   tenir compte des choix passés.
