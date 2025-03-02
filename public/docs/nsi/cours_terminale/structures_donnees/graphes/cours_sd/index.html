@@ -42,7 +42,7 @@ En anglais : sommet, vertice et arête, edge. D’où les noms des ensembles.">
 <link rel="icon" href="/%20favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/book.min.24c2b1f8dc2338e074345eec5b36f8a002aaa6d1b2e7312e14ac2d6a6958c876.css" integrity="sha256-JMKx&#43;NwjOOB0NF7sWzb4oAKqptGy5zEuFKwtamlYyHY=" crossorigin="anonymous">
 <script defer src="/%20flexsearch.min.js"></script>
-<script defer src="/en.search.min.14c3bafc0f9c67196392b72bcb4932b3cf95fb089c3d53e53eea71fb1f2d1bd1.js" integrity="sha256-FMO6/A&#43;cZxljkrcry0kys8&#43;V&#43;wicPVPlPupx&#43;x8tG9E=" crossorigin="anonymous"></script>
+<script defer src="/en.search.min.6073000174be3af62d59d5c32a2ff248438c7e67f9b420b6bf4b13c128898016.js" integrity="sha256-YHMAAXS&#43;OvYtWdXDKi/ySEOMfmf5tCC2v0sTwSiJgBY=" crossorigin="anonymous"></script>
 
 <link rel="alternate" type="application/rss+xml" href="http://localhost:1313/docs/nsi/cours_terminale/structures_donnees/graphes/cours_sd/index.xml" title="qkzk" />
 <!--
@@ -7254,8 +7254,7 @@ dictionnaire.</p>
 <blockquote>
 <p>Pour un graphe simple $G = (V, E)$ avec $n$ sommets, la <strong>matrice d&rsquo;adjacence</strong>
 de $G$ est une matrice de dimension $n \times n$ dont l&rsquo;élément $a_{ij}$ est 1
-si les sommets $i$ et $j$ sont reliés par une arrête et 0 sinon.</p>
-</blockquote>
+si les sommets $i$ et $j$ sont reliés par une arrête et 0 sinon.</p></blockquote>
 <p><em>Cette définition, simplifiée, ne s&rsquo;applique qu&rsquo;aux graphes simples</em></p>
 <p><strong>Exemple :</strong></p>
 <p>Dans l&rsquo;exemple du graphe ci-dessus, cela donne :</p>
@@ -7302,8 +7301,7 @@ une autre matrice d&rsquo;adjacence ! La matrice d&rsquo;adjacence est unique
 <blockquote>
 <p>Dans le cas d&rsquo;un <strong>graphe orienté</strong>, la matrice d&rsquo;adjacence contient 1
 à la ligne $i$, colonne $j$ s&rsquo;il existe une arrête reliant le sommet $i$
-au sommet $j$.</p>
-</blockquote>
+au sommet $j$.</p></blockquote>
 <ul>
 <li>
 <p>Les <em>lignes</em> donnent les points de <em>départ</em>. La deuxième ligne de la matrice
@@ -7336,8 +7334,7 @@ obtient le résultat suivant :</p>
 <p><strong>Théorème:</strong></p>
 <blockquote>
 <p>Le nombre de parcours de longueur exactement $k$ allant de $i$ à $j$ est le
-coefficient en position $(i, j)$ de la matrice $A^k$.</p>
-</blockquote>
+coefficient en position $(i, j)$ de la matrice $A^k$.</p></blockquote>
 <p>Exemple :</p>
 <p>Pour le graphe précédent dont la matrice $A$ est :</p>
 <p>$$A = \begin{pmatrix}
@@ -7369,8 +7366,7 @@ et nous n&rsquo;aurons pas l&rsquo;occasion d&rsquo;approfondir le sujet.</p>
   <a class="anchor" href="#la-somme">#</a>
 </h3>
 <blockquote>
-<p>La <strong>somme</strong> de deux matrices de mêmes dimension est effectuée coefficient par coefficient.</p>
-</blockquote>
+<p>La <strong>somme</strong> de deux matrices de mêmes dimension est effectuée coefficient par coefficient.</p></blockquote>
 <p>Exemple : si $A =
 \begin{pmatrix}
 1 &amp; 2\\
@@ -7388,19 +7384,16 @@ alors $A + B =
 \end{pmatrix}
 $</p>
 <blockquote>
-<p>Le <strong>produit par un scalaire</strong> est aussi défini coefficient par coefficient, comme pour les vecteurs.</p>
-</blockquote>
+<p>Le <strong>produit par un scalaire</strong> est aussi défini coefficient par coefficient, comme pour les vecteurs.</p></blockquote>
 <h3 id="le-produit-de-deux-matrices">
   Le produit de deux matrices
   <a class="anchor" href="#le-produit-de-deux-matrices">#</a>
 </h3>
 <blockquote>
 <p>Le produit de deux matrices $A_{n, p}$ et $B_{q, r}$ est défini si $p = q$. Autrement dit,
-le nombre de colonnes de la première doit correspondre au nombre de lignes de la seconde.</p>
-</blockquote>
+le nombre de colonnes de la première doit correspondre au nombre de lignes de la seconde.</p></blockquote>
 <blockquote>
-<p>Il est obtenu en faisant le produit scalaire de la ligne de gauche par la colonne de droite.</p>
-</blockquote>
+<p>Il est obtenu en faisant le produit scalaire de la ligne de gauche par la colonne de droite.</p></blockquote>
 <p>Si $C = A \times B$ alors, $\forall (i, j) \in  \lbrace 1, n\rbrace \times \lbrace 1, r\rbrace$
 $$C_{i, j} = \sum_{k = 1}^{p} A_{i, k} \times B_{k, j}$$</p>
 <p>Par exemple, pour les matrices données plus haut :</p>

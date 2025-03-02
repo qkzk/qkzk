@@ -45,7 +45,7 @@ l’authentification, la non-répudiation, l’intégrité, l’anonymat, Chiffr
 <link rel="icon" href="/%20favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/book.min.24c2b1f8dc2338e074345eec5b36f8a002aaa6d1b2e7312e14ac2d6a6958c876.css" integrity="sha256-JMKx&#43;NwjOOB0NF7sWzb4oAKqptGy5zEuFKwtamlYyHY=" crossorigin="anonymous">
 <script defer src="/%20flexsearch.min.js"></script>
-<script defer src="/en.search.min.14c3bafc0f9c67196392b72bcb4932b3cf95fb089c3d53e53eea71fb1f2d1bd1.js" integrity="sha256-FMO6/A&#43;cZxljkrcry0kys8&#43;V&#43;wicPVPlPupx&#43;x8tG9E=" crossorigin="anonymous"></script>
+<script defer src="/en.search.min.6073000174be3af62d59d5c32a2ff248438c7e67f9b420b6bf4b13c128898016.js" integrity="sha256-YHMAAXS&#43;OvYtWdXDKi/ySEOMfmf5tCC2v0sTwSiJgBY=" crossorigin="anonymous"></script>
 
 <link rel="alternate" type="application/rss+xml" href="http://localhost:1313/docs/nsi/cours_terminale/architecture/securisation/resumes/index.xml" title="qkzk" />
 <!--
@@ -7164,14 +7164,12 @@ Sans elle il serait impossible de mettre en œuvre une économie globalisée.</p
 <blockquote>
 <p>l&rsquo;émetteur et le receveur partagent une même clé qui sert au chiffrement et
 au déchiffrement.</p>
-<p>Cette clé <strong>doit avoir été communiquée avant le premier message</strong>&hellip;</p>
-</blockquote>
+<p>Cette clé <strong>doit avoir été communiquée avant le premier message</strong>&hellip;</p></blockquote>
 <p><em>asymétrique</em> :</p>
 <blockquote>
 <p>l&rsquo;émetteur encode avec la clé publique du réceveur.</p>
 <p>le receveur décode avec sa clé privée. Lui seul peut décoder le message.</p>
-<p>Lorsque le receveur répond, il fait le contraire.</p>
-</blockquote>
+<p>Lorsque le receveur répond, il fait le contraire.</p></blockquote>
 <p>Le chiffrement symétrique repose sur l&rsquo;existence de fonctions à sens unique
 ou à brèche secrète (exemple : factorisation des entiers.)</p>
 <p>Certains protocoles (comme Diffie-Helmman - 1976) permettent un échange de clé
@@ -7188,14 +7186,12 @@ Les machines savent faire mais sont extrêmement lentes.</li>
 <p>Sens unique :</p>
 <blockquote>
 <p>aisément calculée, difficile à inverser. $n = 263467$.
-$n$ est le produit de deux entiers $p$ et $q$&hellip; Lesquels ?</p>
-</blockquote>
+$n$ est le produit de deux entiers $p$ et $q$&hellip; Lesquels ?</p></blockquote>
 <p>Brèche secrète :</p>
 <blockquote>
 <p>Si vous connaissez l&rsquo;un des facteurs&hellip; alors c&rsquo;est facile.
 $p = 487$.</p>
-<p>Donc $q = n/p = 541$.</p>
-</blockquote>
+<p>Donc $q = n/p = 541$.</p></blockquote>
 <h3 id="différents-types-de-clé">
   Différents types de clé
   <a class="anchor" href="#diff%c3%a9rents-types-de-cl%c3%a9">#</a>
@@ -7203,13 +7199,11 @@ $p = 487$.</p>
 <p>La cryptographie symétrique repose sur une seule clé :</p>
 <blockquote>
 <p>Une <strong>clé secrète</strong> permet d&rsquo;encoder et décoder un message. Elle ne doit
-être connue que de l&rsquo;émetteur et du récepteur.</p>
-</blockquote>
+être connue que de l&rsquo;émetteur et du récepteur.</p></blockquote>
 <p>La cryptographie asymétrique utilise deux clés :</p>
 <blockquote>
 <p>Une <strong>clé publique</strong> permet d&rsquo;encoder un message. Tout le monde la connaît.<br>
-Une <strong>clé privée</strong> permet de déchiffrer un message. Seul vous la connaissez.</p>
-</blockquote>
+Une <strong>clé privée</strong> permet de déchiffrer un message. Seul vous la connaissez.</p></blockquote>
 <h3 id="un-exemple-de-communication-très-simplifié-avec-un-chiffrement-asymétrique">
   Un exemple de communication très simplifié avec un chiffrement asymétrique
   <a class="anchor" href="#un-exemple-de-communication-tr%c3%a8s-simplifi%c3%a9-avec-un-chiffrement-asym%c3%a9trique">#</a>

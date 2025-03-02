@@ -442,3 +442,53 @@ etc.
 
 3. **Bonus délicat** à l'aide de la documentation, remplacer le joueur A par le choix aléatoire d'un entier.
    Pour simplifier, on utilisera des nombres entre 1 et un puissance de 2 (entre 1 et 64, par exemple).
+
+## Programmation 6. Jeu contre l'ordinateur, les allumettes
+
+Le jeu du Nim dispose de nombreuses variantes. Nous allons nous intéresser à une version dans laquelle on débute avec un certain nombre d'allumettes et chaque joueur en retire 1, 2 ou 3 à chaque tour.
+
+Le gagnant est celui qui arrive à 1 allumette après son tour.
+
+1. Écrire un tel jeu en Python à deux joueurs.
+
+    Rappel: 
+
+    ```python 
+    from random import randint 
+    randint(1, 3) # un entier entre 1 et 3 inclus
+    a = int(input("ton entier")) # demande à l'utilisateur un entier et l'affecte à a 
+    ```
+
+### Assembleur
+
+1. Première version :
+    - fixer le nombre d'allumettes à 15 
+    - itérer et :
+        - comparer le nombre d'allumette restante. S'il en reste une ou moins, c'est terminé.
+        - sinon demander à l'utilisateur de choisir un nombre entre 1 et 3 et le retirer du nombre d'allumettes 
+
+2. Deuxième version :
+
+    S'assurer que :
+
+    - le nombre tapé est plus grand que 0,
+    - l'utilisateur n'enlève pas plus d'allumettes qu'il ne peut le faire : il doit en reste au moins une 
+
+    - si l'utilisateur a gagné, on lui indique 
+
+3. Troisième version :
+
+Après le tour de l'utilisateur et s'il n'a pas gagné, afficher un message disant que l'ordinateur joue 
+
+Choisir un nombre valide aléatoire et le retirer du nombre d'allumettes.
+
+Tester la victoire de l'ordinateur.
+
+Pour choisir un nombre entre 1 et 3 au hasard :
+
+```java 
+select: LDR R2 .Random  // change aléatoirement les bits de R2 
+AND R2, R2, #3          // met tous les bits à 0 sauf les 2 derniers 
+CMP R2, #0              
+BEQ select              // si le nombre est 0, recommencer
+```

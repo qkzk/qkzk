@@ -43,7 +43,7 @@ l’authentification, la non-répudiation, l’intégrité, l’anonymat, Toutes
 <link rel="icon" href="/%20favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/book.min.24c2b1f8dc2338e074345eec5b36f8a002aaa6d1b2e7312e14ac2d6a6958c876.css" integrity="sha256-JMKx&#43;NwjOOB0NF7sWzb4oAKqptGy5zEuFKwtamlYyHY=" crossorigin="anonymous">
 <script defer src="/%20flexsearch.min.js"></script>
-<script defer src="/en.search.min.14c3bafc0f9c67196392b72bcb4932b3cf95fb089c3d53e53eea71fb1f2d1bd1.js" integrity="sha256-FMO6/A&#43;cZxljkrcry0kys8&#43;V&#43;wicPVPlPupx&#43;x8tG9E=" crossorigin="anonymous"></script>
+<script defer src="/en.search.min.6073000174be3af62d59d5c32a2ff248438c7e67f9b420b6bf4b13c128898016.js" integrity="sha256-YHMAAXS&#43;OvYtWdXDKi/ySEOMfmf5tCC2v0sTwSiJgBY=" crossorigin="anonymous"></script>
 
 <link rel="alternate" type="application/rss+xml" href="http://localhost:1313/docs/nsi/cours_terminale/architecture/securisation/introduction/index.xml" title="qkzk" />
 <!--
@@ -7172,21 +7172,17 @@ message</p>
 <p><strong>Message clair</strong> :</p>
 <blockquote>
 <p><em>message que tout le monde peut lire :</em></p>
-<p>&ldquo;Les navires arrivent à minuit&rdquo;</p>
-</blockquote>
+<p>&ldquo;Les navires arrivent à minuit&rdquo;</p></blockquote>
 <p><strong>Chiffrer ou coder</strong> :</p>
 <blockquote>
 <p><em>appliquer un procédé de chiffrement à un message :</em></p>
-<p>&ldquo;KZQ BPCUEZ PEEUCZBR P LUBUR&rdquo;</p>
-</blockquote>
+<p>&ldquo;KZQ BPCUEZ PEEUCZBR P LUBUR&rdquo;</p></blockquote>
 <p><strong>Décoder ou déchiffrer</strong> :</p>
 <blockquote>
-<p><em>lire le message à l&rsquo;aide l&rsquo;algorithme et de la clé. C&rsquo;est l&rsquo;objectif.</em></p>
-</blockquote>
+<p><em>lire le message à l&rsquo;aide l&rsquo;algorithme et de la clé. C&rsquo;est l&rsquo;objectif.</em></p></blockquote>
 <p><strong>Décrypter ou casser</strong> :</p>
 <blockquote>
-<p><em>lire le message sans connaissance de la clé. C&rsquo;est ce qu&rsquo;on souhaite éviter.</em></p>
-</blockquote>
+<p><em>lire le message sans connaissance de la clé. C&rsquo;est ce qu&rsquo;on souhaite éviter.</em></p></blockquote>
 <h3 id="quelques-méthodes-restées-célèbres">
   Quelques méthodes restées célèbres
   <a class="anchor" href="#quelques-m%c3%a9thodes-rest%c3%a9es-c%c3%a9l%c3%a8bres">#</a>
@@ -7215,8 +7211,7 @@ tâche. Il faut trouver des procédés qui leur résistent.</p>
 <p>On s&rsquo;intéresse alors aux grands principes. L&rsquo;un d&rsquo;eux émerge et reste d&rsquo;actualité :</p>
 <blockquote>
 <p><em>la sécurité d&rsquo;un système ne doit pas reposer sur le secret de la méthode de</em>
-<em>chiffrement (Kerckhoffs - 1883).</em></p>
-</blockquote>
+<em>chiffrement (Kerckhoffs - 1883).</em></p></blockquote>
 <p>Au XXeme siècle :</p>
 <ul>
 <li>
@@ -7260,14 +7255,12 @@ Les machines savent faire mais sont extrêmement lentes.</li>
 <p>Sens unique :</p>
 <blockquote>
 <p>aisément calculée, difficile à inverser. $n = 263467$.
-$n$ est le produit de deux entiers $p$ et $q$&hellip; Lesquels ?</p>
-</blockquote>
+$n$ est le produit de deux entiers $p$ et $q$&hellip; Lesquels ?</p></blockquote>
 <p>Brèche secrète :</p>
 <blockquote>
 <p>Si vous connaissez l&rsquo;un des facteurs&hellip; alors c&rsquo;est facile.
 $p = 487$.</p>
-<p>Donc $q = n/p = 541$.</p>
-</blockquote>
+<p>Donc $q = n/p = 541$.</p></blockquote>
 <h2 id="la-révolution--diffie-et-hellman">
   La révolution : Diffie et Hellman
   <a class="anchor" href="#la-r%c3%a9volution--diffie-et-hellman">#</a>
@@ -7287,13 +7280,11 @@ transiter en clair sur un réseau.</p>
 <p>La cryptographie symétrique repose sur une seule clé :</p>
 <blockquote>
 <p>Une <strong>clé secrète</strong> permet d&rsquo;encoder et décoder un message. Elle ne doit
-être connue que de l&rsquo;émetteur et du récepteur.</p>
-</blockquote>
+être connue que de l&rsquo;émetteur et du récepteur.</p></blockquote>
 <p>La cryptographie asymétrique utilise deux clés :</p>
 <blockquote>
 <p>Une <strong>clé publique</strong> permet d&rsquo;encoder un message. Tout le monde la connaît.<br>
-Une <strong>clé privée</strong> permet de déchiffrer un message. Seul vous la connaissez.</p>
-</blockquote>
+Une <strong>clé privée</strong> permet de déchiffrer un message. Seul vous la connaissez.</p></blockquote>
 <h2 id="un-exemple-de-communication-très-simplifié-avec-un-chiffrement-asymétrique">
   Un exemple de communication très simplifié avec un chiffrement asymétrique
   <a class="anchor" href="#un-exemple-de-communication-tr%c3%a8s-simplifi%c3%a9-avec-un-chiffrement-asym%c3%a9trique">#</a>

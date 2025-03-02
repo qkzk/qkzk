@@ -43,7 +43,7 @@ MOV R0, #25 ADD R1, R0, #12 RO contient 25 R1 contient $25&#43;12=37$ Ecrit 1 - 
 <link rel="icon" href="/%20favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/book.min.24c2b1f8dc2338e074345eec5b36f8a002aaa6d1b2e7312e14ac2d6a6958c876.css" integrity="sha256-JMKx&#43;NwjOOB0NF7sWzb4oAKqptGy5zEuFKwtamlYyHY=" crossorigin="anonymous">
 <script defer src="/%20flexsearch.min.js"></script>
-<script defer src="/en.search.min.14c3bafc0f9c67196392b72bcb4932b3cf95fb089c3d53e53eea71fb1f2d1bd1.js" integrity="sha256-FMO6/A&#43;cZxljkrcry0kys8&#43;V&#43;wicPVPlPupx&#43;x8tG9E=" crossorigin="anonymous"></script>
+<script defer src="/en.search.min.6073000174be3af62d59d5c32a2ff248438c7e67f9b420b6bf4b13c128898016.js" integrity="sha256-YHMAAXS&#43;OvYtWdXDKi/ySEOMfmf5tCC2v0sTwSiJgBY=" crossorigin="anonymous"></script>
 
 <link rel="alternate" type="application/rss+xml" href="http://localhost:1313/docs/nsi/cours_premiere/architecture/6_armlite/exos_armlite/index.xml" title="qkzk" />
 <!--
@@ -7119,6 +7119,11 @@ MathJax.Hub.Config({
     <li><a href="#programmation-3-capital-simple">Programmation 3. Capital simple</a></li>
     <li><a href="#programmation-4-afficher-une-table-ascii">Programmation 4. Afficher une table ASCII</a></li>
     <li><a href="#programmation-5-jeu-à-deux-joueurs-le-plus-ou-moins">Programmation 5. Jeu à deux joueurs, le plus ou moins.</a></li>
+    <li><a href="#programmation-6-jeu-contre-lordinateur-les-allumettes">Programmation 6. Jeu contre l&rsquo;ordinateur, les allumettes</a>
+      <ul>
+        <li><a href="#assembleur">Assembleur</a></li>
+      </ul>
+    </li>
   </ul>
 </nav>
 
@@ -7556,7 +7561,66 @@ B doit le trouver.</p>
 Pour simplifier, on utilisera des nombres entre 1 et un puissance de 2 (entre 1 et 64, par exemple).</p>
 </li>
 </ol>
-</article>
+<h2 id="programmation-6-jeu-contre-lordinateur-les-allumettes">
+  Programmation 6. Jeu contre l&rsquo;ordinateur, les allumettes
+  <a class="anchor" href="#programmation-6-jeu-contre-lordinateur-les-allumettes">#</a>
+</h2>
+<p>Le jeu du Nim dispose de nombreuses variantes. Nous allons nous intéresser à une version dans laquelle on débute avec un certain nombre d&rsquo;allumettes et chaque joueur en retire 1, 2 ou 3 à chaque tour.</p>
+<p>Le gagnant est celui qui arrive à 1 allumette après son tour.</p>
+<ol>
+<li>
+<p>Écrire un tel jeu en Python à deux joueurs.</p>
+<p>Rappel:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#069;font-weight:bold">from</span> <span style="color:#0cf;font-weight:bold">random</span> <span style="color:#069;font-weight:bold">import</span> randint 
+</span></span><span style="display:flex;"><span>randint(<span style="color:#f60">1</span>, <span style="color:#f60">3</span>) <span style="color:#09f;font-style:italic"># un entier entre 1 et 3 inclus</span>
+</span></span><span style="display:flex;"><span>a <span style="color:#555">=</span> <span style="color:#366">int</span>(<span style="color:#366">input</span>(<span style="color:#c30">&#34;ton entier&#34;</span>)) <span style="color:#09f;font-style:italic"># demande à l&#39;utilisateur un entier et l&#39;affecte à a </span>
+</span></span></code></pre></div></li>
+</ol>
+<h3 id="assembleur">
+  Assembleur
+  <a class="anchor" href="#assembleur">#</a>
+</h3>
+<ol>
+<li>
+<p>Première version :</p>
+<ul>
+<li>fixer le nombre d&rsquo;allumettes à 15</li>
+<li>itérer et :
+<ul>
+<li>comparer le nombre d&rsquo;allumette restante. S&rsquo;il en reste une ou moins, c&rsquo;est terminé.</li>
+<li>sinon demander à l&rsquo;utilisateur de choisir un nombre entre 1 et 3 et le retirer du nombre d&rsquo;allumettes</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>Deuxième version :</p>
+<p>S&rsquo;assurer que :</p>
+<ul>
+<li>
+<p>le nombre tapé est plus grand que 0,</p>
+</li>
+<li>
+<p>l&rsquo;utilisateur n&rsquo;enlève pas plus d&rsquo;allumettes qu&rsquo;il ne peut le faire : il doit en reste au moins une</p>
+</li>
+<li>
+<p>si l&rsquo;utilisateur a gagné, on lui indique</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Troisième version :</p>
+</li>
+</ol>
+<p>Après le tour de l&rsquo;utilisateur et s&rsquo;il n&rsquo;a pas gagné, afficher un message disant que l&rsquo;ordinateur joue</p>
+<p>Choisir un nombre valide aléatoire et le retirer du nombre d&rsquo;allumettes.</p>
+<p>Tester la victoire de l&rsquo;ordinateur.</p>
+<p>Pour choisir un nombre entre 1 et 3 au hasard :</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#99f">select</span>:<span style="color:#bbb"> </span>LDR<span style="color:#bbb"> </span>R2<span style="color:#bbb"> </span>.<span style="color:#309">Random</span><span style="color:#bbb">  </span><span style="color:#09f;font-style:italic">// change aléatoirement les bits de R2 </span><span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb"></span>AND<span style="color:#bbb"> </span>R2,<span style="color:#bbb"> </span>R2,<span style="color:#bbb"> </span><span style="color:#a00;background-color:#faa">#</span>3<span style="color:#bbb">          </span><span style="color:#09f;font-style:italic">// met tous les bits à 0 sauf les 2 derniers </span><span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb"></span>CMP<span style="color:#bbb"> </span>R2,<span style="color:#bbb"> </span><span style="color:#a00;background-color:#faa">#</span>0<span style="color:#bbb">              
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb"></span>BEQ<span style="color:#bbb"> </span>select<span style="color:#bbb">              </span><span style="color:#09f;font-style:italic">// si le nombre est 0, recommencer</span><span style="color:#bbb">
+</span></span></span></code></pre></div></article>
 
                 
 
@@ -7641,6 +7705,11 @@ Pour simplifier, on utilisera des nombres entre 1 et un puissance de 2 (entre 1 
     <li><a href="#programmation-3-capital-simple">Programmation 3. Capital simple</a></li>
     <li><a href="#programmation-4-afficher-une-table-ascii">Programmation 4. Afficher une table ASCII</a></li>
     <li><a href="#programmation-5-jeu-à-deux-joueurs-le-plus-ou-moins">Programmation 5. Jeu à deux joueurs, le plus ou moins.</a></li>
+    <li><a href="#programmation-6-jeu-contre-lordinateur-les-allumettes">Programmation 6. Jeu contre l&rsquo;ordinateur, les allumettes</a>
+      <ul>
+        <li><a href="#assembleur">Assembleur</a></li>
+      </ul>
+    </li>
   </ul>
 </nav>
 
