@@ -9,6 +9,11 @@ bookCollapseSection: true
 
 ## Sujet antérieurs
 
+### Examens 2025 
+
+- [mars énoncé](l2s4_2025_ds_mars.pdf)
+- [mars corrigé](L2S4_2025_ds_correction.pdf)
+
 ### Examens 2024 
 
 - [avril](l2s4_exam_avril_2024.pdf)
