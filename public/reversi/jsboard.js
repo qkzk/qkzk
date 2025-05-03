@@ -304,6 +304,7 @@ window.jsboard = (function(){
                             for (var k=0; k<size[1]; k++) {
                                 var t = document.createElement("td");
                                 t.className = 'boardCol_'+k;
+                                t.classList.add('boardCell');
                                 t.dataset.matrixval = i+"x"+k;
                                 a.appendChild(t);
                             }
