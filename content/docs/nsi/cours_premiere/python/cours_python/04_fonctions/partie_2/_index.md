@@ -95,7 +95,7 @@ def ma_fonction():
 
 Exécutez le script suivant et recommencez en commentant la ligne `a = 20`
 
-{{< python title="Portée locale est globale" >}}
+{{< python title="Portée locale et globale" >}}
 a = 10
 
 def ma_fonction():

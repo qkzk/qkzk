@@ -23,7 +23,7 @@ de répéter un bloc d'instruction.
 
 Par exemple : "tant que je n'ai pas bon à l'exercice, je recommence".
 
-Ou, tant qu'il reste du pain je mange :
+Ou, "tant qu'il reste du pain je mange :"
 
 {{< python title="petit déjeuner" >}}tartine = 50
 while tartine > 0:
@@ -33,8 +33,7 @@ while tartine > 0:
 
 Autre exemple, le casino :
 
-Jean-Martin a 10€, il joue aux machines à sous (un vrai pigeon). Chaque mise
-lui coûte 1€ et il a une chance sur 100 de gagner 10€ (quand je vous disais)...
+Jean-Martin a 10€, il joue aux machines à sous (un vrai pigeon). Chaque mise lui coûte 1€ et il a une chance sur 100 de gagner 10€ (quand je vous disais)...
 
 Le programme suivant simule cette situation dramatique :
 
@@ -55,10 +54,9 @@ print("Jean-Martin a perdu tout son argent.")
 
 Le prof de maths qui sommeille en moi vous signale que :
 
-1. Ce programme termine toujours.
+1. Ce programme termine toujours :
 2. Les étapes intermédiaires varient mais l'issue est toujours la même : Jean-Martin perd tout son argent.
-3. Le seul moyen de gagner régulièrement aux jeux d'argent est de les organiser.
-  Ce privilège est reservé à l'État.
+3. Le seul moyen de gagner régulièrement aux jeux d'argent est de les organiser.      Ce privilège est reservé à l'État.
 
 
 {{< python title="Casino">}}import random                     # fonctions simulant le hasard
@@ -75,7 +73,16 @@ while capital > 0:
 print("Jean-Martin a perdu tout son argent.")
 {{< /python >}}
 
-### Exercice 12
+Regardez bien la manière de simuler un événement aléatoire de probabilité $\dfrac{1}{100}$ : 
+
+```python
+if random.random() < 0.01:
+    # si l'événément se réalise...
+else:
+    # si l'événément ne se réalise pas...
+```
+
+### Exercice 1
 
 Modifier le programme précédent :
 
@@ -83,9 +90,9 @@ Modifier le programme précédent :
 2. Augmenter `compteur` de 1 à chaque tour de la boucle,
 3. Affichez la valeur de `compteur` une fois la boucle terminée.
 4. _Bonus difficile_ Affichez à la fin du programme le _maximum_ atteint par Jean-Martin avec un
-    phrase un peu rageante...
+    phrase un peu rageante.
 
-### Boucle infinie
+## Boucle infinie
 
 On emploie régulièrement des boucles infinies. Il suffit d'écrire la condition `while True`
 pour qu'une boucle soit répétée indéfiniment.
@@ -131,7 +138,9 @@ while True:
   afficher_le_jeu_a_l_ecran()
 ```
 
-### L'instruction `break`
+Vous trouverez un tel découpage dans le code de _tous_ les logiciels. Par exemple, voici la boucle principale de [DOOM](https://github.com/id-Software/DOOM/blob/a77dfb96cb91780ca334d0d4cfd86957558007e0/linuxdoom-1.10/d_main.c#L354-L407).
+
+## L'instruction `break`
 
 
 L'instruction `break` provoque une sortie immédiate d'une boucle `while` ou
@@ -155,7 +164,7 @@ print("pas de boucle infinie !")
 ### Affichage de l'heure courante
 
 {{< hint danger >}}
-**Doit être traité à exécuter à l'extérieur, dans Thonny par exemple**
+**Doit être traité à l'extérieur, dans Thonny par exemple**
 {{< /hint >}}
 
 
@@ -181,10 +190,10 @@ print("A bientôt")
     Voulez-vous quitter le programme (o/n) ? o
     A bientôt
 
-### Exercice 13 - Le plus ou moins
+### Exercice 2 - Le plus ou moins
 
 {{< hint danger >}}
-**Doit être traité à exécuter à l'extérieur, dans Thonny par exemple**
+**Doit être traité à l'extérieur, dans Thonny par exemple**
 {{< /hint >}}
 
 1. Se documenter sur la fonction `randint` du module `random`
@@ -235,7 +244,7 @@ Python va générer une erreur.
 4. Améliorer le jeu pour indiquer combien de coups ont été necessaires pour gagner.
 
 
-### Exercice 13 - Intérêts
+### Exercice 3 - Intérêts
 
 Lorsqu'on place un capital avec intérêt, on perçoit à intervalle régulier un montant qui vient
 s'ajouter à ce capital.

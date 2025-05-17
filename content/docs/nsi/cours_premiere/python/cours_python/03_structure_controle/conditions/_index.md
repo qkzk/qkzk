@@ -90,7 +90,7 @@ if moyenne >= 10:
 print("le programme arrive ici dans tous les cas")
 ```
 
-Exécutez ce programme, il vous affichera "le code arrive ici dans tous les cas"
+Exécutez ce programme, il vous affichera _"le programme arrive ici dans tous les cas"_
 parce que cette ligne n'est pas indentée. Elle est donc en dehors du bloc `if`.
 
 {{< python title="if...">}}

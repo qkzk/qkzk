@@ -42,7 +42,7 @@ for variable in collection: bloc_de_la_boucle fin_de_la_boucle Notez bien la syn
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/book.min.24c2b1f8dc2338e074345eec5b36f8a002aaa6d1b2e7312e14ac2d6a6958c876.css" integrity="sha256-JMKx&#43;NwjOOB0NF7sWzb4oAKqptGy5zEuFKwtamlYyHY=" crossorigin="anonymous">
 <script defer src="/flexsearch.min.js"></script>
-<script defer src="/en.search.min.a3d9691cf31191b9d73955c6feedc79392ad90e9465227042646199f74bbacb1.js" integrity="sha256-o9lpHPMRkbnXOVXG/u3Hk5KtkOlGUicEJkYZn3S7rLE=" crossorigin="anonymous"></script>
+<script defer src="/en.search.min.9086c953ddda31064d09f1417c7983c354318afc161f477943c5cc36a256bccf.js" integrity="sha256-kIbJU93aMQZNCfFBfHmDw1QxivwWH0d5Q8XMNqJWvM8=" crossorigin="anonymous"></script>
 
 <link rel="alternate" type="application/rss+xml" href="http://localhost:1313/docs/nsi/cours_premiere/python/cours_python/03_structure_controle/boucles_for/index.xml" title="qkzk" />
 <!--
@@ -1323,19 +1323,6 @@ MathJax.Hub.Config({
   <ul>
     
   </ul>
-
-        </li>
-      
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <a href="http://localhost:1313/docs/nsi/cours_premiere/python/prep/" class="">Prep</a>
-  
 
         </li>
       
@@ -7113,23 +7100,33 @@ MathJax.Hub.Config({
 <nav id="TableOfContents">
   <ul>
     <li><a href="#boucles">Boucles</a></li>
-    <li><a href="#boucle-bornée--for">Boucle bornée : <code>for</code></a></li>
+    <li><a href="#boucle-bornée--for">Boucle bornée : <code>for</code></a>
+      <ul>
+        <li><a href="#exercice-1">Exercice 1</a></li>
+      </ul>
+    </li>
     <li><a href="#la-fonction-range">La fonction <code>range</code></a>
       <ul>
         <li><a href="#range-avec-un-paramètre"><code>range</code> avec un paramètre</a></li>
+        <li><a href="#exercice-2">Exercice 2</a></li>
+        <li><a href="#exercice-3---somme-des-entiers">Exercice 3 - somme des entiers</a></li>
+      </ul>
+    </li>
+    <li><a href="#range-avec-deux-paramètres"><code>range</code> avec deux paramètres</a>
+      <ul>
+        <li><a href="#exercice-4">Exercice 4</a></li>
+      </ul>
+    </li>
+    <li><a href="#range-avec-trois-paramètres"><code>range</code> avec trois paramètres</a>
+      <ul>
         <li><a href="#exercice-5">Exercice 5</a></li>
-        <li><a href="#exercice-6---somme-des-entiers">Exercice 6 - somme des entiers</a></li>
-        <li><a href="#range-avec-deux-paramètres"><code>range</code> avec deux paramètres</a></li>
-        <li><a href="#exercice-7">Exercice 7</a></li>
-        <li><a href="#range-avec-trois-paramètres"><code>range</code> avec trois paramètres</a></li>
-        <li><a href="#exercice-8">Exercice 8</a></li>
       </ul>
     </li>
     <li><a href="#combiner-des-blocs">Combiner des blocs</a>
       <ul>
-        <li><a href="#exercice-9">Exercice 9</a></li>
-        <li><a href="#exercice-10">Exercice 10</a></li>
-        <li><a href="#exercice-11---table-de-multiplication">Exercice 11 - table de multiplication</a></li>
+        <li><a href="#exercice-6">Exercice 6</a></li>
+        <li><a href="#exercice-7">Exercice 7</a></li>
+        <li><a href="#exercice-8---table-de-multiplication">Exercice 8 - table de multiplication</a></li>
       </ul>
     </li>
   </ul>
@@ -7187,6 +7184,73 @@ toutes les valeurs de la collection.</p>
 </span></span><span style="display:flex;"><span>fini !
 </span></span></code></pre></div><p>On réalise bien que <code>lettre</code> a pri pour valeurs successives les caractères
 composant <code>mot</code> : <code>&quot;b&quot;</code>, <code>&quot;o&quot;</code> etc.</p>
+<h3 id="exercice-1">
+  Exercice 1
+  <a class="anchor" href="#exercice-1">#</a>
+</h3>
+<p>Écrire à l&rsquo;aide d&rsquo;une boucle un programme qui affiche <em>deux fois</em> chaque lettre de votre prénom.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>F 
+</span></span><span style="display:flex;"><span>F
+</span></span><span style="display:flex;"><span>r
+</span></span><span style="display:flex;"><span>r
+</span></span><span style="display:flex;"><span>a
+</span></span><span style="display:flex;"><span>a
+</span></span><span style="display:flex;"><span>n
+</span></span><span style="display:flex;"><span>n
+</span></span><span style="display:flex;"><span>k
+</span></span><span style="display:flex;"><span>k
+</span></span></code></pre></div><script src="http://localhost:1313/coi-serviceworker.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.63.3/codemirror.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.63.3/theme/idea.css">
+<link rel="stylesheet" href="http://localhost:1313/css/python_editor.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.63.3/codemirror.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.63.3/mode/python/python.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.63.3/addon/comment/comment.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.63.3/addon/display/fullscreen.js"></script>
+
+
+    <h3 id="exercice-1-doubler-les-lettres">
+  Exercice 1: doubler les lettres
+  <a class="anchor" href="#exercice-1-doubler-les-lettres">#</a>
+</h3>
+
+
+
+<main>
+    <div id="python_ide_1">
+        <textarea id="commands_1" class="commands">
+
+prenom = &#34;Frank&#34;
+
+        </textarea>
+        <a class="execute book-btn" title="Ctrl+Enter">Run</a>
+        <a class="reset book-btn" title="Ctrl+R">Reset</a>
+        <a class="download book-btn" title="Ctrl+S">Download</a>
+        <a class="stop book-btn" title="Ctrl+D">Stop</a>
+        <pre class="python_output" style="display: none;">Résultat</pre>
+        <pre class="python_error" style="display: none;"></pre>
+        <pre class="worker_error" style="display: none;"></pre>
+    </div>
+</main>
+<script type="module">
+    import { onElementLoaded, init_worker } from "http:\/\/localhost:1313\/js/pyodide_consumer.js";
+
+    const url = "http:\/\/localhost:1313\/js/pyodide_webworker.js";
+
+    async function start_worker(ide) {
+        
+        let initfile = null;
+        
+        init_worker(ide, url, initfile);
+    }
+
+
+    onElementLoaded("div#python_ide_1").then(() => {
+        const ide = document.querySelector("div#python_ide_1");
+        start_worker(ide);
+    }).catch(() => { });
+</script>
+
 <h2 id="la-fonction-range">
   La fonction <code>range</code>
   <a class="anchor" href="#la-fonction-range">#</a>
@@ -7228,9 +7292,9 @@ je peux l&rsquo;écrire en 20 lignes :</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#069;font-weight:bold">for</span> k <span style="color:#000;font-weight:bold">in</span> <span style="color:#366">range</span>(<span style="color:#f60">20</span>):
 </span></span><span style="display:flex;"><span>    <span style="color:#366">print</span>(<span style="color:#c30">&#34;Allez les bleus !&#34;</span>)
 </span></span></code></pre></div><p>C&rsquo;est beaucoup plus lisible et on sait immédiatement combien de fois l&rsquo;instruction sera répétée.</p>
-<h3 id="exercice-5">
-  Exercice 5
-  <a class="anchor" href="#exercice-5">#</a>
+<h3 id="exercice-2">
+  Exercice 2
+  <a class="anchor" href="#exercice-2">#</a>
 </h3>
 <div class="highlight"><pre tabindex="0" style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>J&#39;ai 0 ans
 </span></span><span style="display:flex;"><span>J&#39;ai 1 ans
@@ -7261,8 +7325,8 @@ je peux l&rsquo;écrire en 20 lignes :</p>
 
 
 <main>
-    <div id="python_ide_3">
-        <textarea id="commands_3" class="commands">
+    <div id="python_ide_4">
+        <textarea id="commands_4" class="commands">
 
         </textarea>
         <a class="execute book-btn" title="Ctrl+Enter">Run</a>
@@ -7287,15 +7351,15 @@ je peux l&rsquo;écrire en 20 lignes :</p>
     }
 
 
-    onElementLoaded("div#python_ide_3").then(() => {
-        const ide = document.querySelector("div#python_ide_3");
+    onElementLoaded("div#python_ide_4").then(() => {
+        const ide = document.querySelector("div#python_ide_4");
         start_worker(ide);
     }).catch(() => { });
 </script>
 
-<h3 id="exercice-6---somme-des-entiers">
-  Exercice 6 - somme des entiers
-  <a class="anchor" href="#exercice-6---somme-des-entiers">#</a>
+<h3 id="exercice-3---somme-des-entiers">
+  Exercice 3 - somme des entiers
+  <a class="anchor" href="#exercice-3---somme-des-entiers">#</a>
 </h3>
 <p>Calculons la somme des entiers entre 0 et 100.</p>
 <p>Bien sûr on pourrait l&rsquo;écrire à la main :</p>
@@ -7323,8 +7387,8 @@ je peux l&rsquo;écrire en 20 lignes :</p>
 
 
 <main>
-    <div id="python_ide_4">
-        <textarea id="commands_4" class="commands">
+    <div id="python_ide_5">
+        <textarea id="commands_5" class="commands">
 
 somme = 0
 for entier in range(3):
@@ -7355,8 +7419,8 @@ print(somme)
     }
 
 
-    onElementLoaded("div#python_ide_4").then(() => {
-        const ide = document.querySelector("div#python_ide_4");
+    onElementLoaded("div#python_ide_5").then(() => {
+        const ide = document.querySelector("div#python_ide_5");
         start_worker(ide);
     }).catch(() => { });
 </script>
@@ -7367,32 +7431,32 @@ print(somme)
 </li>
 </ol>
 <p><em>Remarque :</em> Vous apprendrez cette année en mathématiques à calculer ces sommes directement avec une formule très efficace.</p>
-<h3 id="range-avec-deux-paramètres">
+<h2 id="range-avec-deux-paramètres">
   <code>range</code> avec deux paramètres
   <a class="anchor" href="#range-avec-deux-param%c3%a8tres">#</a>
-</h3>
+</h2>
 <blockquote class="book-hint warning">
   <code>range(debut, fin)</code> parcourt les entiers de <code>debut</code> inclu jusque <code>fin</code> exclu.
 </blockquote>
 
 <p>Par exemple <code>range(5, 10)</code> va parcourir les entiers : 5, 6, 7, 8, et 9. Mais pas 10.</p>
-<h3 id="exercice-7">
-  Exercice 7
-  <a class="anchor" href="#exercice-7">#</a>
+<h3 id="exercice-4">
+  Exercice 4
+  <a class="anchor" href="#exercice-4">#</a>
 </h3>
 <p>Calculer la somme des entiers à trois chiffres (de 100 à 999) dans la cellule Python précédente.</p>
-<h3 id="range-avec-trois-paramètres">
+<h2 id="range-avec-trois-paramètres">
   <code>range</code> avec trois paramètres
   <a class="anchor" href="#range-avec-trois-param%c3%a8tres">#</a>
-</h3>
+</h2>
 <blockquote class="book-hint warning">
   <code>range(debut, fin, pas)</code>, on parcourt les entiers de <code>debut</code> inclu à <code>fin</code> exclu en avançant de <code>pas</code> en <code>pas</code> :
 </blockquote>
 
 <p>Collection des entiers pairs entre 100 et 199 : (100, 102, 104, &hellip;, 198) : <code>range(100, 199, 2)</code></p>
-<h3 id="exercice-8">
-  Exercice 8
-  <a class="anchor" href="#exercice-8">#</a>
+<h3 id="exercice-5">
+  Exercice 5
+  <a class="anchor" href="#exercice-5">#</a>
 </h3>
 <ol>
 <li>Calculer la somme des entiers impairs entre 1000 et 10000.</li>
@@ -7405,8 +7469,7 @@ print(somme)
   Combiner des blocs
   <a class="anchor" href="#combiner-des-blocs">#</a>
 </h2>
-<p>Puisque l&rsquo;indentation indique la strucutre d&rsquo;un programme, on doit faire attention à la
-position qu&rsquo;on donne à nos strucutres.</p>
+<p>Puisque l&rsquo;indentation indique la structure d&rsquo;un programme, on doit faire attention à la position qu&rsquo;on donne à nos structures.</p>
 <p>Les deux programmes suivants ne font pas la même chose :</p>
 <script src="http://localhost:1313/coi-serviceworker.min.js"></script>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.63.3/codemirror.css">
@@ -7426,8 +7489,8 @@ position qu&rsquo;on donne à nos strucutres.</p>
 
 
 <main>
-    <div id="python_ide_7">
-        <textarea id="commands_7" class="commands">
+    <div id="python_ide_8">
+        <textarea id="commands_8" class="commands">
 
 nombre = 5
 couleur = &#34;bleu&#34;
@@ -7470,8 +7533,8 @@ if nombre &gt; 10:
     }
 
 
-    onElementLoaded("div#python_ide_7").then(() => {
-        const ide = document.querySelector("div#python_ide_7");
+    onElementLoaded("div#python_ide_8").then(() => {
+        const ide = document.querySelector("div#python_ide_8");
         start_worker(ide);
     }).catch(() => { });
 </script>
@@ -7488,13 +7551,17 @@ condition est vraie.</p>
 </li>
 </ol>
 <p>La condition est fausse et le bloc <code>if</code> n&rsquo;est pas exécuté donc il ne se passe rien.</p>
-<h3 id="exercice-9">
-  Exercice 9
-  <a class="anchor" href="#exercice-9">#</a>
+<h3 id="exercice-6">
+  Exercice 6
+  <a class="anchor" href="#exercice-6">#</a>
 </h3>
+<p>On considère la phrase suivante :</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>phrase <span style="color:#555">=</span> <span style="color:#c30">&#34;je n&#39;aime pas me lever le matin, je préfère dormir.&#34;</span>
+</span></span></code></pre></div><p><em>On répondra aux questions dans la cellule de code plus bas.</em></p>
 <ol>
 <li>
 <p>À l&rsquo;aide d&rsquo;une boucle et d&rsquo;une condition, produire l&rsquo;affichage suivant :</p>
+<p><em>Ce sont les voyelles de la phrase</em></p>
 <div class="highlight"><pre tabindex="0" style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>e est une voyelle
 </span></span><span style="display:flex;"><span>a est une voyelle
 </span></span><span style="display:flex;"><span>i est une voyelle
@@ -7512,10 +7579,10 @@ condition est vraie.</p>
 </span></span><span style="display:flex;"><span>i est une voyelle
 </span></span></code></pre></div></li>
 <li>
-<p>Les caractères accentués ne sont pas présentés dans l&rsquo;exemple précédent. Rectifiez cela !</p>
+<p>Intégrer les voyelles accentuées.</p>
 </li>
 <li>
-<p>Compléter l&rsquo;affichage précédent en affichant les consonnes :</p>
+<p>Compléter l&rsquo;affichage précédent en affichant aussi les consonnes et la ponctuation :</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>j n&#39;est pas une voyelle
 </span></span><span style="display:flex;"><span>e est une voyelle
 </span></span><span style="display:flex;"><span>  n&#39;est pas une voyelle
@@ -7548,16 +7615,16 @@ condition est vraie.</p>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.63.3/addon/display/fullscreen.js"></script>
 
 
-    <h3 id="cellule-de-lexo-9">
-  Cellule de l&rsquo;exo 9
-  <a class="anchor" href="#cellule-de-lexo-9">#</a>
+    <h3 id="cellule-de-lexo-6">
+  Cellule de l&rsquo;exo 6
+  <a class="anchor" href="#cellule-de-lexo-6">#</a>
 </h3>
 
 
 
 <main>
-    <div id="python_ide_8">
-        <textarea id="commands_8" class="commands">
+    <div id="python_ide_9">
+        <textarea id="commands_9" class="commands">
 
 voyelles = &#34;aeiouy&#34;
 phrase = &#34;je n&#39;aime pas me lever le matin, je préfère dormir.&#34;
@@ -7587,15 +7654,15 @@ phrase = &#34;je n&#39;aime pas me lever le matin, je préfère dormir.&#34;
     }
 
 
-    onElementLoaded("div#python_ide_8").then(() => {
-        const ide = document.querySelector("div#python_ide_8");
+    onElementLoaded("div#python_ide_9").then(() => {
+        const ide = document.querySelector("div#python_ide_9");
         start_worker(ide);
     }).catch(() => { });
 </script>
 
-<h3 id="exercice-10">
-  Exercice 10
-  <a class="anchor" href="#exercice-10">#</a>
+<h3 id="exercice-7">
+  Exercice 7
+  <a class="anchor" href="#exercice-7">#</a>
 </h3>
 <ol>
 <li>
@@ -7619,8 +7686,8 @@ phrase = &#34;je n&#39;aime pas me lever le matin, je préfère dormir.&#34;
 
 
 <main>
-    <div id="python_ide_9">
-        <textarea id="commands_9" class="commands">
+    <div id="python_ide_10">
+        <textarea id="commands_10" class="commands">
 
 mot1 = &#34;table&#34;
 mot2 = &#34;exercice&#34;
@@ -7651,8 +7718,8 @@ voyelles = &#34;a....&#34;
     }
 
 
-    onElementLoaded("div#python_ide_9").then(() => {
-        const ide = document.querySelector("div#python_ide_9");
+    onElementLoaded("div#python_ide_10").then(() => {
+        const ide = document.querySelector("div#python_ide_10");
         start_worker(ide);
     }).catch(() => { });
 </script>
@@ -7662,16 +7729,18 @@ voyelles = &#34;a....&#34;
 <p>Comptez cette fois les consonnes d&rsquo;un mot sans accent ni tiret ni apostrophe comme <code>ordinateur</code>.</p>
 </li>
 </ol>
-<h3 id="exercice-11---table-de-multiplication">
-  Exercice 11 - table de multiplication
-  <a class="anchor" href="#exercice-11---table-de-multiplication">#</a>
+<h3 id="exercice-8---table-de-multiplication">
+  Exercice 8 - table de multiplication
+  <a class="anchor" href="#exercice-8---table-de-multiplication">#</a>
 </h3>
 <ol>
 <li>
 <p><code>nombre = 5</code>. En une ligne supplémentaire écrire :</p>
 <p><code>4 * 5 = 20</code></p>
 <p>Le nombre 20 doit être obtenu par opération.</p>
-</li>
+<p>Rappel : <code>print(1, &quot;abc&quot;, 2 * 3)</code> produit l&rsquo;affichage :</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>1 abc 6
+</span></span></code></pre></div></li>
 <li>
 <p>Utiliser ce principe pour écrire la table de 4.</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>4 * 0 = 0
@@ -7709,8 +7778,8 @@ les tables de multiplications des entiers de 0 à 10 inclu.</p>
 
 
 <main>
-    <div id="python_ide_10">
-        <textarea id="commands_10" class="commands">
+    <div id="python_ide_11">
+        <textarea id="commands_11" class="commands">
 
         </textarea>
         <a class="execute book-btn" title="Ctrl+Enter">Run</a>
@@ -7735,8 +7804,8 @@ les tables de multiplications des entiers de 0 à 10 inclu.</p>
     }
 
 
-    onElementLoaded("div#python_ide_10").then(() => {
-        const ide = document.querySelector("div#python_ide_10");
+    onElementLoaded("div#python_ide_11").then(() => {
+        const ide = document.querySelector("div#python_ide_11");
         start_worker(ide);
     }).catch(() => { });
 </script>
@@ -7803,23 +7872,33 @@ les tables de multiplications des entiers de 0 à 10 inclu.</p>
 <nav id="TableOfContents">
   <ul>
     <li><a href="#boucles">Boucles</a></li>
-    <li><a href="#boucle-bornée--for">Boucle bornée : <code>for</code></a></li>
+    <li><a href="#boucle-bornée--for">Boucle bornée : <code>for</code></a>
+      <ul>
+        <li><a href="#exercice-1">Exercice 1</a></li>
+      </ul>
+    </li>
     <li><a href="#la-fonction-range">La fonction <code>range</code></a>
       <ul>
         <li><a href="#range-avec-un-paramètre"><code>range</code> avec un paramètre</a></li>
+        <li><a href="#exercice-2">Exercice 2</a></li>
+        <li><a href="#exercice-3---somme-des-entiers">Exercice 3 - somme des entiers</a></li>
+      </ul>
+    </li>
+    <li><a href="#range-avec-deux-paramètres"><code>range</code> avec deux paramètres</a>
+      <ul>
+        <li><a href="#exercice-4">Exercice 4</a></li>
+      </ul>
+    </li>
+    <li><a href="#range-avec-trois-paramètres"><code>range</code> avec trois paramètres</a>
+      <ul>
         <li><a href="#exercice-5">Exercice 5</a></li>
-        <li><a href="#exercice-6---somme-des-entiers">Exercice 6 - somme des entiers</a></li>
-        <li><a href="#range-avec-deux-paramètres"><code>range</code> avec deux paramètres</a></li>
-        <li><a href="#exercice-7">Exercice 7</a></li>
-        <li><a href="#range-avec-trois-paramètres"><code>range</code> avec trois paramètres</a></li>
-        <li><a href="#exercice-8">Exercice 8</a></li>
       </ul>
     </li>
     <li><a href="#combiner-des-blocs">Combiner des blocs</a>
       <ul>
-        <li><a href="#exercice-9">Exercice 9</a></li>
-        <li><a href="#exercice-10">Exercice 10</a></li>
-        <li><a href="#exercice-11---table-de-multiplication">Exercice 11 - table de multiplication</a></li>
+        <li><a href="#exercice-6">Exercice 6</a></li>
+        <li><a href="#exercice-7">Exercice 7</a></li>
+        <li><a href="#exercice-8---table-de-multiplication">Exercice 8 - table de multiplication</a></li>
       </ul>
     </li>
   </ul>

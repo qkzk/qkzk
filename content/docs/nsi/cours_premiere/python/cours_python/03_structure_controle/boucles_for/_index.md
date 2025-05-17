@@ -65,6 +65,27 @@ On réalise bien que `lettre` a pri pour valeurs successives les caractères
 composant `mot` : `"b"`, `"o"` etc.
 
 
+### Exercice 1
+
+Écrire à l'aide d'une boucle un programme qui affiche _deux fois_ chaque lettre de votre prénom.
+
+```
+F 
+F
+r
+r
+a
+a
+n
+n
+k
+k
+```
+
+{{< python title="Exercice 1: doubler les lettres" >}}
+prenom = "Frank"
+{{< /python >}}
+
 ## La fonction `range`
 
 {{< hint warning >}}
@@ -123,7 +144,7 @@ for k in range(20):
 
 C'est beaucoup plus lisible et on sait immédiatement combien de fois l'instruction sera répétée.
 
-### Exercice 5
+### Exercice 2
 
 
 ```
@@ -145,7 +166,7 @@ Produire l'affichage précédent jusqu'à votre age en deux lignes de code.
 {{< /python >}}
 
 
-### Exercice 6 - somme des entiers
+### Exercice 3 - somme des entiers
 
 Calculons la somme des entiers entre 0 et 100.
 
@@ -177,7 +198,7 @@ print(somme)
 
 _Remarque :_ Vous apprendrez cette année en mathématiques à calculer ces sommes directement avec une formule très efficace.
 
-### `range` avec deux paramètres
+## `range` avec deux paramètres
 
 {{< hint warning >}}
 `range(debut, fin)` parcourt les entiers de `debut` inclu jusque `fin` exclu.
@@ -185,11 +206,11 @@ _Remarque :_ Vous apprendrez cette année en mathématiques à calculer ces somm
 
 Par exemple `range(5, 10)` va parcourir les entiers : 5, 6, 7, 8, et 9. Mais pas 10.
 
-### Exercice 7
+### Exercice 4
 
 Calculer la somme des entiers à trois chiffres (de 100 à 999) dans la cellule Python précédente.
 
-### `range` avec trois paramètres
+## `range` avec trois paramètres
 
 {{< hint warning >}}
 `range(debut, fin, pas)`, on parcourt les entiers de `debut` inclu à `fin` exclu en avançant de `pas` en `pas` :
@@ -198,7 +219,7 @@ Calculer la somme des entiers à trois chiffres (de 100 à 999) dans la cellule 
 
 Collection des entiers pairs entre 100 et 199 : (100, 102, 104, ..., 198) : `range(100, 199, 2)`
 
-### Exercice 8
+### Exercice 5
 
 1. Calculer la somme des entiers impairs entre 1000 et 10000.
 2. Calculer la somme des entiers divisibles par 3 entre 1000 et 10000.
@@ -210,8 +231,7 @@ _On utilisera la cellule python précédente_
 ## Combiner des blocs
 
 
-Puisque l'indentation indique la strucutre d'un programme, on doit faire attention à la
-position qu'on donne à nos strucutres. 
+Puisque l'indentation indique la structure d'un programme, on doit faire attention à la position qu'on donne à nos structures. 
 
 Les deux programmes suivants ne font pas la même chose :
 
@@ -246,9 +266,20 @@ if nombre > 10:
 
   La condition est fausse et le bloc `if` n'est pas exécuté donc il ne se passe rien.
 
-### Exercice 9
+### Exercice 6
+
+On considère la phrase suivante :
+
+```python 
+phrase = "je n'aime pas me lever le matin, je préfère dormir."
+```
+
+_On répondra aux questions dans la cellule de code plus bas._
 
 1. À l'aide d'une boucle et d'une condition, produire l'affichage suivant :
+
+    _Ce sont les voyelles de la phrase_
+
 
     ```
     e est une voyelle
@@ -269,9 +300,9 @@ if nombre > 10:
     ```
 
 
-2. Les caractères accentués ne sont pas présentés dans l'exemple précédent. Rectifiez cela !
+2. Intégrer les voyelles accentuées.
 
-3. Compléter l'affichage précédent en affichant les consonnes : 
+3. Compléter l'affichage précédent en affichant aussi les consonnes et la ponctuation : 
 
     ```
     j n'est pas une voyelle
@@ -296,7 +327,7 @@ if nombre > 10:
     ...
     ```
 
-{{< python title="Cellule de l'exo 9" >}}
+{{< python title="Cellule de l'exo 6" >}}
 voyelles = "aeiouy"
 phrase = "je n'aime pas me lever le matin, je préfère dormir."
 
@@ -304,7 +335,7 @@ phrase = "je n'aime pas me lever le matin, je préfère dormir."
 {{< /python >}}
 
 
-### Exercice 10
+### Exercice 7
 
 1. En utilisant `for` et une condition bien placée, comptez les voyelles dans un mot.
 
@@ -321,13 +352,19 @@ voyelles = "a...."
 
 2. Comptez cette fois les consonnes d'un mot sans accent ni tiret ni apostrophe comme `ordinateur`.
 
-### Exercice 11 - table de multiplication
+### Exercice 8 - table de multiplication
 
 1. `nombre = 5`. En une ligne supplémentaire écrire :
 
       `4 * 5 = 20`
 
       Le nombre 20 doit être obtenu par opération.
+
+      Rappel : `print(1, "abc", 2 * 3)` produit l'affichage :
+
+     ```
+     1 abc 6
+     ```
 
 2. Utiliser ce principe pour écrire la table de 4.
 

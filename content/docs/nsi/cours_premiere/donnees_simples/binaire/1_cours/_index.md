@@ -204,8 +204,7 @@ faudra pour le stocker.
 
 $123 = 0b1111011$ il faut au moins 7 bits pour stocker ce nombre.
 
-En pratique, les machines utilisent des bloc de taille 1 octet, ce nombre entre
-dans un octet.
+En pratique, les machines utilisent des blocs de taille 1 octet, ce nombre entre dans un octet.
 
 ### Taille et opérations
 
@@ -294,7 +293,9 @@ Et quand on l'exécute :
 True
 ```
 
-{{< expand "Comment reconnaître un débutant ?" "...">}}
+Comment reconnaître un débutant ?
+
+{{< expand "" "...">}}
 
 Il écrit des trucs comme ça :
 
