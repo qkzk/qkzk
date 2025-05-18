@@ -27,7 +27,7 @@ De combien de symboles a-t-on besoin ?
 Un peu de ponctuation : ,;:!?./*$-&#43;=()[]{}&quot;&#39; etc.
 Quelques caractères techniques (retour à la ligne, espace etc.)
 
-On dépasse $2^6 = 64$ mais en se contentant du minimum, on reste en dessous de $2^7 = 128$. On peut encoder une table assez vaste avec 7 bits.">
+On dépasse $2^6 = 64$ mais en se contentant du minimum, on reste en dessous de $2^7 = 128$.">
 <meta name="theme-color" content="#FFFFFF">
 <meta name="color-scheme" content="light dark"><meta property="og:url" content="http://localhost:1313/docs/nsi/cours_premiere/donnees_simples/chaines_caracteres/1_cours/">
   <meta property="og:site_name" content="qkzk">
@@ -36,7 +36,7 @@ On dépasse $2^6 = 64$ mais en se contentant du minimum, on reste en dessous de 
 Représentation d’un texte en machine # La mémoire ne contient que des 0 et des 1, ainsi lorsqu’on voit une lettre à l’écran, en mémoire c’est un entier qui encode ce caractère. Différents encodages existent, nous allons les étudier.
 Un caractère ? # Comment enregistrer, de manière optimale, du texte en mémoire ?
 De combien de symboles a-t-on besoin ?
-26 lettres dans l’alphabet, 52 avec les majuscules. 10 chiffres 0123456789 Un peu de ponctuation : ,;:!?./*$-&#43;=()[]{}&#34;&#39; etc. Quelques caractères techniques (retour à la ligne, espace etc.) On dépasse $2^6 = 64$ mais en se contentant du minimum, on reste en dessous de $2^7 = 128$. On peut encoder une table assez vaste avec 7 bits.">
+26 lettres dans l’alphabet, 52 avec les majuscules. 10 chiffres 0123456789 Un peu de ponctuation : ,;:!?./*$-&#43;=()[]{}&#34;&#39; etc. Quelques caractères techniques (retour à la ligne, espace etc.) On dépasse $2^6 = 64$ mais en se contentant du minimum, on reste en dessous de $2^7 = 128$.">
   <meta property="og:locale" content="en_us">
   <meta property="og:type" content="website">
 <title>Chaines : Cours | qkzk</title>
@@ -44,7 +44,7 @@ De combien de symboles a-t-on besoin ?
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/book.min.24c2b1f8dc2338e074345eec5b36f8a002aaa6d1b2e7312e14ac2d6a6958c876.css" integrity="sha256-JMKx&#43;NwjOOB0NF7sWzb4oAKqptGy5zEuFKwtamlYyHY=" crossorigin="anonymous">
 <script defer src="/flexsearch.min.js"></script>
-<script defer src="/en.search.min.9086c953ddda31064d09f1417c7983c354318afc161f477943c5cc36a256bccf.js" integrity="sha256-kIbJU93aMQZNCfFBfHmDw1QxivwWH0d5Q8XMNqJWvM8=" crossorigin="anonymous"></script>
+<script defer src="/en.search.min.f9c7f58ca42b6c9c817deb1d8a9b62439e76b28694b383abcc95e02a7b6e54a7.js" integrity="sha256-&#43;cf1jKQrbJyBfesdiptiQ552soaUs4OrzJXgKntuVKc=" crossorigin="anonymous"></script>
 
 <link rel="alternate" type="application/rss+xml" href="http://localhost:1313/docs/nsi/cours_premiere/donnees_simples/chaines_caracteres/1_cours/index.xml" title="qkzk" />
 <!--
@@ -7167,7 +7167,9 @@ qui <em>encode</em> ce caractère.
 <li>Un peu de ponctuation : <code>,;:!?./*$-+=()[]{}&quot;'</code> etc.</li>
 <li>Quelques caractères techniques (retour à la ligne, espace etc.)</li>
 </ul>
-<p>On dépasse $2^6 = 64$ mais en se contentant du minimum, on reste en dessous de $2^7 = 128$. On peut encoder une table assez vaste avec 7 bits.</p>
+<p>On dépasse $2^6 = 64$ mais en se contentant du minimum, on reste en dessous de $2^7 = 128$.</p>
+<p>L&rsquo;idée est de trouver une représentation de chacun de ces caractères par un nombre. C&rsquo;est un <em>encodage</em>.</p>
+<p>On peut encoder une table assez vaste avec 7 bits.</p>
 <p>Idée d&rsquo;ASCII (1961) : uniformiser les nombreux encodages incompatibles entre eux.</p>
 <p>L&rsquo;encodage ASCII est l&rsquo;encodage universel dont tous les autres dérivent.</p>
 <h2 id="la-table-ascii-complète">
@@ -7180,14 +7182,28 @@ qui <em>encode</em> ce caractère.
   <a class="anchor" href="#remarques-sur-la-table-pr%c3%a9c%c3%a9dente">#</a>
 </h3>
 <ul>
-<li>Tout élément de la table est codé sur 7 bits, 1 octet par caractère suffit</li>
-<li>Les caractères codés entre 32 et 127 sont imprimables, les autres sont des caractères de contrôle.</li>
-<li>Certains caractères de contrôle ont un effet sur le texte comme le numéro 9 : <code>\t</code> (tabulation) ou le 10 : <code>\n</code> (retour à la ligne).</li>
-<li>Les chiffres commencent à $30_{16}$, les majuscules à $41_{16}$ et les minuscules à $61_{16}$</li>
-<li>Pour obtenir la notation binaire, on part de l&rsquo;hexa.<br>
-Premier chiffre : 3 bits, second chiffre 4 bits
-$$A \rightarrow 41_{16} \rightarrow 4\times 16 + 1 \rightarrow 0100<del>0001$$
-$$s \rightarrow 73_{16} \rightarrow 7\times 16 + 3 \rightarrow 0111</del>0011$$</li>
+<li>
+<p>Elle se lit ainsi : <code>)</code> est encodé par l&rsquo;entier $41_{10} = 29_{16}$.</p>
+</li>
+<li>
+<p>Tout élément de la table est codé sur 7 bits, 1 octet par caractère suffit</p>
+</li>
+<li>
+<p>Les caractères codés entre 32 et 127 sont imprimables, les autres sont des caractères de contrôle.</p>
+</li>
+<li>
+<p>Certains caractères de contrôle ont un effet sur le texte comme le numéro 9 : <code>\t</code> (tabulation) ou le 10 : <code>\n</code> (retour à la ligne).</p>
+</li>
+<li>
+<p>Les chiffres commencent à $30_{16}$, les majuscules à $41_{16}$ et les minuscules à $61_{16}$</p>
+</li>
+<li>
+<p>Pour obtenir la notation binaire, on part de l&rsquo;hexa.<br>
+Premier chiffre : 3 bits, second chiffre 4 bits</p>
+<p>$$A \rightarrow 41_{16} \rightarrow 4\times 16 + 1 \rightarrow 100~0001$$</p>
+<p>ou</p>
+<p>$$s \rightarrow 73_{16} \rightarrow 7\times 16 + 3 \rightarrow 111~0011$$</p>
+</li>
 </ul>
 <h3 id="les-95-caractères-imprimables">
   Les 95 caractères imprimables
@@ -7353,7 +7369,7 @@ il suffit de changer 1 bit dans sa représentation ASCII.</em>&rdquo;</p>
 <p>Cet encodage ne comporte que 95 caractères imprimables (de 20 à 127) et aucun accent.</p>
 <p>C&rsquo;est le seul encodage &ldquo;qui marche toujours&rdquo;.</p>
 <p>Si vous voyez un accent, ce n&rsquo;est pas de l&rsquo;ASCII.</p>
-<p>L&rsquo;organisation astucieuse permet de passer facilement de changer la casse.</p>
+<p>L&rsquo;organisation astucieuse permet de passer facilement de passer des majuscules aux minuscules.</p>
 
 </blockquote>
 
@@ -7370,7 +7386,8 @@ il suffit de changer 1 bit dans sa représentation ASCII.</em>&rdquo;</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span> !&#34;#$%&amp;&#39;()*+,-./0123456789:;&lt;=&gt;?
 </span></span><span style="display:flex;"><span>@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\]^_
 </span></span><span style="display:flex;"><span>`abcdefghijklmnopqrstuvwxyz{|}~
-</span></span></code></pre></div><details  class="no-outline"><summary class="no-outline"></summary>
+</span></span></code></pre></div><p><strong>Réponse</strong></p>
+<details  class="no-outline"><summary class="no-outline"></summary>
     <div class="markdown-inner">
         <div class="highlight"><pre tabindex="0" style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#069;font-weight:bold">for</span> c <span style="color:#000;font-weight:bold">in</span> <span style="color:#366">range</span>(<span style="color:#f60">32</span>, <span style="color:#f60">128</span>):
 </span></span><span style="display:flex;"><span>    <span style="color:#069;font-weight:bold">if</span> c <span style="color:#000;font-weight:bold">and</span> (c <span style="color:#555">%</span> <span style="color:#f60">32</span>) <span style="color:#555">==</span> <span style="color:#f60">0</span>:
@@ -7381,12 +7398,26 @@ il suffit de changer 1 bit dans sa représentation ASCII.</em>&rdquo;</p>
     </div>
 </details>
 
+<p><strong>Explications</strong></p>
+<details  class="no-outline"><summary class="no-outline"></summary>
+    <div class="markdown-inner">
+        <p>Pour <code>c</code> allant de 32 à 127 inclus,</p>
+<ul>
+<li>si 32 divise <code>c</code>, aller à la ligne : <code>print()</code></li>
+<li>afficher <code>chr(c)</code> qui est le caractère de la table ASCII $^1$</li>
+</ul>
+<p>$^1$ <code>chr</code> utilise l&rsquo;encodage UTF-8 qui étend ASCII, on en parlera plus tard.</p>
+
+    </div>
+</details>
+
 <h2 id="iso-8859-1-ou-iso-latin-1">
   iso-8859-1 ou iso-Latin-1
   <a class="anchor" href="#iso-8859-1-ou-iso-latin-1">#</a>
 </h2>
 <p>Comment compléter la table ASCII ?</p>
-<p>L&rsquo;encodage iso-8859-1, dit iso-Latin-1 est apparu en 1986 et correspond à l&rsquo;Europe de l&rsquo;ouest.
+<p><strong>Première idée :</strong> conserver une taille fixe de 1 octet. 256 octets en tout dont 128 dans la table ASCII, il en reste 128 libres.</p>
+<p>L&rsquo;encodage iso-8859-1, dit iso-Latin-1 est apparu en 1986 et est utilisé en Europe de l&rsquo;ouest.
 D&rsquo;autres versions pour les caractères iso-Latin-2 de l&rsquo;Europe de l&rsquo;est etc.</p>
 <ul>
 <li>
@@ -7408,6 +7439,9 @@ D&rsquo;autres versions pour les caractères iso-Latin-2 de l&rsquo;Europe de l&
 <li>
 <p>Windows (Windows-1252) et Mac (MacRoman) ont leurs propres versions rendant
 l&rsquo;échange de documents et développement de logiciels <strong>plus que pénibles.</strong></p>
+</li>
+<li>
+<p>Les variantes iso-Latin-1, iso-Latin-2 etc sont incompatibles entre-elles.</p>
 </li>
 </ul>
 <p>Bref, c&rsquo;est <del>de la merde</del> imparfait mais cet encodage étant encore la norme sous Windows, il faudra faire avec.</p>
@@ -7451,7 +7485,7 @@ l&rsquo;échange de documents et développement de logiciels <strong>plus que p�
 </h2>
 <ul>
 <li>
-<p>UTF-x n&rsquo;utilise pas une taille fixe pour chaque caractère. Les plus courants occupent 1 bits.</p>
+<p>UTF-x utilise une taille variable pour chaque caractère. Les plus courants occupent 1 bits.</p>
 </li>
 <li>
 <p>Chaque caractère est codé avec une séquence de 1 à 4 octets.</p>
@@ -7471,8 +7505,8 @@ l&rsquo;échange de documents et développement de logiciels <strong>plus que p�
 <li>
 <p>Lorsqu&rsquo;un document est encode en ASCII :</p>
 <ul>
-<li>Si on lit un octet comme <code>0100 0001</code> on sait que c&rsquo;est un caractère complet (<code>A</code>).</li>
-<li>Lorsqu&rsquo;il commence par <code>1110....</code> il faut lire <em>les deux octets suivants</em> pour connaître le caractère.</li>
+<li>Si un caractère commence par un <code>0</code> alors il occupe 1 octet et c&rsquo;est le même que dans la table ASCII : <code>0100 0001 -&gt; A</code></li>
+<li>Sinon on compte le nombre <code>1</code> initiaux. Par exemple <code>1110....</code> alors le caractère occupe 3 octets. Il faut lire aussi les deux octets suivants pour déterminer le caractère complet.</li>
 </ul>
 </li>
 <li>
@@ -7544,9 +7578,9 @@ On utilise les fonctions <code>chr</code> et <code>ord</code></p>
 <p><img src="/uploads/docsnsi/donnees_qkzk_img/martine.jpg" alt="martine" /></p>
 <p><strong>WHAT ?</strong></p>
 <ul>
-<li>La lettre <strong>é</strong> a été <em>encodée</em> en <strong>UTF-8</strong> (parce que 2 caractères sont affichés)<br>
+<li>La lettre <strong>é</strong> du mot &ldquo;<em>écrit</em>&rdquo; a été <em>encodée</em> en <strong>UTF-8</strong> (parce que 2 caractères sont affichés)<br>
 En mémoire elle occupe 2 octets (elle n&rsquo;est pas dans la table ascii)</li>
-<li>Ces deux octets ont été <em>décodés</em> en <strong>iso-latin1</strong> (1 octet par caractère), respectivement en</li>
+<li>Ces deux octets ont été <em>décodés</em> en <strong>iso-latin1</strong> (1 octet par caractère), respectivement en <code>Ã</code> et <code>©</code></li>
 </ul>
 <hr>
 <h2 id="complément--base64">
@@ -7569,7 +7603,7 @@ C&rsquo;est un groupe de schéma pour encoder des données binaires sous forme
 d&rsquo;un texte au format ASCII grâce à la représentation de ces données en base 64.
 Le terme base64 vient à l&rsquo;origine de l&rsquo;encodage utilisé pour transférer
 certains contenus MIME (Extensions multifonctions du courrier Internet).</p>
-<p>base64 est aussi employé pour transmettre des du contenu dans les URL.</p>
+<p>base64 est aussi employé pour transmettre du contenu dans les URL.</p>
 <h3 id="principes-de-base-64">
   Principes de base 64
   <a class="anchor" href="#principes-de-base-64">#</a>

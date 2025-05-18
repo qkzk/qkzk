@@ -50,13 +50,13 @@ En étant un peu plus précis, on rencontre, du plus bas au plus haut niveau :
 - La coquille (shell) : programme qui permet d'exécuter des utilitaires et d'intéragir (via les fenêtres ou le terminal)
 - les applications (ls, firefox) : les programmes qu'on fait tourner grâce au shell
 
-![Couches d'un OS](./img/OS_Layers.jpg){width=300px}
+![Couches d'un OS](./img/OS_Layers.jpg)
 
 ## Grandes familles de systèmes d'exploitation
 
 On en rencontre massivement deux :
 
-- **Windows** et ses dérivés (MSDOS (~1985), Windows NT (1999), windows 7->10 (2008)). Domine le marché du PC "personnel"
+- **Windows** et ses dérivés (MSDOS (~1985), Windows NT (1999), windows 7->11 (2008)). Domine le marché du PC "personnel"
 - **UNIX** et ses dérivés : bsd (systèmes embarqués, réseaux d'entreprises), linux (partout dont android, super calculateurs, PC personnels, serveur web), OSX & iOS (produits apple)
 
 ### Linux et les systèmes libres
@@ -84,7 +84,7 @@ On en rencontre massivement deux :
 
 ### GNU/Linux
 
-Cet acronynime désigne :
+Cet acronyme désigne :
 
 - Le noyau linux lui même
 - La couche logicielle GNU qu'on trouve dans tous les systèmes UNIX.
@@ -114,13 +114,13 @@ Et on recommence.
 
 C'est à la fois le plus simple et le plus puissant.
 
-## Terminal User Interface
+### Terminal User Interface
 
 ![btop, une interface TUI](./img/btop.png){width=300px}
 
 Toujours dans un terminal mais cette fois on peut intéragir (clavier, souris)
 
-## Graphical User Interface
+### Graphical User Interface
 
 Clic clic clic, inutile de présenter, vous connaissez.
 
@@ -130,7 +130,7 @@ Dans le vocabulaire courant shell, terminal et console désignent grosso modo la
 
 Soyons plus précis :
 
-- Shell : Un shell Unix est un interpréteur de commandes destiné aux systèmes d'exploitation Unix qui permet d'accéder aux fonctionnalités internes du système d'exploitation. Il se présente sous la forme d'une CLI accessible depuis la console ou un terminal
+- Shell : Un shell Unix est un _interpréteur de commandes_ destiné aux systèmes d'exploitation Unix qui permet d'accéder aux fonctionnalités internes du système d'exploitation. Il se présente sous la forme d'une CLI accessible depuis la console ou un terminal
 - Terminal : point d’accès de communication entre l'homme et un ordinateur central ou un réseau d'ordinateurs. il désigne par abus de langage une fenêtre d'invite de commande donnant accès à un shell Unix.
 - Console : périphérique informatique de télécommunications des entrées-sorties d'un système de traitement de l'information. C'est généralement un terminal dédié uniquement à l'envoi et au retour des commandes.
 

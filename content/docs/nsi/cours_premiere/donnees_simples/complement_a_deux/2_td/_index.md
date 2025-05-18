@@ -28,6 +28,7 @@ pdf [pour impression](./complement_a_2_TD.pdf)
 
    a. Les entiers sont tous positifs. Quels sont les plus petits et plus
    grands entiers qu'on puisse encoder ?
+
    b. Les entiers sont encodés en complément à 2. Même question.
 
 2. Dans un programme les entiers sont encodés en complément à deux.
@@ -151,9 +152,7 @@ Dans cet exercice nous allons écrire une fonction qui réalise le complément
 
 ## 5. Compléments
 
-Ces exercices progressifs permettent de vérifier la compréhension des élèves sur la représentation des entiers en complément à deux, en passant de la conversion de nombres décimaux simples en binaire signé, à des opérations plus complexes avec des nombres à virgule fixe.
-
-Voici une série d'exercices progressifs sur la représentation des entiers en complément à deux, faisables sans ordinateur:
+_Dans cet exercice on encode les nombres sur 4 bits_.
 
 1. Conversion de nombres décimaux en binaire signé:
 

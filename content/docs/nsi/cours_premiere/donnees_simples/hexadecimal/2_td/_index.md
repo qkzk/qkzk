@@ -36,9 +36,9 @@ Il existe différentes manières d'encoder les couleurs.
 
 Voici un exemple qui nous servira de référence :
 
-[color picker](https://www.anaghsharma.com/assets/images/posts/color-models/cm-2.jpg)
+[color picker](https://imagecolorpicker.com/color-code/bb3344)
 
-Si les couleurs ne sont pas visibles à l'écran, on voit un _rose_ assez soutenu...
+Si les couleurs ne sont pas visibles à l'écran, on voit un _rouge un peu rosé_
 
 ```python
 >>> hex(212)

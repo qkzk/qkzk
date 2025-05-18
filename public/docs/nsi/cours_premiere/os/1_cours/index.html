@@ -43,7 +43,7 @@ fournit une interface entre l’humain et la machine gère les ressources de l�
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/book.min.24c2b1f8dc2338e074345eec5b36f8a002aaa6d1b2e7312e14ac2d6a6958c876.css" integrity="sha256-JMKx&#43;NwjOOB0NF7sWzb4oAKqptGy5zEuFKwtamlYyHY=" crossorigin="anonymous">
 <script defer src="/flexsearch.min.js"></script>
-<script defer src="/en.search.min.9086c953ddda31064d09f1417c7983c354318afc161f477943c5cc36a256bccf.js" integrity="sha256-kIbJU93aMQZNCfFBfHmDw1QxivwWH0d5Q8XMNqJWvM8=" crossorigin="anonymous"></script>
+<script defer src="/en.search.min.f9c7f58ca42b6c9c817deb1d8a9b62439e76b28694b383abcc95e02a7b6e54a7.js" integrity="sha256-&#43;cf1jKQrbJyBfesdiptiQ552soaUs4OrzJXgKntuVKc=" crossorigin="anonymous"></script>
 
 <link rel="alternate" type="application/rss+xml" href="http://localhost:1313/docs/nsi/cours_premiere/os/1_cours/index.xml" title="qkzk" />
 <!--
@@ -7114,10 +7114,10 @@ MathJax.Hub.Config({
     <li><a href="#cli-tui-gui">CLI, TUI, GUI</a>
       <ul>
         <li><a href="#client-line-interface">Client Line Interface</a></li>
+        <li><a href="#terminal-user-interface">Terminal User Interface</a></li>
+        <li><a href="#graphical-user-interface">Graphical User Interface</a></li>
       </ul>
     </li>
-    <li><a href="#terminal-user-interface">Terminal User Interface</a></li>
-    <li><a href="#graphical-user-interface">Graphical User Interface</a></li>
     <li><a href="#le-terminal">Le terminal</a></li>
     <li><a href="#arborescence-unix">Arborescence UNIX</a>
       <ul>
@@ -7198,14 +7198,14 @@ accessibles aux utilisateurs.</li>
 <li>La coquille (shell) : programme qui permet d&rsquo;exécuter des utilitaires et d&rsquo;intéragir (via les fenêtres ou le terminal)</li>
 <li>les applications (ls, firefox) : les programmes qu&rsquo;on fait tourner grâce au shell</li>
 </ul>
-<p><img src="./img/OS_Layers.jpg" alt="Couches d&rsquo;un OS" />{width=300px}</p>
+<p><img src="./img/OS_Layers.jpg" alt="Couches d&rsquo;un OS" /></p>
 <h2 id="grandes-familles-de-systèmes-dexploitation">
   Grandes familles de systèmes d&rsquo;exploitation
   <a class="anchor" href="#grandes-familles-de-syst%c3%a8mes-dexploitation">#</a>
 </h2>
 <p>On en rencontre massivement deux :</p>
 <ul>
-<li><strong>Windows</strong> et ses dérivés (MSDOS (~1985), Windows NT (1999), windows 7-&gt;10 (2008)). Domine le marché du PC &ldquo;personnel&rdquo;</li>
+<li><strong>Windows</strong> et ses dérivés (MSDOS (~1985), Windows NT (1999), windows 7-&gt;11 (2008)). Domine le marché du PC &ldquo;personnel&rdquo;</li>
 <li><strong>UNIX</strong> et ses dérivés : bsd (systèmes embarqués, réseaux d&rsquo;entreprises), linux (partout dont android, super calculateurs, PC personnels, serveur web), OSX &amp; iOS (produits apple)</li>
 </ul>
 <h3 id="linux-et-les-systèmes-libres">
@@ -7244,7 +7244,7 @@ majoritairement sous windows.</p>
   GNU/Linux
   <a class="anchor" href="#gnulinux">#</a>
 </h3>
-<p>Cet acronynime désigne :</p>
+<p>Cet acronyme désigne :</p>
 <ul>
 <li>Le noyau linux lui même</li>
 <li>La couche logicielle GNU qu&rsquo;on trouve dans tous les systèmes UNIX.</li>
@@ -7270,16 +7270,16 @@ majoritairement sous windows.</p>
 </span></span></code></pre></div><p>On tape dans le console une commande, puis entrée, elle est lue, exécutée, la sortie apparait.
 Et on recommence.</p>
 <p>C&rsquo;est à la fois le plus simple et le plus puissant.</p>
-<h2 id="terminal-user-interface">
+<h3 id="terminal-user-interface">
   Terminal User Interface
   <a class="anchor" href="#terminal-user-interface">#</a>
-</h2>
+</h3>
 <p><img src="./img/btop.png" alt="btop, une interface TUI" />{width=300px}</p>
 <p>Toujours dans un terminal mais cette fois on peut intéragir (clavier, souris)</p>
-<h2 id="graphical-user-interface">
+<h3 id="graphical-user-interface">
   Graphical User Interface
   <a class="anchor" href="#graphical-user-interface">#</a>
-</h2>
+</h3>
 <p>Clic clic clic, inutile de présenter, vous connaissez.</p>
 <h2 id="le-terminal">
   Le terminal
@@ -7288,7 +7288,7 @@ Et on recommence.</p>
 <p>Dans le vocabulaire courant shell, terminal et console désignent grosso modo la même chose : une fenêtre dans laquelle on peut taper des commandes.</p>
 <p>Soyons plus précis :</p>
 <ul>
-<li>Shell : Un shell Unix est un interpréteur de commandes destiné aux systèmes d&rsquo;exploitation Unix qui permet d&rsquo;accéder aux fonctionnalités internes du système d&rsquo;exploitation. Il se présente sous la forme d&rsquo;une CLI accessible depuis la console ou un terminal</li>
+<li>Shell : Un shell Unix est un <em>interpréteur de commandes</em> destiné aux systèmes d&rsquo;exploitation Unix qui permet d&rsquo;accéder aux fonctionnalités internes du système d&rsquo;exploitation. Il se présente sous la forme d&rsquo;une CLI accessible depuis la console ou un terminal</li>
 <li>Terminal : point d’accès de communication entre l&rsquo;homme et un ordinateur central ou un réseau d&rsquo;ordinateurs. il désigne par abus de langage une fenêtre d&rsquo;invite de commande donnant accès à un shell Unix.</li>
 <li>Console : périphérique informatique de télécommunications des entrées-sorties d&rsquo;un système de traitement de l&rsquo;information. C&rsquo;est généralement un terminal dédié uniquement à l&rsquo;envoi et au retour des commandes.</li>
 </ul>
@@ -7649,10 +7649,10 @@ Le bon usage est néanmoins de respecter la sémantique des signaux&hellip;</p>
     <li><a href="#cli-tui-gui">CLI, TUI, GUI</a>
       <ul>
         <li><a href="#client-line-interface">Client Line Interface</a></li>
+        <li><a href="#terminal-user-interface">Terminal User Interface</a></li>
+        <li><a href="#graphical-user-interface">Graphical User Interface</a></li>
       </ul>
     </li>
-    <li><a href="#terminal-user-interface">Terminal User Interface</a></li>
-    <li><a href="#graphical-user-interface">Graphical User Interface</a></li>
     <li><a href="#le-terminal">Le terminal</a></li>
     <li><a href="#arborescence-unix">Arborescence UNIX</a>
       <ul>

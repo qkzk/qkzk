@@ -12,6 +12,7 @@
 Les nombres en binaires sont longs.
 On utilise souvent la base 16 pour les manipuler plus facilement.
 $16=2^4$ et utiliser une puissance a de nombreux avantages.
+Le principe reste la notation positionnelle déjà abordée en binaire et utilisée en décimal.
 
   Chiffre hexadécimaux
   #
@@ -73,6 +74,7 @@ On utilise 16 chiffres :
   <meta property="og:title" content="Hexa : Cours">
   <meta property="og:description" content="pdf pour impression et diaporama
 Hexadécimal # Les nombres en binaires sont longs. On utilise souvent la base 16 pour les manipuler plus facilement. $16=2^4$ et utiliser une puissance a de nombreux avantages.
+Le principe reste la notation positionnelle déjà abordée en binaire et utilisée en décimal.
 Chiffre hexadécimaux # On utilise 16 chiffres :
 Hexa 0 1 2 3 4 5 6 7 8 9 A B C D E F Décimal 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 chiffres : 0 1 2 4 5 6 7 8 9 A B C D E F # Je répète : il y a 16 chiffres en hexadécimal : 0 1 2 4 5 6 7 8 9 A B C D E F">
   <meta property="og:locale" content="en_us">
@@ -82,7 +84,7 @@ Hexa 0 1 2 3 4 5 6 7 8 9 A B C D E F Décimal 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/book.min.24c2b1f8dc2338e074345eec5b36f8a002aaa6d1b2e7312e14ac2d6a6958c876.css" integrity="sha256-JMKx&#43;NwjOOB0NF7sWzb4oAKqptGy5zEuFKwtamlYyHY=" crossorigin="anonymous">
 <script defer src="/flexsearch.min.js"></script>
-<script defer src="/en.search.min.9086c953ddda31064d09f1417c7983c354318afc161f477943c5cc36a256bccf.js" integrity="sha256-kIbJU93aMQZNCfFBfHmDw1QxivwWH0d5Q8XMNqJWvM8=" crossorigin="anonymous"></script>
+<script defer src="/en.search.min.f9c7f58ca42b6c9c817deb1d8a9b62439e76b28694b383abcc95e02a7b6e54a7.js" integrity="sha256-&#43;cf1jKQrbJyBfesdiptiQ552soaUs4OrzJXgKntuVKc=" crossorigin="anonymous"></script>
 
 <link rel="alternate" type="application/rss+xml" href="http://localhost:1313/docs/nsi/cours_premiere/donnees_simples/hexadecimal/1_cours/index.xml" title="qkzk" />
 <!--
@@ -7167,6 +7169,7 @@ MathJax.Hub.Config({
     </li>
     <li><a href="#le-contenu-dun-fichier">Le contenu d&rsquo;un fichier</a>
       <ul>
+        <li><a href="#que-fait-la-commande-">Que fait la commande ?</a></li>
         <li><a href="#comment-lire-le-résultat-">Comment lire le résultat ?</a></li>
       </ul>
     </li>
@@ -7191,6 +7194,7 @@ MathJax.Hub.Config({
 <p>Les nombres en binaires sont longs.
 On utilise souvent la base 16 pour les manipuler plus facilement.
 $16=2^4$ et utiliser une puissance a de nombreux avantages.</p>
+<p>Le principe reste la notation positionnelle déjà abordée en binaire et utilisée en décimal.</p>
 <h3 id="chiffre-hexadécimaux">
   Chiffre hexadécimaux
   <a class="anchor" href="#chiffre-hexad%c3%a9cimaux">#</a>
@@ -7246,7 +7250,8 @@ $16=2^4$ et utiliser une puissance a de nombreux avantages.</p>
 </h3>
 <blockquote class="book-hint info">
   <p><strong>Je répète : il y a 16 chiffres en hexadécimal : 0 1 2 4 5 6 7 8 9 A B C D E F</strong></p>
-<p><strong>A</strong> est un chiffre en hexadécimal. Il vaut 10 en décimal.<br>
+<p><strong>3</strong> est un chiffre en hexadécimal. Il vaut 3 en décimal.<br>
+<strong>A</strong> est un chiffre en hexadécimal. Il vaut 10 en décimal.<br>
 <strong>F</strong>  est un chiffre en hexadécimal. Il vaut 15 en décimal.</p>
 
 </blockquote>
@@ -7278,6 +7283,7 @@ $16=2^4$ et utiliser une puissance a de nombreux avantages.</p>
 </h2>
 <p>Pour la machine, l&rsquo;unité de stockage la plus petite n&rsquo;est pas le bit mais
 l&rsquo;octet.</p>
+<p><em>On ne peut pas écrire un bit en mémoire, on doit écrire au moins un octet à la fois</em>.</p>
 <h3 id="comment-représenter-facilement-un-octet-">
   Comment représenter facilement un octet ?
   <a class="anchor" href="#comment-repr%c3%a9senter-facilement-un-octet-">#</a>
@@ -7377,7 +7383,7 @@ De l'orange...
 </details>
 
 <blockquote class="book-hint info">
-  <p>Dans ce modèle (1 octet par niveau de rouge / vert / bleu), on peut représenter : $256^3 = 16^6= 2^{24} = 16<del>777</del>216$ de couleurs.</p>
+  <p>Dans ce modèle (1 octet par niveau de rouge / vert / bleu), on peut représenter : $256^3 = 16^6= 2^{24} = 16 777 216$ de couleurs.</p>
 <p>Le résultat n&rsquo;a pas grande importance, la méthode si.</p>
 
 </blockquote>
@@ -7434,7 +7440,10 @@ Comment lire facilement les octets qui la constituent ?</p>
 </span></span><span style="display:flex;"><span><span style="color:#f60">0000070</span> <span style="color:#f60">0000</span> <span style="color:#f60">0000</span> 2dd3 636c 736d <span style="color:#f60">0000</span> <span style="color:#f60">0000</span> <span style="color:#f60">0000</span>
 </span></span><span style="display:flex;"><span><span style="color:#f60">0000080</span> <span style="color:#f60">0000</span> <span style="color:#f60">0000</span> <span style="color:#f60">0000</span> <span style="color:#f60">0000</span> <span style="color:#f60">0000</span> <span style="color:#f60">0000</span> <span style="color:#f60">0000</span> <span style="color:#f60">0000</span>
 </span></span><span style="display:flex;"><span>*
-</span></span></code></pre></div><p><strong>Que fait la commande ?</strong></p>
+</span></span></code></pre></div><h3 id="que-fait-la-commande-">
+  Que fait la commande ?
+  <a class="anchor" href="#que-fait-la-commande-">#</a>
+</h3>
 <div class="highlight"><pre tabindex="0" style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>hexdump img/ff0080.jpg | head
 </span></span></code></pre></div><ul>
 <li><code>hexdump</code> : renvoie les octets d&rsquo;un fichier sous forme hexadécimale</li>
@@ -7575,6 +7584,7 @@ la machine interprète à l&rsquo;aide d&rsquo;un programme et affiche à l&rsqu
     </li>
     <li><a href="#le-contenu-dun-fichier">Le contenu d&rsquo;un fichier</a>
       <ul>
+        <li><a href="#que-fait-la-commande-">Que fait la commande ?</a></li>
         <li><a href="#comment-lire-le-résultat-">Comment lire le résultat ?</a></li>
       </ul>
     </li>

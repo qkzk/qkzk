@@ -6,7 +6,7 @@ weight: 2
 
 pdf [pour impression](./chaines_td.pdf)
 
-## Exercice 1
+## Exercice 1 - Questions générales
 
 1. Citer trois encodages différents permettant de représenter des chaînes de caractères en mémoire.
 2. Lesquels utilisent une taille fixe ?
@@ -20,89 +20,6 @@ pdf [pour impression](./chaines_td.pdf)
    - Peut-on savoir s'il est encodé en UTF-8 ? Comment ?
    - Et sinon ? Peut-on être confiant qu'en au fait qu'il soit encodé d'une manière ou d'une autre ?
 
-## Exercice 2 - Chiffrement de César
-
-Le chiffrement de César est un des premiers algorithmes de chiffrement documenté.
-Soit-disant utilisé par Jules César lui-même, il consiste à décaler chaque
-lettre d'un texte de trois position dans l'alphabet.
-
-Ainsi `A` devient `D`, `B` devient `E` etc.
-Arrivée à la fin de l'alphabet, on recommence au début : `X` devient `A`, `Z` devient `C`
-
-Pour décoder un message, on applique la transformation inverse.
-
-Il est simple d'écrire une fonction de chiffrement en 5 lignes de Python.
-La fonction de déchiffrement nécessite alors de changer un seul symbole !
-
-Voici l'aide des fonctions `ord` et `chr`
-
-```
-Help on built-in function ord in module builtins:
-
-ord(c, /)
-    Return the Unicode code point for a one-character string.
-
-
-Help on built-in function chr in module builtins:
-
-chr(i, /)
-    Return a Unicode string of one character with ordinal i; 0 <= i <= 0x10ffff.
-```
-
-1. Que produit l'instruction `ord("A")` ?
-2. Enchaînons : `chr(ord("A"))` ?
-3. Que faire pour obtenir un `"D"` quand on passe un `"A"` ?
-4. Englober le tout dans une première fonction `cesar` qui prend une lettre
-   et l'encode.
-5. La version précédente a deux défauts :
-
-   - Elle n'accepte qu'une lettre à la fois,
-   - `"X"`, `"Y"` et `"Z"` ne sont pas encodés par des lettres.
-
-   1. À l'aide d'une boucle, résoudre le prermier problème.
-
-      Souvenons-nous que `"bonjour" + "Quentin" == "bonjourQuentin"`
-
-   2. Quelle opération Python permet d'obtenir le reste d'une division euclidienne ?
-
-6. Version complète.
-
-   Afin de toujours obtenir une lettre, même pour `"X"`, `"Y"` et `"Z"`,
-   nous allons :
-
-   1. Ramener chaque entier entre 0 et 25.
-
-      Combien faut-il soustraire à `ord(lettre)` pour qu'une majuscule renvoie
-      toujours en entier entre 0 et 25 ?
-
-   2. Ajouter 3.
-   3. Prendre un reste modulo 26.
-   4. Ajouter le même entier qu'à l'étape 1.
-
-   Écrire l'opération complète réalisée sur chaque lettre.
-
-7. Englober le tout dans une fonction `cesar` qui prend en paramètre
-   une chaîne de caractère (seulement des lettres majuscules, aucune espace
-   ni ponctuation) et renvoie sa version encodée.
-
-   ```python
-   >>> cesar("BONJOUR")
-   'ERQMRXU'
-   ```
-
-8. Écrire la fonction de décodage.
-
-   ```python
-   >>> decesar('ERQMRXU')
-   'BONJOUR'
-   ```
-
-9. Dans certains forums old school, on trouve une fonction appelée `rot13` et qui
-   consiste à effectuer un chiffrement de César avec une clé valant 13 sur du texte ASCII.
-
-   1. Effectuez `x = rot13("ABC")`.
-   2. Effectuez `rot13(x)`.
-   3. Que remarque-t-on ? Expliquer.
 
 ## Exercice 2 - Se déplacer dans la table ASCII
 
@@ -191,7 +108,7 @@ NAME
    on dispose de la représentation binaire ?
 5. À quelle opération mathématique cela correspond-t-il ?
 
-## Exercice 3
+## Exercice 3 - Python
 
 Nous allons étudier ce que fait l'instruction Python suivante :
 
@@ -232,27 +149,27 @@ Elle est composée de trois parties :
 4. Le premier paramètre de la fonction `open`, dans l'instruction plus haut
    est `ascii_table.txt`.
 
-Voici un extrait de la documentation Python
+   Voici un extrait de la documentation Python
 
-```
-open(file, mode='r', encoding=None, ... )
-  Open file and return a stream.  Raise OSError upon failure.
+   ```
+   open(file, mode='r', encoding=None, ... )
+     Open file and return a stream.  Raise OSError upon failure.
 
-  file is either a text or byte string giving the name (and the path
-    if the file isn't in the current working directory) of the file to
-    be opened
-```
+     file is either a text or byte string giving the name (and the path
+       if the file isn't in the current working directory) of the file to
+       be opened
+   ```
 
-Quel est le résultat de l'instruction `open("ascii_table.txt", "wb")` ?
+   Quel est le résultat de l'instruction `open("ascii_table.txt", "wb")` ?
 
-4. Appliquée à un fichier ouvert en mémoire, la méthode `write` en mode accepte
+5. Appliquée à un fichier ouvert en mémoire, la méthode `write` en mode accepte
    en paramètre soit une chaîne de caractère, soit une collection itérable
    d'octets (`bytearray`).
 
 Maintenant que nous avons étudié toutes les parties, quel devrait-être le
 résultat de l'instruction complète ?
 
-5. Vérifier en exécutant l'instruction.
+6. Vérifier en exécutant l'instruction.
 
    Si vous utilisez _Basthon_, vous pouvez consulter le contenu du fichier
    avec :
@@ -377,7 +294,103 @@ les bits `0xxxxxxx`
    Vérifier vos réponses aux questions 1 et 2 avec Python (sur mobile ou en ligne
    si nécessaire).
 
-## Exercice 6 - Latin cochon
+{{< python title="base 64" >}}
+import base64
+print(base64.b64encode(b"salut").decode("utf-8"))
+print(base64.b64decode(b'SGkh').decode("utf-8"))
+{{< /python >}}
+
+## Exercice 6 - Chiffrement de César
+
+Le chiffrement de César est un des premiers algorithmes de chiffrement documenté.
+Soit-disant utilisé par Jules César lui-même, il consiste à décaler chaque
+lettre d'un texte de trois position dans l'alphabet.
+
+Ainsi `A` devient `D`, `B` devient `E` etc.
+Arrivée à la fin de l'alphabet, on recommence au début : `X` devient `A`, `Z` devient `C`
+
+Pour décoder un message, on applique la transformation inverse.
+
+On peut écrire une fonction de chiffrement en 5 lignes de Python.
+La fonction de déchiffrement nécessite alors de changer un seul symbole !
+
+Voici l'aide des fonctions `ord` et `chr`
+
+```
+Help on built-in function ord in module builtins:
+
+ord(c, /)
+    Return the Unicode code point for a one-character string.
+
+
+Help on built-in function chr in module builtins:
+
+chr(i, /)
+    Return a Unicode string of one character with ordinal i; 0 <= i <= 0x10ffff.
+```
+
+1. Que produit l'instruction `ord("A")` ?
+2. Enchaînons : `chr(ord("A"))` ?
+3. Que faire pour obtenir un `"D"` quand on passe un `"A"` ?
+4. Englober le tout dans une première fonction `cesar` qui prend une lettre
+   et l'encode.
+5. La version précédente a deux défauts :
+
+   - Elle n'accepte qu'une lettre à la fois,
+   - `"X"`, `"Y"` et `"Z"` ne sont pas encodés par des lettres.
+
+   1. À l'aide d'une boucle, résoudre le prermier problème.
+
+      Souvenons-nous que `"bonjour" + "Quentin" == "bonjourQuentin"`
+
+   2. Quelle opération Python permet d'obtenir le reste d'une division euclidienne ?
+
+6. Version complète.
+
+   Afin de toujours obtenir une lettre, même pour `"X"`, `"Y"` et `"Z"`,
+   nous allons :
+
+   1. Ramener chaque entier entre 0 et 25.
+
+      Combien faut-il soustraire à `ord(lettre)` pour qu'une majuscule renvoie
+      toujours en entier entre 0 et 25 ?
+
+   2. Ajouter 3.
+   3. Prendre un reste modulo 26.
+   4. Ajouter le même entier qu'à l'étape 1.
+
+   Écrire l'opération complète réalisée sur chaque lettre.
+
+7. Englober le tout dans une fonction `cesar` qui prend en paramètre
+   une chaîne de caractère (seulement des lettres majuscules, aucune espace
+   ni ponctuation) et renvoie sa version encodée.
+
+   ```python
+   >>> cesar("BONJOUR")
+   'ERQMRXU'
+   ```
+
+8. Écrire la fonction de décodage.
+
+   ```python
+   >>> decesar('ERQMRXU')
+   'BONJOUR'
+   ```
+
+9. Dans certains forums old school, on trouve une fonction appelée `rot13` et qui
+   consiste à effectuer un chiffrement de César avec une clé valant 13 sur du texte ASCII.
+
+   1. Effectuez `x = rot13("ABC")`.
+   2. Effectuez `rot13(x)`.
+   3. Que remarque-t-on ? Expliquer.
+
+
+
+{{< expand "5" "..." >}}
+[Cesar](./cesar.py)
+{{< /expand>}}
+
+## Exercice 7 - Latin cochon
 
 Pour écrire en Latin cochon, on transforme chaque mot commençant par une consonne selon la
 recette suivante :
@@ -409,3 +422,8 @@ def mot_latin_cochon(mot: str) -> str:
 def phrase_latin_cochon(phrase: str) -> str:
   pass
 ```
+
+{{< expand "5" "..." >}}
+[latin_cochon](./latin_cochon.py)
+{{< /expand>}}
+

@@ -26,7 +26,11 @@ De combien de symboles a-t-on besoin ?
 - Un peu de ponctuation : `,;:!?./*$-+=()[]{}"'` etc.
 - Quelques caractères techniques (retour à la ligne, espace etc.)
 
-On dépasse $2^6 = 64$ mais en se contentant du minimum, on reste en dessous de $2^7 = 128$. On peut encoder une table assez vaste avec 7 bits.
+On dépasse $2^6 = 64$ mais en se contentant du minimum, on reste en dessous de $2^7 = 128$. 
+
+L'idée est de trouver une représentation de chacun de ces caractères par un nombre. C'est un _encodage_.
+
+On peut encoder une table assez vaste avec 7 bits.
 
 Idée d'ASCII (1961) : uniformiser les nombreux encodages incompatibles entre eux.
 
@@ -38,14 +42,19 @@ L'encodage ASCII est l'encodage universel dont tous les autres dérivent.
 
 ### Remarques sur la table précédente
 
+- Elle se lit ainsi : `)` est encodé par l'entier $41_{10} = 29_{16}$.
 - Tout élément de la table est codé sur 7 bits, 1 octet par caractère suffit
 - Les caractères codés entre 32 et 127 sont imprimables, les autres sont des caractères de contrôle.
 - Certains caractères de contrôle ont un effet sur le texte comme le numéro 9 : `\t` (tabulation) ou le 10 : `\n` (retour à la ligne).
 - Les chiffres commencent à $30_{16}$, les majuscules à $41_{16}$ et les minuscules à $61_{16}$
 - Pour obtenir la notation binaire, on part de l'hexa.\
   Premier chiffre : 3 bits, second chiffre 4 bits
-  $$A \rightarrow 41_{16} \rightarrow 4\times 16 + 1 \rightarrow 0100~0001$$
-  $$s \rightarrow 73_{16} \rightarrow 7\times 16 + 3 \rightarrow 0111~0011$$
+
+  $$A \rightarrow 41_{16} \rightarrow 4\times 16 + 1 \rightarrow 100~0001$$
+  
+  ou 
+
+  $$s \rightarrow 73_{16} \rightarrow 7\times 16 + 3 \rightarrow 111~0011$$
 
 ### Les 95 caractères imprimables
 
@@ -74,7 +83,7 @@ C'est le seul encodage "qui marche toujours".
 
 Si vous voyez un accent, ce n'est pas de l'ASCII.
 
-L'organisation astucieuse permet de passer facilement de changer la casse.
+L'organisation astucieuse permet de passer facilement de passer des majuscules aux minuscules.
 
 {{< /hint >}}
 
@@ -97,6 +106,8 @@ Les fonctions `chr` et `ord` permettent d'accéder à la table
 `abcdefghijklmnopqrstuvwxyz{|}~
 ```
 
+**Réponse**
+
 {{< expand "5" "..." >}}
 
 ```python
@@ -109,11 +120,25 @@ print()
 
 {{< /expand >}}
 
+**Explications**
+
+{{< expand "explications" "..." >}}
+
+Pour `c` allant de 32 à 127 inclus, 
+- si 32 divise `c`, aller à la ligne : `print()`
+- afficher `chr(c)` qui est le caractère de la table ASCII $^1$
+
+
+$^1$ `chr` utilise l'encodage UTF-8 qui étend ASCII, on en parlera plus tard.
+{{< /expand >}}
+
 ## iso-8859-1 ou iso-Latin-1
 
 Comment compléter la table ASCII ?
 
-L'encodage iso-8859-1, dit iso-Latin-1 est apparu en 1986 et correspond à l'Europe de l'ouest.
+**Première idée :** conserver une taille fixe de 1 octet. 256 octets en tout dont 128 dans la table ASCII, il en reste 128 libres.
+
+L'encodage iso-8859-1, dit iso-Latin-1 est apparu en 1986 et est utilisé en Europe de l'ouest.
 D'autres versions pour les caractères iso-Latin-2 de l'Europe de l'est etc.
 
 - Reprend la table ascii et ajoute les accents au coût d'un bit supplémentaire (à gauche).
@@ -125,6 +150,7 @@ D'autres versions pour les caractères iso-Latin-2 de l'Europe de l'est etc.
 
 - Windows (Windows-1252) et Mac (MacRoman) ont leurs propres versions rendant
   l'échange de documents et développement de logiciels **plus que pénibles.**
+- Les variantes iso-Latin-1, iso-Latin-2 etc sont incompatibles entre-elles.
 
 Bref, c'est ~~de la merde~~ imparfait mais cet encodage étant encore la norme sous Windows, il faudra faire avec.
 
@@ -170,7 +196,7 @@ On a ensuite, peu à peu, étendu ce projet à tous les symboles existant.
 
 ## Principe simplifié d'UTF-8
 
-- UTF-x n'utilise pas une taille fixe pour chaque caractère. Les plus courants occupent 1 bits.
+- UTF-x utilise une taille variable pour chaque caractère. Les plus courants occupent 1 bits.
 - Chaque caractère est codé avec une séquence de 1 à 4 octets.
 - Un texte encodé en ASCII est encodé de la même manière en UTF8 (sauf exception)
 - Les premiers bits indiquent la taille de la séquence :
@@ -180,8 +206,8 @@ On a ensuite, peu à peu, étendu ce projet à tous les symboles existant.
   - `11110xxx 1001xxxx 10xxxxxx 10xxxxxx : 4 octets`
 - Lorsqu'un document est encode en ASCII :
 
-  - Si on lit un octet comme `0100 0001` on sait que c'est un caractère complet (`A`).
-  - Lorsqu'il commence par `1110....` il faut lire _les deux octets suivants_ pour connaître le caractère.
+  - Si un caractère commence par un `0` alors il occupe 1 octet et c'est le même que dans la table ASCII : `0100 0001 -> A`
+  - Sinon on compte le nombre `1` initiaux. Par exemple `1110....` alors le caractère occupe 3 octets. Il faut lire aussi les deux octets suivants pour déterminer le caractère complet.
 
 - On note `U+XXXX` un caractère encodé en UTF-8
 - La taille est variable (génant pour les développeurs novices), l'espace en mémoire est parfois important
@@ -247,9 +273,9 @@ On utilise les fonctions `chr` et `ord`
 
 **WHAT ?**
 
-- La lettre **é** a été _encodée_ en **UTF-8** (parce que 2 caractères sont affichés)\
+- La lettre **é** du mot "_écrit_" a été _encodée_ en **UTF-8** (parce que 2 caractères sont affichés)\
   En mémoire elle occupe 2 octets (elle n'est pas dans la table ascii)
-- Ces deux octets ont été _décodés_ en **iso-latin1** (1 octet par caractère), respectivement en
+- Ces deux octets ont été _décodés_ en **iso-latin1** (1 octet par caractère), respectivement en `Ã` et `©`
 
 ---
 
@@ -269,7 +295,7 @@ d'un texte au format ASCII grâce à la représentation de ces données en base 
 Le terme base64 vient à l'origine de l'encodage utilisé pour transférer
 certains contenus MIME (Extensions multifonctions du courrier Internet).
 
-base64 est aussi employé pour transmettre des du contenu dans les URL.
+base64 est aussi employé pour transmettre du contenu dans les URL.
 
 ### Principes de base 64
 

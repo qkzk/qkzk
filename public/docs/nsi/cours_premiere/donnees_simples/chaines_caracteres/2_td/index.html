@@ -6,7 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="pdf pour impression
 
-  Exercice 1
+  Exercice 1 - Questions générales
   #
 
 
@@ -28,7 +28,7 @@ On reçoit un paquet d&rsquo;octets supposés représenter du texte dont on ne c
   <meta property="og:site_name" content="qkzk">
   <meta property="og:title" content="Chaînes : TD">
   <meta property="og:description" content="pdf pour impression
-Exercice 1 # Citer trois encodages différents permettant de représenter des chaînes de caractères en mémoire.
+Exercice 1 - Questions générales # Citer trois encodages différents permettant de représenter des chaînes de caractères en mémoire.
 Lesquels utilisent une taille fixe ?
 Dans la mémoire on lit l’octet 0x41 de représentation binaire 0100 0001 et valant 65. Est-ce une lettre ? Si oui laquelle ? Un nombre ?
 Plaçons-nous à la place d’une machine incapable de comprendre la signification d’un texte.
@@ -40,7 +40,7 @@ On reçoit un paquet d’octets supposés représenter du texte dont on ne conna
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/book.min.24c2b1f8dc2338e074345eec5b36f8a002aaa6d1b2e7312e14ac2d6a6958c876.css" integrity="sha256-JMKx&#43;NwjOOB0NF7sWzb4oAKqptGy5zEuFKwtamlYyHY=" crossorigin="anonymous">
 <script defer src="/flexsearch.min.js"></script>
-<script defer src="/en.search.min.9086c953ddda31064d09f1417c7983c354318afc161f477943c5cc36a256bccf.js" integrity="sha256-kIbJU93aMQZNCfFBfHmDw1QxivwWH0d5Q8XMNqJWvM8=" crossorigin="anonymous"></script>
+<script defer src="/en.search.min.f9c7f58ca42b6c9c817deb1d8a9b62439e76b28694b383abcc95e02a7b6e54a7.js" integrity="sha256-&#43;cf1jKQrbJyBfesdiptiQ552soaUs4OrzJXgKntuVKc=" crossorigin="anonymous"></script>
 
 <link rel="alternate" type="application/rss+xml" href="http://localhost:1313/docs/nsi/cours_premiere/donnees_simples/chaines_caracteres/2_td/index.xml" title="qkzk" />
 <!--
@@ -7097,17 +7097,17 @@ MathJax.Hub.Config({
 <h1>Table des matières</h1>
 <nav id="TableOfContents">
   <ul>
-    <li><a href="#exercice-1">Exercice 1</a></li>
-    <li><a href="#exercice-2---chiffrement-de-césar">Exercice 2 - Chiffrement de César</a></li>
+    <li><a href="#exercice-1---questions-générales">Exercice 1 - Questions générales</a></li>
     <li><a href="#exercice-2---se-déplacer-dans-la-table-ascii">Exercice 2 - Se déplacer dans la table ASCII</a></li>
-    <li><a href="#exercice-3">Exercice 3</a>
+    <li><a href="#exercice-3---python">Exercice 3 - Python</a>
       <ul>
         <li><a href="#questions">Questions</a></li>
       </ul>
     </li>
     <li><a href="#exercice-4---un-peu-dutf-8">Exercice 4 - Un peu d&rsquo;UTF-8</a></li>
     <li><a href="#exercice-5---base64">Exercice 5 - base64</a></li>
-    <li><a href="#exercice-6---latin-cochon">Exercice 6 - Latin cochon</a></li>
+    <li><a href="#exercice-6---chiffrement-de-césar">Exercice 6 - Chiffrement de César</a></li>
+    <li><a href="#exercice-7---latin-cochon">Exercice 7 - Latin cochon</a></li>
   </ul>
 </nav>
 
@@ -7122,9 +7122,9 @@ MathJax.Hub.Config({
                 
                 
 <article class="markdown"><p>pdf <a href="./chaines_td.pdf">pour impression</a></p>
-<h2 id="exercice-1">
-  Exercice 1
-  <a class="anchor" href="#exercice-1">#</a>
+<h2 id="exercice-1---questions-générales">
+  Exercice 1 - Questions générales
+  <a class="anchor" href="#exercice-1---questions-g%c3%a9n%c3%a9rales">#</a>
 </h2>
 <ol>
 <li>
@@ -7145,103 +7145,6 @@ Est-ce une lettre ? Si oui laquelle ? Un nombre ?</p>
 <li>Peut-on savoir s&rsquo;il est encodé en UTF-8 ? Comment ?</li>
 <li>Et sinon ? Peut-on être confiant qu&rsquo;en au fait qu&rsquo;il soit encodé d&rsquo;une manière ou d&rsquo;une autre ?</li>
 </ul>
-</li>
-</ol>
-<h2 id="exercice-2---chiffrement-de-césar">
-  Exercice 2 - Chiffrement de César
-  <a class="anchor" href="#exercice-2---chiffrement-de-c%c3%a9sar">#</a>
-</h2>
-<p>Le chiffrement de César est un des premiers algorithmes de chiffrement documenté.
-Soit-disant utilisé par Jules César lui-même, il consiste à décaler chaque
-lettre d&rsquo;un texte de trois position dans l&rsquo;alphabet.</p>
-<p>Ainsi <code>A</code> devient <code>D</code>, <code>B</code> devient <code>E</code> etc.
-Arrivée à la fin de l&rsquo;alphabet, on recommence au début : <code>X</code> devient <code>A</code>, <code>Z</code> devient <code>C</code></p>
-<p>Pour décoder un message, on applique la transformation inverse.</p>
-<p>Il est simple d&rsquo;écrire une fonction de chiffrement en 5 lignes de Python.
-La fonction de déchiffrement nécessite alors de changer un seul symbole !</p>
-<p>Voici l&rsquo;aide des fonctions <code>ord</code> et <code>chr</code></p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>Help on built-in function ord in module builtins:
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>ord(c, /)
-</span></span><span style="display:flex;"><span>    Return the Unicode code point for a one-character string.
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>Help on built-in function chr in module builtins:
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>chr(i, /)
-</span></span><span style="display:flex;"><span>    Return a Unicode string of one character with ordinal i; 0 &lt;= i &lt;= 0x10ffff.
-</span></span></code></pre></div><ol>
-<li>
-<p>Que produit l&rsquo;instruction <code>ord(&quot;A&quot;)</code> ?</p>
-</li>
-<li>
-<p>Enchaînons : <code>chr(ord(&quot;A&quot;))</code> ?</p>
-</li>
-<li>
-<p>Que faire pour obtenir un <code>&quot;D&quot;</code> quand on passe un <code>&quot;A&quot;</code> ?</p>
-</li>
-<li>
-<p>Englober le tout dans une première fonction <code>cesar</code> qui prend une lettre
-et l&rsquo;encode.</p>
-</li>
-<li>
-<p>La version précédente a deux défauts :</p>
-<ul>
-<li>Elle n&rsquo;accepte qu&rsquo;une lettre à la fois,</li>
-<li><code>&quot;X&quot;</code>, <code>&quot;Y&quot;</code> et <code>&quot;Z&quot;</code> ne sont pas encodés par des lettres.</li>
-</ul>
-<ol>
-<li>
-<p>À l&rsquo;aide d&rsquo;une boucle, résoudre le prermier problème.</p>
-<p>Souvenons-nous que <code>&quot;bonjour&quot; + &quot;Quentin&quot; == &quot;bonjourQuentin&quot;</code></p>
-</li>
-<li>
-<p>Quelle opération Python permet d&rsquo;obtenir le reste d&rsquo;une division euclidienne ?</p>
-</li>
-</ol>
-</li>
-<li>
-<p>Version complète.</p>
-<p>Afin de toujours obtenir une lettre, même pour <code>&quot;X&quot;</code>, <code>&quot;Y&quot;</code> et <code>&quot;Z&quot;</code>,
-nous allons :</p>
-<ol>
-<li>
-<p>Ramener chaque entier entre 0 et 25.</p>
-<p>Combien faut-il soustraire à <code>ord(lettre)</code> pour qu&rsquo;une majuscule renvoie
-toujours en entier entre 0 et 25 ?</p>
-</li>
-<li>
-<p>Ajouter 3.</p>
-</li>
-<li>
-<p>Prendre un reste modulo 26.</p>
-</li>
-<li>
-<p>Ajouter le même entier qu&rsquo;à l&rsquo;étape 1.</p>
-</li>
-</ol>
-<p>Écrire l&rsquo;opération complète réalisée sur chaque lettre.</p>
-</li>
-<li>
-<p>Englober le tout dans une fonction <code>cesar</code> qui prend en paramètre
-une chaîne de caractère (seulement des lettres majuscules, aucune espace
-ni ponctuation) et renvoie sa version encodée.</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#555">&gt;&gt;&gt;</span> cesar(<span style="color:#c30">&#34;BONJOUR&#34;</span>)
-</span></span><span style="display:flex;"><span><span style="color:#c30">&#39;ERQMRXU&#39;</span>
-</span></span></code></pre></div></li>
-<li>
-<p>Écrire la fonction de décodage.</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#555">&gt;&gt;&gt;</span> decesar(<span style="color:#c30">&#39;ERQMRXU&#39;</span>)
-</span></span><span style="display:flex;"><span><span style="color:#c30">&#39;BONJOUR&#39;</span>
-</span></span></code></pre></div></li>
-<li>
-<p>Dans certains forums old school, on trouve une fonction appelée <code>rot13</code> et qui
-consiste à effectuer un chiffrement de César avec une clé valant 13 sur du texte ASCII.</p>
-<ol>
-<li>Effectuez <code>x = rot13(&quot;ABC&quot;)</code>.</li>
-<li>Effectuez <code>rot13(x)</code>.</li>
-<li>Que remarque-t-on ? Expliquer.</li>
-</ol>
 </li>
 </ol>
 <h2 id="exercice-2---se-déplacer-dans-la-table-ascii">
@@ -7330,9 +7233,9 @@ consiste à effectuer un chiffrement de César avec une clé valant 13 sur du te
 on dispose de la représentation binaire ?</li>
 <li>À quelle opération mathématique cela correspond-t-il ?</li>
 </ol>
-<h2 id="exercice-3">
-  Exercice 3
-  <a class="anchor" href="#exercice-3">#</a>
+<h2 id="exercice-3---python">
+  Exercice 3 - Python
+  <a class="anchor" href="#exercice-3---python">#</a>
 </h2>
 <p>Nous allons étudier ce que fait l&rsquo;instruction Python suivante :</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#366">open</span>(<span style="color:#c30">&#34;ascii_table.txt&#34;</span>, <span style="color:#c30">&#34;wb&#34;</span>)<span style="color:#555">.</span>write(<span style="color:#366">bytearray</span>(<span style="color:#366">range</span>(<span style="color:#f60">32</span>, <span style="color:#f60">128</span>)))
@@ -7372,8 +7275,6 @@ et voici un extrait de la documentation python :</p>
 <li>
 <p>Le premier paramètre de la fonction <code>open</code>, dans l&rsquo;instruction plus haut
 est <code>ascii_table.txt</code>.</p>
-</li>
-</ol>
 <p>Voici un extrait de la documentation Python</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>open(file, mode=&#39;r&#39;, encoding=None, ... )
 </span></span><span style="display:flex;"><span>  Open file and return a stream.  Raise OSError upon failure.
@@ -7382,14 +7283,16 @@ est <code>ascii_table.txt</code>.</p>
 </span></span><span style="display:flex;"><span>    if the file isn&#39;t in the current working directory) of the file to
 </span></span><span style="display:flex;"><span>    be opened
 </span></span></code></pre></div><p>Quel est le résultat de l&rsquo;instruction <code>open(&quot;ascii_table.txt&quot;, &quot;wb&quot;)</code> ?</p>
-<ol start="4">
-<li>Appliquée à un fichier ouvert en mémoire, la méthode <code>write</code> en mode accepte
+</li>
+<li>
+<p>Appliquée à un fichier ouvert en mémoire, la méthode <code>write</code> en mode accepte
 en paramètre soit une chaîne de caractère, soit une collection itérable
-d&rsquo;octets (<code>bytearray</code>).</li>
+d&rsquo;octets (<code>bytearray</code>).</p>
+</li>
 </ol>
 <p>Maintenant que nous avons étudié toutes les parties, quel devrait-être le
 résultat de l&rsquo;instruction complète ?</p>
-<ol start="5">
+<ol start="6">
 <li>
 <p>Vérifier en exécutant l&rsquo;instruction.</p>
 <p>Si vous utilisez <em>Basthon</em>, vous pouvez consulter le contenu du fichier
@@ -7511,9 +7414,166 @@ de tester l&rsquo;encodage et le décodage base64</p>
 si nécessaire).</p>
 </li>
 </ol>
-<h2 id="exercice-6---latin-cochon">
-  Exercice 6 - Latin cochon
-  <a class="anchor" href="#exercice-6---latin-cochon">#</a>
+<script src="http://localhost:1313/coi-serviceworker.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.63.3/codemirror.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.63.3/theme/idea.css">
+<link rel="stylesheet" href="http://localhost:1313/css/python_editor.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.63.3/codemirror.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.63.3/mode/python/python.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.63.3/addon/comment/comment.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.63.3/addon/display/fullscreen.js"></script>
+
+
+    <h3 id="base-64">
+  base 64
+  <a class="anchor" href="#base-64">#</a>
+</h3>
+
+
+
+<main>
+    <div id="python_ide_1">
+        <textarea id="commands_1" class="commands">
+
+import base64
+print(base64.b64encode(b&#34;salut&#34;).decode(&#34;utf-8&#34;))
+print(base64.b64decode(b&#39;SGkh&#39;).decode(&#34;utf-8&#34;))
+
+        </textarea>
+        <a class="execute book-btn" title="Ctrl+Enter">Run</a>
+        <a class="reset book-btn" title="Ctrl+R">Reset</a>
+        <a class="download book-btn" title="Ctrl+S">Download</a>
+        <a class="stop book-btn" title="Ctrl+D">Stop</a>
+        <pre class="python_output" style="display: none;">Résultat</pre>
+        <pre class="python_error" style="display: none;"></pre>
+        <pre class="worker_error" style="display: none;"></pre>
+    </div>
+</main>
+<script type="module">
+    import { onElementLoaded, init_worker } from "http:\/\/localhost:1313\/js/pyodide_consumer.js";
+
+    const url = "http:\/\/localhost:1313\/js/pyodide_webworker.js";
+
+    async function start_worker(ide) {
+        
+        let initfile = null;
+        
+        init_worker(ide, url, initfile);
+    }
+
+
+    onElementLoaded("div#python_ide_1").then(() => {
+        const ide = document.querySelector("div#python_ide_1");
+        start_worker(ide);
+    }).catch(() => { });
+</script>
+
+<h2 id="exercice-6---chiffrement-de-césar">
+  Exercice 6 - Chiffrement de César
+  <a class="anchor" href="#exercice-6---chiffrement-de-c%c3%a9sar">#</a>
+</h2>
+<p>Le chiffrement de César est un des premiers algorithmes de chiffrement documenté.
+Soit-disant utilisé par Jules César lui-même, il consiste à décaler chaque
+lettre d&rsquo;un texte de trois position dans l&rsquo;alphabet.</p>
+<p>Ainsi <code>A</code> devient <code>D</code>, <code>B</code> devient <code>E</code> etc.
+Arrivée à la fin de l&rsquo;alphabet, on recommence au début : <code>X</code> devient <code>A</code>, <code>Z</code> devient <code>C</code></p>
+<p>Pour décoder un message, on applique la transformation inverse.</p>
+<p>On peut écrire une fonction de chiffrement en 5 lignes de Python.
+La fonction de déchiffrement nécessite alors de changer un seul symbole !</p>
+<p>Voici l&rsquo;aide des fonctions <code>ord</code> et <code>chr</code></p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>Help on built-in function ord in module builtins:
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>ord(c, /)
+</span></span><span style="display:flex;"><span>    Return the Unicode code point for a one-character string.
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Help on built-in function chr in module builtins:
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>chr(i, /)
+</span></span><span style="display:flex;"><span>    Return a Unicode string of one character with ordinal i; 0 &lt;= i &lt;= 0x10ffff.
+</span></span></code></pre></div><ol>
+<li>
+<p>Que produit l&rsquo;instruction <code>ord(&quot;A&quot;)</code> ?</p>
+</li>
+<li>
+<p>Enchaînons : <code>chr(ord(&quot;A&quot;))</code> ?</p>
+</li>
+<li>
+<p>Que faire pour obtenir un <code>&quot;D&quot;</code> quand on passe un <code>&quot;A&quot;</code> ?</p>
+</li>
+<li>
+<p>Englober le tout dans une première fonction <code>cesar</code> qui prend une lettre
+et l&rsquo;encode.</p>
+</li>
+<li>
+<p>La version précédente a deux défauts :</p>
+<ul>
+<li>Elle n&rsquo;accepte qu&rsquo;une lettre à la fois,</li>
+<li><code>&quot;X&quot;</code>, <code>&quot;Y&quot;</code> et <code>&quot;Z&quot;</code> ne sont pas encodés par des lettres.</li>
+</ul>
+<ol>
+<li>
+<p>À l&rsquo;aide d&rsquo;une boucle, résoudre le prermier problème.</p>
+<p>Souvenons-nous que <code>&quot;bonjour&quot; + &quot;Quentin&quot; == &quot;bonjourQuentin&quot;</code></p>
+</li>
+<li>
+<p>Quelle opération Python permet d&rsquo;obtenir le reste d&rsquo;une division euclidienne ?</p>
+</li>
+</ol>
+</li>
+<li>
+<p>Version complète.</p>
+<p>Afin de toujours obtenir une lettre, même pour <code>&quot;X&quot;</code>, <code>&quot;Y&quot;</code> et <code>&quot;Z&quot;</code>,
+nous allons :</p>
+<ol>
+<li>
+<p>Ramener chaque entier entre 0 et 25.</p>
+<p>Combien faut-il soustraire à <code>ord(lettre)</code> pour qu&rsquo;une majuscule renvoie
+toujours en entier entre 0 et 25 ?</p>
+</li>
+<li>
+<p>Ajouter 3.</p>
+</li>
+<li>
+<p>Prendre un reste modulo 26.</p>
+</li>
+<li>
+<p>Ajouter le même entier qu&rsquo;à l&rsquo;étape 1.</p>
+</li>
+</ol>
+<p>Écrire l&rsquo;opération complète réalisée sur chaque lettre.</p>
+</li>
+<li>
+<p>Englober le tout dans une fonction <code>cesar</code> qui prend en paramètre
+une chaîne de caractère (seulement des lettres majuscules, aucune espace
+ni ponctuation) et renvoie sa version encodée.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#555">&gt;&gt;&gt;</span> cesar(<span style="color:#c30">&#34;BONJOUR&#34;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#c30">&#39;ERQMRXU&#39;</span>
+</span></span></code></pre></div></li>
+<li>
+<p>Écrire la fonction de décodage.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#555">&gt;&gt;&gt;</span> decesar(<span style="color:#c30">&#39;ERQMRXU&#39;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#c30">&#39;BONJOUR&#39;</span>
+</span></span></code></pre></div></li>
+<li>
+<p>Dans certains forums old school, on trouve une fonction appelée <code>rot13</code> et qui
+consiste à effectuer un chiffrement de César avec une clé valant 13 sur du texte ASCII.</p>
+<ol>
+<li>Effectuez <code>x = rot13(&quot;ABC&quot;)</code>.</li>
+<li>Effectuez <code>rot13(x)</code>.</li>
+<li>Que remarque-t-on ? Expliquer.</li>
+</ol>
+</li>
+</ol>
+<details  class="no-outline"><summary class="no-outline"></summary>
+    <div class="markdown-inner">
+        <a href="./cesar.py">Cesar</a>
+    </div>
+</details>
+
+<h2 id="exercice-7---latin-cochon">
+  Exercice 7 - Latin cochon
+  <a class="anchor" href="#exercice-7---latin-cochon">#</a>
 </h2>
 <p>Pour écrire en Latin cochon, on transforme chaque mot commençant par une consonne selon la
 recette suivante :</p>
@@ -7541,7 +7601,13 @@ recette suivante :</p>
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#069;font-weight:bold">def</span> <span style="color:#c0f">phrase_latin_cochon</span>(phrase: <span style="color:#366">str</span>) <span style="color:#555">-&gt;</span> <span style="color:#366">str</span>:
 </span></span><span style="display:flex;"><span>  <span style="color:#069;font-weight:bold">pass</span>
-</span></span></code></pre></div></article>
+</span></span></code></pre></div><details  class="no-outline"><summary class="no-outline"></summary>
+    <div class="markdown-inner">
+        <a href="./latin_cochon.py">latin_cochon</a>
+    </div>
+</details>
+
+</article>
 
                 
 
@@ -7602,17 +7668,17 @@ recette suivante :</p>
 <h1>Table des matières</h1>
 <nav id="TableOfContents">
   <ul>
-    <li><a href="#exercice-1">Exercice 1</a></li>
-    <li><a href="#exercice-2---chiffrement-de-césar">Exercice 2 - Chiffrement de César</a></li>
+    <li><a href="#exercice-1---questions-générales">Exercice 1 - Questions générales</a></li>
     <li><a href="#exercice-2---se-déplacer-dans-la-table-ascii">Exercice 2 - Se déplacer dans la table ASCII</a></li>
-    <li><a href="#exercice-3">Exercice 3</a>
+    <li><a href="#exercice-3---python">Exercice 3 - Python</a>
       <ul>
         <li><a href="#questions">Questions</a></li>
       </ul>
     </li>
     <li><a href="#exercice-4---un-peu-dutf-8">Exercice 4 - Un peu d&rsquo;UTF-8</a></li>
     <li><a href="#exercice-5---base64">Exercice 5 - base64</a></li>
-    <li><a href="#exercice-6---latin-cochon">Exercice 6 - Latin cochon</a></li>
+    <li><a href="#exercice-6---chiffrement-de-césar">Exercice 6 - Chiffrement de César</a></li>
+    <li><a href="#exercice-7---latin-cochon">Exercice 7 - Latin cochon</a></li>
   </ul>
 </nav>
 

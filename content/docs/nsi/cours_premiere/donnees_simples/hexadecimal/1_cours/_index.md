@@ -15,6 +15,8 @@ Les nombres en binaires sont longs.
 On utilise souvent la base 16 pour les manipuler plus facilement.
 $16=2^4$ et utiliser une puissance a de nombreux avantages.
 
+Le principe reste la notation positionnelle déjà abordée en binaire et utilisée en décimal.
+
 
 ### Chiffre hexadécimaux
 
@@ -30,6 +32,7 @@ On utilise 16 chiffres :
 {{< hint info >}}
 **Je répète : il y a 16 chiffres en hexadécimal : 0 1 2 4 5 6 7 8 9 A B C D E F**
 
+**3** est un chiffre en hexadécimal. Il vaut 3 en décimal.\
 **A** est un chiffre en hexadécimal. Il vaut 10 en décimal.\
 **F**  est un chiffre en hexadécimal. Il vaut 15 en décimal.
 {{< /hint >}}
@@ -46,6 +49,8 @@ On utilise 16 chiffres :
 
 Pour la machine, l'unité de stockage la plus petite n'est pas le bit mais
 l'octet.
+
+_On ne peut pas écrire un bit en mémoire, on doit écrire au moins un octet à la fois_.
 
 ### Comment représenter facilement un octet ?
 
@@ -162,7 +167,7 @@ De l'orange...
 
 
 {{< hint info >}}
-Dans ce modèle (1 octet par niveau de rouge / vert / bleu), on peut représenter : $256^3 = 16^6= 2^{24} = 16~777~216$ de couleurs.
+Dans ce modèle (1 octet par niveau de rouge / vert / bleu), on peut représenter : $256^3 = 16^6= 2^{24} = 16 777 216$ de couleurs.
 
 Le résultat n'a pas grande importance, la méthode si.
 {{< /hint >}}
@@ -225,7 +230,7 @@ $ hexdump img/ff0080.jpg | head
 ```
 
 
-**Que fait la commande ?**
+### Que fait la commande ?
 
 ```bash
 hexdump img/ff0080.jpg | head

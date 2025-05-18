@@ -388,7 +388,7 @@ est possible d'éviter en limitant leur quantité et les répétitions.
 
 * C'est assez pour qu'il rate sa cible.
 
-[Source](./img/http://ta.twi.tudelft.nl/nw/users/vuik/wi211/disasters.html)
+[Source](http://ta.twi.tudelft.nl/nw/users/vuik/wi211/disasters.html)
 
 
 ## Outils
