@@ -40,7 +40,7 @@ et 255 donnés sous forme décimale et séparés par des points : `192.168.0.1`
 
 **Adresse IPv4** : 4 nombres entiers entre 0 et 255 = 4 paquets d'un octet = 32 bits.
 
-Il y a donc $256^4 = 2^{32} = 4~294~967~296$ adresses IPv4 différentes.
+Il y a donc $256^4 = 2^{32} = 4 294 967 296$, environ 4 milliards d'adresses IPv4 différentes.
 
 Toute machine reliée à un réseau IP se voit attribuer une adresse IP permettant
 de l'identifier.
@@ -126,6 +126,10 @@ La partie réseau occupe toujours les 64 premiers bits et la partie machine les
 
 Les adresses IPv6 sont généralement données en hexadécimal : `43:2f:5b:df:b2:f4`
 
+### NAT (Network Adress Translation)
+
+L'approche historique pour retarder l'épuisement des adresses IPv4 est le NAT. Un routeur peut _faire correspondre certaines adresses IPv4 à d'autres adresses IPv4_. Ce procédé est largement utilisé par les box internet pour cacher les ordinateurs personnels derrière une seule adresse publique.
+
 ### Réseaux publics et privés
 
 Internet est un ensemble de réseaux publics, chaque machine raccordée à internet
@@ -143,7 +147,7 @@ distante, c'est le routeur qui se charge de transmettre les données.
 
 $\;$![réseaux publics et privés](./reseaux_prives_publics.png)
 
-## Protocole IP
+## Protocole IP (Internet Protocol)
 
 Le rôle du protocole IP est de transmettre des **paquets IP** provenant d'une
 couche supérieure (nous reviendrons sur ce terme) .
@@ -168,7 +172,7 @@ sont déteriorée ou perdues mais qu'aucune règle ne permet de s'assurer :
 
 Cette fiabilité est assurée par un autre protocole... TCP.
 
-## TCP/IP
+## TCP/IP (TCP : Transmission Control Protocol)
 
 TCP/IP désigne l'ensemble des deux protocoles principaux sur internet.
 

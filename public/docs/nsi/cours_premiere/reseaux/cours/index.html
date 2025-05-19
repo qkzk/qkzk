@@ -46,7 +46,7 @@ les câbles ethernet munis de port RJ45 les réseaux domestiques Wi-Fi (Wireless
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/book.min.24c2b1f8dc2338e074345eec5b36f8a002aaa6d1b2e7312e14ac2d6a6958c876.css" integrity="sha256-JMKx&#43;NwjOOB0NF7sWzb4oAKqptGy5zEuFKwtamlYyHY=" crossorigin="anonymous">
 <script defer src="/flexsearch.min.js"></script>
-<script defer src="/en.search.min.f9c7f58ca42b6c9c817deb1d8a9b62439e76b28694b383abcc95e02a7b6e54a7.js" integrity="sha256-&#43;cf1jKQrbJyBfesdiptiQ552soaUs4OrzJXgKntuVKc=" crossorigin="anonymous"></script>
+<script defer src="/en.search.min.429f8b64867e6871ca591998ae10727a51a41d0f23074b388f085cf1d87eea1b.js" integrity="sha256-Qp&#43;LZIZ&#43;aHHKWRmYrhByelGkHQ8jB0s4jwhc8dh&#43;6hs=" crossorigin="anonymous"></script>
 
 <link rel="alternate" type="application/rss+xml" href="http://localhost:1313/docs/nsi/cours_premiere/reseaux/cours/index.xml" title="qkzk" />
 <!--
@@ -7110,15 +7110,16 @@ MathJax.Hub.Config({
         <li><a href="#ipv4-ipv6">IPv4, IPv6</a></li>
         <li><a href="#partie-réseau-partie-machine">Partie réseau, partie machine</a></li>
         <li><a href="#ipv6">IPv6</a></li>
+        <li><a href="#nat-network-adress-translation">NAT (Network Adress Translation)</a></li>
         <li><a href="#réseaux-publics-et-privés">Réseaux publics et privés</a></li>
       </ul>
     </li>
-    <li><a href="#protocole-ip">Protocole IP</a>
+    <li><a href="#protocole-ip-internet-protocol">Protocole IP (Internet Protocol)</a>
       <ul>
         <li><a href="#fiabilité">Fiabilité</a></li>
       </ul>
     </li>
-    <li><a href="#tcpip">TCP/IP</a>
+    <li><a href="#tcpip-tcp--transmission-control-protocol">TCP/IP (TCP : Transmission Control Protocol)</a>
       <ul>
         <li><a href="#encapsulation">Encapsulation</a></li>
         <li><a href="#tcp">TCP</a></li>
@@ -7195,7 +7196,7 @@ l&rsquo;adresse d&rsquo;une machine sur un réseau IP.</p>
 <p>Ses adresses sont généralement présentées sous la forme de 4 nombres entre 0
 et 255 donnés sous forme décimale et séparés par des points : <code>192.168.0.1</code></p>
 <p><strong>Adresse IPv4</strong> : 4 nombres entiers entre 0 et 255 = 4 paquets d&rsquo;un octet = 32 bits.</p>
-<p>Il y a donc $256^4 = 2^{32} = 4<del>294</del>967~296$ adresses IPv4 différentes.</p>
+<p>Il y a donc $256^4 = 2^{32} = 4 294 967 296$, environ 4 milliards d&rsquo;adresses IPv4 différentes.</p>
 <p>Toute machine reliée à un réseau IP se voit attribuer une adresse IP permettant
 de l&rsquo;identifier.</p>
 <p>Plus rarement, on donne l&rsquo;adresse et un complément : <code>192.168.0.1/24</code></p>
@@ -7260,6 +7261,11 @@ pour donner une adresse unique à chaque machine.</p>
 <p>La partie réseau occupe toujours les 64 premiers bits et la partie machine les
 64 derniers bits.</p>
 <p>Les adresses IPv6 sont généralement données en hexadécimal : <code>43:2f:5b:df:b2:f4</code></p>
+<h3 id="nat-network-adress-translation">
+  NAT (Network Adress Translation)
+  <a class="anchor" href="#nat-network-adress-translation">#</a>
+</h3>
+<p>L&rsquo;approche historique pour retarder l&rsquo;épuisement des adresses IPv4 est le NAT. Un routeur peut <em>faire correspondre certaines adresses IPv4 à d&rsquo;autres adresses IPv4</em>. Ce procédé est largement utilisé par les box internet pour cacher les ordinateurs personnels derrière une seule adresse publique.</p>
 <h3 id="réseaux-publics-et-privés">
   Réseaux publics et privés
   <a class="anchor" href="#r%c3%a9seaux-publics-et-priv%c3%a9s">#</a>
@@ -7274,9 +7280,9 @@ réseau.</p>
 <p>Lorsqu&rsquo;on effectue une recherche depuis un poste du lycée vers une machine
 distante, c&rsquo;est le routeur qui se charge de transmettre les données.</p>
 <p>$;$<img src="./reseaux_prives_publics.png" alt="réseaux publics et privés" /></p>
-<h2 id="protocole-ip">
-  Protocole IP
-  <a class="anchor" href="#protocole-ip">#</a>
+<h2 id="protocole-ip-internet-protocol">
+  Protocole IP (Internet Protocol)
+  <a class="anchor" href="#protocole-ip-internet-protocol">#</a>
 </h2>
 <p>Le rôle du protocole IP est de transmettre des <strong>paquets IP</strong> provenant d&rsquo;une
 couche supérieure (nous reviendrons sur ce terme) .</p>
@@ -7298,9 +7304,9 @@ sont déteriorée ou perdues mais qu&rsquo;aucune règle ne permet de s&rsquo;as
 <li>qu&rsquo;ils sont arrivés dans l&rsquo;ordre d&rsquo;émission</li>
 </ul>
 <p>Cette fiabilité est assurée par un autre protocole&hellip; TCP.</p>
-<h2 id="tcpip">
-  TCP/IP
-  <a class="anchor" href="#tcpip">#</a>
+<h2 id="tcpip-tcp--transmission-control-protocol">
+  TCP/IP (TCP : Transmission Control Protocol)
+  <a class="anchor" href="#tcpip-tcp--transmission-control-protocol">#</a>
 </h2>
 <p>TCP/IP désigne l&rsquo;ensemble des deux protocoles principaux sur internet.</p>
 <p>C&rsquo;est un modèle en quatre couches :</p>
@@ -7878,15 +7884,16 @@ connexion.</p>
         <li><a href="#ipv4-ipv6">IPv4, IPv6</a></li>
         <li><a href="#partie-réseau-partie-machine">Partie réseau, partie machine</a></li>
         <li><a href="#ipv6">IPv6</a></li>
+        <li><a href="#nat-network-adress-translation">NAT (Network Adress Translation)</a></li>
         <li><a href="#réseaux-publics-et-privés">Réseaux publics et privés</a></li>
       </ul>
     </li>
-    <li><a href="#protocole-ip">Protocole IP</a>
+    <li><a href="#protocole-ip-internet-protocol">Protocole IP (Internet Protocol)</a>
       <ul>
         <li><a href="#fiabilité">Fiabilité</a></li>
       </ul>
     </li>
-    <li><a href="#tcpip">TCP/IP</a>
+    <li><a href="#tcpip-tcp--transmission-control-protocol">TCP/IP (TCP : Transmission Control Protocol)</a>
       <ul>
         <li><a href="#encapsulation">Encapsulation</a></li>
         <li><a href="#tcp">TCP</a></li>
