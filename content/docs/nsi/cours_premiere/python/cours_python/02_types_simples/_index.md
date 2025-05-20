@@ -627,3 +627,15 @@ Comme on peut le voir :
 
 {{< python title=" " >}}
 {{< /python >}}
+
+### Exercice 12 - mini challenge
+
+Les mathématiciens affirment que $\dfrac{\sin}{\cos} = \tan$... maispeut-on leur faire confiance ?
+
+Comment vérifier une telle affirmation avec un langage de programmation ? En écrivant des tests.
+
+1. Documentez-vous sur `assert`
+2. Documentez-vous sur `math.isclose`
+3. Documentez-vous sur `math.sin`, `math.cos` et `math.tan`
+4. En vous souvenant qu'il n'est pas possible de tester l'égalité de deux flottants, vérifiez que $\dfrac{\sin 0.1}{\cos 0.1} = \tan 0.1$
+5. À l'aide d'une boucle et d'un range vérifiez l'égalité approchée pour $x$ enre $-\dfrac{\pi}{2}$ et $\dfrac{\pi}{2}$ progressant de $0.01$ en $0.01$.
