@@ -341,3 +341,51 @@ print(4 * a)
 1. La première ligne affecte une valeur à `a`, c'est une _instruction_. Elle contient une _expression_ : `3 * 3 + 2`.
 2. La seconde ligne calcule une valeur et n'en fait rien. `2 * a + 5` est une _expression_.
 3. La troisième ligne affiche la valeur de l'_expression_ `4 * a`, c'est une _instruction_.
+
+### Exercice 6 - mini challenge
+
+On souhaite _échanger_ les valeurs de deux variables.
+
+- Avant : `x = 2, y = 5`
+- Après : `x = 5, y = 2`
+
+Bien sûr, on s'interdit de taper les valeurs littérales, on souhaite une approche générale qui fonctionne indépendamment des valeurs.
+
+1. Essayer :
+
+{{< python title="échagnge " >}}
+x = 2
+y = 5
+x = y
+y = x
+{{< /python >}}
+
+Le code précédent ne convient pas. Expliquer le problème.
+
+2. Introduire une valeur temporaire, `z` qui va retenir la valeur de `x`. Où l'insérer dans le code ? Quelle autre ligne remplacer ?
+3. Python permet une autre syntaxe, plus concise : `x, y = y, x`. Essayer 
+
+Explications :
+
+```python 
+... = y, x
+```
+
+À droite du `=` on a la notation abrégée d'un _tuple_, une collection ordonnées de valeurs.
+
+```python 
+x, y = ...
+```
+
+Python affecte à x et y les valeurs du tuple à droite du signe égal. Celui-ci doit contenir exactement deux valeurs sans quoi ça plante.
+
+Donc, Python évalue `y, x` : un tuple de longueur deux avec les valeurs... puis les affecte respectivement à x et y
+
+
+### Exercice 7 - mini challenge 2 
+
+Opérations arithmétiques
+
+`divmod` est un fonction Python qui prend deux entiers `a` et `b` et renvoie un tuple de deux valeurs, le quotient et le reste de `a` divisé par `b`.
+
+En utilisant les opérations citées plus haut, écrire une expression qui a la même valeur que `divmod(a, b)`.
