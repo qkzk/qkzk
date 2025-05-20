@@ -522,5 +522,55 @@ print(f"{mot} comporte {compte_les_a(mot)} a")
 7. `plus_grand_des_deux` prend deux paramètres entiers et renvoie le plus grand
   des deux.
 
+### Exercice 6 : mini challenge
+
+Reprendre le dernier exercice (équations du second degré) de la partie "Conditions" et écrire une fonction `resoudre_trinome` qui prend trois paramètres et renvoie les racines de celui-ci.
+
+Votre fonction renvoie toujours un `tuple` qui contient 0, 1 ou deux valeurs approchées des racines.
 
 
+```python 
+>>> resoudre_trinome(1, 2, 1) # x^2 + 2x + 1 = 0 => x=-1
+(-1.0,)
+>>> resoudre_trinome(1, 2, 2) # x^2 + 2x + 2 = 0 => pas de sol 
+()
+>>> resoudre_trinome(1, 2, 0) # x^2 + 2x = 0 => x=0 ou x = -2
+(-2.0, 0.0)
+```
+
+### Exercice 7 : mini challenge
+
+1. Écrire une fonction `indice_du_min` qui prend un tableau `tab` non vide et renvoie _l'indice_ de son élément minimal
+
+    ```python 
+    >>> indice_du_min([1, 0, 3, 2, 9])
+    1
+    >>> indice_du_min([1, 3, 5, 7])
+    0
+    ```
+
+2. Les voyelles c'est has been. Maintenant je n'écris plus que les consonnes ! Cmprs ?
+
+    Écrire une foncion `filtre_voyelle` qui reçoit un mot en minuscule et renvoie sa version sans voyelle 
+    
+    ```python 
+    voyelles = "aeiouy"
+    ```
+
+    Exemple :
+
+    ```python 
+    >>> filtre_voyelle("compris")
+    "cmprs"
+    >>> filtre_voyelle("abcde")
+    "bcd"
+    ```
+
+3. Écrire une fonction `est_trie` qui reçoit un tableau d'entiers et renvoie un booléen valant vrai si et seulement si les éléments du tableau sont triés par ordre croissant.
+
+    ```python 
+    >>> est_trie([1, 3, 2])
+    False
+    >>> est_trie([1, 2, 3])
+    True
+    ```

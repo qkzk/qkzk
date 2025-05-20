@@ -305,3 +305,16 @@ suivants.
 
 
 
+### Exercice 4 - Mini challenge
+
+_À traiter à l'extérieur_
+
+Le jeu du plus ou moins.
+
+1. Générer un nombre entier aléatoire entre 1 et 100 à l'aide de `random.randint`
+2. L'ordinateur choisit, on demande une saisie à l'utilisateur et s'il a bon, on lui dit bravo, sinon qu'il est nul.
+3. Intégrer ça dans une boucle `while` et indiquer une fois la partie terminée combien de coups furent nécessaire
+    _Remarque : on peut toujours trouver en 7 coups ou moins... pourquoi ?_
+4. Intégrer tout ça dans une autre boucle while qui demande (Oui/non) à l'utilisateur s'il veut rejouer après une partie. 
+
+    Faire en sorte qu'on ne lui demande rien quand la partie commence.
