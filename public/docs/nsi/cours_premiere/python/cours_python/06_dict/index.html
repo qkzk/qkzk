@@ -76,7 +76,7 @@ personne = { &#34;nom&#34;: &#34;Duchmol&#34;, &#34;prenom&#34;: &#34;Raymond&#3
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/book.min.24c2b1f8dc2338e074345eec5b36f8a002aaa6d1b2e7312e14ac2d6a6958c876.css" integrity="sha256-JMKx&#43;NwjOOB0NF7sWzb4oAKqptGy5zEuFKwtamlYyHY=" crossorigin="anonymous">
 <script defer src="/flexsearch.min.js"></script>
-<script defer src="/en.search.min.429f8b64867e6871ca591998ae10727a51a41d0f23074b388f085cf1d87eea1b.js" integrity="sha256-Qp&#43;LZIZ&#43;aHHKWRmYrhByelGkHQ8jB0s4jwhc8dh&#43;6hs=" crossorigin="anonymous"></script>
+<script defer src="/en.search.min.0e709eaf34f8ccdfdf6c511da8b8d6d97db288d4268950452aa2ae31b4af500b.js" integrity="sha256-DnCerzT4zN/fbFEdqLjW2X2yiNQmiVBFKqKuMbSvUAs=" crossorigin="anonymous"></script>
 
 <link rel="alternate" type="application/rss+xml" href="http://localhost:1313/docs/nsi/cours_premiere/python/cours_python/06_dict/index.xml" title="qkzk" />
 <!--
@@ -7168,6 +7168,7 @@ MathJax.Hub.Config({
     <li><a href="#exercice-7">Exercice 7</a></li>
     <li><a href="#exercice-8">Exercice 8</a></li>
     <li><a href="#exercice-9---compter-les-lettres-dune-chaîne-de-caractère">Exercice 9 - Compter les lettres d&rsquo;une chaîne de caractère</a></li>
+    <li><a href="#exercice-10---personnages">Exercice 10 - personnages</a></li>
   </ul>
 </nav>
 
@@ -7703,6 +7704,50 @@ de texte lorsqu&rsquo;on développe une interface :</p>
 <code>Counter</code>.</li>
 </ol>
 <p>Et c&rsquo;est à vous&hellip;</p>
+<h2 id="exercice-10---personnages">
+  Exercice 10 - personnages
+  <a class="anchor" href="#exercice-10---personnages">#</a>
+</h2>
+<p>Dans un jeu vidéo, on garde souvent plusieurs informations sur les personnages, par exemple :</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>perso1 <span style="color:#555">=</span> {
+</span></span><span style="display:flex;"><span>  <span style="color:#c30">&#34;nom&#34;</span>: <span style="color:#c30">&#34;Frodon&#34;</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#c30">&#34;vie&#34;</span>: <span style="color:#f60">100</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#c30">&#34;force&#34;</span>: <span style="color:#f60">30</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#c30">&#34;vivant&#34;</span>: <span style="color:#069;font-weight:bold">True</span>,
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>perso2 <span style="color:#555">=</span> {
+</span></span><span style="display:flex;"><span>  <span style="color:#c30">&#34;nom&#34;</span>: <span style="color:#c30">&#34;Gollum&#34;</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#c30">&#34;vie&#34;</span>: <span style="color:#f60">200</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#c30">&#34;force&#34;</span>: <span style="color:#f60">15</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#c30">&#34;vivant&#34;</span>: <span style="color:#069;font-weight:bold">True</span>,
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><ol>
+<li>Écrire une fonction <code>presenter</code> qui prend un personnage au format précédent et renvoie une chaîne formatée comme ceci :</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>Frodon a 100 points de vie et 30 de force.
+</span></span></code></pre></div><ol start="2">
+<li>
+<p>Écrire une fonction <code>taper</code> qui prend deux personnages au format précédent et modifie leurs points de vie en conséquence :</p>
+<p>Si perso1 a 5 de force et perso2 a 30 points de vie, <code>taper(perso1, perso2)</code> enlève 5 de vie à perso2.</p>
+<p>La fonction renvoie le nombre de points de vie perdus par perso2 (la force de perso1).</p>
+<p>Améliorer votre fonction pour qu&rsquo;elle change aussi l&rsquo;état de perso2 à mort (<code>&quot;vivant&quot;: False</code>) si ses points de vie deviennent négatifs ou nuls.</p>
+<p>Améliorer votre fonction pour qu&rsquo;elle affiche aussi un message :</p>
+<p>&ldquo;Frodon tape Gollum qui perd 10 points de vie&rdquo;.</p>
+</li>
+<li>
+<p>Écrire une fonction <code>combat</code> qui prend deux persos et les fait se taper l&rsquo;un l&rsquo;autre :</p>
+<ul>
+<li>perso1 tape perso2,</li>
+<li>perso2 tape perso1,</li>
+<li>perso1 tape perso2,</li>
+<li>&hellip;</li>
+</ul>
+<p>Elle s&rsquo;arrête dès qu&rsquo;un perso est mort.</p>
+<p>Améliorez la pour qu&rsquo;elle affiche le nom du gagant :</p>
+<p>&ldquo;Le combat est terminé et Frodon a gagné.&rdquo;</p>
+</li>
+</ol>
 </article>
 
                 
@@ -7799,6 +7844,7 @@ de texte lorsqu&rsquo;on développe une interface :</p>
     <li><a href="#exercice-7">Exercice 7</a></li>
     <li><a href="#exercice-8">Exercice 8</a></li>
     <li><a href="#exercice-9---compter-les-lettres-dune-chaîne-de-caractère">Exercice 9 - Compter les lettres d&rsquo;une chaîne de caractère</a></li>
+    <li><a href="#exercice-10---personnages">Exercice 10 - personnages</a></li>
   </ul>
 </nav>
 

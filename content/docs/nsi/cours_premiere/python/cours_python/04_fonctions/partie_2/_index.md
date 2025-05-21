@@ -22,7 +22,7 @@ en parametre et renvoie un booléen vrai si l'entier est pair, faux sinon.
         return False
 {{< /python >}}
 
-### Exercice 6 : 
+### Exercice 1 : 
 
 1. Lire et tester la fonction précédente. Remarquez que le mot clé `return` est présent
   deux fois.
@@ -174,12 +174,12 @@ Pour chaque fonction produite on attend :
 
 _Remarque_ : trop d'exercices différents pour mon site, vous devrez les traiter à l'extérieur.
 
-### Exercice 7
+### Exercice 2
 
 Écrire une fonction `carre` qui calcule le carré d'un nombre.
 
 
-### Exercice 8
+### Exercice 3
 
 Écrire une fonction qui calcule l'aire d'un disque.
 
@@ -194,7 +194,7 @@ Rappels aux grands géomètres que vous êtes :
 > L'aire d'un disque de rayon $R$ est donnée par : $$\mathcal{A} = \pi R^2$$
 
 
-### Exercice 9
+### Exercice 4
 
 Écrire une fonction qui prend deux chaînes de caractères et renvoie la plus
 courte des deux.
@@ -207,7 +207,7 @@ courte des deux.
 ```
 
 
-### Exercice 10 - la fonction `sum`
+### Exercice 5 - la fonction `sum`
 
 Python propose de nombreuses fonctions très pratiques... pourquoi les réécrire ?
 
@@ -237,7 +237,7 @@ Et bien pour apprendre c'est le seul moyen.
 
 
 
-### Exercice 11 - générateur de mot de passe
+### Exercice 6 - générateur de mot de passe
 
 1. Relisez l'aide de la fonction `random.choice`.
 2. À l'aide de cette fonction, créer une fonction `password` qui prend un
@@ -256,7 +256,7 @@ Et bien pour apprendre c'est le seul moyen.
     ```
 
 
-### Exercice 12 - déterminer la sortie
+### Exercice 7 - déterminer la sortie
 
 Pour chaque question suivante, vous analysez le code écrit, prédisez la sortie
 et vérifiez. Faites le sérieusement sinon vous aurez de grandes surprises
@@ -344,6 +344,4 @@ en devoir...
     print(g(5))
     print(f(6))
     ```
-
-
 

@@ -33,7 +33,7 @@ Par exemple, on peut ajouter deux entiers, on peut mesurer la longueur d’une c
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/book.min.24c2b1f8dc2338e074345eec5b36f8a002aaa6d1b2e7312e14ac2d6a6958c876.css" integrity="sha256-JMKx&#43;NwjOOB0NF7sWzb4oAKqptGy5zEuFKwtamlYyHY=" crossorigin="anonymous">
 <script defer src="/flexsearch.min.js"></script>
-<script defer src="/en.search.min.429f8b64867e6871ca591998ae10727a51a41d0f23074b388f085cf1d87eea1b.js" integrity="sha256-Qp&#43;LZIZ&#43;aHHKWRmYrhByelGkHQ8jB0s4jwhc8dh&#43;6hs=" crossorigin="anonymous"></script>
+<script defer src="/en.search.min.e93a94ef9c05a9e59e7dc5831e8936bf305182accdc310681823de26168fa5f7.js" integrity="sha256-6TqU75wFqeWefcWDHok2vzBRgqzNwxBoGCPeJhaPpfc=" crossorigin="anonymous"></script>
 
 <link rel="alternate" type="application/rss+xml" href="http://localhost:1313/docs/nsi/cours_premiere/python/cours_python/02_types_simples/index.xml" title="qkzk" />
 <!--
@@ -7136,6 +7136,7 @@ MathJax.Hub.Config({
     <li><a href="#méthodes-sur-les-chaînes-de-caractères">Méthodes sur les chaînes de caractères.</a>
       <ul>
         <li><a href="#exercice-11">Exercice 11</a></li>
+        <li><a href="#exercice-12---mini-challenge">Exercice 12 - mini challenge</a></li>
       </ul>
     </li>
   </ul>
@@ -7991,6 +7992,19 @@ chaînes de caractères. Que font-elles ?</li>
     }).catch(() => { });
 </script>
 
+<h3 id="exercice-12---mini-challenge">
+  Exercice 12 - mini challenge
+  <a class="anchor" href="#exercice-12---mini-challenge">#</a>
+</h3>
+<p>Les mathématiciens affirment que $\dfrac{\sin}{\cos} = \tan$&hellip; maispeut-on leur faire confiance ?</p>
+<p>Comment vérifier une telle affirmation avec un langage de programmation ? En écrivant des tests.</p>
+<ol>
+<li>Documentez-vous sur <code>assert</code></li>
+<li>Documentez-vous sur <code>math.isclose</code></li>
+<li>Documentez-vous sur <code>math.sin</code>, <code>math.cos</code> et <code>math.tan</code></li>
+<li>En vous souvenant qu&rsquo;il n&rsquo;est pas possible de tester l&rsquo;égalité de deux flottants, vérifiez que $\dfrac{\sin 0.1}{\cos 0.1} = \tan 0.1$</li>
+<li>À l&rsquo;aide d&rsquo;une boucle et d&rsquo;un range vérifiez l&rsquo;égalité approchée pour $x$ enre $-\dfrac{\pi}{2}$ et $\dfrac{\pi}{2}$ progressant de $0.01$ en $0.01$.</li>
+</ol>
 </article>
 
                 
@@ -8098,6 +8112,7 @@ chaînes de caractères. Que font-elles ?</li>
     <li><a href="#méthodes-sur-les-chaînes-de-caractères">Méthodes sur les chaînes de caractères.</a>
       <ul>
         <li><a href="#exercice-11">Exercice 11</a></li>
+        <li><a href="#exercice-12---mini-challenge">Exercice 12 - mini challenge</a></li>
       </ul>
     </li>
   </ul>

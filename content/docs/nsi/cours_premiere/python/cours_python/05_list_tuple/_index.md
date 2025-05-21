@@ -574,3 +574,47 @@ y = z
 
 {{< python title="Exercice 6" >}}
 {{< /python >}}
+
+## Exercice 7 : calculer le mois 
+
+On considère une année non bisexstile dont les nombres de jours de chaque mois sont enregistrés dans un `tuple`.
+
+Écrire une fonction qui reçoit le numéro du jour de l'année et renvoie le mois correspondant.
+
+Par exemple : 
+
+- le jour 1 est le premier janvier donc le mois est "janvier",
+- le jour 32 est le premier février et le mois est "février",
+
+
+{{< python title="Exercice 7" >}}
+MOIS = (
+    ("janvier", 31),
+    ("février", 28),
+    ("mars", 31),
+    ("avril", 30),
+    ("mai", 31),
+    ("juin", 30),
+    ("juillet", 31),
+    ("août", 31),
+    ("septembre", 30),
+    ("octobre", 31),
+    ("novembre", 30),
+    ("décembre", 31),
+)
+
+
+def calculer_mois(jour: int) -> str:
+    # à vous
+
+
+assert calculer_mois(1) == "janvier"
+assert calculer_mois(31 + 1) == "février"
+assert calculer_mois(31 + 27) == "février"
+assert calculer_mois(31 + 28 + 31) == "mars"
+assert calculer_mois(31 + 28 + 31 + 1) == "avril"
+assert calculer_mois(365 - 31 - 1) == "novembre"
+assert calculer_mois(365) == "décembre"
+{{< /python >}}
+
+

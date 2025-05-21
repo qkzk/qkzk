@@ -39,7 +39,7 @@ Dans le premier cas, le code est écrit directement.">
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/book.min.24c2b1f8dc2338e074345eec5b36f8a002aaa6d1b2e7312e14ac2d6a6958c876.css" integrity="sha256-JMKx&#43;NwjOOB0NF7sWzb4oAKqptGy5zEuFKwtamlYyHY=" crossorigin="anonymous">
 <script defer src="/flexsearch.min.js"></script>
-<script defer src="/en.search.min.429f8b64867e6871ca591998ae10727a51a41d0f23074b388f085cf1d87eea1b.js" integrity="sha256-Qp&#43;LZIZ&#43;aHHKWRmYrhByelGkHQ8jB0s4jwhc8dh&#43;6hs=" crossorigin="anonymous"></script>
+<script defer src="/en.search.min.e93a94ef9c05a9e59e7dc5831e8936bf305182accdc310681823de26168fa5f7.js" integrity="sha256-6TqU75wFqeWefcWDHok2vzBRgqzNwxBoGCPeJhaPpfc=" crossorigin="anonymous"></script>
 
 <link rel="alternate" type="application/rss+xml" href="http://localhost:1313/docs/nsi/cours_premiere/python/cours_python/01_expression/index.xml" title="qkzk" />
 <!--
@@ -7123,7 +7123,12 @@ MathJax.Hub.Config({
         <li><a href="#exercice-5">Exercice 5</a></li>
       </ul>
     </li>
-    <li><a href="#instruction-et-expression">Instruction et expression</a></li>
+    <li><a href="#instruction-et-expression">Instruction et expression</a>
+      <ul>
+        <li><a href="#exercice-6---mini-challenge">Exercice 6 - mini challenge</a></li>
+        <li><a href="#exercice-7---mini-challenge-2">Exercice 7 - mini challenge 2</a></li>
+      </ul>
+    </li>
   </ul>
 </nav>
 
@@ -7581,6 +7586,92 @@ a = 12 / 13
 <li>La seconde ligne calcule une valeur et n&rsquo;en fait rien. <code>2 * a + 5</code> est une <em>expression</em>.</li>
 <li>La troisième ligne affiche la valeur de l&rsquo;<em>expression</em> <code>4 * a</code>, c&rsquo;est une <em>instruction</em>.</li>
 </ol>
+<h3 id="exercice-6---mini-challenge">
+  Exercice 6 - mini challenge
+  <a class="anchor" href="#exercice-6---mini-challenge">#</a>
+</h3>
+<p>On souhaite <em>échanger</em> les valeurs de deux variables.</p>
+<ul>
+<li>Avant : <code>x = 2, y = 5</code></li>
+<li>Après : <code>x = 5, y = 2</code></li>
+</ul>
+<p>Bien sûr, on s&rsquo;interdit de taper les valeurs littérales, on souhaite une approche générale qui fonctionne indépendamment des valeurs.</p>
+<ol>
+<li>Essayer :</li>
+</ol>
+<script src="http://localhost:1313/coi-serviceworker.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.63.3/codemirror.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.63.3/theme/idea.css">
+<link rel="stylesheet" href="http://localhost:1313/css/python_editor.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.63.3/codemirror.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.63.3/mode/python/python.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.63.3/addon/comment/comment.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.63.3/addon/display/fullscreen.js"></script>
+
+
+    <h3 id="échagnge">
+  échagnge
+  <a class="anchor" href="#%c3%a9chagnge">#</a>
+</h3>
+
+
+
+<main>
+    <div id="python_ide_2">
+        <textarea id="commands_2" class="commands">
+
+x = 2
+y = 5
+x = y
+y = x
+
+        </textarea>
+        <a class="execute book-btn" title="Ctrl+Enter">Run</a>
+        <a class="reset book-btn" title="Ctrl+R">Reset</a>
+        <a class="download book-btn" title="Ctrl+S">Download</a>
+        <a class="stop book-btn" title="Ctrl+D">Stop</a>
+        <pre class="python_output" style="display: none;">Résultat</pre>
+        <pre class="python_error" style="display: none;"></pre>
+        <pre class="worker_error" style="display: none;"></pre>
+    </div>
+</main>
+<script type="module">
+    import { onElementLoaded, init_worker } from "http:\/\/localhost:1313\/js/pyodide_consumer.js";
+
+    const url = "http:\/\/localhost:1313\/js/pyodide_webworker.js";
+
+    async function start_worker(ide) {
+        
+        let initfile = null;
+        
+        init_worker(ide, url, initfile);
+    }
+
+
+    onElementLoaded("div#python_ide_2").then(() => {
+        const ide = document.querySelector("div#python_ide_2");
+        start_worker(ide);
+    }).catch(() => { });
+</script>
+
+<p>Le code précédent ne convient pas. Expliquer le problème.</p>
+<ol start="2">
+<li>Introduire une valeur temporaire, <code>z</code> qui va retenir la valeur de <code>x</code>. Où l&rsquo;insérer dans le code ? Quelle autre ligne remplacer ?</li>
+<li>Python permet une autre syntaxe, plus concise : <code>x, y = y, x</code>. Essayer</li>
+</ol>
+<p>Explications :</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#555">...</span> <span style="color:#555">=</span> y, x
+</span></span></code></pre></div><p>À droite du <code>=</code> on a la notation abrégée d&rsquo;un <em>tuple</em>, une collection ordonnées de valeurs.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>x, y <span style="color:#555">=</span> <span style="color:#555">...</span>
+</span></span></code></pre></div><p>Python affecte à x et y les valeurs du tuple à droite du signe égal. Celui-ci doit contenir exactement deux valeurs sans quoi ça plante.</p>
+<p>Donc, Python évalue <code>y, x</code> : un tuple de longueur deux avec les valeurs&hellip; puis les affecte respectivement à x et y</p>
+<h3 id="exercice-7---mini-challenge-2">
+  Exercice 7 - mini challenge 2
+  <a class="anchor" href="#exercice-7---mini-challenge-2">#</a>
+</h3>
+<p>Opérations arithmétiques</p>
+<p><code>divmod</code> est un fonction Python qui prend deux entiers <code>a</code> et <code>b</code> et renvoie un tuple de deux valeurs, le quotient et le reste de <code>a</code> divisé par <code>b</code>.</p>
+<p>En utilisant les opérations citées plus haut, écrire une expression qui a la même valeur que <code>divmod(a, b)</code>.</p>
 </article>
 
                 
@@ -7669,7 +7760,12 @@ a = 12 / 13
         <li><a href="#exercice-5">Exercice 5</a></li>
       </ul>
     </li>
-    <li><a href="#instruction-et-expression">Instruction et expression</a></li>
+    <li><a href="#instruction-et-expression">Instruction et expression</a>
+      <ul>
+        <li><a href="#exercice-6---mini-challenge">Exercice 6 - mini challenge</a></li>
+        <li><a href="#exercice-7---mini-challenge-2">Exercice 7 - mini challenge 2</a></li>
+      </ul>
+    </li>
   </ul>
 </nav>
 

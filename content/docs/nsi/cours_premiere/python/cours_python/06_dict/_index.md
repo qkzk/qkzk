@@ -469,3 +469,55 @@ Pour chaque lettre de la chaîne :
 
 Et c'est à vous...
 
+## Exercice 10 - personnages
+
+Dans un jeu vidéo, on garde souvent plusieurs informations sur les personnages, par exemple :
+
+```python 
+perso1 = {
+  "nom": "Frodon",
+  "vie": 100,
+  "force": 30,
+  "vivant": True,
+}
+
+perso2 = {
+  "nom": "Gollum",
+  "vie": 200,
+  "force": 15,
+  "vivant": True,
+}
+```
+
+1. Écrire une fonction `presenter` qui prend un personnage au format précédent et renvoie une chaîne formatée comme ceci :
+
+  ```
+  Frodon a 100 points de vie et 30 de force.
+  ```
+
+2. Écrire une fonction `taper` qui prend deux personnages au format précédent et modifie leurs points de vie en conséquence :
+
+    Si perso1 a 5 de force et perso2 a 30 points de vie, `taper(perso1, perso2)` enlève 5 de vie à perso2.
+
+    La fonction renvoie le nombre de points de vie perdus par perso2 (la force de perso1).
+
+    Améliorer votre fonction pour qu'elle change aussi l'état de perso2 à mort (`"vivant": False`) si ses points de vie deviennent négatifs ou nuls.
+
+    Améliorer votre fonction pour qu'elle affiche aussi un message :
+
+    "Frodon tape Gollum qui perd 10 points de vie".
+
+3. Écrire une fonction `combat` qui prend deux persos et les fait se taper l'un l'autre :
+
+    - perso1 tape perso2, 
+    - perso2 tape perso1, 
+    - perso1 tape perso2,
+    - ...
+
+    Elle s'arrête dès qu'un perso est mort.
+
+    Améliorez la pour qu'elle affiche le nom du gagant :
+
+    "Le combat est terminé et Frodon a gagné."
+  
+

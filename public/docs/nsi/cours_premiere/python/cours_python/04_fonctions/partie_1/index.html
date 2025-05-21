@@ -41,7 +41,7 @@ Exemples # On a déjà rencontré plusieurs fonctions, en particulier len. Cette
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/book.min.24c2b1f8dc2338e074345eec5b36f8a002aaa6d1b2e7312e14ac2d6a6958c876.css" integrity="sha256-JMKx&#43;NwjOOB0NF7sWzb4oAKqptGy5zEuFKwtamlYyHY=" crossorigin="anonymous">
 <script defer src="/flexsearch.min.js"></script>
-<script defer src="/en.search.min.429f8b64867e6871ca591998ae10727a51a41d0f23074b388f085cf1d87eea1b.js" integrity="sha256-Qp&#43;LZIZ&#43;aHHKWRmYrhByelGkHQ8jB0s4jwhc8dh&#43;6hs=" crossorigin="anonymous"></script>
+<script defer src="/en.search.min.0e709eaf34f8ccdfdf6c511da8b8d6d97db288d4268950452aa2ae31b4af500b.js" integrity="sha256-DnCerzT4zN/fbFEdqLjW2X2yiNQmiVBFKqKuMbSvUAs=" crossorigin="anonymous"></script>
 
 <link rel="alternate" type="application/rss+xml" href="http://localhost:1313/docs/nsi/cours_premiere/python/cours_python/04_fonctions/partie_1/index.xml" title="qkzk" />
 <!--
@@ -7120,6 +7120,8 @@ MathJax.Hub.Config({
     <li><a href="#syntaxe-complète-et-documentation-complète">Syntaxe complète et documentation complète</a>
       <ul>
         <li><a href="#exercice-5---code-dune-fonction">Exercice 5 - code d&rsquo;une fonction</a></li>
+        <li><a href="#exercice-6--mini-challenge">Exercice 6 : mini challenge</a></li>
+        <li><a href="#exercice-7--mini-challenge">Exercice 7 : mini challenge</a></li>
       </ul>
     </li>
   </ul>
@@ -7800,6 +7802,48 @@ plus grand que 0.</p>
 des deux.</p>
 </li>
 </ol>
+<h3 id="exercice-6--mini-challenge">
+  Exercice 6 : mini challenge
+  <a class="anchor" href="#exercice-6--mini-challenge">#</a>
+</h3>
+<p>Reprendre le dernier exercice (équations du second degré) de la partie &ldquo;Conditions&rdquo; et écrire une fonction <code>resoudre_trinome</code> qui prend trois paramètres et renvoie les racines de celui-ci.</p>
+<p>Votre fonction renvoie toujours un <code>tuple</code> qui contient 0, 1 ou deux valeurs approchées des racines.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#555">&gt;&gt;&gt;</span> resoudre_trinome(<span style="color:#f60">1</span>, <span style="color:#f60">2</span>, <span style="color:#f60">1</span>) <span style="color:#09f;font-style:italic"># x^2 + 2x + 1 = 0 =&gt; x=-1</span>
+</span></span><span style="display:flex;"><span>(<span style="color:#555">-</span><span style="color:#f60">1.0</span>,)
+</span></span><span style="display:flex;"><span><span style="color:#555">&gt;&gt;&gt;</span> resoudre_trinome(<span style="color:#f60">1</span>, <span style="color:#f60">2</span>, <span style="color:#f60">2</span>) <span style="color:#09f;font-style:italic"># x^2 + 2x + 2 = 0 =&gt; pas de sol </span>
+</span></span><span style="display:flex;"><span>()
+</span></span><span style="display:flex;"><span><span style="color:#555">&gt;&gt;&gt;</span> resoudre_trinome(<span style="color:#f60">1</span>, <span style="color:#f60">2</span>, <span style="color:#f60">0</span>) <span style="color:#09f;font-style:italic"># x^2 + 2x = 0 =&gt; x=0 ou x = -2</span>
+</span></span><span style="display:flex;"><span>(<span style="color:#555">-</span><span style="color:#f60">2.0</span>, <span style="color:#f60">0.0</span>)
+</span></span></code></pre></div><h3 id="exercice-7--mini-challenge">
+  Exercice 7 : mini challenge
+  <a class="anchor" href="#exercice-7--mini-challenge">#</a>
+</h3>
+<ol>
+<li>
+<p>Écrire une fonction <code>indice_du_min</code> qui prend un tableau <code>tab</code> non vide et renvoie <em>l&rsquo;indice</em> de son élément minimal</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#555">&gt;&gt;&gt;</span> indice_du_min([<span style="color:#f60">1</span>, <span style="color:#f60">0</span>, <span style="color:#f60">3</span>, <span style="color:#f60">2</span>, <span style="color:#f60">9</span>])
+</span></span><span style="display:flex;"><span><span style="color:#f60">1</span>
+</span></span><span style="display:flex;"><span><span style="color:#555">&gt;&gt;&gt;</span> indice_du_min([<span style="color:#f60">1</span>, <span style="color:#f60">3</span>, <span style="color:#f60">5</span>, <span style="color:#f60">7</span>])
+</span></span><span style="display:flex;"><span><span style="color:#f60">0</span>
+</span></span></code></pre></div></li>
+<li>
+<p>Les voyelles c&rsquo;est has been. Maintenant je n&rsquo;écris plus que les consonnes ! Cmprs ?</p>
+<p>Écrire une foncion <code>filtre_voyelle</code> qui reçoit un mot en minuscule et renvoie sa version sans voyelle</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>voyelles <span style="color:#555">=</span> <span style="color:#c30">&#34;aeiouy&#34;</span>
+</span></span></code></pre></div><p>Exemple :</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#555">&gt;&gt;&gt;</span> filtre_voyelle(<span style="color:#c30">&#34;compris&#34;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#c30">&#34;cmprs&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#555">&gt;&gt;&gt;</span> filtre_voyelle(<span style="color:#c30">&#34;abcde&#34;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#c30">&#34;bcd&#34;</span>
+</span></span></code></pre></div></li>
+<li>
+<p>Écrire une fonction <code>est_trie</code> qui reçoit un tableau d&rsquo;entiers et renvoie un booléen valant vrai si et seulement si les éléments du tableau sont triés par ordre croissant.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#555">&gt;&gt;&gt;</span> est_trie([<span style="color:#f60">1</span>, <span style="color:#f60">3</span>, <span style="color:#f60">2</span>])
+</span></span><span style="display:flex;"><span><span style="color:#069;font-weight:bold">False</span>
+</span></span><span style="display:flex;"><span><span style="color:#555">&gt;&gt;&gt;</span> est_trie([<span style="color:#f60">1</span>, <span style="color:#f60">2</span>, <span style="color:#f60">3</span>])
+</span></span><span style="display:flex;"><span><span style="color:#069;font-weight:bold">True</span>
+</span></span></code></pre></div></li>
+</ol>
 </article>
 
                 
@@ -7883,6 +7927,8 @@ des deux.</p>
     <li><a href="#syntaxe-complète-et-documentation-complète">Syntaxe complète et documentation complète</a>
       <ul>
         <li><a href="#exercice-5---code-dune-fonction">Exercice 5 - code d&rsquo;une fonction</a></li>
+        <li><a href="#exercice-6--mini-challenge">Exercice 6 : mini challenge</a></li>
+        <li><a href="#exercice-7--mini-challenge">Exercice 7 : mini challenge</a></li>
       </ul>
     </li>
   </ul>
