@@ -1,9 +1,0 @@
-      MOV R1,#32
-loop:
-      CMP R1, #127
-      BGT end
-      STRB R1,.WriteChar
-      ADD R1, R1, #1
-      B loop
-end:
-      HALT 
