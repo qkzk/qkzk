@@ -237,3 +237,24 @@ Elles sont définies par les tables de vérité présentées plus haut.
 Toutes les opérations binaires peuvent être définies à l'aide des trois opérateurs présentés plus haut.
 
 Par exemple : `a xor b = (a and not b) or (not a and b)`
+
+## Test porte logique 
+
+<script src="/js/logic_simulator.js"></script>
+<div style="width: 100%; height: 250px">
+<logic-editor id="editor1" showonly="in,out,and,or,xor">
+<script type="application/json">
+{ // JSON5
+  v: 6,
+  components: {
+    in0: {type: 'in', pos: [50, 50], id: 0, val: 1},
+    in1: {type: 'in', pos: [60, 130], id: 1, val: 1},
+    out0: {type: 'out', pos: [270, 90], id: 5},
+    and0: {type: 'and', pos: [170, 90], in: [2, 3], out: 4},
+  },
+  wires: [[4, 5], [0, 2], [1, 3]]
+}
+</script>
+</logic-editor>
+
+</div>
