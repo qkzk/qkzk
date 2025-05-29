@@ -6,10 +6,40 @@ weight: 2
 
 pdf : [pour impression](/uploads/docsnsi/booleens/booleen_td.pdf)
 
-# Objectifs
+## Objectifs
 
 - Construire la table de vérité d'une expression booléenne relativement simple.
 - Évaluer et construire des expressions booléennes en Python
+
+
+
+## Démarche : construire une table de vérité
+
+| `a` | `b` | `a or b` |
+| --- | --- | :------: |
+| 0   | 0   |    0     |
+| 0   | 1   |    1     |
+| 1   | 0   |    1     |
+| 1   | 1   |    1     |
+
+1. compter le nombre d'entrées (= de lettres `a, b, c...`).
+  
+   Avec $n$ entrées, il y a une ligne pour les noms de colonnes et $2^{n}$ lignes pour les valeurs des bits.
+
+   Toujours avec $n$ entrées, on a $n$ colonnes pour les entrées et au moins une pour le résultat.
+
+2. Enumérer les valeurs des bits par **ordre croissant**. Par exemple pour 3 entrées `a, b, c` :
+
+   - `0 0 0`
+   - `0 0 1`
+   - ...
+   - `1 1 1`
+
+3. (optionnel) Si l'expression est composée de plusieurs morceaux, on peut ajouter une colonne intermédiaire par morceaux 
+4. Calculer les résultats de chaque colonne _résultat_.
+
+Et voilà.
+
 
 ## Exercice 1
 
@@ -41,7 +71,23 @@ des opérateurs `NON` et `et`
 
 On vérifiera à l'aide d'une table de vérité.
 
-## Exercice 7
+## Exercice 7 - simulateur 
+
+Vérifier chacun des résultats précédents dans le simulateur logique ci-dessous.
+
+
+<script src="/js/logic_simulator.js"></script>
+<div style="width: 600px; height: 400px">
+<logic-editor id="editor1" showonly="in,out,and,or,xor,not">
+<script type="application/json">
+{ // JSON5
+  v: 6,
+}
+</script>
+</logic-editor>
+</div>
+
+## Exercice 8 - Évaluer les booléens Python
 
 Donner la valeur des expressions booléennes suivantes :
 
@@ -53,7 +99,7 @@ b = 455
 a != (b // 2)
 ```
 
-## Exercice 8
+## Exercice 9 - parenthésage minimal 
 
 insérer le minimum de parenthèses dans les expressions suivantes pour
 les égalités soient correctes
@@ -64,12 +110,9 @@ les égalités soient correctes
 4 + 5 * 2 + 3 == 29
 ```
 
-## Exercice 9
+## Exercice 10 - Clé de sécurité
 
-La clé de vérification utilisée en France pour les numéros de sécurité sociale
-est égal à 97 moins le résidu modulo 97 du nombre formé par les autres chiffres
-: c'est-à-dire que la clé est l'unique entier entre 01 et 97 tel que la somme
-de la clé avec le reste du numéro fasse un entier divisible par 97.
+La clé de vérification utilisée en France pour les numéros de sécurité sociale est égale à 97 moins le résidu modulo 97 du nombre formé par les autres chiffres : c'est-à-dire que la clé est l'unique entier entre 01 et 97 tel que la somme de la clé avec le reste du numéro fasse un entier divisible par 97.
 
 Nous allons traduire ceci en Python
 
@@ -86,7 +129,19 @@ Nous allons traduire ceci en Python
 4. Proposer une expression booléenne qui soit vraie si `cle` est bien
    la clé de sécurité de `numero` et fausse sinon.
 
-## Exercice 10 - Demi additionneur binaire
+Au passage, que signifie le numéro _1 81 10 59 ..._ ? 
+
+- Sexe : 1 c'est un homme, 2 si c'est une femme
+- Année de naissance : 81, né en 1981
+- Mois de naissance : 10, né en octobre 
+- Département de naissance : 59, dans le nord...
+- Code commune Insee : 340 commune du nord donc 59340 qui correspond à Leffrinckoucke. Attention code insee != code postal.
+- N° d'ordre de naissance : 223 ème personne née à Leffrinckoucke durant ce mois (j'ai inventé hein, n'allez pas chercher...)
+- Clé de contrôle : voir plus haut.
+
+[source: justice.fr](https://www.justice.fr/fiche/signifie-numero-securite-sociale)
+
+## Exercice 11 - Demi additionneur binaire
 
 ### Représentation graphique
 
@@ -114,6 +169,8 @@ portes ET et XOR :
      Dans quel cas aura-t-on une retenue à écrire ? Quelle opération booléenne sur les bits
      permet d'obtenir ce résultat ?
 
+3. Vérifier dans le simulateur de l'[exercice 7][#7]
+
 ### Portes logiques
 
 Les opérations logiques évoquées ci-dessus sont mises en oeuvre en
@@ -123,7 +180,7 @@ Les circuits électroniques calculent des fonctions logiques de l'algèbre de B
 
 Pour chacun des opérateurs logiques évoquées ci-dessus (et d'autres) il existe donc des portes logiques appelés _porte ET_, _porte NON_, etc. Les valeurs *vrai *et _faux_ sont représentées par deux niveaux de tension, _haut_ et _bas_.
 
-## Exercice 11 - Demi additionneur
+## Exercice 12 - Demi additionneur
 
 Un circuit de type *porte ET* dispose donc de deux entrées et une sortie.
 
@@ -142,9 +199,8 @@ et la retenue éventuelle par $R$.
 Construisez les tables de vérité de $S$ et $R$ et comparez à celle de l'addition
 de deux bits $A$ et $B$.
 
-## Retrouver une expression booléenne
 
-## Exercice 12
+## Exercice 13 - Retrouver une expression booléenne
 
 On considère la table de vérité de l'expression `Z` ci-dessous
 
@@ -155,7 +211,7 @@ On considère la table de vérité de l'expression `Z` ci-dessous
 
 Exprimer `Z` à l'aide des fonctions booléennes et, ou, non.
 
-## Exercice 13
+## Exercice 14 - Retrouver une expression booléenne
 
 On considère la table de vérité de l'expression `U` ci-dessous
 
@@ -166,7 +222,7 @@ On considère la table de vérité de l'expression `U` ci-dessous
 
 Exprimer `U` à l'aide des fonctions booléennes et, ou, non.
 
-## Exercice 14 - Programmer une table de vérité
+## Exercice 15 - Programmer une table de vérité
 
 Partons d'un exemple avec l'expression booléenne `Non (a ET Non b)`
 
@@ -187,20 +243,66 @@ le second on fait faire les calculs à une machine.
 2. on crée une fonction qui prend ces expressions booléennes et teste chaque
    valeur possible des variables.
 
-```python
-def exp1(a, b):
-  return not (a and not b)
+   ```python
+   def exp1(a, b):
+     return not (a and not b)
 
-def exp2(a, b):
-  return not a or b
+   def exp2(a, b):
+     return not a or b
 
-def tester_egalite_2_variables(f, g):
-  for a in (True, False):
-    for b in (True, False):
-      if f(a, b) != g(a, b):
-        return False
-  return True
+   def tester_egalite_2_variables(f, g):
+     for a in (True, False):
+       for b in (True, False):
+         if f(a, b) != g(a, b):
+           return False
+     return True
+   ```
+
+   a. Lire attentivement le code de la fonction `tester_egalite_2_variables`. 
+
+   b. Les deux `return` ne sont pas indentés de la même manière. Expliquer.
+
+3. On considère deux fonctions booléennes à trois entrées (`a, b, c`), écrire un programme python permettant de tester leur égalité.
+
+{{< python title="operateur 3 entrées" init="" >}}
+def exp1(a, b, c):
+    return (a and b) or (a and not b) or (a and c)
+
+def exp2(a, b, c):
+    return a
+
+
+
+{{< /python >}}
+
+On pourra vérifier avec cet exemple :
+
+
+
+
+### Expression 1 :
+
+```
+E1 = (a ET b) OU (a ET NON b) OU (a ET c)
 ```
 
-On considère deux fonctions booléennes à trois entrées (`a, b, c`),
-écrire un programme python permettant de tester leur égalité.
+### Expression 2 :
+
+```
+E2 = a
+```
+
+### Table de vérité de E1 
+
+| a | b | c | NON b | a ET b | a ET NON b | a ET c | E1 | E2 |
+| - | - | - | ----- | ------ | ---------- | ------ | -- | -- |
+| 0 | 0 | 0 | 1     | 0      | 0          | 0      | 0  | 0  |
+| 0 | 0 | 1 | 1     | 0      | 0          | 0      | 0  | 0  |
+| 0 | 1 | 0 | 0     | 0      | 0          | 0      | 0  | 0  |
+| 0 | 1 | 1 | 0     | 0      | 0          | 0      | 0  | 0  |
+| 1 | 0 | 0 | 1     | 0      | 1          | 0      | 1  | 1  |
+| 1 | 0 | 1 | 1     | 0      | 1          | 1      | 1  | 1  |
+| 1 | 1 | 0 | 0     | 1      | 0          | 0      | 1  | 1  |
+| 1 | 1 | 1 | 0     | 1      | 0          | 1      | 1  | 1  |
+
+

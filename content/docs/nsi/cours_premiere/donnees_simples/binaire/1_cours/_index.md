@@ -24,7 +24,22 @@ En informatique on rencontre d'autres manières de représenter les nombres :
 * hexadécimal etc.
 * nombres à virgules flottantes
 
-_En quand on creuse, c'est encore plus complexe. Par exemple le langage Rust utilise 14 types différents pour représenter les nombres !_
+{{< expand "" "..." >}}
+Quand on creuse, c'est encore plus complexe. Par exemple le langage Rust utilise 14 types différents pour représenter les nombres !
+
+Pourquoi autant ?
+
+Définir plusieurs types permet d'économiser de l'espace mémoire :
+
+- `u8` est un type d'entiers positifs occupant 8 bits donc s'étant de 0 à $2^8 - 1 = 255$
+- `u64`, la même chose mais de 0 à $2^{64} - 1$.
+- `i8` cette fois on s'autorise des nombres négatifs, toujours sur 8 bits, de $-2^7=-128$ à $2^7 - 1 = 127$.
+- etc.
+
+Cette complexité supplémentaire offre une connaissance précise de la représentation en mémoire.
+
+En Python, par contre, on se situe beaucoup plus haut : les entiers n'ont pas de limite de taille et peuvent être positifs ou négatifs. Il est impossible de savoir précisemment comment un entier sera représenté en mémoire sans entrer dans les détails du code.
+{{< /expand >}}
 
 ### Système de représentation par position
 
@@ -33,7 +48,7 @@ _la numération par position._
 
 
 {{< hint info >}}
-**Représentation par position** : La position d'un chiffres définit la valeur associée à ce chiffre.
+**Représentation par position** : La position d'un chiffre définit la valeur associée à ce chiffre.
 {{< /hint >}}
 
 ### Numération par position
@@ -42,11 +57,15 @@ _la numération par position._
 
 $345 = 3\times100 + 4\times10 + 5 = 3\times 10^2 + 4\times10^1+5\times10^0$
 
-Le $3$ de $345$ vaut donc beaucoup plus ($300$ ...) que le $5$ et pourtant $3<5$.
+Le $3$ de $345$ représente donc $300$, le $4$ représente $40$ etc. On a pourtant $3 < 4$...
 
 En binaire, on a deux chiffres. Chaque chiffre est un _bit_ (=**bi**nary digi**t**).
 
 $0b1101 = 1 \times 2^3 + 1\times 2^2 + 0\times2^1 + 1\times2^0 = 13$
+
+Afin d'indiquer une représentation binaire on utilise $0b$ avant le nombre ou $_2$ après le nombre :
+
+$0b$
 
 
 ### Les puissances de 2

@@ -1,8 +1,8 @@
 ---
-title: "Chaînes de caractères"
+title: "Texte en machine"
 bookCollapseSection: true
 author: qkzk
-weight: 4
+weight: 3
 
 ---
 

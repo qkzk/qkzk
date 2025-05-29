@@ -13,7 +13,7 @@ weight: 1
 
 En programmation, un booléen est un type de variable à deux états : _vrai_ et _faux_.
 
-Ils sont nommés ainsi d'après George Boole, fondateur de l'alèbre de Boole.
+Ils sont nommés ainsi d'après George Boole, fondateur de l'algèbre de Boole.
 
 ## Booléen en Python
 
@@ -23,10 +23,10 @@ En Python, les booléens sont `True` et `False`, ils sont du type `bool`
 True
 print(type(True))   # <class 'bool'>
 False
-print(type(False))  # <class 'False'>
+print(type(False))  # <class 'bool'>
 ```
 
-## Comparaison
+### Comparaison
 
 Les opérateurs de comparaison courants sont identiques à ceux des mathématiques
 mais ATTENTION, il ne faut pas confondre l'égalité et l'affectation
@@ -36,9 +36,11 @@ variable = 5    # une affectation
 5 == 8          # une égalité (qui est fausse)
 ```
 
+{{< hint info >}}
 **Le résultat d'une comparaison est toujours un booléen**
+{{< /hint >}}
 
-## Comparaisons des nombres
+### Comparaisons des nombres
 
 | Comparaison       | Symbole | Exemple       | Résultat |
 | ----------------- | ------- | ------------- | -------- |
@@ -49,28 +51,29 @@ variable = 5    # une affectation
 | Supérieur ou égal | `>=`    | `5 >= 6`      | `False`  |
 | Inférieur ou égal | `<=`    | `8 <= 3`      | `False`  |
 
-## Appartenance à une structure
+### Appartenance à une structure
 
 On peut tester qu'un élément appartient à une structure avec le mot clé `in`
 
 ```python
 "a"     in "bonjour"        # False
 "bon"   in "bonjour"        # True
-1        in [2, 3, 4]        # False
+1       in [2, 3, 4]        # False
 ```
 
-# Opérations sur les booléens
+## Opérations sur les booléens
 
 Les opérateurs sur les booléens sont de deux types :
 
 - opérateur unaire : prend _un_ booléen et en renvoie _un_.
 - opérateur binaire : prend _deux_ booléens et en renvoie _un_.
 
-## Opérateur unaire : la négation
-
-### La négation: `not`
+### Opérateur unaire : la négation
 
 C'est le seul opérateur _unaire_, il donne le contraire de ce qu'on lui passe.
+
+En français l'opérateur de négation est noté NON.
+En Python, l'opérateur de négation est `not`.
 
 ```python
 not True    # s'évalue à False
@@ -86,7 +89,7 @@ not False   # s'évalue à True
 
 ## Table de vérité avec des bits
 
-Les _tables de vérité_ sont abbregées en notant :
+Les _tables de vérité_ sont abregées en notant :
 
 - `1` pour `True`
 - `0` pour `False`
@@ -103,8 +106,8 @@ Les _tables de vérité_ sont abbregées en notant :
 ```python
 False or False  # False
 False or True   # True
-True or False   # True
-True or True    # True
+True  or False   # True
+True  or True    # True
 ```
 
 | `a` | `b` | `a or b` |
@@ -121,8 +124,8 @@ True or True    # True
 ```python
 False and False  # False
 False and True   # False
-True and False   # False
-True and True    # True
+True  and False   # False
+True  and True    # True
 ```
 
 | `a` | `b` | `a and b` |
@@ -139,8 +142,8 @@ True and True    # True
 ```python
 False ^ False  # False
 False ^ True   # True
-True ^ False   # True
-True ^ True    # False
+True  ^ False   # True
+True  ^ True    # False
 ```
 
 | `a` | `b` | `a XOR b` |
@@ -176,9 +179,9 @@ représenter l'absence d'une valeur.
 Étant le seul objet du type `NoneType`, on peut tester son _identité_ avec `is` :
 
 ```python
-1 is None       # False
+1     is None   # False
 "abc" is None   # False
-None is None    # True
+None  is None   # True
 a = 5
 a is None       # False
 ```
@@ -203,12 +206,12 @@ Une colonne par valeur et une colonne pour l'expression :
 | 1   | 1   | 0   |           1            |
 | 1   | 1   | 1   |           1            |
 
-# Propriétés mathématiques de l'algèbre de Boole
+## Propriétés mathématiques de l'algèbre de Boole
 
 Il existe de nombreuses notations utilisées pour décrire l'algèbre de Boole,
 nous utiliserons les notations de Python.
 
-## Définition
+### Définition
 
 On considère l'ensemble `{0, 1}` ou `{False, True}` muni de trois opérations :
 
@@ -216,43 +219,55 @@ la **négation** `not`, le **et logique** `and`, le **ou logique** `or`.
 
 Elles sont définies par les tables de vérité présentées plus haut.
 
-## Complémentarité
+### Complémentarité
 
 - `not(not(a)) = a`
 - `a or (not a) = 1`
 - `a and (not a) = 0`
 
-## Associativité
+### Associativité
 
 - `a or (b or c) = (a or b) or c`
 - `a and (b and c) = (a and b) and c`
 
-## Distributivité
+### Distributivité
 
 - `a or (b and c) = (a and b) or (a and c)`
 - `a and (b or c) = (a or b) and (a or c)`
 
-## Autres tables de vérité
+_Ainsi, on retrouve les propriétés des opérations sur les nombres. Pour simplifier, `or` se comporte comme une somme et `and` comme un produit_.
+
+### Autres tables de vérité
 
 Toutes les opérations binaires peuvent être définies à l'aide des trois opérateurs présentés plus haut.
 
 Par exemple : `a xor b = (a and not b) or (not a and b)`
 
-## Test porte logique 
+Pour le vérifier, on construit les tables de vérité de chaque membre et on les compare.
+
+### `a xor b = (a and not b) or (not a and b)`
 
 <script src="/js/logic_simulator.js"></script>
-<div style="width: 100%; height: 250px">
-<logic-editor id="editor1" showonly="in,out,and,or,xor">
+<div style="width: 600px; height: 400px">
+<logic-editor id="editor1" showonly="in,out,and,or,xor,not">
 <script type="application/json">
 { // JSON5
   v: 6,
   components: {
     in0: {type: 'in', pos: [50, 50], id: 0, val: 1},
-    in1: {type: 'in', pos: [60, 130], id: 1, val: 1},
-    out0: {type: 'out', pos: [270, 90], id: 5},
-    and0: {type: 'and', pos: [170, 90], in: [2, 3], out: 4},
+    in1: {type: 'in', pos: [50, 155], id: 1, val: 1},
+    out0: {type: 'out', pos: [465, 100], id: 5},
+    in2: {type: 'in', pos: [45, 285], id: 2, val: 1},
+    out1: {type: 'out', pos: [470, 310], id: 3},
+    in3: {type: 'in', pos: [45, 330], id: 4, val: 1},
+    xor0: {type: 'xor', pos: [245, 310], in: [6, 7], out: 8},
+    not0: {type: 'not', pos: [150, 50], in: 9, out: 10},
+    not1: {type: 'not', pos: [150, 155], in: 11, out: 12},
+    and0: {type: 'and', pos: [245, 60], in: [13, 14], out: 15},
+    or0: {type: 'or', pos: [370, 100], in: [16, 17], out: 18},
+    and1: {type: 'and', pos: [245, 145], in: [19, 20], out: 21},
   },
-  wires: [[4, 5], [0, 2], [1, 3]]
+  wires: [[8, 3], [2, 6], [4, 7], [0, 9], [10, 13], [1, 14], [15, 16], [18, 5], [1, 11], [21, 17], [12, 20], [0, 19]]
 }
 </script>
 </logic-editor>

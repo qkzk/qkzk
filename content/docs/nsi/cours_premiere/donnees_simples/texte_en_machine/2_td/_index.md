@@ -1,5 +1,5 @@
 ---
-title: "Chaînes : TD"
+title: "Texte : TD"
 bookCollapseSection: true
 weight: 2
 ---
@@ -299,6 +299,25 @@ import base64
 print(base64.b64encode(b"salut").decode("utf-8"))
 print(base64.b64decode(b'SGkh').decode("utf-8"))
 {{< /python >}}
+
+
+### Pourquoi vous faire étudier un truc aussi "old school" que base64 ?
+
+{{< expand "" "..." >}}
+
+
+1. L'email reste le mode de communication professionnel le plus important, loin devant les messageries.
+
+   On l'a dit, dès que vous envoyez autre chose que du texte dans un email, le contenu est encodé en base64 et décodé par votre client email.
+
+2. Les chemins vers les fichiers... Suite à des choix antiques (comprendre ~1970) on autorise des noms de fichiers comportant à peu près n'importe quoi, y compris des caractères non imprimables ou des octets qui ne sont pas valides en UTF-8.
+
+   Lorsqu'un développeur souhaite enregistrer un tel chemin dans du texte... il doit bien trouver une représentation valide ! `base64` est alors une solution.
+
+   Voici un [exemple de code](https://github.com/apelisse/foobidoo/blob/28e38e6c1fdcf6b1bd6260a603588f799beaa9f9/src/main.rs#L607-L623) (auquel j'ai timidement contribué) vous montrant un tel exemple.
+
+   L'auteur travaillait à l'époque chez Google et est maintenant chez OpenAI (chatGPT).
+{{< /expand >}}
 
 ## Exercice 6 - Chiffrement de César
 

@@ -1,5 +1,5 @@
 ---
-title: "Chaines : Cours"
+title: "Texte : Cours"
 bookCollapseSection: true
 weight: 1
 ---
