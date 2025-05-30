@@ -41,18 +41,21 @@ dehors du petit monde de la recherche.
 
 ## http, url & html
 
+{{< hint info >}}
 Techniquement le web se base sur trois choses : le protocole HTTP
 (HyperText Transfert Protocol), les URL (Uniform Resource Locator) et le
 langage de description HTML (HyperText Markup Language).
+{{< /hint >}}
 
 ## web != internet
 
 Une chose très importante à bien avoir à l'esprit : beaucoup de
 personnes confondent "web" et "internet". Même si le "web"
-"s'appuie" sur internet, les deux choses n'ont rien à voir
-puisqu'"internet" est un "réseau de réseau" s'appuyant sur le
-protocole IP alors que, comme nous venons de le voir, le web est la
-combinaison de trois technologies : HTTP, URL et HTML. D'ailleurs on
-trouve autre chose que le "web" sur internet, par exemple, les emails
-avec le protocole SMTP (Simple Mail Transfert Protocol) et les
-transferts de fichiers avec le protocole FTP (File Transfert Protocol).
+"s'appuie" sur internet, les deux choses n'ont rien à voir.
+
+{{< hint info >}}
+- Internet est un "réseau de réseau" s'appuyant sur le protocole IP 
+- le web est la combinaison de trois technologies : HTTP, URL et HTML. 
+{{< /hint >}}
+
+D'ailleurs on trouve autre chose que le "web" sur internet, par exemple, les emails avec le protocole SMTP (Simple Mail Transfert Protocol) et les transferts de fichiers avec le protocole FTP (File Transfert Protocol).

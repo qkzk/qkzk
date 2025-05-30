@@ -18,9 +18,11 @@ en forme les documents sur le web.
 
 # HTML
 
+{{< hint info >}}
 HTML est un _langage de balise_ et non un _langage de programmation_.
 
 HTML permet de _décrire_ le contenu d'un document et d'en donner _la structure_.
+{{< /hint >}}
 
 HTML n'étant pas un langage de programmation, il n'existe pas de variables
 ou de conditions, fonctions etc. en HTML.
@@ -42,8 +44,9 @@ des formats de présentation (feuilles de style en cascade)._
 
 ## Langage de balise
 
-Le principe des balises et d'encapsuler un contenu entre une balise ouvrante
-et une balise fermante.
+{{< hint info >}}
+Le principe des balises et d'encapsuler un contenu entre une balise ouvrante et une balise fermante.
+{{< /hint >}}
 
 Par exemple :
 
@@ -70,8 +73,7 @@ pas, les balises doivent être correctement ordonnées :
 
 Cet exemple ne convient pas ! Comment le rectifier ?
 
-On étudiera, en terminale, un algorithme permettant de repérer (et parfois
-résoudre) ces problèmes de balises incorrectement ordonnées.
+On étudiera, en terminale, un algorithme permettant de repérer (et parfois résoudre) ces problèmes de balises incorrectement ordonnées.
 
 C'est ce qu'on appelle un `parser` de document.
 
@@ -82,6 +84,7 @@ de la page.
 
 Tout en haut, à la racine de cette arbre, on trouve la balise `<html>`.
 
+{{< hint info >}}
 L'ensemble du document est compris entre `<html>` et `</html>`
 
 Dans ce contenu on trouve alors deux parties :
@@ -101,6 +104,7 @@ Dans ce contenu on trouve alors deux parties :
     </body>
 </html>
 ```
+{{< /hint >}}
 
 Intéressons-nous au document lui même.
 
@@ -141,6 +145,8 @@ Deux constats immédiats :
 
 ### Quelques mots sur Javascript
 
+{{< expand "Javascript" "..." >}}
+
 
 Comme Python, C ou Golang, Javascript est un _langage de programmation_.
 
@@ -166,6 +172,7 @@ du client._
 En quoi est-ce intéressant ? Cela permet de réaliser les calculs
 _sur la machine du client_ et non sur le serveur directement.
 Aussi on limite la charge du serveur !
+{{< /expand >}}
 
 ## D'une structure à son arbre
 
@@ -227,6 +234,7 @@ Pour [vérifier](https://yoksel.github.io/html-tree/en/).
 
 ### Propriétés d'une balise
 
+{{< hint info >}}
 Il est possible d'inclure des propriétés DANS la description d'une balise.
 
 Par exemple :
@@ -242,6 +250,7 @@ Par exemple :
 </p>
 
 ```
+{{< /hint >}}
 
 # CSS
 
@@ -272,7 +281,9 @@ Va :
 
 ## Anatomie d'une règle CSS
 
+{{< hint info >}}
 ![règle css](/uploads/docsnsi/ihm_web/img/regle_css.png)
+{{< /hint >}}
 
 **Sélecteur**
 
@@ -320,6 +331,13 @@ p {
 }
 ```
 
+Qui se traduit en :
+
+> Sélectionne tous les _paragraphes_ (`<p>...</p>`) et :
+> - colore le texte en rouge,
+> - donne leur une largeur de 500 pixels,
+> - ajoute une bordure noire en trait plein (`solir`) d'un pixel d'épaisseur.
+
 ### Sélectionner plusieurs éléments
 
 Il est aussi possible de sélectionner plusieurs types d'éléments pour appliquer
@@ -331,6 +349,11 @@ p,li,h1 {
   color: red;
 }
 ```
+
+Qui se traduit en :
+
+> Sélectionne les _pargraphes_, les éléments de liste (`<li>...</li>`) et les titres (`<h1>...</h1>`)
+> et colore leur texte en rouge.
 
 ### Les différents types de sélecteurs
 
@@ -410,8 +433,14 @@ C'est devenu depuis une dizaine d'année l'outil de base du développeur web.
 Tous les navigateurs modernes permettent de consulter le code d'une page
 et de l'éditer localement.
 
+Elle s'ouvre en appuyant sur F12.
+
 On peut ainsi appliquer le style, débugguer les erreurs et mesurer les
 performances dans un outil complet et intégré au navigateur.
 
 Cela ne dispense pas d'écrire le code de sa page dans un éditeur de texte mais
 cela simplifie considérablement les efforts.
+
+Voici, par exemple la fenêtre de développement de Chromium.
+
+![img](./img-2025-05-30-17-56.png) 

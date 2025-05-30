@@ -8,7 +8,7 @@ weight: 17
 ### PDF : [pour impression](./TD_IHM_HTTP.pdf)
 
 
-## Analyser une requête HTTP
+## Exercice 1. Analyser une requête HTTP
 
 Voici l'extrait d'une requête HTTP obtenue sur le site [httpie](https://httpie.io/run)
 
@@ -30,13 +30,13 @@ User-Agent: HTTPie/2.0.0
 
 2. Complétons ensemble le tableau suivant :
 
-  | Paramètre         | Contenu      | Rôle           |
-  |-------------------|--------------|----------------|
-  | `Host`            | \hspace{5cm} | $\hspace{5cm}$ |
-  | `User-Agent`      |              |                |
-  | `Accept`          |              |                |
-  | `Accept-Encoding` |              |                |
-  | `Connection`      |              |                |
+  | Paramètre         | Contenu        | Rôle           |
+  |-------------------|----------------|----------------|
+  | `Host`            | $\hspace{5cm}$ | $\hspace{5cm}$ |
+  | `User-Agent`      |                |                |
+  | `Accept`          |                |                |
+  | `Accept-Encoding` |                |                |
+  | `Connection`      |                |                |
 
 
 Voici maintenant un extrait de la réponse du serveur :
@@ -93,7 +93,7 @@ x-proxy-cache: MISS
 5. Le code 404 est un code d'erreur. Modifier la requête initiale afin de générer
   un tel code d'erreur.
 
-## `GET` et `POST`
+## Exercice 2. `GET` et `POST`
 
 La requête suivante peut être lue dans la barre d'adresse d'un navigateur web,
 après avoir cliqué sur le bouton **envoyer** d'un formulaire.
@@ -107,3 +107,29 @@ http://localhost/cible.html?prenom=Lola?Parfum1=Fraise?Parfum2=Fraise?Parfum3=Ch
   correspondantes.
 3. Que penser de la confidentialité des paramètres transmis dans la requête ?
 
+
+## Exercice 3. Examen d'une situation concrète
+
+
+Raymond lance un simple serveur Python pour rendre sa page accessible.
+
+**On suppose que le dossier racine ne contient rien d'autre que
+les trois fichiers (`mon_site.html`, `img/cantine.jpg`, `css/style.css`).**
+
+Voici ce qu'on peut lire dans la console après qu'il ait lancé son site et tenté de le voir dans le navigateur en se rendant sur `http://localhost:8000/mon_site.html`
+
+```bash
+$ python -m http.server
+Serving HTTP on 0.0.0.0 port 8000 (http://0.0.0.0:8000/) ...
+127.0.0.1 - - [13/Jul/2024 11:25:02] "GET /mon_site.html HTTP/1.1" 200 -
+127.0.0.1 - - [13/Jul/2024 11:25:02] "GET /css/style.css HTTP/1.1" 200 -
+127.0.0.1 - - [13/Jul/2024 11:25:02] "GET /img/cantine.jpg HTTP/1.1" 200 -
+```
+
+1. À combien de requêtes HTTP correspondent ces lignes ?
+1. Que signifie le nombre 200 qui apparait lignes 3, 4 et 5 ?
+1. Raymond est-il parvenu à voir son site ? Justifier.
+1. Quelle adresse doit-il ouvrir dans SON navigateur pour accéder à sa page ?
+1. Raymond saisit l'adresse `http://localhost:8000/superman.html` dans son navigateur.
+
+   Écrire une ligne correspondant à la réponse du serveur affichée dans la console.

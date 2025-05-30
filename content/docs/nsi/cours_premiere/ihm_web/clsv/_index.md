@@ -21,6 +21,33 @@ l'ordinateur A (celui qui demande des ressources) est un client alors
 que l'ordinateur B (celui qui fournit les ressources) sera qualifié de
 serveur.
 
+{{< hint info >}}
+Le _serveur_ est donc une machine connectée à un réseau qui attend de recevoir des instructions de la part d'un _client_.
+
+Pour communiquer, ces machines utilisent un _protocole_ établi préalablement.
+{{< /hint >}}
+
+**Analogie avec la vie courante**
+
+{{< expand "Analogie" "..." >}}
+Afin de terminer cette analogie, voici deux exemples de communications :
+
+Une personne entre dans un débit de boissons et dit :
+
+- Bonjour Monsieur, un café s'il vous plait.
+- Votre café monsieur, cela fera 2 euros.
+- Voici deux euros.
+- Merci
+
+La personne est le "client" et celui qui reçoit la commande le "serveur".
+
+Elles ont l'une et l'autre respecté un protocole (saluer, passer une commande, annoncer un tarif, regler, dire merci etc.) qui conduit à la réalisation de la transaction.
+
+Les machines font exactement la même chose.
+
+Remarquez que le serveur attend entre les commandes des clients. S'il n'a pas d'autres missions (plonge, nettoyage etc.) alors il n'a rien à faire.
+{{< /expand >}}
+
 En tapant «http://www.google.fr», votre machine va chercher à entrer en
 communication avec le serveur portant le nom «www.google.fr» (C'est plus
 compliqué. Pour les puristes nous dirons donc que la

@@ -14,13 +14,14 @@ Revenons sur l'adresse qui s'affiche dans la barre d'adresse d'un
 navigateur web et plus précisément sur le début de cette adresse
 c'est-à-dire le "http"
 
-Selon les cas cette adresse commencera par http ou https (nous verrons
-ce deuxième cas à la fin de cette activité).
+Selon les cas cette adresse commencera par http ou https (nous verrons ce deuxième cas à la fin de cette activité).
 
-Le protocole (un protocole est ensemble de règles qui permettent à 2
-ordinateurs de communiquer ensemble) HTTP (HyperText Transfert Protocol)
-va permettre au client d'effectuer des requêtes à destination d'un
-serveur web. En retour, le serveur web va envoyer une réponse.
+{{< hint info >}}
+Un _protocole_ est ensemble de règles qui permettent à 2 ordinateurs de communiquer ensemble
+
+Le protocole  HTTP (HyperText Transfert Protocol) va permettre au client d'effectuer des requêtes à destination d'un serveur web. En retour, le serveur web va envoyer une réponse.
+{{< /hint >}}
+
 
 Voici une version simplifiée de la composition d'une requête HTTP
 (client vers serveur) :
@@ -103,19 +104,18 @@ code HTML, une fois ce
 code reçu par le client, il est interprété par le navigateur qui affiche
 le résultat à l'écran. Cette partie correspond au _corps de la réponse_.
 
-La 1re ligne se nomme la ligne de statut :
+La première ligne se nomme la ligne de statut :
 
 - HTTP/1.1 : version de HTTP utilisé par le serveur
 - 200 : code indiquant que le document recherché par le client a bien
-  été trouvé par le serveur. Il existe [d'autres codes](https://fr.wikipedia.org/wiki/Liste_des_codes_HTTP)
-  dont un que
-  vous connaissez peut-être déjà : le code 404 (qui signifie  «Le
-  document recherché n'a pu être trouvé»).
+  été trouvé par le serveur. Il existe [d'autres codes](https://fr.wikipedia.org/wiki/Liste_des_codes_HTTP) dont un que vous connaissez peut-être déjà : le code 404 (qui signifie  «Le document recherché n'a pu être trouvé»).
 
 Les 5 lignes suivantes constituent l'en-tête de la réponse, une ligne
 nous intéresse plus particulièrement :
 
-    Server: Apache/2.0.54 (Debian GNU/Linux) DAV/2 SVN/1.1.4
+```
+Server: Apache/2.0.54 (Debian GNU/Linux) DAV/2 SVN/1.1.4
+```
 
 Le serveur web qui a fourni la réponse http ci-dessus a comme système
 d'exploitation une distribution GNU/Linux nommée "Debian" (pour en
@@ -125,16 +125,35 @@ logiciel qui va gérer les requêtes http (recevoir les requêtes http en
 provenance des clients et renvoyer les réponses http).
 
 Il existe d'autres logiciels capables de gérer les requêtes http (nginx,
-microsoft-iis...). NGINX (engine x) dépasse depuis peu (juin 2019) Apache.
+microsoft-iis...). NGINX (engine x) dépasse depuis 2019 Apache.
 NGINX et Apache sont installés sur 85% des serveurs web mondiaux.
 
-Le "HTTPS" est la version "sécurisée" du protocole HTTP. Par
-"sécurisé" en entend que les données sont chiffrées avant d'être
-transmises sur le réseau et que leur provenance est certifiée.
+### Résumé du protocole HTTP 
 
----
+{{< hint info >}}
+- HTTP (HyperText Transfert Protocol) est un _protocole_ permettant à un client de demander (_requête_) des contenus (fichiers) à  un serveur (_réponse_)
+- Une requête ne peut demander l'accès qu'à _un_ fichier. Lorsqu'on accède à une page qui contient 100 fichiers annexes (images, css, javascript), il faut 101 requêtes (page + fichiers annexes).
+- C'est le _navigateur_ qui exécute la première requête demandée par l'utilisateur et les 100 suivantes automatiquement.
+- C'est ensuite le navigateur qui effectue le rendu de la page en question.
+- Il existe plusieurs types de requêtes. On étudiera GET (obtenir sans modifier) et POST (envoyer des informations via un formulaire)
+- Une réponse est accompagnée d'un code (200, 404 etc.) permettant de savoir rapidement si la requête a réussi ou la raison de son échec.
+- Le contenu de la page est placé après l'_entête_ de la réponse.
+{{< /hint >}}
 
-## Les étapes du protocole HTTPS
+### HTTPS
+
+_HTTPS est étudié plus en détail en terminale_ 
+
+"HTTPS" est la version "sécurisée" du protocole HTTP. Par "sécurisé" en entend que les données sont chiffrées avant d'être transmises sur le réseau et que leur provenance est certifiée.
+
+{{< expand "HTTPS" "..." >}}
+Mettre en place un serveur HTTPS nécessite un _certificat_ délivré par une autorité de confiance. Ce certificat remplit deux rôles :
+
+- il assure au client que le serveur web est bien celui auquel il s'adresse,
+- il permet d'établir un chiffrement de la communication entre les machines. Ainsi, les ordinateurs assurant le transit des requêtes et réponses entre le client et le serveur sont incapables de lire leur contenu.
+
+
+### Les étapes du protocole HTTPS
 
 Voici les différentes étapes d'une communication client - serveur
 utilisant le protocole HTTPS :
@@ -177,6 +196,7 @@ sensibles.
 
 Concernant un site statique, comme le mien, https n'apporte pas grand chose,
 seulement l'assurance de l'origine. Vous ne transmettez aucune donnée au site.
+{{< /expand >}}
 
 ## Complément
 
@@ -245,9 +265,9 @@ C'est la requête qui a été transmise quand on a tapé :
 On a bien transmis une requête GET au serveur, avec toutes les informations
 voulues. C'est bien Python qui a transmis cette requête.
 
-## Exercice 1
+### Exercice 1
 
-1. En utilisant ~Thonny~ Google Colab reproduire les commandes présentées ci-dessus pour joindre
+1. En utilisant Sublime Text reproduire les commandes présentées ci-dessus pour joindre
    successivement : `https://google.com` et `https://google.com/azeaze`
 
 2. Comparez les codes réponses obtenus dans les deux cas. Que signifient-ils ?
@@ -256,7 +276,7 @@ voulues. C'est bien Python qui a transmis cette requête.
 
    Comment expliquer cette différence ?
 
-# Éxaminer une requête depuis une machine
+## Éxaminer une requête depuis une machine
 
 Différentes approches permettent d'exécuter et d'examiner des requêtes.
 En voici une qui devrait fonctionner sur un ordinateur et un téléphone.
@@ -306,7 +326,7 @@ Voici un résultat similaire à celui obtenu :
 }
 ```
 
-## Exercice 2
+### Exercice 2
 
 Toujours depuis httpie :
 
@@ -324,7 +344,7 @@ Toujours depuis httpie :
    - la date de dérnière modification de la réponse,
    - le serveur de la réponse
 
-# Requête GET et POST
+## Requêtes GET et POST
 
 En théorie, une requête GET permet d'**accéder** à un contenu, sans le modifier,
 et une requête POST d'**envoyer** un nouveau contenu.
@@ -332,7 +352,7 @@ et une requête POST d'**envoyer** un nouveau contenu.
 Ainsi, presque toutes les requêtes effectuées sur internet sont des requêtes
 GET.
 
-## Transmettre une information via une requête GET
+### Transmettre une information via une requête GET
 
 Lorsqu'on transmet des informations via une requête GET, celles-ci sont transmises
 dans l'URL directement, sous la forme de paire "clé:valeur" :
@@ -352,7 +372,7 @@ paires.
 
 Recommencez cette requête en entrant les informations dans "PARAMS"
 
-## Transmettre une information via une requête POST
+### Transmettre une information via une requête POST
 
 Cette fois, on transmet l'information dans l'entête, généralement via
 le champ `form` (_formulaire_).
@@ -374,10 +394,12 @@ Considérons l'exemple suivant :
 3. Le serveur transmet-il ce qu'il a reçu en retour ? Dans quel champ ?
 4. La réponse de ce serveur est-elle un contenu html ?
 
-# Publier sur un microblog
+### Publier sur un microblog
 
 _Cette partie nécessite qu'un serveur dont je ne suis pas l'administrateur
 fonctionne toujours à cette date. Espérons que ce soit bien le cas !_
+
+_Si daventure le serveur ne fonctionne plus, j'en ai un de secours sous la main._
 
 Nous allons publier quelques messages sur le [blog](https://liris-ktbs01.insa-lyon.fr:8000/blogephem/) de mon collègue.
 
@@ -424,7 +446,7 @@ https://liris-ktbs01.insa-lyon.fr:8000/blogephem/kewotepo
 Ici, le code de la réponse est 201. Il indique qu'une information a été crée
 dans la base.
 
-## Exercice 4
+### Exercice 3
 
 1. Publier un message sur le microblog. Par exemple, dîtes vous bonjour !
 2. Modifier légèrement :

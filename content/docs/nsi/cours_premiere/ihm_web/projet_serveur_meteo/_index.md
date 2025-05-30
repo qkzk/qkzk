@@ -68,8 +68,7 @@ Très peu de nouveautés !
 ## IDE
 
 * Thonny gère Flask sans problème.
-* N'importe quel IDE installé sur votre machine (vs code, atom, sublime text...) pour
-    écrire le code html (et éventuellement Python)
+* N'importe quel IDE installé sur votre machine (vs code, sublime text...) pour écrire le code html (et éventuellement Python)
 * On _peut_ servir un site depuis colab avec Flask mais c'est **sport.**
     Un [exemple](https://stackoverflow.com/questions/54465816/how-to-use-flask-in-google-colaboratory-python-notebook). Ouvrez le lien de la première réponse pour découvrir un exemple.
 
@@ -109,6 +108,12 @@ Le projet final est constitué des fichiers suivants :
   final de l'activité IHM sur le web "Flask" (le formulaire...) `views.py`
 * `index.html` et `resultats.html` sont vos pages web servies par Flask
 
+{{< hint danger >}}
+Avant de rendre le travail dans Classroom, compressez votre dossier complet en .zip (sous windows, clic droit sur le dossier dans l'explorateur, "Envoyer vers... dossier compressé") et c'est ce .zip que vous me rendez. 
+
+Ainsi, j'aurais la même arborescence que vous et vous ne risquez pas d'oublier un fichier.
+{{< /hint >}}
+
 ## D'autres informations sur le projet à cette page :
 
 * L'objectif est de comprendre, pas de devenir un
@@ -129,6 +134,7 @@ Le projet final est constitué des fichiers suivants :
 7. Extraire les infos du json et remplir un dictionnaire avec la requête
 8. Remplir le template de reponse avec les vraies données aux bons endroits
 9. Extensions : css, prévisions, carte de France avec les villes, ce que vous voulez.
+10. **Compresser le dossier complet en .zip et rendre le travail.**
 
 ---
 

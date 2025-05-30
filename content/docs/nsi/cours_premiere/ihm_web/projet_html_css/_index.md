@@ -30,6 +30,12 @@ Vous disposez de **trois fichiers** :
 
   _Vous devez vous approcher le plus possible de ce résultat._
 
+{{< hint danger >}}
+- Le seul fichier à rendre est `style.css`. Rien d'autre.
+- Si vous changez le contenu de `margaret_hamilton.html` alors je ne pourrais évaluer votre travail et vous perdrez des points.
+{{< /hint >}}
+
+
 ### Liens vers ces fichiers :
 
 1. [`margaret_hamilton.html`](https://raw.githubusercontent.com/qkzk/data_colab/master/margaret_hamilton.html)
@@ -54,7 +60,7 @@ Démarche :
 
 1. Modifier le fichier `style.css` pour cela :
 
-   - Ouvrir le fichier HTML dans google _chrome_,
+   - ouvrir le fichier HTML dans google _chrome_,
    - ouvrir les outils de développeur (F12) de chrome,
    - tester des modifications de style dans chrome,
    - copier ces modifications dans le fichier `style.css` une fois satisfait,

@@ -58,9 +58,9 @@ Voici quelques éléments de comparaison entre Python et Javascript :
 | Créer une variable     | `a = 2`                    | `var a = 2;`                        |
 | Fin d'instruction      | retour à la ligne          | point virugle `;`                   |
 | indentation            | définit la structure       | optionnelle                         |
-| fonction               | `def f(x): ...`            | `function f(x) { expr }`            |
-| condition              | `if condition: expression` | `if (condition) { expr }`           |
-| boucle for             | `for i in range(10): ...`  | `for (var i=0; i<10; i++) { expr }` |
+| fonction               | `def f(x): expr`           | `function f(x) { expr }`            |
+| condition              | `if condition: expr`       | `if (condition) { expr }`           |
+| boucle for             | `for i in range(10): expr` | `for (var i=0; i<10; i++) { expr }` |
 | boucle while           | `while condition: expr`    | `while (condition) { expr }`        |
 | commentaire            | `# un commentaire`         | `// un commentaire`                 |
 | écrire dans la console | `print( expr1, expr2 )`    | `console.log( expr1, expr2 );`      |
@@ -134,7 +134,7 @@ remplacé.
 * `.innerHTML = ` : remplace l'attribut `innerHTML` par ce qui suit le signe égal.
 
 1. Que signifie le `[0]` apres `...getElementsByClassName("para")` ?
-2. Quels types d'objets retournent les méthodes `getElementsByClassName` et `getElementById` ?
+2. Quels types d'objets renvoient les méthodes `getElementsByClassName` et `getElementById` ?
 2. Représenter la page qui sera affichée par le navigateur.
 2. Ajouter une ligne pour modifier le contenu du dernier paragraphe en 
     "Mes films préférés".

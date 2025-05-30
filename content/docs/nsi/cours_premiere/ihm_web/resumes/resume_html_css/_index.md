@@ -140,7 +140,7 @@ D'où le nom : selecteur _complexe_...
     Je n'ai aucune prétention à ce sujet.
 
     Un dernier exemple vous montrant ce que _j'ai_ pu faire sur mon site en quelques jours :
-    * Je suis parti de [ça](https://themes.gohugo.io/theme/hugo-book/)
+    * Je suis parti de [ça](https://themes.gohugo.io/themes/hugo-book/)
     * Je voulais que ça ressemble à [l'ancienne version de mon site ](http://qkzk.free.fr/)
     * Et le résultat, et bien [vous êtes dessus](http://qkzk.xyz).
 
@@ -151,7 +151,7 @@ D'où le nom : selecteur _complexe_...
 
 ## Astuce dans sublime text ou atom (ou n'importe quel vrai éditeur de code).
 
-Une fois votre fichier enregistré en "nom**.html**", vous pouvez utiliser l'auto
+Une fois votre fichier enregistré en _nom.**html**_, vous pouvez utiliser l'auto
 complétion :
 
 Tapez `html` puis TAB et sublime text va générer tout le code suivant

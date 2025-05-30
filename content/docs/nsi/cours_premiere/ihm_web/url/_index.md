@@ -10,39 +10,47 @@ weight: 2
 pdf : [pour impression](./nsi_prem_url.pdf)
 
 
-# Les URL
+## Les URL
 
 Dans la barre d'adresse de votre navigateur web vous trouvez, quand
 vous visitez un site, des choses du genre :
-"`https://qkzk.xyz/docs/nsi/cours_premiere/programmation/comparaison/`".
+"`https://qkzk.xyz/docs/nsi/cours_premiere/programmation/`".
 
 La partie
-"`/docs/nsi/cours_premiere/programmation/comparaison/`" s'appelle une URL.
+"`/docs/nsi/cours_premiere/programmation/`" s'appelle une URL.
 
 Plus précisément :
 
+{{< hint info >}}
 | protocole  | domaine    | URL                                                   |
 |------------|------------|-------------------------------------------------------|
-| `https://` | `qkzk.xyz` | `/docs/nsi/cours_premiere/programmation/comparaison/` |
+| `https://` | `qkzk.xyz` | `/docs/nsi/cours_premiere/programmation/` |
 
 
 Une URL (Uniform Resource Locator) permet d'identifier une ressource
 (par exemple un fichier) sur un réseau.
+{{< /hint >}}
 
 L'URL indique « l'endroit » où se trouve une ressource sur un
 ordinateur. Un fichier peut se trouver dans un dossier qui peut lui-même
-se trouver dans un autre dossier... On parle d'une structure en
-arborescence, car elle ressemble à un arbre à l'envers :
+se trouver dans un autre dossier... 
+
+{{< hint info >}}
+On parle d'une structure en arborescence, car elle ressemble à un arbre à l'envers :
 
 ![arbo](/uploads/docsnsi/ihm_web/img/url.jpg)
 
+La base de l'arbre s'appelle la _racine_ de l'arborescence et se représente par un `/`
+{{< /hint >}}
 
-Comme vous pouvez le constater, la base de l'arbre s'appelle la _racine_ 
-de l'arborescence et se représente par un `/`
+
 
 ## Chemin absolu ou chemin relatif ?
 
+{{< hint info >}}
 Il existe deux types de chemins dans une arborescence : **absolu** et **relatif**.
+
+{{< /hint >}}
 
 Le chemin absolu doit indiquer le chemin depuis la racine. 
 
@@ -79,6 +87,7 @@ depuis le dossier dossier4 permet de « retourner » à la racine.
 
 En résumé :
 
+{{< hint info >}}
 **Chemin absolu**
 
 * débute par `/`
@@ -89,26 +98,32 @@ En résumé :
 * ne débute par par `/`
 * indique l'adresse depuis la position actuelle
 * `../` signifie un niveau plus haut dans l'arborescence
+{{< /hint >}}
 
-## À faire vous-même 1
+### Exercice 1
 
 Soit la structure en arborescence suivante:
 
 ![arbo](/uploads/docsnsi/ihm_web/img/url.jpg)
 
 Le contenu du fichier "`fichier7.odp`" utilise le fichier
-"`fichier5.svg`". Donnez le chemin relatif qui devra être renseigné
-dans le fichier "`fichier7.odp`" afin d'atteindre le fichier
-"`fichier5.svg`".
+"`fichier5.svg`". 
 
-Donnez le chemin absolu permettant d'atteindre le fichier
-"fichier6.html".
+1. Donnez le chemin relatif qui devra être renseigné dans le fichier "`fichier7.odp`" afin d'atteindre le fichier "`fichier5.svg`".
+2. Donnez le chemin absolu permettant d'atteindre le fichier "`fichier6.html`".
+3. On considère "`fichier4.js`" :
+
+    a) Donnez son chemin absolu 
+
+    b) Donnez son chemin relatif depuis "`dossier2`"
+
+    c) Donnez son chemin relatif depuis "`dossier4`"
 
 ---
 
 Remarque : la façon d'écrire les chemins (avec des slash (`/`) comme
 séparateurs) est propre aux systèmes dits « UNIX », par exemple
 GNU/Linux ou encore Mac OS. Sous Windows, ce n'est pas le slash qui est
-utilisé, mais l'antislash (`\\`). Pour ce qui nous concerne ici, les
+utilisé, mais l'antislash (`\`). Pour ce qui nous concerne ici, les
 chemins réseau (et donc le web), pas de problème, c'est le slash qui
 est utilisé.

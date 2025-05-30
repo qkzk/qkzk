@@ -36,13 +36,12 @@ Avant d'entrer dans le vif du sujet, un petit historique :
     c'est **node.js** (2009)
   - possibilité de créer des applications de bureau qui fonctionnent sur un
     serveur **node.js** et s'exécutent dans "chromium"
-    (partie open source de Google Chrome). Par exemple : `atom`
-    (présent sur vos machines) qui utilise la technologie
-    **electron (2013/2016)**.
+    (partie open source de Google Chrome). Par exemple : `discord`
+     qui utilise la technologie **electron**. Ce que vous voyez à l'écran est une fenêtre du navigateur Chrome sans les barres d'onglet, d'adresse etc.
 
 - JavaScript est le langage informatique le plus populaire depuis quelques
   années, il a surpassé Java, C/C++ avec l'essor du web. Il est talonné par
-  Python. En 2019, presque tous les éléments "dynamiques" d'une page web moderne
+  Python. Presque tous les éléments "dynamiques" d'une page web moderne
   sont programmés en JavaScript.
 
 ## Inclure un script JS dans une page web

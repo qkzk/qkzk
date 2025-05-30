@@ -534,7 +534,74 @@ zoo_la_fleche = {
 
     b. Écrire le code de cette fonction.
 
-# Objectif BAC
+## 12. Le morpion
+
+_Donné en TD parce que les fonctions sont toutes très courtes, vous pouvez tout à fait le faire en Python directement ou le tenter à l'écrit_
+
+On a modélisé une grille de morpion par une liste de liste qui peut ressembler à ça :
+
+```python 
+morpion = [
+    [' ', 'x', 'o'],
+    [' ', 'x', 'o'],
+    ['o', 'x', ' '],
+]
+```
+
+Donc :
+
+- `morpion` est une variable dont la valeur est une `list` de longueur 3.
+- ses éléments sont eux mêmes des `list` de longueur 3.
+- chacune de ces sous listes contient 3 objets, des `str`, pouvant prendre les valeurs `' '`, `'x'` ou `'o'`.
+
+1. écrire une fonction `jouer` qui prendre 4 paramètres :
+    - un morpion tel que défini au dessus,
+    - ligne, un entier entre 0 et 2 inclus,
+    - colonne, un entier entre 0 et 2 inclus,
+    - symbole un `str` parmi `'x'` et `'o'`
+
+    Si la case en ligne colonne est inoccupée (c'est-à-dire si elle contient un `' '`), alors on remplace cet espace par le symbole reçu. Alors la fonction renvoie Vrai.
+
+    Sinon, on ne fait rien et la fonction renvoie Faux.
+
+    Les erreurs possibles (numéro de ligne ou de colonne invalide, symbole invalide etc.) ne sont pas gérées dans cette fonction. On suppose qu'on reçoit toujours des éléments valides.
+
+2. écrire une fonction `ligne_gagnante` qui prend en paramètre un morpion comme plus haut et un numéro de ligne (0 à 2 inclus) et renvoie vrai si la ligne en question contient trois fois le même symbole `'x'` ou `'o'`.
+3. écrire une fonction `colonne_gagnante`qui prend en paramètre un morpion comme plus haut et un numéro de colonne (0 à 2 inclus) et renvoie vrai si la colonne en question contient trois fois le même symbole `'x'` ou `'o'`.
+ 4. écrire une fonction `diagonale_gagnante`qui prend en paramètre un morpion comme plus haut et renvoie vrai si l'une des diagonales contient trois fois le même symbole `'x'` ou `'o'`.
+5. écrire une fonction `est_gagnant` qui prend un morpion en paramètre et renvoie vrai si et seulement si le morpion est gagnant. Elle utilise vos trois fonctions précédentes.
+6. écrire une fonction `est_match_nul` qui prend un morpion en paramètre et renvoie vrai si aucune case n'est libre.
+7. écrire une fonction `est_termine` et renvoie vrai si et seulement si l'un des joueurs a gagné ou si la partie est un match nul.
+8. Le jeu complet dans l'interpréteur Python.
+
+    Écrire une fonction appelée `joueur_morpion` qui...
+
+    crée un morpion vide (que des `' '`)
+
+    `joueur = x` commence. 
+
+    Tant que la partie n'est pas terminée, 
+
+    - Affiche le symbole du joueur : "Joueur x"
+
+    - Affiche un morpion (à réserver à une version Python, sur le papier on suppose qu'on a la fonction afficher...)
+
+    - Le jeu demande avec input un numéro de ligne puis un numéro de colonne. Supposez que l'utilisateur tape toujours des entiers entre 0 et 2 inclus.
+
+    - Si c'est possible de jouer, (`if jouer(...):`) 
+
+       - si la partie est gagnée, on félicite le joueur et on affiche la grille finale.
+
+       - on change 'x' pour 'o' ou 'o' pour 'x'
+
+
+{{< expand "morpion" "..." >}}
+[morpion.py](./morpion.py)
+{{< /expand >}}
+
+ 
+
+## Objectif BAC
 
 _Cet exercice propose plusieurs modélisations pour représenter les notes des
 élèves d'une classe._

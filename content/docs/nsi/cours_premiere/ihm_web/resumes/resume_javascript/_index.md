@@ -237,7 +237,7 @@ Ce qu'ils ont de commun :
 
 ## Références
 
-* [Les cours sur le site](/docs/isn/isn-travaux-pratiques/4-programmation/4-2-javascript-les-variables/) et les parties suivantes
+* [Les cours sur le site](/docs/archives/isn/isn-travaux-pratiques/4-programmation/4-2-javascript-les-variables/) et les parties suivantes
 * [w3schools](https://www.w3schools.com/js/default.asp)
 * [MDN](https://developer.mozilla.org/fr/docs/Apprendre/JavaScript)
 
