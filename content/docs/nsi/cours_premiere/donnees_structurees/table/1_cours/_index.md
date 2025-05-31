@@ -21,7 +21,7 @@ habituellement traitées à l'aide de tableurs ou de logiciels de bases
 de données principalement. Nous allons apprendre à importer et exporter
 des données en utilisant ce format._
 
-# 1. Données en table
+## 1. Données en table
 
 De quoi parle-t-on ?
 
@@ -33,7 +33,7 @@ Par "données en table" on entend ce type d'information :
 
   ![dans un fichier texte](/uploads/docsnsi/table_csv/img/fr-creation-fichier-csv.jpg)
 
-* sans mise en forme dans un tableur
+* mal importé dans un tableur
 
   ![dans un tableur](/uploads/docsnsi/table_csv/img/csv_1.png)
 
@@ -42,16 +42,16 @@ Par "données en table" on entend ce type d'information :
   ![dans un tableur](/uploads/docsnsi/table_csv/img/eg_formats_csv01_01.png)
 
 
-Excel et les tableurs évolués réalisent un traitement complexe des données 
-mais on peut toujours exporter un tableau de données vers un fichier au
-format particulier ou importer un tel fichier
+Les tableurs évolués réalisent un traitement complexe des données 
+mais on peut toujours exporter ou importer un tableau de données vers un fichier au
+format particulier.
 
 
 
-# 2. Enregistrements
+## 2. Enregistrements
 
 * Un **enregistrement** est une structure de données, de types éventuellement
-    différents, auxquelles ont accède grâce à un nom.
+    différents, auxquelles ont accède grâce à un _nom_.
 
     _Exemple :_ On peut représenter les notes d'un élève dans différentes
     disciplines à l'aide d'un enregistrement :
@@ -63,10 +63,13 @@ format particulier ou importer un tel fichier
     Les champs (ou clés ou attributs) de ces enregistrements sont ici `'Nom'`,
     `'Anglais'`, `'Info'` et `'Maths'`. On leur associe des valeurs, ici 
     `'Joe'`, `'17'`, `'18'` et `'16'`.
-* En Python, on utilisera principalement les **dictionnaires** pour représenter
+
+    Dans un tableau, un enregistrement correspond à une ligne.
+
+* En Python, on utilisera des **dictionnaires** ou, plus rarement, des **listes** pour représenter
     les enregistrements.
 
-## Les données en table dans un langage de programmation
+### Les données en table dans un langage de programmation
 
 
 En python, ce tableau peut prendre différentes formes :
@@ -96,9 +99,9 @@ Le contenu ne change pas, les manipulations nécessaires pour y accéder si.
 Dans certains cas on dispose directement des données (via l'énoncé ou un
 travail préalable). Parfois on doit importer les données depuis un fichier csv.
 
-## Comparaison des formats
+### Comparaison des formats
 
-Dans le premier cas on accède aux données comme dans un tableau 2D :
+Dans le cas des double listes, on accède aux données comme dans un tableau 2D :
 
 * accéder au premier enregistrement.
 
@@ -125,7 +128,9 @@ mais on accède aux valeurs _par leur clés_.
     'Franky'
     ```
 
-# 3. Fichiers CSV
+    C'est plus facile à comprendre.
+
+## 3. Fichiers CSV
 
 {{< hint info >}}
 * Le format CSV (_Comma Separated Value_) est couramment utilisé pour importer ou
@@ -162,7 +167,7 @@ Le fichier CSV correspondant est :
 ```
 
 
-# 4. Lecture de fichiers CSV
+## 4. Lecture de fichiers CSV
 
 * On peut choisir de représenter en Python les fichiers CSV par des listes de
     dictionnaires dont les clés sont les noms des colonnes.
@@ -172,7 +177,8 @@ Le fichier CSV correspondant est :
     Table1 = [
         {'Nom': 'Joe','Anglais': '17', 'Info': '18', 'Maths': '16'},
         {'Nom': 'Zoé','Anglais': '15', 'Info': '17', 'Maths': '19'},
-        {'Nom': 'Max','Anglais': '19', 'Info': '13', 'Maths': '14'}]
+        {'Nom': 'Max','Anglais': '19', 'Info': '13', 'Maths': '14'}
+    ]
     ```
 
     **À noter :** _En utilisant le vocabulaire habituel décrivant une feuille
@@ -183,9 +189,9 @@ Le fichier CSV correspondant est :
     * _une cellule est une valeur associée à une clé d'un dictionnaire, ici
         `Table1[0]['Info']`_
 
-# 5. Import d'un fichier CSV
+## 5. Import d'un fichier CSV
 
-## La méthode à retenir
+### La méthode à retenir
 
 * pour l'import on crée une liste de dictionnaires (un par ligne de la table).
     La première ligne du fichier CSV est considérée comme la ligne des noms
@@ -204,25 +210,24 @@ Le fichier CSV correspondant est :
 
 
 
-# 6. Exporter vers un fichier CSV avec Python
+## 6. Exporter vers un fichier CSV avec Python
 
 
 * Pour l'export, on entre le nom de la table sous forme de chaîne. On donne
     l'ordre des colonnes sous forme d'une liste d'attributs.
 
     ```python
-    def vers_csv(nom_fichier, ordre):
+    def vers_csv(nom_fichier, table, champs):
         with open(nom_fichier, 'w') as contenu:
-            writer = csv.DictWriter(contenu, fieldnames=ordre)
-            table = eval(nom)
-            writer.writeheader()  # pour la 1ere lire, celle des attributs
+            writer = csv.DictWriter(contenu, fieldnames=champs)
+            writer.writeheader()  ## pour la 1ere lire, celle des attributs
             for ligne in table:
-                writer.writerow(ligne)  # ajoute les lignes de la table
+                writer.writerow(ligne)  ## ajoute les lignes de la table
     ```
-* Pour exporter la table `Table1` on utilise :
+* Pour exporter la table `table` on utilise :
 
     ```python
-    >>> vers_csv('Table1.csv', ['Nom', 'Anglais', 'Info', 'Maths'])
+    >>> vers_csv('Table1.csv', table, ['Nom', 'Anglais', 'Info', 'Maths'])
     ```
 
     Python crée alors un fichier `Table1.csv` au format CSV :
@@ -234,16 +239,14 @@ Le fichier CSV correspondant est :
     Max,19,13,14
     ```
 
-# 6. Sélectionner et projeter
+## 7. Sélectionner et projeter
 
 On est régulièrement amené à récupérer une partie des données.
 
-* lorsqu'on souhaite accéder à un ou plusieurs enregistrements vérifiant un critère,
-  on réalise une _sélection_.
-* lorsqu'on souhaite accéder à toutes les données d'une colonne on réalise une
-  _projection_.
+* lorsqu'on souhaite accéder à **un ou plusieurs enregistrements vérifiant un critère**, on réalise une _sélection_.
+* lorsqu'on souhaite accéder à **toutes les données d'une colonne** on réalise une _projection_.
 
-## Exemple de sélection.
+### Exemple de sélection.
 
 Supposons qu'on dispose d'une table enregistrée dans une liste de dictionnaires :
 
@@ -257,8 +260,9 @@ Table1 = [
 ]
 ```
 
-On souhaite extraire la liste des enregistrements des élèves ayant eu au moins 16
-en maths.
+On souhaite extraire la liste des enregistrements des **élèves ayant eu au moins 16** en maths.
+
+C'est une _sélection_ dont le critère est "`enregistrement["Maths"] >= 16"
 
 On peut le faire "à la main" :
 
@@ -272,7 +276,7 @@ for enregistrement in Table1:
 Le résultat est _encore une table_ :
 
 ```python
-Table1 = [
+au_moins_16_en_maths = [
     {'Nom': 'Joe','Anglais': '17', 'Info': '18', 'Maths': '16'},
     {'Nom': 'Zoé','Anglais': '15', 'Info': '17', 'Maths': '19'}
 ]
@@ -286,15 +290,16 @@ au_moins_16_en_maths = [enre for enre in Table1 if enre['Maths'] >= 16]
 
 Le résultat est identique.
 
-## Exemple de projection
+### Exemple de projection
 
 Cette fois, on souhaite récupérer toutes les valeurs pour un champ donné,
-par exemple toutes les notes de mathématiques.
+par exemple **toutes les notes de mathématiques**.
 
-L'approche est similaire, on crée une liste, on parcourt la table et
-on ajoute à la liste tous les éléments qui nous intéressent :
 
 * à la main :
+
+    L'approche est similaire, on crée une liste, on parcourt la table et
+    on ajoute à la liste tous les éléments qui nous intéressent :
 
     ```python
     notes_maths = []
@@ -321,15 +326,23 @@ Dans les deux cas le résultat est la liste `[16, 19, 14, 10]`
     [(18, 16), (17, 19), (13, 14), (16, 10)]
     ```
 
+## Illustration 
+
+Téléchargez ce fichier pour disposer d'un exemple illustrant ces manipulations :
+
+1. fichier csv de départ [notes.csv](./notes.csv)
+2. script manipulant ce fichier [notes.py](./notes.py)
+3. fichier csv après la modification [notes_apres.csv](./notes_apres.csv)
 
 
 
 
-
-# 7. _Compléments_
+## 7. _Compléments_
 
 _Cette partie est donnée pour votre culture mais n'est pas à apprendre_.
 
+
+### Bases de données
 
 Le format CSV n'est pas le seul utilisé pour enregistrer des données.
 Il existe d'autres formats de fichiers textes mais aussi une approche
@@ -341,7 +354,7 @@ SQL.
 Ce sont des programmes qui permettent à plusieurs utilisateurs d'accéder aux 
 ressources, de conserver une trace de ce qui est fait sur les données etc.
 
-## Les autres formats texte
+### Les autres formats texte
 
 Citons :
 
@@ -430,7 +443,7 @@ Mais aussi :
 
 
 
-## Importer les données en Python sans utiliser le module CSV
+### Importer les données en Python sans utiliser le module CSV
 
 
 Vous rencontrerez vraisemblablement des variantes de la méthode précédente.
@@ -450,7 +463,7 @@ CHAMPS = ["nom", "moyenne", "moyenne_brute"]
 def lire_fichier_csv(filename, delimiter=','):
   res = []
   with open(filename) as f:
-    f.readline() # on zappe la première ligne...
+    f.readline() ## on zappe la première ligne...
     l = f.readline()
     while l != '':
       args = l.replace('"', '').strip().split(delimiter)
@@ -468,7 +481,7 @@ liste_csv = lire_fichier_csv('2nde-14-liste.csv', delimiter=';')
 ```
 
 
-#### Commentaires détaillés sur la fonction `lire_fichier_csv`
+### Commentaires détaillés sur la fonction `lire_fichier_csv`
 
 * ligne 4 : on crée la liste des enregistrements
 * ligne 5 : on ouvre le fichier et on le stocke dans une variable temporaire `f`
@@ -482,7 +495,7 @@ liste_csv = lire_fichier_csv('2nde-14-liste.csv', delimiter=';')
 * ligne 16 : si jamais la ligne est imparfaite, on la zappe
 * ligne 17 :  on avance à la ligne suivante
 
-#### Qu'obtient-on ?
+### Qu'obtient-on ?
 
 Un tableau doublement indexé. Les descripteurs sont enregistrés dans `CHAMPS`.
 Ils ne sont pas utilisés dans la fonction d'import.
@@ -502,14 +515,14 @@ CHAMPS = ["nom", "moyenne", "moyenne_brute"]
 def lire_fichier_csv(filename, delimiter=',', champs=CHAMPS):
   res = []
   with open(filename) as f:
-    f.readline() # on zappe la première ligne...
+    f.readline() ## on zappe la première ligne...
     l = f.readline()
     while l != '':
       args = l.replace('"', '').strip().split(delimiter)
       try:
-        enregistrement = {} # on crée un dictionnaire
+        enregistrement = {} ## on crée un dictionnaire
         for i in range(len(args)):
-          enregistrement[champs[i]] = args[i] # les clés sont les éléments de CHAMPS
+          enregistrement[champs[i]] = args[i] ## les clés sont les éléments de CHAMPS
         res.append(enregistrement)
       except ValueError:
         pass

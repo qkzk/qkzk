@@ -61,10 +61,10 @@ Plutôt que d'avoir un tableau comme ça :
 
 ```python
 tableau_2d = [
-        [a, b, c],
-        [d, e, f],
-        [g, h, i],
-            ]
+    [a, b, c],
+    [d, e, f],
+    [g, h, i],
+]
 ```
 
 On a un tableau comme ça : `tableau_1d = [a, b, c, d, e, f, g, h, i]`.
@@ -73,16 +73,25 @@ Mais on souhaite qu'il modélise un univers comme ça :
 
 ```python
 tableau_1d = [
-        a, b, c,
-        d, e, f,
-        g, h, i,
-          ]
+    a, b, c,
+    d, e, f,
+    g, h, i,
+]
 ```
+
 Notez bien la différence, on souhaite représenter un plan... sur une ligne.
 
 Ainsi pour accéder à `f` on faisait : `tableau_2d[1][2]`
 
 On fera maintenant : `tableau_1d[5]`
+
+Comment obtenir l'indice `5` de `f` si on sait qu'il est situé à l'abscisse 2 et à l'ordonnée 1 ?
+
+Chaque ligne du plan comporte trois éléments donc, si l'ordonnée est 1, on doit avancer de 3 pour progresser d'une ligne.
+
+Autrement dit, `5 = 3 * 1 + 2`
+
+De même, pour accéder à `g`, ordonnée 2, abscisse 0, on fait `2 * 3 + 0 = 6` et `tableau_1d[2 * 3 + 0] = g`
 
 
 **Admettons que les dimensions soient `10 * 7` : 10 lignes, 7 colonnes et 70 cases en ligne.**
@@ -131,3 +140,7 @@ Le fichier comporte quelques informations (dimensions de l'image, nombre de coul
 possibles et éventuellement leurs valeurs) puis un grand tableau avec les 
 valeurs de chaque pixel. Lorsqu'on affiche/modifie l'image, on doit utiliser des fonctions
 similaires pour accéder à la valeur de chaque pixel.
+
+{{< expand "Tableau en ligne" "..." >}}
+[tableau en ligne](./tableau_ligne.py)
+{{< /expand >}}

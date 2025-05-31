@@ -157,7 +157,7 @@ Détaillons ce programme :
 
 On considère le fichier csv `films.csv` dont voici un extrait.
 
-![films](/uploads/docsnsi/table_csv/data-visualization-movies_csv-1024x686.png){height=300px}
+![films](/uploads/docsnsi/table_csv/data-visualization-movies_csv-1024x686.png)
 
 Pour chaque question on donnera une syntaxe Python permettant d'obenir la
 réponse ainsi que la valeur de celle-ci lorsque l'information est connue.

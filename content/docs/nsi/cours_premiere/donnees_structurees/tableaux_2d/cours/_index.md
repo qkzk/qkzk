@@ -59,6 +59,21 @@ est rendue particulièrement compacte et élégante_.
     1
     ```
 
+* Cela permet d'écrire du code un peu plus lisible comme :
+
+    ```python 
+    def milieu(A: tuple, B: tuple) -> tuple:
+        """
+        Renvoie le milieu du segment [AB].
+        A, B et le milieu sont des tuples.
+        """
+        return (A[0] + B[0])/2, (A[1] + B[1])/2
+
+    A = (1, 2)
+    B = (3, 5)
+    I = milieu(A, B)
+    ```
+
 ### 2. Parcours d'une structure imbriquée
 
 * Le parcours d'une structure imbriquée nécessite plusieurs boucles.
@@ -66,13 +81,15 @@ est rendue particulièrement compacte et élégante_.
     **Exemple :**
 
     ```python
-    persos = [{"prenom": "Bilbo", "nom": "Baggins", "age": 111},
-              {"prenom": "Frodo", "nom": "Baggins", "age": 33},
-              {"prenom": "Sam", "nom": "Gamgee", "age": 21}]
+    persos = [
+        {"prenom": "Bilbo", "nom": "Baggins", "age": 111},
+        {"prenom": "Frodo", "nom": "Baggins", "age": 33},
+        {"prenom": "Sam", "nom": "Gamgee", "age": 21}
+    ]
 
     # Parcours de la liste
     for p in persos:
-        print("--------")
+        print()
         # Parcours d'un dict
         for k, v in p.items():
             print(k, '->', v)
@@ -81,17 +98,17 @@ est rendue particulièrement compacte et élégante_.
     Qui produit l'affichage ci-dessous :
 
     ```python
-    --------
+
     prenom -> Bilbo
     nom -> Baggins
     age -> 111
-    --------
+
     prenom -> Frodo
     nom -> Baggins
     age -> 33
-    --------
-    prenom -> Gamgee
-    nom -> Sam
+
+    prenom -> Sam
+    nom -> Gamgee
     age -> 21
     ```
 
@@ -107,7 +124,7 @@ sans en énumérer explicitement les éléments.
     **Exemple** : Liste des nombres entiers de 2 à 10 inclus.
 
     ```python
-    >>> [i for i in range(2, 11)]   # on peut simplement écrire `list(range(2, 11))`
+    >>> [i for i in range(2, 11)]   # ou `list(range(2, 11))`
     [2, 3, 4, 5, 6, 7, 8, 9, 10]
     ```
 
@@ -122,8 +139,7 @@ sans en énumérer explicitement les éléments.
 
 * Filtrage des éléments en fonction d'une condition
 
-    **Exemple** : Liste des carrés des nombres entiers de 2 à 50 inclus qui se
-    terminent par le chiffre 9.
+    **Exemple** : Liste des carrés des nombres entiers de 2 à 50 inclus dont le carré se termine par le chiffre 9.
 
     ```python
     >>> [i ** 2 for i range(2, 51) if (i ** 2) % 10 == 9]
@@ -136,7 +152,7 @@ sans en énumérer explicitement les éléments.
     la valeur pour chaque élément.
 
     **Exemple** : Dictionnaire contenant pour les clés, les nombres entiers de 2 à 10
-    inclus, et pour les valeurs associées, le cube de la clé.
+    inclus, et pour les valeurs associées, leur cube.
 
     ```python
     >>> {k: k ** 3 for k in range(2, 11)}
