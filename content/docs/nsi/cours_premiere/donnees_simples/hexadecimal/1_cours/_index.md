@@ -37,11 +37,40 @@ On utilise 16 chiffres :
 **F**  est un chiffre en hexadécimal. Il vaut 15 en décimal.
 {{< /hint >}}
 
+{{< hint danger >}}
+**il y a 16 chiffres en hexadécimal : 0 1 2 4 5 6 7 8 9 A B C D E F**
+
+Quels sont les chiffres hexadécimaux :
+
+**0 1 2 4 5 6 7 8 9 A B C D E F**
+
+**A** est un chiffre hexadécimal qui vaut dix.
+
+**E** est un chiffre hexadécimal qui vaut quatorze.
+
+
+_Apprenez le, on vous le demandera en devoir._
+{{< /hint >}}
+
+
+
 ### Notations
 
 | Maths       	| Python   	| CSS     	|
 |-------------	|----------	|---------	|
 | $A3BC_{16}$ 	| `0xA3BC` 	| `#A3BC` 	|
+
+
+### Utilisation en Python 
+
+```python 
+>>> 0xc0ffee                      # un entier noté en hexadécimal 
+12648430
+>>> hex(424242)                   # obtenir la représentation hexa. d'un entier 
+'0x67932'
+>>> int("0x123456789ABCDEF", 16)  # de l'hexa au binaire
+81985529216486895
+```
 
 ---
 
@@ -58,7 +87,9 @@ _On ne peut pas écrire un bit en mémoire, on doit écrire au moins un octet à
 
 Mais ! $256 = 16^2$ on peut utiliser 2 symboles en base 16.
 
+{{< hint info >}}
 **Un octet est représenté par 2 chiffres hexadécimaux**
+{{< /hint >}}
 
 Ainsi, lorsqu'on lit depuis la mémoire `0xA4` cela représente _un octet_ valant 164.
 
@@ -257,5 +288,5 @@ hexdump img/ff0080.jpg | head
   |  Contenu 	| `x4c` 	| `x49` 	| `x00` 	| `x45` 	|
   |  Contenu 	| `76`     	| `73`     	| `0`      	| `69`     	|
 
-Le contenu de mon image .jpg est donc _un nombre énorme_, encodé en binaire, que
+Le contenu de mon image .jpg est donc _un nombre énorme_ encodé en binaire, que
 la machine interprète à l'aide d'un programme et affiche à l'écran.

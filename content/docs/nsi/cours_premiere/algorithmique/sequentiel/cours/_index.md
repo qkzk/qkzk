@@ -80,6 +80,26 @@ L'autre danger des _outils natifs_, c'est que de telles instructions **n'existen
 
 On suppose pouvoir parcourir le tableau, élément par élément.
 
+{{< expand "Intéret des tableaux" "..." >}}
+### Intérêt des tableaux 
+
+En enregistrant des objets côte à côte dans la mémoire, on peut accéder très rapidement à l'un d'entre eux par son indice.
+
+Considérons `[5, 7, 3, 8, 12]`.
+
+Ces entiers sont petits, tous entre 0 et 255, on peut utiliser 1 octet (8 bits) par entier.
+
+On les enregistre côte à côte en mémoire à partir de l'adresse mémoire `1234`.
+
+Donc, `5` est enregistré à l'adresse `1234`.
+
+Si chaque case utilise 1 octet, l'adresse suivante, `1235` correspond à la case contenant 7.
+
+Et l'adresse de l'élément d'indice 3 (qui est la valeur 8) est `1234 + 3 = 1237`.
+
+Pour la machine, ces calculs sont très rapides.
+{{< /expand >}}
+
 ### Les tableaux en Python
 
 En Python, pour illustrer les tableaux, on utilise les objets `list`.
@@ -161,9 +181,11 @@ On va obtenir un itérable correspondant à `[3, 7, 11, 15]`
 
 Cela demande forcement une boucle.
 
-Rappelons qu'il existe deux types de boucles :
+Rappelons qu'il existe deux types de boucles : `for` et `while` ou bornée et non bonrnée.
 
-## for
+{{< expand "Rappels sur les boucles" "..." >}}
+
+## 1. for
 
 1. **boucles avec `for`** qui parcourt directement un objet _itérable_ (`list`, `tuple`, `dict`, etc.).
 
@@ -172,9 +194,25 @@ Rappelons qu'il existe deux types de boucles :
         faire_quelque_chose_avec(joueur)
     ```
 
-## while
+2. **boucles bornée qui parcourt les indices**
 
-2. **boucles avec while** qui utilise une condition d'arrêt. En comptant les éléments
+    ```python 
+    tab = ["a", "b", "c", "d"]
+    for i in range(len(tab)):
+      lettre = tab[i]
+      print(f"A la position {i} on a la lettre {lettre}")
+    ```
+
+    ```
+    A la position 0 on a la lettre a
+    A la position 1 on a la lettre b
+    A la position 2 on a la lettre c
+    A la position 3 on a la lettre d
+    ```
+
+## 2. while
+
+1. **boucles avec while** qui utilise une condition d'arrêt. En comptant les éléments
 
     ```python
     compteur = 0
@@ -185,26 +223,26 @@ Rappelons qu'il existe deux types de boucles :
 
     Une boucle avec `while` qui s'arrête doit comporter tous ces éléments.
 
-## boucle infinie
+3. **boucle infinie** : c'est une boucle qui ne s'arrête pas :
 
-Il est courant de créer des boucles qui ne s'arrêtent pas :
+  * serveur qui attend des messages
 
-* serveur qui attend des messages
+      ```python
+      while True:
+        message = serveur_ecoute_message()
+        reponse = serveur_traite_message(message)
+        envoyer_reponse(reponse)
+      ```
 
-    ```python
-    while True:
-      serveur_ecoute_message(message)
-    ```
+  * dans un jeu vidéo :
 
-* dans un jeu vidéo :
-
-    ```python
-    while True:
-      ecouter_les_actions_joueur()
-      calculer_nouvel_etat_jeu()
-      dessiner_les_graphismes()
-    ```
-
+      ```python
+      while True:
+        ecouter_les_actions_joueur()
+        calculer_nouvel_etat_jeu()
+        dessiner_les_graphismes()
+      ```
+{{< /expand >}}
 
 ## Algorithmes sur les tableaux
 
@@ -215,12 +253,14 @@ Il est courant de créer des boucles qui ne s'arrêtent pas :
 
 par exemple `T=[0, 1, 2, ..., 10]`.
 
-On veut savoir si un nombre $x$ figure dans le tableau.
+On veut savoir si un nombre $x$ figure dans le tableau. 
+
+**L'algorithme produit un booléen on ne s'intéresse donc pas aux indices: `for x in T` convient.**
 
 **Algorithme :**
 
 ```
-fonction (tableau T, objet x) -> booléen:
+contient (tableau T, objet x) -> booléen:
   Pour chaque élément e de T,
     Si e = x, alors on retourne Vrai
   Si la boucle se termine, on retourne Faux.
@@ -228,7 +268,7 @@ fonction (tableau T, objet x) -> booléen:
 
 **ATTENTION** remarquez bien la position de la condition... on ne renvoie `Faux` que si la boucle se termine.
 
-## Exemple
+### Exemple
 
 ```python
 T = [2, 5, -4, 12]
@@ -251,6 +291,58 @@ Le parcours de la boucle se termine et l'algorithme retourne Faux.
 
 L'algorithme retourne Vrai. La dernière case du tableau n'est jamais visitée !
 
+### Autre exemple : indice d'un élément d'un tableau 
+
+On dispose d'un tableau et d'une clé. On veut connaître l'indice de la clé dans le tableau. On répond -1 si la clé n'est pas présente.
+
+**Cette fois il faut l'indice : `for i in range(len(T))`**
+
+```
+
+indice_de (tableau T, entier cle) -> entier:
+  Pour i allant de 0 à longueur de T - 1 (inclus),
+      element = T[i]
+      Si element == cle, renvoyer i 
+
+  Si la boucle se termine, renvoyer -1
+```
+
+
+```python 
+def indice_de(tab: list, cle: int):
+    for i in range(len(tab)):
+        element = tab[i]
+        if element == cle:
+            return i 
+    return -1
+```
+
+Notez la position de `return -1`. Il est au même niveau d'indentation que `for ...`.
+
+En effet, il faut attendre d'avoir parcouru tous les éléments pour savoir si la clé est présente ou non.
+
+## Résumé 
+
+{{< hint info >}}
+Un _parcours séquentiel_ est un algorithme qui n'a besoin que d'une boucle bornée parcourant une collection pour répondre à une question.
+
+- Un de mes élèves est-il déjà monté sur la tour Eiffel ? 
+    
+    Je peux répondre par un parcours séquentiel. Il suffit de poser la même question à chaque élève.
+
+- Ces deux tableaux `[3, 5, 1, 7]` et `[1, 5, 3, 7]` contiennent-ils les mêmes éléments ?
+
+    Impossible de répondre par une parcours séquentiel. Il faut, **pour chaque élément du premier**, le comparer à **chaque élément du second**. Deux boucles imbriquées : ce n'est pas un parcours séquentiel.
+
+- Lorsqu'un parcourt séquentiel ne nécessite pas d'indice ("L'un d'entre-vous est-il monté sur la tour Eiffel ?"), on utilise `for elt in tableau:`
+- Lorsqu'un parcourt séquentiel nécessite de connaître un indice, on utilise `for i in range(len(tableau))`
+
+  Exemple : ces nombres sont-ils rangés par ordre croissant ?
+
+  Pour chaque nombre, le comparer **au suivant**. Pour accéder au **suivant**, je dois connaître l'indice.
+
+{{< /hint >}}
+
 ## Coût du parcours séquentiel
 
 De manière évidente,
@@ -262,16 +354,18 @@ Le **coût** d'un algorithme correspond au nombre d'opérations à effectuer.
 
 Il est très difficile de le calculer exactement, beaucoup plus facile de l'estimer.
 
-
 Dans notre cas, on a, grosso modo, autant d'opérations qu'il y a d'éléments dans le tableau.
 
-Le coût est _proportionnel à la taille du tableau_. On dit qu'il est _linéaire_.
+{{< hint info >}}
+Le coût est d'un parcours séquentiel est _proportionnel à la taille du tableau_. On dit qu'il est _linéaire_.
 
 On note : **le parcours séquentiel est un algorithme en $O(n)$**
 
 $n$ désigne la taille du tableau.
+{{< /hint >}}
 
-### En Python :
+
+## Un tableau contient-il une clé ?
 
 ```python
 def recherche_sequentielle(tableau, x):
@@ -283,19 +377,15 @@ def recherche_sequentielle(tableau, x):
   return False
 ```
 
-
-Sans information supplémentaire, le parcours séquentiel est la seule manière de répondre à
-
 **`x` figure-t-il  dans le tableau T ?**
 
-Si on a des informations particulières sur le tableau, par exemple s'il est **trié**
-alors il existe des algorithmes plus rapides.
-
-Nous en étudierons un important : **la recherche dichotomique**.
-
+- **Sans information supplémentaire**, le parcours séquentiel est la seule manière de répondre.
+- **Si on sait que le tableau est trié** alors il existe un algorithme beaucoup plus rapide : **la recherche dichotomique**.
+    On l'étudiera dans un chapitre ultérieur.
 
 
-### Recherche d'extremum
+
+## Quel est le maximum d'un tableau ?
 
 **Contexte :** On cherche la valeur extrème d'un tableau de nombres `T`.
 
@@ -303,7 +393,7 @@ Le principe est simple.
 
 * Si on n'a qu'un élément, `maximum` est cet élément.
 * Sinon, on parcourt les éléments et à chaque fois qu'une valeur `e` est supérieure à `maximum`, on l'affecte à `maximum`.
-* On retourne `maximum`
+* On renvoie `maximum`
 
 Pour le tableau `T = [2, 5, 9, 7]` cela donne :
 
@@ -322,7 +412,7 @@ fonction maximum(tableau T, nombre x) ---> nombre:
   Pour chaque élément elt du tableau:
     si elt > max:
       max = elt
-  retourner max
+  renvoyer max
 ```
 
 ### En Python :
@@ -347,7 +437,7 @@ def maximum(tableau):
 -1
 ```
 
-### Moyenne des éléments d'un tableau
+## Calculer la moyenne des éléments d'un tableau
 
 **Contexte :** Calculer la moyenne d'un tableau de nombres
 
@@ -375,7 +465,7 @@ fonction moyenne(tableau T, nombre x) ---> nombre:
   Pour chaque élément e du tableau:
     Somme = Somme + e
     Effectif = Effectif + 1
-  retourner Somme / Effectif
+  renvoyer Somme / Effectif
 ```
 
 ### En Python :
@@ -425,7 +515,7 @@ def retourner(tableau):
   tab_retourne = []
   for element in tableau:
     tab_retourne.insert(0, element)
-    # variante :
+    # variante moins efficace :
     # tab_retourne = [element] + tableau_retourne
   return tab_retourne
 ```
@@ -443,6 +533,41 @@ def retourner(tableau):
 >>> tableau
 [3, 2, 1]
 ```
+
+## Quel est l'indice du maximum d'un tableau ?
+
+### Algorithme 
+
+
+On dipose d'un tableau d'entiers non vide, quel est l'indice de son élément maximal ?
+
+_On cherche un indice, on va parcourir les indices._
+
+- On initialise le maximum avec `tableau[0]`. Le tableau étant non vide, c'est toujours possible.
+- On initialise la position du maximum à 0.
+
+- Pour `indice` allant de 0 à la longueur - 1,
+
+    - si `tableau[indice] > maximum`, alors `position = indice` et `maximum = tableau[indice]`
+
+- Renvoyer `position`
+
+### En Python 
+
+```python 
+def indice_du_maximum(tableau: list):
+    indice_maxi = 0 
+    maxi = tableau[0]
+
+    for i in range(len(tableau)):
+        if tableau[i] > maxi:
+            indice_maxi = i 
+            maxi = tableau[i]
+
+    return indice_maxi
+```
+
+**Cette fois on a besoin de `for i in range(len(tableau)):`**
 
 ## Tableaux à deux dimensions
 
@@ -584,9 +709,11 @@ visiter,
 
   Seulement les éléments de la dernière ligne
 
+{{< hint danger >}}
 ## **IL FAUT IMBRIQUER LES BOUCLES. L'UNE DANS L'AUTRE !!!**
 
 ### **IL FAUT IMBRIQUER LES BOUCLES. L'UNE DANS L'AUTRE !!!**
+{{< /hint >}}
 
 ```python
 

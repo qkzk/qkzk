@@ -230,7 +230,7 @@ La machine procède de la même manière en base 2.
 
 
 {{< hint info >}}
-Un **nombre dyadique** est s'écrit :
+Un **nombre dyadique** s'écrit :
 $$\pm( 1,b1 \cdots bk)_2 \times 2^e$$
 
 où $b1,\ldots,bk$ sont des bits et $e$ est un entier relatif.

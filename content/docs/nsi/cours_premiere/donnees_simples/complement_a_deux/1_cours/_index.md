@@ -45,6 +45,29 @@ Sinon :
 Dans tout ce document, on encodera **nos nombres entiers sur 8 bits.**
 {{< /hint >}}
 
+{{< expand "bit de poids fort" "..." >}}
+
+Considérons l'entier $42 = 101010_2$
+
+Encodé **sur 6 bits, son bit de poids fort est 1**.
+
+```
+position :  123456
+bits     :  101010
+bit fort :  ^
+```
+
+Mais, le même entier, **encodé sur 8 bits a un bit de poids fort valant 0** :
+
+```
+position :  12345678
+bits     :  00101010
+bit fort :  ^
+```
+
+Il est donc nécessaire de **connaître la taille de l'encodage pour déterminer le bit de poids fort**.
+{{< /expand >}}
+
 ## Approche naïve : binaire signé
 
 Essayons avec cette simple règle :
