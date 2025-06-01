@@ -85,6 +85,8 @@ $I$ est appelé **l'intervalle de fluctuation au seuil de 95%**.
 
 Supposons que notre rivière contienne 50% de truites femelles (et donc 50% de mâles...).
 
-Pour nos échantillons de taille 100, $n=100\geqslant 25$ ; par ailleurs $p=0,5 \in \left[0,2 ; 0,8\right]$ Donc l'intervalle de fluctuation au seuil de 95% sera $I=\left[0,5 - \frac{1}{\sqrt{100}}~;~0,5+\frac{1}{\sqrt{100}}\right]$ c'est à dire $I=\left[0,4~;~0,6\right]$.
+Pour nos échantillons de taille 100, $n=100\geqslant 25$ ; par ailleurs $p=0,5 \in \left[0,2 ; 0,8\right]$.
+
+Donc l'intervalle de fluctuation au seuil de 95% sera $I=\left[0,5 - \frac{1}{\sqrt{100}};0,5+\frac{1}{\sqrt{100}}\right]$ c'est à dire $I=\left[0,4~;~0,6\right]$.
 
 [^1]: [Tiré de ce support](https://www.maths-cours.fr/cours/statistiques-echantillonnage)
