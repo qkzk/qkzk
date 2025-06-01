@@ -23,6 +23,8 @@ Une rapide comparaison de différents langages de programmation autour d'un mêm
 - C
 - Scheme
 - Prolog²
+- Golang 
+- Rust
 
 Les codes sont fournis en respectant autant que possible un même squelette de base. On fait donc apparaître ici plus les similitudes des structures que les spécificités des langages, même si certains points importants apparaissent déjà.
 Parmi les points communs, on peut donc retrouver les fonctions et leurs paramètres, la déclaration de variables, les structures itératives et conditionnelles, la notion de bloc d'instruction.
@@ -127,6 +129,8 @@ var factorielle = function (n) {
 
 Le langage javascript a évolué fortement (et dans le bon sens) ces dernières années. Par exemple le mot-clé `var` est en disgrâce. On écrirait donc plutôt maintenant :
 
+[Programiz](https://www.programiz.com/online-compiler/0oVLG2GS1E7bK)
+
 ### version ES6
 
 Fichier [factorielle.js](/uploads/docsnsi/comparaison_langage/factorielle.js).
@@ -171,6 +175,8 @@ Dans les deux cas on peut utiliser la console javascript fournie avec firefox pa
 >> factorielle(5)
 <- 120
 ```
+
+[programiz](https://www.programiz.com/online-compiler/04XbQNL8LwF9K)
 
 ## Java
 
@@ -217,6 +223,8 @@ $ java Math 5
 
 _NB._ L'usage de `static` pour la méthode `factorielle` n'est pas caractéristique des méthodes en Java, mais il est légitime et pertinent ici car le résultat de `factorielle` ne dépend que de son paramètre et d'aucun objet particulier.
 
+[Programiz](https://www.programiz.com/online-compiler/50nem1xzzUf00)
+
 ## C
 
 Fichier [factorielle.c](/uploads/docsnsi/comparaison_langage/factorielle.c).
@@ -255,6 +263,8 @@ $ gcc -o factorielle factorielle.c
 $ ./factorielle 5
 120
 ```
+
+[programiz.com](https://www.programiz.com/online-compiler/9EGSN2Mhskp7l)
 
 ## Scheme
 
@@ -321,26 +331,73 @@ Result = 120
 
 Le moteur de résolution de Prolog répond, "_vrai pour l'instanciation Result=120_".
 
-# Liens repl pour exécuter les exemples directement dans le navigateur
+## Golang 
 
-## Langages impératifs :
+Golang est un langage de programmation crée par Google afin de simplifier le développement de serveurs. Il est particulièrement employé dans le cloud.
 
-### Syntaxe particulière
+```go 
+package main
 
-- [Python](https://repl.it/@konieczko/factpython)
+import "fmt"
 
-### Syntaxe "similaire" au C : `if condition { expression; }`
+func factorielle(n int) int {
+	if n == 0 {
+		return 1
+	} else if n == 1 {
+		return 1
+	} else {
+		result := 1
+		for i := 1; i <= n; i++ {
+			result = result * i
+		}
+		return result
+	}
+}
 
-- [JS oldschool](https://repl.it/@konieczko/factjsoldschool)
-- [JS ES6](https://repl.it/@konieczko/factjs)
-- [Java](https://repl.it/@konieczko/factjava)
-- [C](https://repl.it/@konieczko/factc)
-- [Golang](https://repl.it/@konieczko/factgo)
-- [rust](https://repl.it/@konieczko/factrust)
+func main() {
+	fmt.Println(factorielle(5))
+}
+```
 
-## Langages fonctionnels
+[Go playground](https://go.dev/play/p/KK0M4VWgRVE)
 
-- [Scheme](https://repl.it/@konieczko/factscheme)
-- [Haskell](https://repl.it/@konieczko/facthaskell)
+La syntaxe est entre le C et Python. Golang est très épuré, peu d'éléments de syntaxe (une seule boucle : `for`).
 
-Malheureusement, Repl.it ne supporte pas encore Prolog...
+Quelques particularités : une variable créée mais non utilisée conduit à une erreur.
+
+Pour les curieux de ce langage : [A tour of Go](https://go.dev/tour/welcome/1)
+
+## Rust 
+
+```rust 
+fn factorielle(n: u64) -> u64 {
+    if n == 0 {
+        1
+    } else if n == 1 {
+        1
+    } else {
+        let mut result = 1;
+        let mut i = 1;
+        while i <= n {
+            result = result * i;
+            i = i + 1;
+        }
+        result
+    }
+}
+
+fn main() {
+    println!("{}", factorielle(5));
+}
+```
+
+[Rust Playground](https://play.rust-lang.org/?version=stable&mode=debug&edition=2024&gist=3f73945ae67d11cb73ae41a565fc33e5)
+
+Rust est un langage créée par la fondation Mozilla afin de poursuivre le développement de Firefox.
+
+Il est aussi rapide que le C mais dispose de beaucoup d'éléments de syntaxe.
+
+Parmi les particularités, une variable est _non mutable par défaut_, il faut utiliser le mot clé `mut` pour rendre une variable mutable.
+
+
+
