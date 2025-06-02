@@ -11,10 +11,21 @@ weight: 7
 
 **Terminus** est un jeu gratuit permettant de se familiariser avec le shell UNIX.
 
-La description complète est disponible [ici](./terminus.pdf)
+Dans ce TP vous allez decouvrir un certain nombres de commandes UNIX, utilisable dans le Shell (ou encore dans un terminal) en ´
+jouant a un jeu en ligne : TERMINUS.
 
 
-## Commandes utilisées
+## Jouer 
+
+Vous trouverez ce jeu [ici](http://luffah.xyz/bidules/Terminus/)
+
+## Travail à faire :
+
+1. Construire un plan des salles du jeu, à l'image de celui-ci :
+    ![img](img/img-2025-06-02-17-43.png) 
+2. Finir le jeu
+
+### Commandes utilisées
 
 ```bash
 $ cat fichier               # affiche le contenu d'un fichier

@@ -158,7 +158,7 @@ Cependant, la solution optimale consiste à sélectionner l'activité B dont la 
 
 # Résolution python
 
-Voici une proposition d'implémentation d'une solution gloutonne en Python pour la planification de tâches, en utilisant des tuples de la forme ("A", 9.5, 10.5) ou ("B", 10.5, 11.5) pour représenter les tâches :
+Voici une proposition d'implémentation d'une solution gloutonne en Python pour la planification de tâches, en utilisant des tuples de la forme `("A", 9.5, 10.5)` ou `("B", 10.5, 11.5)` pour représenter les tâches :
 
 ```python
 def planification_taches(taches):
@@ -234,7 +234,7 @@ def planification_taches_exhaustif(taches: list[tuple]):
 
 ### Remarques concernant ChatGPT
 
-Il m'a fallu 2h de conversation pour générer ce code et ces exemples. ChatGPT m'a permis d'éviter de taper 150 lignes d'exemples pénibles (les tableaux plus haut). La recherche gloutonne est presque celle que j'ai pu écrire par le passé. La recherche exhaustive est très classique, c'est sensiblement celle qu'on écrit pour tout problème de ce type. Par très intéressant pour moi - qui connais - beaucoup plus pour un novice éclairé.
+Il m'a fallu 2h de conversation pour générer ce code et ces exemples. ChatGPT m'a permis d'éviter de taper 150 lignes d'exemples pénibles (les tableaux plus haut). La recherche gloutonne est presque celle que j'ai pu écrire par le passé. La recherche exhaustive est très classique, c'est sensiblement celle qu'on écrit pour tout problème de ce type. Pas très intéressant pour moi - qui connais - beaucoup plus pour un novice éclairé.
 ChatGPT peut s'entêter dans des erreurs surprenantes (exemples faux...) et n'est pas toujours clair.
 
-Il a, par exemple, présenté le problème en voulant maximiser _le nombre de tâches sélectionnées_, par leur _durée totale_. Mais ensuite, dans ses exemples et son code, c'est la durée qu'il optimise... Étrange !
+Il a, par exemple, présenté le problème en voulant maximiser _le nombre de tâches sélectionnées_, pas leur _durée totale_. Mais ensuite, dans ses exemples et son code, c'est la durée qu'il optimise... Étrange !

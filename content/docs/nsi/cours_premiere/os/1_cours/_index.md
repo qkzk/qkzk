@@ -116,23 +116,25 @@ C'est à la fois le plus simple et le plus puissant.
 
 ### Terminal User Interface
 
-![btop, une interface TUI](./img/btop.png){width=300px}
+![btop, une interface TUI](./img/btop.png)
 
 Toujours dans un terminal mais cette fois on peut intéragir (clavier, souris)
 
 ### Graphical User Interface
 
+![Calc](./img/calculator.png)
+
 Clic clic clic, inutile de présenter, vous connaissez.
 
 ## Le terminal
 
-Dans le vocabulaire courant shell, terminal et console désignent grosso modo la même chose : une fenêtre dans laquelle on peut taper des commandes.
+Dans le vocabulaire courant shell, terminal et console désignent grosso modo la même chose : _une fenêtre dans laquelle on peut taper des commandes_.
 
 Soyons plus précis :
 
-- Shell : Un shell Unix est un _interpréteur de commandes_ destiné aux systèmes d'exploitation Unix qui permet d'accéder aux fonctionnalités internes du système d'exploitation. Il se présente sous la forme d'une CLI accessible depuis la console ou un terminal
-- Terminal : point d’accès de communication entre l'homme et un ordinateur central ou un réseau d'ordinateurs. il désigne par abus de langage une fenêtre d'invite de commande donnant accès à un shell Unix.
-- Console : périphérique informatique de télécommunications des entrées-sorties d'un système de traitement de l'information. C'est généralement un terminal dédié uniquement à l'envoi et au retour des commandes.
+- **Shell** : Un shell Unix est un _interpréteur de commandes_ destiné aux systèmes d'exploitation Unix qui permet d'accéder aux fonctionnalités internes du système d'exploitation. Il se présente sous la forme d'une CLI accessible depuis la console ou un terminal
+- **Terminal** : point d’accès de communication entre l'homme et un ordinateur central ou un réseau d'ordinateurs. il désigne par abus de langage une fenêtre d'invite de commande donnant accès à un shell Unix.
+- **Console** : périphérique informatique de télécommunications des entrées-sorties d'un système de traitement de l'information. C'est généralement un terminal dédié uniquement à l'envoi et au retour des commandes.
 
 Le shell est un _programme_ comme bash ou zsh qui permet d'exécuter des commandes. C'est un langage de programmation interprété, un peu comme Python.
 
@@ -229,6 +231,7 @@ De gauche à droite :
 - `2 déc. 21:45` : date et heure de modification
 - `deploy.sh` : nom du fichier
 
+
 ### traduction des permissions
 
 ```
@@ -243,6 +246,16 @@ x : droit d'exécution
 
 - `inside.log -rw-r--r--` : tout le monde peut le lire, je suis le seul à pouvoir y écrire.
 
+### `ls -lah` ? 
+
+{{< expand "ls -lah" "..." >}}
+- `ls` : lister les fichiers,
+- `-lah` :
+  - `l` : une ligne par fichier avec les metadonnées,
+  - `a` : pour `all`, affiche aussi les fichiers cachés, c'est à dire ceux dont le nom commence par un `.`
+  - `h` : pour `human readable`, converti les tailles de fichiers dans un format lisible par un humain.
+  {{< /expand >}}
+
 ### Modifier les permissions
 
 On change les permissions avec `chmod`
@@ -250,13 +263,25 @@ On change les permissions avec `chmod`
 - soit en ajoutant ou retirant un flag : `$ chmod +x inside.log` rendra ce fichier exécutable
 - soit en décrivant la permission par un nombres à trois chiffres : `chmod 124 inside.log`
 
-  - 1 : je peux exécuter
-  - 2 : mon groupe peut écrire
-  - 4 : tlm peut lire
+`124` n'est pas à comprendre comme "cent vingt quatre", mais 1, 2, 4.
 
-  On fait la somme des nombres qu'on veut activer : Ex 1 + 2 + 4 = 7 = tous les droits.
+Chacun de ces trois nombres désigne la permission de l'utilisateur, de son groupe et de tout le monde.
 
-  `$ chmod 764 inside.log` je peux tout faire, mon groupe ne peut pas exécuter, tlm peut lire.
+Ces nombres sont les sommes des différents flags :
+
+  - 1 : exécuter
+  - 2 : écrire
+  - 4 : lire
+
+Disons qu'on veuille exécuter et lire, mais pas écrire. Alors on fait `1 + 0 + 4 = 5`.
+
+On fait ça pour chaque ensemble d'utilisateurs (propriétaire, groupe, tout le monde) et on obtient, par exemple :
+
+`$ chmod 764 inside.log` : je peux tout faire, mon groupe ne peut pas exécuter, tlm peut lire.
+
+Autre exemple :
+
+`$ chmod 750 bla.py` : `7 = 1 + 2 + 4` : je peux tout faire ; `5 = 1 + 4` : mon groupe ne peut pas écrire, `0` : le reste des utilisateurs ne peut rien faire.
 
 Exercice :
 
@@ -274,7 +299,7 @@ afficher les détails et permissions d'un fichier `ls -l`
 | -------- | -------------------------------------------------------------------- |
 | `cd`     | _Change Directory_ Se déplacer dans l'arborescence                   |
 | `ls`     | _Lister_ le contenu du répertoire courant                            |
-| `pwd`    | _Affiche le dossier courant_ (Print Workgin Directory)               |
+| `pwd`    | _Affiche le dossier courant_ (Print Working Directory)               |
 | `cp`     | _Copier_ des fichiers ou des répertoires                             |
 | `mv`     | _Déplacer (move)_ ou renommer des fichiers ou des répertoires        |
 | `rm`     | _Effacer (remove)_ des fichiers ou des répertoires                   |

@@ -15,8 +15,8 @@ Cette section présente quelques outils que nous utiliserons cette année
 - [Basthon](./basthon)
 - [Sublime Text](./sublime_text)
 - [Colab](./colab)
+- [Capytale](./capytale)
 
 ## Compléments : d'autres outils
 
 - [Librairies pour débutants](./libraries_faciles)
-- [REPL.it](./replit)
