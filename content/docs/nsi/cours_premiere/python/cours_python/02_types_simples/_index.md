@@ -12,7 +12,11 @@ pdf [pour impression](./types_simples.pdf)
 
 En Python chacun des objets qu'on manipule a un type.
 
-On accède au type d'une expression avec la fonction `type` qui s'emploie ainsi :
+{{< hint info >}}
+On accède au type d'une expression avec la fonction `type` 
+{{< /hint >}}
+
+Elle s'emploie ainsi :
 
 ```python
 >>> type(123)
@@ -29,8 +33,8 @@ d'un entier ou ajouter un entier et une chaîne de caractère.
 
 Python distingue plusieurs ensembles de nombres :
 
-* les entiers (sous partie finie des entiers relatifs),
-* les flottants (sous partie finie des nombres réels),
+* les entiers (sous partie finie des entiers relatifs) : `int`,
+* les flottants (sous partie finie des nombres réels) : `float`,
 
 ### Les entiers : le type `int`
 
@@ -54,6 +58,20 @@ La division de `a / b` donne toujours un flottant.
 
 ### Exercice 1 - Vérifier un type avec `isinstance`
 
+{{< hint info >}}
+On vérifie un type avec la fonction `isinstance`.
+{{< /hint >}}
+
+Elle s'emploie comme ça :
+
+```python 
+>>> a = 23
+>>> isinstance(a, int) # a est il un entier ?
+True 
+>>> isinstance(a, str) # les chaînes de caractères 
+False
+```
+
 1. Créer un script python. Affecter à `total` le nombre 134.
 
 C'est le nombre de gateaux achetés par Jérome.
@@ -68,8 +86,10 @@ Il décide de s'attribuer le reste.
 
 _Résumons_ : 
 
+{{< hint info >}}
 * on _découvre un type inconnu_ avec `type(objet)`
 * on _vérifie un type_ avec `isinstance(bidule, un_type)` 
+{{< /hint >}}
 
 ### Les nombres à virgule flottante : le type `float`
 
@@ -172,8 +192,10 @@ les radians.
 
 ## Les booléens, le type `bool` : `True` et `False`
 
+{{< hint info >}}
 * Il existe deux booléens : `True` et `False`,
-* Le résultat d'une opération de comparaison est toujours un booléen.
+* Le résultat d'une opération de _comparaison est toujours un booléen._
+{{< /hint >}}
 
 
 ```python
@@ -202,10 +224,12 @@ tous les cas possibles :
 ```python
 not True
 not False
+
 True and True
 True and False
 False and True
 False and False
+
 True or True
 True or False
 False or True
@@ -630,7 +654,7 @@ Comme on peut le voir :
 
 ### Exercice 12 - mini challenge
 
-Les mathématiciens affirment que $\dfrac{\sin}{\cos} = \tan$... maispeut-on leur faire confiance ?
+Les mathématiciens affirment que $\dfrac{\sin}{\cos} = \tan$... mais peut-on leur faire confiance ?
 
 Comment vérifier une telle affirmation avec un langage de programmation ? En écrivant des tests.
 
@@ -638,4 +662,12 @@ Comment vérifier une telle affirmation avec un langage de programmation ? En é
 2. Documentez-vous sur `math.isclose`
 3. Documentez-vous sur `math.sin`, `math.cos` et `math.tan`
 4. En vous souvenant qu'il n'est pas possible de tester l'égalité de deux flottants, vérifiez que $\dfrac{\sin 0.1}{\cos 0.1} = \tan 0.1$
-5. À l'aide d'une boucle et d'un range vérifiez l'égalité approchée pour $x$ enre $-\dfrac{\pi}{2}$ et $\dfrac{\pi}{2}$ progressant de $0.01$ en $0.01$.
+
+### Exercice 13 - Quelques méthodes des chaines de caractères
+
+1. Affichez toutes les _méthodes_ des chaînes de caractères:  (`dir(str)`), 
+2. Déterminez la méthode qui permet :
+
+    - de copier une chaîne en effaçant les espaces au début et à la fin `  hello   ` -> `hello`
+    - de tester si une chaîne commence par certains caractère : `bonjour` commence par `bon`
+    - de copier une chaîne en mettant le premier caractère en majuscule et les suivants en minuscule.

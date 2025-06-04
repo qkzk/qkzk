@@ -149,7 +149,7 @@ Nous travaillerons avec d'autres types mais une chose à la fois.
 
 ## Exercices
 
-#### Exercice 1 - évaluer des expressions
+### Exercice 1 - évaluer des expressions
 
 Évaluer de tête les expressions suivantes, _ensuite_ vérifiez les dans l'interpréteur
 
@@ -256,7 +256,10 @@ Variable :
 
 > symbole qui associe un nom à une valeur.
 
+
+{{< hint info >}}
 **Affecter, c'est donc donner un _nom_ à une _valeur_.**
+{{< /hint >}}
 
 Ainsi qu'on l'a déjà vu, il est possible de changer la valeur associée à ce nom.
 
@@ -280,7 +283,7 @@ Ajoutez une ligne `print(prenom)` entre les affectations si n'êtes pas sûr d'a
 1. Créer une variable `somme` contenant la somme des entiers de 1 à 10.
 2. Créer une copie de cette variable `deuxieme_somme` et vérifier que `somme == deuxieme_somme`.
 3. Modifier la valeur de `somme` en lui ajoutant 11.
-4. A-t-on l'égalité entre `somme` et `deuxeme_somme` après cette étape ?
+4. A-t-on l'égalité entre `somme` et `deuxieme_somme` après cette étape ?
 5. Vérifier l'état des variables dans Thonny ou [Pythontutor](http://pythontutor.com/visualize.html#mode=edit).
 6. Afficher la taille en octets puis en bits d'un fichier de 536ko.
    _On donne : 1ko (1 kilooctet) = 1000 octets et 1 octet = 8 bits._
@@ -353,7 +356,7 @@ Bien sûr, on s'interdit de taper les valeurs littérales, on souhaite une appro
 
 1. Essayer :
 
-{{< python title="échagnge " >}}
+{{< python title="échange " >}}
 x = 2
 y = 5
 x = y
@@ -388,4 +391,16 @@ Opérations arithmétiques
 
 `divmod` est un fonction Python qui prend deux entiers `a` et `b` et renvoie un tuple de deux valeurs, le quotient et le reste de `a` divisé par `b`.
 
-En utilisant les opérations citées plus haut, écrire une expression qui a la même valeur que `divmod(a, b)`.
+1. Que font les opérations `a // b` et `a % b` lorsque `a` et `b` sont entiers ?
+2. En utilisant les opérations citées plus haut, écrire une expression qui a la même valeur que `divmod(a, b)`.
+
+{{< python title="divmod" init="" >}}
+a = 13
+b = 3
+
+# quotient et reste dans la division de a par b
+q, r = divmod(a, b)
+
+print(a, " = ", q, "*", b, "+", r)
+
+{{< /python >}}

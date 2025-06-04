@@ -457,7 +457,7 @@ image_de_f(x: float) -> float
 ```
 
 
-### Exercice 5 - code d'une fonction
+### Exercice 5 : code d'une fonction
 
 Pour chaque question :
 
@@ -538,6 +538,28 @@ Votre fonction renvoie toujours un `tuple` qui contient 0, 1 ou deux valeurs app
 (-2.0, 0.0)
 ```
 
+{{< expand "" "..." >}}
+```python
+def resoudre_trinome(a: float, b: float, c: float) -> tuple:
+    """Renvoie les solutions réelles de ax^2+bx+c = 0 dans un tuple"""
+    delta = b ** 2 - 4 * a * c 
+    if delta < 0:
+        # on renvoie un tuple vide
+        return ()
+    elif delta == 0:
+        # attention ici on doit renvoyer un tuple d'un seul élément,
+        # il faut ajouter une virgule avant de fermer la parenthèse
+        return (-b / (2 * a), )
+    else:
+        return ((-b - delta ** 0.5) / (2 * a), (-b + delta ** 0.5) / (2 * a))
+
+
+print(resoudre_trinome(1, 2, 1))
+print(resoudre_trinome(1, 2, 2))
+print(resoudre_trinome(1, 2, 0))
+```
+{{< /expand >}}
+
 ### Exercice 7 : mini challenge
 
 1. Écrire une fonction `indice_du_min` qui prend un tableau `tab` non vide et renvoie _l'indice_ de son élément minimal
@@ -566,6 +588,23 @@ Votre fonction renvoie toujours un `tuple` qui contient 0, 1 ou deux valeurs app
     "bcd"
     ```
 
+  {{< expand "" "..." >}}
+  ```python
+  VOYELLES = "aeiouy"
+
+  def filtre_voyelle(mot: str) -> str:
+      nouveau = ""
+      for lettre in mot:
+          if lettre not in VOYELLES:
+              nouveau = nouveau + lettre 
+
+      return nouveau 
+
+  print(filtre_voyelle("compris"))
+  print(filtre_voyelle("abcdefghijklmnopqrstuvwxyz"))
+  ```
+  {{< /expand >}}
+
 3. Écrire une fonction `est_trie` qui reçoit un tableau d'entiers et renvoie un booléen valant vrai si et seulement si les éléments du tableau sont triés par ordre croissant.
 
     ```python 
@@ -574,3 +613,17 @@ Votre fonction renvoie toujours un `tuple` qui contient 0, 1 ou deux valeurs app
     >>> est_trie([1, 2, 3])
     True
     ```
+
+  {{< expand "" "..." >}}
+  ```python 
+  def est_trie(tab: list) -> bool:
+      """Vrai ssi le tableau est trié par ordre croissant"""
+      for i in range(len(tab) - 1):
+          if tab[i] > tab[i + 1]:
+              return False 
+      return True 
+
+  print(est_trie([1, 2, 3]))
+  print(est_trie([1, 3, 2]))
+  ```
+  {{< /expand >}}

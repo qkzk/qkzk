@@ -377,6 +377,8 @@ Comment accéder à la valeur correspondant à `"history"` ?
 
 _On pourra commencer par examiner `sample_dict["class"]`, quel est son type ?_
 
+En une seule ligne, afficher la valeur associée à `"history"`.
+
 ## Exercice 7 
 
 Changez la clé `"city"` en `"location"` dans le dictionnaire suivant :
@@ -519,5 +521,59 @@ perso2 = {
     Améliorez la pour qu'elle affiche le nom du gagant :
 
     "Le combat est terminé et Frodon a gagné."
-  
+
+{{< expand "" "..." >}}
+```python 
+perso1 = {
+  "nom": "Frodon",
+  "vie": 100,
+  "force": 30,
+  "vivant": True,
+}
+
+perso2 = {
+  "nom": "Gollum",
+  "vie": 200,
+  "force": 15,
+  "vivant": True,
+}
+
+def presenter(perso: dict) -> None:
+    """Affiche les informations du personnage"""
+    print(perso["nom"], "a", perso["vie"], "points de vie et", perso["force"], "de force")
+
+def taper(attaquant: dict, victime: dict) -> int:
+    """
+    Attaquant tape victime qui perd de la vie.
+    Affiche les dégats occasionnés et renvoie les dégats causés.
+    """
+    degats = attaquant["force"]
+    victime["vie"] = victime["vie"] - degats
+    print(attaquant["nom"], "tape", victime["nom"], "qui perd", degats, "de vie")
+    if victime["vie"] <= 0:
+        victime["vivant"] = False
+
+    return degats
+
+def combat(joueur1: dict, joueur2: dict) -> None:
+    """
+    Combat à mort entre les joueurs.
+    Se déroule jusqu'à la mort d'un des joueurs.
+    Affiche les dégats à chaque tour puis le nom du vainqueur.
+    """
+    while joueur1["vivant"] and joueur2["vivant"]:
+      taper(joueur1, joueur2)
+      if joueur2["vivant"]:
+        taper(joueur2, joueur1)
+    if joueur1["vivant"]:
+      print("Le combat est terminé et", joueur1["nom"], "a gagné")
+    else:
+      print("Le combat est terminé et", joueur2["nom"], "a gagné")
+
+
+presenter(perso1)
+taper(perso1, perso2)
+combat(perso1, perso2)
+```
+{{< /expand >}}
 

@@ -245,7 +245,7 @@ Et bien pour apprendre c'est le seul moyen.
   constitué de lettres ou de chiffres respectant la taille donnée.
 
     ```python
-    symboles = '0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz'`
+    symboles = '0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz'
     ```
 
     ```python

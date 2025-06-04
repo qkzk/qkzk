@@ -266,6 +266,42 @@ if nombre > 10:
 
   La condition est fausse et le bloc `if` n'est pas exécuté donc il ne se passe rien.
 
+### Parcourir une collection, avec ou sans indice
+
+Condisérons deux problèmes a priori similaire :
+
+- pour un mot, compter les "a" qu'il contient.
+- pour un mot, afficher les positions de _chaquee "a" qu'il contient.
+
+Les deux se résolvent en parcourant chaque lettre du mot. Une boucle bornée permet de résoudre le problème.
+
+Dans le premier on ne se soucie que de la lettre : `for lettre in mot:` convient.
+
+Alors que dans le second, il faut _l'indice de la lettre_ : `for i in range(len(mot)):`
+
+{{< python title="indice ou non" init="" >}}
+mot = "abracadabra"
+
+# compter les a 
+total = 0
+for lettre in mot:
+    if lettre == "a":
+        total = total + 1
+
+print("Il y a", total, "a dans", mot)
+print()
+
+# indice des a 
+for i in range(len(mot)):
+    lettre = mot[i]
+    if lettre == "a":
+        print(mot, "contient un 'a' à l'indice", i)
+{{< /python >}}
+
+**Un problème qui se résout en parcourant une fois une collection avec une boucle bornée est un _parcours séquentiel_**
+
+Vous rencontrerez énormément de parcours séquentiels en NSI alors essayez de retenir dès maintenant cette nuance, cela vous aidera grandement par la suite.
+
 ### Exercice 6
 
 On considère la phrase suivante :
@@ -346,7 +382,8 @@ mot1 = "table"
 mot2 = "exercice"
 mot3 = "bonjour"
 mot4 = "ordinateur"
-voyelles = "a...."
+
+voyelles = "aeiouy
     {{< /python >}}
 
 
@@ -387,4 +424,41 @@ voyelles = "a...."
 
 {{< python title="Python est malin, il a appris ses tables">}}
 {{< /python >}}
+
+### Exercice 9 - Mini challenge : somme des nombres impairs.
+
+Avez vous remarqué que $1 + 3 = 2^2$ ? 
+
+Mais ce n'est pas tout, $1 + 3 + 5 = 9 = 3^2$ !
+
+Que dire de $1 + 3 + 5 + 7 = 16 = 4^2$ ?
+
+Oh !
+
+1. Vérifiez cette relation pour la somme des 100 premiers nombres impairs.
+2. Faites la vérification dans une boucle pour _chaque somme intermédiaire_.
+
+    La relation est vraie, donc n'affichez rien si elle est juste et un message si elle fausse.
+
+{{< python title="Somme des impairs" init="" >}}
+print(1 + 3 == 2 ** 2)
+{{< /python >}}
+
+{{< expand "" "..." >}}
+```python
+# On initialise la somme à 0
+somme = 0
+# On itère de 1 à 99
+for i in range(1, 100):
+    # on ajoute à somme le nombre impair suivant, il est de la forme 2 * i - 1
+    somme = somme + (2 * i - 1)
+    # testons s'il est le carré de i 
+    if somme != i ** 2:
+        # en cas d'échec, on affiche et on arrête la boucle
+        print(i)
+        break
+print("ça marche :)")
+```
+{{< /expand >}}
+
 

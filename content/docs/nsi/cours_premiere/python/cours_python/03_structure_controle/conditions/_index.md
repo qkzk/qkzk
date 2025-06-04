@@ -20,12 +20,15 @@ Mais avant ça :
 
 ## L'indentation
 
+{{< hint info >}}
 _indenter_ le code c'est le décaler de quelques espaces (généralement 4,
 parfois 2) depuis la gauche.
+
 
 En python la structure d'un programme est _imposée_ par l'indentation.
 Ne pas respecter l'indentation conduit à des erreurs du type `IndentationError`
 qu'il est généralement simple de repérer.
+{{< /hint >}}
 
 ```python
 code sans indentation
@@ -71,7 +74,7 @@ Si j'ai plus de 10 de moyenne au bac, je suis diplômé :
 ```python
 moyenne = 3
 if moyenne >= 10:               # ne pas oublier les :
-    print("je suis diplomé")        # attention à l'indentation
+    print("je suis diplômé")        # attention à l'indentation
 
 ##  suite du programme
 ```

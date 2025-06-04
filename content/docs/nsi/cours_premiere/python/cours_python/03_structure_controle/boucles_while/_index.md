@@ -303,9 +303,76 @@ suivants.
 {{< python title="Intérêts">}}capital = 50000
 {{< /python >}}
 
+### Exercice 4 - la caisse 
+
+Après d'intenses études (à la cafétéria) vous voilà embauché à la caisse de Lidl. Yes !
+
+Vous scannez les articles de papy Jeannot et il doit 24€.
+
+Avec l'age, il ne parvient plus à reconnaître les pieces. Il les sort une par une.
+
+Complétez le script avec une boucle while qui simule le comportement de Jeannot : il sort une piece de 0.50€, 1€ ou 2€ et vous l'arrêtez lorsqu'il a déposé 24€. N'oubliez pas de lui rendre la monnaie s'il dépasse 24€ !
+
+Votre script produit un affichage similaire à celui-ci :
+
+```
+Jeannot dépose 2 euros. Encore  22
+Jeannot dépose 1 euros. Encore  21
+Jeannot dépose 2 euros. Encore  19
+Jeannot dépose 1 euros. Encore  18
+Jeannot dépose 0.5 euros. Encore  17.5
+Jeannot dépose 1 euros. Encore  16.5
+Jeannot dépose 0.5 euros. Encore  16.0
+Jeannot dépose 2 euros. Encore  14.0
+Jeannot dépose 2 euros. Encore  12.0
+Jeannot dépose 2 euros. Encore  10.0
+Jeannot dépose 1 euros. Encore  9.0
+Jeannot dépose 1 euros. Encore  8.0
+Jeannot dépose 1 euros. Encore  7.0
+Jeannot dépose 0.5 euros. Encore  6.5
+Jeannot dépose 1 euros. Encore  5.5
+Jeannot dépose 2 euros. Encore  3.5
+Jeannot dépose 2 euros. Encore  1.5
+Jeannot dépose 2 euros. Encore  -0.5
+Je rends  0.5
+```
+
+{{< python title="Choix aléatoire dans une collection" init="" >}}
+from random import choice 
+
+PIECES = (0.5, 1, 2)
+
+# choisir une piece au hasard :
+print(choice(PIECES))
+# une autre 
+print(choice(PIECES))
+{{< /python >}}
 
 
-### Exercice 4 - Mini challenge
+{{< expand "Jeannot" "..." >}}
+```python 
+from random import choice 
+
+PIECES = (0.5, 1, 2)
+
+# choisir une piece au hasard :
+print(choice(PIECES))
+# une autre 
+print(choice(PIECES))
+
+total = 0 
+while total < 24:
+    piece = choice(PIECES)
+    total += piece 
+    print("Jeannot dépose", piece, "euros.", "Encore ", 24 - total)
+
+if total > 24:
+    print("Je rends ", total - 24)
+```
+{{< /expand >}}
+
+
+### Exercice 5 - Mini challenge : plus ou moins complet
 
 _À traiter à l'extérieur_
 

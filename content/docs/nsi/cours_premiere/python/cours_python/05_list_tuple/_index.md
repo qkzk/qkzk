@@ -187,8 +187,8 @@ Lorsque ce sont les mêmes objets en mémoire on dit qu'elles sont _identiques_.
 ### Exercice 1
 
 1. Créer les `list` : `[4, 3, 2, 1]` et `[1, 2, 3, 4]` et affectez les à des variables
-2. Vérifier qu'elles contiennent les mêmes éléments.
-3. Sont-elles pour autant égales ?
+2. Sont-elles égales ?
+3. Vérifier qu'elles contiennent les mêmes éléments à l'aide d'une boucle et du mot clé `in`
 
 {{< python title="Exercice 1" >}}
 {{< /python >}}
@@ -214,10 +214,7 @@ Pour chaque question on créera la liste de deux manières :
     True
     ```
 1. Créer la liste des carrés des 10 premiers entiers (de 0 à 9).
-2. Créer la liste des prenoms de vos 4 voisins les plus proches.
-3. Créer la liste des entiers entre 0 et 100 qui se terminent par 7.
-4. Créer la liste de vos cinq séries ou films préférés (remplacez par
-  jeux-vidéos si vous préférez).
+2. Créer la liste des entiers entre 0 et 100 qui se terminent par 7.
 
 {{< python title="Exercice 2" >}}
 {{< /python >}}
@@ -400,6 +397,16 @@ C'est commode mais source d'erreurs. Il faut s'assurer d'avoir à gauche
 du signe `=` autant de variables (séparées par des virgules) qu'il y en a
 à droite.
 
+{{< python title="détupler" init="" >}}
+x, y = (1, 2)
+print(x)
+print(y)
+{{< /python >}}
+
+{{< python title="erreur courante" init="" >}}
+x, y = (1, 2, 3) # erreur courante :
+{{< /python >}}
+
 ### Fonction renvoyant un tuple
 
 On rencontre aussi des fonctions qui renvoient plusieurs valeurs.
@@ -489,7 +496,7 @@ On aborde ici une particularité de Python qu'il faut garder en tête lorsqu'on
 manipule des listes.
 
 En Python, il est possible de passer une liste à une fonction. Jusque là rien
-d'original, c'est faisaible dans tous les langages que je connais.
+d'original, c'est faisable dans tous les langages que je connais.
 
 Par contre, attention, _dans la fonction_ il est possible de modifier la liste.
 
