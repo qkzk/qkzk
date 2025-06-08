@@ -12,26 +12,43 @@ pdf: [pour impression](/uploads/docnsitale/algo/divide_n_conquer/tri_fusion_prin
 
 ## Tri fusion
 
+### Présentation
+
+Le **tri fusion** est un algorithme de _tri par comparaison_ (comme tri sélection et tri insertion étudiés en première) utilisant le principe _diviser pour régner_.
+
+Il généralement est beaucoup plus rapide que les tris mentionnés plus tôt. Son coût est _optimal_, c'est-à-dire qu'il n'existe pas d'algorithme de tri par comparaison beaucoup plus rapide que celui là.
+
+C'est un tri _stable_, qui ne change pas la position de deux éléments "égaux".
+
+Il a été inventé par [John Von Neumann](https://fr.wikipedia.org/wiki/John_von_Neumann) en 1945, celui dont on a étudié le modèle d'architecture en première.
+
+### Algorithme
+
+![Animation Wikipédia](./img/Merge-sort-example-300px.gif)
+
 On applique diviser pour régner pour trier un tableau.
 
-Même principe :
+Le tri fusion est constitué de deux fonctions qui s'appliquent à un même tableau :
 
-Tri Fusion (`tableau`):
+> Tri Fusion (`tableau`):
+> 
+> * Si `tableau` est de taille <= 1 on ne fait rien.
+> * Sinon, On sépare `tableau` en 2 parties `gauche` et `droite`,
+>     * On appelle Tri fusion sur `gauche` et sur `droite`
+>     * On appelle Fusionner(`tableau`, `gauche`, `droite`)
 
-* Si `tableau` est de taille <= 1 on ne fait rien.
-* Sinon, On sépare `tableau` en 2 parties `gauche` et `droite`,
-* On appelle Tri fusion sur `gauche` et sur `droite`
-* On fusionne `gauche` et `droite` dans `tableau`
 
+> Fusionner(`tableau`, `gauche`, `droite`):
+> 
+> * On parcourt les deux tableaux `gauche` et `droite` en même temps.\
+>     Pour chaque paire d'éléments, on place le plus petit dans `tableau`.
+> * S'il reste des éléments dans `gauche` ou dans `droite` on les place à la fin
+>     de tableau
 
-```
-fusionner (`tableau`, `gauche`, `droite`):
+En simplifiant grandement,
 
-* On parcourt les deux tableaux `gauche` et `droite` en même temps,
-    Pour chaque paire d'éléments, on place le plus petit dans tableau.
-* S'il reste des éléments dans `gauche` ou dans `droite` on les place à la fin
-    de tableau
-```
+- On découpe le tableaux en 2 jusqu'à arriver à des tableaux de taille 1.
+- On fusionne les tableaux en les parcourant en même temps.
 
 ## Exemples
 
@@ -72,12 +89,15 @@ fusionner (`tableau`, `gauche`, `droite`):
 
 ![exemple](/docs/nsi/cours_terminale/algorithmique/diviser_pour_regner/tri_fusion/img/0.png)
 
-## Algorithme : tri_fusion
+## Algorithme en vidéo 
 
-Une excellente [vidéo de présentation](https://www.youtube.com/watch?v=TzeBrDU-JaY )
+- [En français](https://www.youtube.com/watch?v=R5byY8IkS3Q)
+- [En anglais](https://www.youtube.com/watch?v=TzeBrDU-JaY )
 
 ### Algorithme tri fusion
 
+
+{{< hint info >}}
 ```
 tri_fusion (tableau) :
     Si la longueur est > 1:
@@ -93,9 +113,11 @@ tri_fusion (tableau) :
       # combiner
       fusion(tableau, gauche, droite)
 ```
+{{< /hint >}}
 
 ## Algorithme fusion
 
+{{< hint info >}}
 ```
 fusion (tableau, gauche, droite)
   i, j, k = 0
@@ -108,6 +130,7 @@ fusion (tableau, gauche, droite)
 
   Pour les éléments restant, les ajouter à fin de tableau
 ```
+{{< /hint >}}
 
 ### Exemple détaillé pour la fusion
 
