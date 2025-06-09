@@ -1,13 +1,11 @@
 ---
 title: "Routage TD"
 bookCollapseSection: true
-weight: 100
+weight: 10
 
 ---
 
-[pour impression](/uploads/docnsitale/routage/routage_td.pdf)
-
-
+[pdf](./routage_td.pdf)
 
 **Compétence :** _Analyser un datagramme IP_
 
@@ -93,7 +91,7 @@ Un routeur a la table de routage suivante :
 
 Soit le réseau suivant :
 
-![réseau 1](./td_reseau1.png)
+![réseau 1](./img/td_reseau1.png)
 
 Donner la table de routage RIP du routeur 1
 
@@ -101,7 +99,7 @@ Donner la table de routage RIP du routeur 1
 
 Soit le réseau suivant :
 
-![réseau 2](./td_reseau2.png)
+![réseau 2](./img/td_reseau2.png)
 
 1. Expliquer comment, lorsqu'il reçoit un datagramme sur l'une de ses interfaces
     le routeur R2 retransmet ce datagramme en fonction de son destinataire.
@@ -123,7 +121,7 @@ en 3 parties :
 
 L'organisation de ce réseau est la suivante :
 
-![réseau 3](./td_reseau3.png)
+![réseau 3](./img/td_reseau3.png)
 
 1. Donner la ligne de la table de routage d'un hôte du réseau administratif
     nécessaire pour qu'il puisse joindre tout hôte du réseau commercial.
@@ -155,7 +153,148 @@ default         0.0.0.0         0.0.0.0         UG    1      0        0 eth0
 
 À combien de réseau ce routeur est-il relié ?
 
-## Exercice 7 - Bilan
+
+## Exercice 7 - 2024, sujet 0a, Exercice 1
+
+
+_Cet exercice est tiré d'un sujet d'écrit, le sujet 0 de 2024. Il rapporte 6 points sur 20_
+
+
+_Cet exercice porte sur l’architecture matérielle, les réseaux, les routeurs et les protocoles de routage._
+
+On considère un réseau local N1 constitué de trois ordinateurs M1, M2, M3 et dont les adresses IP sont les suivantes :
+
+- M1 : 192.168.1.1/24 ;
+- M2 : 192.168.1.2/24 ;
+- M3 : 192.168.2.3/24.
+
+On rappelle que le “/24” situé à la suite de l’adresse IP de M1 signifie que l’adresse réseau du réseau local N1 est 192.168.1.0.
+
+Depuis l’ordinateur M1, un utilisateur exécute la commande ping vers l’ordinateur M3 comme suit :
+
+```
+util\@M1 \~ % ping 192.168.2.3
+
+PING 192.168.2.3 (192.168.2.3): 56 data bytes
+Hôte inaccessible
+
+```
+
+1. Expliquer le résultat obtenu lors de l’utilisation de la commande ping (on part du principe que la connexion physique entre les machines est fonctionnelle).
+
+On ajoute un routeur R1 au réseau N1 :
+
+> _“Un routeur moderne se présente comme un boîtier regroupant carte mère, microprocesseur, ROM, RAM ainsi que les ressources réseaux nécessaires (Wi-Fi, Ethernet…). On peut donc le voir comme un ordinateur minimal dédié, dont le système d’exploitation peut être un Linux allégé. De même, tout ordinateur disposant des interfaces adéquates (au minimum deux, souvent Ethernet) peut faire office de routeur s’il est correctement configuré (certaines distributions Linux minimales spécialisent la machine dans cette fonction).”_  
+>   
+> Source : Wikipédia, article “Routeur”
+
+2. Définir l’acronyme RAM.
+
+3. Expliquer le terme Linux.
+
+4. Expliquer pourquoi il est nécessaire d’avoir “au minimum deux” interfaces réseau dans un routeur.
+
+Le réseau N1 est maintenant relié à d’autres réseaux locaux (N2, N3, N4) par l’intermédiaire d’une série de routeurs (R1, R2, R3, R4, R5, R6) :
+
+![Schéma du réseau](img-2025-06-09-09-45.png) 
+
+5. Attribuer une adresse IP valide à l’interface eth0 du routeur R1 sachant que l’adresse réseau du réseau N1 est 192.168.1.0.
+
+---
+
+Dans un premier temps, on utilise le protocole de routage RIP (Routing Information Protocol). On rappelle que dans ce protocole, la métrique de la table de routage correspond au nombre de routeurs à traverser pour atteindre la destination.
+
+**Table de routage du routeur R1 :**
+
+| destination | interface de sortie | métrique |
+|:-----------:|:-------------------:|:--------:|
+|      N1     |         eth0        |     0    |
+|      N2     |         eth1        |     2    |
+|      N2     |         eth2        |     4    |
+|      N3     |         eth1        |     3    |
+|      N3     |         eth2        |     3    |
+|      N4     |         eth1        |     1    |
+|      N4     |         eth2        |     3    |
+
+6. Déterminer le chemin parcouru par un paquet de données pour aller d’une machine appartenant au réseau N1 à une machine appartenant au réseau N2.
+
+Le routeur R3 tombe en panne. Après quelques minutes, la table de routage de R1 est modifiée afin de tenir compte de cette panne.
+
+7. Dresser la table de routage du routeur R1 suite à la panne du routeur R3.
+
+---
+
+Le routeur R3 est de nouveau fonctionnel. Dans la suite de cet exercice, on utilise le protocole de routage OSPF (Open Shortest Path First). On rappelle que dans ce protocole, la métrique de la table de routage correspond à la somme des coûts :
+
+$$
+\text{coût} = \frac{10^8}{d}
+$$
+
+(où $d$ est la bande passante d’une liaison en bit/s).
+
+Le réseau est constitué de 3 types de liaison de communication :
+
+- Fibre avec un débit de 1 Gbit/s ;
+- Fast-Ethernet avec un débit de 100 Mbit/s ;
+- Ethernet avec un débit de 10 Mbit/s.
+
+8. Calculer le coût de chacune de ces liaisons de communication.
+
+**Table de routage du routeur R1 :**
+
+| destination | interface de sortie | métrique |
+|:-----------:|:-------------------:|---------:|
+|      N1     |         eth0        |      0,0 |
+|      N2     |         eth1        |     10,1 |
+|      N2     |         eth2        |      1,3 |
+|      N3     |         eth1        |     11,3 |
+|      N3     |         eth2        |      0,3 |
+|      N4     |         eth1        |     10,0 |
+|      N4     |         eth2        |      1,2 |
+
+D’autre part, le type des différentes liaisons inter-routeurs sont les suivantes :
+
+- R1 - R2 : Fibre ;
+- R1 - R3 : Ethernet ;
+- R2 - R6 : INCONNU ;
+- R3 - R6 : Fast-Ethernet ;
+- R3 - R4 : Fibre ;
+- R4 - R5 : Fast-Ethernet ;
+- R5 - R6 : Fibre.
+
+9. Déduire de la table de routage de R1 et du schéma du réseau le type de la liaison inter-routeur R2 - R6.
+
+Des travaux d’amélioration ont été réalisés sur ce réseau : la liaison inter-routeur R1-R3 est désormais de type Fibre.
+
+10. Modifier la table de routage de R1 en tenant compte de cette amélioration.
+
+On ajoute un réseau local N5 et un routeur R7 au réseau étudié ci-dessus. Le routeur R7 possède trois interfaces réseaux eth0, eth1 et eth2. eth0 est directement relié au réseau local N5. eth1 et eth2 sont reliés à d’autres routeurs (ces liaisons inter-routeur sont de type Fibre).
+
+Les deux tableaux suivants présentent un extrait des tables de routage des routeurs R1 et R3 :
+
+**Extrait table de routage du routeur R1**
+
+| destination | interface de sortie | métrique |
+|-------------|---------------------|----------|
+| …           | …                   | …        |
+| N5          | eth1                | 1,2      |
+| N5          | eth2                | 0,2      |
+
+**Extrait table de routage du routeur R3**
+
+| destination | interface de sortie | métrique |
+|-------------|---------------------|----------|
+| …           | …                   | …        |
+| N5          | eth1                | 1,3      |
+| N5          | eth2                | 1,1      |
+| N5          | eth3                | 0,3      |
+
+11. Recopier et compléter le schéma du réseau (rappelé ci-dessous) en ajoutant le routeur R7 et le réseau local N5.
+
+    ![Schéma du réseau](./img-2025-06-09-09-45.png) 
+
+
+## Exercice 8 - Bilan
 
 HTTP est le protocole de base du Web : c'est lui qui transmet les requêtes
 de pages Web et assure le transport de ces pages Web entre le serveur et le
@@ -191,5 +330,4 @@ des techniques de chiffrement :
 5. Compléter le schéma de 2. en intégrant la diffusion de la clé publique
     symétrique.
 
-
-
+[Correction de Math93.com](./BACNSI2024_Sujet0_A.pdf)
