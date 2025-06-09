@@ -12,6 +12,7 @@ weight: 1
 
 * [cours](cours)
 * [td](td)
+* [resumé](resume)
 
 ## Programme
 
