@@ -7,6 +7,18 @@ weight: 2
 
 [pdf](./2_processus_etats.pdf)
 
+
+{{< hint info >}}
+Un _programme binaire_ est un ensemble d'instructions que la machine peut reconnaître et exécuter. C'est un texte écrit en binaire.
+Les _processus_ sont des _programmes en cours d'exécution par la machine_.
+{{< /hint >}}
+
+Dans ce contexte on distingue _programme texte_ (les codes qu'on peut écrire en Python, en C...) et _programme binaire_ écrit en instructions machine.
+
+Nous allons étudier les _états_ et les _transitions_ de ces processus, depuis leur naissance, lors de l'exécution du programme jusqu'à leur mort.
+
+Avant ça, quelques concepts doivent être introduits.
+
 ## Système d'exploitation
 
 L'OS est chargé d'assurer la liaison entre les ressources matérielles, l'utilisateur
@@ -16,15 +28,15 @@ Voici les trois situations les plus courantes (OS seul, microcontroleur, virtual
 
 ![Les trois situations courantes](./img/OS.png)
 
-* Dans le premier cas, l'OS fonctionne normalement et sert d'interface unique à l'utilisateur
-* Dans le cas du _microcontroleur_, il n'y a pas d'OS ! Les programmes s'exécutent directement sur le matériel
+* Dans le cas d'un OS seul, il sert d'interface unique entre l'utilisateur et le matériel
+* Dans le cas du _microcontroleur_, il n'y a pas d'OS ! Les programmes s'exécutent _directement sur le matériel_
 * Dans le cas de la _virtualisation_, l'hyperviseur permet de faire fonctionner simultanément plusieurs OS sur
     une même machine. Les utilisateurs (généralement en réseau...) peuvent utiliseur l'un ou l'autre.
 
 
 
 
-### Rôles
+### Rôles d'un OS
 
 Les rôles principaux d'un OS sont :
 
@@ -32,19 +44,33 @@ Les rôles principaux d'un OS sont :
 * La gestion de la **mémoire vive**,
 * La gestion des **entrées / sorties**,
 * La gestion des **processus** (programme en cours d'exécution),
-* La gestion des **droits**,
+* La gestion des **droits** de l'utilisateur,
 * La gestion des **fichiers** et du **système de fichier**.
 
 ### Composants d'un OS
 
+
+L'OS se découpe en couches selon leur proximité avec le matériel.
+
+![Kernel](./img/Kernel_Layout.png)
+
+* Le **matériel** n'intéragit directement qu'avec le noyau.
 * Le **noyau** (_kernel_) contient les fonctions principales d'un OS (mémoire, processus, fichiers, IO, communication etc.)
-* Le **shell** (_shell_ pour coquille...) permet la communication des via un intermédiaire.
+* Les **appplications** ou **espace utilisateur** contient l'ensemble des processus avec lequel l'utilisateur intéragit.
+
+Parmi ces applications, on s'intéresse à celle faisant le lien entre le noyau et l'utilisateur lui même : le shell.
+
+* Le **shell** (_shell_ pour coquille..., _interface système_ en français) permet la communication des via un intermédiaire.
+
+  Il offre deux usage possibles :
 
   * **CLI** (_Command Line Interface_ : la console !) : interpréteur de commandes
     en ligne. Exécute les commandes une par une (`[quentin@pc] $ ls`) ou depuis
     un script. Le shell le plus couramment utilisé est BASH.
   * **GUI** (_Graphical User Interface_ : les fenêtres) : interface graphique proposant un pointeur, des fenêtres, des icônes, des boutons pour rendre la manipulation conviviale et aisée.
 
+
+{{< expand "Statistiques" "..." >}}
 ### Statistiques d'utilisation
 
 **Bureau et portable**
@@ -111,158 +137,32 @@ C'est un projet assez secret mais qui a contribué à la création de Kubernetes
 _Je crois qu'il fonctionne sur UNIX mais même la vidéo de présentation d'1h30 ne répond pas à la question_.
 
 En bref : les informaticiens utilisent UNIX.
+{{< /expand >}}
 
 ## Processus
 
-**Programme**
+{{< hint info >}}
+**Programme (binaire)**
 
 > Du texte exécutable par la machine
 
 **Processus**
 
 > Un programme en cours d'exécution
+{{< /hint >}}
 
-
-### Lancement
-
-L'exécution d'un programme consiste à copier son code en mémoire et à faire
-pointer le CPU sur la première instruction.
-
-Celles-ci sont ensuite exécutées une par une jusqu'à épuisement ou jusqu'à
-l'arrêt du programme par le système d'exploitation.
-
-L'utilisateur peut lancer un programme depuis le GUI en double cliquant dessus
-ou depuis le CLI en l'appelant avec 
-
-```bash
-$ ./nom_du_programme
-$ ./nom_du_programme &
-```
-
-En ajoutant une esperluette (_ampersand_ &) on exécute le programme en tâche
-de fond et on récupère la main sur le terminal.
-
-
-### Format d'exécutable
-
-Chaque système d'exploitation dispose de son propre format pour rendre un fichier
-exécutable.
-
-| Windows | UNIX | OS X   |
-|---------|-------|--------|
-| PE      | ELF   | Mach-O |
-
-ELF (Executable and Linkable Format, est un format de fichier binaire utilisé pour l'enregistrement de code compilé.
-
-Chaque fichier ELF est constitué d'un en-tête fixe, puis de segments et de sections. Les segments contiennent les informations nécessaires à l'exécution du programme contenu dans le fichier.
-
-Ainsi le système d'exploitation sait où trouver les informations dont il aura
-besoin lors de l'exécution.
-
-Mach-O et PE utilisent des principes similaires.
-
-### Composants d'un processus
-
-Un processus est constitué :
-
-* d'un ensemble d'**instructions** à exécuter (section CODE),
-* d'un espace d'adressage en **mémoire vive** (sections pile, tas et data)
-* de **ressources** (fichiers ouverts, sockets réseau, connexion bdd etc.)
-* des **flux** d'entrée (_stdin_) et de sortie (_stdout, stderr_) utilisés
-  pour communiquer avec l'extérieur.
-
-![processus](./img/processus.png)
-
-Les détails d'un processus sont accessibles dans le dossier `/proc` où
-chaque chaque processus se voit attribuer un dossier selon son PID
-durant son exécution.
-
-par exemple :
-
-```haskell
-$ sudo ln -l /proc/17
-cmdline     (line de commande utilisée pour lancer le processus)
-environ     (variables d'environnement)
-maps        (zone de mémoire du processus)
-fd          (fichiers ouverts et connexions)
-net         (statistiques réseau)
-status      (état et statistiques du processus)
-syscall     (appels systèmes utilisés par le programme)
-```
-
-Pour afficher le contenu de ces fichiers on peut, par exemple :
-
-```bash
-$ sudo cat /proc/17/status
-```
-
-### Arborescence des processus
-
-Au lancement de l'OS, un premier processus est crée, il sera
-l'ancetre de tous les autres. Il se nomme `init` et son PID est 1.
-
-Ensuite l'OS va créer des processus fils à partir du père `init` de
-deux types :
-
-* **démon** (service sous windows) : processus qui tournent en continu,
-* **utilisateurs** : lancés à partir du shell.
-
-On peut consulter cette arborescence avec la commande `pstree`.
-
-## Processus crées depuis Python
-
-Python, comme tous les langages modernes, permet de manipuler les processus : d'en créer, de les tuer, de les synchroniser de récupérer leur sortie.
-
-### Lancement d'un processus simple
-
-```python
-import os
-os.system("/usr/bin/mousepad")
-## le programme python est _bloqué_ jusqu'à la terminaison du processus...
-```
-
-La bibliothèque `os` contient des fonctions permettant de réaliser
-des appels systeme.
-
-### Lancement d'un processus et manipulation des entrées sorties :
-
-```python
-import subprocess
-
-sortie = subprocess.run(["ln", "-l"], capture_output=True)
-print(sortie)
-```
-
-Ce programme va créer un processus, l'exécuter, enregistrer sa sortie
-puis l'afficher.
-
-### Faire tourner une fonction dans un processus à part
-
-```python
-from multiprocessing import Process
-
-## cette fonction sera _embarquée_ dans un processus fils
-def saluer(nb_fois: int):
-    """Affiche `nb_fois` la ligne 'bonjour' """
-    for _ in range(nb_fois):
-        print("bonjour")
-
-## création d'un processus embarquant la fonction saluer
-p1 = Process(target=saluer, args=(5,))
-
-## lancement du processus
-p1.start()
-
-## attente de la fin du processus (=synchronsation)
-p1.join()
-```
-
-## Cycle de vie d'un processus
+### Cycle de vie d'un processus
 
 Lors de l'exécution d'un programme, un processus change réculièrement d'état.
 C'est l'ordonnanceur qui est responsable de  ces changements d'état.
 
+{{< hint info >}}
+l'ordonnanceur est le composant du noyau du système d'exploitation choisissant l'ordre d'exécution des processus sur les processeurs d'un ordinateur. En anglais, l'ordonnanceur est appelé _scheduler_.
+{{< /hint >}}
+
+{{< hint danger >}}
 ![graph_000.svg](graph_000.svg)
+{{< /hint >}}
 
 
 * **new** : le processus vient d'être crée,
@@ -282,6 +182,36 @@ Il existe d'autres états :
   du disque dur servant à compléter la RAM)
 * **zombie** : le père de ce processus s'est terminé avant lui. Le système utilise
   cet état pour récupérer les ressources.
+
+
+### PID
+
+À son lancement, l'OS donne un numéro appelé PID (_Process IDentifier_) qui permet d'identifier le processus durant son exécution.
+
+Le processus dispose d'un PPID (Parent PID)
+
+![pstree](./bin/pstree-c.png)
+
+Ces numéros permettent de retrouver et manipuler facilement les processus.
+
+### Lancement
+
+L'exécution d'un programme consiste à copier son code en mémoire et à faire
+pointer le CPU sur la première instruction.
+
+Celles-ci sont ensuite exécutées une par une jusqu'à épuisement ou jusqu'à
+l'arrêt du programme par le système d'exploitation.
+
+L'utilisateur peut lancer un programme depuis le GUI en double cliquant dessus
+ou depuis le CLI en l'appelant avec 
+
+```bash
+$ ./nom_du_programme
+$ ./nom_du_programme &
+```
+
+En ajoutant une esperluette (_ampersand_ &) on exécute le programme en tâche
+de fond et on récupère la main sur le terminal.
 
 
 ### Consulter les processus en cours d'exécution
@@ -370,6 +300,16 @@ ou un tableau dynamique.
   ...
   ```
 
+  {{< expand "ps -ef" "..." >}}
+  - UID : nom de l'utilisateur qui a lancé le processus,
+  - PID : Process Identifier, numéro unique du processus,
+  - PPID : PID du parent, celui qui a lancé le processus,
+  - C : utilisation du CPU en pourcent,
+  - STIME : date de lancement,
+  - TTY : console dans laquelle écrit le processus. `?` signifie qu'il n'écrit pas ses sorties dans un terminal 
+  - CMD : commande employée pour le lancer. `/sbin/init` pointe vers un _fichier_ et `[kthread]` fait référence à une partie du noyau lui même.
+  {{< /expand >}}
+
   Ces listes étant souvent conséquentes
   (318 processus en cours d'exécution sur ma machine...) on filtre souvent
   avec `grep` :
@@ -390,6 +330,57 @@ Il existe d'autres gestionnaires de tâches sous UNIX et certains sont même jol
 À ne pas confondre avec **btop**
 
 ![btopp](./btopp.jpg)
+
+### Composants d'un processus
+
+Un processus est constitué :
+
+* d'un ensemble d'**instructions** à exécuter (section CODE),
+* d'un espace d'adressage en **mémoire vive** (sections pile, tas et data)
+* de **ressources** (fichiers ouverts, sockets réseau, connexion bdd etc.)
+* des **flux** d'entrée (_stdin_) et de sortie (_stdout, stderr_) utilisés
+  pour communiquer avec l'extérieur.
+
+![processus](./img/processus.png)
+
+_Cette partie est spécifique à UNIX_
+
+
+Les détails d'un processus sont accessibles dans le dossier `/proc` où
+chaque chaque processus se voit attribuer un dossier selon son PID
+durant son exécution.
+
+par exemple :
+
+```haskell
+$ sudo ln -l /proc/17
+cmdline     (line de commande utilisée pour lancer le processus)
+environ     (variables d'environnement)
+maps        (zone de mémoire du processus)
+fd          (fichiers ouverts et connexions)
+net         (statistiques réseau)
+status      (état et statistiques du processus)
+syscall     (appels systèmes utilisés par le programme)
+```
+
+Pour afficher le contenu de ces fichiers on peut faire:
+
+```bash
+$ sudo cat /proc/17/status
+```
+
+### Arborescence des processus
+
+Au lancement de l'OS, un premier processus est crée, il sera
+l'ancetre de tous les autres. Il se nomme `init` et son PID est 1.
+
+Ensuite l'OS va créer des processus fils à partir du père `init` de
+deux types :
+
+* **démon** (service sous windows) : processus qui tournent en continu,
+* **utilisateurs** : lancés à partir du shell.
+
+On peut consulter cette arborescence avec la commande `pstree`.
 
 ### Envoyer un signal au processus
 
@@ -437,6 +428,76 @@ $ kill -9 $(pidof alacritty)
 Va tuer toutes les instances d'alacritty...
 
 
+{{< expand "" "..." >}}
+### Format d'exécutable
 
+Chaque système d'exploitation dispose de son propre format pour rendre un fichier
+exécutable.
 
+| Windows | UNIX | OS X    |
+|---------|-------|--------|
+| PE      | ELF   | Mach-O |
+
+ELF (Executable and Linkable Format, est un format de fichier binaire utilisé pour l'enregistrement de code compilé.
+
+Chaque fichier ELF est constitué d'un en-tête fixe, puis de segments et de sections. Les segments contiennent les informations nécessaires à l'exécution du programme contenu dans le fichier.
+
+Ainsi le système d'exploitation sait où trouver les informations dont il aura
+besoin lors de l'exécution.
+
+Mach-O et PE utilisent des principes similaires.
+
+[_Comparison of executable file formats](https://en.wikipedia.org/wiki/Comparison_of_executable_file_formats)
+{{< /expand >}}
+
+## Processus crées depuis Python
+
+Python, comme tous les langages modernes, permet de manipuler les processus : d'en créer, de les tuer, de les synchroniser de récupérer leur sortie.
+
+### Lancement d'un processus simple
+
+```python
+import os
+os.system("/usr/bin/mousepad")
+## le programme python est _bloqué_ jusqu'à la terminaison du processus...
+```
+
+La bibliothèque `os` contient des fonctions permettant de réaliser
+des appels systeme.
+
+### Lancement d'un processus et manipulation des entrées sorties :
+
+```python
+import subprocess
+
+sortie = subprocess.run(["ln", "-l"], capture_output=True)
+print(sortie)
+```
+
+Ce programme va créer un processus, l'exécuter, enregistrer sa sortie
+puis l'afficher.
+
+### Faire tourner une fonction dans un processus à part
+
+```python
+from multiprocessing import Process
+
+## cette fonction sera _embarquée_ dans un processus fils
+def saluer(nb_fois: int):
+    """Affiche `nb_fois` la ligne 'bonjour' """
+    for _ in range(nb_fois):
+        print("bonjour")
+
+## création d'un processus embarquant la fonction saluer
+p1 = Process(target=saluer, args=(5,))
+## p1 est créée, dispose de son propre PID, son parent est le processus Python en cours
+
+## lancement du processus
+p1.start()
+
+## ici on peut continuer à exécuter du code Python 
+
+## attente de la fin du processus (=synchronsation)
+p1.join()
+```
 
