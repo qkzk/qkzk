@@ -47,6 +47,24 @@ doit alors :
 3. restaurer le contexte de P2 sur le processeur,
 4. reprendre l'exécution de P2 juste après sa dernière instruction.
 
+{{< expand "PCB" "..." >}}
+Un bloc de contrôle de processus ou PCB (de l'anglais process control block) est une structure de données du noyau d'un système d'exploitation représentant l'état d'un processus donné.
+
+Diverses implémentations existent selon les systèmes d'exploitation, mais un PCB contient en général :
+
+- L'ID du processus (PID), l'ID du processus parent (PPID) et l'ID de l'utilisateur du processus (UID) ;
+- Les valeurs des registres correspondant au processus (l'état courant du processus, selon qu'il est élu, prêt ou bloqué) ;
+- Le compteur ordinal du processus ;
+- Le pointeur de pile : indique la position du prochain emplacement disponible dans la pile mémoire ;
+- L'espace d'adressage du processus ;
+- La liste des descripteurs de fichiers (= les fichiers ouverts par le processus. Attention, sous Linux le matériel est présenté comme un fichier !);
+- La liste de gestion des signaux ;
+
+D'autres informations telles que le temps CPU accumulé par le processus, etc.
+
+Lors d'un changement de contexte, le processus en cours est arrêté et un autre processus peut utiliser le CPU. Le noyau doit arrêter l'exécution du processus en cours, copier les valeurs des registres hardware dans le PCB, et mettre à jour les registres avec les valeurs du nouveau processus.
+{{< /expand >}}
+
 ## Coopératif vs préemptif
 
 L'ordonnanceur peut fonctionner selon deux modes :
@@ -54,7 +72,31 @@ L'ordonnanceur peut fonctionner selon deux modes :
 * **coopératif** : les programmes doivent alors prévoir de passer eux-mêmes
   la main aux autres,
 * **préemptif** : l'ordonnanceur peut à tout moment couper un processus
-  dans son travail et le remplacer par un autre (avec la commutation de contexte).
+  dans son travail et le remplacer par un autre (avec la _commutation de contexte_).
+
+{{< expand "Commutation de contexte" "..." >}}
+Dans votre petit logement universitaire, impossible d'étaler tous les cours ou de préparer à manger en même temps : le bureau est aussi la table ainsi que le plan de travail !
+
+Après les révisions :
+
+- vous notez bien jusqu'où vous avez apris,
+- vous rangez tous le classeurs.
+
+Pour préparer le repas :
+
+- vous consultez l'état du frigo : "ah, je n'ai plus d'oeufs, je vais faire des pâtes",
+- vous sortez le matériel adéquat 
+- vous préparez une sauce
+etc.
+
+Lorsque le repas est terminé :
+
+- vous lavez et rangez,
+- vous resortez les classeurs,
+- vous consultez votre avancée.
+
+C'est la _commutation de contexte_.
+{{< /expand >}}
 
 ## L'ordonnancement
 
@@ -119,12 +161,6 @@ nous pouvons citer :
     | ...                                         |
     | P3. instruction `t`                         |
 
-* La mise en place d'un système de **priorités** : l'ordre d'affectation
-    de la ressource sera alors fonction de la priorité de la tâche. Cette
-    méthode est très équitable, mais définition du niveau de priorité de la
-    tâche doit être objective. Sous UNIX cette notion porte le nom de
-    _niceness_.
-
 * La gestion du **premier entré, premier sorti** (FIFO : _First In, First Out_).
     L'exemple le plus évident de cet algorithme est la file d'impression des
     documents sur une imprimante.
@@ -143,8 +179,8 @@ nous pouvons citer :
     | P3. instruction 2           |
     | P3. instruction 3           |
 
-* L'algorithme du "**plus court d'abord**" (_shorted job first_): très efficace
-    pour satisfaire au mieux les utilisateurs, mais il n'est pas toujours simple
+* L'algorithme du "**plus court d'abord**" (_shorted job first_): plus efficace
+    pour satisfaire au mieux les utilisateurs. Il n'est pas toujours simple
     d'évaluer le temps d'exécution d'une tâche avant son début.
 
     Plutôt que de mesurer les temps d'exécution, on peut se limiter au _nombre_
@@ -165,12 +201,36 @@ nous pouvons citer :
     | P1. instruction 3           |
     | P1. instruction 4           |
 
+Ces algorithmes présentent d'importants défauts et ne sont pas utilisés en pratique. L'ordonnanceur de Linux, version bureau, appelé "Completely Fair Scheduler" ou CFS cherche à minimiser le temps d'attente de chaque processus à l'état "prêt".
+
+* La mise en place d'un système de **priorités** : l'ordre d'affectation
+    de la ressource sera alors fonction de la priorité de la tâche. Cette
+    méthode est très équitable, mais définition du niveau de priorité de la
+    tâche doit être objective. Sous UNIX cette notion porte le nom de
+    _niceness_.
+
+Plus de détails sur le [CFS](https://docs.kernel.org/scheduler/sched-design-CFS.html)
+
 Parallélement à l'évolution des performances des microprocesseurs,
 l'ordonnancement est aussi un moyen d'amélioration de la rapidité de traitement :
 des algorithmes récents, de plus en plus complexes ont est proposés.
 
+## Interruption
 
-# Temps partagé vs temps réel
+En plus de la gestion des tâches, l'ordonnanceur doit souvent prendre en compte les
+interruptions qui peuvent être de trois types :
+
+* **logicielle** : un événement extérieur au programme se produit (timer, signal envoyé
+  par l'OS) ou le programme souhaite faire un appel système (_syscall_).
+* **interne** processeur : gestion d'erreurs (division par zéro, faute de mémoire) aussi
+  appelée "exception" ou "trap" en anglais.
+* **matérielle** : communication avec le matériel via des IRQ (Interrupt ReQuest) pour 
+  gérer les entrées/sorties de manière plus efficace que la scrutation active (_polling_).
+
+![irq](./img/irq.png)
+
+{{< expand "Temps réél" "..." >}}
+## Temps partagé vs temps réel
 
 C'est bien tout ça... mais quand même... quand on encode une vidéo, copie
 des fichiers énormes ou qu'on lance un jeu très gourmand, l'ordinateur est ralenti.
@@ -184,10 +244,10 @@ Un système en temps réel est capable de contrôler (ou piloter) un procédé
 physique à une vitesse adaptée à l'évolution du procédé contrôlé.
 
 Les systèmes informatiques temps réel se différencient des autres systèmes
-informatiques par la prise en compte de contraintes temporelles dont le respect
+informatiques par **la prise en compte de contraintes temporelle**s dont le respect
 est aussi important que l'exactitude du résultat, autrement dit le système ne
-doit pas simplement délivrer des résultats exacts, il doit les délivrer dans
-des délais imposés.
+doit pas simplement délivrer des résultats exacts, **il doit les délivrer dans
+des délais imposés.**
 
 Les systèmes informatiques temps réel sont aujourd'hui présents dans de nombreux secteurs d'activités :
 
@@ -195,17 +255,4 @@ Les systèmes informatiques temps réel sont aujourd'hui présents dans de nombr
 * les salles de marché au travers du traitement des données boursières en « temps réel » ;
 * l'aéronautique au travers des systèmes de pilotage embarqués (avions, satellites) ;
 * l’automobile avec le contrôle de plus en plus complet des paramètres moteur, de la trajectoire, du freinage, etc.
-
-# Interruption
-
-En plus de la gestion des tâches, l'ordonnanceur doit souvent prendre en compte les
-interruptions qui peuvent être de trois types :
-
-* **logicielle** : un événement extérieur au programme se produit (timer, signal envoyé
-  par l'OS) ou le programme souhaite faire un appel système (_syscall_).
-* **interne** processeur : gestion d'erreurs (division par zéro, faute de mémoire) aussi
-  appelée "exception" ou "trap" en anglais.
-* **matérielle** : communication avec le matériel via des IRQ (Interrupt ReQuest) pour 
-  gérer les entrées/sorties de manière plus efficace que la scrutation active (_polling_).
-
-![irq](./img/irq.png)
+{{< /expand >}}

@@ -112,7 +112,6 @@ Pas non plus de cycle et donc pas d'interblocage.
 
 {{< hint info >}}
 
-{{< /hint >}}
 L'interblocage est une situation qui conduit à la paralysie de plusieurs processus.
 
 L'éviter totalement est presque impossible. Pour la résoudre lorsqu'elle se produit il faut une intervention extérieure (utilisateur, OS).
@@ -120,6 +119,7 @@ L'éviter totalement est presque impossible. Pour la résoudre lorsqu'elle se pr
 ![graph_000.svg](graph_000.svg) vs ![graph_001.svg](graph_001.svg)
 
 Pour la repérer, on peut dessiner un graphe orienté. **Présence d'un cycle = interblocage**.
+{{< /hint >}}
 
 {{< expand "Race condition" "..." >}}
 ## Race condition (_situation de compétition_) - HP
