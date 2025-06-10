@@ -31,7 +31,7 @@ Voici les trois situations les plus courantes (OS seul, microcontroleur, virtual
 * Dans le cas d'un OS seul, il sert d'interface unique entre l'utilisateur et le matériel
 * Dans le cas du _microcontroleur_, il n'y a pas d'OS ! Les programmes s'exécutent _directement sur le matériel_
 * Dans le cas de la _virtualisation_, l'hyperviseur permet de faire fonctionner simultanément plusieurs OS sur
-    une même machine. Les utilisateurs (généralement en réseau...) peuvent utiliseur l'un ou l'autre.
+    une même machine. Les utilisateurs (généralement en réseau...) peuvent utiliser l'un ou l'autre.
 
 
 
@@ -56,7 +56,7 @@ L'OS se découpe en couches selon leur proximité avec le matériel.
 
 * Le **matériel** n'intéragit directement qu'avec le noyau.
 * Le **noyau** (_kernel_) contient les fonctions principales d'un OS (mémoire, processus, fichiers, IO, communication etc.)
-* Les **appplications** ou **espace utilisateur** contient l'ensemble des processus avec lequel l'utilisateur intéragit.
+* Les **appplications** ou **espace utilisateur** contiennent l'ensemble des processus avec lequel l'utilisateur intéragit.
 
 Parmi ces applications, on s'intéresse à celle faisant le lien entre le noyau et l'utilisateur lui même : le shell.
 

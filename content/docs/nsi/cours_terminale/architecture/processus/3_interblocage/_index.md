@@ -12,20 +12,24 @@ header-includes: |
 
 [pdf](./3_interblocage.pdf)
 
-# Les interblocages
+# Interblocage
 
-Nous avons dits précédemment que des processus peuvent avoir besoin de la
-même ressource{.}
+Il arrive fréquement que des processus se bloquent l'un l'autre. Sans intervention extérieure (de l'utilisateur ou de l'OS) cette situation est insoluble. C'est _l'interblocage_.
+
+[foot](foot.jpg)
+
+_L'arbitre vient séparer les joueurs qui pourraient rester indéfiniment ainsi..._
+
+## Partage des ressources
+
+Nous avons dits précédemment que des processus peuvent avoir besoin de la même ressource.
 
 Dans de nombreuses situations, deux processus (ou davantage) peuvent souhaiter
-accéder à la même donnée sur le disque dur :
+accéder à la même donnée (sur le disque dur ou autre) :
 
-- Les deux processus ont uniquement besoin de lire la donnée : celle-ci est
-  alors partagée, sans problème complexe.
-- Les deux processus ont besoin de la donnée de manière exclusive, pour la
-  modifier, par exemple.
-- Les deux processus ont besoin de communiquer entre eux : l'un doit attendre
-  un résultat de l'autre.
+- Les deux processus ont _uniquement besoin de lire la donnée_ : celle-ci est alors partagée, sans problème complexe.
+- Les deux processus ont _besoin de la donnée de manière exclusive_, pour la modifier, par exemple.
+- Les deux processus ont _besoin de communiquer entre eux_ : l'un doit attendre un résultat de l'autre.
 
 **Exemple 1**
 
@@ -35,11 +39,30 @@ D lui est alloué par le système d'exploitation. Lorsque P2 souhaite accéder �
 D, la ressource n'est pas disponible : P2 est alors bloqué jusqu'à la fin de
 l'utilisation de D par P1.
 
+
+### Représentation graphique
+
+![wait](ex_wait.svg)
+
+- P1 et P2 sont les processus,
+- R1 est la ressource 
+
+- Une flêche de R1 à P1 signifie que _P1 a acquis la ressource R1_ 
+- Une flêche de P2 à R1 signifie que _P2 a demandé la ressource R1_.
+
+Comprenez bien :
+
+- P1 est prêt ou est exécuté. Il n'est pas bloqué 
+- P2 est bloqué jusqu'à la libération de la ressource R1 par P1.
+
+Dans cette situation, P2 attend... mais P1 va bien s'arrêter un jour et lui permettre d'avancer. 
+
+Aucun blocage.
+
 **Exemple 2**
 
-Deux processus P1 et P2 ont tous les besoin de deux ressources, R1 et R2.\
-Chaque processus bloque une donnée et doit attendre d'avoir accès à la seconde
-pour se terminer et les libérer.
+Deux processus P1 et P2 ont tous deux les besoin de deux ressources, R1 et R2.\
+Chaque processus bloque une donnée et doit attendre d'avoir accès à la seconde pour se terminer et les libérer.
 
 Si la chronologie est la suivante :
 
@@ -55,9 +78,11 @@ Face à cette problématique la plupart des systèmes d'exploitation ont choisir
 de ne pas essayer d'éviter les interblocages mais de les détecter s'ils
 surviennent et de les solutionner.
 
+![interblocage](graph_000.svg)
+
 ## Détecter une situation d'interblocage
 
-Afin de résoudre _conceptuellement_ ce problème on peut utiliser un graphe orienté.
+Afin de résoudre _conceptuellement_ ce problème on peut utiliser un **graphe orienté**.
 
 - On sépare les processus et les ressources : ce sont les noeuds du graphe.
 - Lorsqu'un processus attend une ressource, un arc est tracé partant de ce
@@ -65,6 +90,7 @@ Afin de résoudre _conceptuellement_ ce problème on peut utiliser un graphe ori
 - Lorsqu'un processus acquiert une ressource, un arc est tracé partant de la
   ressource vers le processus. On efface l'arc dans l'autre sens s'il existe.
 
+{{< hint danger >}}
 **L'interblocage se produit lorsqu'il existe un cycle dans le graphe**
 
 ![graph_000.svg](graph_000.svg)
@@ -73,12 +99,39 @@ Ce graphe présente un cycle et les processus sont bloqués.
 
 ![graph_001.svg](graph_001.svg)
 
-Ce graphe ne présente pas ce cycle, il n'y a pas d'interblocage.
+Ce graphe ne présente pas de cycle, il n'y a pas d'interblocage.
 
+
+![wait](ex_wait.svg)
+
+Pas non plus de cycle et donc pas d'interblocage.
+{{< /hint >}}
+
+### Conclusion sur l'interblocage
+
+
+{{< hint info >}}
+
+{{< /hint >}}
+L'interblocage est une situation qui conduit à la paralysie de plusieurs processus.
+
+L'éviter totalement est presque impossible. Pour la résoudre lorsqu'elle se produit il faut une intervention extérieure (utilisateur, OS).
+
+![graph_000.svg](graph_000.svg) vs ![graph_001.svg](graph_001.svg)
+
+Pour la repérer, on peut dessiner un graphe orienté. **Présence d'un cycle = interblocage**.
+
+{{< expand "Race condition" "..." >}}
 ## Race condition (_situation de compétition_) - HP
+
+L'interblocage n'estpasle seul problème créée par l'exécution parallèle de plusieurs processus.
+
+Un autre problème majeur lié à l'ordre d'exécution est la _situation de compétition_.
 
 C'est une situation dans laquelle le résultat d'une série d'opération
 dépend de _l'ordre_ dans lequel celles-ci sont effectuées...
+
+Des situations de compétition existent dans les logiciels mais aussi _dans le matériel_.
 
 Lorsque un processus principal crée plusieurs processus fils, il ne contrôle
 pas l'ordre dans lequel ils sont exécutés. S'il a besoin des résultats de ceux
@@ -239,7 +292,7 @@ vous verrez ça plus tard :) !
 
 Ce sont des séquences d'instructions indépendantes.
 
-- Un thread s'exécute dans le même processus que le processus parent, il partage la mémoire du processus.
+- Un thread (_processus léger_ en français) s'exécute dans le même processus que le processus parent, il partage la mémoire du processus.
 - Un processus fils est un autre processus, dépendant du parent, qui dispose de sa propre mémoire.
 
 Un processus est plus _lourd_ pour le système qu'un thread... mais peut s'exécuter
@@ -247,3 +300,4 @@ sur un coeur de processeur différent et donc en parallèle.
 
 Un thread est généralement cantoné au processeur sur lequel s'exécute le processus
 qui l'a crée.
+{{< /expand >}}
