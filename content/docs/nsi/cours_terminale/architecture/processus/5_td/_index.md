@@ -4,11 +4,11 @@ bookCollapseSection: true
 weight: 5
 ---
 
-### PDF : [pour impression](/uploads/docnsitale/processus/td_processus.pdf)
+[pdf](/uploads/docnsitale/processus/td_processus.pdf)
 
 **Compétence :** Appliquer l'algorithme d'ordonnancement du plus court d'abord.
 
-# Exercice 1
+## Exercice 1
 
 Les 3 processus doivent être exécutés simultanément sur un ordinateur à un
 seul microprocesseur.
@@ -30,14 +30,14 @@ Schématiser l'ordre de traitement des instructions des 3 processus.
 
 **Compétence :** Appliquer l'algorithme d'ordonnancement en tourniquet.
 
-# Exercice 2
+## Exercice 2
 
 Schématiser l'ordre de traitement des instructions des 3 processus pour un
 ordonnancement en tourniquet.
 
 **Compétence :** _Appliquer l'ordonnancement premier entré, premier sorti_
 
-# Exercice 3
+## Exercice 3
 
 Schématiser l'ordonnancement des tâches d'impression soumises par des
 ordinateurs d'un réseau local sur une imprimante connectée et partagée
@@ -59,12 +59,29 @@ sur ce réseau.
   | **E**      | carte.pdf       | 00:30                       |
   | **E**      | metro.pdf       | 01:20                       |
 
-# Exercice 4
+**Compétence :** _Détecter une situation d'interblocage_
 
-Écrire en Python un programme correspondant à l'ordonnancement effectué
-dans l'exercice 2.
+## Exercice 4
 
-# Exercice 5 - Bilan
+Sept processus Pi sont dans la situation suivante par rapport aux ressources Ri :
+
+- P1 a obtenu R1 et demande R2
+- P2 demande R3 et n’a obtenu aucune ressource tout comme P3 qui demande R2
+- P4 a obtenu R2 et R4 puis demande R3
+- P5 a obtenu R3 et demande R5
+- P6 a obtenu R6 et demande R2
+- P7 a obtenu R5 et demande R2.
+
+On voudrait savoir s’il y a interblocage.
+
+1. Construire un graphe orienté où les sommets sont les processus et les ressources, et où :
+
+    La présence de l’arc $Ri\rightarrow Pj$ signifie que le processus Pj a obtenu la ressource Ri
+    La présence de l’arc $Pj\rightarrow Ri$ signifie que le processus Pj demande la ressource Ri.
+
+2. Y-a-t-il interblocage ? si oui précisez où.
+
+## Exercice 5 - Bilan
 
 Trois commerciaux (Audrey, Enzo et Louis) d'une société de vente à distance
 travaillent en réseau sur un même serveur, sur lequel ils stockent des fichiers
