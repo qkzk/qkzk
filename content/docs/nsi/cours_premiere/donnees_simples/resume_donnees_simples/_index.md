@@ -35,7 +35,7 @@ Les _entiers_ ne changent pas, leur _représentation_ varie : `103 = 0b1100111 =
 
 * **Taille** (= nombre de chiffre) des résultats opérations. Même principe dans toutes les bases :
 
-    * la taille d'une **somme** est $\leq$ à la plus grande des deux tailles + 1.
+    * la taille d'une **somme** est $\leq$ à 1 + la plus grande des deux tailles.
     * la taille d'un **produit** est $\leq$ à la somme des deux tailles.
 
 
@@ -53,12 +53,14 @@ Cet algorithme se programme en python :
 
 ~~~python
 def bina(entier):
-  bits = ''
-  while entier != 0:
-    reste = entier % 2
-    entier = entier // 2
-    bits = str(reste) + bits
-  return bits
+    if entier == 0:
+        return "0"
+    bits = ""
+    while entier != 0:
+        reste = entier % 2
+        entier = entier // 2
+        bits = str(reste) + bits
+    return bits
 ~~~
 
 La conversion `décimal -> hexadécimal` se fait par des divisions par 16.
@@ -99,17 +101,20 @@ On utilise des _tables de vérité_ pour les représenter :
 
 ### Circuits : le demi additionneur
 
+La porte logique du haut est un XOR et celle du bas un AND.
 
-![demi-additionneur](/uploads/docsnsi/donnees_qkzk_img/demi-additionneur.png){width=300px}
+![demi-additionneur](/uploads/docsnsi/donnees_qkzk_img/demi-additionneur.png)
 
 Il est appelé *demi-additionneur* car il réalise l'addition de 2 bits
 (**A** et **B**), le résultats de cette somme est représentée par **S**
 et la retenue éventuelle par **R**.
 
 
-## Opérations bits à bits (pas eu le temps en cours)
+## Opérations bits à bits
 
-Masque = `et` bit à bit.
+Une opération "bits à bits" est réalisée pour chaque bit des deux entrées. Le nombre final est la combinaison des résultats.
+
+Exemple : un **masque** est un "`et` bit à bit".
 
 | | |
 |--------------|-----------|
@@ -124,7 +129,7 @@ Ce qu'on a vu jusqu'ici ne permet que d'encoder des nombres positifs.
 
 ### Deux approches possibles :
 
-### **binaire signé**
+### Approche insatisfaisante : **binaire signé**
 On fixe la taille mémoire de chaque nombre (par exemple 4 bits). Le premier bit est le **bit de signe** : 1 pour les négatif, 0 pour les positifs.
 
 * En binaire signé sur 4 bits : `0b1001 = -1` , `0b1011 = -3`, `0b0111 = 7` etc.
@@ -198,6 +203,9 @@ Dans Python les entiers ont une _taille arbitraire_, il ne peut afficher nativem
 > Commentaires : Aucune connaissance précise des normes d’encodage n’est
 > exigible.
 
+La machine ne "comprend" pas les textes. Elle attribue à chaque symbole un entier dans une table prédéfinie. C'est l'**encodage** de ce caractère.
+Il existe de nombreux encodages.
+
 ### Pourquoi différents encodages de caractères ?
 
 Parce qu'ils sont tous imparfaits. L'encodage a longtemps été _local_ : chaque pays avait le sien...
@@ -205,8 +213,8 @@ Parce qu'ils sont tous imparfaits. L'encodage a longtemps été _local_ : chaque
 ### ASCII
 ASCII (_**American** Standard Code for Information Interchange_) est la première
 norme largement utilisée pour encoder des caractères.  Comme son nom l'indique
-cette norme est américaine et elle n'inclut donc que les lettres latines non
-accentuées (en plus des chiffres, des symboles courants et certains caractères spéciaux).
+cette norme est américaine et elle n'inclut donc que les **lettres latines non
+accentuées**, les chiffres, des symboles de ponctuation et certains caractères spéciaux.
 
 Voici les caractères de la table ASCII (les 33 premiers, et le dernier, ne sont pas imprimables) :
 
@@ -234,6 +242,8 @@ et, bien entendu, le symbole €.  L'encodage en ISO-8859-1 utilise 8 bits, les
 128 premières valeurs de l'ISO-8859-1 sont identiques à l'ASCII, ce qui assure
 une compatibilité avec cet encodage.
 
+C'est l'encodage courant sous windows.
+
 
 ### UTF-8
 
@@ -242,7 +252,7 @@ une compatibilité avec cet encodage.
 À nouveau le codage ISO-8859-1 (et les autres codages de la famille ISO-8859)
 présentent des limites.  Dans les années 1990, le projet Unicode de codage
 unifié de tous les alphabets est né. Différents codages sont utilisés pour
-représenter des caractères Unicode (UTF-8, UTF-16, UTF-32\dots). Ici nous nous
+représenter des caractères Unicode (UTF-8, UTF-16, UTF-32...). Ici nous nous
 concentrons sur l'UTF-8
 
 Le codage UTF-8 est un codage de longueur variable. Certains caractères sont

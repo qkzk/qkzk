@@ -66,19 +66,72 @@ et cela donne :
 
 
 {{< hint info >}}
-Un **tableau** est une collection _mutable_ d'objets.
+Un **tableau** est une collection _numérotée_ et _mutable_ d'objets.
 {{< /hint >}}
 
 {{< hint info >}}
-Contrairement aux tuples, on peut en changer le contenu. On peut aussi ajouter
+- Numérotée : chaque élément dispose d'un indice qui permet de le retrouver rapidement
+- Mutable : Contrairement aux tuples, on peut en changer le contenu. On peut aussi ajouter
 ou retirer des éléments à un tableau.
 {{< /hint >}}
 
-En python, tous les tableaux ont le type `list`
+En python, pour représenter les tableaux on utilise le type `list`
 
-Pourquoi cette distinction ? Pour éviter les confusions ultérieures !
+### Abstrait vs concret 
 
-### Tableaux construits à la main
+Un _tableau_ désigne une structure de donnée _abstraite_, disposant d'un minimum d'opérations possibles (appelées _primitives_).
+
+Il existe énormément de structures de données différentes, généralement introduites pour résoudre efficacement un problème.
+
+Lorsqu'on programme une telle structure de données abstraite (on parle _d'implémentation_) on ne respecte pas toujours ces contraintes théoriques :
+
+- parfois on ajoute des méthodes particulières par commodité,
+- parfois ce n'est pas possible ou pas efficace.
+
+Il convient donc de distinguer la théorie (ex: les tableaux) de la pratique (ex: les `list` Python).
+
+### Le type abstrait "tableau"
+
+{{< hint info >}}
+Un tableau est donc : une collection numérotée et mutable d'objets d'un même type (ex. tous entiers).
+{{< /hint >}}
+
+#### Primitives 
+
+on doit pouvoir : 
+
+{{< hint info >}}
+- le créer vide : `T = []` ou le créer avec des valeurs : `T = [5, 1, 3]`
+- accéder à un élément par son indice : `T[0] -> 5`
+- mesurer sa longueur : `longueur([5, 1, 3]) = 3`
+- ajouter un élément au tableau, généralement à la fin : `ajouter(T, 7)` et `T = [5, 1, 3, 7]`
+- retirer un élément du tableau, généralement par son indice : `retirer(T, 0) = 5` et `T = [1, 3, 7]`
+{{< /hint >}}
+
+#### Contrainte importante d'implémentation 
+
+Pour être efficace, une implémentation d'un tableau doit permettre d'accéder à un élément _en temps constant_.
+
+Accéder au premier ou 1327$^\text{eme}$ élément prend exactement autant de temps.
+
+#### Comparaison Tableau vs `list`
+
+Le type `list` de Python implémente toutes ces opérations mais bien d'autres encore. 
+
+Les `list` Python ne sont pas _exactement_ des tableaux... 
+
+- elles peuvent contenir des éléments de type différents,
+- on peut insérer, retirer où on veut dans les `list`
+
+### Remarque importante sur les types abstraits 
+
+L'informatique est une science récente et _ses définitions varient beaucoup d'un auteur à l'autre._
+Si l'on a besoin d'être précis, il faut définir exactement les notions avant d'exposer quelque chose.
+
+Ce n'est pas le cas en mathématiques ou en physique, par exemple. 
+La notion de _masse_ est la même pour tous, une _fonction_ mathématique a une définition précise identique pour tous les auteurs. En informatique, si l'on vous parle de _tableau_ il faut faire attention à ce que l'auteur à défini un peu plus tôt.
+
+### `list` construites à la main
 
 On peut créer, de plusieurs manières un tableau :
 
@@ -98,13 +151,12 @@ On peut créer, de plusieurs manières un tableau :
 [0, 1, 4, 9, 16]
 ```
 
-### Tableaux construits par compréhension
+### `list` construites par compréhension
 
 Il existe une manière beaucoup plus simple d'écrire les tableaux : par
 compréhension
 
 Pour construire la liste des carrés des entiers de 0 à 4 :
-
 
 
 ```python
@@ -200,16 +252,59 @@ et `=` pour changer une valeur
 
 ---
 
+### Type abstrait : les tableaux associatifs 
+
+Parfois appelés _table d'association_ ou simplement _dictionnaires_.
+
+C'est une collection de paires (`cle`, `valeur`). Chaque clé est associée à une valeur.
+
+Cela correspond donc à une _application_ en mathématique.
+
+#### Primitives 
+
+Généralement on attend les opérations :
+
+- créer vide,
+- savoir s'il est vide
+- **rechercher une valeur par sa clé** : c'est l'opération la plus importante et elle doit être très rapide.
+- ajouter une paire (`clé`, `valeur`),
+- modifier une valeur associée à une clé,
+- supprimer une paire (`clé`, `valeur`). 
+
+#### tableau associatif vs `dict`
+
+Les `dict` emploient une _fonction de hachage_, appelée `hash` qui prend un objet (**non mutable**) et lui associe un entier.
+
+La contrainte immédiate et qu'on ne peut insérer dans un `dict` que des clés non mutables.
+
+Ecrire une telle fonction de hachage est un exercice délicat.
+
+Il existe une autre approche, totalement différente, utilisant des _arbres équilibrés_ (HP NSI).
+
+#### tableau vs dictionnaire 
+
+Dans un _tableau_, les éléments sont **numérotés**. Dans un _dictionnaire_, les éléments sont **repérés par une clé**.
+
+- Si l'on veut itérer (= faire des boucles) : tableau.
+- Si l'on veut connaître une valeur par sa clé ou savoir si élément figure dans la collection rapidement : dictionnaire.
+
+En Python, une `list` est assez légère tandis qu'un `dict` est plutôt lourd.
+
+---
+
 ## Itérer
 
 ### Collections
 
-En python (mais aussi dans beaucoup de langages), les éléments cités plus haut
-sont des collections. Cela signifie qu'on peut itérer dessus.
 
-> Itérer : _parcourir à l'aide d'une boucle_
+{{< hint info >}}
+En python (mais aussi dans beaucoup de langages), les `str`, `tuple`, `list` et `dict` sont des collections. Cela signifie qu'on peut itérer dessus.
+
+Itérer sur une collection : _parcourir à l'aide d'une boucle_
 
 On peut écrire des boucles `for element in objet_construit:`
+{{< /hint >}}
+
 
 ### Cas simple
 
@@ -242,7 +337,7 @@ e
 
 
 ```python
->>> liste = [a-1 for a in range(3)]
+>>> liste = [a-1 for a in range(3)] # [-1, 0, 1]
 >>> for x in liste:
 ...    x + 2
 1

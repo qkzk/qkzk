@@ -47,7 +47,7 @@ On procède de façon séquentielle, en faisant à chaque étape le choix qui se
 
 - On ne revient jamais en arrière.
 - Il s'agit d'une progression _descendante_, à chaque étape on fait
-  un choix puis on résoud un problème plus petit issu de ce choix.
+  un choix puis on résout un problème plus petit issu de ce choix.
 
 Dans certains cas, cela donnera finalement la meilleure solution : on
 parlera d’algorithmes gloutons exacts.
