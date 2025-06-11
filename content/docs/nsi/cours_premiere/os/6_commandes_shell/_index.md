@@ -1,5 +1,5 @@
 ---
-title: "Résumé du bash"
+title: "Commandes shell"
 bookCollapseSection: true
 author: qkzk
 theme: metropolis
@@ -9,15 +9,13 @@ weight: 6
 
 pdf [pour impression](/uploads/docsnsi/architecture/linux/correction_linux_debian_intro.pdf)
 
-## TP Linux "débian".
-
-## Correction : liste des commandes rencontrées :
+## TP Linux : liste des commandes rencontrées :
 
 
 ### Naviguer
 * `ls` : liste les fichiers du dossier courant
 * `ls -lah` : affiche aussi les fichiers cachés, avec les détails et les tailles dans des unités compréhensibles
-* `cd` : change le dossier courant. `cd ~` vous envoie dans votre dossier. `cd ..` remonte d'un étage. `cd \` vous mène à la racine.
+* `cd` : change le dossier courant. `cd ~` vous envoie dans votre dossier. `cd ..` remonte d'un étage. `cd /` vous mène à la racine.
 * `pwd` : (print working directory) : affiche l'addresse du dossier courant.
 
 ### Créer, effacer
