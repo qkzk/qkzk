@@ -1,5 +1,5 @@
 ---
-title: 'NSI Terminale Récursivité - résumé'
+title: 'Résumé'
 bookCollapseSection: true
 author: 'qkzk'
 weight: 100
@@ -20,7 +20,7 @@ pdf:[pour impression](/uploads/docnsitale/recursivite/pdf/resume_recursion.pdf)
 
 ## Algorithmes récursifs
 
-### Exemple \
+### Exemple 
 Ne faisons pas dans l'originalité :
 
 $$n! = n \times (n-1)! \text{ si } n \geq 1 \text{ et } 0! = 1$$
@@ -39,7 +39,7 @@ Principe :
 
 
 
-### Programmation\
+### Programmation
 
 ```python
 def fact(n):
