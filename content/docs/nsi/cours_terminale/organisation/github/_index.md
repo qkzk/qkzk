@@ -37,25 +37,22 @@ depuis [leur site](https://git-scm.com/downloads).
 `git` permet de synchroniser des fichiers entre un dépôt local et un distant.
 
 1. On crée un dossier local et on exécute `git init`
-2. On crée un dépôt distant portant le même nom.
-3. On ajoute les fichiers à suivre avec `git add .`
-4. Enregistrer localement : `git commit -m "message"`
-5. On ajoute la référence au dépôt distant avec\
-    `git remote add origin git@addresse.git`
+2. On crée un dépôt distant portant le même nom sur github. Choisir de le créer vide.
+3. On ajoute la référence au dépôt distant avec `git remote add origin git@addresse.git`
+4. On ajoute les fichiers à suivre avec `git add .`
+5. Enregistrer localement : `git commit -m "message"`
 6. Pousser : `git push -u origin master`
 
 Là vos fichiers sont synchronisés.
 
-Seules les étapes 3, 4 et 6 sont à refaire pour synchroniser à nouveau.
+Seules les étapes 4, 5 et 6 sont à refaire pour synchroniser à nouveau.
 
 ### utilisation distante et synchronisée d'un nouveau dépôt local
 
 1. à l'adresse du dépôt on voit apparaître les changements
 2. On peut récupérer le projet complet en copiant l'adresse du dépôt
-    et en exécutant :\
-    `git clone git@adresse.git`
-3. Une fois le dépôt cloné, on récupère les mises à jour avec :\
-    `git pull origin master`
+    et en exécutant : `git clone git@adresse.git`
+3. Une fois le dépôt cloné, on récupère les mises à jour avec : `git pull origin master`
 
 
 
@@ -65,7 +62,8 @@ Seules les étapes 3, 4 et 6 sont à refaire pour synchroniser à nouveau.
 * C'est le site de dépôt le plus populaire.
 * Github appartient à Microsoft (depuis 2018) qui l'a racheté pour 7.5 milliards de dollars.
 * Github ajoute à git quelques outils (dont les organisations) simplifiant la collaboration.
-* Github permet aussi d'ajouter et de modifier des fichiers sans utiliser de client local.
+* Github permet aussi d'ajouter et de modifier des fichiers **sans utiliser de client local.**
+    Pour la majorité d'entre vous, c'est l'usage qu'on en fera.
 
 
 ### Rendez vous sur [https://githbub.com](https://github.com)
@@ -86,14 +84,13 @@ Seules les étapes 3, 4 et 6 sont à refaire pour synchroniser à nouveau.
 * Cette organisation contient un dépôt : [Tale_nsi_202X](https://github.com/NSI-T-202X/Tale_nsi_202X)
 
 * En tant que membre, vous pouvez consulter les énoncés déposés.
-* Vous ne POUVEZ PAS et NE DEVEZ PAS les modifier. Ces énoncés servent de référence.
 
 ## 5. Cloner le dépôt
 
 1. Créez un dossier dans votre espace de travail `nsi_github_enonces` et ouvrez
     le dans un terminal. 
 2. Clonez le dépôt :\
-    `git clone https://github.com/NSI-T-2021/Tale_nsi_2021.git` (bouton vert, copier)
+    `git clone https://github.com/NSI-T-202X/Tale_nsi_202X.git` (bouton vert, copier)
 4. **NE MODIFIEZ JAMAIS DIRECTEMENT CE DOSSIER OU SON CONTENU**.\
     Vous ne ferez que récupérer les modifications `git pull origin master`
 5. Vérifiez que vous avez récupéré les énoncés complets.

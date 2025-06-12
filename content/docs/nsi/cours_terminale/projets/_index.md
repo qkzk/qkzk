@@ -10,7 +10,7 @@ weight: 100
 
 # Les projets
 
-* [Tutoriel](roguetuto) pour créer un _rogue like_
-* Approche par la pratique des [réseaux de neurones](nn) (TODO)
+Quelques projets longs ou trop délicats pour être proposés directement aux élèves
 
-D'autres seront ajoutées (mais quand ?)...
+* [Tutoriel](roguetuto) pour créer un _rogue like_
+* Approche par la pratique des [réseaux de neurones](nn) (incomplet)

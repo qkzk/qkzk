@@ -1,11 +1,13 @@
 ---
-title: "Généralités"
-bookCollapseSection: true
+title: "Présentation rentrée"
 author: "qkzk"
+theme: metropolis
+geometry: margin=1.5cm
 weight: 1
+bookCollapseSection: true
 ---
 
-pdf [pour impression](/uploads/docnsitale/organisation/presentation_rentree.pdf)
+[pdf](./presentation_rentree.pdf)
 
 # Terminale NSI
 
@@ -16,15 +18,15 @@ Nous allons évoquer l'organisation de cette année en NSI :
 - les coefficients,
 - les épreuves.
 
-## Horaire
+# Horaire
 
 L'horaire en terminale est de 6h par semaine.
 
-Si l'effectif le permet, nous devrions avoir tous les cours en salle info.
+Tous les cours devraient se dérouler en salle info.
 
-## Programme
+# Programme
 
-### Contenus
+## Contenus
 
 - Algorithmique
   - diviser pour régner
@@ -50,7 +52,7 @@ Si l'effectif le permet, nous devrions avoir tous les cours en salle info.
   - paradigme fonctionnel
   - calculabilité
 
-### Progression
+## Progression
 
 | **thème**       | **chapitre**            |
 | --------------- | ----------------------- |
@@ -73,7 +75,7 @@ Si l'effectif le permet, nous devrions avoir tous les cours en salle info.
 | architecture    | composants              |
 |                 | projets                 |
 
-### Grands thèmes du programme de terminale
+## Grands thèmes du programme de terminale
 
 Rappelons d'abord que le programme du baccalauréat est _toujours_ et
 _dans toutes les matières_ le programme de première et celui de terminale...
@@ -99,12 +101,14 @@ Le programme se découpe en quatre parties inégales :
     - diviser pour régner (même principe que la dichotomie)
     - la programmation dynamique (plus générale et importante que les
       algorithmes gloutons)
-- Les bases de données
+- Les bases de données.
+
   Cette partie poursuit et généralise celle de première sur les données
   en table.
   Cette fois on manipule les données à l'aide d'une base de donnée : un
   logiciel spécifique (avec ou sans serveur) qui stocke et modifie les
   données efficacement.
+
 - L'architecture matérielle
   - La partie la plus importante concerne les algorithmes de routage
     dans un réseau. Comment faire circuler les paquets dans un réseau ?
@@ -113,28 +117,27 @@ Le programme se découpe en quatre parties inégales :
     communications (cryptographie), composants sur puce et systèmes
     embarqués, gestion des processus etc.
 
-### Types de séances en terminale
+## Types de séances en terminale
 
 Nous devrions disposer d'une salle info à chaque séance, cependant il nous
 faudra étudier longuement les algorithmes et les structures de donnée sur
 papier.
 
-D'autre part, 12 points portent sur une épreuve écrite qu'il faut préparer
+D'autre part, 15 points portent sur une épreuve écrite qu'il faut préparer
 convenablement...
 
 Nous n'utiliserons pas les postes à chaque séance.
 
-### Projets
+## Projets
 
 Une grande partie de notre temps sera consacrée à la réalisation de projets.
 
 - Des projets très courts durant l'année (grosso modo des TP de fin de chapitre)
-- Des projets longs en fin d'année
+- Des projets longs à intervalle régulier
 
-Cela devrait ressembler à ceux proposés en fin d'année dernière,
-l'investissement régulier en plus...
+Cela devrait ressembler à ceux proposés en fin d'année dernière.
 
-## Coefficients
+# Coefficients
 
 Chaque épreuve spécialité de terminale compte pour 16 points sur 60.
 
@@ -144,7 +147,9 @@ Les bulletins comptent pour 10 points.
 
 Source : [eduscol](https://cache.media.eduscol.education.fr/file/Bac2021/05/8/les_epreuves_du_nouveau_baccalaureat_general_infog_1086058.pdf)
 
-## Épreuves
+# Épreuves
+
+## Présentation des épreuves
 
 L'épreuve obligatoire de spécialité se déroule durant le troisième trimestre.
 
@@ -152,48 +157,67 @@ Nature de l'épreuve
 
 L'épreuve terminale obligatoire de spécialité est composée de deux parties :
 
-- une partie écrite, comptant pour 12 points sur 20,
-- une partie pratique comptant pour 8 points sur 20.
+- une partie écrite, comptant pour 15 points sur 20,
+- une partie pratique comptant pour 5 points sur 20.
 
 La note globale de l'épreuve est donnée sur 20 points.
 
-1. **Partie écrite**\
-   Durée : 3 heures 30
+Il est à noter qu'on dispose maintenant d'une solide base de sujets... mais qu'ils sont nettement plus difficiles à partir de 2023/2024.
 
-   **Modalités**\
-   Le sujet comporte trois exercices indépendants les uns des autres, qui permettent d'évaluer les connaissances et compétences des candidats.
+### 0. Date des épreuves
 
-2. **Partie pratique**\
-   Durée : 1 heure
+Le nouveau baccalauréat ayant été "lancé" juste avant le premier confinement, son déroulement a été adapté chaque année depuis 2020.
 
-   **Modalités**\
-   _La partie pratique consiste en la résolution de deux exercices sur ordinateur,
-   chacun étant noté sur 4 points._
+Ainsi :
 
-   _Le candidat est évalué sur la base d'un dialogue avec un professeur examinateur.
-   Un examinateur évalue au maximum quatre élèves. L'examinateur ne peut pas
-   évaluer un élève qu'il a eu en classe durant l'année en cours._
+- En 2020, les épreuves ont été remplacées par le contrôle continu,
+- En 2021, elles se sont déroulées en **mai 2021** avec les entrées prépondérantes prévues pour **mars**,
+- En 2022, elles se sont déroulées en **mars 2022** avec les entrées prépondérantes prévues pour **mars**,
+- En 2023 et 2024, en **juin** et portaient sur l'ensemble du programme,
+- En 2025, la pratique a eu lieu **fin mai** et l'écrit **en juin.**
 
-   _L'évaluation de cette partie se déroule au cours du deuxième trimestre pendant
-   la période de l'épreuve écrite de spécialité._
 
-   **Premier exercice**\
-   _Le premier exercice consiste à programmer un algorithme figurant explicitement
-   au programme, ne présentant pas de difficulté particulière, dont on fournit
-   une spécification. Il s'agit donc de restituer un algorithme rencontré et
-   travaillé à plusieurs reprises en cours de formation. Le sujet peut proposer
-   un jeu de test avec les réponses attendues pour permettre au candidat de
-   vérifier son travail._
+### 1. Partie écrite Durée : 3 heures 30
 
-   **Deuxième exercice**\
-   _Pour le second exercice, un programme est fourni au candidat. Cet exercice ne
-   demande pas l'écriture complète d'un programme, mais permet de valider des
-   compétences de programmation suivant des modalités variées : le candidat doit,
-   par exemple, compléter un programme « à trous » afin de répondre à une
-   spécification donnée, ou encore compléter un programme pour le documenter, ou
-   encore compléter un programme en ajoutant des assertions, etc._
+**Modalités**
 
-### Absence, dispense et aménagement de la partie pratique
+_La partie écrite consiste en la résolution de trois exercices permettant
+d'évaluer les connaissances et les capacités attendues conformément aux
+programmes de première et de terminale de la spécialité._ 
+
+
+_Ces trois exercices permettent d'aborder les différentes
+rubriques du programme, sans obligation d'exhaustivité._
+
+### 2. Partie pratique - Durée : 1 heure
+
+**Modalités**\
+ _La partie pratique consiste en la résolution de deux exercices sur ordinateur,
+chacun étant noté sur 10 points._
+
+_Le candidat est évalué sur la base d'un dialogue avec un professeur examinateur.
+Un examinateur évalue au maximum quatre élèves. L'examinateur ne peut pas
+évaluer un élève qu'il a eu en classe durant l'année en cours._
+
+_L'évaluation de cette partie se déroule au cours du troisième trimestre._
+
+**Premier exercice**\
+ _Le premier exercice consiste à programmer un algorithme figurant explicitement
+au programme, ne présentant pas de difficulté particulière, dont on fournit
+une spécification. Il s'agit donc de restituer un algorithme rencontré et
+travaillé à plusieurs reprises en cours de formation. Le sujet peut proposer
+un jeu de test avec les réponses attendues pour permettre au candidat de
+vérifier son travail._
+
+**Deuxième exercice**\
+ _Pour le second exercice, un programme est fourni au candidat. Cet exercice ne
+demande pas l'écriture complète d'un programme, mais permet de valider des
+compétences de programmation suivant des modalités variées : le candidat doit,
+par exemple, compléter un programme « à trous » afin de répondre à une
+spécification donnée, ou encore compléter un programme pour le documenter, ou
+encore compléter un programme en ajoutant des assertions, etc._
+
+## Absence, dispense et aménagement de la partie pratique
 
 _Toute absence non justifiée d'un candidat scolaire le jour fixé pour
 l'évaluation de la partie pratique entraîne l'attribution de la note zéro pour
@@ -227,14 +251,14 @@ obtenue à la partie écrite de l'épreuve rapportée à 20 points._
 _Les candidats inscrits au Centre national d'enseignement à distance ne sont pas
 dispensés de l'épreuve pratique._
 
-### Épreuve de remplacement
+## Épreuve de remplacement
 
 _Il n'y a pas d'épreuve de remplacement pour la partie pratique : en cas
 d'absence justifiée, la note éventuellement obtenue au cours de l'année
 scolaire concernant l'évaluation des compétences expérimentales est reportée
 et prise en compte._
 
-### Épreuve orale de contrôle
+## Épreuve orale de contrôle
 
 **Durée : 20 minutes**
 
@@ -257,7 +281,7 @@ orales de cette épreuve._
 
 **Source: [education.gouv.fr](https://www.education.gouv.fr/bo/20/Special2/MENE2001797N.htm#:~:text=Nature%20de%20l'%C3%A9preuve,est%20donn%C3%A9e%20sur%2020%20points.)**
 
-### Grand oral
+## Grand oral
 
 Il se déroule en juin.
 
@@ -267,13 +291,11 @@ Je vous renvoie aux
 résumé :
 
 - porte sur vos spécialités de terminale,
-- vous venez avec deux questions qui portent sur une spécialité ou les deux,
+- vous venez avec deux questions qui portent sur une spécialité chacune ou les deux,
 - vous préparez 20 minutes,
 - Oral :
-  - 5 minutes de présentation,
+  - 10 minutes de présentation,
   - 10 minutes d'échange sur le sujet,
-  - 5 minutes d'échange sur le projet d'orientation
 - Vous présentez sans note et vous n'avez droit à aucun support préparé.
 - Vous pouvez créer un support papier durant la préparation remis au jury (non évalué).
-
-Je _pense_ que nous le préparerons après les épreuves écrites.
+- Attendez vous à des questions portant sur la spécialité abordée.
