@@ -1,6 +1,5 @@
 ---
 title: "Cours"
-bookCollapseSection: true
 author: qkzk
 weight: 100
 ---
