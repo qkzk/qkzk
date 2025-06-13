@@ -7,7 +7,7 @@ weight: 100
 
 # Calculabilité - Problème de l'arrêt en Python
 
-## Programme 
+## Programme officiel
 
 {{< expand "" "..." >}}
 
@@ -27,7 +27,6 @@ weight: 100
 > _L’utilisation d’un interpréteur ou d’un compilateur, le téléchargement de logiciel, le fonctionnement des systèmes d’exploitation permettent de comprendre un programme comme donnée d’un autre programme._ 
 {{< /expand >}}
 
-[Version intéressante de Gilles Lassus](https://glassus.github.io/terminale_nsi/T2_Programmation/2.3_Calculabilite_Decidabilite/cours/)
 
 ## Un programme en tant que donnée
 
@@ -45,7 +44,10 @@ Ce résultat est donc la donnée de sortie d'un compilateur.
 $ cat hello.c             # affiche le contenu du fichier texte hello.c
 #include <stdio.h>
 
-int main(void) { printf("Hello, World!\n"); }
+int main(void) { 
+    printf("Hello, World!\n"); 
+}
+
 $ gcc hello.c -o hello    # compile hello.c en un fichier binaire hello
 $ chmod +x hello          # rend le fichier `hello` exécutable 
 $ ./hello                 # exécute `hello`
@@ -90,13 +92,13 @@ Il existe de nombreux modèles théoriques dont on a démontré mathématiquemen
 
 - les machines de Turing,
 - le $\lambda$-Calcul d'Alonzo Church, ($\lambda$ = lambda)
-- les "fonctions récursives générales" de Kurt Gödel et Stephen Kleene. (Attention, on ne parle pas uniquement de fonction qui s'appelle elle-même, comme nous le faisons dans le chapitre sur la récursion.)
+- les "fonctions récursives générales" de Kurt Gödel et Stephen Kleene. (_Attention, on ne parle pas uniquement de fonction qui s'appelle elle-même, comme nous le faisons dans le chapitre sur la récursion._)
 
 Church et Turing ont démontré que ces modèles étaient _équivalents._
 
 Ainsi, on pourrait construire une machine de Turing qui serait, par exemple, un interpréteur Python. Ce serait un travail colossal... mais théoriquement faisable.
 
-Oui mais... qu'est-ce qu'il faut au minimum :
+Oui mais... qu'est-ce qu'il faut au minimum ?
 
 En simplifiant énormément les contraintes des _fonctions récursives générales_ :
 
@@ -189,7 +191,90 @@ def ma_fonction(n):
 
 ## Décidabilité 
 
-TODO
+### Prédicat et problème de décision
+
+Avant d'aborder la décidabilité_, il nous faut un peu de vocabulaire.
+
+{{< hint info >}}
+Un _prédicat_ est une fonction qui part d'un ensemble $E$ et renvoie un booléen.
+{{< /hint >}}
+
+{{< hint info >}}
+Un _problème de décision_ est la donnée d'un ensemble $E$, l'ensemble des instances et d'un sous-ensemble de $E$, appellé "ensemble des instances positives" et noté $E^+$.
+{{< /hint >}}
+
+Considérons le problème : "un nombre entier est-il premier ?" appelé "primalité".
+
+{{< expand "" "..." >}}
+Un nombre entier naturel est _premier_ s'il a exactement deux diviseurs.
+
+0 et 1 ne sont pas premiers (ils ont respetivement une infinité et un seul diviseur.)
+
+La suite des nombres premiers commence par :
+
+$2, 3, 5, 7, 9, 11, 13\ldots$
+
+Les nombres premiers interviennent souvent en informatique, en particulier dans la sécurisation des communications.
+
+Parmi les problèmes rencontrés :
+
+- Déterminer si un nombre donné est premier,
+- Déterminer un nombre premier entre deux bornes très grandes,
+- Obtenir la factorisation en nombres premiers d'un entier donné,
+- Lister tous les nombres premiers inférieurs à une borne etc.
+{{< /expand >}}
+
+Ici, $E = \mathbb{N}, E^+ = \mathcal{P} :$ les nombres premiers.
+
+On peut alors définir un _prédicat_ partant de $\mathbb{N}$ :
+
+```python
+def est_premier(n: int) -> bool:
+    """vrai ssi n est premier"""
+    ...
+```
+
+Un autre exemple : "une chaîne de caractères donnée est-elle un code Python sans erreur de syntaxe ?"
+
+```python 
+def est_bien_forme(code: str) -> bool:
+    """vrai ssi le code est sans erreur de syntaxe Python"""
+    ...
+```
+
+
+### Problème de décision _décidable_
+
+{{< hint info >}}
+Un problème de décision est _décidable_ si on peut programmer le prédicat associé en Python.
+{{< /hint >}}
+
+
+Voici un prédicat (très très inefficace !) pour le problème de la primalité.
+
+```python 
+def est_premier(n: int) -> bool:
+    """Vrai ssi n est un nombre premier"""
+    # on élimine les cas triviaux
+    if n < 2: 
+        return False
+    if n < 4 : 
+        return True
+    # on teste tous les diviseurs possibles (il y a beaucoup plus efficace !)
+    for d in range(3,n,2):
+        if n % d == 0: 
+            return False
+    return True
+```
+
+Et pour le second, `python.exe` lui même contient un tel prédicat puisqu'il refuse d'exécuter du code mal formaté.
+
+
+Ces deux problèmes (primalité et code bien formé) sont donc _décidables_.
+
+La question qui subsiste est alors : _existe-il des problèmes indécidables ?_ 
+
+La réponse est oui et nous allons en construire un : _le problème de l'arrêt._
 
 ## Calculabilité
 
@@ -206,6 +291,12 @@ Python étant un langage Turing-Complet, on peut s'en servir pour illustrer cett
 
 {{< hint info >}}
 Une fonction est calculable si elle est programmable en Python.
+{{< /hint >}}
+
+### Décidabilité et calculabilité 
+
+{{< hint info >}}
+Un problème de décision est décidable si son prédicat est calculable. Autrement dit, si son prédicat peut être programmé en Python.
 {{< /hint >}}
 
 
@@ -275,7 +366,7 @@ D'autre part, $a \times (0 + 0) = a \times 0 + a \times 0$. (simple distributivi
 
 Donc $a \times (0 + 0) = 1 + 1$ d'après le résultat précédent et $a \times (0 + 0) = 2$.
 
-Donc $0 + 0 = 0$. ($0$ est l'élément neutre de l'addition des réels.)
+Mais $0 + 0 = 0$. ($0$ est l'élément neutre de l'addition des réels.)
 
 Donc $a \times (0 + 0) = a \times 0$.
 
@@ -349,22 +440,29 @@ Cette dernière propriété est évidemment absurde (elle se contredit elle mêm
 
 Nous pouvons donc conclure notre raisonnement par l'absurde et affirmer qu'il est impossible de programmer la fonction `arret`.
 
-## Complément
+## Autres sources
+
+- [Version intéressante de Gilles Lassus](https://glassus.github.io/terminale_nsi/T2_Programmation/2.3_Calculabilite_Decidabilite/cours/)
+- Une [vidéo](https://www.youtube.com/watch?v=a5MNIzu9Ia4) de l'université de Rennes qui expose la preuve précédente.
+
+## Compléments
+
+_Ces compléments sont hors programmes mais certains peuvent faire l'objet d'un sujet de grand oral ou d'un exercice de l'épreuve écrite_
+
+{{< expand "" "..." >}}
 
 ### Limitation du problème
 
-Le problème de l'arrêt reste impossible même si on se limite à ce que les arguments de arrêt soient une
-fonction `f` des entiers dans les entiers et un entier `x`.
+Le problème de l'arrêt reste impossible même si on se limite à ce que les arguments de arrêt soient une fonction `f` des entiers dans les entiers et un entier `x`.
 
-Pourquoi ? Simplement parce que n'importe quelle valeur de n'importe quel type sera représenté en machine par une suite d'octet, soit à peu près un entier naturel.
+Pourquoi ? Simplement parce que n'importe quelle valeur de n'importe quel type sera représentée en machine par une suite d'octet, soit à peu près un entier naturel.
 
 ### Historique
 
 La résolution du problème de l'arrêt par Alonzo Church et Alan Turing, en 1936 a eu de nombreuses conséquences
-en informatique et en mathématiques. La résolution de ce problème a conduit Alan Turing à créer les machines de Turing, modèle mathématiques à l'origine des ordinateurs modernes...
+en informatique et en mathématiques. Cela a conduit Alan Turing à créer les machines de Turing, modèle mathématiques à l'origine des ordinateurs modernes, afin de construire un exemple de fonction non calculable.
 
-En particulier, il n'est pas possible d'écrire un assistant de programmation qui repère
-tous les problèmes qu'un code présente avant de l'avoir exécuté.
+En particulier, il n'est pas possible d'écrire un assistant de programmation qui repère tous les problèmes qu'un code présente avant de l'avoir exécuté.
 
 
 ### Ramasse miettes 
@@ -388,14 +486,14 @@ Easy.
 
 Sauf que non. En pratique :
 
-1. on en réserve trop,
-1. on n'en réserve pas assez,
+1. on en réserve trop (on risque alors de gaspiller des ressources précieuses), 
+1. on n'en réserve pas assez (on risque alors d'accéder en dehors de l'espace réservé = buffer overflow),
+1. on tente de la libérer plusieurs fois (UB : Undefined Behavior, on n'a aucune de ce qui peut se passer...)
 1. on oublie de libérer la mémoire et le programme en consomme de plus en plus, finissant par paralyser le système,
-1. on tente de la libérer plusieurs fois...
 
-Le ramasse miette tente de résoudre ce problème. Certes il ne sera jamais parfait mais... il évite de fait les problèmes 1, 2 et 4. Pour le problème 3, c'est insoluble.
+Le ramasse miette tente de résoudre ce problème. Certes il ne sera jamais parfait mais... il évite de fait les problèmes 1, 2 et 3. Pour le problème 4, c'est insoluble _parfaitement_. Généralement, il le fait très bien.
 
-Par exemple :
+Mais par exemple :
 
 ```python 
 class A:
@@ -425,15 +523,119 @@ Un autre inconvénient du ramasse miette est qu'à des moments difficiles à pr�
 Alors... si pas de ramasse miette, existe-t-il d'autres solutions ?
 
 Oui, par exemple, le _borrow checker_ de Rust. Une approche totalement différente dans laquelle la construction de l'exemple plus haut est proscrite. Ce n'est _pas non plus parfait_ et cela demande un temps d'adaptation.
+
 {{< /expand >}}
 
-### complément machine de Turing 
+### Machine de Turing 
 
-TODO
+On l'a déjà dit : une machine de Turing est un modèle _abstrait_ du fonctionnement des appareils de calcul, comme les ordinateurs.
+
+Si c'est un modèle créée sur le papier, on a depuis preque réussi à en fabriquer. 
+
+![Machine de Turing](turing_machine.jpg)
+
+{{< expand "" "..." >}}
+Presque parce qu'il faudrait un ruban _infini_ ce qui n'est pas possible en pratique.
+{{< /expand >}}
+
+Dans son modèle le plus simple, une machine de Turing est constituée :
+
+- d'un ruban infini comportant des cases où l'on peut écrire 0 et 1,
+- d'une tête de lecture écriture pouvant lire et modifier une case à la fois et pouvant se déplacer d'une case à la fois,
+- d'un automate (finite state machine) qui décrit les transitions d'un état à l'autre selon ce qu'on a lu sur le ruban.
+
+![Turing machine](turing_machine_tape.png)
+
+
+#### Écrire 1/3 en binaire 
+
+La machine suivante produit la notation binaire d'1/3, la suite de nombres 0101010101010101...
+
+Elle a deux états et deux symboles (0 et 1)
+
+| Ancien état | Symbole écrit | Mouvement | Nouvel état |
+|-------------|---------------|-----------|-------------|
+| a           | 0             | Droite    | b           |
+| b           | 1             | Droite    | a           |
+
+En notant en gras la position de la tête de lecture/écriture sur le ruban on obtient :
+
+| Étape | État | Ruban     |
+|-------|------|-----------|
+| 1     | a    | **0**     |
+| 2     | b    | 0**1**    |
+| 3     | a    | 01**0**   |
+| 4     | b    | 010**1**  |
+| 5     | a    | 0101**0** |
+| 6     | b    | 01010**1** |
+
+etc.
+
+Détaillons :
+
+La machine commence dans l'état a.
+
+Etape 1 : la transition ne dépend pas de la valeur lue mais seulement de l'état : a. Alors, on écrit un 0, on va à droite et on passe dans l'état b.
+
+Etape 2 : depuis l'état b, on écrit un 0, on va à droite et on passe dans l'état a.
+
+Etape 3 : depuis l'état a, on écrit un 1, on va à droite et on passe dans l'état b.
+
+etc.
+
+Ainsi, on écrit bien 0101010101010...
+
+Or : 
+
+$$0.010101010101\overline{01}_2 = 0 + 0\times\dfrac{1}{2} + 1\times\dfrac{1}{4}+ 0\times{1}{8} + 1\times\dfrac{1}{16} + \cdots$$
+
+$$0.\overline{01} = \dfrac{1}{4} + \dfrac{1}{4^2} + \cdots + \dfrac{1}{4^k} + \cdots = \sum_{k=1}^{\infty} \dfrac{1}{4^k} = \dfrac{1}{4} \times \sum_{k=0}^{\infty} \dfrac{1}{4^k} = \dfrac{1}{4} \times \dfrac{1}{1-\dfrac{1}{4}} = \dfrac{1}{4}\times\dfrac{4}{3} = \dfrac{1}{3}$$
+
+Remarquons que ce programme _ne termine pas_.
+
+#### Utilisation 
+
+On emploie toujours ces modèles en informatique théorique et il existe toujours une recherche active à ce propos.
+
+**Castor affairé** : un _castor affairé_ est une machine de Turing qui, pour un nombre donné d'états et de symboles réalise le plus grand nombre possible d'étapes _avant de s'arrêter._ Comme vous le devinez peut-être, le problème "pour $n$ états et $p$ symboles, quel est le castor affairé ?" est indécidable.
+
+
+**Exemple Busy Beaver 4, 2**
+
+Busy Beaver 4, 2 = Castor affairé à 4 états et 2 symboles. Il prend 107 étapes. Cela signifie qu'il n'existe pas de machine de Turing à 4 états et 2 étapes qui font **plus** de 107 étapes **avant de s'arrêter**.
+
+| Etat/valeur lue | A   | B   | C   | D   |
+|-----------------|-----|-----|-----|-----|
+| 0               | 1RB | 1LA | 1RH | 1RD |
+| 1               | 1LB | 0LC | 1LD | 0RA |
+
+"0RA" se lit : écrire un 0, aller à droite (right...) et passer dans l'état A.
+
+L'état "H" signifie Halt pour s'arrêter.
+
+![BB42](bb42.gif)
 
 ### complément lambda calcul 
 
-TODO 
-## Vidéo
 
-Voici une [vidéo](https://www.youtube.com/watch?v=a5MNIzu9Ia4) de l'université de Rennes qui expose la preuve précédente.
+Bon... j'ai cherché des vulgarisations et n'ai pas trouvé grand chose d'abordable. Vous pouvez suivre des cours autour de ça, cela ne demande que très peu de connaissances théoriques. Mais cela reste très formel.
+
+La seule vidéo que je trouve abordable pour vous [est en anglais](https://www.youtube.com/watch?v=eis11j_iGMs).
+
+### Impact en mathématiques 
+
+Les travaux de Gödel sur _l'indécidabilité_, qui sont les précurseurs des thèses de Church, Turing et Kleene, ont apporté une réponse négative à une tentative millénaire d'automatisation des mathématiques (fabriquer des machines pour tout démontrer) et correctement formalisés pour la première fois par David Hilbert au début du XX$^{eme}$ siècle.
+
+Cela a jeté les mathématiciens dans un désarroi dont ils ne peuvent sortir.
+
+Jusqu'ici, les énoncés étaient :
+
+1. vrai ou faux.
+2. démontrés ou non (on parle alors de conjectures),
+
+Si le premier point ne change pas (une affirmation est vraie ou fausse), il se peut tout à fait qu'une affirmation soit _indécidable_. Il est vain de tenter de la démontrer ou de l'infirmer, on n'y arrivera jamais.
+
+Il est généralement très difficile de démontrer qu'un énoncé complexe est indécidable.
+
+Pour un mathématicien cela signifie qu'il peut passer un temps infini à tenter de démontrer un résultat pour lequel _il ne peut exister de preuve_...
+{{< /expand >}}
