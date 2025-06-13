@@ -545,6 +545,7 @@ Dans son modèle le plus simple, une machine de Turing est constituée :
 
 ![Turing machine](turing_machine_tape.png)
 
+Une [simulation en ligne](https://turingmachine.io/) vous permettra peut-être de mieux comprendre.
 
 #### Écrire 1/3 en binaire 
 
