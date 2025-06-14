@@ -55,8 +55,6 @@ L'avancement du processus dépend de la disponibilité du processeur.
 
 Ressources du processus :
 
-> entité nécessaire à son exécution.
->
 > _matérielles_ : processeur, mémoire, périphériques...
 >
 > _logicielles_ : variables etc.

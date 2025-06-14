@@ -1,6 +1,6 @@
 ---
 title: "États des processus"
-bookCollapseSection: true
+bookCollapseSection: false
 weight: 2
 
 ---

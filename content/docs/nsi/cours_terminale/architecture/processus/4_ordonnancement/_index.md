@@ -1,6 +1,6 @@
 ---
 title: "Ordonnancement"
-bookCollapseSection: true
+bookCollapseSection: false
 author: "qkzk"
 weight: 4
 
@@ -74,6 +74,14 @@ L'ordonnanceur peut fonctionner selon deux modes :
 * **préemptif** : l'ordonnanceur peut à tout moment couper un processus
   dans son travail et le remplacer par un autre (avec la _commutation de contexte_).
 
+{{< expand "" "..." >}}
+Imaginons que vous soyez client d'un restaurant. 
+
+En mode coopératif, comme dans un fastfood, vous restez aussi longtemps que vous voulez mais vous devez un peu nettoyer la table avant de partir. Vous libérez la ressource "table" de vous même en partant.
+
+En mode préemptif, un serveur vous surveille de loin et lorsqu'il estime que le temps est écoulé il vous sollicite pour consommer quelque chose d'autre et débarrasse votre table. Il est temps de partir... C'est _le serveur = l'ordonnanceur_ qui libère la ressource "table".
+{{< /expand >}}
+
 {{< expand "Commutation de contexte" "..." >}}
 Dans votre petit logement universitaire, impossible d'étaler tous les cours ou de préparer à manger en même temps : le bureau est aussi la table ainsi que le plan de travail !
 
@@ -85,8 +93,15 @@ Après les révisions :
 Pour préparer le repas :
 
 - vous consultez l'état du frigo : "ah, je n'ai plus d'oeufs, je vais faire des pâtes",
-- vous sortez le matériel adéquat 
-- vous préparez une sauce
+- vous sortez le matériel adéquat,
+- vous préparez le repas,
+etc.
+
+Pour manger :
+
+- vous sortez la vaisselle en plastique,
+- servez vos pates à l'eau,
+- un grand verre d'eau du robinet,
 etc.
 
 Lorsque le repas est terminé :
@@ -94,6 +109,7 @@ Lorsque le repas est terminé :
 - vous lavez et rangez,
 - vous resortez les classeurs,
 - vous consultez votre avancée.
+etc.
 
 C'est la _commutation de contexte_.
 {{< /expand >}}
@@ -226,6 +242,8 @@ interruptions qui peuvent être de trois types :
   appelée "exception" ou "trap" en anglais.
 * **matérielle** : communication avec le matériel via des IRQ (Interrupt ReQuest) pour 
   gérer les entrées/sorties de manière plus efficace que la scrutation active (_polling_).
+
+Ainsi, l'ordonnanceur gère ses propres interruptions afin d'arrêter de lui même un processus et de changer de contexte.
 
 ![irq](./img/irq.png)
 
