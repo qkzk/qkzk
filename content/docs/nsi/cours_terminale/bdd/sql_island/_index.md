@@ -9,3 +9,5 @@ geometry: "margin=1.5cm"
 ---
 
 [SQL Island](https://sql-island.informatik.uni-kl.de/) est un jeu en ligne où on peut apprendre les bases du langage SQL en résolvant une série d'enigmes simples.
+
+_Pensez à changer la langue : menu de gauche, "Sprache wechseln"..._

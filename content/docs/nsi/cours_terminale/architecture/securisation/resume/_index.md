@@ -1,5 +1,5 @@
 ---
-title: "Sécurisation : résumé"
+title: "Résumé"
 bookCollapseSection: true
 author: qkzk
 weight: 100

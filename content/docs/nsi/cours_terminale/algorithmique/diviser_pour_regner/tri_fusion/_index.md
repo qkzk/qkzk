@@ -1,8 +1,8 @@
 ---
 title: Tri fusion
-bookCollapseSection: true
+bookCollapseSection: false
 author: qkzk
-weight: 1
+weight: 2
 ---
 
 
