@@ -204,7 +204,8 @@ On a ensuite, peu à peu, étendu ce projet à tous les symboles existant.
   - `110xxxxx 10xxxxxxxx : 2 octets`
   - `1110xxxx 10xxxxxx 10xxxxxx : 3 octets`
   - `11110xxx 1001xxxx 10xxxxxx 10xxxxxx : 4 octets`
-- Lorsqu'un document est encode en ASCII :
+
+- Lorsqu'un document est encode en UTF-8 :
 
   - Si un caractère commence par un `0` alors il occupe 1 octet et c'est le même que dans la table ASCII : `0100 0001 -> A`
   - Sinon on compte le nombre `1` initiaux. Par exemple `1110....` alors le caractère occupe 3 octets. Il faut lire aussi les deux octets suivants pour déterminer le caractère complet.
@@ -213,6 +214,11 @@ On a ensuite, peu à peu, étendu ce projet à tous les symboles existant.
 - La taille est variable (génant pour les développeurs novices), l'espace en mémoire est parfois important
 - Un caractère peut avoir plusieurs représentations
   $\rightarrow$ problèmes de sécurité informatique : certaines opérations interdites sont filtrées en reconnaissant des caractères. Ce problème est globalement résolu.
+- Lorsqu'un caractère UTF-8 nécessite plusieurs octets aucun n'est un code ASCII valide. Aucune confusion n'est possible.
+
+### Table complète 
+
+[Table UTF-8 complète](https://www.charset.org/utf-8)
 
 ## Python et l'UTF-8
 
