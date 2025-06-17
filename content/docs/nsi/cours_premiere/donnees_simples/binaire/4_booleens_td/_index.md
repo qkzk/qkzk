@@ -1,7 +1,7 @@
 ---
-title: "Booléens : TD"
+title: "Booléens - TD"
 bookCollapseSection: true
-weight: 2
+weight: 4
 ---
 
 pdf : [pour impression](/uploads/docsnsi/booleens/booleen_td.pdf)

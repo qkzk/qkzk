@@ -12,8 +12,7 @@ weight: 3
 ## Données simples
 
 1. [introduction historique](intro_historique)
-2. [binaire](binaire)
-3. [booléen](booleen)
+2. [binaire, booléens](binaire)
 4. [hexadécimal](hexadecimal)
 5. [texte en machine](chaines_caracteres)
 6. [flottants](flottants)

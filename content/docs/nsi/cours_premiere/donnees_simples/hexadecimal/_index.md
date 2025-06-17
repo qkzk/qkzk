@@ -1,6 +1,6 @@
 ---
 title: Hexadécimal
-weight: 4
+weight: 20
 bookCollapseSection: true
 
 ---

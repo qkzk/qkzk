@@ -2,7 +2,7 @@
 title: "Texte en machine"
 bookCollapseSection: true
 author: qkzk
-weight: 3
+weight: 10
 
 ---
 
