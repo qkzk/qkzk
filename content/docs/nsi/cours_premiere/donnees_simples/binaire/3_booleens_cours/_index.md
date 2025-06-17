@@ -707,7 +707,7 @@ Changez les bits d'entrée et vérifiez quelques valeurs.
     and6: {type: 'and', pos: [200, 620], in: [30, 31], out: 32},
     xor2: {type: 'xor', pos: [200, 370], in: [33, 34], out: 35},
     xor6: {type: 'xor', pos: [200, 565], in: [36, 37], out: 38},
-    out4: {type: 'out', pos: [495, 685], id: 39, name: 's4'},
+    out4: {type: 'out', pos: [500, 655], id: 39, name: 's4'},
     or0: {type: 'or', pos: [435, 240], in: [40, 41], out: 42},
     and4: {type: 'and', pos: [330, 215], in: [43, 44], out: 45},
     xor4: {type: 'xor', pos: [335, 150], in: [46, 47], out: 48},
@@ -715,14 +715,16 @@ Changez les bits d'entrée et vérifiez quelques valeurs.
     and5: {type: 'and', pos: [340, 410], in: [52, 53], out: 54},
     or1: {type: 'or', pos: [440, 465], in: [55, 56], out: 57},
     xor3: {type: 'xor', pos: [345, 545], in: [67, 68], out: 69},
-    or2: {type: 'or', pos: [415, 625], in: [76, 77], out: 78},
+    or2: {type: 'or', pos: [430, 655], in: [76, 77], out: 78},
+    and3: {type: 'and', pos: [350, 615], in: [27, 28], out: 29},
   },
-  wires: [[13, 4], [5, 17], [13, 1], [11, 19], [10, 18], [11, 22], [10, 21], [20, 47], [2, 46], [2, 43], [48, 16], [45, 40], [23, 41], [6, 33], [8, 34], [8, 25], [6, 24], [35, 50], [54, 55], [26, 56], [51, 14], [42, 49], [42, 52], [7, 36], [7, 30], [9, 37], [9, 31], [38, 68], [57, 67], [69, 15], [78, 39], [32, 77], [57, 76], [35, 53], [12, 3], [12, 0], [20, 44]]
-}</script>
+  wires: [[13, 4], [5, 17], [13, 1], [11, 19], [10, 18], [11, 22], [10, 21], [20, 47], [2, 46], [2, 43], [48, 16], [45, 40], [23, 41], [6, 33], [8, 34], [8, 25], [6, 24], [35, 50], [54, 55], [26, 56], [51, 14], [42, 49], [42, 52, {via: [[395, 365, 'w']]}], [7, 36], [7, 30], [9, 37], [9, 31], [38, 68], [57, 67, {via: [[370, 510, 'w']]}], [69, 15], [78, 39], [32, 77], [35, 53], [12, 3], [12, 0], [20, 44], [38, 28], [57, 27, {via: [[395, 575, 'w'], [310, 580, 'w']]}], [29, 76]]
+}
+</script>
 </logic-editor>
 </div>
 
-Vous pouvez vérifier [ici](https://logic.modulo-info.ch/?id=OH5655&mode=full&data=N4NwXAbANAxg9gWwA5wHYFNUBcDOZgCGqAJgAz5YCeS6YA5EcXVCngNoDsATAKxQCMADlIBdKAEtUYNqQFi4AVyxguAXygAPOACdywKjXpbtzVtI4BmWf15jJ0i1AAs8pWB7rJeg7TqTTcOwQpLJOFjx2xJBQqAQIvgRczCAEADZg-J6o-BTUvv4sgdLBshBOERJRHDFxCRZ0WVy5hn6oAUEhUDwhkWCCNfH0AEZJUCnpmRKoFs35bYVBTqUAnBXiUcsDvkP1Y2kZWU6z9AVmbDyrUFzCvfyysYMM-Mn7k5I8x63txVyyFla3fhbYbPPYTLIQT6nIpsCC-K6kNZRGzAuhDUgNKYcKHzM4Qfh8fgAyoZRwPBIY9SKLDePL0anfNh3crOHhIjJOVE4JJUpQ5fR0ugMhbSZmlcK3Pjk+g4eq8rBNAUtYVnMVXCDs-jQaV0HDPeUzJW+FUwtU2UQk-jVHU4SmaHT8nxGHSMjhLK43Kai-r8ZauZS-dSMR2Cxiu8JQf5rKRsLhArhcf0qCxBkiKp0MEiulndaPSLic2xQakqCCp4iQo30MMizjdKAcRF2GNWSP8JMWNT27TpwXGV318p5tj-SMuYtucLqYyVjP92scesai32EfQCwcDuCeVHKtCpSM5l8DiN3oWTY2pyYnS05UmWvLQR8TvD91OdsT5ROLuMXcZmtnIIwiRj0XpsGEzjjiW5TTjof59i6tZAXwXASmBTjQE4m6fmATjbt2Hx7vOgHLKERark4mzdEmPCTIwhH-lmSGkc4qzNtIPBcF0Fg0U4VLaCGd6MssLFsiuMZsl0EA0RwsHaIac6ISRfAQMSq4QNUECCEmEDLPxvZCQ+GoNnc7GcNAJ5Jhw+EEMQxDoLony2fZ2gALQENo2gEJQh5CH8pFmXQ3CuYuzBBcsrmCPUSZ0IITiRYI15KAxgomuwRIsvwBK9IIemfrOqUHrWRKtrw7KkfK2J7mloovqyK4bJM1KCJ8NVMnVqnlV21LLK1RWqnVJ7lSm6gAO7iNo6DsO1zhiOcAjYTNH5MkCvpzXcAjaVAK1XIm20bXGc3wlhR3ONJ21cWEc14QI53gXwSxHY475zeuPHbf0Fjjmw-RFrCVzfRG1HbTwnJskd0A8HdtECN936sddXGcXN1QWHdqMWmwmwbnN2PLRY-RaXNPCaYtukCBUnCfX622dg2i0kw2d1A+9TJcazKKY8d31Eg2XGgOIBDSLC9YsXQo10NdjYCLwUDi5L21YbIf1ZfWtgiKo61cRwmwC0LbDnASkaLnLOAK4bx6XLq5t3E+DZsftpB2++oga+tsiWFAevC5RKEsnQbTXZcwMrUDmNZRG-yyNbIhu-tQLAd7Bu+84ssx4rLGCPC6crYiUBZ+HdwPQCcf-W6XsgILws8K2aN8AH5s1x7lNZfCp7x-C4TR2bseax9+dAkn4HBFAcLd+bGGyHFLc2HwcWF7L5TR4HpfVCbQ+g3wJPL439Z3Dv61FwIoG58+0sx6XmxZxXVfJ62i71z3iutoI7crfWggar3c1xfnNM-XwAKH1oDLGWq-KAyw9o-X6MsHiGsgA) que les branchements sont corrects.
+Vous pouvez vérifier [ici](https://logic.modulo-info.ch/?id=OH5655&mode=full&data=N4NwXAbANAxg9gWwA5wHYFNUBcDOZgCGqAJgAz5YCeS6YA5EcXVCngNoDsATAKxQCMADlIBdKAEtUYNqQFi4AVyxguAXygAPOACdywKjXpbtzVtI4BmWf15jJ0i1AAs8pWB7rJeg7TqTTcOwQpLJOFjx2xJBQqAQIvgRczCAEADZg-J6o-BTUvv4sgdLBshBOERJRHDFxCRbJaRlZXLmGfqgBQSFQPCGRYII18fQARklQKemZEqgWrfkdhUFOpQCcFeJRq0O+I-VZTvP0BWZsPOtQXML9-LKxwwz8DVNZPEftncVcshZWN-w7UZPCaNaaSCDvE5FNgQb6XUgbKI2QF0EakOhZDiQxanCD8Pj8P6VDKOe4JdHqRRYbx5ehUz5sW7lZw8REZJwonBJSlKHL6Wl0elLaRM0rhG58Mn0HD7KBUlr8tpC06iy4QNn8aBSug4J48rBzRW+ZXQ1U2UTE-jVbU4CmaHR8nxGHQMjgrS7XGYiwb8VauZTfdSMR0Cxiu8JQX4bKRsLgArhcf0qCxBkgKp0MEiu5m9aPSLgc2xytxcCCp4gQo30MPCzi9KAcBF2GNWSP8JMWNT27TpgXGV318p5ti-SMuYvKcLqYyVjP92scevqi32EfQCwcDuCfWHKuCpQMpl8DiN-oWbY2pwYuW6d4u2urQR8TvD91OdsTsBOLuMXcZmunIIwiRn0XpsGEzjjlSX4eN2f59vegFPpc4pgU40BOJun5ONu3ZvHu86AasoRFquTjbL0SY8NMjD4f+Wa1oIxHOOszbSDwXA9BYVFOJS2ghkqJgPsxrIrjGrI9BAVEcNOOiGnOiHQkxfAQESq4QNUECCEmECrHxvaCQyqzqg2txsZw0AnkmHC4QQxDEOgt57nZDnaAAtAQ2jaAQlCHkIPzEeZdDcG5i7MMFqxuYI9RJnQghOFFgjXlSdECia7CEsy-D4v0TH6rOaUHrWhKtrwbLEfqWJ7ulIoviyK5bNMVKCHeRUqnVqnlV2VKrK1WCHnVJ7lSmUCMPJoYMYBi5QFpw6rByrGfsZqjqAA7uI2joOwjKOOOZwCFhO1yFAjIAr6YiMtY2kndllyJjdshxhdcKYc9zhSSdnFhBdOECB94F8Csz27R+MKRtxJ2DBYe2DEWYMFhdEaUSdPAcqyz3QDw-3UQIe3fixP2cRxF3VBY-2kxabDbBuF3U6DFiDFpF08Jph26QIFScFDfonZ2DaHUjEOMpxQvIpTL17YSDacaA4gENIML1sxdCrXQP2NgIvBQCrasnZhj2c9l9a2CIqgXciHDbLL8tsGc+KRtNOq63bx4XE75ukMhluG57gNmabHsNo41sK+RfAFnwdAdD9FzI6dSOU9lEa-LI7sBzdALASHtth84Wvu3rzGCHCBenQiUDF4ntyA386dg26UDZ2crZk5H0co62i7m+aDZV3C4Spzgat14MggAk36GlCXQ8-cEFflN3WvxX3gP1lHw9myd1TTU3qN8Czqft2c9a3IfzvZeXp-d+XG6DxvtMVzLIBy6HncSaXYSyIIp4Z-WgjqiIEeHImIXWQoFSG0BVig2-lAVY902BAVgULFmsC9oM1gZzYyDYpKmyAA) que les branchements sont corrects.
 
 
 ## Propriétés mathématiques de l'algèbre de Boole
