@@ -6,6 +6,10 @@ weight: 5
 
 ---
 
+On peut appliquer les opérateurs booléens sur les différents bits d'un nombre ou de deux nombres.
+
+Ce sont des "_opérations bit à bit_".
+
 ## Opérateurs en taille quelconque
 
 On applique, bit par bit nos opérateurs usuels :
@@ -13,38 +17,44 @@ On applique, bit par bit nos opérateurs usuels :
 ### NOT bit à bit
 Chaque bit est inversé.
 
-Sur 4 bits, NOT 7 = 8
+**Sur 4 bits**, NOT 7 = 8
 
 ```python
 NOT 0111
   = 1000
 ```
 
+Pour cet opérateur, il est nécessaire de connaître la _capacité_ employée, ici 4 bits.
+
 ### ET bit à bit 
-Sur 4 bits, 5 AND 3 = 1 :
+On fait un `and` sur chaque bit des nombres en respectant les positions.
+
+Par exemple : 5 AND 3 = 1.
+
+$5 = 0b101$, $3=0b11$ donc :
 
 ```python
-    0101
-AND 0011
-  = 0001
+    101
+AND 011
+  = 001
 ```
 
 ### OU bit à bit 
-Sur 4 bits, 5 OR 3 = 7 :
+5 OR 3 = 7 :
 
 ```python
-   0101
-OR 0011
- = 0111
+   101
+OR 011
+ = 111
 ```
 
 ### XOR bit à bit 
-Sur 4 bits, 5 XOR 3 = 6 :
+5 XOR 3 = 6 :
 
 ```python
-    0101
-XOR 0011
-  = 0110
+    101
+XOR 011
+  = 110
 ```
 
 
@@ -54,9 +64,9 @@ XOR 0011
 
 {{< hint info >}}
 ```python
+~x          # NON bit à bit (tilde)
 x & y       # ET  bit à bit (ampersand)
 x | y       # OU  bit à bit (tuyau)
-~x          # NON bit à bit (tilde)
 x ^ y       # XOR bit à bit (accent circonflexe)
 ```
 {{< /hint >}}

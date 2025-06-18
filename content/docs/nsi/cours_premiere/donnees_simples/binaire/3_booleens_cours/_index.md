@@ -72,7 +72,7 @@ On peut tester qu'un élément appartient à une structure avec le mot clé `in`
 1       in [2, 3, 4]        # False
 ```
 
-### `casting`
+### Casting
 
 En programmation, _caster_ signifie _changer le type d'une valeur_.
 
@@ -197,7 +197,7 @@ print(est_vide([1, 2, 3]))
 print(est_vide([]))
 {{< /python >}}
 
-Une fonction qui renvoie un booléen est appelé un _prédicat_.
+Une fonction qui renvoie un booléen est appelée un _prédicat_.
 
 --- 
 
@@ -336,7 +336,7 @@ On construit une table de vérité étape par étape.
     - (not a) and (not b)
     - une pour la sortie tout à droite 
 
-    On va utiliser 6 colonnes. On peut faire moins mais il faut a minima 1 par entrée et 1 pour la sortie.
+    On va utiliser 6 colonnes. On réduire mais il faut au moins 1 colonne par entrée et 1 pour la sortie.
 
 2. Combien de lignes ?
 
@@ -348,7 +348,6 @@ On construit une table de vérité étape par étape.
     Ainsi : 
 
     - c'est toujours rangé pareil,
-    - c'est par ordre croissant,
     - on n'oublie aucun cas.
 
 
@@ -610,7 +609,7 @@ Un additionneur complet contient trois entrées : `a`, `b` et `c0` et a 2 sortie
 - `s` est le bit de la somme à cette position et `c1` est la retenue qui part dans la somme suivante.
 - Cette retenue `c1` est calculée en faisant un `or` entre `a and b` et `c0 and (a xor b)` : `c1 = (a and b) or (c0 and (a xor b))`.
 
-<div style="width: 600px; height: 400px">
+<div style="width: 600px; height: 600px">
 <logic-editor id="editor5" showonly="in,out,and,or,xor,not">
 <script type="application/json">
 { // JSON5
