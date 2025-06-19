@@ -250,9 +250,9 @@ $6,25 = (110,01)_2 = (1,1001)_2  \times 2^2$
 
 On rencontre deux représentations courantes des flottants _simple précision_ : 32 bits et _double précision_ : 64 bits.
 
-La _norme IEE 754_ de 1985 est adoptée par la majorité des langages informatiques modernes.
+La _norme IEEE 754_ de 1985 est adoptée par la majorité des langages informatiques modernes.
 
-Dans cette norme (IEE 754, double précision), les nombres dyadiques sont codés sur 64 bits en réservant :
+Dans cette norme (IEEE 754, double précision), les nombres dyadiques sont codés sur 64 bits en réservant :
 
 * $1$ bit pour le signe $S$,
 * $11$ bits pour l’exposant $E$,
@@ -505,4 +505,11 @@ Vérifions : 8 + 4 + 2 + 1/4 = 14.25
 
 ---
 
-Un outil en ligne : [floating point converter](https://www.exploringbinary.com/floating-point-converter/), 
+1. Un outil en ligne : [floating point converter](https://www.exploringbinary.com/floating-point-converter/), 
+
+2. Un [article wikipédia détaillé](https://en.wikipedia.org/wiki/IEEE_754)
+
+3. Flottants dénormalisés : afin de gagner en précision pour des valeurs très proches de zéro, la norme décrit une manière de les représenter. On passe d'une précision de l'ordre de $10^{-38}$ à $10^{-45}$. Cela ne fonctionne que pour des nombres proches de 0.
+
+--- 
+
