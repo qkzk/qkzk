@@ -9,7 +9,9 @@ bookCollapseSection: true
 geometry: "margin=1.5cm"
 ---
 
-[pdf](./cours_linux.pdpresentationf)
+[pdf](./os_1_cours.pdf)
+
+---
 
 # Système d'exploitation & Linux
 

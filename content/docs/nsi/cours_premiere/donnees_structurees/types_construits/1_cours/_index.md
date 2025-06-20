@@ -2,12 +2,18 @@
 title: "Cours"
 bookCollapseSection: true
 weight: 1
+geometry: "margin=1.5cm"
+header-includes: |
+    \usepackage{tcolorbox}
+    \newtcolorbox{myquote}{colback=teal!10!white, colframe=teal!55!black}
+    \renewenvironment{Shaded}{\begin{myquote}}{\end{myquote}}
 
 ---
 
 
-[pour impression](./types_complexes.pdf)
+[pdf](./types_construits_cours.pdf)
 
+---
 
 # Types construits
 

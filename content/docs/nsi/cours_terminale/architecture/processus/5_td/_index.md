@@ -2,9 +2,13 @@
 title: "Processus - TD"
 bookCollapseSection: false
 weight: 5
+geometry: "margin=1.5cm"
 ---
 
-[pdf](/uploads/docnsitale/processus/td_processus.pdf)
+[pdf](./processus_5_td.pdf)
+
+---
+
 
 **Compétence :** Appliquer l'algorithme d'ordonnancement du plus court d'abord.
 

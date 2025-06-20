@@ -4,6 +4,7 @@ bookCollapseSection: true
 author: qkzk
 theme: metropolis
 weight: 7
+geometry: "margin=1.5cm"
 
 ---
 

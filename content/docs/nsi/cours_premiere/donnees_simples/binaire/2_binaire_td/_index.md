@@ -3,10 +3,14 @@ title: "Binaire - TD"
 bookCollapseSection: true
 author: qkzk
 weight: 2
-
+geometry: "margin=1.5cm"
+header-includes: |
+    \usepackage{tcolorbox}
+    \newtcolorbox{myquote}{colback=teal!10!white, colframe=teal!55!black}
+    \renewenvironment{Shaded}{\begin{myquote}}{\end{myquote}}
 ---
 
-pdf : [pour impression](/uploads/docsnsi/donnees_qkzk_img/TD_binaire.pdf)
+
 
 ## Binaire
 

@@ -1,11 +1,21 @@
 ---
 title: Booléens - cours
+pdftitle: "Booléens - cours"
 author: qkzk
 theme: metropolis
 weight: 3
 geometry: "margin=1.5cm"
+header-includes: |
+    \usepackage{tcolorbox}
+    \newtcolorbox{myquote}{colback=teal!10!white, colframe=teal!55!black}
+    \renewenvironment{Shaded}{\begin{myquote}}{\end{myquote}}
 
 ---
+
+[pdf](./booleens.pdf)
+
+---
+
 Le terme *booléen* vient du nom du mathématicien britannique [George Boole](http://fr.wikipedia.org/wiki/George_Boole). Il est le créateur de la logique moderne qui s'appuie sur l'algèbre qui porte désormais son nom : l'*algèbre de Boole*. 
 
 ## Booléen

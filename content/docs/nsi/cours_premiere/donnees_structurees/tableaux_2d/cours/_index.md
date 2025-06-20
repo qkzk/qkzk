@@ -3,10 +3,18 @@ title: "Cours"
 bookCollapseSection: true
 author: "qkzk"
 weight: 1
+geometry: "margin=1.5cm"
+header-includes: |
+    \usepackage{tcolorbox}
+    \newtcolorbox{myquote}{colback=teal!10!white, colframe=teal!55!black}
+    \renewenvironment{Shaded}{\begin{myquote}}{\end{myquote}}
 
 ---
 
-pdf : [pour impression](/uploads/docsnsi/tableaux_2d/cours_2d.pdf)
+[pdf](./tableau_2d_cours.pdf)
+
+---
+
 
 # Structures imbriquées et compréhension
 

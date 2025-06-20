@@ -3,11 +3,14 @@ title: "Diversité des langages"
 author: "DIU"
 theme: metropolis
 weight: 9
+geometry: "margin=1.5cm"
+
 ---
+
+[pdf](./comparaison_langages.pdf)
 
 # Diversité et unité des langages de programmation
 
-pdf [pour impression](/uploads/docsnsi/comparaison_langage/comparaison_langages_print.pdf)
 
 ## Exemples sur repl
 

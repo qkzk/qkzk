@@ -3,10 +3,13 @@ title: "Cours"
 bookCollapseSection: true
 author: "qkzk"
 weight: 1
+geometry: "margin=1.5cm"
+header-includes: |
+    \usepackage{tcolorbox}
+    \newtcolorbox{myquote}{colback=teal!10!white, colframe=teal!55!black}
+    \renewenvironment{Shaded}{\begin{myquote}}{\end{myquote}}
 
 ---
-
-pdf [pour impression](./complement_a_2_eleves.pdf)
 
 
 # Le complément à deux : comment représenter les entiers relatifs ?
@@ -112,7 +115,7 @@ On complète sur 8 bits :
 27 > 0 on garde le premier bit à 0
 ```
 
-La représentation en binaire signé sur un octet de 27 est $0001\hpace{1mm}1011$
+La représentation en binaire signé sur un octet de 27 est $0001\hspace{1mm}1011$
 
 **Autre exemple : -9**
 

@@ -2,10 +2,17 @@
 title: "Hexa : Cours"
 bookCollapseSection: true
 weight: 1
+geometry: "margin=1.5cm"
+header-includes: |
+    \usepackage{tcolorbox}
+    \newtcolorbox{myquote}{colback=teal!10!white, colframe=teal!55!black}
+    \renewenvironment{Shaded}{\begin{myquote}}{\end{myquote}}
 
 ---
 
-pdf pour [impression](/uploads/docsnsi/donnees_qkzk_img/hexa_print.pdf) et [diaporama](/uploads/docsnsi/donnees_qkzk_img/hexa_slides.pdf)
+[pdf](./hexa_cours.pdf)
+
+---
 
 
 ## Hexadécimal
@@ -151,7 +158,7 @@ hexa   :     A    3    B    C
 
 Pour aller vite on peut utiliser une table
 
-![Table de conversion](/uploads/docsnsi/donnees_qkzk_img/table_hexa.png)
+![Table de conversion](./table_hexa.png)
 
 ### Exercice 3 
 
@@ -229,12 +236,12 @@ En informatique on distingue
 * les couleurs à l'écran : synthèse additive
 * les couleurs imprimées : synthèse soustractive
 
-![synthèses additive et soustractive](/uploads/docsnsi/donnees_qkzk_img/syntheses.jpg)
+![synthèses additive et soustractive](./syntheses.jpg)
 
 
 ### Synthèse additive
 
-![synthèse additive](/uploads/docsnsi/donnees_qkzk_img/synthese_additive.png)
+![synthèse additive](./synthese_additive.png)
 
 * En **synthèse additive** on utilise 256 niveaux de couleur pour les composantes Rouge, Vert et Bleu.
 * Chaque niveau de couleur est codé sur un octet.
@@ -244,7 +251,7 @@ Par exemple :
 `#FF0080` : `FF` rouge à fond, `00` pas de vert, `80` bleu à moitié :\
 un joli rose, noté parfois : `rgb(255, 0, 128)`
 
-![#FF0080](/uploads/docsnsi/donnees_qkzk_img/ff0080.jpg)
+![#FF0080](./ff0080.jpg)
 
 Quelques exemples :
 
@@ -332,7 +339,7 @@ Le résultat n'a pas grande importance, la méthode si.
 * Le niveau de noir permet d'économiser les encres et améliore le rendu.\
   On a développé de nombreuses méthodes.
 
-![synthèse soustractive](/uploads/docsnsi/donnees_qkzk_img/synthese_soustractive.png)
+![synthèse soustractive](./synthese_soustractive.png)
 
 
 {{< expand  "Remarques" "..." >}}

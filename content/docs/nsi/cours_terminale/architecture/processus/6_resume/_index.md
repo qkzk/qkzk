@@ -4,10 +4,13 @@ theme: "metropolis"
 geometry: "margin=1.5cm"
 bookCollapseSection: false
 weight: 6
+geometry: "margin=1.5cm"
 
 ---
 
-[Résumé de première](../../../../cours_premiere/os/8_resume/)
+[pdf](./processus_6_resume.pdf)
+
+---
 
 ## Processus
 

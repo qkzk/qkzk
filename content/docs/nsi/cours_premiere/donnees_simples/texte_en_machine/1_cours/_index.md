@@ -2,9 +2,17 @@
 title: "Texte : Cours"
 bookCollapseSection: true
 weight: 1
+geometry: "margin=1.5cm"
+header-includes: |
+    \usepackage{tcolorbox}
+    \newtcolorbox{myquote}{colback=teal!10!white, colframe=teal!55!black}
+    \renewenvironment{Shaded}{\begin{myquote}}{\end{myquote}}
 ---
 
-[pdf](./chaines.pdf)
+[pdf](./texte_machine.pdf)
+
+---
+
 
 # Représentation d’un texte en machine
 
@@ -38,7 +46,7 @@ L'encodage ASCII est l'encodage universel dont tous les autres dérivent.
 
 ## La table ASCII complète
 
-![La table ASCII](/uploads/docsnsi/donnees_qkzk_img/ascii_table.png)
+![La table ASCII](./ascii_table.png)
 
 ### Remarques sur la table précédente
 
@@ -275,7 +283,7 @@ On utilise les fonctions `chr` et `ord`
 
 ## Martine écrit en UTF-8
 
-![martine](/uploads/docsnsi/donnees_qkzk_img/martine.jpg)
+![martine](./martine.jpg)
 
 **WHAT ?**
 

@@ -8,6 +8,10 @@ bookCollapseSection: true
 geometry: "margin=1.5cm"
 ---
 
+[pdf](./imh_cookies.pdf)
+
+---
+
 # Qu'est-ce qu'un cookie ?
 
 ## Une introduction

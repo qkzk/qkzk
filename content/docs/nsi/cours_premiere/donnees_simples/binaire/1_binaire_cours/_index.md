@@ -3,12 +3,17 @@ title: "Binaire - cours"
 bookCollapseSection: true
 author: qkzk
 weight: 1
+header-includes: |
+    \usepackage{tcolorbox}
+    \newtcolorbox{myquote}{colback=teal!10!white, colframe=teal!55!black}
+    \renewenvironment{Shaded}{\begin{myquote}}{\end{myquote}}
+geometry: "margin=1.5cm"
 
 ---
 
-# Représenter des entiers en machine : le système binaire
+[pdf](./binaire_cours.pdf)
 
-pdf [pour impression](/uploads/docsnsi/donnees_qkzk_img/binaire_print.pdf) et [diaporama](/uploads/docsnsi/donnees_qkzk_img/binaire_slides.pdf)
+---
 
 ## Binaire
 
@@ -177,7 +182,7 @@ $$123 = 64 + 32 + 16 + 8 + 2 + 1 = 0b1111011$$
 {{< /hint >}}
 
 
-![10 types of people](/uploads/docsnsi/donnees_qkzk_img/10typesofppl.jpg)
+![10 types of people](./10typesofppl.jpg)
 
 ### Du décimal au binaire avec les divisions successives
 
@@ -201,7 +206,7 @@ Remarque : _Le diviseur est toujours 2 donc le reste est toujours 0 ou 1. Le res
 
 Exemple : 167 en binaire
 
-![divisions successives](/uploads/docsnsi/donnees_qkzk_img/divisions.png) ![Divisions successives animées](./divisions_steps_fixed.gif)
+![divisions successives](./divisions.png) ![Divisions successives animées](./divisions_steps_fixed.gif)
 
 $$167 = 0b1010\hspace{1mm}0111$$
 
@@ -354,7 +359,7 @@ Pour convertir du décimal au binaire on peut :
 - de tête, soustraire des puissances de 2 : $55 = 32 + 16 + 8 + 1 = 0b11\hspace{1mm}1001$
 - dans une machine, diviser successivement par 2 et remonter les restes, qui forment les bits.
     
-    ![divisions successives](/uploads/docsnsi/donnees_qkzk_img/divisions.png) 
+    ![divisions successives](./divisions.png) 
 
     $167 = 0b1010\hspace{1mm}0111$
 

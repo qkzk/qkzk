@@ -2,10 +2,18 @@
 title: "Hexa : TD"
 bookCollapseSection: true
 weight: 2
+geometry: "margin=1.5cm"
+header-includes: |
+    \usepackage{tcolorbox}
+    \newtcolorbox{myquote}{colback=teal!10!white, colframe=teal!55!black}
+    \renewenvironment{Shaded}{\begin{myquote}}{\end{myquote}}
 
 ---
 
-pdf : [pour impression](./hexa_td.pdf)
+[pdf](./hexa_td.pdf)
+
+---
+
 
 ## Exercice 1
 

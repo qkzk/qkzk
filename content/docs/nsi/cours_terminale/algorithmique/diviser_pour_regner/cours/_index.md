@@ -3,14 +3,15 @@ title: Cours
 bookCollapseSection: false
 author: qkzk
 weight: 1
+geometry: "margin=1.5cm"
+header-includes: |
+    \usepackage{tcolorbox}
+    \newtcolorbox{myquote}{colback=teal!10!white, colframe=teal!55!black}
+    \renewenvironment{Shaded}{\begin{myquote}}{\end{myquote}}
 ---
 
 
 
-pdf: [pour impression](/uploads/docnsitale/algo/divide_n_conquer/diviser_pour_regner_print.pdf), [diaporama](/uploads/docnsitale/algo/divide_n_conquer/diviser_pour_regner_slides.pdf)
-
-<!-- pandoc diviser_pour_regner.md -o diviser_pour_regner_print.pdf -->
-<!-- pandoc -t beamer diviser_pour_regner.md --slide-level=2 -o diviser_pour_regner_slides.pdf -->
 
 ## Diviser pour régner
 
@@ -34,7 +35,7 @@ _Ensuite nous traiterons de vrais problèmes avec l'approche diviser pour régne
 
 On dispose d'un tableau de nombres, on en cherche le plus grand élément.
 
-```
+```python
 tableau = [5, 71, 23, 45, 28, 89, 63, 39]
 ```
 
@@ -57,7 +58,7 @@ fonction `maximum`:  `tableau ---> entier`
 1. On sépare le tableau en deux parties (sensiblement de même taille),
 2. on retourne le plus grand des maxima des parties gauche et droite.
 
-```
+```python
 tableau = [5, 71, 23, 45, 28, 89, 63, 39]
 ```
 
@@ -65,7 +66,7 @@ tableau = [5, 71, 23, 45, 28, 89, 63, 39]
 
 1. séparer
 
-    ```
+    ```python
             [5, 71, 23, 45, 28, 89, 63, 39]
                   /                 \
           [5, 71, 23, 45]       [28, 89, 63, 39]
@@ -79,7 +80,7 @@ tableau = [5, 71, 23, 45, 28, 89, 63, 39]
 
 2. Recombiner : on ne garde que le plus grand de chaque paire
 
-    ```
+    ```python
     [5, 71],   [23, 45],  [28, 89],  [63, 39]
       \           /           \        /
       [71]      [45]         [89]     [63]
@@ -94,7 +95,7 @@ tableau = [5, 71, 23, 45, 28, 89, 63, 39]
 
 ### Est-ce plus efficace ? Non... c'est même plus lent !
 
-![maximum](/uploads/docnsitale/algo/divide_n_conquer/figure/maximum.png)\
+![maximum](./divide_n_conquer/figure/maximum.png)\
 
 
 
@@ -126,7 +127,7 @@ fonction `chercher` : `(tableau, clé) ----> booléen`
 
 ### Exemple
 
-```
+```python
 tableau = [4, 10, 20, 5]
 clé = 10
 ```
@@ -134,7 +135,7 @@ clé = 10
 A-t-on `clé` dans `tableau` ?
 
 
-```
+```python
 clé = 10
                  [4, 10, 20, 5]
 diviser      [4, 10]       [20, 5]
@@ -146,7 +147,7 @@ combiner              Vrai
 
 ### C'est mieux cette fois ??? Toujours pas.
 
-![Recherche](/uploads/docnsitale/algo/divide_n_conquer/figure/recherche.png)\
+![Recherche](./recherche.png)\
 
 Le coût est toujours linéaire, avec un coefficient assez mauvais.
 
@@ -185,7 +186,7 @@ Python, n'est pas un langage _fonctionnel_, les récursions ne sont pas optimis�
 
 ### Mais
 
-![dichotomie](/uploads/docnsitale/algo/divide_n_conquer/figure/dichotomie.png)\
+![dichotomie](./dichotomie.png)\
 
 ## Calculer la puissance d'un nombre
 
@@ -198,7 +199,7 @@ C'est déjà un algorithme !
 ### Algorithme naïf pour $y^n$
 
 
-```
+```python
 Puissance(y, n)
 
 1. initialiser p = 0 et i = 0
@@ -220,7 +221,7 @@ voulue.
 $ExpoRapide : (y, n) \mapsto y^n$
 
 
-```
+```python
 Exporapide(y, n)
 
 Si n = 0, renvoyer 1
@@ -237,7 +238,7 @@ On veut calculer $3^7$
 
 {{< columns >}}
 Appels récursifs
-```
+```python
 exporapide(3, 7)
     7 > 0 et 7 impair
     on renvoie 3 * exporapide(3, 6)
@@ -331,11 +332,11 @@ Pour les exposants légèrement plus grands qu'une puissance de deux, c'est un e
 
 ### Vitesses
 
-![expo](/uploads/docnsitale/algo/divide_n_conquer/figure/exponentiation.png)
+![expo](./exponentiation.png)
 
 ##
 
-![expo](/uploads/docnsitale/algo/divide_n_conquer/figure/expon_rapide_natif.png)
+![expo](./expon_rapide_natif.png)
 
 ## Complément : rotation d'un quart de tour 
 

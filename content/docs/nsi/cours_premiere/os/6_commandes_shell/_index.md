@@ -4,10 +4,10 @@ bookCollapseSection: true
 author: qkzk
 theme: metropolis
 weight: 6
+geometry: "margin=1.5cm"
 
 ---
 
-pdf [pour impression](/uploads/docsnsi/architecture/linux/correction_linux_debian_intro.pdf)
 
 ## TP Linux : liste des commandes rencontrées :
 

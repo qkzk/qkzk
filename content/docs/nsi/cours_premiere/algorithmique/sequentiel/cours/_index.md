@@ -1,15 +1,13 @@
 ---
-title:
-- Parcours séquentiel : cours
-author:
-- qkzk
+title: "Parcours séquentiel : cours"
+author: "qkzk"
 weight: 1
+geometry: "margin=1.5cm"
 
 ---
 
 # Parcours séquentiel d'un tableau
 
-pdf : [pour impression](./parcours_sequentiel.pdf)
 
 **Attendus :** Écrire un algorithme de recherche d’une occurrence sur des valeurs de type quelconque. Écrire un algorithme de recherche d’un extremum, de calcul d’une moyenne.
 
@@ -820,7 +818,7 @@ display(img) # afficher dans colab
 ```
 ## dégradé obtenu
 
-![Degradé rouge -> noir](/uploads/docsnsi/algo/sequentiel/degrade.jpg)
+![Degradé rouge -> noir](./degrade.jpg)
 
 # Variants et invariants
 

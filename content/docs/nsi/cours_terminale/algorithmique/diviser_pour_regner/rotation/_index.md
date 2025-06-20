@@ -7,6 +7,10 @@ geometry: "margin=1.5cm"
 
 ---
 
+[pdf](./diviser_regner_rotation.pdf)
+
+---
+
 ## Rotation d'une image d'un quart de tour 
 
 Il est possible d'utiliser diviser pour régner afin de réaliser la rotation d'un quart de tour d'un pixel.

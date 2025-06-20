@@ -13,7 +13,9 @@ header-includes: |
 
 ---
 
-### pdf : [pour impression](./1_cours.pdf)
+[pdf](./table_1_cours.pdf)
+
+---
 
 
 **En bref :** _Le format CSV est couramment utilisé pour échanger des données
@@ -31,15 +33,15 @@ Par "données en table" on entend ce type d'information :
 
 * correctement importé dans un tableur
 
-  ![dans un fichier texte](/uploads/docsnsi/table_csv/img/fr-creation-fichier-csv.jpg)
+  ![dans un fichier texte](./img/fr-creation-fichier-csv.jpg)
 
 * mal importé dans un tableur
 
-  ![dans un tableur](/uploads/docsnsi/table_csv/img/csv_1.png)
+  ![dans un tableur](./img/csv_1.png)
 
 * sans mise en forme dans un fichier texte
 
-  ![dans un tableur](/uploads/docsnsi/table_csv/img/eg_formats_csv01_01.png)
+  ![dans un tableur](./img/eg_formats_csv01_01.png)
 
 
 Les tableurs évolués réalisent un traitement complexe des données 

@@ -4,6 +4,11 @@ bookCollapseSection: true
 author: qkzk
 theme: metropolis
 weight: 2
+geometry: "margin=1.5cm"
+---
+
+[pdf](./imh_resume_html_css.pdf)
+
 ---
 
 

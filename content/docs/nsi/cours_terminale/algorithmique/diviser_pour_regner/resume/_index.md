@@ -1,11 +1,20 @@
 ---
 title: "Résumé"
+pdftitle: "Diviser pour regner: résumé"
 theme: "metropolis"
 geometry: "margin=1.5cm"
 weight: 100
+geometry: "margin=1.5cm"
+header-includes: |
+    \usepackage{tcolorbox}
+    \newtcolorbox{myquote}{colback=teal!10!white, colframe=teal!55!black}
+    \renewenvironment{Shaded}{\begin{myquote}}{\end{myquote}}
 
 ---
 
+[pdf](./diviser_regner_resume.pdf)
+
+--- 
 
 ## Diviser pour régner:
 
@@ -129,7 +138,7 @@ Pour la fusion,
 
 ### En une seule image
 
-![exemple](/docs/nsi/cours_terminale/algorithmique/diviser_pour_regner/tri_fusion/img/0.png)
+![exemple](../tri_fusion/img/0.png)
 
 ### Complexité 
 

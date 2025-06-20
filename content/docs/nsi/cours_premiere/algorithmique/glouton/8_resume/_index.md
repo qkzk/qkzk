@@ -3,6 +3,14 @@ title: "8. Résumé"
 theme: "metropolis"
 geometry: "margin=1.5cm"
 weight: 10000
+header-includes: |
+    \usepackage{tcolorbox}
+    \newtcolorbox{myquote}{colback=teal!10!white, colframe=teal!55!black}
+    \renewenvironment{Shaded}{\begin{myquote}}{\end{myquote}}
+
+---
+
+[pdf](./glouton_resume.pdf)
 
 ---
 
@@ -248,7 +256,7 @@ En partant du point $A$ et en cherchant à monter selon la plus forte pente, un 
 
 _Déjà rencontré dans les chapitres sur le binaire, l'hexadécimal !_
 
-Pour obtenir les chiffres d'un entier naturel $𝑛$ en base  $𝑏$ on peut chercher le nombre de fois que la plus grande puissance de $𝑏$ inférieure à $𝑛$ est contenue dans $𝑛$, ce qui donne le premier chiffre, et recommencer avec le nombre obtenu en retranchant ces puissances.
+Pour obtenir les chiffres d'un entier naturel $n$ en base  $b$ on peut chercher le nombre de fois que la plus grande puissance de $b$ inférieure à $n$ est contenue dans $n$, ce qui donne le premier chiffre, et recommencer avec le nombre obtenu en retranchant ces puissances.
 
 La méthode gloutonne trouve la solution optimale (il n'y en a qu'une)
 

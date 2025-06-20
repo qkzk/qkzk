@@ -3,6 +3,11 @@ title: "Bits à bits - TD"
 bookCollapseSection: true
 author: qkzk
 weight: 6
+geometry: "margin=1.5cm"
+
+---
+
+[pdf](./bit_a_bit_td.pdf)
 
 ---
 

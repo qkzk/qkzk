@@ -4,7 +4,13 @@ bookCollapseSection: true
 author: QK
 theme: metropolis
 weight: 3
+geometry: "margin=1.5cm"
 ---
+
+[pdf](./imh_resume_url_http.pdf)
+
+---
+
 # URL
 
 ## Définition
@@ -23,7 +29,7 @@ Elle est composée de plusieurs partie. Par exemple "https://qkzk.xyz/docs/nsi/c
 
 Les fichiers sont classés dans une structure en arborescence.
 
-![arbo](/uploads/docsnsi/ihm_web/img/url.jpg)
+![arbo](./url.jpg)
 
 L'URL peut se terminer par un nom précis de fichier (`index.html`) ou non.
 
@@ -92,7 +98,7 @@ Moins important :
 
 **Le client envoie une requête, le serveur renvoie une réponse.**
 
-![cycle requête reponse http](/uploads/docsnsi/ihm_web/img/http_request_response_cycle.svg)
+![cycle requête reponse http](./http_request_response_cycle.svg)
 
 ## Requête HTTP
 

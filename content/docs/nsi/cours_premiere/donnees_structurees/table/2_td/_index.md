@@ -3,10 +3,18 @@ title: '2. TD : importer, exporter, trier'
 bookCollapseSection: true
 author: 'qkzk'
 weight: 2
+geometry: "margin=1.5cm"
+header-includes: |
+    \usepackage{tcolorbox}
+    \newtcolorbox{myquote}{colback=teal!10!white, colframe=teal!55!black}
+    \renewenvironment{Shaded}{\begin{myquote}}{\end{myquote}}
 
 ---
 
-pdf : [pour impression](./2_td.pdf)
+[pdf](./table_2_td.pdf)
+
+---
+
 
 ## 1. Reconnaître un fichier csv
 
@@ -157,7 +165,7 @@ Détaillons ce programme :
 
 On considère le fichier csv `films.csv` dont voici un extrait.
 
-![films](/uploads/docsnsi/table_csv/data-visualization-movies_csv-1024x686.png)
+![films](./data-visualization-movies_csv-1024x686.png)
 
 Pour chaque question on donnera une syntaxe Python permettant d'obenir la
 réponse ainsi que la valeur de celle-ci lorsque l'information est connue.

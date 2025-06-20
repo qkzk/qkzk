@@ -1,15 +1,22 @@
 ---
 title: "Flottants : Cours"
 bookCollapseSection: true
-author:
-- QK
+author: qkzk
 weight: 1
+geometry: "margin=1.5cm"
+header-includes: |
+    \usepackage{tcolorbox}
+    \newtcolorbox{myquote}{colback=teal!10!white, colframe=teal!55!black}
+    \renewenvironment{Shaded}{\begin{myquote}}{\end{myquote}}
 
 ---
 
+[pdf](./flottants_cours.pdf)
+
+--- 
+
 # Nombre à virgule flottantes
 
-pdf : [pour impression](/uploads/docsnsi/flottants/flottants.pdf)
 
 
 Comment représenter un nombre à virgule en machine ?

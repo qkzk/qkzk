@@ -1,8 +1,19 @@
 ---
 title: "Cours"
+pdftitle: "Calculabilité"
 author: qkzk
 weight: 100
+author: qkzk
+date: 2025-06-20
+theme: metropolis
+geometry: "margin=1.5cm"
+header-includes: |
+    \usepackage{tcolorbox}
+    \newtcolorbox{myquote}{colback=teal!10!white, colframe=teal!55!black}
+    \renewenvironment{Shaded}{\begin{myquote}}{\end{myquote}}
+
 ---
+
 
 # Calculabilité - Problème de l'arrêt en Python
 

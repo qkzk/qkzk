@@ -3,6 +3,14 @@ title: "Résumé"
 theme: "metropolis"
 geometry: "margin=1.5cm"
 weight: 1000
+header-includes: |
+    \usepackage{tcolorbox}
+    \newtcolorbox{myquote}{colback=teal!10!white, colframe=teal!55!black}
+    \renewenvironment{Shaded}{\begin{myquote}}{\end{myquote}}
+
+---
+
+[pdf](./dichotomie_resume.pdf)
 
 ---
 

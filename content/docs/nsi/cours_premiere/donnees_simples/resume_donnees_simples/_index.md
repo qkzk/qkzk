@@ -2,10 +2,17 @@
 title: "résumé"
 bookCollapseSection: true
 weight: 10000
+geometry: "margin=1.5cm"
+header-includes: |
+    \usepackage{tcolorbox}
+    \newtcolorbox{myquote}{colback=teal!10!white, colframe=teal!55!black}
+    \renewenvironment{Shaded}{\begin{myquote}}{\end{myquote}}
 
 ---
 
-## pdf pour [impression](/uploads/docsnsi/donnees_qkzk_img/binaire_hexa_booleen-Article.pdf)
+[pdf](./donnees_simples_resume.pdf)
+
+---
 
 
 ## Numération par position
@@ -44,7 +51,7 @@ Les _entiers_ ne changent pas, leur _représentation_ varie : `103 = 0b1100111 =
 On utilise l'algorithme des divisions successives :
 
 
-![divisions successives](/uploads/docsnsi/donnees_qkzk_img/divisions.png)
+![divisions successives](../binaire/1_binaire_cours/divisions.png)
 
 1. On divise par 2 **jusqu'à ce que le quotient soit 0**
 2. On lit les bits en montant de droite à gauche : `167 = 0b10100111`
@@ -103,7 +110,7 @@ On utilise des _tables de vérité_ pour les représenter :
 
 La porte logique du haut est un XOR et celle du bas un AND.
 
-![demi-additionneur](/uploads/docsnsi/donnees_qkzk_img/demi-additionneur.png)
+![demi-additionneur](../binaire/1_binaire_cours/demi-additionneur.png)
 
 Il est appelé *demi-additionneur* car il réalise l'addition de 2 bits
 (**A** et **B**), le résultats de cette somme est représentée par **S**

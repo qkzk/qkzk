@@ -2,9 +2,17 @@
 title: "TD"
 bookCollapseSection: true
 weight: 2
+geometry: "margin=1.5cm"
+header-includes: |
+    \usepackage{tcolorbox}
+    \newtcolorbox{myquote}{colback=teal!10!white, colframe=teal!55!black}
+    \renewenvironment{Shaded}{\begin{myquote}}{\end{myquote}}
 ---
 
-pdf [pour impression](./td_types_construits.pdf)
+[pdf](./donnees_structuree_td.pdf)
+
+---
+
 
 # Se tester
 

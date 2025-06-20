@@ -3,12 +3,12 @@ title: Tri fusion
 bookCollapseSection: false
 author: qkzk
 weight: 2
+geometry: "margin=1.5cm"
+header-includes: |
+    \usepackage{tcolorbox}
+    \newtcolorbox{myquote}{colback=teal!10!white, colframe=teal!55!black}
+    \renewenvironment{Shaded}{\begin{myquote}}{\end{myquote}}
 ---
-
-
-
-
-pdf: [pour impression](/uploads/docnsitale/algo/divide_n_conquer/tri_fusion_print.pdf), [diaporama](/uploads/docnsitale/algo/divide_n_conquer/tri_fusion_slides.pdf)
 
 ## Tri fusion
 
@@ -58,36 +58,36 @@ En simplifiant grandement,
 
 ### Exemple détaillé
 
-<!-- .![Etape 0](/uploads/docnsitale/algo/divide_n_conquer/figure/tri_fusion_00.png){height=25%} -->
-.![Etape 0](/uploads/docnsitale/algo/divide_n_conquer/figure/tri_fusion_00.png)
+<!-- .![Etape 0](./img/tri_fusion_00.png){height=25%} -->
+.![Etape 0](./img/tri_fusion_00.png)
 
 
-<!-- .![Etape 1](/uploads/docnsitale/algo/divide_n_conquer/figure/tri_fusion_01.png){height=25%} -->
-.![Etape 1](/uploads/docnsitale/algo/divide_n_conquer/figure/tri_fusion_01.png)
+<!-- .![Etape 1](./img/tri_fusion_01.png){height=25%} -->
+.![Etape 1](./img/tri_fusion_01.png)
 
 
-<!-- .![Etape 2](/uploads/docnsitale/algo/divide_n_conquer/figure/tri_fusion_02.png){height=25%} -->
-.![Etape 2](/uploads/docnsitale/algo/divide_n_conquer/figure/tri_fusion_02.png)
+<!-- .![Etape 2](./img/tri_fusion_02.png){height=25%} -->
+.![Etape 2](./img/tri_fusion_02.png)
 
 
-<!-- .![Etape 3](/uploads/docnsitale/algo/divide_n_conquer/figure/tri_fusion_03.png){height=25%} -->
-.![Etape 3](/uploads/docnsitale/algo/divide_n_conquer/figure/tri_fusion_03.png)
+<!-- .![Etape 3](./img/tri_fusion_03.png){height=25%} -->
+.![Etape 3](./img/tri_fusion_03.png)
 
 
-<!-- .![Etape 4](/uploads/docnsitale/algo/divide_n_conquer/figure/tri_fusion_04.png){height=25%} -->
-.![Etape 4](/uploads/docnsitale/algo/divide_n_conquer/figure/tri_fusion_04.png)
+<!-- .![Etape 4](./img/tri_fusion_04.png){height=25%} -->
+.![Etape 4](./img/tri_fusion_04.png)
 
 
-<!-- .![Etape 5](/uploads/docnsitale/algo/divide_n_conquer/figure/tri_fusion_05.png){height=25%} -->
-.![Etape 5](/uploads/docnsitale/algo/divide_n_conquer/figure/tri_fusion_05.png)
+<!-- .![Etape 5](./img/tri_fusion_05.png){height=25%} -->
+.![Etape 5](./img/tri_fusion_05.png)
 
 
-.![Etape 6](/uploads/docnsitale/algo/divide_n_conquer/figure/tri_fusion_06.png)
+.![Etape 6](./img/tri_fusion_06.png)
 
 
 ### En une seule image
 
-![exemple](/docs/nsi/cours_terminale/algorithmique/diviser_pour_regner/tri_fusion/img/0.png)
+![exemple](./img/0.png)
 
 ## Algorithme en vidéo 
 
@@ -98,7 +98,7 @@ En simplifiant grandement,
 
 
 {{< hint info >}}
-```
+```python
 tri_fusion (tableau) :
     Si la longueur est > 1:
       # séparer
@@ -118,7 +118,7 @@ tri_fusion (tableau) :
 ## Algorithme fusion
 
 {{< hint info >}}
-```
+```python
 fusion (tableau, gauche, droite)
   i, j, k = 0
   tant que i < longueur de gauche et j < longueur de droite

@@ -2,10 +2,10 @@
 title: "Routage TD"
 bookCollapseSection: true
 weight: 10
+geometry: "margin=1.5cm"
 
 ---
 
-[pdf](./routage_td.pdf)
 
 **Compétence :** _Analyser un datagramme IP_
 

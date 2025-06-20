@@ -3,10 +3,17 @@ title: "Intro"
 author: "qkzk"
 weight: 2
 bookCollapseSection: true
+geometry: "margin=1.5cm"
+header-includes: |
+    \usepackage{tcolorbox}
+    \newtcolorbox{myquote}{colback=teal!10!white, colframe=teal!55!black}
+    \renewenvironment{Shaded}{\begin{myquote}}{\end{myquote}}
 
 ---
 
-[pdf pour impression](./td_intro_2D.pdf)
+[pdf](./tableau_2d_td_intro.pdf)
+
+---
 
 ## Comment représenter plusieurs dimensions dans un tableau ?
 

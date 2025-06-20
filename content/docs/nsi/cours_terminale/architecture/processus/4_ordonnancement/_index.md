@@ -3,10 +3,14 @@ title: "Ordonnancement"
 bookCollapseSection: false
 author: "qkzk"
 weight: 4
+geometry: "margin=1.5cm"
 
 ---
 
-[pdf](./4_ordonnancement.pdf)
+[pdf](./processus_4_ordonnancement.pdf)
+
+--- 
+
 
 
 ## Les processus (rappels)

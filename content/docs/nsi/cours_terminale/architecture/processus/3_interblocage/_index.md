@@ -10,13 +10,15 @@ header-includes: |
   \renewenvironment{Shaded}{\begin{myquote}}{\end{myquote}}
 ---
 
-[pdf](./3_interblocage.pdf)
+[pdf](./processus_3_interblocage.pdf)
+
+---
 
 # Interblocage
 
 Il arrive fréquement que des processus se bloquent l'un l'autre. Sans intervention extérieure (de l'utilisateur ou de l'OS) cette situation est insoluble. C'est _l'interblocage_.
 
-[foot](foot.jpg)
+![foot](foot.jpg)
 
 _L'arbitre vient séparer les joueurs qui pourraient rester indéfiniment ainsi..._
 

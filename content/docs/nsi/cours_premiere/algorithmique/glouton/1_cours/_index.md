@@ -3,11 +3,19 @@ title: "1. Cours"
 bookCollapseSection: true
 author: qkzk
 weight: 1
+geometry: "margin=1.5cm"
+header-includes: |
+    \usepackage{tcolorbox}
+    \newtcolorbox{myquote}{colback=teal!10!white, colframe=teal!55!black}
+    \renewenvironment{Shaded}{\begin{myquote}}{\end{myquote}}
+---
+
+[pdf](./glouton_cours.pdf)
+
 ---
 
 # Algorithmes glouton
 
-pdf [pour impression](/uploads/docsnsi/algo/glouton/1_cours.pdf)
 
 {{< hint info >}}
 _En informatique, on rencontre souvent des problèmes d'optimisation. Les algorithmes gloutons sont

@@ -3,6 +3,15 @@ title: "Bits à bits - cours"
 bookCollapseSection: true
 author: qkzk
 weight: 5
+geometry: "margin=1.5cm"
+header-includes: |
+    \usepackage{tcolorbox}
+    \newtcolorbox{myquote}{colback=teal!10!white, colframe=teal!55!black}
+    \renewenvironment{Shaded}{\begin{myquote}}{\end{myquote}}
+
+---
+
+[pdf](./bit_a_bit_cours.pdf)
 
 ---
 
@@ -120,7 +129,7 @@ True
 
 Un schéma electronique représentant un décalage à gauche
 
-![Décalage à gauche](/uploads/docsnsi/donnees_qkzk_img/Rotate_left_logically.png)
+![Décalage à gauche](./Rotate_left_logically.png)
 
 
 ## Exercices 

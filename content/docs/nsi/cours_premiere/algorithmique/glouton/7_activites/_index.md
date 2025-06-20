@@ -14,7 +14,7 @@ proposés par ChatGPT pour illustrer un exemple classique :
 la planification des tâches avec un algorithme glouton ainsi
 qu'une recherche exhaustive._
 
-**[pdf](./activites_a_planifier.pdf) - [Script accompagnant ces exemples](./planification.py)**
+**[pdf](./glouton_cours_activite.pdf) - [Script accompagnant ces exemples](./planification.py)**
 
 Un exemple classique de choix d'activité à planifier qui peut être résolu par un algorithme glouton est le problème de sélection d'activités.
 

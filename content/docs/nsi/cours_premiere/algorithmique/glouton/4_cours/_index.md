@@ -3,11 +3,17 @@ title: "4. Cours"
 bookCollapseSection: true
 author: qkzk
 weight: 4
+geometry: "margin=1.5cm"
 ---
+
+[pdf](./glouton_cours_suite.pdf)
+
+---
+
+
 
 # 4. Principe général d'un algorithme glouton
 
-pdf [pour impression](/uploads/docsnsi/algo/glouton/4_cours.pdf)
 
 ## Généralités
 

@@ -26,13 +26,13 @@ Les grandes _familles_ de systèmes d'exploitation modernes sont UNIX et Windows
 
 Lorsque plusieurs application tournent en même temps, elles se partagent la mémoire. Afin d'éviter qu'elles n'écrivent toutes au même endroit, l'OS utilise la mémoire virtuelle. Plutôt que de laisser une application écrire où elle veut, elle donne une nouvelle adresse aux emplacements mémoire retient dans une table les adresses virtuelles employées. Ainsi plusieurs applications peuvent tenter d'écrire à l'adresse "2" en même temps sans que cela n'occasionne de collision.
 
- ![9](/uploads/docsnsi/architecture/linux/concepts/img/OS_9.png)
+ ![9](./img/OS_9.png)
 
 ### L'ordonnancement des instructions
 
 Les coeurs de processeur ne peuvent traiter qu'une instruction à la fois. Mais chaque application qui fonctionne nécessite de très nombreuses instructions à exécuter. Afin de permettre à plusieurs applications d'avancer régulièrement et ainsi de ne pas paralyser le système, l'OS utilise un logiciel appelé ordonnanceur (_scheduler_ en anglais). Celui-ci change d'application régulièrement via un procédé appelé _changement de contexte_. Ainsi les applications avancent régulièrement et cela fournit l'_illusion du multitâche._
 
- ![12](/uploads/docsnsi/architecture/linux/concepts/img/OS_12.png)
+ ![12](./img/OS_12.png)
 
 Ces notions sont étudiées plus en détail en terminale.
 
@@ -44,7 +44,7 @@ On emploie les _appels système_. L'OS contient des _pilotes_ (_drivers_ en angl
 
 D'autre part, comment écouter le microphone ?
 
-![15](/uploads/docsnsi/architecture/linux/concepts/img/OS_15.png)
+![15](./img/OS_15.png)
 
 Lorsque vous passez un appel, "Téléphone" (l'application elle même) demande d'écouter les signaux émis par le microphone (qui transforme le son de votre voix en signaux électriques à destination du smartphone). Lorsqu'un signal est émis, l'OS émet une _interruption_ traitée par l'ordonnanceur (voir plus haut). L'OS se charge alors d'exécuter le pilote du microphone pour convertir ce signal electrique en données utilisable par l'application elle même.
 

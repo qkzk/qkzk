@@ -2,10 +2,14 @@
 title: "États des processus"
 bookCollapseSection: false
 weight: 2
+geometry: "margin=1.5cm"
+header-includes: |
+    \usepackage{tcolorbox}
+    \newtcolorbox{myquote}{colback=teal!10!white, colframe=teal!55!black}
+    \renewenvironment{Shaded}{\begin{myquote}}{\end{myquote}}
 
 ---
 
-[pdf](./2_processus_etats.pdf)
 
 
 {{< hint info >}}
