@@ -3,7 +3,7 @@ title:
 - Parcours séquentiel : td
 author:
 - qkzk
-weight: 1
+weight: 2
 
 ---
 

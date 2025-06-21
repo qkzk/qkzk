@@ -1,5 +1,5 @@
 ---
-title: "Parcours séquentiel : cours"
+title: "Cours"
 author: "qkzk"
 weight: 1
 geometry: "margin=1.5cm"
