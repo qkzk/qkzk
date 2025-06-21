@@ -16,3 +16,4 @@ weight: 10
 5. [Travaux dirigés](5_td)
 6. [Travaux pratiques](6_tp)
 7. [Rappels](7_revisions_pays)
+8. [Résumé](8_resume)

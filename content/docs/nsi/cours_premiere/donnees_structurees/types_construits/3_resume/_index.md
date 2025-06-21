@@ -1,5 +1,5 @@
 ---
-title: "Résumé"
+title: "Résumé détaillé"
 author: "qkzk"
 theme: "metropolis"
 geometry: "margin=1.5cm"
