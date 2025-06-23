@@ -8,7 +8,7 @@ geometry: margin=1.5cm
 
 ---
 
-**pdf : [impression](./0_resume.pdf)**
+[pdf](./0_resume.pdf)
 
 ## Modèle de Von Neumann
 
@@ -130,7 +130,7 @@ Restée valable jusqu'en 2005.
 
 Depuis : insoluble problème de la dissipation de la chaleur.
 
-La surface de contact a diminué, on ne peut plus dissiper la chaleur.
+La surface de contact a diminué, on ne peut plus refroidir convenablement les circuits.
 
 ## Exemple d'évolution moderne : multicoeur
 
@@ -166,32 +166,18 @@ Un programme ('l'assembleur') le compile en langage machine.
 Un _compilateur_ est un programme qui traduit du langage haut niveau en langage
 machine. Ex : gcc (linux) compile du C en langage machine.
 
-### Exemples d'instructions en assembleur
+## Exemple de programme pour l'émulateur ARMLite
 
-* `SUB R1, R0, #30`
+```java
+ 1|      MOV R1, #10            //         R1 contient 10
+ 2|      MOV R2, #5             //         R2 contient 5
+ 3|      ADD R3, R1, R2         //         R3 contient 5 + 10 = 15
+ 4|      CMP R3, R1             //         Comparaison de 15 et 5
+ 5|      BGT more               //         15 > 5 donc on va en "more", ligne 08.
+ 6|      HALT                   //         Fin du programme (ne sera pas exécuté dans l'exemple)
+ 7|                             //         Rien, on va à la ligne
+ 8|    more:                    //         pas de code après l'étiquette, on ne fait rien
+ 9|      ADD R3, R1, R3         //         R3 contient 15 + 10 = 25
+10|      HALT                   //         Fin du programme
+```
 
-  réalise la soustraction R0 - 30 et stocke le résultat dans R1.
-
-* `LDR R0, 70`
-
-  Place le contenu de la mémoire 70 dans le registre R0
-
-* `STR R0, 123`
-
-  Stocke le contenu de R0 à l'adresse mémoire 123.
-
-* `CMP R0, #24`
-
-  Compare le registre R0 et le nombre 24
-
-* `BEQ label`
-
-  Deux parties :
-
-  * `BEQ` : Branch Equal (`BNE, BGT, BLT` etc.) :
-
-  * `label` : un label = une adresse spécifique de la mémoire.
-
-    Si la dernière 'comparaison' est égale, continue au label
-    Sans "branchement", la machine exécute les instructions en allant d'une
-    adresse à la suivante.
