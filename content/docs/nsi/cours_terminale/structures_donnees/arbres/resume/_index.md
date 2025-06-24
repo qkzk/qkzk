@@ -1,5 +1,5 @@
 ---
-title: Arbres - résumé
+title: "Résumé - Arbres"
 bookCollapseSection: true
 weight: 100
 
