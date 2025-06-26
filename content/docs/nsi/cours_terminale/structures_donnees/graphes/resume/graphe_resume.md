@@ -1,15 +1,13 @@
 ---
 title: "Résumé : graphes"
-author: qkzk
-weight: 100
-
+geometry: margin=1.5cm
 ---
 
-[pdf](./graphe_resume.pdf)
+
 
 ## Les graphes : une longue introduction
 
-![graphe](/uploads/docnsitale/graphes/graphe.png)
+![Graphe simple](img/graphe.png)
 
 ### Présentation
 
@@ -30,20 +28,18 @@ mathématiques.
 
 Parmi les problèmes fréquents faisant apparaître des graphes on rencontre :
 
-1. La recherche des chemin. Puis-je passer de l'état $A$ à l'état $B$ ?
-1. L'exploration de graphe,
-1. La recherche de cycles dans un graphe,
-1. Les algorithmes, qui peuvent être vus comme des graphes,
+1.  La recherche des chemin. Puis-je passer de l'état $A$ à l'état $B$ ?
+1.  L'exploration de graphe,
+1.  La recherche de cycles dans un graphe,
+1.  Les algorithmes, qui peuvent être vus comme des graphes,
 1. Les relations entre les données dans une BDD ou en POO.
+
 
 
 ### Distinction mathématique, informatique
 
-Les définitions des graphes en mathématique et en informatique sont similaires.
-Les applications diffèrent souvent.
-
-Nous (les informaticiens) cherchons souvent à exposer les solutions de nos problèmes.
-Un algorithme doit fournir une solution en un temps fini.
+Les définitions des graphes en mathématique et en informatique sont similaires mais les applications sont différentes.
+En informatique, on cherche à exposer ou construire les solutions. En mathématique on peut se contenter de l'existance d'une solution.
 
 ### Objectifs
 
@@ -67,8 +63,7 @@ Parmi les problèmes que nous allons aborder :
 
 ### Définition : Graphe simple
 
-
-![graphe](/uploads/docnsitale/graphes/graphe.png)
+![Graphe simple](img/graphe.png)
 
 Un graphe _simple_ est un couple $G = (V, E)$ comprenant
 
@@ -84,7 +79,7 @@ sommet : _vertice_ et arête : _edge_. D'où les noms des ensembles.
 
 
 
-### Exemple
+#### Exemple
 
 Dans le graphe ci-dessus
 
@@ -93,8 +88,7 @@ Dans le graphe ci-dessus
 
 ### Définition : Graphe orienté
 
-<!--
-```graphviz
+```graph
 digraph G {
 
 bgcolor="#ffffff00"
@@ -118,14 +112,12 @@ layout=circo
 
 }
 ```
--->
-![0.svg](./0.svg)
 
 
-Lorsque les arêtes sont marquées d'une flèche, elles sont **orientées**.
+Lorsque les arêtes sont marquées d'une flèche, le graphe est **orienté**.
 
-Une arrête orientée ne se parcourt que dans le sens de la flèche.
-Dans ce cas on note généralement les arrêtes avec des parenthèses pour désigner
+Une "arrête orientée" s'appelle un _arc_ et ne se parcourt que dans le sens de la flèche.
+Dans ce cas on note généralement les cars avec des parenthèses pour désigner
 des couples.
 
 Par exemple l'arête $(1, 2)$ _part_ de $1$ et _arrive_ en $2$.
@@ -158,8 +150,7 @@ Par exemple : $G = (V, E)$ avec $V = \{1, 2, 3, 4\}$
 et $E = \{(1, 2), (2, 3), (3, 4), (2, 4)\}$
 
 
-<!--
-```graphviz
+```graph
 graph G {
 
 bgcolor="#ffffff00"
@@ -173,13 +164,11 @@ ranksep=0.5;
 2 -- 4 [label = "" color=black fontcolor=black]
 }
 ```
--->
-![1.svg](./1.svg)
 
 Pour le graphe précédent avec un dictionnaire :
 
 ```python
-aretes = {
+graphe_oriente = {
   1: [2],
   2: [1, 3, 4],
   3: [2, 4],
@@ -193,9 +182,8 @@ aretes = {
 
 > Pour un graphe simple $G = (V, E)$ avec $n$ sommets, la **matrice d'adjacence**
 > de $G$ est une matrice de dimension $n \times n$ dont l'élément $a_{ij}$ est 1
-> si les sommets $i$ et $j$ sont reliés par une arrête et 0 sinon.
+> s'il existe une arrête (ou un arc) entre les sommets $i$ et $j$ et 0 sinon.
 
-_Cette définition ne s'applique qu'aux graphes simples_
 
 **Exemple :**
 
@@ -203,9 +191,9 @@ Dans l'exemple du graphe ci-dessus, cela donne :
 
 $$
 \begin{pmatrix}
-  0 & 1 & 0 & 0\\\
-  1 & 0 & 1 & 1\\\
-  0 & 1 & 0 & 1\\\
+  0 & 1 & 0 & 0\\
+  1 & 0 & 1 & 1\\
+  0 & 1 & 0 & 1\\
   0 & 1 & 1 & 0
 \end{pmatrix}
 $$
@@ -230,18 +218,17 @@ Partant d'une matrice d'adjacence comme
 
 $$
 \begin{pmatrix}
-  0 & 1 & 1 & 1 & 0\\\
-  1 & 0 & 1 & 1 & 1\\\
-  1 & 1 & 0 & 1 & 0\\\
-  1 & 1 & 1 & 0 & 1\\\
-  0 & 1 & 0 & 1 & 0\\\
+  0 & 1 & 1 & 1 & 0\\
+  1 & 0 & 1 & 1 & 1\\
+  1 & 1 & 0 & 1 & 0\\
+  1 & 1 & 1 & 0 & 1\\
+  0 & 1 & 0 & 1 & 0\\
 \end{pmatrix}
 $$
 
 Il existe un _unique_ graphe qu'elle représente :
 
-<!--
-```graphviz
+```graph
 graph G {
 
 bgcolor="#ffffff00"
@@ -259,14 +246,12 @@ ranksep=0.5;
 4 -- 5 [label = "" color=black fontcolor=black]
 }
 ```
--->
-![2.svg](./2.svg)
 
 _Remarque_ : attention cependant, si on change l'ordre des sommets on obtient
 une autre matrice d'adjacence ! La matrice d'adjacence est unique
 _à l'ordre près des sommets._
 
-### Cas des graphes orientés
+#### Cas des graphes orientés
 
 Lorsque les graphes sont **orientés** on doit tenir compte de l'ordre.
 
@@ -284,8 +269,7 @@ Lorsque les graphes sont **orientés** on doit tenir compte de l'ordre.
     matrice d'adjacence contient 1 pour chaque arête qui **arrive** en 2.
 
 
-<!--
-```graphviz
+```graph
 digraph G {
 
 bgcolor="#ffffff00"
@@ -301,14 +285,12 @@ ranksep=0.5;
 3 -> 3 [label = "" color=black fontcolor=black];
 }
 ```
--->
-![3.svg](./3.svg)
 
 $$
 \begin{pmatrix}
-  0 & 1 & 1 & 0\\\
-  0 & 0 & 0 & 1\\\
-  1 & 0 & 1 & 0\\\
+  0 & 1 & 1 & 0\\
+  0 & 0 & 0 & 1\\
+  1 & 0 & 1 & 0\\
   0 & 0 & 1 & 0
 \end{pmatrix}
 $$
@@ -335,22 +317,23 @@ On peut aussi envisager :
 * supprimer un sommet,
 * supprimer une arête,
 * le graphe est-il vide ?
-* retourner la matrice d'adjacence d'un graphe,
+* renvoyer la matrice d'adjacence d'un graphe,
 * créer un graphe à partir d'une matrice d'adjacence.
 * créer un graphe à partir de la liste de ses sommets (souvent appelée _liste d'adjacence_)
 
 De nombreuses interfaces sont envisagéables. Certaines fonctionnent directement
 à partir des arêtes et créent les sommets dont elles ont besoin.
 
-Les applications étant innombrables, pourra ajouter :
+Les extensions étant innombrables, on pourra ajouter :
 
-* fixer une valeur à une arête,
-* retourner la valeur d'une arête,
+* fixer une etiquette/valeur à une arête,
+* renvoyer la etiquette/valeur d'une arête,
 
 ou
 
-* fixer une valeur à un sommet,
-* retourner la valeur d'un sommet.
+* fixer une etiquette/valeur à un sommet,
+* retourner la etiquette/valeur d'un sommet.
+
 
 ## Implantation d'une structure de donnée graphe
 
@@ -358,9 +341,9 @@ Voici deux versions remplissant les mêmes fonctions mais dont l'usage diffère.
 
 Elles sont accompagnées de deux versions des algorithmes présentés ci-dessous.
 
-- [Graphes simples](./graphe_simple.py)
-- [Graphes orientés](./graphe_oriente.py)
-- [Graphes simples avec dictionnaires](./algos_parcours_dict.py)
+- [Graphes simples](./code/graphe_simple.py)
+- [Graphes orientés](./code/graphe_oriente.py)
+- [Graphes simples avec dictionnaires](./code/algos_parcours_dict.py)
 
 ### Exemple
 
@@ -375,11 +358,11 @@ True
 >>> g.est_vide()
 False
 >>> g.ajouter_sommet(2)
->>> g.ajouter_arete((1, 2)) # de 1 vers 2
+>>> g.ajouter_arete((1, 2)) ## de 1 vers 2
 >>> g.ajouter_arete((1, 3))
->>> g.ajouter_arete((3, 1)) # de 3 vers 1
+>>> g.ajouter_arete((3, 1)) ## de 3 vers 1
 >>> g.ajouter_arete((3, 2))
->>> g.voisins(1) # sommets qui accessibles depuis 1
+>>> g.voisins(1) ## sommets qui accessibles depuis 1
 [3, 2]
 >>> g.voisins(2)
 None
@@ -391,8 +374,7 @@ None
 
 Ce graphe est alors :
 
-<!--
-```graphviz
+```graph
 digraph G {
 
 bgcolor="#ffffff00"
@@ -406,14 +388,14 @@ ranksep=0.5;
 3 -> 2 [label = "" color=black fontcolor=black];
 }
 ```
--->
-![4.svg](./4.svg)
 
 ## Algorithmes sur les graphes
 
+Ces algorithmes n'ont rien d'unique. D'autres approches, parfois plus simples, existent.
+La présentation ci-dessous est progressive pour les objectifs fixés. On crée un algorithme de base pour parcourir les graphes qu'on adapte aux problèmes suivants.
 
 
-### Algorithme : parcours en largeur dans un graphe simple
+## Algorithme : parcours en largeur dans un graphe simple
 
 ```
 source                              (un noeud du graphe)
@@ -437,7 +419,7 @@ Tant que la file n'est pas vide faire :
     Pour chaque voisin de courant dont le drapeau est -1,
         l'ajouter à la file.
         Changer leurs drapeaux à 0.
-    visiter courant. # c'est ici qu'on fera généralement un travail.
+    visiter courant. ## c'est ici qu'on fera généralement un travail.
 ```
 
 ---
@@ -481,7 +463,7 @@ C'est bien un parcours en largeur d'abord.
 ---
 
 
-### Algorithme : parcours en profondeur dans un graphe simple
+## Algorithme : parcours en profondeur dans un graphe simple
 
 La seule différence est qu'on utilise une _pile_.
 
@@ -505,7 +487,7 @@ Tant que la pile n'est pas vide faire :
     Pour chaque voisin de courant dont le drapeau est -1,
         l'ajouter à la pile.
         Changer leurs drapeaux à 0.
-    visiter courant. # c'est ici qu'on fera généralement un travail.
+    visiter courant. ## c'est ici qu'on fera généralement un travail.
 ```
 
 ---
@@ -547,7 +529,7 @@ C'est bien un parcours en profondeur d'abord.
 
 
 
-### Algorithme : détermination d'un chemin dans un graphe simple.
+## Algorithme : détermination d'un chemin dans un graphe simple.
 
 ### Première étape : parcourir
 
@@ -603,8 +585,7 @@ Fonction créer un chemin (prédécesseurs, source, destination)
 
 Par exemple le graphe ci-dessous contient un cycle `[0, 1, 2]` :
 
-<!--
-```graphviz
+```graph
 graph G {
 
 bgcolor="#ffffff00"
@@ -621,14 +602,12 @@ layout=circo;
 1 -- 5 [label = "" color=black fontcolor=black];
 }
 ```
--->
-![5.svg](./5.svg)
 
 
 Si on enlève simplement l'arête entre (1, 2) on obtient un graphe qui n'a
 plus de cycle :
 
-![graphe sans cycle](../cours_algo/sans_cycle.png)
+![graphe sans cycle](img/sans_cycle.png){width=40%}\
 
 
 On souhaite créer une fonction qui réponde "Vrai" pour le premier graphe (il
@@ -678,7 +657,7 @@ Tant que la file n'est pas vide faire :
     Pour chaque voisin de courant :
       Si son drapeau vaut 0:
         # On a déjà rencontré ce sommet ! Il y a un cycle.
-        renvoyer vrai
+        renvoyer Vrai
       Si son drapeau vaut -1 :
         l'ajouter à la file.
         Changer son drapeaux en 0.
