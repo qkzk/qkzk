@@ -47,10 +47,10 @@ Entrée : **f** (une fonction dérivable) - Sortie : **f'** (la fonction dériv�
 derivee(f) =
     si f est une fonction élémentaire de base
         renvoyer sa dérivée
-    sinon si f == u+v
+    sinon si f == u + v
         renvoyer derivee(u) + derivee(v)
     sinon si f == u × v
-        renvoyer derivee(u)×v + u×derivee(v)
+        renvoyer derivee(u) × v + u × derivee(v)
     sinon si …
 ```
 
@@ -61,26 +61,31 @@ On dispose de la primitive *tracer(l)* qui permet de tracer un segment de longue
 Le processus de tracé d'un segment de von koch de taille *l*  à l'ordre *n* est :
 
 
-*vonkoch*(l,n)
+```python
+vonkoch(l,n)
 
-- si n = 1, *tracer(l)*
-- sinon
+si n = 1: 
+  tracer(l)
 
-  - *vonkoch*(l/3, n-1)
-  - tourner à gauche de 60°
-  - *vonkoch*(l/3, n-1)
-  - tourner à droite de 120°
-  - *vonkoch*(l/3, n-1)
-  - tourner à gauche de 60°
-  - *vonkoch*(l/3, n-1)
+sinon:
+
+  vonkoch(l/3, n-1)
+  tourner à gauche de 60
+  vonkoch(l/3, n-1)
+  tourner à droite de 120
+  vonkoch(l/3, n-1)
+  tourner à gauche de 60
+  vonkoch(l/3, n-1)
+```
 
 
+<a href="https://trinket.io/turtle/a47fc11f8eb7" target="_blank" rel="noopener">Trinket.io</a>
 
 Le [flocon](/uploads/docnsitale/recursivite/img/flocon_vonkoch.gif) est obtenu en traçant 3 segments de von koch séparés par des rotations à droite de 120°.
 
 ![flocon](/uploads/docnsitale/recursivite/img/flocon_vonkoch.gif)
 
-*NB* Se réalise très bien avec la tortue (module `turtle`), *tracer(l)* = `forward(l)` et les fonctions `right`et `left` permettent les rotations
+_Remarque :_ Se réalise très bien avec le module `turtle` : *tracer(l)* = `forward(l)` et les fonctions `right`et `left` permettent les rotations
 
 ### Images
 
@@ -143,17 +148,21 @@ Une _liste_ est une structure de données.
 ### Exemple
 Ne faisons pas dans l'originalité, la _factorielle_ :
 
- $$n! = n \times (n-1)! \text{ si } n > 1 \text{ et } 0! = 1$$
 
-Principe :
+$$\text{Si } n > 1, \hspace{1cm} n! = n \times (n - 1)$$
+$$\text{sinon, }\hspace{1cm} 0! = 1 \text{ et } 1! = 1$$
+
+
+Déroulé :
 
 ```
-  5! = 5 x 4!
-     = 5 x 4 x 3!
-     = 5 x 4 x 3 x 2!
-     = 5 x 4 x 3 x 2 x 1!
-     = 5 x 4 x 3 x 2 x 1 x 0!
-     = 5 x 4 x 3 x 2 x 1 x 1
+  5! =                          <--- on remplace 5!
+     = 5 x 4!                   <--- on remplace 4!
+     = 5 x 4 x 3!               <--- on remplace 3!
+     = 5 x 4 x 3 x 2!           <--- on remplace 2!
+     = 5 x 4 x 3 x 2 x 1!       <--- on remplace 1!
+     = 5 x 4 x 3 x 2 x 1 x 0!   <--- on remplace 0!
+     = 5 x 4 x 3 x 2 x 1 x 1    <--- il n'y a plus rien à remplacer
      = 120
 ```
 
@@ -166,10 +175,33 @@ def fact(n):
         return 1
     else:
         return n * fact(n-1)
+```
 
+```python
 >>> fact(5)
 120
 ```
+
+{{< python title="Factorielle" init="" >}}
+def fact(n):
+    if n <= 1:
+        return 1 
+    else:
+        return n * fact(n - 1)
+
+
+print(fact(5))
+{{< /python >}}
+
+Remarques :
+
+1. l'appel récursif : `return n * fact(n - 1)` 
+2. le cas de base : `if n <= 1: return 1`
+
+C'est donc bien une fonction récursive.
+
+L'appel récursif fait _décroître_ $n$ jusqu'à ce qu'il devienne $\leq 1$. On dit qu'on _progresse vers le cas de base_, ce qui prouve que la fonction n'entre jamais dans une suite infinie d'appels récursifs.
+
 
 ## Déroulement de l'exécution
 
@@ -199,23 +231,24 @@ fact(5)         # s'évalue à 120
 
 Dans [PythonTutor](http://pythontutor.com/live.html#code=def%20fact%28n%29%3A%0A%20%20%20%20if%20n%20%3C%3D%201%3A%0A%20%20%20%20%20%20%20%20result%20%3D%201%0A%20%20%20%20else%3A%0A%20%20%20%20%20%20%20%20next_value%20%3D%20n-1%0A%20%20%20%20%20%20%20%20result%20%3D%20n%20*%20fact%28next_value%29%0A%20%20%20%20return%20result%0Afact%285%29&cumulative=true&curInstr=0&heapPrimitives=false&mode=display&origin=opt-live.js&py=3&rawInputLstJSON=%5B%5D&textReferences=false)
 
-{{< graphviz title="Ordre des appels récursifs" >}}
+
+
+
+{{< graphviz title="Graphe des appels récursifs" >}}
 digraph G {
     graph [fontsize=30 labelloc="t" label="" splines=true overlap=false rankdir = "LR"];
     in [label="entrée = fact(4)"]
-    4 [label="fact"]
-    3 [label="fact"]
-    2 [label="fact"]
-    1 [label="fact"]
+    3 [label="fact(3)"]
+    2 [label="fact(2)"]
+    1 [label="fact(1) = 1"]
     out [label="sortie = 24"]
-    in -> 4 [label=4]
-    4 -> 3 [label=3]
-    3 -> 2 [label=2]
-    2 -> 1 [label=1]
+    in -> 3
+    3 -> 2
+    2 -> 1 
     1 -> 2 [label="1" loc="b"]
-    2 -> 3 [label="2"]
-    3 -> 4 [label="6"]
-    4 -> out [label="24"]
+    2 -> 3 [label="2" loc="b"]
+    3 -> in [label="6" loc="b"]
+    in -> out [label="24" loc="b"]
 }
 {{< /graphviz >}}
 
@@ -260,16 +293,16 @@ et modifiée par
 >>> fact(100)
   Traceback (most recent call last):
   File "<pyshell>", line 1, in <module>
-  File "C:\Users\JC\Documents\jc\enseignement\diu\bloc1\supports\recursivite\src\recursivite.py", line 16, in fact
+  File "recursivite.py", line 16, in fact
     return n * fact(n-1)
   ...
-  File "C:\Users\JC\Documents\jc\enseignement\diu\bloc1\supports\recursivite\src\recursivite.py", line 13, in fact
+  File "recursivite.py", line 13, in fact
     if n <= 1:
   RecursionError: maximum recursion depth exceeded in comparison
 ```
 
 
-# Eléments Caractéristiques
+## Eléments Caractéristiques
 
 
 {{< hint info >}}
@@ -285,7 +318,7 @@ Un programme récursif est constitué de deux parties :
       Cette situation est appelée *situation de terminaison* ou *situation d'arrêt* ou *cas d'arrêt* ou *cas de base*.
 
 2. **Un appel récursif.**\
-    chaque appel récursif doit se faire avec des données qui **permettent de se rapprocher d'une situation de terminaison**
+    chaque appel récursif doit se faire avec des données qui **permettent de se rapprocher d'un cas de base**
 
      ```python
              return n * fact(n-1)
@@ -293,7 +326,7 @@ Un programme récursif est constitué de deux parties :
 
  Il faut s'assurer que la situation de terminaison est atteinte après un nombre fini d'appels récursifs.
 
-La preuve de terminaison d'un algorithme récursif se fait en identifiant la construction d'une suite strictement décroissante d'entiers positifs ou nuls.
+Pour prouver qu'un algorithme récursif termine, on construit une suite d'entiers naturels strictement décroissante.
 {{< /hint >}}
 
 _Remarque:_ Dans le cas de factorielle, il s'agit simplement de la suite des valeurs du paramètre.
@@ -309,22 +342,29 @@ def fact(n):
     if n <= 1:
         return 1
     else:
-        return fact(n+1)/(n+1)
+        return fact(n + 1) / (n + 1)
 ```
 
-_Ce programme ne termine pas_
+_Ce programme ne termine pas..._
+
+{{< expand "" "..." >}}
+Parce qu'on s'éloigne du cas de base.
+
+La suite des entiers qu'on construit est, pour `fact(4)` est $4, 5, 6, 7,\ldots$
+{{< /expand >}}
 
 ## Un autre exemple
+
 Il faut trouver un énoncé récursif de résolution du problème, c'est-à-dire un énoncé qui fasse référence au problème lui-même.
 
 
-*Exemple* : calculer le nombre d'occurrences d'un caractère dans une chaîne.
+*Exemple* : calculer le nombre d'occurrences d'un caractère `c` dans une chaîne `s`.
 
 *Énonce* :
 
 * **Cas de base**
 
-    Le **nombre d'occurrences** de `c` dans `s` est 0 si `s` est vide.
+    Si `s` est vide, le **nombre d'occurrences** de `c` dans `s` est 0.
 
 * **Appel récursif**
 
@@ -336,7 +376,7 @@ Il faut trouver un énoncé récursif de résolution du problème, c'est-à-dire
 def occurrences(char, string):
     if string == "":
         return 0
-    elif char == s[0]:
+    elif char == string[0]:
         return 1 + occurrences(char, string[1:])
     else:
         return occurrences(char, string[1:])
@@ -344,7 +384,56 @@ def occurrences(char, string):
 
 La terminaison se vérifie en considérant la suite des longueurs des chaînes passées en paramètre.
 
+{{< python title="Occurrences" init="" >}}
+def occurrences(char, string):
+    if string == "":
+        print("cas de base 0")
+        return 0
+    elif char == string[0]:
+        print(f"{string} commence par {char} :)")
+        ret = 1 + occurrences(char, string[1:])
+        print(string, ret)
+        return ret
+    else:
+        print(f"{string} ne commence par par {char} :(")
+        ret = occurrences(char, string[1:])
+        print(string, ret)
+        return ret 
 
+print(occurrences("a", "abracadabra"))
+{{< /python >}}
+
+<a href="https://pythontutor.com/render.html#code=def%20occurrences%28char,%20string%29%3A%0A%20%20%20%20if%20string%20%3D%3D%20%22%22%3A%0A%20%20%20%20%20%20%20%20return%200%0A%20%20%20%20elif%20char%20%3D%3D%20string%5B0%5D%3A%0A%20%20%20%20%20%20%20%20return%201%20%2B%20occurrences%28char,%20string%5B1%3A%5D%29%0A%20%20%20%20else%3A%0A%20%20%20%20%20%20%20%20return%20occurrences%28char,%20string%5B1%3A%5D%29%0A%20%20%20%20%20%20%20%20%0Aprint%28occurrences%28%22a%22,%20%22ratata%22%29%29&cumulative=false&curInstr=0&heapPrimitives=nevernest&mode=display&origin=opt-frontend.js&py=311&rawInputLstJSON=%5B%5D&textReferences=false" target="_blank" rel="noopener">Visualiser dans Python Tutor</a>
+
+
+{{< graphviz title="Graphe des appels récursifs `occs('a', 'tata')`" >}}
+digraph G {
+    graph [fontsize=30 labelloc="t" label="" splines=true overlap=false rankdir = "LR"];
+    in [label="entrée =\n occs('a', 'tata')"]
+    4 [label="occs('a', 'ata')"]
+    3 [label="occs('a', 'ta')"]
+    2 [label="occs('a', 'a')"]
+    1 [label="occs('a', '')"]
+    out [label="sortie =\n3"]
+    in -> 4
+    4 -> 3
+    3 -> 2
+    2 -> 1 
+    1 -> 2 [label="0" loc="b"]
+    2 -> 3 [label="1 + 0" loc="b"]
+    3 -> 4 [label="1" loc="b"]
+    4 -> in [label="1 + 1" loc="b"]
+    in -> out [label="2" loc="b"]
+}
+{{< /graphviz >}}
+
+---
+
+## Compléments
+
+_La partie suivante est à étudier sérieusement une fois que vous avez digéré le principe de base et parvenez à écrire quelques fonctions récursives par vous même._
+
+---
 
 ## Récursivité terminale (_tail recursion_)
 
@@ -469,6 +558,8 @@ Dans un tel cas, si on veut utiliser efficacement la récursivité, il faudraitt
 
 C'est ce que nous ferons plus tard en _programmation dynamique_.
 
+---
+
 
 ## Structures récursives
 
@@ -516,7 +607,7 @@ Nombre d'occurrences dans une liste :
 
 ```python
 def nb_occurrences(valeur, liste):
-    if liste == [] :                        # quid de length(liste) == 0 ?
+    if liste == [] :                        # cas de base
         return 0
     elif valeur == liste[0]:
         return 1 + nb_occurrences(valeur, liste[1:])
@@ -525,7 +616,7 @@ def nb_occurrences(valeur, liste):
 ```
 
 
-*NB* Le langage Lisp se basait sur cette structure de données (Lisp = List Processing).
+*NB :* Le langage Lisp se basait sur cette structure de données (Lisp = List Processing).
 
 
 ## Quelques erreurs "classiques"
