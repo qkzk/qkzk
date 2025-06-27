@@ -219,6 +219,8 @@ digraph G {
 }
 {{< /graphviz >}}
 
+![Animation des appels récursifs](./img/recusion-factorial-code-animated-gifs.gif)
+
 ### Déroulement des appels récusifs
 
 Lorsqu'on appelle une fonction récusive :

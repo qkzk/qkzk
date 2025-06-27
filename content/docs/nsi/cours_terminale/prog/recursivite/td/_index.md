@@ -55,6 +55,7 @@ def even(n):
     `n! = 1 * 2 * 3 * ... * n` et `0! = 1`.
     Proposer un algorithme récursif qui calcule `n!`
 
+
 3.  **Algorithme d'Euclide**
 
     L'algorithme d'Euclide permet de calculer le pgcd de deux nombres
@@ -91,6 +92,10 @@ def even(n):
     Le termes suivant est calculé en ajoutant les deux derniers termes.
 
     Dessiner le graphe des appels successifs de `fib(4)`.
+
+
+    ![Fibonacci animation](./img/fibonacci-recursion-demonstration-animation-python.gif) 
+    
 
 5.  **Puissance d'un nombre**
 

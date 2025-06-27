@@ -153,6 +153,10 @@ Donc : comparer la valeur centrale à `x` et **éliminer la moitié des valeurs 
 
    On peut renvoyer `2`.
 
+### Animation
+
+![Comparaison de la recherche séquentielle et dichotomique](./binary-and-linear-search-animations.gif)
+
 ## Construction de l'algorithme
 
 {{< expand "" "Construction de l'algorithme" >}}
