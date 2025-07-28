@@ -1,6 +1,5 @@
 ---
 title: "Fonctions affines"
-theme: metropolis
 author: qkzk
 theme: Metropolis
 geometry: margin=1.2cm
@@ -8,7 +7,7 @@ weight: 6
 
 ---
 
-[pdf](./06-fct-affines.pdf)
+[pdf](./06_fonctions_affines.pdf)
 
 ## 1. Rappels : définitions et propriétés
 
@@ -50,11 +49,17 @@ Pour la représenter on peut choisir deux valeurs de $x$ :
 * L'ordonnée à laquelle la courbe de la fonction $f$ définie par $f(x)=ax+b$ coupe l'axe des ordonnées est $b$.
 * Le coefficient directeur se lit en choisissant deux points de la droite, séparés d'un en absissce. L'écart sur les ordonnées entre le point de gauche et le point de droite est $a$.
 
+#### Exemple 
+
+Pour la fonction $f(x) = 2x-4$ tracée ci-dessus, le coefficient directeur est $2$ et l'ordonnée à l'origine $-4$.
+
 ### 2. Par le calcul
 
-Pour deux points distincts $A(x_A, y_A)$ et $B(x_B, y_B)$ de la droite $d$, on a 
+Pour deux points distincts $A(x_A, y_A)$ et $B(x_B, y_B)$ avec $x_B \neq x_A$ de la droite $d$, on a 
 
 $$a = \frac{y_B - y_A}{x_B - x_A} \text{ et } b = y_A - ax_A$$
+
+Ainsi, $d = (AB)$ est la représentation graphique de $f(x) = ax+b$.
 
 ## 3. Sens de variation des fonctions affines
 
@@ -65,7 +70,10 @@ Soit $f$ la fonction affine $f: x \mapsto ax+b$ alors :
 * si $a=0$, $f$ est **constante** sur $\mathbb{R}$.
 
 
+$a > 0, f$ est strictement croissante.
 ![fig 2](./fig2.svg) 
+
+$a < 0, f$ est strictement décroissante.
 ![fig 3](./fig3.svg)
 
 **Remarque :** si $b=0$, la fonction est dite _linéaire_ et sa courbe passe par l'origine.
