@@ -130,78 +130,6 @@ Exemple : un **masque** est un "`et` bit à bit".
 | et bit à bit | 1001.0100 |
 
 
-## Complément à deux : comment coder les entiers négatifs dans une machine ?
-
-Ce qu'on a vu jusqu'ici ne permet que d'encoder des nombres positifs.
-
-### Deux approches possibles :
-
-### Approche insatisfaisante : **binaire signé**
-On fixe la taille mémoire de chaque nombre (par exemple 4 bits). Le premier bit est le **bit de signe** : 1 pour les négatif, 0 pour les positifs.
-
-* En binaire signé sur 4 bits : `0b1001 = -1` , `0b1011 = -3`, `0b0111 = 7` etc.
-* L'addition présentée plus haut **ne fonctionne plus** : `0b1001 + 0b0001 = -1 + 1 = 0` mais bit à bit cela donne : `0b1010 = -2`... Le binaire signé c'est nul.
-
-### **Complément à deux**
-
-on fixe la taille mémoire de chaque nombre (par exemple 4 bits).
-
-* Les nombres positifs sont encodés comme d'habitude.
-* Les nombres négatifs sont encodés ainsi : (exemple : -3)
-
-  1. Coder la valeur absolue du nombre en base 2 : `3 = 0b11`
-  2. compléter l'octet avec des 0 devant (jusqu'à la taille): `0b0011`
-  3. échanger tous les bits ($1 \leftrightarrow 0$) : `0b1100`
-  4. ajouter 1. `-3 = 0b1101`
-
-* Le complément à deux permet de conserver le même algorithme pour l'addition :
-
-  `-3 + 2 = 0b1101 + 0b0010 = 0b1111 = -1`
-* le complément à deux c'est bien... MAIS il faut prédéfinir une taille !!!
-
-  Pas d'entiers de taille _arbitraire_ en complément à deux !
-
-### `1111 0011 = ???`
-
-Devant une série de bits, on ne peut **deviner** ce qu'ils représentent.
-
-Est-ce un entier positif ? négatif (binaire signé, complément à deux) ? autre chose ?
-
-Le contexte (pour vous : l'énoncé) précise ce qu'il faut comprendre.
-
-### Table de valeurs du complément à 2 sur 8 bits
-
-  ~~~
-   bit
-   de
-  signe
-      0 1 1 1 1 1 1 1 =  127
-      0      ...      =  ...
-      0 0 0 0 0 0 1 0 =    2
-      0 0 0 0 0 0 0 1 =    1
-      0 0 0 0 0 0 0 0 =    0
-      1 1 1 1 1 1 1 1 =   -1
-      1 1 1 1 1 1 1 0 =   -2
-      1      ...      =  ...
-      1 0 0 0 0 0 0 1 = -127
-      1 0 0 0 0 0 0 0 = -128
-  ~~~
-
-
-### et Python là dedans ?
-
-Les opérations précédentes ont toutes supposées une taille fixe des entiers : **codés sur un octet** par exemple.
-
-Dans Python les entiers ont une _taille arbitraire_, il ne peut afficher nativement le complément à deux.
-
-~~~python
->>> bin(12)
-'0b1100'
->>> bin(-12)
-'-0b1100'
-~~~
-
-
 ## Représentation d'un texte en machine
 
 > Attendu : Identifier l’intérêt des différents systèmes d’encodage.
@@ -282,3 +210,168 @@ table ci-dessous :
 
 L'encodage UTF-8 est lui aussi compatible avec l'ASCII. En revanche ISO-8859-1
 et UTF-8 sont incompatibles entre eux pouvant conduire à des caractères illisibles.
+
+## Complément à deux : comment coder les entiers négatifs dans une machine ?
+
+Ce qu'on a vu jusqu'ici ne permet que d'encoder des nombres positifs.
+
+### Deux approches possibles :
+
+### Approche insatisfaisante : **binaire signé**
+On fixe la taille mémoire de chaque nombre (par exemple 4 bits). Le premier bit est le **bit de signe** : 1 pour les négatif, 0 pour les positifs.
+
+* En binaire signé sur 4 bits : `0b1001 = -1` , `0b1011 = -3`, `0b0111 = 7` etc.
+* L'addition présentée plus haut **ne fonctionne plus** : `0b1001 + 0b0001 = -1 + 1 = 0` mais bit à bit cela donne : `0b1010 = -2`... Le binaire signé c'est nul.
+
+### **Complément à deux**
+
+on fixe la taille mémoire de chaque nombre (par exemple 4 bits).
+
+* Les nombres positifs sont encodés comme d'habitude.
+* Les nombres négatifs sont encodés ainsi : (exemple : -3)
+
+  1. Coder la valeur absolue du nombre en base 2 : `3 = 0b11`
+  2. compléter l'octet avec des 0 devant (jusqu'à la taille): `0b0011`
+  3. échanger tous les bits ($1 \leftrightarrow 0$) : `0b1100`
+  4. ajouter 1. `-3 = 0b1101`
+
+* Le complément à deux permet de conserver le même algorithme pour l'addition :
+
+  `-3 + 2 = 0b1101 + 0b0010 = 0b1111 = -1`
+* le complément à deux c'est bien... MAIS il faut prédéfinir une taille !!!
+
+  Pas d'entiers de taille _arbitraire_ en complément à deux !
+
+### `1111 0011 = ???`
+
+Devant une série de bits, on ne peut **deviner** ce qu'ils représentent.
+
+Est-ce un entier positif ? négatif (binaire signé, complément à deux) ? autre chose ?
+
+Le contexte (pour vous : l'énoncé) précise ce qu'il faut comprendre.
+
+### Table de valeurs du complément à 2 sur 8 bits
+
+  ~~~
+   bit
+   de
+  signe
+0 1 1 1 1 1 1 1 =  127
+      0      ...      =  ...
+      0 0 0 0 0 0 1 0 =    2
+      0 0 0 0 0 0 0 1 =    1
+      0 0 0 0 0 0 0 0 =    0
+      1 1 1 1 1 1 1 1 =   -1
+      1 1 1 1 1 1 1 0 =   -2
+      1      ...      =  ...
+      1 0 0 0 0 0 0 1 = -127
+      1 0 0 0 0 0 0 0 = -128
+  ~~~
+
+
+### et Python là dedans ?
+
+Les opérations précédentes ont toutes supposées une taille fixe des entiers : **codés sur un octet** par exemple.
+
+Dans Python les entiers ont une _taille arbitraire_, il ne peut afficher nativement le complément à deux.
+
+~~~python
+>>> bin(12)
+'0b1100'
+>>> bin(-12)
+'-0b1100'
+~~~
+
+## Flottants
+
+Afin de représenter des nombres à virgule en machine plusieurs approches sont envisageables : la _virgule fixe_ ou la _virgule flottante_.
+
+Pour l'un comme l'autre l'espace mémoire est le même : chaque nombre occupe le même nombre de bits. La précision possible est très différente.
+
+### Virgule fixe 
+
+On décide une fois pour toute de l'emplacement de la virgule. Pour le reste c'est comme en binaire.
+
+Par exemple, sur 8 bits, avec une virgule après 4 bits : `1011,0011`.
+
+La précision est limitée par le nombre de bits après la virgule et la taille maximale aussi. 
+
+Peu commode.
+
+### Virgule flottante
+
+On s'inspire de la notation scientifique : $3.45678 \times 10^{3} = 3456.78$.
+
+Et donc, pour un flottant :
+
+$1.1001101 \times 2^{4} = 1~1001.101$ soit $16+8+1+\dfrac{1}{2}+\dfrac{1}{8}$.
+
+Les bits après la virgule sont les _inverses_ des puissances de 2.
+
+En machine, il faut encoder plusieurs informations:
+
+- le signe,
+- l'exposant,
+- les bits _après_ la virgule. _Pour le premier, c'est toujours 1, on peut l'ignorer_.
+
+C'est ce qui est fait dans la norme IEE 754 de 1985.
+
+
+### IEE 754 
+
+Dans cette norme (IEEE 754, double précision), les nombres dyadiques sont codés sur 64 bits en réservant :
+
+* $1$ bit pour le signe $S$,
+* $11$ bits pour l’exposant $E$,
+* $52$ bits pour la mantisse $M$.
+
+La valeur du nombre est alors :
+
+$$(-1)^S \times M \times 2^{E - 1033}$$
+
+Ce qu'on peut résumer ainsi :
+
+| Norme                | Encodage | Signe | Exposant | Mantisse | Valeur                                  | Précision |
+|----------------------|----------|-------|----------|----------|-----------------------------------------|-----------|
+| **Double précision** | 64 bits  | 1 bit | 11 bits  | 52 bits  | $$(-1)^S \times M \times 2^{E - 1033}$$ | 53 bits   |
+
+
+### Erreurs de calculs
+
+De la même manière qu'avec la notation scientifique, des erreurs apparaissent nécessairement lorsqu'on calcule avec des flottants.
+
+La plus frappante est certainement 
+
+```python 
+>>> 0.1 + 0.2
+0.30000000000000004
+```
+
+Elle provient d'une erreur de _conversion_ en binaire de 0.1, 0.2 et 0.3 qui ne sont pas _dyadiques_. C'est-à-dire qu'ils n'admettent pas de représentation _finie_ en binaire.
+
+### Egalité impossible entre les floats.
+
+
+```python 
+>>> 0.1 + 0.2 == 0.3 
+False 
+```
+
+Il est impossible de tester l'égalité de deux flottants.
+
+### Autres erreurs.
+
+D'autres existent, comme par exemple des problèmes d'amplitude :
+
+Avec la _double précision_, on ne peut représenter $10^{40000}$ qui dépasse largement le plus grand nombre qu'on puisse représenter : $2^{1024} - 2^{971} \approx 1,80 \times 10^{308}$.
+
+On évite ces problèmes en proposant deux valeurs supplémentaires : `NaN` et les infinis.
+
+### `NaN` et infinis 
+
+- Les infinis se rencontrent lorsqu'un calcul dépasse le plus grand nombre représentable. Ils sont _plus grands_ que toute valeur.
+
+- les `NaN`, pour _not a number_ se rencontrent lorsqu'on n'est pas capable de représenter un nombre par manque de précision. Par exemple, soustraire des infinis ou les diviser entre eux.
+
+
+
