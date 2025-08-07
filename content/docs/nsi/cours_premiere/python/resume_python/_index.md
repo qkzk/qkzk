@@ -7,7 +7,7 @@ weight: 100
 
 ---
 
-pdf : pour [impression](/uploads/docsnsi/programmation/bases/python_complet.pdf)
+[pdf](./resume.pdf)
 
 # Les bases de Python
 
