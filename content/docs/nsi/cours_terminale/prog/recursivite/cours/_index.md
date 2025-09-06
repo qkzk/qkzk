@@ -149,7 +149,7 @@ Une _liste_ est une structure de données.
 Ne faisons pas dans l'originalité, la _factorielle_ :
 
 
-$$\text{Si } n > 1, \hspace{1cm} n! = n \times (n - 1)$$
+$$\text{Si } n > 1, \hspace{1cm} n! = n \times (n - 1)!$$
 $$\text{sinon, }\hspace{1cm} 0! = 1 \text{ et } 1! = 1$$
 
 
