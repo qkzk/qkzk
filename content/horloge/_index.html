@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>a</title>
+  <style>
+    h1 {
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <h1 id="horloge"></h1>
+  </div>
+
+  <script>
+    function format_time() {
+      var now = new Date();
+      var hours = ('0' + now.getHours()).slice(-2);
+      var minutes = ('0' + now.getMinutes()).slice(-2);
+      var seconds = ('0' + now.getSeconds()).slice(-2);
+
+      return `${hours}:${minutes}:${seconds}`;
+    }
+
+    function fill_time() {
+      document.getElementById('horloge').innerHTML = format_time();
+    }
+
+    setInterval(fill_time, 1000);
+
+
+  </script>
+</body>
+
+</html>
