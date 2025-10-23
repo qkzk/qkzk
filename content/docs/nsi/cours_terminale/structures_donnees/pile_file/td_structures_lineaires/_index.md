@@ -2,7 +2,7 @@
 title: "Structures de données linéaires : TD"
 bookCollapseSection: true
 author: "qkzk"
-weight: 100
+weight: 10000
 
 ---
 

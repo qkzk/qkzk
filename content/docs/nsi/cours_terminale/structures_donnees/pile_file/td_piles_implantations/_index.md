@@ -3,7 +3,7 @@ title: "Plusieurs implantations d'une pile"
 author: qkzk
 date: 2025-10-23
 theme: metropolis
-weight: 10
+weight: 5
 bookCollapseSection: true
 geometry: "margin=1.5cm"
 header-includes: |
