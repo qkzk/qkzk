@@ -169,3 +169,86 @@ def test():
 if __name__ == "__main__":
     test()
 ```
+
+## Version 3 en employant des cellules
+
+Cette fois on emploie une cellule afin d'enregistrer la valeur. En y ajoutant un lien vers l'élément suivant, ces cellules modélisent des listes chaînées. 
+
+L'interface pour l'utilisateur est totalement identique à la version avec des classes mais les coûts sont différents.
+
+```python
+from typing import Any
+
+
+class Cellule:
+    """Une cellule d'une pile"""
+
+    def __init__(self, valeur, suivant):
+        self.__valeur = valeur
+        self.__suivant = suivant
+
+    def valeur(self):
+        """accesseur de la valeur"""
+        return self.__valeur
+
+    def suivant(self):
+        """accesseur de la suite"""
+        return self.__suivant
+
+
+class Pile:
+    """Classe modélisant une pile"""
+
+    def __init__(self):
+        pass
+
+    def empiler(self, valeur: Any) -> None:
+        """Ajoute valeur à la pile"""
+
+    def depiler(self) -> Any:
+        """
+        Retire et renvoie le sommet de la pile.
+        Plante si la pile est vide.
+        """
+
+    def est_vide(self) -> bool:
+        """Vrai ssi la pile est vide"""
+
+    def longueur(self) -> int:
+        """Le nombre d'éléments de la pile"""
+
+    def sommet(self) -> Any:
+        """
+        Permet de consulter le sommet de la pile.
+        Ne modifie pas son contenu.
+        Plante si la pile est vide.
+        """
+
+    def __repr__(self) -> str:
+        pass
+
+
+def test():
+    pile = Pile()
+    assert pile.est_vide()
+    pile.empiler(5)
+    assert not pile.est_vide()
+    pile.empiler(1)
+    pile.empiler(3)
+    pile.empiler(7)
+    assert pile.longueur() == 4
+    assert pile.depiler() == 7
+    pile.empiler(9)
+    print(repr(pile))
+    assert pile.depiler() == 9
+    assert pile.depiler() == 3
+    assert pile.depiler() == 1
+    assert pile.depiler() == 5
+    assert pile.est_vide()
+
+
+if __name__ == "__main__":
+    test()
+```
+
+
