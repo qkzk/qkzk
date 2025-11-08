@@ -1,9 +1,8 @@
 <!-- mathjax support latex -->
 {{ if and (not .Params.disable_mathjax) (or (in (string .Content) "\\") (in (string .Content) "$")) }}
 <script src="//yihui.name/js/math-code.js"></script>
-<!-- <script id="MathJax-script" async -->
-<!--     src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script> -->
-<script defer src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-svg.js"></script>
+<script id="MathJax-script" async
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 
 <script type="text/x-mathjax-config">
 MathJax.Hub.Config({
@@ -20,4 +19,4 @@ MathJax.Hub.Config({
 </script>
 {{ end }}
 
-<script async src="https://cdnjs.cloudflare.com/ajax/libs/mermaid/10.0.2/add-html-label-3fd8c466.min.js"></script>
+<script async src="https://unpkg.com/mermaid@8.2.3/dist/mermaid.min.js"></script>
