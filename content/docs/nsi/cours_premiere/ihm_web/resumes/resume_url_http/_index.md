@@ -11,9 +11,9 @@ geometry: "margin=1.5cm"
 
 ---
 
-# URL
+## URL
 
-## Définition
+### Définition
 
 Une URL (Uniform Resource Locator) permet d'identifier une ressource sur un réseau.
 
@@ -33,7 +33,7 @@ Les fichiers sont classés dans une structure en arborescence.
 
 L'URL peut se terminer par un nom précis de fichier (`index.html`) ou non.
 
-## Adresse IP et nom de domaine.
+### Adresse IP et nom de domaine.
 
 La domaine peut généralement être remplacé par une adresse IP.
 
@@ -44,7 +44,7 @@ C'est le _serveur DNS_ (domain name serveur) qui traduit cette adresse IP en nom
 Attention, certains domaines utilisent des adresse IPv6 plus longues. Par exemple pour google.com : `2a00:1450:4007:811::200e` (sur 16 octets, 128 bits).
 
 
-## Chemin absolu, chemin relatif
+### Chemin absolu, chemin relatif
 
 Pour se déplacer dans une arborescence on peut employer deux méthodes :
 
@@ -62,9 +62,9 @@ Les deux approches conduisent (normalement) au même point.
 
 
 
-# Protocole HTTP
+## Protocole HTTP
 
-## Définition : Protocole
+### Définition : Protocole
 
 Un **protocole** est un ensemble de règles qui permettent à deux ordinateurs de communiquer ensemble. HTTP (HyperText Transfer Protocol) permet au client d'effectuer des requêtes à destination d'un serveur web. En retour le serveur web envoie une réponse.
 
@@ -82,11 +82,45 @@ Un **protocole** est un ensemble de règles qui permettent à deux ordinateurs d
     * Le client (généralement le navigateur) émet une requête,
     * Le serveur renvoie une réponse à la requête.
 
-## Quelques détails sur HTTP
+### Quelques détails sur HTTP
 
 1. C'est un **protocole sans connexion** (connectionless) : après émission d'une requête, la connexion est fermée (contrairement à un jeu en ligne où la connexion est maintenue durant la partie). Le serveur réétabli la connexion pour envoyer la réponse. Et il ferme la connexion.
 2. HTTP **peut envoyer n'importe quel type de données** tant que les deux ordinateurs sont capables de les lire. Le plus souvent : texte, image, vidéos etc. mais pas que !
 3. HTTP est un **protocole "sans état"** (stateless) : le client et le serveur se connaissent que durant l'émission d'une requête ou la réception d'une réponse. Ensuite pour se parler à nouveau, ils doivent fournir à nouveau l'information.
+4. Une requête (émise par un _client_, généralement le navigateur) est suivie d'une _unique réponse_. Un seul fichier peut être transmis par réponse.
+    - Une page web (`index.html`), c'est **un** fichier.
+    - Elle contient des liens vers deux images (**deux autres fichiers**) : `chat.jpg` et `maison.jpg`.
+    
+    Lorsque j'affiche cette page, en tapant l'adresse, le navigateur a émis :
+    - une requete pour récupérer le contenu de `html.jpg`,
+    - une requête pour récupérer l'image `chat.jpg`,
+    - une requête pour récupérer l'image `maison.jpg`.
+
+    En pratique une page riche peut contenir des dizaines d'images ou de fichiers (css, javascript etc.). 
+
+    **Chaque fichier requiert une requête pour être chargé**.
+
+    ```html 
+    <html>
+
+    <head>
+      <title>Exemple</title>
+    </head>
+
+    <body>
+      <h1>Titre</h1>
+      <div>
+        <p>
+          Le chat : <img src="chat.jpg">
+        </p>
+        <p>
+          La maison : <img src="maison.jpg">
+        </p>
+      </div>
+    </body>
+
+    </html>
+    ```
 
 Moins important :
 
@@ -94,13 +128,13 @@ Moins important :
 2. HTTP a rapidement évolué et a été massivement adopté dans les années 90.
 
 
-## Cycle requête / réponse HTTP
+### Cycle requête / réponse HTTP
 
 **Le client envoie une requête, le serveur renvoie une réponse.**
 
 ![cycle requête reponse http](./http_request_response_cycle.svg)
 
-## Requête HTTP
+### Requête HTTP
 
 Exemple de requête HTTP  :
 
@@ -125,7 +159,7 @@ Ici :
 * Le navigateur est Mozilla 5.0 (firefox...),
 * On attend une réponse en texte formaté en HTML.
 
-### Méthode employée
+#### Méthode employée
 
 Il existe de nombreuses méthodes HTTP (parfois appelées _verbes_) :
 
@@ -144,7 +178,7 @@ On utilisera principalement les deux premières :
 * **GET** : demande une représentation d'une ressource : obtenir une page web, un fichier, une donnée.
 * **POST** : envoie une entité vers la ressource : soumettre des données au serveur.
 
-## Réponse HTTP du serveur à une requête
+### Réponse HTTP du serveur à une requête
 
 Un exemple de réponse
 
@@ -168,7 +202,7 @@ Content-Type: text/html; charset=UTF-8
 </html>
 ~~~
 
-### Quelques détails :
+#### Quelques détails :
 
 * Première ligne : `HTTP/1.1 200 OK` version de HTTP et code réponse.
     Parmi les codes courant on trouve :
@@ -204,7 +238,7 @@ Content-Type: text/html; charset=UTF-8
 Souvenons nous que cette réponse est en fait une série de bit que le client interprète comme une réponse HTTP. Ce sont des _bits_ qui transitent sur le réseau.
 
 
-### Contenu de la page.
+#### Contenu de la page.
 
 Le contenu "habituel" d'une page web :
 
@@ -225,7 +259,19 @@ Le contenu "habituel" d'une page web :
 Il est généralement envoyé en réponse à une requête (GET, POST) APRES l'entête dans le CORPS de la requête
 
 
-## Etapes supplémentaires du protocole HTTPS
+## HTTPS
+
+HTTPS "Hypertext Transfer Protocol Secure" ajoute une couche de _sécurisation_ à HTTP.
+
+Il permet d'ajouter :
+
+- le chiffrement des données : les données, même interpectées, ne peuvent être lue que par leur destinataire,
+- l'authentification : on peut vérifier qu'on échange bien avec le site web voulu et par qui celui-ci est détenu.
+
+Sans ce protocole, toute donnée transmise peut-être interceptée et lue par n'importe qui.
+
+
+### Etapes supplémentaires du protocole HTTPS
 
 **HTTPS** pour **SECURED** HTTP
 
@@ -234,7 +280,7 @@ Il est généralement envoyé en réponse à une requête (GET, POST) APRES l'en
 3. **Le client** (généralement le navigateur) **vérifie le certificat et affiche à côté de l'adresse une information à l'utilisateur** sur ce certificat (valide, invalide, périmé etc.)
 3. Les échanges sont maintenants **chiffrés** grâce à une **clé publique et une clé privée** (chiffrement asynchrone)
 
-## Etablir une connexion HTTP dans un langage de programmation
+### Etablir une connexion HTTP dans un langage de programmation
 
 L'usage courant est d'employer un navigateur (chrome, firefox) pour faire des requêtes HTTP. Elles sont alors cachées à l'utilisateur.
 
@@ -247,7 +293,7 @@ C'est une méthode courante pour faire communiquer directement les machines. Cha
 En Python 2 lignes suffisent pour obtenir une réponse HTTP et la traiter ensuite.
 
 ~~~python
->>> import requests # librairie qui gère les connexion HTTP
+>>> import requests ## librairie qui gère les connexion HTTP
 >>> reponse = requests.get("http://qkzk.xyz")
 >>> # on établi une connexion avec mon site
 ~~~
@@ -257,8 +303,8 @@ Le code réponse et l'entête :
 ~~~python
 >>> reponse
 <Response [200]>
->>> # la connexion est établie correctement (200 signifie OK)
->>> reponses.headers # detail de la reponse du serveur
+>>> ## la connexion est établie correctement (200 signifie OK)
+>>> reponses.headers ## detail de la reponse du serveur
 {'Server': 'GitHub.com', 'Content-Type': 'text/html; charset=utf-8',
 'Last-Modified': 'Wed, 09 Oct 2019 16:10:57 GMT', 'ETag': 'W/"5d9e0691-e152"',
 'Access-Control-Allow-Origin': '*', 'Expires': 'Sat, 12 Oct 2019 09:20:09 GMT',

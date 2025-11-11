@@ -283,54 +283,80 @@ En voici une qui devrait fonctionner sur un ordinateur et un téléphone.
 
 1. Rendez-vous sur le site [httpie](https://httpie.io/app)
 2. Essayons une première requête :
-   - adresse : `pie.dev/put`
-   - choississez comme méthode HTTP : `PUT`,
-   - dans les headers : `API-Key` `FOO` et `hello` `world`.
+   - adresse : `httpbin.org/post`
+   - choississez comme méthode HTTP : `POST`,
+   - dans les _params_ : `number` 30
+   - dans les _headers_ : `name` `martin` et `hello` `world`.
 3. "Send". La réponse apparaît à droite.
 
 Examinons cette requête.
 
 On a transmis :
 
-- une clé d'API (Application Programming Interface) : `"foo"` permettant de s'identifier
-- un couple clé valeur `hello`, `world`
+- un paramètre `number` valant 30,
+- dans l'entête (`header`) deux couples : `{'name': 'martin', 'hello': 'world'}`.
 
-Voici un résultat similaire à celui obtenu :
 
-```json
-{
-  "args": {},
-  "data": "",
-  "files": {},
-  "form": {},
-  "headers": {
-    "Accept-Encoding": "gzip",
-    "Api-Key": "foo",
-    "Baggage": "sentry-environment=production,sentry-release=bbcaf558f75858405bf0ad0eddce1d33a5eda092,sentry-public_key=53fade3064084ef092f9e005bec83766,sentry-trace_id=e8b877d1079f4ab9a1424507ce6b97ba",
-    "Cdn-Loop": "cloudflare; loops=1",
-    "Cf-Connecting-Ip": "44.211.62.34",
-    "Cf-Ipcountry": "US",
-    "Cf-Ray": "8e5aa184ba93d670-FRA",
-    "Cf-Visitor": "{\"scheme\":\"http\"}",
-    "Connection": "Keep-Alive",
-    "Content-Length": "0",
-    "Content-Type": "text/plain;charset=UTF-8",
-    "Hello": "world",
-    "Host": "pie.dev",
-    "User-Agent": "HTTPie",
-    "X-Vercel-Id": "cdg1:cdg1::8zp8g-1732128681599-2436fa82d863"
-  },
-  "json": null,
-  "origin": "44.211.62.34",
-  "url": "http://pie.dev/put"
-}
-```
+
+
+La réponse contient deux parties et s'affiche à droite de l'écran.
+
+- l'entête : "Header" (déployez le dans httpie.io) : 
+
+  ```
+  Access-Control-Allow-Credentials true
+  Access-Control-Allow-Origin *
+  Connection close
+  Content-Length 701
+  Content-Type application/json
+  Date Tue, 11 Nov 2025 08:47:09 GMT
+  Server gunicorn/19.9.0
+  ```
+
+- le corps du message :
+
+  ```json
+  {
+    "args": {
+      "c": "30"
+    },
+    "data": "",
+    "files": {},
+    "form": {},
+    "headers": {
+      "A": "b",
+      "Baggage": "sentry-environment=production,sentry-release=2d8767f283832ec214a277c758d4882374ffd481,sentry-public_key=53fade3064084ef092f9e005bec83766,sentry-trace_id=0b656835668943c586e0d7e603e1544e",
+      "Content-Length": "0",
+      "Content-Type": "text/plain;charset=UTF-8",
+      "Host": "httpbin.org",
+      "Name": "martin",
+      "User-Agent": "HTTPie",
+      "X-Amzn-Trace-Id": "Root=1-6912f80d-631b028d114ab2d41ca0a24d",
+      "X-Vercel-Id": "fra1:fra1::fx6q7-1762850829419-62c758af87e3"
+    },
+    "json": null,
+    "origin": "1.2.3.4",
+    "url": "http://httpbin.org/post?c=30"
+  }
+  ```
+
+Le serveur a répondu dans un format spécifique appelé JSON (JavaScript Object Notation) qui est couramment employé sur le web.
+
+Détaillons l'entête :
+
+- Le _code_ de la réponse est 200 (qui signifie OK, il n'y a pas d'erreur),
+- La réponse est au format JSON 
+- Elle a été émise à telle date,
+- Sa longueur est de 701 octets,
+
+etc.
+
 
 ### Exercice 2
 
 Toujours depuis httpie :
 
-1. exécuter une requête `GET` vers mon site.
+1. exécuter une requête `GET` vers mon site. Regardez le résultat puis décochez "Preview".
 
    _Contrairement à ce que le site affiche en preview, la réponse obtenue ne contient pas le css et la vingtaine de fichiers associés, seulement le contenu html. La preview est obtenue en envoyant 20 autres requêtes qui n'apparaissent pas..._
 
@@ -458,3 +484,7 @@ dans la base.
    Qu'obtient-t-on dans chacun des cas ?
 
 3. Peut-on publier un message sans `title` ? sans `body` ?
+
+## Résumé du protocole HTTP 
+
+Lire soigneusement [cette partie](../resumes/resume_url_http/#protocole-http).
