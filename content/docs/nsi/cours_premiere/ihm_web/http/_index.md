@@ -265,6 +265,20 @@ C'est la requête qui a été transmise quand on a tapé :
 On a bien transmis une requête GET au serveur, avec toutes les informations
 voulues. C'est bien Python qui a transmis cette requête.
 
+
+### Cas particulier d'un proxy 
+
+Dans l'éventualité où ces requêtes sont émises depuis un poste situé derrière un proxy, il convient d'indiquer les paramètres à `request`.
+
+```python 
+import requests 
+
+proxies = {"http": "http://172.20.0.253:3128", "https": "http://172.20.0.253:3128"}
+requests.get("https://qkzk.xyz", proxies=proxies) # ajouter le paramètre nommé proxies=proxies à chaque requête.
+```
+
+Bien sûr, il faut adapter les paramètres du proxy à votre configuration locale.
+
 ### Exercice 1
 
 1. En utilisant Sublime Text reproduire les commandes présentées ci-dessus pour joindre
