@@ -20,6 +20,10 @@ R-3 05c
 - [TD4](./TD_04_rect.pdf)
 - [TD5](./TD_05.pdf)
 
+## Exercices de Révision
+
+- [Lois de probabilité discètes](./exo_lois_discretes.pdf) et [d'autres exercices](./PDT_2023_lois_discretes.pdf)
+
 ## Devoirs
 
 ### Devoir 1
