@@ -74,29 +74,28 @@ L'autre danger des _outils natifs_, c'est que de telles instructions **n'existen
 
 ## Les tableaux en informatique
 
-**Un tableau est une série d'objets, généralement situés côte à côté dans la mémoire.**
+**Un tableau est une série d'objets de même taille, généralement situés côte à côté dans la mémoire.**
 
 On suppose pouvoir parcourir le tableau, élément par élément.
 
-{{< expand "Intéret des tableaux" "..." >}}
 ### Intérêt des tableaux 
 
 En enregistrant des objets côte à côte dans la mémoire, on peut accéder très rapidement à l'un d'entre eux par son indice.
 
+Imaginons qu'on doive enregistrer des entiers compris entre 0 et 255 (des octets) dans la mémoire.
+
+On utilise 1 octet par valeur.
+
 Considérons `[5, 7, 3, 8, 12]`.
 
-Ces entiers sont petits, tous entre 0 et 255, on peut utiliser 1 octet (8 bits) par entier.
+On enregistre  côte à côte en mémoire à partir de l'adresse mémoire `1234`.
 
-On les enregistre côte à côte en mémoire à partir de l'adresse mémoire `1234`.
+Donc, 
 
-Donc, `5` est enregistré à l'adresse `1234`.
-
-Si chaque case utilise 1 octet, l'adresse suivante, `1235` correspond à la case contenant 7.
-
-Et l'adresse de l'élément d'indice 3 (qui est la valeur 8) est `1234 + 3 = 1237`.
+- `5` est enregistré à l'adresse `1234` ;
+- `7` est enregistré à l'adresse `1235` etc.
 
 Pour la machine, ces calculs sont très rapides.
-{{< /expand >}}
 
 ### Les tableaux en Python
 
@@ -107,7 +106,7 @@ En Python, pour illustrer les tableaux, on utilise les objets `list`.
 >>> type(T)
 <class 'list'>
 ```
-
+{{< expand "" "..." >}}
 ### Constructions de tableaux
 
 Il existe quatre méthodes simples pour construire les tableaux en Python
@@ -174,6 +173,8 @@ On va obtenir un itérable correspondant à `[3, 7, 11, 15]`
 * S'il n'y a qu'un nombre, c'est la borne de fin. La borne de début est 0.
 
 `range(6)` retourne l'itérable correspondant à la liste des entiers `[0, 1, 2, 3, 4, 5]`
+
+{{< /expand  >}}
 
 ## Parcourir un tableau
 
@@ -489,11 +490,11 @@ def moyenne2(tableau):
 
 Difficile de comprendre ce qui se passe !
 
-## Retourner un tableau
+## Renverser un tableau
 
 ```python
 >>> T = [1, 2, 3]
->>> retourner(tableau)
+>>> renverser(tableau)
 >>> [3, 2, 1]
 ```
 
@@ -501,26 +502,20 @@ Comment faire ?
 
 ### principe
 
-* On crée un tableau vide `R` pour nos éléments retournés
+* On crée un tableau vide `R` pour nos éléments renversés
 * On parcourt le tableau `T`,
   * pour chaque élément rencontré, on _l'insère au début de R_
-* On retourne `R`
+* On renvoie `R`
 
 ### python
 
 ```python
-def retourner(tableau):
+def renverser(tableau):
   tab_retourne = []
   for element in tableau:
     tab_retourne.insert(0, element)
-    # variante moins efficace :
-    # tab_retourne = [element] + tableau_retourne
   return tab_retourne
 ```
-
-* faîtes bien attention aux crochets `[element] + tableau_retourne`
-
-  On _ajoute deux tableaux_: Python les met bout à bout !
 
 ### Opération native en python
 
@@ -577,7 +572,7 @@ On rencontre souvent des données qui sont présentées sous la forme d'un table
                         5678
 ```
 
-Ces tableaux sont appelés des **matrices**. Celle-ci a 2 lignes et 4 colonnes
+Les tableaux à deux dimensions sont appelés des **matrices**. Celle-ci a 2 lignes et 4 colonnes
 
 ### Affecter une matrice à une variable
 
@@ -596,8 +591,6 @@ mat = [[1, 2, 3, 4],
 
 On dit que c'est une structure _imbriquée_.
 
-Cette notation est universelle.
-
 ### Atteindre un élément.
 
 
@@ -606,10 +599,11 @@ mat = [[1, 2, 3, 4],
        [5, 6, 7, 8]]
 ```
 
-Disons qu'on veut atteindre le nombre 3. Il est dans la première ligne, 3ème
-colonne :
+On veut atteindre le nombre 3. Il est dans la première ligne, 3ème colonne :
 
 ```python
+>>> mat[0]
+[1, 2, 3, 4]
 >>> mat[0][2]
 3
 ```
@@ -789,6 +783,7 @@ for ligne in mat:
 
 La valeur finale de `somme` est `25`
 
+{{< expand "" "..." >}}
 
 ## D'autres représentations des matrices
 
@@ -819,8 +814,9 @@ display(img) # afficher dans colab
 ## dégradé obtenu
 
 ![Degradé rouge -> noir](./degrade.jpg)
+{{< /expand >}}
 
-# Variants et invariants
+## Variants et invariants
 
 * Un _invariant de boucle_ est un propriété qui est vraie avant et après chaque tour d’une boucle.
 * On appelle _variant de boucle "tant que"_ toute quantité qui décroit strictement à chaque tour de la boucle.
@@ -863,7 +859,7 @@ def indice_du_maximum(tab: list) -> int:
 
     Conclusion : lorsque la boucle se termine à `i = len(tab)`, `indice_maxi` est l'indice du plus grand de tous les éléments.
 
-## Exemples
+### Exemples
 
 ### Exponentiation rapide
 
