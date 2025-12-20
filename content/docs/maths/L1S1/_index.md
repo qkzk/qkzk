@@ -17,4 +17,7 @@ bookCollapseSection: true
 
 ## 2025-2026
 
-Sections 1 & 3 : [DS de novembre](./L1S1_ds_novembre_2025.pdf) et correction [page 1](./L1S1_corr_nov_25_1.jpeg) et [page 2](./L1S1_corr_nov_25_2.jpeg)
+Sections 1 & 3 : 
+
+- [DS de novembre](./L1S1_ds_novembre_2025.pdf) et correction [page 1](./L1S1_corr_nov_25_1.jpeg) et [page 2](./L1S1_corr_nov_25_2.jpeg)
+- [Examen de décembre](./L1S1_examen_decembre_2025.pdf) et [correction p1](./L1S1_examen_decembre_corr_p1.jpeg) et [correction p2](./L1S1_examen_decembre_corr_p2.jpeg)
