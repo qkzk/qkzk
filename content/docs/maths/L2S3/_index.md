@@ -23,4 +23,4 @@ bookCollapseSection: true
 - [Sujet du DS intermédiaire de 2024](./l2s3_2024-2025_ds1.pdf)
 - [Sujet de l'examen final de 2024](./L2S3_2024-2025_exam_final.pdf)
 - [Sujet du DS intermédiaire de 2025](./2025_2026_l2s3_ds1.pdf), [correction partie 1](./2025_2026_corr_ds1_1.jpeg), [correction partie 2](./2025_2026_corr_ds1_2.jpeg)
-
+- [Sujet de l'examen final de 2025](./L2S3_examn_decembre_2025.pdf), [correction partie 1](./2025_exam_corr_p1.jpeg), [correction partie 2](./2025_exam_corr_p2.jpeg)
