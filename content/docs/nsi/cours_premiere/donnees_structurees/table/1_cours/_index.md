@@ -1,7 +1,6 @@
 ---
 title: 'Traitement des données en tables'
 bookCollapseSection: true
-title: '1. Cours : introduction'
 weight: 1
 author: 'qkzk'
 theme: "metropolis"

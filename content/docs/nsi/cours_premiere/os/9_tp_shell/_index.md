@@ -1,10 +1,10 @@
 ---
 title: TP Shell
 author: qkzk
+bookCollapseSection: true
 date: 2026-01-07
 theme: metropolis
 weight: 10000
-bookCollapseSection: true
 geometry: "margin=1.5cm"
 
 ---

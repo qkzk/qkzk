@@ -3,7 +3,6 @@ title: "Cours"
 pdftitle: "Calculabilité"
 author: qkzk
 weight: 100
-author: qkzk
 date: 2025-06-20
 theme: metropolis
 geometry: "margin=1.5cm"

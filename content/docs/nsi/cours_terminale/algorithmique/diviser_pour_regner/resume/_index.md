@@ -4,7 +4,6 @@ pdftitle: "Diviser pour regner: résumé"
 theme: "metropolis"
 geometry: "margin=1.5cm"
 weight: 100
-geometry: "margin=1.5cm"
 header-includes: |
     \usepackage{tcolorbox}
     \newtcolorbox{myquote}{colback=teal!10!white, colframe=teal!55!black}

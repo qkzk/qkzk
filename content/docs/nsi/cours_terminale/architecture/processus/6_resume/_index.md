@@ -4,7 +4,6 @@ theme: "metropolis"
 geometry: "margin=1.5cm"
 bookCollapseSection: false
 weight: 6
-geometry: "margin=1.5cm"
 
 ---
 
