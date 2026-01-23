@@ -7,10 +7,17 @@ weight: 5
 bookCollapseSection: true
 ---
 
+## Polycopié de TD
+
+- [Polycopié de TD](poly.pdf)
+
 ## Sujet antérieurs
+
+
 
 ### Examens 2025 
 
+- [mai, examen final, énoncé](l2s4_2025_examen.pdf)
 - [mars énoncé](l2s4_2025_ds_mars.pdf)
 - [mars corrigé](L2S4_2025_ds_correction.pdf)
 
@@ -35,11 +42,8 @@ bookCollapseSection: true
 - [tableau blanc](./L2S4_correction_2021.pdf)
 
 
-## 2024-2025
 
-- [Polycopié de TD](poly.pdf)
-
-## Années antérieures
+## Séances et documents complémentaires
 
 ## 2022-2023
 
