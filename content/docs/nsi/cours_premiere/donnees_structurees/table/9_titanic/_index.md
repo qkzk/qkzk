@@ -14,7 +14,7 @@ Le fichier [Titanic.csv](./titanic.csv) contient les données _d'une partie_ des
 
 ![Titanic](https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/RMS_Titanic_3.jpg/1280px-RMS_Titanic_3.jpg)
 
-_Rappelons aux plus cultivés d'entre-vous que le Titanic est un bateau qui a fait nauffrage lors de sa première traversée de l'Atlantique._
+_Rappelons aux plus cultivés d'entre-vous que le Titanic est un bateau qui a fait naufrage lors de sa première traversée de l'Atlantique._
 
 
 
