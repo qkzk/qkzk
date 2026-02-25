@@ -17,3 +17,4 @@ weight: 10
 6. [Travaux pratiques](6_tp)
 7. [Rappels](7_revisions_pays)
 8. [Résumé](8_resume)
+9. [Titanic](9_titanic)
