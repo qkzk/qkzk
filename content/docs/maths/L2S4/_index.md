@@ -13,7 +13,10 @@ bookCollapseSection: true
 
 ## Sujet antérieurs
 
+### Examens 2026
 
+- [mars énoncé](./L2S4_mars_2026.pdf)
+- Corrigé de mars 2026 [p1](./correction_DS_Maths4_2026_p1.jpg) [p2](./correction_DS_Maths4_2026_p2.jpg)
 
 ### Examens 2025 
 
