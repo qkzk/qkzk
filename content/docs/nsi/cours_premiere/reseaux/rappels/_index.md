@@ -47,12 +47,12 @@ consacrées à l’identification du réseau et la partie d consacrées à
 l’identification des machines sur le réseau : on ajoute à l'adresse IP un "/"
 suivi d'un nombre, généralement 8, 16 ou 24
 
-* si ce nombre est 8 (exemple : 192.168.2.1/8), cela signifie que pour une
+* si ce nombre est 8 (exemple : 10.1.2.3/8), cela signifie que pour une
  adresse a.b.c.d/8, la partie a est consacrée à l'adresse réseau, le reste
  (b, c, d) est consacré à la partie machine de l'adresse IP. On aura donc
  une adresse réseau de la forme a.0.0.0
 
-* si ce nombre est 16 (exemple : 192.168.2.1/16), cela signifie que pour
+* si ce nombre est 16 (exemple : 172.16.2.1/16), cela signifie que pour
  une adresse a.b.c.d/16, les parties a et b sont consacrées à l'adresse
  réseau, le reste (c, d) est consacré à la partie machine de l'adresse IP.
  On aura donc une adresse réseau de la forme a.b.0.0
@@ -75,6 +75,8 @@ Accéder à internet -- qui est à l'extérieur de votre réseau local -- néces
 de passer par un routeur. Chez vous, c'est généralement la box internet
 qui fait office de routeur (réseau local + internet), de switch (plusieurs prises RJ45)
 et de borne wifi.
+
+Remarque : lorsque vous partagez votre connexion GMS (4G/5G etc.) via le wifi, votre téléphone fait office de routeur pour téléphones connectés à votre wifi.
 
 ### DNS
 

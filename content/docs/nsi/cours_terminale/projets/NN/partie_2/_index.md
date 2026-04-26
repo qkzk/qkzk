@@ -224,6 +224,4 @@ utiliser les méthode abordées ici pour le résoudre : la classification des
 nombres.
 
 
-## le code complet
 
-{{< gist qkzk ce5677bb8d0561047b0d647e4293f8ac >}}

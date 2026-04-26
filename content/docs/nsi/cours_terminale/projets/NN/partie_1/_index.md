@@ -582,6 +582,3 @@ sur de nouvelles valeurs !
 Dans la seconde partie nous allons englober ce neurone dans une _classe_ afin
 de tester sa qualité.
 
-## Le code complet
-
-{{< gist qkzk 797a18dc3c9dd01c09c40e064d91c189 >}}

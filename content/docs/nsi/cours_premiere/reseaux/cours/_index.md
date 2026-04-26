@@ -26,10 +26,93 @@ Dans l'usage courant, on rencontre :
 - les réseaux domestiques Wi-Fi (Wireless Fidelity)
 - les réseaux mobiles GSM (Global System for Mobile Communications)
 
-## Adresse IP
+## TCP/IP (TCP : Transmission Control Protocol / IP : Internet Protocol)
+
+TCP/IP désigne l'ensemble des deux protocoles principaux sur internet.
+
+C'est un modèle en quatre couches :
+
+| numéro | Couche        | Exemple                  |
+| ------ | ------------- | ------------------------ |
+| 4      | Application   | HTTP, FTP, DNS, SMTP,... |
+| 3      | **Transport** | TCP, UDP,...             |
+| 2      | **Réseau**    | IP, ARP,...              |
+| 1      | Liaison       | Ethernet, Wi-Fi          |
+
+Ainsi, lorsqu'on surfe sur le web, le navigateur utilise le protocole
+HTTP. Il n'a pas de contrôle sur les autres protocoles utilisés en dessous
+de lui.
+
+En pratique cela signifie qu'on verra apparaître la même page qu'on soit
+raccordé en Wi-Fi ou en Ethernet.
+
+### Encapsulation
+
+Considérons le fichier html suivant :
+
+```html
+<html>
+  </head>
+    </title>Titre</title>
+  </head>
+  <body>
+    <h1>Super</h1>
+  </body>
+</html>
+```
+
+1. HTTP ajoute une entête à cette page :
+
+   ```html
+   HTTP/1.1 200 OK
+   Content-Length: 327
+   Date: Thu, 05 Aug 2021 06:58:21 GMT
+   Server: Google Frontend
+   accept-ranges: bytes
+   cache-control: public, max-age=3600
+   content-type: text/html
+   expires: Thu, 05 Aug 2021 07:58:21 GMT
+   last-modified: Thu, 24 Jun 2021 16:54:03 GMT
+
+   <!DOCTYPE html>
+   <html>
+     </head>
+       </title>Titre</title>
+     </head>
+     <body>
+       <h1>Super</h1>
+     </body>
+   </html>
+   ```
+
+   Cette entête contient une information importante, la taille du contenu : `Content-Length: 327`
+
+2. TCP encapsule cette page dans différents **segments** TCP
+
+   Il ajoute quelques informations avant le contenu (généralement sur $6 \times 32$ bits)
+
+3. IP encapsule ce ou ces segments en différents **paquets** IP
+
+4. Ces paquets sont encapsulés par la couche laision, ajoutant une entête physique
+
+5. Ces paquets sont transmis à la machine de destination via la couche liasion
+
+6. la machine de destination lit l'entête physique et décapsule
+
+7. La machine de destination décapsule les paquets IP
+
+8. La machine destination décapsule les segments TCP et les réordonne
+
+9. Le navigateur interprète ces données et les lit.
+
+![Encapsulation](./encapsulation.png)
+
+## IP
 
 **IP** pour, _Internet Protocol_ désigne à la fois le protocole utilisé et
 l'adresse d'une machine sur un réseau IP.
+
+### Adresse IP
 
 ### IPv4, IPv6
 
@@ -147,7 +230,7 @@ distante, c'est le routeur qui se charge de transmettre les données.
 
 $\;$![réseaux publics et privés](./reseaux_prives_publics.png)
 
-## Protocole IP (Internet Protocol)
+### Protocole IP (Internet Protocol)
 
 Le rôle du protocole IP est de transmettre des **paquets IP** provenant d'une
 couche supérieure (nous reviendrons sur ce terme) .
@@ -164,96 +247,16 @@ Pour simplifier grandement, IP, c'est comme la poste.
 
 ### Fiabilité
 
-Ce protocole est dit "non fiable", cela ne signifie pas que les données
-sont déteriorée ou perdues mais qu'aucune règle ne permet de s'assurer :
+Ce protocole est dit "non fiable", cela ne signifie pas que les paquets
+sont déteriorée ou perdus mais qu'aucune règle ne permet de s'assurer :
 
 - qu'ils sont arrivés à bon port
 - qu'ils sont arrivés dans l'ordre d'émission
 
 Cette fiabilité est assurée par un autre protocole... TCP.
 
-## TCP/IP (TCP : Transmission Control Protocol)
 
-TCP/IP désigne l'ensemble des deux protocoles principaux sur internet.
-
-C'est un modèle en quatre couches :
-
-| numéro | Couche        | Exemple                  |
-| ------ | ------------- | ------------------------ |
-| 4      | Application   | HTTP, FTP, DNS, SMTP,... |
-| 3      | **Transport** | TCP, UDP,...             |
-| 2      | **Réseau**    | IP, ARP,...              |
-| 1      | Liaison       | Ethernet, Wi-Fi          |
-
-Ainsi, lorsqu'on surfe sur le web, le navigateur utilise le protocole
-HTTP. Il n'a pas de contrôle sur les autres protocoles utilisés en dessous
-de lui.
-
-En pratique cela signifie qu'on verra apparaître la même page qu'on soit
-raccordé en Wi-Fi ou en Ethernet.
-
-### Encapsulation
-
-Considérons le fichier html suivant :
-
-```html
-<html>
-  </head>
-    </title>Titre</title>
-  </head>
-  <body>
-    <h1>Super</h1>
-  </body>
-</html>
-```
-
-1. HTTP ajoute une entête à cette page :
-
-   ```html
-   HTTP/1.1 200 OK
-   Content-Length: 327
-   Date: Thu, 05 Aug 2021 06:58:21 GMT
-   Server: Google Frontend
-   accept-ranges: bytes
-   cache-control: public, max-age=3600
-   content-type: text/html
-   expires: Thu, 05 Aug 2021 07:58:21 GMT
-   last-modified: Thu, 24 Jun 2021 16:54:03 GMT
-
-   <!DOCTYPE html>
-   <html>
-     </head>
-       </title>Titre</title>
-     </head>
-     <body>
-       <h1>Super</h1>
-     </body>
-   </html>
-   ```
-
-   Cette entête contient une information importante, la taille du contenu : `Content-Length: 327`
-
-2. TCP encapsule cette page dans différents **segments** TCP
-
-   Il ajoute quelques informations avant le contenu (généralement sur $6 \times 32$ bits)
-
-3. IP encapsule ce ou ces segments en différents **paquets** IP
-
-4. Ces paquets sont encapsulés par la couche laision, ajoutant une entête physique
-
-5. Ces paquets sont transmis à la machine de destination via la couche liasion
-
-6. la machine de destination lit l'entête physique et décapsule
-
-7. La machine de destination décapsule les paquets IP
-
-8. La machine destination décapsule les segments TCP et les réordonne
-
-9. Le navigateur interprète ces données et les lit.
-
-![Encapsulation](./encapsulation.png)
-
-### TCP
+## TCP
 
 On l'a dit, le protocole TCP (Transmission Control Protocol) est un protocole
 de transport "fiable" et "connecté" :

@@ -58,9 +58,7 @@ Les données sont hébergées [ici](https://archive.ics.uci.edu/ml/machine-learn
 
 
 
-Le code complet.
 
-{{< gist qkzk 4c735dee6cd362febbd7abc555deb420 >}}
 
 
 ### TODOLIST
