@@ -331,3 +331,125 @@ des techniques de chiffrement :
     symétrique.
 
 [Correction de Math93.com](./BACNSI2024_Sujet0_A.pdf)
+
+
+---
+
+---
+
+## Exercice 9 - 2026, Métropole, Jour 1, Exercice 1
+
+Cet exercice porte sur les réseaux, les protocoles de routage et la sécurisation des communications.
+
+Le réseau informatique d’un lycée est réparti sur plusieurs sites : campus, internat, services administratifs, etc.
+
+![img](img/img-2026-06-18-10-19.png)
+
+Chaque site possède :
+- un sous-réseau dédié, avec un adressage IP propre ;
+- un routeur permettant la communication entre sites et vers Internet.
+
+On utilise la notation CIDR pour définir l’adressage d’un réseau : la notation a.b.c.d/n signifie que les n bits de poids fort (à gauche de l’adresse IP) désignent la partie réseau de l’adresse IP et que les bits suivants de poids faible (à droite de l’adresse IP) désignent la partie machine. Dans un même sous-réseau, toutes les machines utilisent des adresses IP ayant la même partie réseau.
+
+L’administrateur réseau a établi la convention d’adressage suivante :
+- la passerelle (gateway) de chaque site correspond à la dernière adresse IP disponible du sous-réseau ;
+- elle est affectée à l’interface du routeur connecté au site.
+
+Exemple :
+Pour le réseau du site6 (172.16.80.0/20) :
+- Adresse réseau : 172.16.80.0
+- Adresse de passerelle : 172.16.95.254
+- Adresse de l’interface du routeur R3 dans le site6 : 172.16.95.254
+
+---
+### Partie A : Configuration IP du site3
+
+Un hôte situé dans le site3 possède la configuration suivante dans son fichier `/etc/network/interfaces` :
+
+```python
+iface eth0 inet static
+   address 172.16.32.15
+   netmask 255.255.240.0
+   gateway 172.16.48.254
+```
+
+1. Convertir les adresses suivantes en binaire sur 32 bits :
+
+    - Adresse IP : 172.16.32.15
+    - Masque de sous-réseau : 255.255.240.0
+
+    Donner le résultat sous la forme :
+
+    ```
+    Adresse IP : XXXXXXXX.XXXXXXXX.XXXXXXXX.XXXXXXXX
+    Masque     : XXXXXXXX.XXXXXXXX.XXXXXXXX.XXXXXXXX
+    ```
+
+2. Indiquer le nombre d’hôtes que le réseau peut accueillir, ainsi que la première et la dernière adresse IP utilisables par ces hôtes.
+
+L’administrateur a remarqué que depuis cet hôte, il pouvait accéder aux serveurs ou imprimantes du site3 mais ne pouvait pas accéder à Internet.
+Il effectue un test de connectivité vers l’adresse 172.16.47.254 : ce test réussit.
+
+3. Identifier dans la configuration de cet hôte le paramètre mal configuré et proposer une correction.
+
+Le lien entre les routeurs R2 et R4 est configuré avec des adresses appartenant au réseau 192.168.0.8/30.
+
+4. Proposer deux adresses IP à attribuer aux interfaces des routeurs R2 et R4 pour établir ce lien.
+
+### Partie B
+
+On s’intéresse ici au routage dynamique appliqué dans le réseau du lycée.
+L’administrateur lance la commande suivante dans un terminal depuis un hôte du site3. Il observe le résultat :
+
+```bash
+$ traceroute education.gouv.fr
+
+Détermination de l’itinéraire vers education.gouv.fr
+  1     4 ms     7 ms     9 ms  R2 [172.16.47.254]
+  2    22 ms     6 ms     8 ms  R3 [192.168.0.14]
+  3    22 ms     7 ms     9 ms  R4 [192.168.0.6]
+  4    21 ms     6 ms     8 ms  R5 [192.168.0.1]
+  5    19 ms     7 ms     9 ms  internet-router [...]
+  6     ...
+```
+
+Le protocole de routage dynamique activé sur les routeurs est RIP. On rappelle que dans le protocole RIP, le coût d’une route est donnée par le nombre de liens réseaux empruntés sur cette route.
+
+5. D’après le résultat de la commande passée par l’administrateur, donner le chemin suivi par l’information et son coût pour aller de R2 à R5.
+
+6. Expliquer en quoi le réseau présente un dysfonctionnement et formuler une cause possible de ce problème.
+
+Le protocole de routage dynamique activé sur les routeurs est maintenant OSPF.
+On rappelle la relation suivante entre le débit et le coût d’une liaison entre deux routeurs :
+
+$$coût = \dfrac{10^8}{\text{débit}}$$
+
+7. Sur un réseau informatique, pour chacun des deux termes ‘débit’ et ‘coût’ d’une liaison, préciser si l’on souhaite le minimiser ou le maximiser.
+
+On donne les informations suivantes sur les types de liaisons utilisées entre les routeurs :
+- Liaison R1-R2 : Fast Ethernet
+- Liaison R1-R3 : Fibre optique
+- Liaison R1-R4 : Fast Ethernet
+- Liaison R2-R3 : Ethernet
+- Liaison R2-R4 : Ethernet
+- Liaison R3-R4 : Fibre optique
+- Liaison R4-R5 : Fibre optique
+
+On donne également les débits des différentes liaisons utilisées sur le réseau :
+- Ethernet : 10 Mbits/s
+- Fast Ethernet : 100 Mbit/s
+- Fibre optique : 4 Gbit/s
+
+8. Donner, en précisant son coût, le chemin emprunté par un paquet de données depuis le site4 jusqu’à Internet.
+
+### Partie C
+
+On s’intéresse maintenant à la sécurisation des échanges de données entre les ordinateurs du réseau du lycée.
+
+Un élève de l’internat se situant dans le site2 a ouvert un logiciel malveillant ayant infecté son ordinateur. Le pirate a maintenant pris le contrôle de son ordinateur et peut donc maintenant accéder au réseau du lycée.
+
+Alice se trouve dans le site4 et Bob dans le site5, et entament une conversation privée en utilisant le réseau du lycée. On suppose que l’échange débute après l’arrivée du pirate sur le réseau.
+
+9. Entre le chiffrement symétrique ou asymétrique, donner en justifiant lequel des deux Alice et Bob doivent préférer utiliser pour éviter que le pirate ne puisse connaître le contenu de leurs échanges.
+
+10. Expliquer en quoi le protocole HTTPS est plus sécurisé que le protocole HTTP pour les échanges entre Alice et Bob.
