@@ -135,6 +135,12 @@ dans cette adresse.
 
 ### Partie réseau, partie machine
 
+Internet étant la mise en réseau de machines situées partout dans le monde, il est indispensable de créer des procédés pour entretenir et configurer facilement ces machines.
+
+On divise donc cet ensemble de machines (tout internet) en sous réseaux. Les différentes machines d'un réseau peuvent communiquer directement (pour signaler leur présence, un changement de configuration etc.). Ces messages sont coûteux et doivent être limités à une petite partie sans quoi ils rendraient impossible le projet initial : faire communiquer toutes les machines du monde. IP résout ce problème en créeant une notion de "réseau" au sein même de l'adresse : seules les machines d'un même réseau (local donc) peuvent communiquer directement.
+
+#### /24 /16 /8
+
 Considérons une adresse IPv4 complète : `192.168.1.2/24`
 
 Le `/24` signifie que les 24 premiers bits (= les 3 premiers octets = les 3 premiers
@@ -142,7 +148,7 @@ nombres) constituent la partie **réseau** et les 8 derniers ($32-24=8$) la part
 **machine**.
 
 Aussi, la partie réseau est : `192.168.1.0` et ce réseau peut abriter $2^8=256$ machines
-différentes. En pratique un peu moins, certaines adresses étant réservées.
+différentes. En pratique un peu moins, deux adresses étant réservées.
 
 Lorsque le nombre de bits de l'adresse réseau est multiple de 8 il n'y a aucune difficulté :
 
@@ -153,9 +159,13 @@ Lorsque le nombre de bits de l'adresse réseau est multiple de 8 il n'y a aucune
 Cela devient plus complexe avec une adresse réseau occupant un autre nombre. On
 utilise alors un **masque de sous réseau**.
 
+Pour revenir sur la notion de réseau, dans l'exemple `192.168.1.2/24`, cette machine peut communiquer directement avec toutes les machines auxquelles elle est raccordée si elles ont une adresse entre `192.168.1.1` et `192.168.1.254`.
+
+Quand bien même il existerait un lien physique (un câble) entre elle et une machine portant l'adresse `192.168.2.3` (elles n'ont pas la même adresse réseau...), elle ne pourrait communiquer _directement_ avec elle. Il faut passer par un routeur.
+
 #### Masque de sous réseau
 
-Traitons rapidement le cas d'une adresse en `/22`
+Traitons le cas d'une adresse en `/22`
 
 La partie réseau occupe 22 bits et la partie machine 10 bits.
 
@@ -171,6 +181,8 @@ bits à 0 :
 
 `11111111.11111111.11111100.00000000`
 
+Le masque de sous-réseau est généralement présenté avec la notation CIDR (_Classless Inter-Domain Routing_) : 255.255.252.0
+
 On réalise ensuite un ET logique, bit par bit entre l'adresse IP et son masque :
 
 ```
@@ -184,8 +196,18 @@ Soit : `122.34.168.0`
 
 Et ceci nous donne l'adresse réseau.
 
-De toute évidence, ce n'est pas difficile à programmer, c'est plus difficile
-pour un humain.
+#### Nombre de machines disponibles 
+
+Sur un réseau en `/xx` combien d'adresses sont disponibles pour les machines (ou _combien de machines différentes peut-on installer_) ?
+
+Deux adresses sont réservées :
+
+- la toute première pour le réseau lui même,
+- la toute dernière pour la diffusion (_broadcast_) à l'ensemble des machines.
+
+Cela fait donc $2^{32 - \text{xx}} - 2$ adresses disponibles.
+
+Par exemple en `/22`, on a $2^{32-22} - 2 = 2^{10} - 2 = 1024 - 2 = 1022$ adresses disponibles.
 
 #### Épuisement des adresses IPv4
 
