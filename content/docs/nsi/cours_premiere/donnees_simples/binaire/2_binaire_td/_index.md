@@ -53,7 +53,8 @@ entier représentable ?
 
 3. Calculer mentalement les puissances de 2 jusque $2^{20}$.
 
-4. Comparer les représentations binaires de 16 et 15 ; de 32 et 31 ; de 64 et 63 ?
+4. Comparer les représentations binaires de $4, 8, 16, 32, 64$. Recommencer avec $3, 7, 15, 31, 63$. Remarque ?
+
 5. Généralisons : quelles sont les représentations binaire de nombre de la forme $2^k$ et $2^k-1$ ?
 
 6. En remarquant que $2~048=2^{11}$, donner la représentation binaire de $2022$.

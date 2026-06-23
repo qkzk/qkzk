@@ -346,13 +346,13 @@ On construit une table de vérité étape par étape.
     - (not a) and (not b)
     - une pour la sortie tout à droite 
 
-    On va utiliser 6 colonnes. On réduire mais il faut au moins 1 colonne par entrée et 1 pour la sortie.
+    On va utiliser 6 colonnes. On peut réduire mais il faut au moins 1 colonne par entrée et 1 pour la sortie.
 
 2. Combien de lignes ?
 
-    Avec 2 entrées, il faut $2^2 = 4$ lignes. 
+    Avec 2 entrées, il faut $2^2 = 4$ lignes.
 
-    Avec 7 entrées, il en faudrait $2^7 = 128$, difficile...
+    Avec 7 entrées, il en faudrait $2^7 = 128$. Difficile...
 
 3. Par où commencer ? Énumérer les valeurs de a et b en partant de 00 jusque 11 comme si on comptait en binaire.
     Ainsi : 
