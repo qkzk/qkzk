@@ -55,7 +55,7 @@ Le code que vous lirez sera soit tiré d'un fichier python (.py) soit de l'inter
   L'interpéteur affiche le valeur de la dernière expression.
 
   Le nombre `2` qu'on voit apparaître n'a pas été tapé à la main mais
-  est la valeur de la variable 2.
+  est la valeur de la variable `a`.
 
 ## Expressions
 
