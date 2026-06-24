@@ -403,11 +403,7 @@ def nb_bits(n : int) -> int :
 Afin de prouver la correction partielle de l’algorithme, on introduit l’invariant suivant :
 
 
-\begin{center}
-\begin{em}
-À l'issue de chaque tour de boucle i, on a $2^i \times reste \leq n < 2^{i+1} \times reste$
-\end{em}
-\end{center}
+_À l'issue de chaque tour de boucle i, on a $2^i \times reste \leq n < 2^{i+1} \times reste$_
 
 2. Prouver que cette propriété est vraie lors de l'initialisation de l'algorithme
 3. Justifier que lors du $i$-ième tour de boucle on a :
@@ -419,179 +415,177 @@ Afin de prouver la correction partielle de l’algorithme, on introduit l’inva
 
 Compléter les tables de vérité des circuits logiques ci-dessous :
 
-\begin{minipage}{10cm}
-\begin{center}
-\begin{circuitikz} 
-\draw
+{{< columns >}}
+<script src="/js/logic_simulator.js"></script>
+<div style="width: 300px; height: 300px">
+<logic-editor id="editor1" showonly="in,out,not,and">
+<script type="application/json">
+{ // JSON5
+  v: 6,
+  opts: {showOnly: ['in', 'out', 'not', 'and']},
+  components: {
+    in0: {type: 'in', pos: [70, 100], id: 0},
+    out0: {type: 'out', pos: [320, 140], id: 1},
+    in1: {type: 'in', pos: [70, 170], id: 2},
+    not0: {type: 'not', pos: [140, 100], in: 3, out: 4},
+    not1: {type: 'not', pos: [140, 170], in: 5, out: 6},
+    and0: {type: 'and', pos: [250, 140], in: [7, 8], out: 9},
+  },
+  wires: [[0, 3], [2, 5], [9, 1], [4, 7], [6, 8]]
+}
+</script>
+</logic-editor>
+</div>
 
-(1, 0) node[ieeestd not port] (mynot1) {Non}
-(1, 2) node[ieeestd not port] (mynot2) {Non}
-(4, 1) node[ieeestd and port] (myand1) {Et}
+<--->
 
-(mynot1.out) -| (myand1.in 2)
-(mynot2.out) -| (myand1.in 1)
-(myand1.out) -- ([xshift=0.5cm]myand1.out) node[right] {$Sortie$}
-(mynot2.in) -- ([xshift=-0.5cm]mynot2.in) node[left] {$A$}
-(mynot1.in) -- ([xshift=-0.5cm]mynot1.in) node[left] {$B$}
-
-;
-\end{circuitikz}
-\end{center}
-\end{minipage}
-\begin{minipage}{7cm}
-
-\begin{tabular}{|c|c|c|}
-$A$ & $B$ & $Sortie$ \\
-\hline
-0 & 0 & 1 \\
-0 & 1 &   \\
-1 & 0 &   \\
-1 & 1 &   \\
-\end{tabular}
-
-\end{minipage}
-
-
-
-\begin{minipage}{10cm}
-\begin{center}
-\begin{circuitikz} 
-\draw
-
-(1, 2) node[ieeestd not port] (mynot1) {Non}
-(4, 1) node[ieeestd and port] (myand1) {Et}
-
-(mynot1.out) -| (myand1.in 1)
-(myand1.out) -| ([xshift=0.5cm]myand1.out) node[right] {$Sortie$}
-(mynot1.in) -- ([xshift=-0.5cm]mynot1.in) node[left] {$A$}
-(myand1.in 2) -- ([xshift=-2.8cm]myand1.in 2) node[left] {$B$}
-
-;
-\end{circuitikz}
-\end{center}
-\end{minipage}
-\begin{minipage}{7cm}
-
-\begin{tabular}{|c|c|c|}
-$A$ & $B$ & $Sortie$ \\
-\hline
-0 & 0 &   \\
-0 & 1 &   \\
-1 & 0 &   \\
-1 & 1 &   \\
-\end{tabular}
-
-\end{minipage}
-
-
-
-\begin{minipage}{10cm}
-\begin{center}
-\begin{circuitikz} 
-\draw
-
-(1, 2) node[ieeestd and port] (and) {Non}
-(4, 1) node[ieeestd or port] (or) {Ou}
-
-(and.out) -| (or.in 1)
-(or.out) -- ([xshift=0.5cm]or.out) node[right] {$Sortie$}
-(and.in 1) -- ([xshift=-0.5cm]and.in 1) node[left] {$A$}
-(and.in 2) -- ([xshift=-0.5cm]and.in 2) node[left] {$B$}
-(or.in 2) -- ([xshift=-3.5cm]or.in 2) node[left] {$C$}
-
-;
-\end{circuitikz}
-\end{center}
-\end{minipage}
-\begin{minipage}{7cm}
-
-\begin{tabular}{|c|c|c|c|}
-$A$ & $B$ & $C$ & $Sortie$ \\
-\hline
-0 & 0 & 0 &  \\
-0 & 0 & 1 &  \\
-0 & 1 & 0 &  \\
-0 & 1 & 1 &  \\
-1 & 0 & 0 &  \\
-1 & 0 & 1 &  \\
-1 & 1 & 0 &  \\
-1 & 1 & 1 &  \\
-\end{tabular}
-
-\end{minipage}
+$$\begin{array}{|c|c|c|}
+A & B & Sortie \newline
+0 & 0 & 1 \newline
+0 & 1 &   \newline
+1 & 0 &   \newline
+1 & 1 &   \newline
+\end{array}$$
+{{< /columns >}}
 
 
 
 
-\begin{minipage}{10cm}
-\begin{center}
-\begin{circuitikz} 
-\draw
+{{< columns >}}
+<div style="width: 300px; height: 300px">
+<logic-editor id="editor2" showonly="in,out,not,and">
+<script type="application/json">
+{ // JSON5
+  v: 6,
+  components: {
+    in0: {type: 'in', pos: [20, 70], id: 0},
+    in1: {type: 'in', pos: [20, 150], id: 1},
+    not0: {type: 'not', pos: [100, 70], in: 2, out: 3},
+    and0: {type: 'and', pos: [215, 120], in: [4, 5], out: 6},
+    out0: {type: 'out', pos: [265, 120], id: 7},
+  },
+  wires: [[0, 2], [3, 4], [1, 5], [6, 7]]
+}
+</script>
+</logic-editor>
+</div>
 
-(1, 1) node[ieeestd and port] (and1) {Et}
-(3.3, 2) node[ieeestd and port] (and2) {Et}
-(3.3, 0) node[ieeestd and port] (and3) {Et}
-(6, 1) node[ieeestd or port] (or1) {Ou}
+<--->
 
-(and2.out) -| (or1.in 1)
-(and3.out) -| (or1.in 2)
-(and1.out) -| (and2.in 2)
-(and1.out) -| (and3.in 1)
-(and1.in 1) |- (and2.in 1)
-(and1.in 2) |- (and3.in 2)
-(or1.out) -- ([xshift=0.2cm]or1.out) node[right] {$Sortie$}
-(and1.in 1) -- ([xshift=-1cm]and1.in 1) node[left] {$A$}
-(and1.in 2) -- ([xshift=-1cm]and1.in 2) node[left] {$B$}
+$$\begin{array}{|c|c|c|}
+A & B & Sortie \newline
+0 & 0 &   \newline
+0 & 1 &   \newline
+1 & 0 &   \newline
+1 & 1 &   \newline
+\end{array}$$
+{{< /columns >}}
 
-;
-\end{circuitikz}
-\end{center}
-\end{minipage}
-\begin{minipage}{7cm}
 
-\begin{tabular}{|c|c|c|}
-$A$ & $B$ & $Sortie$ \\
-\hline
-0 & 0 &   \\
-0 & 1 &   \\
-1 & 0 &   \\
-1 & 1 &   \\
-\end{tabular}
+{{< columns >}}
+<div style="width: 300px; height: 300px">
+<logic-editor id="editor3" showonly="in,out,not,and,or">
+<script type="application/json">
+{ // JSON5
+  v: 6,
+  components: {
+    in0: {type: 'in', pos: [30, 30], id: 8},
+    in1: {type: 'in', pos: [30, 75], id: 9},
+    in2: {type: 'in', pos: [30, 125], id: 10},
+    and0: {type: 'and', pos: [125, 55], in: [13, 14], out: 15},
+    or0: {type: 'or', pos: [205, 65], in: [16, 17], out: 18},
+    out0: {type: 'out', pos: [275, 65], id: 19},
+  },
+  wires: [[8, 13], [9, 14], [15, 16], [10, 17], [18, 19]]
+}
+</script>
+</logic-editor>
+</div>
 
-\end{minipage}
+<--->
+
+$$\begin{array}{|c|c|c|}
+A & B & C & Sortie \newline
+0 & 0 & 0 &  \newline
+0 & 0 & 1 &  \newline
+0 & 1 & 0 &  \newline
+0 & 1 & 1 &  \newline
+1 & 0 & 0 &  \newline
+1 & 0 & 1 &  \newline
+1 & 1 & 0 &  \newline
+1 & 1 & 1 &  \newline
+\end{array}$$
+{{< /columns >}}
+
+
+{{< columns >}}
+<div style="width: 300px; height: 300px">
+<logic-editor id="editor4" showonly="in,out,not,and,or">
+<script type="application/json">
+{ // JSON5
+  v: 6,
+  components: {
+    in0: {type: 'in', pos: [30, 30], id: 8},
+    in1: {type: 'in', pos: [30, 75], id: 9},
+    in2: {type: 'in', pos: [30, 125], id: 10},
+    and0: {type: 'and', pos: [125, 55], in: [13, 14], out: 15},
+    or0: {type: 'or', pos: [205, 65], in: [16, 17], out: 18},
+    out0: {type: 'out', pos: [275, 65], id: 19},
+  },
+  wires: [[8, 13], [9, 14], [15, 16], [10, 17], [18, 19]]
+}
+</script>
+</logic-editor>
+</div>
+
+<--->
+
+$$\begin{array}{|c|c|c|}
+A & B & Sortie \newline
+0 & 0 &   \newline
+0 & 1 &   \newline
+1 & 0 &   \newline
+1 & 1 &   \newline
+\end{array}$$
+{{< /columns >}}
+
+
+
+
 
 ## 16. Non et
 
 On fournit ci-dessous le schéma et la table de vérité de la porte logique $non\;et$ (_nand_)
 
 
-\begin{minipage}{10cm}
-\begin{center}
-\begin{circuitikz} 
+{{< columns >}}
+<div style="width: 300px; height: 300px">
+<logic-editor id="editor5" showonly="in,out,nand">
+<script type="application/json">
+{ // JSON5
+  v: 6,
+  components: {
+    nand0: {type: 'nand', pos: [120, 55], in: [35, 36], out: 37},
+    in0: {type: 'in', pos: [25, 30], id: 38},
+    in1: {type: 'in', pos: [25, 80], id: 39},
+    out0: {type: 'out', pos: [190, 55], id: 40},
+  },
+  wires: [[38, 35], [39, 36], [37, 40]]
+}
+</script>
+</logic-editor>
+</div>
 
-\draw
-(1, 0) node[ieeestd nand port] (nand) {nand}
+<--->
 
-(nand.out) -| ([xshift=0.5cm]nand.out) node[right] {$Sortie$}
-(nand.in 1) -- ([xshift=-0.5cm]nand.in 1) node[left] {$A$}
-(nand.in 2) -- ([xshift=-0.5cm]nand.in 2) node[left] {$B$}
-
-;
-\end{circuitikz}
-\end{center}
-\end{minipage}
-\begin{minipage}{7cm}
-
-\begin{tabular}{|c|c|c|}
-$A$ & $B$ & $Sortie$ \\
-\hline
-0 & 0 & 1 \\
-0 & 1 & 1 \\
-1 & 0 & 1 \\
-1 & 1 & 0 \\
-\end{tabular}
-
-\end{minipage}
+$$\begin{array}{|c|c|c|}
+A & B & Sortie \newline
+0 & 0 &   \newline
+0 & 1 &   \newline
+1 & 0 &   \newline
+1 & 1 &   \newline
+\end{array}$$
+{{< /columns >}}
 
 Cette porte permet à elle-seule de construire les portes logiques suivantes :
 
@@ -604,180 +598,50 @@ Cette porte permet à elle-seule de construire les portes logiques suivantes :
 
 Associer chaque circuit à la bonne porte logique
 
+<div style="width: 600px; height: 800px">
+<logic-editor id="editor6" showonly="in,out,nand">
+<script type="application/json">
+{ // JSON5
+  v: 6,
+  components: {
+    nand0: {type: 'nand', pos: [140, 55], in: [35, 36], out: 37},
+    in0: {type: 'in', pos: [45, 30], id: 38, name: 'A'},
+    in1: {type: 'in', pos: [45, 80], id: 39, name: 'B'},
+    out0: {type: 'out', pos: [210, 55], id: 40},
+    in2: {type: 'in', pos: [40, 155], id: 41, name: 'A'},
+    in3: {type: 'in', pos: [40, 225], id: 42, name: 'B'},
+    nand1: {type: 'nand', pos: [130, 155], in: [43, 44], out: 45},
+    nand2: {type: 'nand', pos: [135, 225], in: [46, 47], out: 48},
+    nand3: {type: 'nand', pos: [240, 190], in: [49, 50], out: 51},
+    nand4: {type: 'nand', pos: [355, 190], in: [53, 54], out: 55},
+    out1: {type: 'out', pos: [425, 190], id: 56},
+    in4: {type: 'in', pos: [40, 295], id: 57, name: 'A'},
+    in5: {type: 'in', pos: [40, 335], id: 58, name: 'B'},
+    nand5: {type: 'nand', pos: [135, 315], in: [62, 63], out: 64},
+    nand6: {type: 'nand', pos: [240, 315], in: [65, 66], out: 67},
+    out2: {type: 'out', pos: [310, 315], id: 68},
+    in6: {type: 'in', pos: [40, 395], id: 0, name: 'A'},
+    in7: {type: 'in', pos: [40, 445], id: 1, name: 'B'},
+    nand7: {type: 'nand', pos: [240, 380], in: [2, 3], out: 4},
+    nand8: {type: 'nand', pos: [240, 455], in: [5, 6], out: 7},
+    nand9: {type: 'nand', pos: [340, 415], in: [8, 9], out: 10},
+    out3: {type: 'out', pos: [385, 415], id: 11},
+    nand10: {type: 'nand', pos: [135, 420], in: [12, 13], out: 14},
+    in8: {type: 'in', pos: [40, 510], id: 15, name: 'A'},
+    nand11: {type: 'nand', pos: [245, 505], in: [16, 17], out: 18},
+    nand12: {type: 'nand', pos: [245, 555], in: [19, 20], out: 21},
+    nand13: {type: 'nand', pos: [325, 620], in: [22, 23], out: 24},
+    nand14: {type: 'nand', pos: [325, 515], in: [25, 26], out: 27},
+    nand15: {type: 'nand', pos: [405, 570], in: [28, 29], out: 30},
+    out4: {type: 'out', pos: [475, 570], id: 31},
+    in9: {type: 'in', pos: [40, 570], id: 32, name: 'B'},
+  },
+  wires: [[38, 35], [39, 36], [37, 40], [41, 43], [41, 44], [42, 46], [42, 47], [45, 49], [48, 50], [51, 53], [51, 54], [55, 56], [57, 62], [58, 63], [64, 65], [64, 66], [67, 68], [0, 2], [1, 6], [4, 8], [7, 9], [10, 11], [0, 12], [1, 13], [14, 3], [14, 5], [30, 31], [15, 16], [15, 17], [32, 19], [32, 20], [21, 26], [18, 25], [27, 28], [24, 29], [32, 23], [15, 22]]
+}
+</script>
+</logic-editor>
+</div>
 
-\begin{center}
-\begin{circuitikz} 
-
-\draw
-(0,0) node[left]{$A$} to[short, o-] ++(1.3,0)
-
-(3, 0) node[ieeestd nand port] (nand) {nand}
-
-(nand.out) -| ([xshift=0.5cm]nand.out) node[right] {$Sortie$}
-(nand.in 1) -| ([xshift=-0.6cm, yshift=-0.5cm]nand.in 1) node[left] {}
-(nand.in 2) -| ([xshift=-0.6cm, yshift=0.5cm]nand.in 2) node[left] {}
-
-;
-\end{circuitikz}
-\end{center}
-
----
-
-
-
-\begin{center}
-\begin{circuitikz} 
-
-\draw
-(0,0) node[left]{$B$} to[short, o-] ++(1.3,0)
-
-(3, 0) node[ieeestd nand port] (nand) {nand}
-
-(nand.in 1) -| ([xshift=-0.6cm, yshift=-0.5cm]nand.in 1) node[left] {}
-(nand.in 2) -| ([xshift=-0.6cm, yshift=0.5cm]nand.in 2) node[left] {}
-
-(0,2) node[left]{$A$} to[short, o-] ++(1.3,0)
-
-(3, 2) node[ieeestd nand port] (nand2) {nand}
-
-(nand2.in 1) -| ([xshift=-0.6cm, yshift=-0.5cm]nand2.in 1) node[left] {}
-(nand2.in 2) -| ([xshift=-0.6cm, yshift=0.5cm]nand2.in 2) node[left] {}
-
-
-(5.5, 1) node[ieeestd nand port] (nand3) {nand}
-(nand.out) -| (nand3.in 2) {}
-(nand2.out) -| (nand3.in 1)  {}
-(8, 1) node[ieeestd nand port] (nand4) {nand}
-
-(nand3.out) -| (nand4.in 2) {}
-(nand3.out) -| (nand4.in 1) {}
-(nand4.out) -| ([xshift=0.5cm]nand4.out) node[right] {$Sortie$}
-;
-\end{circuitikz}
-\end{center}
-
-
----
-
-
-\begin{center}
-\begin{circuitikz} 
-
-\draw
-
-
-
-(3, 1) node[ieeestd nand port] (nand3) {nand}
-(5.5, 1) node[ieeestd nand port] (nand4) {nand}
-
-(nand3.in 1) |- ([xshift=-0.5cm, yshift=0.5cm]nand3.in 1) node[left] {$A$}
-(nand3.in 2) |- ([xshift=-0.5cm, yshift=-0.5cm]nand3.in 2) node[left] {$B$}
-
-
-(nand3.out) -| (nand4.in 2) {}
-(nand3.out) -| (nand4.in 1) {}
-(nand4.out) -| ([xshift=0.5cm]nand4.out) node[right] {$Sortie$}
-;
-\end{circuitikz}
-\end{center}
-
----
-
-
-
-\begin{center}
-\begin{circuitikz} 
-
-\draw
-(0,0) node[left]{$B$} to[short, o-] ++(1.3,0)
-
-(3, 0) node[ieeestd nand port] (nand) {nand}
-
-(nand.in 1) -| ([xshift=-0.6cm, yshift=-0.5cm]nand.in 1) node[left] {}
-(nand.in 2) -| ([xshift=-0.6cm, yshift=0.5cm]nand.in 2) node[left] {}
-
-(0,2) node[left]{$A$} to[short, o-] ++(1.3,0)
-
-(3, 2) node[ieeestd nand port] (nand2) {nand}
-
-(nand2.in 1) -| ([xshift=-0.6cm, yshift=-0.5cm]nand2.in 1) node[left] {}
-(nand2.in 2) -| ([xshift=-0.6cm, yshift=0.5cm]nand2.in 2) node[left] {}
-
-
-(5.5, 1) node[ieeestd nand port] (nand3) {nand}
-(nand.out) -| (nand3.in 2) {}
-(nand2.out) -| (nand3.in 1)  {}
-
-(nand3.out) -| ([xshift=0.5cm]nand3.out) node[right] {$Sortie$}
-;
-\end{circuitikz}
-\end{center}
-
-
----
-
-
-\begin{center}
-\begin{circuitikz} 
-\draw
-
-(1, 1) node[ieeestd nand port] (nand1) {nand}
-(3.3, 2) node[ieeestd nand port] (nand2) {nand}
-(3.3, 0) node[ieeestd nand port] (nand3) {nand}
-(6, 1) node[ieeestd nand port] (nand4) {nand}
-
-(nand2.out) -| (nand4.in 1)
-(nand3.out) -| (nand4.in 2)
-(nand1.out) -| (nand2.in 2)
-(nand1.out) -| (nand3.in 1)
-(nand1.in 1) |- (nand2.in 1)
-(nand1.in 2) |- (nand3.in 2)
-(nand4.out) -- ([xshift=0.5cm]or1.out) node[right] {$Sortie$}
-(nand1.in 1) -- ([xshift=-1.5cm]nand1.in 1) node[left] {$A$}
-(nand1.in 2) -- ([xshift=-1.5cm]nand1.in 2) node[left] {$B$}
-
-;
-\end{circuitikz}
-\end{center}
-
----
-
-
-\begin{center}
-\begin{circuitikz} 
-
-\draw
-(0,0) node[left]{$B$} to[short, o-] ++(1.3,0)
-
-(3, 0) node[ieeestd nand port] (nand) {nand}
-
-(nand.in 1) -| ([xshift=-0.6cm, yshift=-0.5cm]nand.in 1) node[left] {}
-(nand.in 2) -| ([xshift=-0.6cm, yshift=0.5cm]nand.in 2) node[left] {}
-
-(-2,2) node[left]{$A$} to[short, o-] ++(3.3,0)
-
-(3, 2) node[ieeestd nand port] (nand2) {nand}
-
-(nand2.in 1) -| ([xshift=-0.6cm, yshift=-0.5cm]nand2.in 1) node[left] {}
-(nand2.in 2) -| ([xshift=-0.6cm, yshift=0.5cm]nand2.in 2) node[left] {}
-
-
-(5.5, 1) node[ieeestd nand port] (nand3) {nand}
-(nand.out) -| (nand3.in 2) {}
-(nand2.out) -| (nand3.in 1)  {}
-
-(5.5, -2) node[ieeestd nand port] (nand4) {nand}
-(9, 0) node[ieeestd nand port] (nand5) {nand}
-
-(nand3.out) -| (nand5.in 1) {}
-(nand4.out) -| (nand5.in 2) {}
-
-(nand5.out) -| ([xshift=0.5cm]nand5.out) node[right] {$Sortie$}
-(-1.8,2) |- (nand4.in 2)
-(0.2,0) |- (nand4.in 1)
-;
-\end{circuitikz}
-\end{center}
 
 ---
 
@@ -785,23 +649,21 @@ Associer chaque circuit à la bonne porte logique
 
 Le codage dit du carré de Polybe remplace chaque caractère par sa position dans une grille définie à l'aide d'une clé. Voici la grille utilisée dans cet exercice. La clé est Polybe. Par habitude, on omet le W.
 
-\begin{center}
-\begin{tabular}{|c|c|c|c|c|c|}
+\begin{array}{|c|c|c|c|c|c|}
     \hline
-    & 0 & 1 & 2 & 3 & 4 \\
+    & 0 & 1 & 2 & 3 & 4 \newline
     \hline
-    0 & P & O & L & Y & B \\
+    0 & P & O & L & Y & B \newline
     \hline
-    1 & E & A & C & D & F \\
+    1 & E & A & C & D & F \newline
     \hline
-    2 & G & H & I & J & K \\
+    2 & G & H & I & J & K \newline
     \hline
-    3 & M & N & Q & R & S \\
+    3 & M & N & Q & R & S \newline
     \hline
-    4 & T & U & V & X & Z \\
+    4 & T & U & V & X & Z \newline
     \hline
-\end{tabular}
-\end{center}
+\end{array}
 
 La lettre O est codée par 01 et la lettre E par 10.
 
@@ -827,7 +689,7 @@ carre = [["P", "O", "L", "Y", "B"], ["E", ...], ...]
             clair += lettre(i, j, carre)
         return ...
     ```
-4. Décoder le message suivant : 1410022212224011402201313440411134331041343422
+4. Décoder le message suivant : `1410022212224011402201313440411134331041343422`
 
 ## 18. Écraser
 
