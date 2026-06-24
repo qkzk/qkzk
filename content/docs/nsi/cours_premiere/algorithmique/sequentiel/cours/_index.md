@@ -116,8 +116,7 @@ Il existe quatre méthodes simples pour construire les tableaux en Python
 * En les définissant directement
 
     ```python
-    equipe = ["Diego", "Franz", "Michel", "Johann",
-    ...       "Lionel", "Christiano"]
+    equipe = ["Diego", "Franz", "Michel", "Johann", "Lionel", "Christiano"]
     ```
 ### Ajouts successifs
 
@@ -250,7 +249,7 @@ Rappelons qu'il existe deux types de boucles : `for` et `while` ou bornée et no
 
 **Contexte :** on dispose d'un tableau,
 
-par exemple `T=[0, 1, 2, ..., 10]`.
+par exemple `T=[3, 7, 12, ..., 21]`.
 
 On veut savoir si un nombre $x$ figure dans le tableau. 
 
@@ -279,7 +278,7 @@ T = [2, 5, -4, 12]
 |------------------ |------ |------ |------ |------ |
 | `élément == 9 ?`  | Faux  | Faux  | Faux  | Faux  |
 
-Le parcours de la boucle se termine et l'algorithme retourne Faux.
+Le parcours de la boucle se termine et l'algorithme renvoie Faux.
 
 
 **A-t-on -4 dans le tableau ?**
@@ -288,7 +287,7 @@ Le parcours de la boucle se termine et l'algorithme retourne Faux.
 |------------------ |------ |------ |------ |------ |
 | `élément == 9 ?`  | Faux  | Faux  | Vrai  |       |
 
-L'algorithme retourne Vrai. La dernière case du tableau n'est jamais visitée !
+L'algorithme renvoie Vrai. La dernière case du tableau n'est jamais visitée !
 
 ### Autre exemple : indice d'un élément d'un tableau 
 
