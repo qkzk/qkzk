@@ -1,0 +1,22 @@
+<svg viewBox="-60 -20 160 40" xmlns="http://www.w3.org/2000/svg">
+  <!-- Droite graduée -->
+  <line x1="-40" y1="0" x2="100" y2="0" stroke="black" stroke-width="1" marker-end="url(#arrowhead)" />
+
+  <!-- Crochet ouvert en b -->
+  <line x1="40" y1="-10" x2="40" y2="10" stroke="black" stroke-width="3" />
+  <line x1="39" y1="-10" x2="45" y2="-10" stroke="black" stroke-width="3" />
+  <line x1="39" y1="10" x2="45" y2="10" stroke="black" stroke-width="3" />
+
+  <!-- Segment épais jusqu'à b -->
+  <line x1="-40" y1="0" x2="40" y2="0" stroke="black" stroke-width="5" />
+
+  <!-- Étiquette b -->
+  <text x="45" y="15" font-size="12" text-anchor="start">b</text>
+
+  <!-- Flèche pour la droite -->
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 4 3.5, 0 7" fill="black" />
+    </marker>
+  </defs>
+</svg>

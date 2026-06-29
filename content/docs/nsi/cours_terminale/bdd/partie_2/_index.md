@@ -1,7 +1,6 @@
 ---
 title: "Cours - partie 2"
 bookCollapseSection: true
-lang: fr
 weight: 2
 
 ---
