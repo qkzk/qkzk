@@ -23,7 +23,7 @@ weight: 1
 |                        | [04 multiples](/uploads/maths/seconde/04_multiples.pdf)                                                                     |    2    |
 | **Samedi 18 octobre**  | **Toussaint**                                                                                                               |         |
 | **Lundi 3 novembre**   | [05 variations](/uploads/maths/seconde/05_variations.pdf)                                                                   |    2    |
-| _7 semaines_           | [06 fonctions affines](./chapitres/affines)                                                               |    2    |
+| _7 semaines_           | [06 fonctions affines](./chapitres/06_affines)                                                               |    2    |
 |                        | [07 pourcentage](/uploads/maths/seconde/07_a_proportions.pdf) - [07 evolutions](/uploads/maths/seconde/07_b_evolutions.pdf) |    2    |
 | **Samedi 20 décembre** | **Noël**                                                                                                                    |         |
 | **Lundi 5 janvier**    | [08 calcul litteral](/uploads/maths/seconde/08_calcul_litteral.pdf)                                                         |    3    |

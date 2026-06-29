@@ -6,7 +6,7 @@ weight: 1
 
 Les chapitres déjà intégrés :
 
-6. [Fonctions affines](affines)
+6. [Fonctions affines](06_affines)
 
 []()
 
