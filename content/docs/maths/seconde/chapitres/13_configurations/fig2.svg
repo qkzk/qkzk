@@ -1,0 +1,29 @@
+<svg viewBox="0 0 120 100" xmlns="http://www.w3.org/2000/svg">
+  <!-- Triangle SAB (à gauche) -->
+  <polygon points="60,10 30,70 10,60" fill="black" fill-opacity="0.1" stroke="black" stroke-width="2" />
+  <line x1="60" y1="10" x2="30" y2="70" stroke="black" stroke-width="2" />
+  <line x1="30" y1="70" x2="10" y2="60" stroke="black" stroke-width="2" />
+  <line x1="10" y1="60" x2="60" y2="10" stroke="black" stroke-width="2" />
+
+  <!-- Triangle SCD (à droite) -->
+  <polygon points="60,10 90,30 120,40" fill="black" fill-opacity="0.1" stroke="black" stroke-width="2" />
+  <line x1="60" y1="10" x2="90" y2="30" stroke="black" stroke-width="2" />
+  <line x1="90" y1="30" x2="120" y2="40" stroke="black" stroke-width="2" />
+  <line x1="120" y1="40" x2="60" y2="10" stroke="black" stroke-width="2" />
+
+  <!-- Points -->
+  <circle cx="60" cy="10" r="3" fill="black" />
+  <text x="65" y="15" font-size="12" text-anchor="start">S</text>
+
+  <circle cx="30" cy="70" r="3" fill="black" />
+  <text x="25" y="75" font-size="12" text-anchor="end">A</text>
+
+  <circle cx="10" cy="60" r="3" fill="black" />
+  <text x="5" y="65" font-size="12" text-anchor="end">B</text>
+
+  <circle cx="90" cy="30" r="3" fill="black" />
+  <text x="95" y="35" font-size="12" text-anchor="start">C</text>
+
+  <circle cx="120" cy="40" r="3" fill="black" />
+  <text x="125" y="45" font-size="12" text-anchor="start">D</text>
+</svg>

@@ -1,0 +1,27 @@
+<svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+  <rect x="50" y="50" width="100" height="60" rx="5" ry="5" fill="lightgray" stroke="black" stroke-width="1" />
+  <rect x="50" y="150" width="100" height="60" rx="5" ry="5" fill="lightgray" stroke="black" stroke-width="1" />
+  <rect x="20" y="250" width="100" height="60" rx="5" ry="5" fill="lightgray" stroke="black" stroke-width="1" />
+  <rect x="180" y="250" width="100" height="60" rx="5" ry="5" fill="lightgray" stroke="black" stroke-width="1" />
+  <rect x="120" y="350" width="100" height="60" rx="5" ry="5" fill="lightgray" stroke="black" stroke-width="1" />
+  <text x="100" y="85" font-size="12" text-anchor="middle">Quadriltère</text>
+  <text x="100" y="85" font-size="10" text-anchor="middle">(non croisé)</text>
+  <text x="100" y="185" font-size="12" text-anchor="middle">Parallélogramme</text>
+  <text x="70" y="285" font-size="12" text-anchor="middle">Rectangle</text>
+  <text x="230" y="285" font-size="12" text-anchor="middle">Losange</text>
+  <text x="170" y="385" font-size="12" text-anchor="middle">Carré</text>
+  <path d="M 100 110 L 100 140" stroke="orange" stroke-width="2" />
+  <path d="M 100 210 L 100 240" stroke="orange" stroke-width="2" />
+  <path d="M 70 280 L 70 310" stroke="orange" stroke-width="2" />
+  <path d="M 230 280 L 230 310" stroke="orange" stroke-width="2" />
+  <path d="M 170 380 L 170 410" stroke="orange" stroke-width="2" />
+  <path d="M 100 140 L 70 280" stroke="black" stroke-width="1" />
+  <path d="M 100 140 L 230 280" stroke="black" stroke-width="1" />
+  <path d="M 70 310 L 170 380" stroke="black" stroke-width="1" />
+  <path d="M 230 310 L 170 380" stroke="black" stroke-width="1" />
+  <text x="80" y="175" font-size="12" fill="orange">1</text>
+  <text x="80" y="245" font-size="12" fill="orange">2</text>
+  <text x="240" y="245" font-size="12" fill="orange">3</text>
+  <text x="120" y="345" font-size="12" fill="orange">4</text>
+  <text x="200" y="345" font-size="12" fill="orange">5</text>
+</svg>

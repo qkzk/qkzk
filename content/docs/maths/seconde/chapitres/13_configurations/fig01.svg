@@ -1,0 +1,26 @@
+<svg viewBox="-20 -20 140 140" xmlns="http://www.w3.org/2000/svg">
+  <!-- Triangle EFH -->
+  <polygon points="0,80 0,20 80,80" fill="black" fill-opacity="0.1" stroke="black" stroke-width="2" />
+
+  <!-- Petit triangle en bas à gauche (angle droit) -->
+  <polygon points="0,75 5,75 5,80, 0,80" fill="black" fill-opacity="0.1" stroke="black" stroke-width="1" />
+
+  <!-- Côtés du triangle -->
+  <line x1="0" y1="80" x2="0" y2="20" stroke="black" stroke-width="2" />
+  <line x1="0" y1="20" x2="80" y2="80" stroke="black" stroke-width="2" />
+  <line x1="80" y1="80" x2="0" y2="80" stroke="black" stroke-width="2" />
+
+  <!-- Points et étiquettes -->
+  <circle cx="0" cy="80" r="3" fill="black" />
+  <text x="-10" y="90" font-size="14" text-anchor="end">E</text>
+
+  <circle cx="0" cy="20" r="3" fill="black" />
+  <text x="-10" y="30" font-size="14" text-anchor="end">F</text>
+
+  <circle cx="80" cy="80" r="3" fill="black" />
+  <text x="90" y="90" font-size="14" text-anchor="start">H</text>
+
+  <!-- Étiquettes des côtés -->
+  <text x="50" y="50" font-size="14" text-anchor="middle">5</text>
+  <text x="40" y="92" font-size="14" text-anchor="middle">4</text>
+</svg>
