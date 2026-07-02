@@ -12,31 +12,31 @@ weight: 1
 
 ## Progression et liens vers les cours.
 
-**Attention :** ces cours sont généralement publiés durant l'été qui précède la rentrée et sont susceptibles d'évoluer durant l'année.
+**Attention :** ces documents sont généralement publiés durant l'été qui précède la rentrée et sont susceptibles d'évoluer durant l'année.
 
-| Progression            | **Seconde**                                                                                                                                  |         |
-| ---------------------- | ---------------------------------------------------------------------------------------------------------------------------                  | :-----: |
-| **Date**               | **Chapitres**                                                                                                                                | **Sem** |
-| **Mardi 1 septembre**  | [01 reels](./chapitres/01_reels/)                                                                                                            | 2       |
-| _7 semaines_           | [02 fonctions graphiquement](./chapitres/02_fonctions_graphiquement/)                                                                        | 2       |
-|                        | [03 vecteurs 1](./chapitres/03_vecteurs_1/)                                                                                                  | 2       |
-|                        | [04 multiples](./chapitres/04_multiples/)                                                                                                    | 2       |
-| **Samedi 17 octobre**  | **Toussaint**                                                                                                                                |         |
-| **Lundi 2 novembre**   | [05 variations](./chapitres/05_variations/)                                                                                                  | 2       |
-| _7 semaines_           | [06 fonctions affines](./chapitres/06_affines/)                                                                                              | 2       |
-|                        | [07 pourcentage](./chapitres/07_proportions_evolutions/)                                                                                     | 2       |
-| **Samedi 19 décembre** | **Noël**                                                                                                                                     |         |
-| **Lundi 4 janvier**    | [08 calcul litteral](./chapitres/08_calcul_litteral/)                                                                                        | 3       |
-| _7 semaines_           | [09 vecteurs 2](./chapitres/09_vecteurs_2/)                                                                                                  | 2       |
-|                        | [10 probabilites](./chapitres/10_probabilites/)                                                                                              | 2       |
-| **Samedi 20 février**  | **Hiver**                                                                                                                                    |         |
-| **Lundi 8 mars**       | [11 décimaux](./chapitres/11_decimaux/)                                                                                                      | 1       |
-| _6 semaines_           | [12 carre, valeur absolue](./chapitres/12_carre_valeur_absolue/)                                                                             | 2       |
-|                        | [13 configurations](./chapitres/13_configurations/)                                                                                          | 2       |
-| **Samedi 17 avril**    | **Printemps**                                                                                                                                |         |
-| **Lundi 3 mai**        | [14 inverse](./chapitres/14_racine_inverse/)                                                                                                 | 2       |
-| _6 semaines_           | [15 statistiques](./chapitres/15_statistiques/)                                                                                              | 2       |
-|                        | [16 droites : cours](./chapitres/16_droites/) [16 droites : exercices](/uploads/maths/seconde/15_exos_equation_droite_systeme_equations.pdf) | 2       |
-|                        | [17 echantillonnage](./chapitres/17_echantillonnage)                                                                                         | 1       |
-|                        | _devoir commun ?_                                                                                                                            | 1       |
-| **4 juillet**          | **Grandes Vacances**                                                                                                                         |         |
+| Progression            | **Seconde**                                                           |                         |         |
+| ---------------------- | --------------------------------------------------------------------- | ----------------------- | :-----: |
+| **Date**               | **Cours**                                                             | **Exercices**           | **Sem** |
+| **Mardi 1 septembre**  | [01 reels](./cours/01_reels/)                                     | [01](./exercices/ch01/) | 2       |
+| _7 semaines_           | [02 fonctions graphiquement](./cours/02_fonctions_graphiquement/) | [02](./exercices/ch02/) | 2       |
+|                        | [03 vecteurs 1](./cours/03_vecteurs_1/)                           | [03](./exercices/ch03/) | 2       |
+|                        | [04 multiples](./cours/04_multiples/)                             | [04](./exercices/ch04/) | 2       |
+| **Samedi 17 octobre**  | **Toussaint**                                                         |                         |         |
+| **Lundi 2 novembre**   | [05 variations](./cours/05_variations/)                           | [05](./exercices/ch05/) | 2       |
+| _7 semaines_           | [06 fonctions affines](./cours/06_affines/)                       | [06](./exercices/ch06/) | 2       |
+|                        | [07 pourcentage](./cours/07_proportions_evolutions/)              | [07](./exercices/ch07/) | 2       |
+| **Samedi 19 décembre** | **Noël**                                                              |                         |         |
+| **Lundi 4 janvier**    | [08 calcul litteral](./cours/08_calcul_litteral/)                 | [08](./exercices/ch08/) | 3       |
+| _7 semaines_           | [09 vecteurs 2](./cours/09_vecteurs_2/)                           | [09](./exercices/ch09/) | 2       |
+|                        | [10 probabilites](./cours/10_probabilites/)                       | [10](./exercices/ch10/) | 2       |
+| **Samedi 20 février**  | **Hiver**                                                             |                         |         |
+| **Lundi 8 mars**       | [11 décimaux](./cours/11_decimaux/)                               | [11](./exercices/ch11/) | 1       |
+| _6 semaines_           | [12 carre, valeur absolue](./cours/12_carre_valeur_absolue/)      | [12](./exercices/ch12/) | 2       |
+|                        | [13 configurations](./cours/13_configurations/)                   |                         | 2       |
+| **Samedi 17 avril**    | **Printemps**                                                         |                         |         |
+| **Lundi 3 mai**        | [14 inverse](./cours/14_inverse/)                          | [14](./exercices/ch14/) | 2       |
+| _6 semaines_           | [15 statistiques](./cours/15_statistiques/)                       | [15](./exercices/ch15/) | 2       |
+|                        | [16 droites](./cours/16_droites/)                                 | [16](./exercices/ch16/) | 2       |
+|                        | [17 echantillonnage](./cours/17_echantillonnage)                  | [17](./exercices/ch17/) | 1       |
+|                        | _devoir commun ?_                                                     |                         | 1       |
+| **4 juillet**          | **Grandes Vacances**                                                  |                         |         |
