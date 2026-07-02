@@ -151,6 +151,10 @@ b) 46,2 % de 67 = $0,462 \times 67 = 30,954$. La France compte environ 31 millio
 
 #### 2) Tableaux
 
+**Définition** : La fréquence **marginale** est la fréquence d'un caractère.
+
+**Définition** : La fréquence **conditionnelle** est la fréquence dans un sous-ensemble de la population.
+
 **Méthode : Représenter une situation par un tableau**
 
 Dans une entreprise qui compte 360 employés, on compte 60 % d’hommes et parmi ceux-là, 12,5 % sont des cadres. Par ailleurs, 87,5 % des femmes de cette entreprise sont ouvrières ou techniciennes.
@@ -171,8 +175,8 @@ b) À l’aide de ce tableau, déterminer :
 
 - la proportion de cadres,
 - la proportion d’hommes cadres,
-- la proportion d’employés hommes 
-- la proportion d’hommes dans les cadres.
+- la proportion d’employés hommes  - c'est la fréquence _marginale_ des hommes,
+- la proportion d’hommes dans les cadres - c'est la fréquence _conditionnelle_ des hommes parmi les cadres.
 
 Réponses :
 
