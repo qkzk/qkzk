@@ -1,5 +1,5 @@
 ---
-title: "Racine carré, inverse"
+title: "Inverse"
 subtitle: Chapitre 14
 theme: metropolis
 bookCollapseSection: false
@@ -12,7 +12,7 @@ header-includes: |
  
 ---
 
-[pdf](./14_racine_inverse.pdf)
+[pdf](./14_inverse.pdf)
 
 ---
 
