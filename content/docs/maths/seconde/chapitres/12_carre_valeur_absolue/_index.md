@@ -1,5 +1,5 @@
 ---
-title: "Fonction carré"
+title: "Fonctions carré et valeur absolue"
 subtitle: Chapitre 12
 theme: metropolis
 weight: 12
@@ -13,7 +13,7 @@ header-includes: |
  
 ---
 
-[pdf](./12_carre.pdf)
+[pdf](./12_carre_valeur_absolue.pdf)
 
 ---
 
@@ -122,3 +122,53 @@ Soit $x = -\sqrt{a}$ ou $x = +\sqrt{a}$.
 
 
 {{< /columns >}}
+
+## 2. La fonction valeur absolue : $x \mapsto |x|$
+
+
+### 2.1 Définition et propriétés 
+
+**Définition 2**
+
+La fonction **valeur absolue** est définie sur $\mathbb{R}$ par :
+
+$$|x| = \left\\{ 
+\begin{array}{rcl}
+x &\text{ si } &x\geq0 \\\
+-x &\text{ si} &x < 0
+\end{array}
+\right.$$
+
+**Exemple 2**
+
+- $|0| = 0 \text{ car } 0 \geq 0$ 
+- $|3| = 3 \text{ car } 3 \geq 0$ 
+- $|-2| = -(-2) = 2 \text{ car } -2 < 0$ 
+- $|-5| = 5 \text{ car } -5 < 0$ 
+
+**Propriété 3**
+
+La valeur absolue est toujours positive. Pour tout $x\in\mathbb{R}$, on a $|x| \geq 0$.
+
+Autrement dit, la courbe de la valeur absolue est située au dessus de l'axe des abscisses.
+
+
+**Propriété 4**
+
+La valeur absolue est décroissante sur $]-\infty; 0]$ et croissante sur $[0; +\infty[$.
+
+$$
+\begin{array}{c|ccccc}
+x & -\infty & & 0 & & +\infty \\\
+\hline
+|x| &           & \searrow &           & \nearrow & \\\
+    &           &          & \text{0}  &
+\end{array}
+$$
+
+### 2.2 Représentation graphique
+
+La courbe de la valeur absolue est constituée de deux demi-droites sécantes à l'origine.
+
+
+![Courbe de la valeur absolue](fig_06.svg)
