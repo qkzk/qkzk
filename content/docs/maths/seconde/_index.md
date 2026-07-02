@@ -8,7 +8,7 @@ weight: 1
 
 # Seconde
 
-[rentrée](./presentation_rentree.pdf)
+[rentrée](./presentation_rentree-slides.pdf)
 
 ## Progression et liens vers les cours.
 
