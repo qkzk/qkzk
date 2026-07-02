@@ -1,0 +1,42 @@
+<svg viewBox="40 20 350 120" xmlns="http://www.w3.org/2000/svg">
+  <line x1="50" y1="100" x2="350" y2="100" stroke="black" stroke-width="2" />
+  <line x1="100" y1="50" x2="300" y2="50" stroke="black" stroke-width="2" />
+  <rect x="120" y="30" width="120" height="40" stroke="black" stroke-width="2" fill="none" />
+  <line x1="120" y1="30" x2="120" y2="70" stroke="black" stroke-width="2" />
+  <line x1="100" y1="40" x2="100" y2="60" stroke="black" stroke-width="2" />
+  <line x1="300" y1="40" x2="300" y2="60" stroke="black" stroke-width="2" />
+  <line x1="200" y1="70" x2="200" y2="30" stroke="black" stroke-width="2" />
+  <text x="120" y="80" font-size="12" text-anchor="middle">Q1</text>
+  <text x="240" y="80" font-size="12" text-anchor="middle">Q3</text>
+  <text x="200" y="80" font-size="12" text-anchor="middle">Médiane</text>
+  <text x="100" y="80" font-size="12" text-anchor="middle">Min</text>
+  <text x="300" y="80" font-size="12" text-anchor="middle">Max</text>
+
+  <line x1="80" y1="95" x2="80" y2="105" stroke="black" stroke-width="2" />
+  <line x1="100" y1="95" x2="100" y2="105" stroke="black" stroke-width="2" />
+  <line x1="120" y1="95" x2="120" y2="105" stroke="black" stroke-width="2" />
+  <line x1="140" y1="95" x2="140" y2="105" stroke="black" stroke-width="2" />
+  <line x1="160" y1="95" x2="160" y2="105" stroke="black" stroke-width="2" />
+  <line x1="180" y1="95" x2="180" y2="105" stroke="black" stroke-width="2" />
+  <line x1="200" y1="95" x2="200" y2="105" stroke="black" stroke-width="2" />
+  <line x1="220" y1="95" x2="220" y2="105" stroke="black" stroke-width="2" />
+  <line x1="240" y1="95" x2="240" y2="105" stroke="black" stroke-width="2" />
+  <line x1="260" y1="95" x2="260" y2="105" stroke="black" stroke-width="2" />
+  <line x1="280" y1="95" x2="280" y2="105" stroke="black" stroke-width="2" />
+  <line x1="300" y1="95" x2="300" y2="105" stroke="black" stroke-width="2" />
+  <line x1="320" y1="95" x2="320" y2="105" stroke="black" stroke-width="2" />
+
+  <text x="80" y="120" font-size="12" text-anchor="middle">10</text>
+  <text x="100" y="120" font-size="12" text-anchor="middle">11</text>
+  <text x="120" y="120" font-size="12" text-anchor="middle">12</text>
+  <text x="140" y="120" font-size="12" text-anchor="middle">13</text>
+  <text x="160" y="120" font-size="12" text-anchor="middle">14</text>
+  <text x="180" y="120" font-size="12" text-anchor="middle">15</text>
+  <text x="200" y="120" font-size="12" text-anchor="middle">16</text>
+  <text x="220" y="120" font-size="12" text-anchor="middle">17</text>
+  <text x="240" y="120" font-size="12" text-anchor="middle">18</text>
+  <text x="260" y="120" font-size="12" text-anchor="middle">19</text>
+  <text x="280" y="120" font-size="12" text-anchor="middle">20</text>
+  <text x="300" y="120" font-size="12" text-anchor="middle">21</text>
+  <text x="320" y="120" font-size="12" text-anchor="middle">22</text>
+</svg>
