@@ -61,7 +61,7 @@ r
 fini !
 ```
 
-On réalise bien que `lettre` a pri pour valeurs successives les caractères
+On réalise bien que `lettre` a pris pour valeurs successives les caractères
 composant `mot` : `"b"`, `"o"` etc.
 
 
@@ -120,7 +120,7 @@ L'instruction `print(nombre)` a donc été exécutée 10 fois (il y a 10 entiers
 Résumons :
 
 {{< hint warning >}}
-`range(n)` renvoie la collection des entiers de `0` inclu à `n` exclu.
+`range(n)` renvoie la collection des entiers de `0` inclus à `n` exclu.
 {{< /hint >}}
 
 On n'est pas tenu d'utiliser ce paramètre, par exemple pour afficher 20 fois "Allez les bleus !",
@@ -201,7 +201,7 @@ _Remarque :_ Vous apprendrez cette année en mathématiques à calculer ces somm
 ## `range` avec deux paramètres
 
 {{< hint warning >}}
-`range(debut, fin)` parcourt les entiers de `debut` inclu jusque `fin` exclu.
+`range(debut, fin)` parcourt les entiers de `debut` inclus jusque `fin` exclu.
 {{< /hint >}}
 
 Par exemple `range(5, 10)` va parcourir les entiers : 5, 6, 7, 8, et 9. Mais pas 10.
@@ -213,7 +213,7 @@ Calculer la somme des entiers à trois chiffres (de 100 à 999) dans la cellule 
 ## `range` avec trois paramètres
 
 {{< hint warning >}}
-`range(debut, fin, pas)`, on parcourt les entiers de `debut` inclu à `fin` exclu en avançant de `pas` en `pas` :
+`range(debut, fin, pas)`, on parcourt les entiers de `debut` inclus à `fin` exclu en avançant de `pas` en `pas` :
 {{< /hint >}}
 
 
@@ -227,6 +227,16 @@ Collection des entiers pairs entre 100 et 199 : (100, 102, 104, ..., 198) : `ran
 4. Compter le nombre d'entiers se terminant par deux zéros plus petits qu'un milliard à l'aide d'une boucle.
 
 _On utilisera la cellule python précédente_
+
+### Résumé `range`
+
+{{< hint danger >}}
+| Expression        | Éléments        | Remarque                                                            |
+|-------------------|-----------------|---------------------------------------------------------------------|
+| `range(5)`        | `0, 1, 2, 3, 4` | `range(a)` de `0` à `a` exclu.<br> Contient `a` éléments            |
+| `range(2, 7)`     | `2, 3, 4, 5, 6` | `range(a, b)` : de `a` inclus à `b` exclu                           |
+| `range(3, 10, 2)` | `3, 5, 7, 9`    | `range(a, b, c)` : de `a` inclus à `b`<br> exclu en avançant de `c` |
+{{< /hint >}}
 
 ## Combiner des blocs
 
@@ -271,7 +281,7 @@ if nombre > 10:
 Condisérons deux problèmes a priori similaire :
 
 - pour un mot, compter les "a" qu'il contient.
-- pour un mot, afficher les positions de _chaquee "a" qu'il contient.
+- pour un mot, afficher les positions de _chaque_ "a" qu'il contient.
 
 Les deux se résolvent en parcourant chaque lettre du mot. Une boucle bornée permet de résoudre le problème.
 
@@ -420,7 +430,7 @@ voyelles = "aeiouy
       ```
 
 3. En utilisant deux boucles _imbriquées_ (l'une **dans** l'autre), afficher
-  les tables de multiplications des entiers de 0 à 10 inclu.
+  les tables de multiplications des entiers de 0 à 10 inclus.
 
 {{< python title="Python est malin, il a appris ses tables">}}
 {{< /python >}}

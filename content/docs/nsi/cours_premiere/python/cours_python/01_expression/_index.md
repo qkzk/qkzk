@@ -330,7 +330,7 @@ a = 12 / 13
 
 ## Instruction et expression
 
-- Une _epression_ est un calcul qui a une _valeur_.
+- Une _expression_ est un calcul qui a une _valeur_.
 - Une _instruction_ est un ordre qui change l'état de la machine.
 
 Dans l'exemple ci-dessous :

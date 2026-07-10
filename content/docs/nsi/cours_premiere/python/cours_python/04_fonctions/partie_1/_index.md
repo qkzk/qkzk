@@ -25,10 +25,9 @@ de retour n'est spécifiée, alors la fonction renvoie `None`.
 ## Exemples
 
 On a déjà rencontré plusieurs fonctions, en particulier `len`. Cette fonction
-renvoie (on dit parfois _retourne_) le nombre d'éléments d'une collection.
+_renvoie_ (on dit parfois _retourne_) le nombre d'éléments d'une collection.
 
-* la définition de la fonction `len` est faite par le programme Python lui même,
-  nous n'avons pas à nous en charger.
+* la définition de la fonction `len` est faite par le programme Python lui même, nous n'avons pas à nous en charger.
 * l'appel de la fonction se fait ainsi : `len(objet)`
 
 Par exemple :
@@ -39,8 +38,7 @@ Par exemple :
 7
 ```
 
-On a aussi rencontré la fonction `print`. Cette fonction renvoie `None`
-et affiche un objet dans la console.
+On a aussi rencontré la fonction `print`. Cette fonction renvoie `None` et affiche un objet dans la console.
 
 ```python
 >>> valeur = print("Bonjour !")

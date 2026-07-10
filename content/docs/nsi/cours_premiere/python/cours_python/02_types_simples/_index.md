@@ -606,7 +606,7 @@ Comme on peut le voir :
 1. Vérifiez qu'après l'exécution de la méthode `upper`, l'objet n'a pas changé.
 1. Documentez vous sur les méthodes `count`, `lower` et `replace` des
     chaînes de caractères. Que font-elles ?
-2. Testez les. Combien de "a" sont présents dans cet extrait de la disparition ?
+2. Quelle est la voyelle la plus fréquente dans cet extrait de _La disparition_ de Georges Pérec ?
 
 
 > Un jour, il imagina tout un roman : il y aurait, dans un pays lointain, un garçon, un bambin au nom d'Aignan. Il aurait cinq ans. Il vivrait dans un palais où tout irait à l'abandon. Un jour, sa nounou lui disait:
@@ -627,7 +627,9 @@ Comme on peut le voir :
 > 
 > - Qui sait ? dit Aignan, -souriant d'un air coquin.
 > 
-> - Tu as un air fanfaron qui nous plaît tout a fait, vilain avorton, poursuivit l'insinuant Sphinx. Soyons donc fair-play, ton ambition adoucira ta mort ; voici mon oral ultimatum : Il saisit un luth, prit son inspiration, puis, s'accompagnant, chanta : Y a-t-il un animal
+> - Tu as un air fanfaron qui nous plaît tout a fait, vilain avorton, poursuivit l'insinuant Sphinx. Soyons donc fair-play, ton ambition adoucira ta mort ; voici mon oral ultimatum : Il saisit un luth, prit son inspiration, puis, s'accompagnant, chanta : 
+>
+> Y a-t-il un animal
 > 
 > Qui ait un corps fait d'un rond pas tout à fait clos
 > 
