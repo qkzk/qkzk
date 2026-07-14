@@ -7,7 +7,7 @@ bookCollapseSection: false
 geometry: "margin=1.5cm"
 ---
 
-[pdf](./ch2.pdf)
+[pdf](./ch2.pdf) - [Tracer une courbe de fonction sur la calculatrice Numworks](https://www.youtube.com/watch?v=ZVs1Xw1oMaQ)
 
 ## Exercice 1
 
@@ -113,10 +113,3 @@ Soit la fonction $g(x) = x^3 - x$.
 
 Pour la fonction $f(x) = \frac{2x + 1}{x - 1}$, trouvez graphiquement les solutions de l'inéquation $f(x) > 1$.
 
-## Exercice 20
-
-Déterminez si les fonctions suivantes sont paires, impaires ou ni l'un ni l'autre :
-
-1. $f(x) = x^3$
-2. $g(x) = x^2 - 1$
-3. $h(x) = x^3 + x$
