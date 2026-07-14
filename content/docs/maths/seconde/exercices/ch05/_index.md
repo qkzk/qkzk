@@ -9,7 +9,7 @@ geometry: "margin=1.5cm"
 
 [pdf](./ch05.pdf)
 
-_Dans ce chapitre, on construire le graphe de la fonction sur la calculatrice et on répondra par lecture graphique._
+_Dans ce chapitre, on construira le graphe de la fonction sur la calculatrice et on répondra par lecture graphique._
 
 ## Exercice 1
 
@@ -53,24 +53,36 @@ Trouvez les valeurs de $x$ pour lesquelles la fonction $g(x) = x^2 - 6x + 8$ att
 
 ## Exercice 11
 
-Pour la fonction $h(x) = x^3 - 3x^2 + 2x$, construire le tableau de variations de $h$.
+Représentez graphiquement la fonction $g(x) = x^4 - 4x^2 + 4$ et trouvez les coordonnées des points où la fonction atteint un minimum.
 
 ## Exercice 12
 
-Représentez graphiquement la fonction $g(x) = x^4 - 4x^2 + 4$ et trouvez les coordonnées des points où la fonction atteint un minimum.
+Pour la fonction $f(x) = x^2 + 2x - 5$, trouvez les coordonnées du minimum de $f$ après avoir construit son tableau de variations.
 
 ## Exercice 13
 
-Pour la fonction $f(x) = x^2 + 2x - 5$, trouvez les coordonnées du minimum de $f$ après avoir construit son tableau de variations.
+Soit la fonction $g(x) = -x^3 + 3x$. Déterminez les valeurs de $x$ pour lesquelles la fonction atteint un maximum ou un minimum.
 
 ## Exercice 14
 
-Soit la fonction $g(x) = -x^3 + 3x$. Déterminez les valeurs de $x$ pour lesquelles la fonction atteint un maximum ou un minimum.
+Pour la fonction $h(x) = x^3 - 6x$, construire le tableau de variations de $h$.
 
 ## Exercice 15
 
-Pour la fonction $h(x) = x^3 - 6x$, construire le tableau de variations de $h$.
+Représentez graphiquement la fonction $g(x) = x^3 - 9x$ et trouvez les coordonnées des points où la fonction atteint un maximum ou un minimum.
 
 ## Exercice 16
 
-Représentez graphiquement la fonction $g(x) = x^3 - 9x$ et trouvez les coordonnées des points où la fonction atteint un maximum ou un minimum.
+On considère la fonction $f$ définie sur $\mathbb{R}$ par $f(x)=x^2+2x-3$
+
+1. Construire son tableau de variations par lecture graphique.
+2. En vous aidant du tableau précédent, comparer ($<, =, >$) les images suivantes _sans les calculer_ :
+
+    a. $f(3)$ et $f(5)$
+
+    b. $f(-3)$ et $f(-1)$
+
+    c. $f(-1)$ et $f(1)$
+
+    d. $f(7213)$ et $f(9827)$
+
