@@ -23,13 +23,13 @@ Pour la fonction affine $f(x) = -4x + 3$, déterminez le coefficient directeur e
 
 ## Exercice 3
 
-On considère $A(3;-1)$ et $B(2;-4)$. Déterminer l'expression de la fonction affine $f$ dont $(AB)$ est la courbe.
+Soit la fonction affine $f(x) = 2x + 7$. Calculez $f(-3)$, $f(0)$ et $f(2)$.
 
 ## Exercice 4
 
 Représentez graphiquement la fonction affine $f(x) = 2x - 1$ sur l'intervalle $[-2, 2]$.
 
-## Exercice 6
+## Exercice 5
 
 Déterminez le sens de variation de la fonction affine $f(x) = -x + 4$.
 
@@ -43,7 +43,8 @@ Pour la fonction affine $f(x) = 3x + 6$, trouvez les coordonnées du point d'int
 
 ## Exercice 8
 
-Représentez graphiquement la fonction affine $f(x) = -\frac{1}{2}x + 3$ sur l'intervalle $[-4, 4]$.
+1. Représentez graphiquement la fonction affine $f(x) = -\frac{1}{2}x + 3$ sur l'intervalle $[-4, 4]$.
+2. Résoudre graphiquement $f(x) = 4$ et interpréter en terme d'antécédent.
 
 ## Exercice 9
 
@@ -51,11 +52,11 @@ Pour la fonction affine $f(x) = 4x - 5$, déterminez le tableau de signe de $f(x
 
 ## Exercice 10
 
-Soit la fonction affine $f(x) = 2x + 7$. Calculez $f(-3)$, $f(0)$ et $f(2)$.
+On considère $A(3;-1)$ et $B(2;-4)$. Déterminer l'expression de la fonction affine $f$ dont $(AB)$ est la courbe.
 
 ## Exercice 11
 
-Déterminez le sens de variation de la fonction affine $f(x) = \frac{3}{2}x - 1$.
+La courbe de la fonction affine $f$ passe par $A(5;-3)$ et $B(2; -4)$. Déterminer l'expression de la fonction affine $f$.
 
 ## Exercice 12
 
