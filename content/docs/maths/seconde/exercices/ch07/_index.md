@@ -121,23 +121,53 @@ Dans une entreprise, 90 % des employés sont satisfaits de leur travail. Parmi l
 
 ## V. Evolutions
 
-#### Exercice 21
+#### Exercice 22
+
+1. Un appartement coûtait $120~000$€ en 2020 son prix a augmenté de 35% en 2026. Calculer le nouveau prix.
+2. Une veste est soldée de 40%. Elle coûtait 240€. Calculer le nouveau prix.
+3. Un enfant a vu sa taille multipliée par $1,35$ durant la maternelle. Quelle est l'évolution de sa taille en pourcentage ?
+4. Donner le coefficient multiplicateur associé à une augmentation de 12%.
+5. Donner le coefficient multiplicateur associé à une diminution de 25%.
+
+#### Exercice 23
+
+1. La voiture de JP décôte (= perd de la valeur) à hauteur de 15% chaque année. Il l'a payée $25~000$€ en 2020. Combien vaut-elle en 2025 ?
+2. Un bambou croît de 20% chaque mois pendant un an. Par combien sa taille est elle multipliée après un an ?
+3. La population d'une bactérie est multipliée par 1.25 chaque jour pendant une semaine. Quelle est l'évolution en pourcentage après une semaine ?
+
+#### Exercice 24
+
+1. Suite à la fermeture d'une usine, la population d'une ville a diminué de 15% pour s'établir à $235~000$ habitants. Quelle était la population avant la fermeture de l'usine ?
+2. La capitalisation d'une entreprise a augmenté de 25% en un an et s'élève à 3 millions d'euros. Quelle était la capitalisation un an plus tôt ?
+
+#### Exercice 25
+
+La taxe sur la valeur ajoutée (TVA) est un impôt général sur la consommation qui est directement facturé aux clients sur les biens qu’ils consomment ou les services qu’ils utilisent en France. 
+
+Lorsqu'on achète un bien de consommation, le montant total (Prix TTC) se découpe en deux parties : le prix hors taxe (Prix HT) et le montant de la TVA. C'est le commerçant qui verse ensuite ce montant à l'état.
+
+Selon le type de biens, le taux de TVA varie entre 5.5% et 20%.
+
+1. Le prix HT d'un article est de 300€ et le taux de TVA s'élève à 20%. Calculer le montant de la TVA et le prix TTC.
+2. Un article est taxé à 10% de TVA et son prix TTC est de 55€. Calculer le prix HT.
+
+#### Exercice 26
 
 
-**Compléter le tableau**
+**Compléter la facture**
 
 _Tous les calculs doivent être détaillés. Utiliser une ligne par calcul. Il n'est pas nécessaire de les rédiger._
 
 $$
-\begin{array}{|c|c|c|c|c|c|c|}
+\begin{tabular}{|c|c|c|c|c|c|c|}
 \hline
-\text{Article} & \text{Prix HT} & \text{Taux de TVA} & \text{Montant de la TVA} & \text{Prix TTC} & \text{Nombre} & \text{Montant total} \\\
+Article & Prix HT & Taux de TVA & montant de la TVA & Prix TTC & Nombre & Montant total\\
 \hline
-A & 320 & 20\\% & \ldots & \ldots & 7 & \ldots \\\
-B & 330 & \ldots & 66 & \ldots & 4 & \ldots \\\
-C & \ldots & 5.5\\% & 88 & \ldots & 5 & \ldots \\\
+A & 320 & 20\% & \ldots & \ldots & 7 & \ldots\\
+B & 330 & \ldots & 66 & \ldots & 4 & \ldots \\
+C & \ldots & 5.5\% & 88 & \ldots & 5 & \ldots \\
 \hline
- &  &  &  & & \text{Total} & \ldots \\\
+ &  &  &  & & Total & \ldots \\
 \hline
-\end{array}
+\end{tabular}
 $$
