@@ -21,11 +21,13 @@ Soit la fonction $g(x) = -x^2 + 4x - 1$. Construire, par lecture graphique, le t
 
 ## Exercice 3
 
-Représentez graphiquement la fonction $h(x) = x^3 - 3x + 1$ et construire son tableau de variations.
+La fonction $h$ est définie sur $[1; 5]$ par $h(x) = x^3 - 3x + 1$.
+
+Est-elle croissante sur son intervalle de définition ?
 
 ## Exercice 4
 
-Pour la fonction $f(x) = x^2 - 4x + 3$, trouvez les coordonnées du minimum de $f$.
+Pour la fonction $f(x) = x^2 - 4x + 3$ définie sur $[0; 5]$, trouvez les coordonnées du minimum de $f$.
 
 ## Exercice 5
 
