@@ -31,19 +31,26 @@ Calculez les coordonnées des vecteurs suivants :
 
 #### Exercice 3
 
-Soient les vecteurs $\overrightarrow{u}(2, 3)$ et $\overrightarrow{v}(4, 1)$. Calculez $\overrightarrow{u} + \overrightarrow{v}$.
+Soient les vecteurs $\overrightarrow{u}(2, 3)$ et $\overrightarrow{v}(4, 1)$. Calculez $\overrightarrow{u} + \overrightarrow{v}, \overrightarrow{u} - \overrightarrow{v}$ et $2\overrightarrow{u}$.
 
 #### Exercice 4
 
-Soient les vecteurs $\overrightarrow{a}(1, 2)$ et $\overrightarrow{b}(3, -1)$. Calculez $\overrightarrow{a} - \overrightarrow{b}$.
+Soient les vecteurs $\overrightarrow{a}(1, 2)$ et $\overrightarrow{b}(3, -1)$. Calculez $\overrightarrow{a} + \overrightarrow{b}, \overrightarrow{a} - \overrightarrow{b}$ et $3\overrightarrow{v}$
 
 #### Exercice 5
 
-Déterminez les coordonnées du vecteur résultant de l'addition de $\overrightarrow{u}(3, 4)$ et $\overrightarrow{v}(-2, 5)$.
+On considère $A(3; 4), B(2; 7)$ et $C(1; 5)$
+
+Calculez $\overrightarrow{AB} + \overrightarrow{AC}, \overrightarrow{AB} - \overrightarrow{CB}$ et $2\overrightarrow{AB}$.
 
 #### Exercice 6
 
-Calculez les coordonnées du vecteur résultant de la soustraction de $\overrightarrow{a}(5, 7)$ par $\overrightarrow{b}(1, 2)$.
+
+On considère $A(-1; 2), B(-2; 5)$ et $C(-3; 3)$
+
+Calculez $\overrightarrow{BA} + \overrightarrow{CB}, \overrightarrow{AB} - \overrightarrow{CB}$ et $2\overrightarrow{CB}$.
+
+
 
 ## III. Relation de Chasles
 
@@ -86,7 +93,7 @@ Déterminez si les vecteurs $\overrightarrow{u}(2, 4)$ et $\overrightarrow{v}(1,
 
 #### Exercice 14
 
-Les vecteurs $\overrightarrow{a}(5, 10)$ et $\overrightarrow{b}(3, 6)$ sont-ils colinéaires ? Justifiez votre réponse.
+Déterminez un vecteur $\overrightarrow{b}$ colinéaire au vecteur $\overrightarrow{a}(5, 10)$ et d'abscisse -10.
 
 ## VI. Application : alignement de trois points
 
@@ -98,22 +105,24 @@ Les points $A(2, 2)$, $B(4, 6)$, et $C(6, 10)$ sont-ils alignés ? Justifiez vot
 
 Les points $D(-2, -3)$, $E(0, 1)$, et $F(4, 9)$ sont-ils alignés ? Justifiez votre réponse.
 
+#### Exercice 16
+
+Les points $D(2, 2)$, $E(1, 8)$, et $F(-2, x)$ sont alignés. Déterminer la valeur de $x$.
+
 ## VII. Application : parallélisme
-
-#### Exercice 17
-
-Les vecteurs $\overrightarrow{u}(2, 3)$ et $\overrightarrow{v}(4, 6)$ sont-ils colinéaires ? Justifiez votre réponse.
 
 #### Exercice 18
 
 On a $A(2,1), B(3, 5), D(7, 3), E(4, -9)$. Les droites $(AB)$ et $(DE)$ sont-elles parallèles ? Justifiez.
 
-## VIII. Divers
-
 #### Exercice 19
 
-Soit le vecteur $\overrightarrow{u}(x, y)$. Trouvez les coordonnées de $-3\overrightarrow{u}$.
+On a $A(1,3), B(2, 5), D(-6, 3), E(4, 9)$. Les droites $(AB)$ et $(DE)$ sont-elles parallèles ? Justifiez.
+
 
 #### Exercice 20
 
-Soient $\overrightarrow{u}(a, b)$ et $\overrightarrow{v}(2a, 2b)$. Montrez que ces vecteurs sont colinéaires.
+On considère $A(-2; 5), B(2; 7), C(3; 8)$.
+
+Déterminer l'ordonnée de $D$ dont l'abscisse est 8 et tel que $(AB)$ et $(CD)$ soient parallèles.
+
