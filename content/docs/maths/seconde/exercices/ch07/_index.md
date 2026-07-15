@@ -159,15 +159,15 @@ Selon le type de biens, le taux de TVA varie entre 5.5% et 20%.
 _Tous les calculs doivent être détaillés. Utiliser une ligne par calcul. Il n'est pas nécessaire de les rédiger._
 
 $$
-\begin{tabular}{|c|c|c|c|c|c|c|}
-\hline
-Article & Prix HT & Taux de TVA & montant de la TVA & Prix TTC & Nombre & Montant total\\
-\hline
-A & 320 & 20\% & \ldots & \ldots & 7 & \ldots\\
-B & 330 & \ldots & 66 & \ldots & 4 & \ldots \\
-C & \ldots & 5.5\% & 88 & \ldots & 5 & \ldots \\
-\hline
- &  &  &  & & Total & \ldots \\
-\hline
-\end{tabular}
+\begin{array}{|c|c|c|c|c|c|c|}
+\\hline
+\text{Article} & \text{Prix HT} & \text{Taux de TVA} & \text{montant de la TVA} & \text{Prix TTC} & \text{Nombre} & \text{Montant total}\\\\
+\\hline
+\text{A} & 320 & 20\\% & \\ldots & \\ldots & 7 & \\ldots\\\\
+\text{B} & 330 & \\ldots & 66 & \\ldots & 4 & \\ldots \\\\
+\text{C} & \\ldots & 5.5\\% & 88 & \\ldots & 5 & \\ldots \\\\
+\\hline
+ &  &  &  & & \text{Total} & \\ldots \\\\
+\\hline
+\end{array}
 $$
