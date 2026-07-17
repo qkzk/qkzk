@@ -15,7 +15,7 @@ geometry: "margin=1.5cm"
 
 #### Exercice 1
 
-Déterminez si les fractions suivantes peuvent être exprimées comme des nombres décimaux finissant. Justifiez votre réponse.
+Déterminez si les fractions suivantes peuvent être exprimées comme des nombres décimaux. Justifiez votre réponse.
 
 1. $\dfrac{3}{8}$
 
@@ -25,7 +25,7 @@ Déterminez si les fractions suivantes peuvent être exprimées comme des nombre
 
 #### Exercice 2
 
-Simplifiez les fractions suivantes et déterminez si elles peuvent être exprimées comme des nombres décimaux finissant.
+Simplifiez les fractions suivantes et déterminez si elles peuvent être exprimées comme des nombres décimaux.
 
 1. $\dfrac{24}{40}$
 
@@ -41,7 +41,7 @@ Expliquez pourquoi $\dfrac{1}{7}$ n'est pas un nombre décimal.
 
 #### Exercice 4
 
-Parmi les fractions suivantes, identifiez celles qui ne peuvent pas être exprimées comme des nombres décimaux finissant.
+Parmi les fractions suivantes, identifiez celles qui ne peuvent pas être exprimées comme des nombres décimaux.
 
 1. $\dfrac{1}{9}$
 
@@ -53,11 +53,11 @@ Parmi les fractions suivantes, identifiez celles qui ne peuvent pas être exprim
 
 #### Exercice 5
 
-Montrez que $\dfrac{7}{8}$ a un développement décimal fini. Donnez ce développement.
+Montrez que $\dfrac{7}{8}$ est un décimal et donner sa représentation décimale.
 
 #### Exercice 6
 
-Pour chaque fraction, déterminez le développement décimal fini.
+Pour chaque fraction, déterminez le développement décimal.
 
 1. $\dfrac{5}{16}$
 
