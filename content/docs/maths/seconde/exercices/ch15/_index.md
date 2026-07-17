@@ -32,7 +32,7 @@ On considère la série statistique $x$ suivante :
 
 ## Exercice 2
 
-On reprend la série de l'exercice.
+On reprend la série de l'exercice précédent.
 
 1. Calculer la _moyenne_ de la série. Détailler les calculs.
 2. Calculer la _médiane_ de la série. Détailler les calculs.
