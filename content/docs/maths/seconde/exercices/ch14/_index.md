@@ -81,7 +81,7 @@ On considère la fonctions $f$ définie par $f(x) = \dfrac{x}{x+4}$
 # Tableau de signes, valeur interdite
 
 
-Partons d'un exemple :
+Partons d'un exemple : _Résoudre $\dfrac{-x+7}{3x-18} \geq 0$_
 
 ![Signe d'un quotient](https://cdn.jai20enmaths.com/d/5b4a4b55e5bcf4000f122cea/ee0950b0-b1f2-11e8-8995-9d6a0bc15956.png)
 
@@ -89,6 +89,8 @@ On procède comme pour le signe d'un produit mais...
 
 1. Le signe du quotient $\dfrac{a}{b}$ est le même que celui de $a \times b$ lorsque $b \neq 0$.
 2. Les valeurs interdites sont indiquées par une _double barre_ à la dernière ligne
+
+La solution de $\dfrac{-x+7}{3x-18} \geq 0$ est $]6; 7]$.
 
 
 ## Exercice 5
@@ -101,3 +103,4 @@ Construire le tableau de signes des expressions suivantes puis résoudre l'inéq
   
 3. $\quad h(x) = \dfrac{x+4}{(5x-11)(x-2)}$ et $h(x) < 0$
 
+4. $\quad k(x) = \dfrac{(x-6)(4x-9)}{5x-18}$ et $k(x) \leq 0$
