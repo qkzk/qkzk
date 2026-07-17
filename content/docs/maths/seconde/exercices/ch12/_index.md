@@ -82,7 +82,8 @@ Calculer les valeurs suivantes
 
 ### Exercice 10.
 
-Tracer la représentation graphique de la valeur absolue 
+1. Rappeler la définition de la valeur absolue
+2. Tracer la représentation graphique de la valeur absolue 
 
 ### Exercice 11.
 
@@ -98,7 +99,7 @@ En vous aidant d'un axe gradué, résoudre les équations et construire les poin
 
 1. $|x - 5| = 2$
 1. $|4 - x| = 8$
-1. $2|x - 2| = 6$
+1. $2|x - 2| = 6$ _Simplifier d'abord_
 
 ### Exercice 13.
 
