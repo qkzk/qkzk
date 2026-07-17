@@ -80,15 +80,23 @@ Dans un jeu de cartes à 32 cartes, quelle est la probabilité de tirer une cart
 
 #### Exercice 12
 
-Lors du lancer d'un dé à six faces, quelle est la probabilité d'obtenir un 2 ou un nombre pair ?
+Lors du lancer d'un dé à six faces, on considère trois événements :
+
+- A : "Obtenir un deux",
+- B : "Obtenir un nombre pair",
+- C : "Obtenir un nombre impair",
+
+Donnez les issues correspondant à $A \cup B,\; A \cup B,\; A \cup C$ et $A \cap C$.
 
 #### Exercice 13
 
-Trouvez la probabilité de l'événement complémentaire de "obtenir un nombre inférieur ou égal à 4" lors du lancer d'un dé à six faces.
+Trouvez la probabilité de l'événement complémentaire de "obtenir un nombre inférieur ou égal à 4" lors du lancer d'un dé à six faces équilibré.
 
 #### Exercice 14
 
 On lance un dé équilibré à 20 faces (NB. Cela existe). Quelle est la probabilité d'obtenir un nombre plus grand que 12 et impair ?
+
+_On procédera par étape : univers, loi de probabilité et description des issues de l'événement considéré_.
 
 ## V. Lois de probabilité
 
@@ -100,8 +108,9 @@ Soit la loi de probabilité suivante pour une variable aléatoire $X$ :
 | ------ | --- | --- | --- | --- |
 | $P(X)$ | 0.2 | 0.3 | 0.4 | 0.1 |
 
-1. Cette situation est-elle équiprobable ? Justifier.
-2. Calculez $P(X \leq 2)$.
+1. Vérifier qu'il s'agit bien d'une loi de probabilité.
+2. Cette situation est-elle équiprobable ? Justifier.
+3. Calculez $P(X \leq 2)$.
 
 #### Exercice 16
 
@@ -115,12 +124,28 @@ Soit une variable aléatoire $Y$ avec la loi de probabilité suivante :
 | ------ | --- | --- | --- | --- |
 | $P(Y)$ | 0.2 | 0.4 | 0.2 | 0.2 |
 
-1. Calculer $P(Y > 1)$.
-2. Calculer $P(Y \neq 1)$.
+1. Est-ce une loi de probabilité ?
+2. Calculer $P(Y > 1)$.
+3. Calculer $P(Y \neq 1)$.
+
+#### Exercice 18
+
+Soit une variable aléatoire $Y$ avec la loi de probabilité suivante :
+
+| $Y$    | 0   | 1   | 2   | 3   |
+| ------ | --- | --- | --- | --- |
+| $P(Y)$ | 0.2 | $x$ | 0.3 | 0.1 |
+
+1. Quelle valeur donner à $x$ ? Justifier.
+
+2. Calculer $P(Y \geq 1)$
+
+3. Décrire $\overline{Y \geq 1}$ en terme d'inégalité et calculer sa probabilité de deux manières.
+
 
 ## VI. Arbres de probabilité
 
-#### Exercice 18
+#### Exercice 19
 
 1. Représenter par un arbre de probabilité le lancer consécutif de trois pièces équilibrées.
 2. Calculer la probabilité d'obtenir trois faces.
@@ -128,17 +153,17 @@ Soit une variable aléatoire $Y$ avec la loi de probabilité suivante :
 
 _Dans les deux exercices suivants, dessiner l'arbre où on distingue chaque boule est fastidieux. Il est préférable de regrouper les couleurs et de dénombrer les boules restantes après le premier tirage._
 
-#### Exercice 19
+#### Exercice 20
 
 Un sac contient 5 boules blanches et 3 boules noires. Deux boules sont tirées _avec remise_. Dessinez l'arbre de probabilité et calculez la probabilité de tirer une boule blanche suivie d'une boule noire.
 
-#### Exercice 20
+#### Exercice 21
 
 Dans une urne, il y a 4 boules rouges et 6 boules bleues. Si deux boules sont tirées _sans remise_, dessinez l'arbre de probabilité et calculez la probabilité de tirer deux boules rouges.
 
 ## VII. Exercices bilan 
 
-#### Exercice 21 - roulette française simple
+#### Exercice 22 - roulette française simple
 
 
 Un joueur affronte le casino dans le jeu de la roulette. Voici les étapes simplifiée du jeu :
@@ -152,7 +177,7 @@ Un joueur affronte le casino dans le jeu de la roulette. Voici les étapes simpl
 1. Quelle est la probabilité de gagner ?
 2. Si le joueur a mise 1€, combien peut-il espérer gagner en moyenne s'il répète un grand nombre de partie ?
 
-#### Exercice 22 - roulette suite.
+#### Exercice 23 - roulette suite.
 
 On suppose maintenant qu'il est possible de réaliser différentes mises. Par exemple, le joueur peut choisir une _couleur_ rouge ou noir.
 
@@ -170,7 +195,7 @@ C'est aussi le cas des jeux à gratter (buraliste) ou des paris sportifs : ils s
 
 Ainsi, il n'existe aucune raison objective de joueur aux jeux d'argent.
 
-#### Exercie 23
+#### Exercice 24
 
 
 Deux joueurs, Alfred et Béatrice s'affrontent à un jeu d'argent.
@@ -185,7 +210,7 @@ L'objectif est d'ajuster un nombre de boules rouges afin de rendre le jeu équit
 2. Calculer l'espérance du gain (= la moyenne pondérée des gains).
 3. (_Difficile_) Reprendre les calculs avec $x$ boules rouges et déterminer le nombre de boules rouges qui rendent l'espérance nulle.
 
-#### Exercice 24
+#### Exercice 25
 
 On lance trois fois une pièce équilibrée et on ajoute les valeurs suivantes (pile : 0, face : 1).
 
