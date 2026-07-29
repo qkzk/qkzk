@@ -217,18 +217,18 @@ Les contextes sont issus des mathématiques, des autres disciplines ou de la vie
 
 ### 1.7. Effectuer des conversions d'unités
 
-1. Convertir $3,5 \, \text{km}$ en mètres.
-2. Convertir $250 \, \text{mg}$ en grammes.
-3. Convertir $2 \, \text{h} \, 30 \, \text{min}$ en secondes.
-4. Convertir $5 \, \text{L}$ en centilitres.
-5. Convertir $0,25 \, \text{km}$ en mètres.
-6. Convertir $500 \, \text{mg}$ en grammes.
-7. Convertir $1 \, \text{h} \, 45 \, \text{min}$ en secondes.
-8. Convertir $2,5 \, \text{L}$ en décilitres.
-9. Convertir $0,5 \, \text{km}$ en mètres.
-10. Convertir $750 \, \text{mg}$ en grammes.
-11. Convertir $2 \, \text{h} \, 15 \, \text{min}$ en secondes.
-12. Convertir $0,25 \, \text{L}$ en centilitres.
+1. Convertir $3,5 \text{ km}$ en mètres.
+2. Convertir $250 \text{ mg}$ en grammes.
+3. Convertir $2 \text{ h } 30 \text{ min}$ en secondes.
+4. Convertir $5 \text{ L}$ en centilitres.
+5. Convertir $0,25 \text{ km}$ en mètres.
+6. Convertir $500 \text{ mg}$ en grammes.
+7. Convertir $1 \text{ h } 45 \text{ min}$ en secondes.
+8. Convertir $2,5 \text{ L}$ en décilitres.
+9. Convertir $0,5 \text{ km}$ en mètres.
+10. Convertir $750 \text{ mg}$ en grammes.
+11. Convertir $2 \text{ h } 15 \text{ min}$ en secondes.
+12. Convertir $0,25 \text{ L}$ en centilitres.
 
 
 ### 1.8. Effectuer un calcul littéral élémentaire
@@ -297,18 +297,18 @@ Les contextes sont issus des mathématiques, des autres disciplines ou de la vie
 
 ### 1.12. Effectuer une application numérique d'une formule
 
-1. Calculer l'aire d'un rectangle de longueur $8 \, \text{cm}$ et de largeur $5 \, \text{cm}$.
-2. Calculer le volume d'un cube de côté $4 \, \text{cm}$.
-3. Calculer le périmètre d'un cercle de rayon $3 \, \text{cm}$.
-4. Calculer l'aire d'un triangle de base $6 \, \text{cm}$ et de hauteur $4 \, \text{cm}$.
-5. Calculer l'aire d'un rectangle de longueur $12 \, \text{cm}$ et de largeur $7 \, \text{cm}$.
-6. Calculer le volume d'un cube de côté $6 \, \text{cm}$.
-7. Calculer le périmètre d'un cercle de rayon $7 \, \text{cm}$.
-8. Calculer l'aire d'un triangle de base $10 \, \text{cm}$ et de hauteur $6 \, \text{cm}$.
-9. Calculer l'aire d'un rectangle de longueur $15 \, \text{cm}$ et de largeur $8 \, \text{cm}$.
-10. Calculer le volume d'un cube de côté $7 \, \text{cm}$.
-11. Calculer le périmètre d'un cercle de rayon $10 \, \text{cm}$.
-12. Calculer l'aire d'un triangle de base $12 \, \text{cm}$ et de hauteur $9 \, \text{cm}$.
+1. Calculer l'aire d'un rectangle de longueur $8 \text{ cm}$ et de largeur $5 \text{ cm}$.
+2. Calculer le volume d'un cube de côté $4 \text{ cm}$.
+3. Calculer le périmètre d'un cercle de rayon $3 \text{ cm}$.
+4. Calculer l'aire d'un triangle de base $6 \text{ cm}$ et de hauteur $4 \text{ cm}$.
+5. Calculer l'aire d'un rectangle de longueur $12 \text{ cm}$ et de largeur $7 \text{ cm}$.
+6. Calculer le volume d'un cube de côté $6 \text{ cm}$.
+7. Calculer le périmètre d'un cercle de rayon $7 \text{ cm}$.
+8. Calculer l'aire d'un triangle de base $10 \text{ cm}$ et de hauteur $6 \text{ cm}$.
+9. Calculer l'aire d'un rectangle de longueur $15 \text{ cm}$ et de largeur $8 \text{ cm}$.
+10. Calculer le volume d'un cube de côté $7 \text{ cm}$.
+11. Calculer le périmètre d'un cercle de rayon $10 \text{ cm}$.
+12. Calculer l'aire d'un triangle de base $12 \text{ cm}$ et de hauteur $9 \text{ cm}$.
 
 
 
