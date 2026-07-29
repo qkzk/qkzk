@@ -171,15 +171,15 @@ Les contextes sont issus des mathématiques, des autres disciplines ou de la vie
 
 1. Exprimer $0,75$ en pourcentage.
 2. Écrire $\frac{3}{20}$ sous forme décimale.
-3. Convertir $125\%$ en nombre décimal.
+3. Convertir $125\\%$ en nombre décimal.
 4. Écrire $2,5$ sous forme de fraction irréductible.
 5. Exprimer $0,125$ en pourcentage.
 6. Écrire $\frac{7}{25}$ sous forme décimale.
-7. Convertir $75\%$ en nombre décimal.
+7. Convertir $75\\%$ en nombre décimal.
 8. Écrire $3,2$ sous forme de fraction irréductible.
 9. Exprimer $0,0625$ en pourcentage.
 10. Écrire $\frac{9}{20}$ sous forme décimale.
-11. Convertir $12,5\%$ en nombre décimal.
+11. Convertir $12,5\\%$ en nombre décimal.
 12. Écrire $4,8$ sous forme de fraction irréductible.
 
 
@@ -318,33 +318,33 @@ Les contextes sont issus des mathématiques, des autres disciplines ou de la vie
 ### 2.1. Calculer, appliquer, exprimer une proportion sous différentes formes
 
 1. Exprimer $0,3$ en pourcentage.
-2. Calculer $20\%$ de $150$.
+2. Calculer $20\\%$ de $150$.
 3. Exprimer $\frac{3}{4}$ en pourcentage.
-4. Calculer $15\%$ de $200$.
+4. Calculer $15\\%$ de $200$.
 5. Exprimer $0,45$ en pourcentage.
-6. Calculer $30\%$ de $200$.
+6. Calculer $30\\%$ de $200$.
 7. Exprimer $\frac{2}{5}$ en pourcentage.
-8. Calculer $40\%$ de $150$.
+8. Calculer $40\\%$ de $150$.
 9. Exprimer $0,875$ en pourcentage.
-10. Calculer $15\%$ de $240$.
+10. Calculer $15\\%$ de $240$.
 11. Exprimer $\frac{4}{5}$ en pourcentage.
-12. Calculer $60\%$ de $180$.
+12. Calculer $60\\%$ de $180$.
 
 
 ### 2.2. Utiliser une proportion pour calculer une partie connaissant le tout, ou le tout connaissant une partie
 
-1. Dans une classe de $30$ élèves, $40\%$ sont des filles. Combien y a-t-il de filles ?
-2. $25\%$ d'un nombre valent $50$. Quel est ce nombre ?
-3. Dans un groupe de $45$ personnes, $60\%$ sont des adultes. Combien y a-t-il d'adultes ?
-4. $10\%$ d'un nombre valent $20$. Quel est ce nombre ?
-5. Dans une classe de $40$ élèves, $60\%$ sont des garçons. Combien y a-t-il de garçons ?
-6. $15\%$ d'un nombre valent $45$. Quel est ce nombre ?
-7. Dans un groupe de $60$ personnes, $40\%$ sont des enfants. Combien y a-t-il d'enfants ?
-8. $25\%$ d'un nombre valent $75$. Quel est ce nombre ?
-9. Dans une classe de $50$ élèves, $60\%$ sont des filles. Combien y a-t-il de filles ?
-10. $20\%$ d'un nombre valent $80$. Quel est ce nombre ?
-11. Dans un groupe de $80$ personnes, $35\%$ sont des enfants. Combien y a-t-il d'enfants ?
-12. $40\%$ d'un nombre valent $120$. Quel est ce nombre ?
+1. Dans une classe de $30$ élèves, $40\\%$ sont des filles. Combien y a-t-il de filles ?
+2. $25\\%$ d'un nombre valent $50$. Quel est ce nombre ?
+3. Dans un groupe de $45$ personnes, $60\\%$ sont des adultes. Combien y a-t-il d'adultes ?
+4. $10\\%$ d'un nombre valent $20$. Quel est ce nombre ?
+5. Dans une classe de $40$ élèves, $60\\%$ sont des garçons. Combien y a-t-il de garçons ?
+6. $15\\%$ d'un nombre valent $45$. Quel est ce nombre ?
+7. Dans un groupe de $60$ personnes, $40\\%$ sont des enfants. Combien y a-t-il d'enfants ?
+8. $25\\%$ d'un nombre valent $75$. Quel est ce nombre ?
+9. Dans une classe de $50$ élèves, $60\\%$ sont des filles. Combien y a-t-il de filles ?
+10. $20\\%$ d'un nombre valent $80$. Quel est ce nombre ?
+11. Dans un groupe de $80$ personnes, $35\\%$ sont des enfants. Combien y a-t-il d'enfants ?
+12. $40\\%$ d'un nombre valent $120$. Quel est ce nombre ?
 
 
 
@@ -353,18 +353,18 @@ Les contextes sont issus des mathématiques, des autres disciplines ou de la vie
 
 ### 3.1. Passer d'une formulation additive à une formulation multiplicative
 
-1. Exprimer une augmentation de $10\%$ sous forme de coefficient multiplicateur.
-2. Exprimer une diminution de $25\%$ sous forme de coefficient multiplicateur.
-3. Exprimer une augmentation de $5\%$ sous forme de coefficient multiplicateur.
-4. Exprimer une diminution de $15\%$ sous forme de coefficient multiplicateur.
-5. Exprimer une augmentation de $15\%$ sous forme de coefficient multiplicateur.
-6. Exprimer une diminution de $30\%$ sous forme de coefficient multiplicateur.
-7. Exprimer une augmentation de $8\%$ sous forme de coefficient multiplicateur.
-8. Exprimer une diminution de $20\%$ sous forme de coefficient multiplicateur.
-9. Exprimer une augmentation de $25\%$ sous forme de coefficient multiplicateur.
-10. Exprimer une diminution de $40\%$ sous forme de coefficient multiplicateur.
-11. Exprimer une augmentation de $12\%$ sous forme de coefficient multiplicateur.
-12. Exprimer une diminution de $35\%$ sous forme de coefficient multiplicateur.
+1. Exprimer une augmentation de $10\\%$ sous forme de coefficient multiplicateur.
+2. Exprimer une diminution de $25\\%$ sous forme de coefficient multiplicateur.
+3. Exprimer une augmentation de $5\\%$ sous forme de coefficient multiplicateur.
+4. Exprimer une diminution de $15\\%$ sous forme de coefficient multiplicateur.
+5. Exprimer une augmentation de $15\\%$ sous forme de coefficient multiplicateur.
+6. Exprimer une diminution de $30\\%$ sous forme de coefficient multiplicateur.
+7. Exprimer une augmentation de $8\\%$ sous forme de coefficient multiplicateur.
+8. Exprimer une diminution de $20\\%$ sous forme de coefficient multiplicateur.
+9. Exprimer une augmentation de $25\\%$ sous forme de coefficient multiplicateur.
+10. Exprimer une diminution de $40\\%$ sous forme de coefficient multiplicateur.
+11. Exprimer une augmentation de $12\\%$ sous forme de coefficient multiplicateur.
+12. Exprimer une diminution de $35\\%$ sous forme de coefficient multiplicateur.
 
 
 
