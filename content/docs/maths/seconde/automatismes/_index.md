@@ -12,104 +12,6 @@ geometry: "margin=1.5cm"
 
 ---
 
-## Programme des automatismes
-
-Cette partie du programme vise à construire et à entretenir des habiletés dans les domaines du calcul, de l'information chiffrée et des représentations graphiques. Il s'agit d'automatiser le recours à des connaissances, des procédures, des méthodes et des stratégies. Leur acquisition permet aux élèves une meilleure réussite dans l'apprentissage des mathématiques, participe du développement de leur esprit critique par une meilleure maîtrise des nombres et du calcul et leur permet une meilleure lecture et compréhension des représentations de données dont les graphiques.
-
-Les capacités attendues énoncées ci-dessous n'ont pas vocation à faire l'objet d'un chapitre d'enseignement spécifique car les notions qui les sous-tendent ont été travaillées dans les classes antérieures et doivent être entretenues et consolidées au cours de l'année. Cependant les nouvelles notions du programme peuvent donner lieu également à un travail d'automatisation tout le long de l'année. Elles relèvent d'un entraînement régulier privilégiant l'activité mentale. Les différents thèmes proposés doivent être travaillés tout au long de l'année et la présentation par blocs thématiques ne signifie pas, bien au contraire, qu'il faille les aborder les uns après les autres. Les modalités de mise en œuvre peuvent être variées et prendre appui sur différents supports : à l'oral, à l'écrit, individuellement ou en groupe, utilisant éventuellement des outils numériques de vidéo-projection, de recensement instantané des réponses, etc.
-
-
-### 1. Calcul numérique et algébrique
-
-- Comparer deux nombres directement ou par calcul :
-  - de leur différence ;
-  - s'ils sont strictement positifs, de leur quotient.
-
-- Effectuer des opérations et des comparaisons entre des fractions simples.
-
-- Effectuer des opérations sur les puissances.
-
-- Passer d'une écriture d'un nombre à une autre (décimale, fractionnaire, pourcentage).
-
-- Estimer un ordre de grandeur.
-
-- S'assurer de la vraisemblance, de la cohérence d'un résultat.
-
-- Effectuer des conversions d'unités : longueurs, aires, volumes, contenances, durées, vitesses, masses.
-
-- Effectuer un calcul littéral élémentaire :
-  - expressions additives : $-(a + b) = -a - b$, $-(a - b) = b - a$ ;
-  - expressions multiplicatives :
-    $$
-    x = 1 \times x, \quad x = \frac{x}{1}, \quad (-1) \times a = \frac{a}{-1} = -a
-    $$
-    $$
-    0 = 0x, \quad \frac{0}{a} = 0, \quad \frac{x}{a} = \frac{1}{a}x, \quad \frac{ab}{c} = a \times \frac{b}{c} = \frac{a}{c} \times b
-    $$
-
-- Développer, factoriser, réduire une expression algébrique simple :
-  - identités (factorisation et développement) : $(a + b)^2$, $(a - b)^2$, $(a + b)(a - b)$ ;
-  - factorisation de $ax^2 + bx$, $ax + bx$.
-
-- Résoudre une équation du type : $x^2 = a$, $ax + b = cx + d$ ou $\frac{a}{x} = b$ ou une inéquation du premier degré.
-
-- Isoler une variable dans une égalité qui en comporte plusieurs, sur des exemples internes aux mathématiques ou issus des autres disciplines.
-
-- Effectuer une application numérique d'une formule (notamment pour les formules utilisées dans les autres disciplines).
-
-
-### 2. Proportions et pourcentages
-
-- Calculer, appliquer, exprimer une proportion sous différentes formes (décimale, fractionnaire, pourcentage).
-- Utiliser une proportion pour calculer une partie connaissant le tout, ou le tout connaissant une partie.
-
-
-### 3. Évolutions et variations
-
-- Passer d'une formulation additive (« augmenter de 5 % », respectivement « diminuer de 5 % ») à une formulation multiplicative (« multiplier par 1,05 », respectivement « multiplier par 0,95 »).
-
-
-###  Fonctions et représentations
-
-- Déterminer graphiquement des images et des antécédents.
-- Exploiter une équation de courbe (appartenance d'un point, calcul de coordonnées).
-- Reconnaître l'expression d'une fonction linéaire, d'une fonction affine, savoir que leur représentation graphique est une droite.
-
-
-### 5. Géométrie
-
-- Sur une droite graduée, repérer ou placer un point dont l'abscisse est un nombre relatif.
-- Dans le plan muni d'un repère orthogonal, lire les coordonnées d'un point donné, placer un point de coordonnées données.
-- Calculer des périmètres (polygone et cercle), aires (rectangle, triangle et disque) et des volumes (pavé droit, prisme, cylindre, pyramide, cône et boule).
-- Application simple du théorème de Pythagore, du théorème de Thalès.
-- Connaître et utiliser les lignes trigonométriques dans le triangle rectangle : cosinus, sinus, tangente.
-
-
-### 6. Statistiques
-
-Les contextes sont issus des mathématiques, des autres disciplines ou de la vie réelle.
-
-- Lire et commenter des graphiques usuels :
-  - diagramme en barres ;
-  - diagramme circulaire, semi-circulaire ;
-  - courbe, nuage de points (diagramme cartésien).
-
-- Calculer et interpréter des indicateurs statistiques (moyenne, médiane, quartiles) pour une série statistique (selon la façon dont elle est présentée : données brutes, données regroupées par classes, représentations graphiques).
-- Comparer des distributions à l'aide de boîtes à moustaches.
-
-
-### 7. Probabilités
-
-- Savoir qu'une probabilité est un nombre entre 0 et 1.
-- Savoir calculer la probabilité de l'événement contraire.
-- Calculer la probabilité d'un événement comme somme des probabilités des issues qui le composent.
-- Utiliser la relation $P(A) = \frac{\text{Card}(A)}{\text{Card}(U)}$ dans le cas de l'équiprobabilité.
-
---- 
-
-\newpage
-
-## Automatismes
 
 
 
@@ -119,10 +21,10 @@ Les contextes sont issus des mathématiques, des autres disciplines ou de la vie
 ## 1. Calcul numérique et algébrique
 
 
-### 1.1. Comparer deux nombres directement ou par calcul
+### 1.1. Comparer ($<, >$ ou $=$) deux nombres directement ou par calcul
 
 1. Comparer les nombres $3,14$ et $\pi$.
-2. Comparer $\sqrt{10}$ et $3,16$.
+2. Comparer $\sqrt{10}$ et $3$.
 3. Comparer $\frac{7}{3}$ et $2,33$.
 4. Comparer $-5,2$ et $-5,19$.
 5. Comparer $7,2$ et $\frac{36}{5}$.
@@ -171,15 +73,15 @@ Les contextes sont issus des mathématiques, des autres disciplines ou de la vie
 
 1. Exprimer $0,75$ en pourcentage.
 2. Écrire $\frac{3}{20}$ sous forme décimale.
-3. Convertir $125\\%$ en nombre décimal.
+3. Convertir $125\%$ en nombre décimal.
 4. Écrire $2,5$ sous forme de fraction irréductible.
 5. Exprimer $0,125$ en pourcentage.
 6. Écrire $\frac{7}{25}$ sous forme décimale.
-7. Convertir $75\\%$ en nombre décimal.
+7. Convertir $75\%$ en nombre décimal.
 8. Écrire $3,2$ sous forme de fraction irréductible.
 9. Exprimer $0,0625$ en pourcentage.
 10. Écrire $\frac{9}{20}$ sous forme décimale.
-11. Convertir $12,5\\%$ en nombre décimal.
+11. Convertir $12,5\%$ en nombre décimal.
 12. Écrire $4,8$ sous forme de fraction irréductible.
 
 
@@ -217,18 +119,18 @@ Les contextes sont issus des mathématiques, des autres disciplines ou de la vie
 
 ### 1.7. Effectuer des conversions d'unités
 
-1. Convertir $3,5 \text{ km}$ en mètres.
-2. Convertir $250 \text{ mg}$ en grammes.
-3. Convertir $2 \text{ h } 30 \text{ min}$ en secondes.
-4. Convertir $5 \text{ L}$ en centilitres.
-5. Convertir $0,25 \text{ km}$ en mètres.
-6. Convertir $500 \text{ mg}$ en grammes.
-7. Convertir $1 \text{ h } 45 \text{ min}$ en secondes.
-8. Convertir $2,5 \text{ L}$ en décilitres.
-9. Convertir $0,5 \text{ km}$ en mètres.
-10. Convertir $750 \text{ mg}$ en grammes.
-11. Convertir $2 \text{ h } 15 \text{ min}$ en secondes.
-12. Convertir $0,25 \text{ L}$ en centilitres.
+1. Convertir $3,5 \, \text{km}$ en mètres.
+2. Convertir $250 \, \text{mg}$ en grammes.
+3. Convertir $2 \, \text{h} \, 30 \, \text{min}$ en secondes.
+4. Convertir $5 \, \text{L}$ en centilitres.
+5. Convertir $0,25 \, \text{km}$ en mètres.
+6. Convertir $500 \, \text{mg}$ en grammes.
+7. Convertir $1 \, \text{h} \, 45 \, \text{min}$ en secondes.
+8. Convertir $2,5 \, \text{L}$ en décilitres.
+9. Convertir $0,5 \, \text{km}$ en mètres.
+10. Convertir $750 \, \text{mg}$ en grammes.
+11. Convertir $2 \, \text{h} \, 15 \, \text{min}$ en secondes.
+12. Convertir $0,25 \, \text{L}$ en centilitres.
 
 
 ### 1.8. Effectuer un calcul littéral élémentaire
@@ -267,48 +169,48 @@ Les contextes sont issus des mathématiques, des autres disciplines ou de la vie
 
 1. Résoudre $x^2 = 16$.
 2. Résoudre $3x + 5 = 2x + 10$.
-3. Résoudre $\frac{4}{x} = 2$.
+3. Résoudre $\frac{4}{x} = 8$.
 4. Résoudre $5x - 3 = 7x + 1$.
 5. Résoudre $x^2 = 25$.
 6. Résoudre $4x - 7 = 3x + 5$.
-7. Résoudre $\frac{6}{x} = 3$.
+7. Résoudre $\frac{9}{x} = 3$.
 8. Résoudre $2x + 8 = 5x - 1$.
 9. Résoudre $x^2 = 36$.
 10. Résoudre $6x - 5 = 4x + 7$.
-11. Résoudre $\frac{8}{x} = 4$.
+11. Résoudre $\frac{16}{x} = 4$.
 12. Résoudre $3x + 9 = 6x - 3$.
 
 
 ### 1.11. Isoler une variable dans une égalité
 
-1. Dans l'égalité $3x + 2y = 10$, exprimer $y$ en fonction de $x$.
-2. Dans l'égalité $5a - 3b = 20$, exprimer $a$ en fonction de $b$.
+1. Dans l'égalité $3x = 2y - 10$, exprimer $y$ en fonction de $x$.
+2. Dans l'égalité $5a - 3b - 20 = 0$, exprimer $a$ en fonction de $b$.
 3. Dans l'égalité $2x + 4y = 12$, exprimer $x$ en fonction de $y$.
-4. Dans l'égalité $7m - 3n = 14$, exprimer $n$ en fonction de $m$.
+4. Dans l'égalité $7m - 3n - 14 = 0$, exprimer $n$ en fonction de $m$.
 5. Dans l'égalité $2x + 5y = 20$, exprimer $y$ en fonction de $x$.
 6. Dans l'égalité $4a + 3b = 30$, exprimer $a$ en fonction de $b$.
 7. Dans l'égalité $5x - 2y = 15$, exprimer $x$ en fonction de $y$.
 8. Dans l'égalité $3m + 4n = 24$, exprimer $n$ en fonction de $m$.
 9. Dans l'égalité $4x + 3y = 24$, exprimer $y$ en fonction de $x$.
 10. Dans l'égalité $2a - 5b = 30$, exprimer $a$ en fonction de $b$.
-11. Dans l'égalité $7x + 2y = 14$, exprimer $x$ en fonction de $y$.
+11. Dans l'égalité $7x + 2y - 14 = 0$, exprimer $x$ en fonction de $y$.
 12. Dans l'égalité $5m - 4n = 20$, exprimer $n$ en fonction de $m$.
 
 
 ### 1.12. Effectuer une application numérique d'une formule
 
-1. Calculer l'aire d'un rectangle de longueur $8 \text{ cm}$ et de largeur $5 \text{ cm}$.
-2. Calculer le volume d'un cube de côté $4 \text{ cm}$.
-3. Calculer le périmètre d'un cercle de rayon $3 \text{ cm}$.
-4. Calculer l'aire d'un triangle de base $6 \text{ cm}$ et de hauteur $4 \text{ cm}$.
-5. Calculer l'aire d'un rectangle de longueur $12 \text{ cm}$ et de largeur $7 \text{ cm}$.
-6. Calculer le volume d'un cube de côté $6 \text{ cm}$.
-7. Calculer le périmètre d'un cercle de rayon $7 \text{ cm}$.
-8. Calculer l'aire d'un triangle de base $10 \text{ cm}$ et de hauteur $6 \text{ cm}$.
-9. Calculer l'aire d'un rectangle de longueur $15 \text{ cm}$ et de largeur $8 \text{ cm}$.
-10. Calculer le volume d'un cube de côté $7 \text{ cm}$.
-11. Calculer le périmètre d'un cercle de rayon $10 \text{ cm}$.
-12. Calculer l'aire d'un triangle de base $12 \text{ cm}$ et de hauteur $9 \text{ cm}$.
+1. Calculer l'aire d'un rectangle de longueur $8  \text{cm}$ et de largeur $5  \text{cm}$.
+2. Calculer le volume d'un cube de côté $4  \text{cm}$.
+3. Calculer le périmètre d'un cercle de rayon $3  \text{cm}$.
+4. Calculer l'aire d'un triangle de base $6  \text{cm}$ et de hauteur $4  \text{cm}$.
+5. Calculer l'aire d'un rectangle de longueur $12  \text{cm}$ et de largeur $7  \text{cm}$.
+6. Calculer le volume d'un cube de côté $6  \text{cm}$.
+7. Calculer le périmètre d'un cercle de rayon $7  \text{cm}$.
+8. Calculer l'aire d'un triangle de base $10  \text{cm}$ et de hauteur $6  \text{cm}$.
+9. Calculer l'aire d'un rectangle de longueur $15  \text{cm}$ et de largeur $8  \text{cm}$.
+10. Calculer le volume d'un cube de côté $7  \text{cm}$.
+11. Calculer le périmètre d'un cercle de rayon $10  \text{cm}$.
+12. Calculer l'aire d'un triangle de base $12  \text{cm}$ et de hauteur $9  \text{cm}$.
 
 
 
@@ -318,33 +220,33 @@ Les contextes sont issus des mathématiques, des autres disciplines ou de la vie
 ### 2.1. Calculer, appliquer, exprimer une proportion sous différentes formes
 
 1. Exprimer $0,3$ en pourcentage.
-2. Calculer $20\\%$ de $150$.
+2. Calculer $20\%$ de $150$.
 3. Exprimer $\frac{3}{4}$ en pourcentage.
-4. Calculer $15\\%$ de $200$.
+4. Calculer $15\%$ de $200$.
 5. Exprimer $0,45$ en pourcentage.
-6. Calculer $30\\%$ de $200$.
+6. Calculer $30\%$ de $200$.
 7. Exprimer $\frac{2}{5}$ en pourcentage.
-8. Calculer $40\\%$ de $150$.
+8. Calculer $40\%$ de $150$.
 9. Exprimer $0,875$ en pourcentage.
-10. Calculer $15\\%$ de $240$.
+10. Calculer $15\%$ de $240$.
 11. Exprimer $\frac{4}{5}$ en pourcentage.
-12. Calculer $60\\%$ de $180$.
+12. Calculer $60\%$ de $180$.
 
 
 ### 2.2. Utiliser une proportion pour calculer une partie connaissant le tout, ou le tout connaissant une partie
 
-1. Dans une classe de $30$ élèves, $40\\%$ sont des filles. Combien y a-t-il de filles ?
-2. $25\\%$ d'un nombre valent $50$. Quel est ce nombre ?
-3. Dans un groupe de $45$ personnes, $60\\%$ sont des adultes. Combien y a-t-il d'adultes ?
-4. $10\\%$ d'un nombre valent $20$. Quel est ce nombre ?
-5. Dans une classe de $40$ élèves, $60\\%$ sont des garçons. Combien y a-t-il de garçons ?
-6. $15\\%$ d'un nombre valent $45$. Quel est ce nombre ?
-7. Dans un groupe de $60$ personnes, $40\\%$ sont des enfants. Combien y a-t-il d'enfants ?
-8. $25\\%$ d'un nombre valent $75$. Quel est ce nombre ?
-9. Dans une classe de $50$ élèves, $60\\%$ sont des filles. Combien y a-t-il de filles ?
-10. $20\\%$ d'un nombre valent $80$. Quel est ce nombre ?
-11. Dans un groupe de $80$ personnes, $35\\%$ sont des enfants. Combien y a-t-il d'enfants ?
-12. $40\\%$ d'un nombre valent $120$. Quel est ce nombre ?
+1. Dans une classe de $30$ élèves, $40\%$ sont des filles. Combien y a-t-il de filles ?
+2. $25\%$ d'un nombre valent $50$. Quel est ce nombre ?
+3. Dans un groupe de $45$ personnes, $60\%$ sont des adultes. Combien y a-t-il d'adultes ?
+4. $10\%$ d'un nombre valent $20$. Quel est ce nombre ?
+5. Dans une classe de $40$ élèves, $60\%$ sont des garçons. Combien y a-t-il de garçons ?
+6. $15\%$ d'un nombre valent $45$. Quel est ce nombre ?
+7. Dans un groupe de $60$ personnes, $40\%$ sont des enfants. Combien y a-t-il d'enfants ?
+8. $25\%$ d'un nombre valent $75$. Quel est ce nombre ?
+9. Dans une classe de $50$ élèves, $60\%$ sont des filles. Combien y a-t-il de filles ?
+10. $20\%$ d'un nombre valent $80$. Quel est ce nombre ?
+11. Dans un groupe de $80$ personnes, $35\%$ sont des enfants. Combien y a-t-il d'enfants ?
+12. $40\%$ d'un nombre valent $120$. Quel est ce nombre ?
 
 
 
@@ -353,18 +255,18 @@ Les contextes sont issus des mathématiques, des autres disciplines ou de la vie
 
 ### 3.1. Passer d'une formulation additive à une formulation multiplicative
 
-1. Exprimer une augmentation de $10\\%$ sous forme de coefficient multiplicateur.
-2. Exprimer une diminution de $25\\%$ sous forme de coefficient multiplicateur.
-3. Exprimer une augmentation de $5\\%$ sous forme de coefficient multiplicateur.
-4. Exprimer une diminution de $15\\%$ sous forme de coefficient multiplicateur.
-5. Exprimer une augmentation de $15\\%$ sous forme de coefficient multiplicateur.
-6. Exprimer une diminution de $30\\%$ sous forme de coefficient multiplicateur.
-7. Exprimer une augmentation de $8\\%$ sous forme de coefficient multiplicateur.
-8. Exprimer une diminution de $20\\%$ sous forme de coefficient multiplicateur.
-9. Exprimer une augmentation de $25\\%$ sous forme de coefficient multiplicateur.
-10. Exprimer une diminution de $40\\%$ sous forme de coefficient multiplicateur.
-11. Exprimer une augmentation de $12\\%$ sous forme de coefficient multiplicateur.
-12. Exprimer une diminution de $35\\%$ sous forme de coefficient multiplicateur.
+1. Exprimer une augmentation de $10\%$ sous forme de coefficient multiplicateur.
+2. Exprimer une diminution de $25\%$ sous forme de coefficient multiplicateur.
+3. Exprimer une augmentation de $5\%$ sous forme de coefficient multiplicateur.
+4. Exprimer une diminution de $15\%$ sous forme de coefficient multiplicateur.
+5. Exprimer une augmentation de $15\%$ sous forme de coefficient multiplicateur.
+6. Exprimer une diminution de $30\%$ sous forme de coefficient multiplicateur.
+7. Exprimer une augmentation de $8\%$ sous forme de coefficient multiplicateur.
+8. Exprimer une diminution de $20\%$ sous forme de coefficient multiplicateur.
+9. Exprimer une augmentation de $25\%$ sous forme de coefficient multiplicateur.
+10. Exprimer une diminution de $40\%$ sous forme de coefficient multiplicateur.
+11. Exprimer une augmentation de $12\%$ sous forme de coefficient multiplicateur.
+12. Exprimer une diminution de $35\%$ sous forme de coefficient multiplicateur.
 
 
 
@@ -373,18 +275,21 @@ Les contextes sont issus des mathématiques, des autres disciplines ou de la vie
 
 ### 4.1. Déterminer graphiquement des images et des antécédents
 
-1. Soit la fonction $f$ définie par $f(x) = 2x + 1$. Quelle est l'image de $3$ ?
-2. Soit la fonction $g$ définie par $g(x) = x^2 - 4$. Quelle est l'image de $-2$ ?
-3. Soit la fonction $h$ définie par $h(x) = -x + 5$. Quel est l'antécédent de $2$ ?
-4. Soit la fonction $k$ définie par $k(x) = \frac{x}{3}$. Quel est l'antécédent de $6$ ?
-5. Soit la fonction $f$ définie par $f(x) = 3x - 2$. Quelle est l'image de $4$ ?
-6. Soit la fonction $g$ définie par $g(x) = x^2 + 1$. Quelle est l'image de $-3$ ?
-7. Soit la fonction $h$ définie par $h(x) = -2x + 7$. Quel est l'antécédent de $3$ ?
-8. Soit la fonction $k$ définie par $k(x) = \frac{x}{4}$. Quel est l'antécédent de $8$ ?
-9. Soit la fonction $f$ définie par $f(x) = -2x + 5$. Quelle est l'image de $3$ ?
-10. Soit la fonction $g$ définie par $g(x) = x^2 - 3$. Quelle est l'image de $-4$ ?
-11. Soit la fonction $h$ définie par $h(x) = 3x - 7$. Quel est l'antécédent de $5$ ?
-12. Soit la fonction $k$ définie par $k(x) = \frac{x}{5}$. Quel est l'antécédent de $10$ ?
+![Figure](./fig_4_1_1.svg)
+
+1. Lire graphiquement $f(2)$
+2. Lire graphiquement $g(3)$
+3. Lire graphiquement $h(3)$
+4. Lire graphiquement l'image par f de $3$
+5. Lire graphiquement l'image par g de $1$
+6. Lire graphiquement l'image par g de $2$
+7. Résoudre graphiquement $f(x) = 2$
+8. Résoudre graphiquement $g(x) = 0$
+9. Résoudre graphiquement $h(x) = 3$
+10. Lire graphiquement le ou les antécédents de $4$ par $f$
+11. Lire graphiquement le ou les antécédents de $2$ par $g$
+12. Lire graphiquement le ou les antécédents de $4$ par $h$
+
 
 
 ### 4.2. Exploiter une équation de courbe
@@ -441,18 +346,21 @@ Les contextes sont issus des mathématiques, des autres disciplines ou de la vie
 
 ### 5.2. Dans le plan muni d'un repère orthogonal, lire les coordonnées d'un point donné, placer un point de coordonnées données
 
-1. Lire les coordonnées du point $E$ situé à l'intersection de la droite d'équation $y = 2x$ et de la droite d'équation $x = 3$.
-2. Placer le point $F(2; -4)$ dans un repère orthogonal.
-3. Lire les coordonnées du point $G$ symétrique de $A(1; 3)$ par rapport à l'axe des abscisses.
-4. Placer le point $H(-1; 5)$ dans un repère orthogonal.
-5. Lire les coordonnées du point $E$ situé à l'intersection de la droite d'équation $y = -x$ et de la droite d'équation $x = 2$.
-6. Placer le point $F(-3; 4)$ dans un repère orthogonal.
-7. Lire les coordonnées du point $G$ symétrique de $A(2; -1)$ par rapport à l'axe des ordonnées.
-8. Placer le point $H(0; -4)$ dans un repère orthogonal.
-9. Lire les coordonnées du point $E$ situé à l'intersection de la droite d'équation $y = -2x$ et de la droite d'équation $x = 1$.
-10. Placer le point $F(-4; 3)$ dans un repère orthogonal.
-11. Lire les coordonnées du point $G$ symétrique de $A(3; -2)$ par rapport à l'axe des ordonnées.
-12. Placer le point $H(0; -6)$ dans un repère orthogonal.
+![Figure](./fig_5_2_1.svg)
+
+1. Lire les coordonnées des points $A, B, C, D, E, F$
+2. Lire les coordonnées des points $G, H, I, J, K, L$
+3. Lire les coordonnées des points $M, N, O, P, Q, R$
+4. Lire les coordonnées du milieu de $[AQ]$
+5. Lire les coordonnées du symétrique de $G$ par rapport à $P$
+6. Lire les coordonnées du symétrique de $B$ par rapport à $I$
+7. Quel est le point dont les coordonnées sont $(1; 3)$ ?
+8. Quel est le point dont les coordonnées sont $(3; 2)$ ?
+9. Quel est le point dont les coordonnées sont $(4; 2)$ ?
+10. Quel est le point dont les coordonnées sont $(4; 1)$ ?
+11. Quel est le point dont les coordonnées sont $(6; 2)$ ?
+12. Quel est le point dont les coordonnées sont $(5; 3)$ ?
+
 
 
 ### 5.3. Calculer des périmètres (polygone et cercle), aires (rectangle, triangle et disque) et des volumes
@@ -471,7 +379,7 @@ Les contextes sont issus des mathématiques, des autres disciplines ou de la vie
 12. Calculer l'aire d'un triangle rectangle de côtés $15 \, \text{cm}$ et $20 \, \text{cm}$.
 
 
-### 5.4. Application simple du théorème de Pythagore, du théorème de Thalès
+### 5.4. Application simple des théorèmes de Pythagore et de Thalès
 
 1. Dans un triangle rectangle, les côtés de l'angle droit mesurent $6 \, \text{cm}$ et $8 \, \text{cm}$. Calculer l'hypoténuse.
 2. Dans un triangle $ABC$ rectangle en $A$, on donne $AB = 5 \, \text{cm}$ et $BC = 13 \, \text{cm}$. Calculer $AC$.
@@ -479,50 +387,103 @@ Les contextes sont issus des mathématiques, des autres disciplines ou de la vie
 4. Dans un triangle $GHI$ rectangle en $H$, on donne $GH = 9 \, \text{cm}$ et $GI = 15 \, \text{cm}$. Calculer $HI$.
 5. Dans un triangle rectangle, les côtés de l'angle droit mesurent $5 \, \text{cm}$ et $12 \, \text{cm}$. Calculer l'hypoténuse.
 6. Dans un triangle $ABC$ rectangle en $A$, on donne $AB = 8 \, \text{cm}$ et $BC = 17 \, \text{cm}$. Calculer $AC$.
-7. Dans un triangle $DEF$, on donne $DE = 6 \, \text{cm}$, $EF = 8 \, \text{cm}$ et $DF = 10 \, \text{cm}$. Le triangle est-il rectangle ?
-8. Dans un triangle $GHI$ rectangle en $H$, on donne $GH = 12 \, \text{cm}$ et $GI = 20 \, \text{cm}$. Calculer $HI$.
-9. Dans un triangle rectangle, les côtés de l'angle droit mesurent $9 \, \text{cm}$ et $12 \, \text{cm}$. Calculer l'hypoténuse.
-10. Dans un triangle $ABC$ rectangle en $A$, on donne $AB = 10 \, \text{cm}$ et $BC = 26 \, \text{cm}$. Calculer $AC$.
-11. Dans un triangle $DEF$, on donne $DE = 8 \, \text{cm}$, $EF = 15 \, \text{cm}$ et $DF = 17 \, \text{cm}$. Le triangle est-il rectangle ?
-12. Dans un triangle $GHI$ rectangle en $H$, on donne $GH = 15 \, \text{cm}$ et $GI = 25 \, \text{cm}$. Calculer $HI$.
 
+
+![Figure](./fig_5_4_6.svg)
+
+
+7. Dans la figure ci-dessus, $(AD) \parallel (BC)$. On sait que $OD = 7, OC = 12$ et $OA = 6$. Déterminer $OB$
+8. Dans la figure ci-dessus, $(AD) \parallel (BC)$. On sait que $OD = 7, DC = 5$ et $AD = 5$. Déterminer $BC$
+9. Dans la figure ci-dessus, $(AD) \parallel (BC)$. On sait que $AD = 5, BC = 8$ et $OB = 9$. Déterminer $AB$
+
+![Figure](./fig_5_4_10.svg)
+
+
+
+10. Dans la figure ci-dessus, $(BC) \parallel (DE)$. On sait que $BC = 7, DE = 14$ et $AB = 3$. Déterminer $AE$
+11. Dans la figure ci-dessus, $(BC) \parallel (DE)$. On sait que $BC = 7, DE = 14$ et $AB = 3$. Déterminer $BE$
+10. Dans la figure ci-dessus, $(BC) \parallel (DE)$. On sait que $AB = 3, AE = 7$ et $BC = 5$. Déterminer $DE$
 
 ### 5.5. Connaître et utiliser les lignes trigonométriques dans le triangle rectangle
 
-1. Dans un triangle rectangle, l'angle $\theta$ a un cosinus de $0,6$. Calculer son sinus.
-2. Dans un triangle rectangle, l'angle $\alpha$ a un sinus de $0,8$. Calculer son cosinus.
-3. Dans un triangle rectangle, l'angle $\beta$ a une tangente de $1,5$. Calculer son sinus et son cosinus.
-4. Dans un triangle rectangle, l'hypoténuse mesure $10 \, \text{cm}$ et un angle a un sinus de $0,6$. Calculer la longueur du côté opposé à cet angle.
-5. Dans un triangle rectangle, l'angle $\theta$ a un cosinus de $0,8$. Calculer son sinus.
-6. Dans un triangle rectangle, l'angle $\alpha$ a un sinus de $0,6$. Calculer son cosinus.
-7. Dans un triangle rectangle, l'angle $\beta$ a une tangente de $2$. Calculer son sinus et son cosinus.
-8. Dans un triangle rectangle, l'hypoténuse mesure $13 \, \text{cm}$ et un angle a un cosinus de $0,6$. Calculer la longueur du côté adjacent à cet angle.
-9. Dans un triangle rectangle, l'angle $\theta$ a un cosinus de $0,6$. Calculer son sinus.
-10. Dans un triangle rectangle, l'angle $\alpha$ a un sinus de $0,4$. Calculer son cosinus.
-11. Dans un triangle rectangle, l'angle $\beta$ a une tangente de $3$. Calculer son sinus et son cosinus.
-12. Dans un triangle rectangle, l'hypoténuse mesure $25 \, \text{cm}$ et un angle a un sinus de $0,8$. Calculer la longueur du côté opposé à cet angle.
+![Figure](./fig_5_5_1.svg)
 
+1. Dans la figure ci-dessus, calculer $\cos(\widehat{B})$.
+2. Dans la figure ci-dessus, calculer $\sin(\widehat{B})$.
+3. Dans la figure ci-dessus, calculer $\tan(\widehat{B})$.
+4. Dans la figure ci-dessus, justifier que $\sin(\widehat{B}) = \cos(\widehat{C})$.
 
+![Figure](./fig_5_5_5.svg)
+
+5. Dans la figure ci-dessus, calculer $\cos(\widehat{B})$.
+6. Dans la figure ci-dessus, calculer $\sin(\widehat{C})$.
+7. Dans la figure ci-dessus, calculer $AC$ en utilisant la trigonométrie.
+
+![Figure](./fig_5_5_8.svg)
+
+8. Dans la figure ci-dessus, calculer $\cos(\widehat{C})$.
+9. Dans la figure ci-dessus, calculer $\sin(\widehat{C})$.
+10. Dans la figure ci-dessus, calculer $BC$.
+11. Dans la figure ci-dessus, calculer $AC$.
+12. Dans la figure ci-dessus, calculer $\cos(\widehat{B})$.
 
 ## 6. Statistiques
 
 
+### 6.1. Lire et commenter des graphiques usuels 
 
+![Figure](./fig_6_1_1.svg)
+
+1. Dans le diagramme en barre ci-dessus, donner les effectifs de chaque valeur.
+2. Dans le diagramme en barre ci-dessus, quelles sont les valeurs dont l'effectif est supérieur ou égal à 3 ?
+3. Dans le diagramme en barre ci-dessus, quel est l'effectif de la valeur 2 ?
+4. Dans le diagramme en barre ci-dessus, quelle est la proportion de la valeur 2 ?
+
+![Figure](./fig_6_1_5.svg)
+
+5. Dans le diagramme ci-dessus, déterminer la proportion de la partie manquante.
+
+![Figure](./fig_6_1_6.svg)
+
+6. Dans le diagramme ci-dessus, combien d'élèves ont eu la note 2 ?
+7. Dans le diagramme ci-dessus, combien d'élèves ont eu une note inférieure à 3 ?
+8. Dans le diagramme ci-dessus, déterminer la moyenne de la série.
+9. Dans le diagramme ci-dessus, déterminer la médiane de la série.
+10. Dans le diagramme ci-dessus, déterminer les quartiles de la série.
 
 ### 6.2. Calculer et interpréter des indicateurs statistiques
 
-1. Calculer la moyenne de la série $3; 5; 7; 9; 11$.
-2. Calculer la médiane de la série $2; 4; 6; 8; 10; 12$.
-3. Calculer les quartiles de la série $1; 3; 5; 7; 9; 11; 13; 15$.
-4. Calculer l'étendue de la série $4; 8; 12; 16; 20$.
-5. Calculer la moyenne de la série $5; 8; 10; 12; 15$.
-6. Calculer la médiane de la série $3; 6; 9; 12; 15; 18$.
-7. Calculer les quartiles de la série $2; 4; 6; 8; 10; 12; 14; 16$.
-8. Calculer l'étendue de la série $10; 20; 30; 40; 50$.
-9. Calculer la moyenne de la série $4; 9; 11; 13; 17$.
-10. Calculer la médiane de la série $5; 10; 15; 20; 25; 30$.
-11. Calculer les quartiles de la série $3; 7; 11; 15; 19; 23; 27; 31$.
-12. Calculer l'étendue de la série $20; 40; 60; 80; 100$.
+$$
+\begin{array}{|c|c|c|c|c|c|c|c|c|c|}
+\\hline 
+3 & 5 & 1 & 9 & 7 & 1 & 3 & 7 & 7 & 9 \\\\
+\\hline 
+\end{array}
+$$
+
+1. Calculer la moyenne de la série ci-dessus.
+2. Calculer la médiane de la série ci-dessus.
+3. Calculer les quartiles de la série ci-dessus.
+4. Calculer l'étendue de la série ci-dessus.
+5. Une série statistique comporte 100 valeurs. Sa moyenne est 12. Quel est le total des valeurs ?
+6. Une série statistique comporte 100 valeurs. La médiane est 30. Combien de valeurs environ sont supérieures à 30 ?
+7. Une série statistique comporte 100 valeurs. Les quartiles sont 20 et 70. Combien de valeurs environ sont entre 20 et 70 ?
+8. Une série statistique comporte 100 valeurs. Sa moyenne est 12. On augmente toutes les valeurs de 5. Quelle est la nouvelle moyenne ?
+
+
+$$
+\begin{array}{|c|c|c|c|c|c|c|c|c|c|}
+\\hline 
+ 0 & 2 & 6 & 6 & 8 & 2 & 4 & 0 & 8 & 6 \\\\
+\\hline 
+\end{array}
+$$
+
+9. Calculer la moyenne de la série ci-dessus.
+10. Calculer la médiane de la série ci-dessus.
+11. Calculer les quartiles de la série ci-dessus.
+12. Calculer l'étendue de la série ci-dessus.
+
 
 
 
@@ -539,12 +500,6 @@ Les contextes sont issus des mathématiques, des autres disciplines ou de la vie
 4. Une probabilité peut-elle être égale à $1$ ?
 5. Une probabilité peut-elle être égale à $1,5$ ?
 6. Une probabilité peut-elle être égale à $-0,2$ ?
-7. Une probabilité peut-elle être égale à $0,5$ ?
-8. Une probabilité peut-elle être égale à $2$ ?
-9. Une probabilité peut-elle être égale à $1,1$ ?
-10. Une probabilité peut-elle être égale à $-0,3$ ?
-11. Une probabilité peut-elle être égale à $0,99$ ?
-12. Une probabilité peut-elle être égale à $1,5$ ?
 
 
 ### 7.2. Savoir calculer la probabilité de l'événement contraire
@@ -555,12 +510,6 @@ Les contextes sont issus des mathématiques, des autres disciplines ou de la vie
 4. La probabilité d'un événement $D$ est $\frac{3}{4}$. Quelle est la probabilité de $\overline{D}$ ?
 5. La probabilité d'un événement $A$ est $0,4$. Quelle est la probabilité de $\overline{A}$ ?
 6. La probabilité d'un événement $B$ est $0,8$. Quelle est la probabilité de $\overline{B}$ ?
-7. La probabilité d'un événement $C$ est $\frac{3}{7}$. Quelle est la probabilité de $\overline{C}$ ?
-8. La probabilité d'un événement $D$ est $\frac{5}{8}$. Quelle est la probabilité de $\overline{D}$ ?
-9. La probabilité d'un événement $A$ est $0,25$. Quelle est la probabilité de $\overline{A}$ ?
-10. La probabilité d'un événement $B$ est $0,9$. Quelle est la probabilité de $\overline{B}$ ?
-11. La probabilité d'un événement $C$ est $\frac{1}{3}$. Quelle est la probabilité de $\overline{C}$ ?
-12. La probabilité d'un événement $D$ est $\frac{7}{10}$. Quelle est la probabilité de $\overline{D}$ ?
 
 
 ### 7.3. Calculer la probabilité d'un événement comme somme des probabilités des issues qui le composent
@@ -593,3 +542,6 @@ Les contextes sont issus des mathématiques, des autres disciplines ou de la vie
 10. Un sac contient 12 billes : 5 rouges, 4 bleues et 3 vertes. Quelle est la probabilité de tirer une bille rouge ?
 11. On lance un dé à 10 faces. Quelle est la probabilité d'obtenir un nombre pair ?
 12. Une classe compte 28 élèves, dont 14 filles. On choisit un élève au hasard. Quelle est la probabilité de choisir un garçon ?
+
+
+

@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg"
+     width="420" height="320"
+     viewBox="0 0 420 320">
+
+  <style>
+    .axis { stroke:black; stroke-width:2; }
+    .tick { stroke:black; stroke-width:1; }
+    .label { font:14px sans-serif; }
+    .ticklabel { font:12px sans-serif; }
+    .mark { fill:black; }
+  </style>
+
+  <!-- Axes -->
+  <line class="axis" x1="60" y1="270" x2="360" y2="270"/>
+  <line class="axis" x1="60" y1="270" x2="60" y2="30"/>
+
+  <!-- Graduations X -->
+  <g text-anchor="middle">
+    <line class="tick" x1="120" y1="270" x2="120" y2="276"/>
+    <text class="ticklabel" x="120" y="292">1</text>
+
+    <line class="tick" x1="180" y1="270" x2="180" y2="276"/>
+    <text class="ticklabel" x="180" y="292">2</text>
+
+    <line class="tick" x1="240" y1="270" x2="240" y2="276"/>
+    <text class="ticklabel" x="240" y="292">3</text>
+
+    <line class="tick" x1="300" y1="270" x2="300" y2="276"/>
+    <text class="ticklabel" x="300" y="292">4</text>
+
+    <line class="tick" x1="360" y1="270" x2="360" y2="276"/>
+    <text class="ticklabel" x="360" y="292">5</text>
+  </g>
+
+  <!-- Graduations Y -->
+  <g text-anchor="end">
+    <line class="tick" x1="54" y1="230" x2="60" y2="230"/>
+    <text class="ticklabel" x="48" y="234">1</text>
+
+    <line class="tick" x1="54" y1="190" x2="60" y2="190"/>
+    <text class="ticklabel" x="48" y="194">2</text>
+
+    <line class="tick" x1="54" y1="150" x2="60" y2="150"/>
+    <text class="ticklabel" x="48" y="154">3</text>
+
+    <line class="tick" x1="54" y1="110" x2="60" y2="110"/>
+    <text class="ticklabel" x="48" y="114">4</text>
+
+    <line class="tick" x1="54" y1="70" x2="60" y2="70"/>
+    <text class="ticklabel" x="48" y="74">5</text>
+
+    <line class="tick" x1="54" y1="30" x2="60" y2="30"/>
+    <text class="ticklabel" x="48" y="34">6</text>
+  </g>
+
+  <!-- Points -->
+  <circle class="mark" cx="120" cy="190" r="3.5"/>
+  <circle class="mark" cx="180" cy="110" r="3.5"/>
+  <circle class="mark" cx="240" cy="150" r="3.5"/>
+  <circle class="mark" cx="300" cy="30"  r="3.5"/>
+  <circle class="mark" cx="360" cy="70"  r="3.5"/>
+
+  <!-- Titres des axes -->
+  <text class="label" x="210" y="315" text-anchor="middle">Note</text>
+
+  <text class="label"
+        transform="translate(18,150) rotate(-90)"
+        text-anchor="middle">
+    Effectif
+  </text>
+
+</svg>

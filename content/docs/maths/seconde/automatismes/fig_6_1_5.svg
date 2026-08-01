@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg"
+     width="320" height="320"
+     viewBox="0 0 320 320">
+
+  <style>
+    .slice { stroke: black; stroke-width: 1; }
+    .label { font: 14px sans-serif; text-anchor: middle; dominant-baseline: middle; }
+  </style>
+
+  <!-- Secteur A : 10 % -->
+  <path class="slice" fill="#4e79a7"
+        d="M160,160
+           L160,40
+           A120,120 0 0,1 230.5,62.9
+           Z"/>
+
+  <!-- Secteur B : 20 % -->
+  <path class="slice" fill="#f28e2b"
+        d="M160,160
+           L230.5,62.9
+           A120,120 0 0,1 274.1,197.1
+           Z"/>
+
+  <!-- Secteur C : 30 % -->
+  <path class="slice" fill="#e15759"
+        d="M160,160
+           L274.1,197.1
+           A120,120 0 0,1 89.5,257.1
+           Z"/>
+
+  <!-- Secteur D : 10 % -->
+  <path class="slice" fill="#76b7b2"
+        d="M160,160
+           L89.5,257.1
+           A120,120 0 0,1 45.9,122.9
+           Z"/>
+
+  <!-- Secteur restant (30 %) -->
+  <path class="slice" fill="white"
+        d="M160,160
+           L45.9,122.9
+           A120,120 0 0,1 160,40
+           Z"/>
+
+  <!-- Étiquettes -->
+  <text class="label" x="183" y="74">A</text>
+  <text class="label" x="250" y="124">B</text>
+  <text class="label" x="183" y="246">C</text>
+  <text class="label" x="74" y="183">D</text>
+
+</svg>
