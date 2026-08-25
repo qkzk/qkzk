@@ -9,6 +9,7 @@ bookCollapseSection: true
 
 ## Documents complémentaires pour les TD de mathématiques en L2S3
 
+- [2026-2027](./2026_enonce.pdf)
 - [Poly de TD](./poly_exercices_Analyse_2022-2023.pdf)
 - [Sujet de l'examen final de 2021](./Sujet_examen_Janvier_2021_Analyse_L2_section_1.pdf) 
 - corrections de ce sujet :
