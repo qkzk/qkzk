@@ -73,64 +73,64 @@ geometry: "margin=1.5cm"
 
 1. Exprimer $0,75$ en pourcentage.
 2. Écrire $\frac{3}{20}$ sous forme décimale.
-3. Convertir $125\%$ en nombre décimal.
+3. Convertir $125\\%$ en nombre décimal.
 4. Écrire $2,5$ sous forme de fraction irréductible.
 5. Exprimer $0,125$ en pourcentage.
 6. Écrire $\frac{7}{25}$ sous forme décimale.
-7. Convertir $75\%$ en nombre décimal.
+7. Convertir $75\\%$ en nombre décimal.
 8. Écrire $3,2$ sous forme de fraction irréductible.
 9. Exprimer $0,0625$ en pourcentage.
 10. Écrire $\frac{9}{20}$ sous forme décimale.
-11. Convertir $12,5\%$ en nombre décimal.
+11. Convertir $12,5\\%$ en nombre décimal.
 12. Écrire $4,8$ sous forme de fraction irréductible.
 
 
 ### 1.5. Estimer un ordre de grandeur
 
 1. Donner un ordre de grandeur de $489 + 213$.
-2. Donner un ordre de grandeur de $1\,987 \times 5$.
-3. Donner un ordre de grandeur de $\frac{3\,456}{12}$.
-4. Donner un ordre de grandeur de $0,002 \times 5\,000$.
+2. Donner un ordre de grandeur de $1\\,987 \times 5$.
+3. Donner un ordre de grandeur de $\frac{3\\,456}{12}$.
+4. Donner un ordre de grandeur de $0,002 \times 5\\,000$.
 5. Donner un ordre de grandeur de $689 + 324$.
-6. Donner un ordre de grandeur de $2\,998 \times 4$.
-7. Donner un ordre de grandeur de $\frac{5\,678}{25}$.
-8. Donner un ordre de grandeur de $0,005 \times 8\,000$.
+6. Donner un ordre de grandeur de $2\\,998 \times 4$.
+7. Donner un ordre de grandeur de $\frac{5\\,678}{25}$.
+8. Donner un ordre de grandeur de $0,005 \times 8\\,000$.
 9. Donner un ordre de grandeur de $789 + 211$.
-10. Donner un ordre de grandeur de $3\,999 \times 2$.
-11. Donner un ordre de grandeur de $\frac{8\,765}{49}$.
-12. Donner un ordre de grandeur de $0,008 \times 1\,200$.
+10. Donner un ordre de grandeur de $3\\,999 \times 2$.
+11. Donner un ordre de grandeur de $\frac{8\\,765}{49}$.
+12. Donner un ordre de grandeur de $0,008 \times 1\\,200$.
 
 
 ### 1.6. S'assurer de la vraisemblance, de la cohérence d'un résultat
 
-1. Un rectangle a une aire de $24 \, \text{cm}^2$ et une longueur de $8 \, \text{cm}$. La largeur calculée est-elle cohérente si elle vaut $3 \, \text{cm}$ ?
-2. Un carré a un périmètre de $20 \, \text{cm}$. La longueur du côté calculée est-elle cohérente si elle vaut $4 \, \text{cm}$ ?
-3. Un triangle a des côtés de $5 \, \text{cm}$, $12 \, \text{cm}$ et $13 \, \text{cm}$. Est-il rectangle ?
-4. Un cercle a une circonférence de $31,4 \, \text{cm}$. Le rayon calculé est-il cohérent s'il vaut $5 \, \text{cm}$ ?
-5. Un rectangle a une aire de $36 \, \text{cm}^2$ et une longueur de $9 \, \text{cm}$. La largeur calculée est-elle cohérente si elle vaut $4 \, \text{cm}$ ?
-6. Un carré a un périmètre de $28 \, \text{cm}$. La longueur du côté calculée est-elle cohérente si elle vaut $6 \, \text{cm}$ ?
-7. Un triangle a des côtés de $9 \, \text{cm}$, $12 \, \text{cm}$ et $15 \, \text{cm}$. Est-il rectangle ?
-8. Un cercle a une circonférence de $62,8 \, \text{cm}$. Le rayon calculé est-il cohérent s'il vaut $10 \, \text{cm}$ ?
-9. Un rectangle a une aire de $48 \, \text{cm}^2$ et une longueur de $12 \, \text{cm}$. La largeur calculée est-elle cohérente si elle vaut $3 \, \text{cm}$ ?
-10. Un carré a un périmètre de $36 \, \text{cm}$. La longueur du côté calculée est-elle cohérente si elle vaut $8 \, \text{cm}$ ?
-11. Un triangle a des côtés de $10 \, \text{cm}$, $24 \, \text{cm}$ et $26 \, \text{cm}$. Est-il rectangle ?
-12. Un cercle a une circonférence de $125,6 \, \text{cm}$. Le rayon calculé est-il cohérent s'il vaut $20 \, \text{cm}$ ?
+1. Un rectangle a une aire de $24 \\, \text{cm}^2$ et une longueur de $8 \\, \text{cm}$. La largeur calculée est-elle cohérente si elle vaut $3 \\, \text{cm}$ ?
+2. Un carré a un périmètre de $20 \\, \text{cm}$. La longueur du côté calculée est-elle cohérente si elle vaut $4 \\, \text{cm}$ ?
+3. Un triangle a des côtés de $5 \\, \text{cm}$, $12 \\, \text{cm}$ et $13 \\, \text{cm}$. Est-il rectangle ?
+4. Un cercle a une circonférence de $31,4 \\, \text{cm}$. Le rayon calculé est-il cohérent s'il vaut $5 \\, \text{cm}$ ?
+5. Un rectangle a une aire de $36 \\, \text{cm}^2$ et une longueur de $9 \\, \text{cm}$. La largeur calculée est-elle cohérente si elle vaut $4 \\, \text{cm}$ ?
+6. Un carré a un périmètre de $28 \\, \text{cm}$. La longueur du côté calculée est-elle cohérente si elle vaut $6 \\, \text{cm}$ ?
+7. Un triangle a des côtés de $9 \\, \text{cm}$, $12 \\, \text{cm}$ et $15 \\, \text{cm}$. Est-il rectangle ?
+8. Un cercle a une circonférence de $62,8 \\, \text{cm}$. Le rayon calculé est-il cohérent s'il vaut $10 \\, \text{cm}$ ?
+9. Un rectangle a une aire de $48 \\, \text{cm}^2$ et une longueur de $12 \\, \text{cm}$. La largeur calculée est-elle cohérente si elle vaut $3 \\, \text{cm}$ ?
+10. Un carré a un périmètre de $36 \\, \text{cm}$. La longueur du côté calculée est-elle cohérente si elle vaut $8 \\, \text{cm}$ ?
+11. Un triangle a des côtés de $10 \\, \text{cm}$, $24 \\, \text{cm}$ et $26 \\, \text{cm}$. Est-il rectangle ?
+12. Un cercle a une circonférence de $125,6 \\, \text{cm}$. Le rayon calculé est-il cohérent s'il vaut $20 \\, \text{cm}$ ?
 
 
 ### 1.7. Effectuer des conversions d'unités
 
-1. Convertir $3,5 \, \text{km}$ en mètres.
-2. Convertir $250 \, \text{mg}$ en grammes.
-3. Convertir $2 \, \text{h} \, 30 \, \text{min}$ en secondes.
-4. Convertir $5 \, \text{L}$ en centilitres.
-5. Convertir $0,25 \, \text{km}$ en mètres.
-6. Convertir $500 \, \text{mg}$ en grammes.
-7. Convertir $1 \, \text{h} \, 45 \, \text{min}$ en secondes.
-8. Convertir $2,5 \, \text{L}$ en décilitres.
-9. Convertir $0,5 \, \text{km}$ en mètres.
-10. Convertir $750 \, \text{mg}$ en grammes.
-11. Convertir $2 \, \text{h} \, 15 \, \text{min}$ en secondes.
-12. Convertir $0,25 \, \text{L}$ en centilitres.
+1. Convertir $3,5 \\, \text{km}$ en mètres.
+2. Convertir $250 \\, \text{mg}$ en grammes.
+3. Convertir $2 \\, \text{h} \\, 30 \\, \text{min}$ en secondes.
+4. Convertir $5 \\, \text{L}$ en centilitres.
+5. Convertir $0,25 \\, \text{km}$ en mètres.
+6. Convertir $500 \\, \text{mg}$ en grammes.
+7. Convertir $1 \\, \text{h} \\, 45 \\, \text{min}$ en secondes.
+8. Convertir $2,5 \\, \text{L}$ en décilitres.
+9. Convertir $0,5 \\, \text{km}$ en mètres.
+10. Convertir $750 \\, \text{mg}$ en grammes.
+11. Convertir $2 \\, \text{h} \\, 15 \\, \text{min}$ en secondes.
+12. Convertir $0,25 \\, \text{L}$ en centilitres.
 
 
 ### 1.8. Effectuer un calcul littéral élémentaire
@@ -220,33 +220,33 @@ geometry: "margin=1.5cm"
 ### 2.1. Calculer, appliquer, exprimer une proportion sous différentes formes
 
 1. Exprimer $0,3$ en pourcentage.
-2. Calculer $20\%$ de $150$.
+2. Calculer $20\\%$ de $150$.
 3. Exprimer $\frac{3}{4}$ en pourcentage.
-4. Calculer $15\%$ de $200$.
+4. Calculer $15\\%$ de $200$.
 5. Exprimer $0,45$ en pourcentage.
-6. Calculer $30\%$ de $200$.
+6. Calculer $30\\%$ de $200$.
 7. Exprimer $\frac{2}{5}$ en pourcentage.
-8. Calculer $40\%$ de $150$.
+8. Calculer $40\\%$ de $150$.
 9. Exprimer $0,875$ en pourcentage.
-10. Calculer $15\%$ de $240$.
+10. Calculer $15\\%$ de $240$.
 11. Exprimer $\frac{4}{5}$ en pourcentage.
-12. Calculer $60\%$ de $180$.
+12. Calculer $60\\%$ de $180$.
 
 
 ### 2.2. Utiliser une proportion pour calculer une partie connaissant le tout, ou le tout connaissant une partie
 
-1. Dans une classe de $30$ élèves, $40\%$ sont des filles. Combien y a-t-il de filles ?
-2. $25\%$ d'un nombre valent $50$. Quel est ce nombre ?
-3. Dans un groupe de $45$ personnes, $60\%$ sont des adultes. Combien y a-t-il d'adultes ?
-4. $10\%$ d'un nombre valent $20$. Quel est ce nombre ?
-5. Dans une classe de $40$ élèves, $60\%$ sont des garçons. Combien y a-t-il de garçons ?
-6. $15\%$ d'un nombre valent $45$. Quel est ce nombre ?
-7. Dans un groupe de $60$ personnes, $40\%$ sont des enfants. Combien y a-t-il d'enfants ?
-8. $25\%$ d'un nombre valent $75$. Quel est ce nombre ?
-9. Dans une classe de $50$ élèves, $60\%$ sont des filles. Combien y a-t-il de filles ?
-10. $20\%$ d'un nombre valent $80$. Quel est ce nombre ?
-11. Dans un groupe de $80$ personnes, $35\%$ sont des enfants. Combien y a-t-il d'enfants ?
-12. $40\%$ d'un nombre valent $120$. Quel est ce nombre ?
+1. Dans une classe de $30$ élèves, $40\\%$ sont des filles. Combien y a-t-il de filles ?
+2. $25\\%$ d'un nombre valent $50$. Quel est ce nombre ?
+3. Dans un groupe de $45$ personnes, $60\\%$ sont des adultes. Combien y a-t-il d'adultes ?
+4. $10\\%$ d'un nombre valent $20$. Quel est ce nombre ?
+5. Dans une classe de $40$ élèves, $60\\%$ sont des garçons. Combien y a-t-il de garçons ?
+6. $15\\%$ d'un nombre valent $45$. Quel est ce nombre ?
+7. Dans un groupe de $60$ personnes, $40\\%$ sont des enfants. Combien y a-t-il d'enfants ?
+8. $25\\%$ d'un nombre valent $75$. Quel est ce nombre ?
+9. Dans une classe de $50$ élèves, $60\\%$ sont des filles. Combien y a-t-il de filles ?
+10. $20\\%$ d'un nombre valent $80$. Quel est ce nombre ?
+11. Dans un groupe de $80$ personnes, $35\\%$ sont des enfants. Combien y a-t-il d'enfants ?
+12. $40\\%$ d'un nombre valent $120$. Quel est ce nombre ?
 
 
 
@@ -255,18 +255,18 @@ geometry: "margin=1.5cm"
 
 ### 3.1. Passer d'une formulation additive à une formulation multiplicative
 
-1. Exprimer une augmentation de $10\%$ sous forme de coefficient multiplicateur.
-2. Exprimer une diminution de $25\%$ sous forme de coefficient multiplicateur.
-3. Exprimer une augmentation de $5\%$ sous forme de coefficient multiplicateur.
-4. Exprimer une diminution de $15\%$ sous forme de coefficient multiplicateur.
-5. Exprimer une augmentation de $15\%$ sous forme de coefficient multiplicateur.
-6. Exprimer une diminution de $30\%$ sous forme de coefficient multiplicateur.
-7. Exprimer une augmentation de $8\%$ sous forme de coefficient multiplicateur.
-8. Exprimer une diminution de $20\%$ sous forme de coefficient multiplicateur.
-9. Exprimer une augmentation de $25\%$ sous forme de coefficient multiplicateur.
-10. Exprimer une diminution de $40\%$ sous forme de coefficient multiplicateur.
-11. Exprimer une augmentation de $12\%$ sous forme de coefficient multiplicateur.
-12. Exprimer une diminution de $35\%$ sous forme de coefficient multiplicateur.
+1. Exprimer une augmentation de $10\\%$ sous forme de coefficient multiplicateur.
+2. Exprimer une diminution de $25\\%$ sous forme de coefficient multiplicateur.
+3. Exprimer une augmentation de $5\\%$ sous forme de coefficient multiplicateur.
+4. Exprimer une diminution de $15\\%$ sous forme de coefficient multiplicateur.
+5. Exprimer une augmentation de $15\\%$ sous forme de coefficient multiplicateur.
+6. Exprimer une diminution de $30\\%$ sous forme de coefficient multiplicateur.
+7. Exprimer une augmentation de $8\\%$ sous forme de coefficient multiplicateur.
+8. Exprimer une diminution de $20\\%$ sous forme de coefficient multiplicateur.
+9. Exprimer une augmentation de $25\\%$ sous forme de coefficient multiplicateur.
+10. Exprimer une diminution de $40\\%$ sous forme de coefficient multiplicateur.
+11. Exprimer une augmentation de $12\\%$ sous forme de coefficient multiplicateur.
+12. Exprimer une diminution de $35\\%$ sous forme de coefficient multiplicateur.
 
 
 
@@ -365,28 +365,28 @@ geometry: "margin=1.5cm"
 
 ### 5.3. Calculer des périmètres (polygone et cercle), aires (rectangle, triangle et disque) et des volumes
 
-1. Calculer le périmètre d'un carré de côté $7 \, \text{cm}$.
-2. Calculer l'aire d'un disque de rayon $5 \, \text{cm}$.
-3. Calculer le volume d'un pavé droit de dimensions $3 \, \text{cm}$, $4 \, \text{cm}$ et $5 \, \text{cm}$.
-4. Calculer l'aire d'un triangle rectangle de côtés $6 \, \text{cm}$ et $8 \, \text{cm}$.
-5. Calculer le périmètre d'un carré de côté $10 \, \text{cm}$.
-6. Calculer l'aire d'un disque de rayon $8 \, \text{cm}$.
-7. Calculer le volume d'un pavé droit de dimensions $2 \, \text{cm}$, $5 \, \text{cm}$ et $10 \, \text{cm}$.
-8. Calculer l'aire d'un triangle rectangle de côtés $9 \, \text{cm}$ et $12 \, \text{cm}$.
-9. Calculer le périmètre d'un carré de côté $14 \, \text{cm}$.
-10. Calculer l'aire d'un disque de rayon $9 \, \text{cm}$.
-11. Calculer le volume d'un pavé droit de dimensions $3 \, \text{cm}$, $6 \, \text{cm}$ et $12 \, \text{cm}$.
-12. Calculer l'aire d'un triangle rectangle de côtés $15 \, \text{cm}$ et $20 \, \text{cm}$.
+1. Calculer le périmètre d'un carré de côté $7 \\, \text{cm}$.
+2. Calculer l'aire d'un disque de rayon $5 \\, \text{cm}$.
+3. Calculer le volume d'un pavé droit de dimensions $3 \\, \text{cm}$, $4 \\, \text{cm}$ et $5 \\, \text{cm}$.
+4. Calculer l'aire d'un triangle rectangle de côtés $6 \\, \text{cm}$ et $8 \\, \text{cm}$.
+5. Calculer le périmètre d'un carré de côté $10 \\, \text{cm}$.
+6. Calculer l'aire d'un disque de rayon $8 \\, \text{cm}$.
+7. Calculer le volume d'un pavé droit de dimensions $2 \\, \text{cm}$, $5 \\, \text{cm}$ et $10 \\, \text{cm}$.
+8. Calculer l'aire d'un triangle rectangle de côtés $9 \\, \text{cm}$ et $12 \\, \text{cm}$.
+9. Calculer le périmètre d'un carré de côté $14 \\, \text{cm}$.
+10. Calculer l'aire d'un disque de rayon $9 \\, \text{cm}$.
+11. Calculer le volume d'un pavé droit de dimensions $3 \\, \text{cm}$, $6 \\, \text{cm}$ et $12 \\, \text{cm}$.
+12. Calculer l'aire d'un triangle rectangle de côtés $15 \\, \text{cm}$ et $20 \\, \text{cm}$.
 
 
 ### 5.4. Application simple des théorèmes de Pythagore et de Thalès
 
-1. Dans un triangle rectangle, les côtés de l'angle droit mesurent $6 \, \text{cm}$ et $8 \, \text{cm}$. Calculer l'hypoténuse.
-2. Dans un triangle $ABC$ rectangle en $A$, on donne $AB = 5 \, \text{cm}$ et $BC = 13 \, \text{cm}$. Calculer $AC$.
-3. Dans un triangle $DEF$, on donne $DE = 4 \, \text{cm}$, $EF = 6 \, \text{cm}$ et $DF = 8 \, \text{cm}$. Le triangle est-il rectangle ?
-4. Dans un triangle $GHI$ rectangle en $H$, on donne $GH = 9 \, \text{cm}$ et $GI = 15 \, \text{cm}$. Calculer $HI$.
-5. Dans un triangle rectangle, les côtés de l'angle droit mesurent $5 \, \text{cm}$ et $12 \, \text{cm}$. Calculer l'hypoténuse.
-6. Dans un triangle $ABC$ rectangle en $A$, on donne $AB = 8 \, \text{cm}$ et $BC = 17 \, \text{cm}$. Calculer $AC$.
+1. Dans un triangle rectangle, les côtés de l'angle droit mesurent $6 \\, \text{cm}$ et $8 \\, \text{cm}$. Calculer l'hypoténuse.
+2. Dans un triangle $ABC$ rectangle en $A$, on donne $AB = 5 \\, \text{cm}$ et $BC = 13 \\, \text{cm}$. Calculer $AC$.
+3. Dans un triangle $DEF$, on donne $DE = 4 \\, \text{cm}$, $EF = 6 \\, \text{cm}$ et $DF = 8 \\, \text{cm}$. Le triangle est-il rectangle ?
+4. Dans un triangle $GHI$ rectangle en $H$, on donne $GH = 9 \\, \text{cm}$ et $GI = 15 \\, \text{cm}$. Calculer $HI$.
+5. Dans un triangle rectangle, les côtés de l'angle droit mesurent $5 \\, \text{cm}$ et $12 \\, \text{cm}$. Calculer l'hypoténuse.
+6. Dans un triangle $ABC$ rectangle en $A$, on donne $AB = 8 \\, \text{cm}$ et $BC = 17 \\, \text{cm}$. Calculer $AC$.
 
 
 ![Figure](./fig_5_4_6.svg)
