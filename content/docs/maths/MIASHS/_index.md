@@ -24,6 +24,10 @@ Contacts :
 - [CM](./Analyse1_CM.pdf)
 - [EDT](./EDT_MIASHS-S1.pdf)
 
+## Vidéo et correction 
+
+- Partie 2, exercices 5 à 11. [Vidéo](https://www.youtube.com/watch?v=YbgOOzY8SRQ) et [Notes](./visio_1_annotated.pdf)
+
 ## Corrections 
 
 - [Partie 1](./corr_partie_1_annotated.pdf)
