@@ -26,7 +26,7 @@ Contacts :
 
 ## Vidéo et correction 
 
-- Partie 2, exercices 5 à 11. [Vidéo](https://www.youtube.com/watch?v=YbgOOzY8SRQ) et [Notes](./visio_1_annotated.pdf)
+- Partie 2, exercices 2.5 à 2.11. [Vidéo](https://www.youtube.com/watch?v=YbgOOzY8SRQ) et [Notes](./visio_1_annotated.pdf)
 
 ## Corrections 
 
