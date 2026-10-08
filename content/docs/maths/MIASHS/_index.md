@@ -12,10 +12,15 @@ Licence 1 MIASHS à l'université de Lille
 
 ## 2026-2027
 
-Contacts : 
+## Visio du jeudi 8 octobre 2026, 10h15
 
-- Léa Blanc-Centi <lea.blanc-centi@univ-lille.fr>
-- Abdellah HANANI <abdellah.hanani@univ-lille.fr>
+- [Lien de la visio](https://meet.google.com/off-hsdh-ini)
+
+## Vidéo du mercredi 7 octobre 2026
+
+Correction de la fin de la partie 2 
+
+- Partie 2, exercices 2.5 à 2.11. [Vidéo](https://www.youtube.com/watch?v=YbgOOzY8SRQ) et [Notes](./visio_1_annotated.pdf)
 
 
 ### TD d'analyse 1 (S1)
@@ -24,9 +29,6 @@ Contacts :
 - [CM](./Analyse1_CM.pdf)
 - [EDT](./EDT_MIASHS-S1.pdf)
 
-## Vidéo et correction 
-
-- Partie 2, exercices 2.5 à 2.11. [Vidéo](https://www.youtube.com/watch?v=YbgOOzY8SRQ) et [Notes](./visio_1_annotated.pdf)
 
 ## Corrections 
 
