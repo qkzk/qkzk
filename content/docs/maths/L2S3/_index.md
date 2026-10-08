@@ -7,6 +7,14 @@ bookCollapseSection: true
 
 ---
 
+
+## Visio du samedi 10 octobre 2026 
+
+- 8h, 9h45 et 11h30 : [même adresse](https://meet.google.com/ivq-btdu-sut)
+- Les vidéos et prises de notes seront disponibles ici un peu plus tard...
+
+---
+
 ## Documents complémentaires pour les TD de mathématiques en L2S3
 
 - [2026-2027](./2026_enonce.pdf)
