@@ -15,7 +15,7 @@ Licence 1 MIASHS à l'université de Lille
 ## Visio du jeudi 8 octobre 2026, 10h15
 
 - [Notes en pdf](./visio_2_2027_10_08_annotated.pdf)
-- [Vidéo de la visio](./https://youtu.be/H5ylyxTRbbg)
+- [Vidéo de la visio](https://youtu.be/H5ylyxTRbbg)
 
 ## Vidéo du mercredi 7 octobre 2026
 
