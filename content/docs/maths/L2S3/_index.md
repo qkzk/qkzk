@@ -10,6 +10,7 @@ bookCollapseSection: true
 
 ## Visio du samedi 10 octobre 2026 
 
+- [Notes de la séance de 11h30](./L2S3_S5_2026_10_10_11h30_annotated.pdf et [visio](https://youtu.be/XLgyoFKdcn0)
 - [Notes de la séance de 9h45](./L2S4_S5_2026_10_10_9h45_annotated.pdf) et [visio](https://youtu.be/tl7uKsYYmbo)
 - [Notes de la séance de 8h](./L2S3_S6_2026_10_10_8h_annotated.pdf) et [visio](https://www.youtube.com/watch?v=HkCqExTsUGY)
 
