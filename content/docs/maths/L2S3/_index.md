@@ -10,8 +10,11 @@ bookCollapseSection: true
 
 ## Visio du samedi 10 octobre 2026 
 
+- [Notes de la séance de 8h](./L2S3_S6_2026_10_10_8h_annotated.pdf)
+
 - 8h, 9h45 et 11h30 : [même adresse](https://meet.google.com/ivq-btdu-sut)
 - Les vidéos et prises de notes seront disponibles ici un peu plus tard...
+
 
 ---
 
