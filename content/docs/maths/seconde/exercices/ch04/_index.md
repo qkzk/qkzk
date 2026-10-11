@@ -98,3 +98,13 @@ Calculez le plus petit commun multiple (PPCM) de $8$ et $12$. De $28$ et $63$.
 2. Et pour la soustraction ?
 3. Le produit de deux multiples de 7 est-il multiple de 49 ?
 4. On sait que $n$ est multiple de 4 et de 6. Est-il forcément multiple de 24 ? Donner un contre exemple.
+
+## Exercice 11 - Un peu de tout
+
+
+1. Donner la division euclidienne de $43$ par $6$.
+2. Donner la liste des diviseurs de $42$.
+2. Justifier _sans calculatrice_ que $2838383828282727 \times 37371813$ est un nombre impair.
+3. On considère $a = 24$ et $b = 36$.
+
+    Déterminer les diviseurs communs à $a$ et $b$.
