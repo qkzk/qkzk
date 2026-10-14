@@ -18,7 +18,7 @@ La visio sera enregistrée et disponible ici avec les prises de notes réalisée
 
 ### TD
 
-- [Exercices](exercices)
+- [Exercices](exercices) et [poly](./Poly-2026-2027.pdf)
 
 ## 2025-2026
 
