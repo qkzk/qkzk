@@ -12,9 +12,13 @@ Licence 1 MIASHS à l'université de Lille
 
 ## 2026-2027
 
+## Visio du jeudi 15 octobre, 10h15
+
+- [Lien de la visio](https://meet.google.com/kjf-sotv-xds)
+
 ## Visio du mercredi 14 octobre 2026, 13h15
 
-- [Lien de la visio](https://meet.google.com/owa-mxer-swc)
+- [Lien de la visio](https://meet.google.com/owa-mxer-swc) - aucun participant à 13h30, j'arrête.
 
 ## Visio du jeudi 8 octobre 2026, 10h15
 
