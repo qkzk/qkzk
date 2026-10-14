@@ -15,7 +15,8 @@ Lien de la visio : [Visio](https://meet.google.com/wbv-rxcc-qtd)
 
 La visio sera enregistrée et disponible ici avec les prises de notes réalisées durant la visio.
 
-- Séance 1 : [Notes manuscrites](visio_2026_10_14_annotated.pdf) et [video](https://youtu.be/i3XXq-UG9qQ)
+- Séance 1 : [Notes manuscrites](./visio_2026_10_14_annotated.pdf) et [video](https://youtu.be/i3XXq-UG9qQ)
+- Séance de 16h45 : [Notes manuscrites](./visio_2026_10_14_seance2_annotated.pdf) et [video](https://youtu.be/tl2BxYd0TjY)
 
 
 ### TD
