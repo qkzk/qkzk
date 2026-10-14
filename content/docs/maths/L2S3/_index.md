@@ -6,7 +6,9 @@ weight: 4
 bookCollapseSection: true
 
 ---
+## Visio du samedi 17 octobre 2026 
 
+- Lien de la [visio](https://meet.google.com/kzi-ndrd-sqj)
 
 ## Visio du samedi 10 octobre 2026 
 
