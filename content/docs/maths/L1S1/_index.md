@@ -10,9 +10,8 @@ bookCollapseSection: true
 
 ### Visio du Mercredi 14 octobre 
 
-Si le campus est débloqué, le TD se déroulera normalement.
 
-Sinon nous ferons une visio depuis l'adresse : [Visio](https://meet.google.com/wbv-rxcc-qtd)
+Lien de la visio : [Visio](https://meet.google.com/wbv-rxcc-qtd)
 
 La visio sera enregistrée et disponible ici avec les prises de notes réalisées durant la visio.
 

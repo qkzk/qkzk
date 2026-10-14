@@ -12,6 +12,10 @@ Licence 1 MIASHS à l'université de Lille
 
 ## 2026-2027
 
+## Visio du mercredi 14 octobre 2026, 13h15
+
+- [Lien de la visio](https://meet.google.com/owa-mxer-swc)
+
 ## Visio du jeudi 8 octobre 2026, 10h15
 
 - [Notes en pdf](./visio_2_2027_10_08_annotated.pdf)
