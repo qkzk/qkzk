@@ -12,9 +12,15 @@ Licence 1 MIASHS à l'université de Lille
 
 ## 2026-2027
 
+## Mercredi 21 octobre, 13h15
+
+- Si le campus est réouvert, présentiel
+- Sinon visio... le lien sera communiqué peu de temps avant la visio
+
 ## Visio du jeudi 15 octobre, 10h15
 
-- [Lien de la visio](https://meet.google.com/kjf-sotv-xds)
+- [Notes en pdf](./visio_4_2027_10_15_annotated.pdf)
+- [Vidéo](https://youtu.be/IE7J5KtGsXw)
 
 ## Visio du mercredi 14 octobre 2026, 13h15
 
