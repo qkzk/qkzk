@@ -10,6 +10,8 @@ bookCollapseSection: true
 
 - Lien de la [visio](https://meet.google.com/kzi-ndrd-sqj)
 
+- [Notes de la séance de 8h](./L2S3_S6_2026_10_17_8h_annotated.pdf) et [vidéo](https://youtu.be/vstGhDZAxfU)
+
 ## Visio du samedi 10 octobre 2026 
 
 - [Notes de la séance de 11h30](./L2S3_S5_2026_10_10_11h30_annotated.pdf) et [visio](https://youtu.be/XLgyoFKdcn0)
