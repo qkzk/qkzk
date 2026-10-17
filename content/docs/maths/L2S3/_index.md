@@ -9,7 +9,7 @@ bookCollapseSection: true
 ## Visio du samedi 17 octobre 2026 
 
 - Lien de la [visio](https://meet.google.com/kzi-ndrd-sqj)
-
+- [Notes de la séance de 9h45](./L2S3_S6_2026_10_17_9h45_annotated.pdf) et [vidéo](https://youtu.be/YB8mB2yCw7Q)
 - [Notes de la séance de 8h](./L2S3_S6_2026_10_17_8h_annotated.pdf) et [vidéo](https://youtu.be/vstGhDZAxfU)
 
 ## Visio du samedi 10 octobre 2026 
