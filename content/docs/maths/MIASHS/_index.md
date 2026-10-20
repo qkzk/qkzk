@@ -12,10 +12,13 @@ Licence 1 MIASHS à l'université de Lille
 
 ## 2026-2027
 
+## Jeudi 22 octobre, 10h15
+
+- [lien de la visio](https://meet.google.com/exj-upay-dhb)
+
 ## Mercredi 21 octobre, 13h15
 
-- Si le campus est réouvert, présentiel
-- Sinon visio... le lien sera communiqué peu de temps avant la visio
+- [lien de la visio](https://meet.google.com/anh-kckc-nuw)
 
 ## Visio du jeudi 15 octobre, 10h15
 
