@@ -18,7 +18,8 @@ Licence 1 MIASHS à l'université de Lille
 
 ## Mercredi 21 octobre, 13h15
 
-- [lien de la visio](https://meet.google.com/anh-kckc-nuw)
+- [Notes en pdf](./visio_5_2027_10_21_annotated.pdf)
+- [video](https://youtu.be/o9nl0DrmIw8)
 
 ## Visio du jeudi 15 octobre, 10h15
 
