@@ -11,6 +11,7 @@ bookCollapseSection: true
 ## Visio du mercredi 21 octobre
 
 - [lien de la visio](https://meet.google.com/anh-kckc-nuw)
+- Séance de 15h : [Notes](./visio_2026_10_21_seance1_annotated.pdf) et [vidéo](https://youtu.be/k5_Mn7efY2U)
 
 ### Visio du Mercredi 14 octobre 
 
