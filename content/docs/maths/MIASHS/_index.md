@@ -14,7 +14,8 @@ Licence 1 MIASHS à l'université de Lille
 
 ## Jeudi 22 octobre, 10h15
 
-- [lien de la visio](https://meet.google.com/exj-upay-dhb)
+- [Notes en pdf](./visio_6_2027_10_22_annotated.pdf)
+- [Vidéo](https://youtu.be/FLRu2IRNxqI)
 
 ## Mercredi 21 octobre, 13h15
 
