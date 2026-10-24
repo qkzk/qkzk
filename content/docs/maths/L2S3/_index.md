@@ -10,6 +10,8 @@ bookCollapseSection: true
 ## Visio du samedi 24 octobre 2026 
 
 - [Lien de la visio](https://meet.google.com/vdz-rork-sux)
+- [Notes de la séance de 9h45](./L2S3_S6_2026_10_24_9h45_annotated.pdf) et [vidéo](https://youtu.be/kaMh6F_fFUw)
+- Aucun présent à la séance de 8h
 
 ## Visio du samedi 17 octobre 2026 
 
