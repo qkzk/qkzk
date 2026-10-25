@@ -8,7 +8,7 @@ weight: -2
 Le module `Turtle` de [Python](https://docs.python.org/fr/3/library/turtle.html) permet de dessiner très simplement des figures.
 
 Il est présent sur votre calculatrice Numworks, dans l'installation par défaut
-de Python ainsi qu'en ligne, par exemple [ici](https://trinket.io/turtle).
+de Python ainsi qu'en ligne, par exemple [ici](https://coddy.tech/embed-editor?lang=python&code=ZnJvbSB0dXJ0bGUgaW1wb3J0ICoKCmZvciBpIGluIHJhbmdlKDQpOgogICAgZm9yd2FyZCgxMDApCiAgICBsZWZ0KDkwKQo).
 
 Il est beaucoup plus difficile de le faire fonctionner dans Colab, aussi ce
 petit projet ne l'utilisera pas.
@@ -132,7 +132,7 @@ sqrfunc(46)
 sqrfunc(26)
 ```
 
-Voir [ici](https://trinket.io/turtle/4d11ecb3c2)
+Voir [ici](https://coddy.tech/embed-editor?lang=python&code=aW1wb3J0IHR1cnRsZSAgICNPdXRzaWRlX0luCnduID0gdHVydGxlLlNjcmVlbigpCnduLmJnY29sb3IoImxpZ2h0IGdyZWVuIikKc2trID0gdHVydGxlLlR1cnRsZSgpCnNray5jb2xvcigiYmx1ZSIpCiAKZGVmIHNxcmZ1bmMoc2l6ZSk6CiAgICBmb3IgaSBpbiByYW5nZSg0KToKICAgICAgICBza2suZmQoc2l6ZSkKICAgICAgICBza2subGVmdCg5MCkKICAgICAgICBzaXplID0gc2l6ZS01CiAKc3FyZnVuYygxNDYpCnNxcmZ1bmMoMTI2KQpzcXJmdW5jKDEwNikKc3FyZnVuYyg4NikKc3FyZnVuYyg2NikKc3FyZnVuYyg0NikKc3FyZnVuYygyNikK)
 
 ### Rosace
 
@@ -164,7 +164,7 @@ for x in range(360):
     t.left(59)
 ```
 
-Voir [ici](https://trinket.io/turtle/0c31ae92f1)
+Voir [ici](https://coddy.tech/embed-editor?lang=python&code=ZnJvbSB0dXJ0bGUgaW1wb3J0ICoKY29sb3JzID0gWydyZWQnLCAncHVycGxlJywgJ2JsdWUnLCAnZ3JlZW4nLCAnb3JhbmdlJywgJ3llbGxvdyddCnQgPSBUdXJ0bGUoKQpzY3JlZW4gPSBTY3JlZW4oKQpzY3JlZW4uYmdjb2xvcignYmxhY2snKQpmb3IgeCBpbiByYW5nZSgzNjApOgogICAgdC5wZW5jb2xvcihjb2xvcnNbeCU2XSkKICAgIHQud2lkdGgoeC8xMDAgKyAxKQogICAgdC5mb3J3YXJkKHgpCiAgICB0LmxlZnQoNTkpCg)
 
 ## Figures fractales
 
@@ -202,7 +202,7 @@ def flocon(l,n):
 flocon(200, 3)
 ```
 
-Voir [ici](https://trinket.io/turtle/504cb3fc09)
+Voir [ici](https://coddy.tech/embed-editor?lang=python&code=ZnJvbSB0dXJ0bGUgaW1wb3J0ICoKc3BlZWQoMCkKZGVmIGtvY2gobCxuKToKICAgICcnJ0ZyYWN0YWNsZSBkZSBLb2NoJycnCiAgICBpZiBuPD0wOgogICAgICAgIGZvcndhcmQobCkKICAgIGVsc2U6CiAgICAgICAga29jaChsLzMsbi0xKQogICAgICAgIGxlZnQoNjApCiAgICAgICAga29jaChsLzMsbi0xKQogICAgICAgIHJpZ2h0KDEyMCkKICAgICAgICBrb2NoKGwvMyxuLTEpCiAgICAgICAgbGVmdCg2MCkKICAgICAgICBrb2NoKGwvMyxuLTEpCgpkZWYgZmxvY29uKGwsbik6CiAgICAnJydGbG9jb24gZGUgS29jaCcnJwogICAga29jaChsLG4pCiAgICByaWdodCgxMjApCiAgICBrb2NoKGwsbikKICAgIHJpZ2h0KDEyMCkKICAgIGtvY2gobCxuKQogICAgCmZsb2NvbigyMDAsIDMpCg)
 
 ### Arbre Pythagoricien
 
@@ -240,7 +240,7 @@ showturtle() # affiche la tortue
 mainloop()
 ```
 
-Voir [ici](https://trinket.io/turtle/fcd6a7a469)
+Voir [ici](https://coddy.tech/embed-editor?lang=python&code=ZnJvbSB0dXJ0bGUgaW1wb3J0ICoKYW5nbGUgPSAzMApzcGVlZCgwKQpjb2xvcignIzNmMTkwNScpICMgY291bGV1ciBkdSB0cm9uYwoKZGVmIGFyYnJlKG4sbG9uZ3VldXIpOgogICAgaWYgbj09MDoKICAgICAgICBjb2xvcignZ3JlZW4nKQogICAgICAgIGZvcndhcmQobG9uZ3VldXIpICMgYXZhbmNlCiAgICAgICAgYmFja3dhcmQobG9uZ3VldXIpICMgcmVjdWxlCiAgICAgICAgY29sb3IoJyMzZjE5MDUnKQogICAgZWxzZToKICAgICAgICB3aWR0aChuKQogICAgICAgIGZvcndhcmQobG9uZ3VldXIvMykgI2F2YW5jZQogICAgICAgIGxlZnQoYW5nbGUpICMgdG91cm5lIHZlcnMgbGEgZ2F1Y2hlIGRlIGFuZ2xlIGRlZ3LDqXMKICAgICAgICBhcmJyZShuLTEsbG9uZ3VldXIqMi8zKQogICAgICAgIHJpZ2h0KDIqYW5nbGUpICMgdG91cm5lIHZlcnMgbGEgZHJvaXRlIGRlIGFuZ2xlIGRlZ3LDqXMKICAgICAgICBhcmJyZShuLTEsbG9uZ3VldXIqMi8zKQogICAgICAgIGxlZnQoYW5nbGUpICMgdG91cm5lIHZlcnMgbGEgZ2F1Y2hlIGRlIGFuZ2xlIGRlZ3LDqXMKICAgICAgICBiYWNrd2FyZChsb25ndWV1ci8zKSAjIHJlY3VsZQoKaGlkZXR1cnRsZSgpICMgY2FjaGUgbGEgdG9ydHVlCnVwKCkgIyBsw6h2ZSBsZSBzdHlsbwpmb3J3YXJkKDEwMCkgIyBhdmFuY2UgZGUgMTAwCnJpZ2h0KDkwKSAjIHRvdXJuZSBkZSA5MCBkZWdyw6lzIHZlcnMgbGEgZHJvaXRlIApmb3J3YXJkKDMwMCkgIyBhdmFuY2UgZGUgMzAwIHBpeGVscwpsZWZ0KDE4MCkgIyBmYWl0IHVuIGRlbWktdG91cgpkb3duKCkgIyBwb3NlIGxlIHN0eWxvCmFyYnJlKDExLCA0MDApICMgZXjDqWN1dGUgbGEgZm9uY3Rpb24Kc2hvd3R1cnRsZSgpICMgYWZmaWNoZSBsYSB0b3J0dWUKbWFpbmxvb3AoKQo)
 
 ### Courbe du dragon
 
