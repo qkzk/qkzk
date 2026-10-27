@@ -5,11 +5,14 @@ theme: metropolis
 weight: 5
 bookCollapseSection: false
 geometry: "margin=1.5cm"
+header-includes: |
+   \usepackage{amsmath, amssymb}
+   \usepackage{tikz}
+   \usetikzlibrary {angles, quotes, positioning, arrows.meta, shapes.geometric, shapes, calc}
+   \usepackage{tkz-tab}
 ---
 
 [pdf](./ch05.pdf)
-
-_Dans ce chapitre, on construira le graphe de la fonction sur la calculatrice et on répondra par lecture graphique._
 
 ## Exercice 1
 
@@ -49,31 +52,8 @@ Représentez graphiquement la fonction $g(x) = -x^2 + 4x - 3$ et trouvez les coo
 
 Soit la fonction $f(x) = 3x - x^3$. Construire son tableau de variation $f$.
 
+
 ## Exercice 10
-
-Trouvez les valeurs de $x$ pour lesquelles la fonction $g(x) = x^2 - 6x + 8$ atteint un maximum ou un minimum.
-
-## Exercice 11
-
-Représentez graphiquement la fonction $g(x) = x^4 - 4x^2 + 4$ et trouvez les coordonnées des points où la fonction atteint un minimum.
-
-## Exercice 12
-
-Pour la fonction $f(x) = x^2 + 2x - 5$, trouvez les coordonnées du minimum de $f$ après avoir construit son tableau de variations.
-
-## Exercice 13
-
-Soit la fonction $g(x) = -x^3 + 3x$. Déterminez les valeurs de $x$ pour lesquelles la fonction atteint un maximum ou un minimum.
-
-## Exercice 14
-
-Pour la fonction $h(x) = x^3 - 6x$, construire le tableau de variations de $h$.
-
-## Exercice 15
-
-Représentez graphiquement la fonction $g(x) = x^3 - 9x$ et trouvez les coordonnées des points où la fonction atteint un maximum ou un minimum.
-
-## Exercice 16
 
 On considère la fonction $f$ définie sur $\mathbb{R}$ par $f(x)=x^2+2x-3$
 
@@ -88,3 +68,44 @@ On considère la fonction $f$ définie sur $\mathbb{R}$ par $f(x)=x^2+2x-3$
 
     d. $f(7213)$ et $f(9827)$
 
+
+## Exercice 11
+
+On considère les fonctions $f$, $g$, $h$ et $k$ définies sur $[0;4]$ et dont les représentations sont tracées ci-dessous :
+
+![Fonctions](./fig1.svg)
+
+1. Construire les tableaux de variations des fonctions $f$, $g$, $h$ et $k$.
+2. Déterminer les maxima de $g$ et de $k$ sur $[0;4]$
+3. Vrai/Faux :
+
+    a. $h(2) < h(3)$
+ 
+    b. $2 < 3$ donc $g(2) < g(3)$
+    
+    c. $k$ est croissante sur $[0;2]$
+
+## Exercice 12 
+
+On considère la fonction  $f$ dont on ne connait que le tableau de variations ci-dessous :
+
+![Variations](img/img-2026-10-27-16-46.png) 
+
+1. Énoncer les extrema de $f$.
+1. En justifiant à l'aide du tableau, comparer, lorsque c'est possible :
+    
+    a. $f(1)$ et $f(2)$
+    
+    b. $f(3)$ et $f(4)$
+    
+    c. $f(-2)$ et $f(1)$
+
+1. Donner un encadrement de $f(x)$ lorsque :
+
+    a. $x \in [-1;2]$
+    
+    b. $x \in [-3; 2]$
+    
+    c. $x \in [2; 5]$
+
+1. Construire une représentation graphique possible pour $f$.
