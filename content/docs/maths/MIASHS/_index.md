@@ -15,6 +15,8 @@ Licence 1 MIASHS à l'université de Lille
 ## Mercredi 4 novembre, 13h15
 
 - [Lien de la visio](https://meet.google.com/ajg-etsp-dbk)
+- [Notes en pdf](./visio_7_2027_11_04_annotated.pdf)
+- [Vidéo](https://youtu.be/LjyoPbOqo5Q)
 
 ## Jeudi 22 octobre, 10h15
 
