@@ -8,6 +8,10 @@ bookCollapseSection: true
 
 ## 2026-2027 
 
+### Visio du mercredi 4 novembre 
+
+- [Lien de la visio](https://meet.google.com/ajg-etsp-dbk)
+
 ### Visio du mercredi 21 octobre
 
 - [lien de la visio](https://meet.google.com/anh-kckc-nuw)
