@@ -14,7 +14,8 @@ Licence 1 MIASHS à l'université de Lille
 
 ## Jeudi 5 novembre, 10h15 
 
-- [Lien de la visio](https://meet.google.com/dzh-tzrh-bxy)
+- [Notes en pdf](./visio_8_2027_11_05_annotated.pdf) 
+- [vidéo](https://youtu.be/xC28iUEEsqA)
 
 ## Mercredi 4 novembre, 13h15
 
