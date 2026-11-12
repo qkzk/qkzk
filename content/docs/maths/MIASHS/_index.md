@@ -14,7 +14,8 @@ Licence 1 MIASHS à l'université de Lille
 
 ## Jeudi 12 novembre, 10h15 
 
-- [Lien de la visio](https://meet.google.com/igs-xibd-ucx)
+- [Notes en pdf](./visio_9_2027_11_12_annotated.pdf) et [vidéo](https://youtu.be/r8eO6e2Do7c)
+- Info à ce jour : le partiel, s'il a lieu, se déroulera autour du 20 novembre. Il portera sur les chapitres 1 et 2 ainsi que les limites de fonctions.
 
 ## Mercredi 11 novembre : férié
 
