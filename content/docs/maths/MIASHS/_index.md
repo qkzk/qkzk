@@ -12,6 +12,12 @@ Licence 1 MIASHS à l'université de Lille
 
 ## 2026-2027
 
+## Jeudi 12 novembre, 10h15 
+
+- [Lien de la visio](https://meet.google.com/igs-xibd-ucx)
+
+## Mercredi 11 novembre : férié
+
 ## Jeudi 5 novembre, 10h15 
 
 - [Notes en pdf](./visio_8_2027_11_05_annotated.pdf) 
