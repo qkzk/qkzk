@@ -7,6 +7,10 @@ bookCollapseSection: true
 
 ---
 
+## Visio du samedi 14 novembre 2026 
+
+- [Lien de la visio](https://meet.google.com/vci-kkib-jik) pour les séances de 8h, 9h45 et 11h30
+
 ## Visio du samedi 24 octobre 2026 
 
 - [Lien de la visio](https://meet.google.com/vdz-rork-sux)
