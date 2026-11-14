@@ -9,6 +9,7 @@ bookCollapseSection: true
 
 ## Visio du samedi 14 novembre 2026 
 
+- [Notes de la séance de 8h](./L2S3_S6_2026_11_14_8h_annotated.pdf) et [vidéo](https://youtu.be/0NBNHhv0k2A)
 - [Lien de la visio](https://meet.google.com/vci-kkib-jik) pour les séances de 8h, 9h45 et 11h30
 
 ## Visio du samedi 24 octobre 2026 
