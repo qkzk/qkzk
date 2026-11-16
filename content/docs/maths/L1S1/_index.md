@@ -8,9 +8,12 @@ bookCollapseSection: true
 
 ## 2026-2027 
 
+### Visio du mercredi 18 novembre
+
+- [Lien pour la visio](https://meet.google.com/rqo-ftmi-vyz)
+
 ### Visio du mercredi 4 novembre 
 
-- [Lien de la visio](https://meet.google.com/ajg-etsp-dbk)
 - Séance de 15h : [Notes](./visio_2026_11_4_seance1_annotated.pdf) et [Vidéo](https://youtu.be/aw_V3xpvXPY)
 - Séance de 16h45 : [Notes](./visio_2026_11_4_seance2_annotated.pdf) et [Vidéo](https://youtu.be/Bjxi06tscSE)
 
