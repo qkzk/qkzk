@@ -12,6 +12,14 @@ Licence 1 MIASHS à l'université de Lille
 
 ## 2026-2027
 
+## Jeudi 19 novembre, 10h15 
+
+- [Lien pour la visio](https://meet.google.com/amv-fcqc-iwe)
+
+## Mercredi 18 novembre, 13h15
+
+- [Lien pour la visio](https://meet.google.com/rqo-ftmi-vyz)
+
 ## Jeudi 12 novembre, 10h15 
 
 - [Notes en pdf](./visio_9_2027_11_12_annotated.pdf) et [vidéo](https://youtu.be/r8eO6e2Do7c)
