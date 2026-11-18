@@ -11,6 +11,7 @@ bookCollapseSection: true
 ### Visio du mercredi 18 novembre
 
 - [Lien pour la visio](https://meet.google.com/rqo-ftmi-vyz)
+- Séance de 15h : [Notes](./visio_2026_11_18_seance1_annotated.pdf) et [vidéo](https://youtu.be/jAV8EjJ_KZ4)
 
 ### Visio du mercredi 4 novembre 
 
