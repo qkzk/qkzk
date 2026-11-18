@@ -12,6 +12,7 @@ bookCollapseSection: true
 
 - [Lien pour la visio](https://meet.google.com/rqo-ftmi-vyz)
 - Séance de 15h : [Notes](./visio_2026_11_18_seance1_annotated.pdf) et [vidéo](https://youtu.be/jAV8EjJ_KZ4)
+- Séance de 16h45 : [Notes](./visio_2026_11_18_seance2_annotated.pdf) et [vidéo](https://youtu.be/Jn_-UBdor_8)
 
 ### Visio du mercredi 4 novembre 
 
