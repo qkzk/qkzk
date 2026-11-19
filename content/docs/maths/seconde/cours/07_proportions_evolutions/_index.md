@@ -25,7 +25,7 @@ _Exemple_ :
 
 Sur les 480 élèves inscrits en classe de première, 108 d’entre eux ont choisi la filière STMG.
 
-![Premières](img/img-2024-06-07-10-37.png){width=400px}
+![Premières](img/img-2024-06-07-10-37.png)
 
 La population totale des élèves de première, notée $N$, est égale à 480. C’est la population de référence. La sous-population des élèves de STMG, notée $n$, est égale à 108. La proportion d’élèves de STMG parmi tous les élèves de première, notée $p$, est :
 
@@ -69,7 +69,7 @@ Exemple :
 
 Dans une classe de 35 élèves, 14 élèves étudient l’anglais, 12 élèves étudient l’espagnol et 5 élèves étudient les deux.
 
-![Union et intersection](img/img-2024-06-07-10-38.png){width=600px}
+![Union et intersection](img/img-2024-06-07-10-38.png)
 
 L’ensemble $A \cup E$ contient les élèves qui étudient l’anglais, ceux qui étudient l’espagnol et ceux qui étudient les deux.
 
@@ -117,7 +117,7 @@ Exemple :
 
 Dans un car, il y a 40 % de scolaires. Et parmi les scolaires, 60 % sont des filles.
 
-$~$![img](img/img-2024-06-07-10-39.png){width=400px}
+$~$![img](img/img-2024-06-07-10-39.png)
 
 L’ensemble $F$ est inclu dans l’ensemble $S$ et on a : $p_F = 60\\%$ de $S$. L’ensemble $S$ est inclu dans l’ensemble $CAR$ et on a : $p_S = 40\\%$ de $CAR$.
 
@@ -212,7 +212,7 @@ b)
 
 **Méthode : Représenter une situation par un arbre**
 
-Deux fabricants de calculatrices se partagent le marché. 65 % des calculatrices proviennent du fabricant A. Pour le fabricant A, 42 % des calculatrices vendues sont des modèles pour le collège. Pour le fabricant B, 55 % des calculatrices vendues sont des modèles pour le lycée.
+Deux fabriquants de calculatrices se partagent le marché. 65 % des calculatrices proviennent du fabriquant A. Pour le fabriquant A, 42 % des calculatrices vendues sont des modèles pour le collège. Pour le fabriquant B, 55 % des calculatrices vendues sont des modèles pour le lycée.
 
 Questions :
 
@@ -222,7 +222,7 @@ b) Cette année, le marché représentait 1,4 million de calculatrices. Détermi
 
 Réponses :
 
-$~$![img](img/img-2024-06-07-10-49.png){width=600px}
+$~$![img](img/img-2024-06-07-10-49.png)
 
 D'abord on dessine l'arbre. Ensuite on place les valeurs de l'énoncé (en noir). On calcule les valeurs des branches restantes (en vert) en faisant $100\\% - \text{valeur connue}$. Exemple, pour le modèle B: $100\\% - 65\\%=35\\%$.
 
@@ -238,11 +238,11 @@ Proportion de modèles vendus pour le lycée : $p_B = 0,35 \times 0,55 = 0,1925 
 
 Nombre de modèles vendus pour le lycée :
 
-- Pour le fabricant A : $37,7\\% \times 1~400~000 = 527~800$
+- Pour le fabriquant A : $37,7\\% \times 1400000 = 527800$
 
-- Pour le fabricant B : $19,25\\% \times 1~400~000 = 269~500$
+- Pour le fabriquant B : $19,25\\% \times 1400000 = 269~500$
 
-Nombre total de modèles vendus pour le lycée : 527 800 + 269 500 = 797 300.
+Nombre total de modèles vendus pour le lycée : $527 800 + 269 500 = 797 300$.
 
 
 ## II. Évolutions
@@ -297,12 +297,13 @@ Quand une quantité évolue, on distingue **l'évolution absolue** du **taux d'�
 - **Le coefficient multiplicateur** est $\dfrac{V_A}{V_D} = \dfrac{2300}{2000} = 1.15$. Le salaire de M. Dupont a été multiplié par 1.15.
 
 **Exercice 2**
+
 Calculer les évolutions absolues, les taux d'évolution et les coefficients multiplicateurs des situations suivantes :
 
 1. Entre 2009 et 2013, le prix du mètre carré dans le 16ème arrondissement de Paris est passé de 7120 € à 9220 €.
 2. En juillet 2025, le prix d'un ticket de métro à Lille est passé de 1.70 € à 1.80 €.
 3. En 2008, Apple sortait l'iPhone 3g 8Go au tarif de 350 €, en 2018 sortait l'iPhone XS Max 256Go à 1099 €.
-4. En 2008, produire un iPhone 3g 8Go coûtait 174.33 $ à Apple. En 2018, produire un iPhone XS Max 256Go coûte 448 $ à Apple.
+4. En 2008, produire un iPhone 3g 8Go coûtait 174.33 € à Apple. En 2018, produire un iPhone XS Max 256Go coûte 448 € à Apple.
    Calculer l'évolution absolue et le taux d'évolution en € de la marge (= prix de vente - coût) réalisée par Apple en supposant qu'un $ coûtait 1.39 € en 2008 et coûte 1.14 € en 2018.
 
 
