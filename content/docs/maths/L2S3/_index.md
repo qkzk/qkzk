@@ -9,6 +9,7 @@ bookCollapseSection: true
 
 ## Visio du samedi 21 novembre 2026 
 
+- [Notes de la séance de 11h30](./L2S3_S9_2026_11_21_11h30_annotated.pdf) et [vidéo](https://youtu.be/EYn8R4LcsbU)
 - Aucun participant à la séance de 9h45
 - [Notes de la séance de 8h](./L2S3_S9_2026_11_21_8h_annotated.pdf) et [vidéo](https://youtu.be/ZeXYC4ode1U)
 - [Lien de la visio](https://meet.google.com/rjr-fgvd-yft) pour les séances de 8h, 9h45 et 11h30
