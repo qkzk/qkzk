@@ -8,9 +8,12 @@ bookCollapseSection: true
 
 ## 2026-2027 
 
+### Visio du mercredi 25 novembre
+
+- [Lien de la visio](https://meet.google.com/xez-jqyd-krg)
+
 ### Visio du mercredi 18 novembre
 
-- [Lien pour la visio](https://meet.google.com/rqo-ftmi-vyz)
 - Séance de 15h : [Notes](./visio_2026_11_18_seance1_annotated.pdf) et [vidéo](https://youtu.be/jAV8EjJ_KZ4)
 - Séance de 16h45 : [Notes](./visio_2026_11_18_seance2_annotated.pdf) et [vidéo](https://youtu.be/Jn_-UBdor_8)
 
@@ -21,7 +24,6 @@ bookCollapseSection: true
 
 ### Visio du mercredi 21 octobre
 
-- [lien de la visio](https://meet.google.com/anh-kckc-nuw)
 - Séance de 15h : [Notes](./visio_2026_10_21_seance1_annotated.pdf) et [vidéo](https://youtu.be/k5_Mn7efY2U)
 - Séance de 16h45 : [Notes](./visio_2026_10_21_seance2_annotated.pdf) et [vidéo](https://youtu.be/Wix0RENoFVA)
 

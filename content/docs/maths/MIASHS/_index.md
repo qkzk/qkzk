@@ -12,6 +12,14 @@ Licence 1 MIASHS à l'université de Lille
 
 ## 2026-2027
 
+### Visio du jeudi 26 novembre, 10h15
+
+- [Lien de la visio](https://meet.google.com/vpm-qnny-wef)
+
+### Visio du mercredi 25 novembre, 13h15
+
+- [Lien de la visio](https://meet.google.com/xez-jqyd-krg)
+
 ## Jeudi 19 novembre, 10h15 
 
 - [Notes en pdf](./visio_11_2027_11_19_annotated.pdf) et [vidéo](https://youtu.be/63_IVjL2oa4)
