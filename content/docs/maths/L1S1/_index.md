@@ -10,7 +10,7 @@ bookCollapseSection: true
 
 ### Visio du mercredi 25 novembre
 
-- [Lien de la visio](https://meet.google.com/xez-jqyd-krg)
+- Séance de 16h45 : [Notes](./visio_2026_11_25_seance2_annotated.pdf) et [vidéo](https://youtu.be/wbCNHk0s6LU)
 - Séance de 15h : [Notes](./visio_2026_11_25_seance1_annotated.pdf) et [vidéo](https://youtu.be/a-GyUdi5X1c)
 
 ### Visio du mercredi 18 novembre
