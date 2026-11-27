@@ -9,6 +9,9 @@ bookCollapseSection: true
 
 ## Visio du samedi 28 novembre 2026 
 
+**Attention seules visios de 9h45 et 11h30 auront lieu, il m'est impossible d'assurer la visio de 8h**
+
+
 - [Lien de la visio](https://meet.google.com/qkp-saph-jvd) pour les séances de 8h, 9h45 et 11h30
 
 ## Visio du samedi 21 novembre 2026 
