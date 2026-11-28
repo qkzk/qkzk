@@ -7,13 +7,12 @@ bookCollapseSection: true
 
 ---
 
+Fin des visios, le poly de TD a été traité en entier.
+
 ## Visio du samedi 28 novembre 2026 
 
-**Attention seules visios de 9h45 et 11h30 auront lieu, il m'est impossible d'assurer la visio de 8h**
-
-
-- [Lien de la visio](https://meet.google.com/qkp-saph-jvd) pour les séances de 8h, 9h45 et 11h30
 - [Notes de la séance de 9h45](./L2S3_S10_2026_11_28_9h45_annotated.pdf) et [vidéo](https://youtu.be/7hFXDHaY1Wg)
+- [Notes de la séance de 11h30](./L2S3_S10_2026_11_28_11h30_annotated.pdf) et [vidéo](https://youtu.be/tbHjk0qBV1k)
 
 ## Visio du samedi 21 novembre 2026 
 
