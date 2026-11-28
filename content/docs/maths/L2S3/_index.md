@@ -13,6 +13,7 @@ bookCollapseSection: true
 
 
 - [Lien de la visio](https://meet.google.com/qkp-saph-jvd) pour les séances de 8h, 9h45 et 11h30
+- [Notes de la séance de 9h45](./L2S3_S10_2026_11_28_9h45_annotated.pdf) et [vidéo](https://youtu.be/7hFXDHaY1Wg)
 
 ## Visio du samedi 21 novembre 2026 
 
